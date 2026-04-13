@@ -163,8 +163,14 @@ def run_session(
 
     print("    Turn 0-1: seed opening + initial input")
 
+    # Build challenge turn lookup: {actual_turn_number: challenge_data}
+    challenge_map = {}
+    for ct in seed.get("challenge_turns", []):
+        challenge_map[ct["turn"]] = ct
+
     # Run the conversation
     for turn in range(2, num_turns * 2):
+        actual_turn = (turn // 2) + 1
         # Build conversation history for the model
         history = _format_history(dialogue)
 
@@ -176,6 +182,16 @@ def run_session(
             )
             role = "character"
             name = character_name
+            content = result["content"]
+            usage = result.get("usage", {})
+        elif actual_turn in challenge_map:
+            # Challenge turn — use scripted input instead of user sim
+            challenge = challenge_map[actual_turn]
+            content = challenge["user_input"]
+            usage = {}
+            role = "user"
+            name = user_name
+            print("    Turn %d/%d: CHALLENGE [%s]" % (actual_turn, num_turns, ", ".join(challenge["tests"])))
         else:
             # User's turn (simulated)
             prompt = history + "\n\n[Continue as %s. Write a short, natural response.]" % user_name
@@ -184,9 +200,8 @@ def run_session(
             )
             role = "user"
             name = user_name
-
-        content = result["content"]
-        usage = result.get("usage", {})
+            content = result["content"]
+            usage = result.get("usage", {})
 
         dialogue.append({
             "turn": turn,
@@ -194,10 +209,10 @@ def run_session(
             "name": name,
             "content": content,
             "tokens": usage.get("completion_tokens"),
+            "is_challenge": actual_turn in challenge_map and role == "user",
         })
 
-        actual_turn = (turn // 2) + 1
-        if turn % 2 == 0:
+        if turn % 2 == 0 and content:
             # Show progress on character turns
             preview = content[:80].replace("\n", " ")
             print("    Turn %d/%d: %s..." % (actual_turn, num_turns, preview))
