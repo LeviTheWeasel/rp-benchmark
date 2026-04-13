@@ -4,6 +4,7 @@ import { useState, useCallback } from "react";
 import { Vote } from "@/lib/types";
 import { saveVote } from "@/lib/votes";
 import { SAMPLE_SCENARIOS } from "@/lib/sample-data";
+import { BENCHMARK_SCENARIOS } from "@/lib/benchmark-data";
 
 function formatRP(text: string) {
   return text
@@ -22,7 +23,16 @@ export default function ArenaPage() {
   const [revealed, setRevealed] = useState(false);
   const [voteCount, setVoteCount] = useState(0);
 
-  const scenarios = SAMPLE_SCENARIOS;
+  // Merge sample + benchmark scenarios, shuffle once on mount
+  const [scenarios] = useState(() => {
+    const all = [...SAMPLE_SCENARIOS, ...BENCHMARK_SCENARIOS];
+    // Fisher-Yates shuffle
+    for (let i = all.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [all[i], all[j]] = [all[j], all[i]];
+    }
+    return all;
+  });
   const current = scenarios[currentIdx % scenarios.length];
 
   const [shuffled] = useState(() =>
@@ -76,8 +86,9 @@ export default function ArenaPage() {
             Which response is better? Models hidden until you vote.
           </span>
         </div>
-        <div className="text-sm text-[var(--muted)]">
-          Votes: <span className="text-[var(--accent)] font-semibold">{voteCount}</span>
+        <div className="text-sm text-[var(--muted)] flex gap-4">
+          <span>Matchup {(currentIdx % scenarios.length) + 1} / {scenarios.length}</span>
+          <span>Votes: <span className="text-[var(--accent)] font-semibold">{voteCount}</span></span>
         </div>
       </div>
 
