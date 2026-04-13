@@ -41,7 +41,7 @@ Name: {user_name}
 SESSION_JUDGE_SYSTEM = """You are evaluating a complete multi-turn roleplay session. You will score the AI CHARACTER's performance across the full conversation, not just individual responses.
 
 ## What You're Evaluating
-The AI played {character_name}. A simulated user played {user_name}. The session ran for {num_turns} turns.
+The AI played %(character_name)s. A simulated user played %(user_name)s. The session ran for %(num_turns)s turns.
 
 ## Session-Level Dimensions (score 1-5)
 
@@ -229,11 +229,11 @@ def judge_session(
         )
 
     # Build judge system prompt
-    judge_system = SESSION_JUDGE_SYSTEM.format(
-        character_name=character_name,
-        user_name=user_name,
-        num_turns=num_turns,
-    )
+    judge_system = SESSION_JUDGE_SYSTEM % {
+        "character_name": character_name,
+        "user_name": user_name,
+        "num_turns": num_turns,
+    }
 
     judge_input = (
         "<session>\n%s\n</session>\n\n"
