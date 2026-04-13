@@ -42,9 +42,11 @@ def cmd_run(args):
     num_runs = args.runs or 1
 
     language = getattr(args, 'language', None)
+    judge_mode = getattr(args, 'judge_mode', 'standard')
 
     print("Test models: %s" % list(test_models.keys()))
     print("Judge models: %s" % list(judge_models.keys()))
+    print("Judge mode: %s" % judge_mode)
     print("Scenario types: %s" % scenario_types)
     print("Language: %s" % (language or "all"))
     print("Max scenarios: %s" % (args.max or "all"))
@@ -65,6 +67,7 @@ def cmd_run(args):
             scenario_types=scenario_types,
             max_scenarios=args.max,
             language=language,
+            judge_mode=judge_mode,
         )
 
         run_file = RESULTS_DIR / ("run_%s.json" % results["run_id"])
@@ -225,6 +228,12 @@ def main():
     )
     run_parser.add_argument(
         "--language", choices=["en", "ru"], help="Filter scenarios by language (default: all)"
+    )
+    run_parser.add_argument(
+        "--judge-mode",
+        choices=["standard", "flaw_hunter", "comparative"],
+        default="standard",
+        help="Judge scoring mode (default: standard)",
     )
     run_parser.add_argument(
         "--view",

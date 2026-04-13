@@ -199,6 +199,7 @@ def run_single_scenario(
     test_model_key: str,
     test_model_id: str,
     judge_configs: dict[str, str],
+    judge_mode: str = "standard",
 ) -> dict:
     """Run one scenario: generate response, then judge it with all judges.
 
@@ -216,7 +217,7 @@ def run_single_scenario(
 
     # Step 2: Judge with each judge model
     judge_payload = build_judge_payload(scenario, generated_text)
-    judge_results = _run_judges(judge_payload, judge_configs)
+    judge_results = _run_judges(judge_payload, judge_configs, judge_mode=judge_mode)
 
     return {
         "scenario_id": scenario_id,
@@ -262,19 +263,21 @@ def run_prebuilt_scenario(
 def _run_judges(
     judge_payload: str,
     judge_configs: dict[str, str],
+    judge_mode: str = "standard",
 ) -> dict:
     """Run all judges on a payload."""
     judge_results = {}
 
     for judge_key, judge_model_id in judge_configs.items():
-        print(f"    Judging with {judge_key}...")
-        judge_system = load_judge_prompt(judge_key)
+        print(f"    Judging with {judge_key} ({judge_mode})...")
+        judge_system = load_judge_prompt(judge_key, mode=judge_mode)
 
         result = judge_response(judge_model_id, judge_system, judge_payload)
         judge_results[judge_key] = {
             "scores": result["scores"],
             "usage": result["usage"],
             "model": result["model"],
+            "judge_mode": judge_mode,
         }
 
         if result["scores"].get("parse_error"):
@@ -290,6 +293,7 @@ def run_benchmark(
     scenario_types: list[str] | None = None,
     max_scenarios: int | None = None,
     language: str | None = None,
+    judge_mode: str = "standard",
 ) -> dict:
     """Run the full benchmark pipeline.
 
@@ -395,7 +399,8 @@ def run_benchmark(
         for model_key, model_id in test_models.items():
             try:
                 result = run_single_scenario(
-                    scenario, model_key, model_id, judge_models
+                    scenario, model_key, model_id, judge_models,
+                    judge_mode=judge_mode,
                 )
                 results["results"].append(result)
             except Exception as e:
