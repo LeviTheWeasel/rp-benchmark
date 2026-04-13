@@ -471,6 +471,30 @@ Merged from 21 HawThorne Directors into 10 distinct craft dimensions.
 
 ---
 
+## 3.13 Temporal Reasoning
+
+**What it measures:** Does the AI track time consistently? Do clocks advance logically, do day/night cycles make sense, do physical processes (healing, travel, fatigue, hunger) respect elapsed time?
+
+| Score | Description |
+|-------|-------------|
+| 1 | Time is incoherent. Morning light persists for 40 turns. Characters eat lunch twice. A "quick chat" spans days. Injuries vanish between paragraphs. |
+| 2 | Time exists but is sloppy. Vague references to time passing without consistency. Healing and fatigue are plot-convenient rather than realistic. |
+| 3 | Basic time tracking is correct — day/night makes sense, meals happen at meal times. But no precision: how long has the conversation actually been? How far apart are events? |
+| 4 | Time is tracked through environmental cues (light shifting, candles burning down, drinks going cold) and physical consequences (fatigue accumulating, wounds stiffening). The reader has a sense of how long things take. |
+| 5 | Time is a narrative instrument. A candle measured at the scene's start is shorter at the end. Travel takes the right number of hours. A wound from turn 3 is still raw at turn 10 but scarring by turn 30. The clock is never stated but always felt. |
+
+**Key sub-signals:**
+- **Clock consistency** — If it's morning at turn 1, it shouldn't still be morning at turn 20 unless very little happened
+- **Physical time** — Bodies track time: fatigue, hunger, healing, temperature changes, drinks going cold
+- **Environmental time** — Light shifts, shadows move, candles burn, weather changes
+- **Event pacing** — A conversation that takes 3 turns shouldn't span 6 in-game hours. Travel distances should match the world
+
+**Fails when:** Time freezes (eternal morning), time teleports (suddenly evening with no transition), physical processes ignore time (instant healing, never getting hungry), or temporal contradictions appear ("an hour later" when only 2 minutes of dialogue happened).
+
+**Best tested in multi-turn sessions** — temporal inconsistencies compound over 10+ turns.
+
+---
+
 # Scoring Guide
 
 ## How to Apply

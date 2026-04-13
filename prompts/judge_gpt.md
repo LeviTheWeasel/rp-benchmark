@@ -73,6 +73,7 @@ Based on the genre(s) you identified in Step 2, score ONLY the relevant ones:
 3.10 EMOTIONAL RESIDUE — if trauma callbacks/intense emotion present
 3.11 EROTIC CRAFT — if explicit sexual content present. Score on: physical specificity (which hand, where, how much pressure), emotional integration (sex reveals character), pacing (prose rhythm matches act), character persistence (personality survives transition to explicit), language register (direct anatomy, no euphemisms like "manhood/flower")
 3.12 CONTEXT INTEGRATION — if characters/worlds have specific established lore. Score on: (1) seamless weaving (details through behavior not exposition), (2) factual accuracy (no contradictions), (3) thematic depth (lorebook shapes prose voice — a captain character = nautical metaphors throughout)
+3.13 TEMPORAL REASONING — if scene spans enough time. Score on: clock consistency (morning doesn't last forever), physical time (fatigue, healing, cold drinks), environmental time (light shifts, candles burn), event pacing (conversation length matches in-world time). Best in multi-turn.
 
 ### Step 6: Calculate aggregates
 

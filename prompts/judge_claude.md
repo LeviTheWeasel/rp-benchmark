@@ -110,6 +110,8 @@ Always write your rationales in English regardless of the response language.
 
 **3.12 Context Integration** — How well does the AI use injected context (lorebook, world info, character backstory)? Three sub-signals: (1) Seamless weaving — details through behavior, not exposition; (2) Factual accuracy — no contradictions with established world; (3) Thematic depth — context shapes the prose voice, not just content (a captain character brings nautical metaphors throughout). Score if the scene involves characters/worlds with specific established lore.
 
+**3.13 Temporal Reasoning** — Does the AI track time consistently? Clock consistency (morning doesn't last 40 turns), physical time (fatigue, healing, drinks going cold), environmental time (light shifting, candles burning down), event pacing (a 3-turn conversation shouldn't span 6 hours). Score if the scene spans enough time for temporal tracking to matter. Best tested in multi-turn.
+
 ## Input Format
 
 You will receive:

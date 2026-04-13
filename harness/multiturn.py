@@ -57,6 +57,13 @@ In addition to the standard per-response rubric dimensions, score these SESSION-
 
 **S.5 Agency Respect (Session)** — Over the full session, how often does the AI write the user's actions, make decisions for them, or railroad the story? Count instances.
 
+**S.6 Temporal Reasoning** — Does time pass consistently across the session? Track these:
+- Clock consistency: if it's morning at turn 1, is it still morning at turn 20? Does the time of day advance naturally?
+- Physical time: do characters show fatigue, hunger, healing progression? Do drinks go cold? Do candles burn down?
+- Environmental time: does light shift, do shadows move, does weather change?
+- Event pacing: does the amount of in-world time match what actually happened? (A 5-minute conversation shouldn't span hours. A journey shouldn't be instant.)
+- Contradictions: any "later that evening" when it's already night? Any healed injuries that were fresh 3 turns ago?
+
 ## Standard Dimensions
 Also score these from the standard rubric (averaged across the full session):
 - 2.1 Anti-Purple Prose
@@ -74,7 +81,8 @@ Respond with ONLY valid JSON:
     "S.2_degradation_resistance": {"score": 0.0, "rationale": ""},
     "S.3_narrative_momentum": {"score": 0.0, "rationale": ""},
     "S.4_adaptive_responsiveness": {"score": 0.0, "rationale": ""},
-    "S.5_agency_respect_session": {"score": 0.0, "rationale": "", "violation_count": 0}
+    "S.5_agency_respect_session": {"score": 0.0, "rationale": "", "violation_count": 0},
+    "S.6_temporal_reasoning": {"score": 0.0, "rationale": "", "contradictions": []}
   },
   "standard_dimensions": {
     "2.1_anti_purple_prose": {"score": 0.0, "rationale": ""},
