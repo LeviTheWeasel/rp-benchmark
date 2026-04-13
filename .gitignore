@@ -1,0 +1,32 @@
+# Secrets
+.env
+
+# Private chat data (contains RP content from real conversations)
+scenarios/
+raw/
+test_runs/
+scripts/
+
+# Analysis files derived from private data
+analysis/evaluation_protocols.json
+analysis/swipe_deep_dive.json
+analysis/swipe_summary.json
+analysis/ryujin_lorebook_quality.json
+analysis/scoring_rubric.json
+analysis/scoring_rubric.md
+
+# Benchmark data (contains private chat content)
+benchmark_*.json
+eval_payloads*.json
+eval_payload_example.json
+
+# Run results (regenerated, can be large)
+results/run_*.json
+results/leaderboard_*.json
+results/charts/
+
+# Python / IDE
+__pycache__/
+*.pyc
+.idea/
+.DS_Store

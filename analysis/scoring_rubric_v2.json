@@ -1,0 +1,236 @@
+{
+  "version": "0.2.0",
+  "name": "RP-Bench Scoring Rubric",
+  "tiers": {
+    "fundamental": {
+      "weight": 0.4,
+      "always_apply": true,
+      "dimensions": {
+        "character_agency_respect": {
+          "id": "1.1",
+          "category": "fundamental"
+        },
+        "instruction_adherence": {
+          "id": "1.2",
+          "category": "fundamental"
+        },
+        "continuity": {
+          "id": "1.3",
+          "category": "fundamental"
+        },
+        "length_calibration": {
+          "id": "1.4",
+          "category": "fundamental"
+        },
+        "distinct_character_voices": {
+          "id": "1.5",
+          "category": "fundamental"
+        },
+        "scene_grounding": {
+          "id": "1.6",
+          "category": "fundamental"
+        }
+      }
+    },
+    "quality_control": {
+      "weight": 0.35,
+      "always_apply": true,
+      "dimensions": {
+        "anti_purple_prose": {
+          "id": "2.1",
+          "category": "craft_control"
+        },
+        "anti_repetition": {
+          "id": "2.2",
+          "category": "craft_control"
+        },
+        "anti_narrative_sycophancy": {
+          "id": "2.3",
+          "category": "narrative_control"
+        },
+        "anti_artificial_perfection": {
+          "id": "2.4",
+          "category": "character_control"
+        },
+        "show_dont_tell": {
+          "id": "2.5",
+          "category": "craft_control"
+        },
+        "subtext_and_indirection": {
+          "id": "2.6",
+          "category": "dialogue_control"
+        },
+        "pacing_and_restraint": {
+          "id": "2.7",
+          "category": "pacing_control"
+        },
+        "imperfect_coping": {
+          "id": "2.8",
+          "category": "character_control"
+        }
+      }
+    },
+    "genre_craft": {
+      "weight": 0.25,
+      "always_apply": false,
+      "dimensions": {
+        "earned_intimacy": {
+          "id": "3.1",
+          "genres": [
+            "romance",
+            "smut"
+          ],
+          "sources": [
+            "HEARTTHROB",
+            "SLICK"
+          ]
+        },
+        "atmospheric_dread": {
+          "id": "3.2",
+          "genres": [
+            "horror",
+            "supernatural"
+          ],
+          "sources": [
+            "LINGER",
+            "RESIDUE"
+          ]
+        },
+        "structural_comedy": {
+          "id": "3.3",
+          "genres": [
+            "comedy",
+            "dark_comedy"
+          ],
+          "sources": [
+            "MOTLEY",
+            "WILT"
+          ]
+        },
+        "excavated_truth": {
+          "id": "3.4",
+          "genres": [
+            "drama"
+          ],
+          "sources": [
+            "SEDIMENT"
+          ]
+        },
+        "spatial_precision": {
+          "id": "3.5",
+          "genres": [
+            "action"
+          ],
+          "sources": [
+            "FRACTURE"
+          ]
+        },
+        "lived_in_worlds": {
+          "id": "3.6",
+          "genres": [
+            "fantasy",
+            "adventure",
+            "scifi"
+          ],
+          "sources": [
+            "MERIDIAN",
+            "VENTURE",
+            "QUASAR"
+          ]
+        },
+        "information_architecture": {
+          "id": "3.7",
+          "genres": [
+            "thriller",
+            "mystery"
+          ],
+          "sources": [
+            "TRIPWIRE",
+            "PALIMPSEST"
+          ]
+        },
+        "structural_inevitability": {
+          "id": "3.8",
+          "genres": [
+            "tragedy"
+          ],
+          "sources": [
+            "REQUIEM"
+          ]
+        },
+        "threshold_logic": {
+          "id": "3.9",
+          "genres": [
+            "surreal",
+            "absurdist"
+          ],
+          "sources": [
+            "LIMINAL"
+          ]
+        },
+        "emotional_residue": {
+          "id": "3.10",
+          "genres": [
+            "gothic",
+            "supernatural",
+            "drama"
+          ],
+          "sources": [
+            "RESIDUE",
+            "SCORIA"
+          ]
+        },
+        "erotic_craft": {
+          "id": "3.11",
+          "genres": [
+            "erp",
+            "smut",
+            "romance_explicit"
+          ],
+          "sources": [
+            "SLICK"
+          ]
+        },
+        "context_integration": {
+          "id": "3.12",
+          "genres": [
+            "lorebook_heavy",
+            "worldbuilding",
+            "established_lore"
+          ],
+          "sources": [
+            "custom"
+          ],
+          "sub_signals": [
+            "seamless_weaving",
+            "factual_accuracy",
+            "thematic_depth"
+          ]
+        }
+      }
+    }
+  },
+  "hawthorne_directors_not_merged": [
+    "KIRIN (Martial Epic)",
+    "MANTLE (Superhero)",
+    "PITH (Dead Dove)",
+    "FLINT (Western)",
+    "PATINA (Slice of Life)"
+  ],
+  "note": "KIRIN, MANTLE, PITH, FLINT, and PATINA directors have unique voice specifications but their quality dimensions overlap with existing rubric entries. They can be added as genre-specific variants if needed.",
+  "total_dimensions": 26,
+  "scoring": {
+    "scale": "1-5",
+    "weights": {
+      "fundamental": 0.4,
+      "quality_control": 0.35,
+      "genre_craft": 0.25
+    },
+    "thresholds": {
+      "exceptional": 4.5,
+      "strong": 3.5,
+      "adequate": 2.5,
+      "below_average": 1.5
+    }
+  }
+}
