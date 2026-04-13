@@ -17,16 +17,21 @@ function formatRP(text: string) {
     });
 }
 
+function isNSFW(scenario: { id: string }) {
+  return scenario.id.includes("erp_");
+}
+
 export default function ArenaPage() {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [winner, setWinner] = useState<"A" | "B" | "tie" | null>(null);
   const [revealed, setRevealed] = useState(false);
   const [voteCount, setVoteCount] = useState(0);
+  const [showNSFW, setShowNSFW] = useState(false);
+  const [nsfwDismissed, setNsfwDismissed] = useState(false);
 
   // Merge sample + benchmark scenarios, shuffle once on mount
   const [scenarios] = useState(() => {
     const all = [...SAMPLE_SCENARIOS, ...BENCHMARK_SCENARIOS];
-    // Fisher-Yates shuffle
     for (let i = all.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [all[i], all[j]] = [all[j], all[i]];
@@ -34,6 +39,7 @@ export default function ArenaPage() {
     return all;
   });
   const current = scenarios[currentIdx % scenarios.length];
+  const currentIsNSFW = isNSFW(current);
 
   const [shuffled] = useState(() =>
     scenarios.map(() => (Math.random() > 0.5 ? [0, 1] : [1, 0]))
@@ -74,6 +80,7 @@ export default function ArenaPage() {
     setCurrentIdx((i) => i + 1);
     setWinner(null);
     setRevealed(false);
+    setShowNSFW(false);
   };
 
   return (
@@ -91,6 +98,41 @@ export default function ArenaPage() {
           <span>Votes: <span className="text-[var(--accent)] font-semibold">{voteCount}</span></span>
         </div>
       </div>
+
+      {/* NSFW warning */}
+      {currentIsNSFW && !showNSFW && !nsfwDismissed && (
+        <div className="flex-1 flex items-center justify-center">
+          <div className="text-center p-8 max-w-md">
+            <div className="text-2xl mb-3 text-[var(--red)]">NSFW Content</div>
+            <p className="text-sm text-[var(--muted)] mb-6">
+              This matchup contains explicit sexual content (ERP). These responses are part of the benchmark for evaluating erotic writing quality.
+            </p>
+            <div className="flex gap-3 justify-center">
+              <button
+                onClick={() => setShowNSFW(true)}
+                className="px-6 py-2.5 rounded-lg bg-[var(--red)] text-[var(--background)] font-semibold hover:opacity-90"
+              >
+                Show anyway
+              </button>
+              <button
+                onClick={() => { setNsfwDismissed(true); setShowNSFW(true); }}
+                className="px-6 py-2.5 rounded-lg border border-[var(--border)] text-[var(--muted)] hover:text-[var(--foreground)]"
+              >
+                Show all NSFW (don't ask again)
+              </button>
+              <button
+                onClick={handleNext}
+                className="px-6 py-2.5 rounded-lg border border-[var(--border)] text-[var(--muted)] hover:text-[var(--foreground)]"
+              >
+                Skip
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Main content (hidden if NSFW warning is showing) */}
+      {(!currentIsNSFW || showNSFW || nsfwDismissed) && <>
 
       {/* Context — collapsible, compact */}
       <details className="shrink-0 border-b border-[var(--border)] bg-[var(--card)]">
@@ -147,6 +189,8 @@ export default function ArenaPage() {
           </div>
         ))}
       </div>
+
+      </>}
 
       {/* Vote bar — pinned at bottom */}
       <div className="shrink-0 border-t border-[var(--border)] bg-[var(--card)] px-4 py-3">
