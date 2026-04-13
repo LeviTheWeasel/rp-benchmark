@@ -20,6 +20,11 @@ export interface Vote {
 export interface Scenario {
   id: string;
   context: string;
+  character_info?: {
+    character_name: string;
+    user_name: string;
+    setting_summary: string;
+  };
   responses: {
     model: string;
     content: string;

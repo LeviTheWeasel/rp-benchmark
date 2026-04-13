@@ -4,7 +4,12 @@ import { Scenario } from "./types";
 export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_bell_3_mistral_small_creative_vs_llama_4_maverick",
-    "context": "A school comedy/romance scene. A gyaru girl teases a classmate during break period. They have a rivalry-turned-flirtation dynamic. Early stage — all banter, no vulnerability.",
+    "context": "A school comedy/romance scene. A gyaru girl teases a classmate during break period. Early stage — all banter, no vulnerability.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Bell is a 17yo gyaru — loud, platinum hair, smug, teases aggressively. She's the user's classmate. This is a slowburn: early stage is pure banter and rivalry. She deflects everything with humor. No HawThorne director — preset only."
+    },
     "responses": [
       {
         "model": "mistral_small_creative",
@@ -18,7 +23,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_3_gemma_4_26b_vs_grok_4_1",
-    "context": "A school comedy/romance scene. A gyaru girl teases a classmate during break period. They have a rivalry-turned-flirtation dynamic. Early stage — all banter, no vulnerability.",
+    "context": "A school comedy/romance scene. A gyaru girl teases a classmate during break period. Early stage — all banter, no vulnerability.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Bell is a 17yo gyaru — loud, platinum hair, smug, teases aggressively. She's the user's classmate. This is a slowburn: early stage is pure banter and rivalry. She deflects everything with humor. No HawThorne director — preset only."
+    },
     "responses": [
       {
         "model": "gemma_4_26b",
@@ -32,7 +42,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_18_glm_4_7_vs_grok_4_1",
-    "context": "A hallway scene between classes. The transfer student and the captain character cross paths again. The school buzzes with activity around them.",
+    "context": "A hallway scene between classes. The transfer student and the captain character cross paths again.",
+    "character_info": {
+      "character_name": "Nanase (via Narrator)",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same setting. The relationship is developing through brief encounters."
+    },
     "responses": [
       {
         "model": "glm_4_7",
@@ -47,6 +62,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_150_mistral_small_creative_vs_llama_4_maverick",
     "context": "A fantasy scene where two characters with an established dynamic navigate a tense social situation. The supernatural character tries to protect the human from a veiled threat.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Same setting. Strovolos and Levi have an established bond. A dangerous social situation requires Strovolos to balance his protective instincts with political savvy."
+    },
     "responses": [
       {
         "model": "mistral_small_creative",
@@ -60,7 +80,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_18_gemma_4_26b_vs_mistral_small_creative",
-    "context": "A hallway scene between classes. The transfer student and the captain character cross paths again. The school buzzes with activity around them.",
+    "context": "A hallway scene between classes. The transfer student and the captain character cross paths again.",
+    "character_info": {
+      "character_name": "Nanase (via Narrator)",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same setting. The relationship is developing through brief encounters."
+    },
     "responses": [
       {
         "model": "gemma_4_26b",
@@ -74,7 +99,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_0_gemma_4_26b_vs_qwen3_5_flash",
-    "context": "A school slice-of-life scene. A transfer student arrives at an elite Tokyo high school on their first day. Cherry blossoms, shoe lockers, morning light.",
+    "context": "A school slice-of-life scene. A transfer student arrives at an elite Tokyo high school on their first day.",
+    "character_info": {
+      "character_name": "Ryujin High Narrator",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Narrator-driven. Ryujin High is an elite Tokyo school with rigid social hierarchy. The narrator controls all NPCs and environment. Second-person perspective. Heavy lorebook world with specific locations, clubs, and characters."
+    },
     "responses": [
       {
         "model": "gemma_4_26b",
@@ -88,7 +118,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_0_qwen3_5_flash_vs_mistral_small_creative",
-    "context": "A school slice-of-life scene. A transfer student arrives at an elite Tokyo high school on their first day. Cherry blossoms, shoe lockers, morning light.",
+    "context": "A school slice-of-life scene. A transfer student arrives at an elite Tokyo high school on their first day.",
+    "character_info": {
+      "character_name": "Ryujin High Narrator",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Narrator-driven. Ryujin High is an elite Tokyo school with rigid social hierarchy. The narrator controls all NPCs and environment. Second-person perspective. Heavy lorebook world with specific locations, clubs, and characters."
+    },
     "responses": [
       {
         "model": "qwen3_5_flash",
@@ -103,6 +138,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_450_qwen3_5_flash_vs_mistral_small_creative",
     "context": "A quiet aftermath scene. Characters process the fallout of recent events over tea. The mood is reflective, with humor breaking through the heaviness.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Same setting. Post-crisis recovery. Strovolos's theatrical persona softens in private moments."
+    },
     "responses": [
       {
         "model": "qwen3_5_flash",
@@ -116,7 +156,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_101_minimax_m2_7_vs_qwen3_5_flash",
-    "context": "A domestic scene — the characters are at one of their apartments. The dynamic is intimate but the gyaru character still deflects with humor when things get too real.",
+    "context": "A domestic scene — at one of their apartments. Intimate but the gyaru still deflects with humor.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. The relationship is established. Bell uses humor as a coping mechanism for sincerity."
+    },
     "responses": [
       {
         "model": "minimax_m2_7",
@@ -131,6 +176,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_300_glm_4_7_vs_mistral_small_creative",
     "context": "A dramatic scene where political intrigue intersects with personal relationships. Multiple characters debate strategy while emotional tensions simmer beneath the surface.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Same setting. Multiple NPCs present (David, others). Political stakes are high. Characters hide personal feelings behind strategic discussion."
+    },
     "responses": [
       {
         "model": "glm_4_7",
@@ -145,6 +195,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_150_grok_4_1_vs_mistral_small_creative",
     "context": "A fantasy scene where two characters with an established dynamic navigate a tense social situation. The supernatural character tries to protect the human from a veiled threat.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Same setting. Strovolos and Levi have an established bond. A dangerous social situation requires Strovolos to balance his protective instincts with political savvy."
+    },
     "responses": [
       {
         "model": "grok_4_1",
@@ -158,7 +213,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_3_deepseek_v3_2_vs_grok_4_1",
-    "context": "A school comedy/romance scene. A gyaru girl teases a classmate during break period. They have a rivalry-turned-flirtation dynamic. Early stage — all banter, no vulnerability.",
+    "context": "A school comedy/romance scene. A gyaru girl teases a classmate during break period. Early stage — all banter, no vulnerability.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Bell is a 17yo gyaru — loud, platinum hair, smug, teases aggressively. She's the user's classmate. This is a slowburn: early stage is pure banter and rivalry. She deflects everything with humor. No HawThorne director — preset only."
+    },
     "responses": [
       {
         "model": "deepseek_v3_2",
@@ -173,6 +233,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_50_gemini_2_5_flash_vs_gemma_4_26b",
     "context": "A fantasy drama scene. Two characters have just survived a dangerous encounter in a dark alley. Tension is high, injuries are present, and the emotional fallout of what just happened hangs in the air.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Valen is a spy and soldier with a charming exterior hiding deep loyalty. Merlin is a mage recovering from overuse of magic. They have a growing romantic tension but neither has named it. Setting: medieval fantasy world (Esperia) with magic, political intrigue, and an ongoing threat."
+    },
     "responses": [
       {
         "model": "gemini_2_5_flash",
@@ -186,7 +251,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_70_mistral_small_creative_vs_llama_4_maverick",
-    "context": "An outing scene — the characters go somewhere together outside their apartment. Their public dynamic differs from their private one.",
+    "context": "An outing scene — the characters go somewhere together outside their apartment.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Public outing — their dynamic shifts in public vs private."
+    },
     "responses": [
       {
         "model": "mistral_small_creative",
@@ -201,6 +271,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_350_claude_sonnet_4_5_vs_mistral_small_creative",
     "context": "A fantasy romance scene. After days of recovery and growing closer, two characters share a quiet morning in a courtyard. The relationship has deepened but remains unspoken.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. Weeks have passed. The relationship is established but still navigating boundaries. Training scenes, quiet domestic moments."
+    },
     "responses": [
       {
         "model": "claude_sonnet_4_5",
@@ -215,6 +290,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_450_gpt_4_1_vs_minimax_m2_7",
     "context": "A quiet aftermath scene. Characters process the fallout of recent events over tea. The mood is reflective, with humor breaking through the heaviness.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Same setting. Post-crisis recovery. Strovolos's theatrical persona softens in private moments."
+    },
     "responses": [
       {
         "model": "gpt_4_1",
@@ -228,7 +308,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_70_claude_sonnet_4_5_vs_mistral_small_creative",
-    "context": "An outing scene — the characters go somewhere together outside their apartment. Their public dynamic differs from their private one.",
+    "context": "An outing scene — the characters go somewhere together outside their apartment.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Public outing — their dynamic shifts in public vs private."
+    },
     "responses": [
       {
         "model": "claude_sonnet_4_5",
@@ -242,7 +327,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_0_claude_sonnet_4_5_vs_mistral_small_creative",
-    "context": "An ERP/romance scene. Two supernatural roommates (a demon and a half-demon) welcome their human partner home after a long day. Playful, affectionate, mildly competitive dynamic between the three.",
+    "context": "An ERP/romance scene. Two supernatural roommates welcome their human partner home after a long day. Playful, affectionate, mildly competitive dynamic between the three.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Akira is a quiet, possessive half-demon athlete. Agi is a loud, theatrical full demon with red skin and glowing eyes. Angie is their human partner. The three live together. Agi is competitive for attention, Akira is deadpan but deeply caring. Both can lactate (supernatural trait). Tone: playful, intimate, comedic."
+    },
     "responses": [
       {
         "model": "claude_sonnet_4_5",
@@ -256,7 +346,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_81_gpt_4_1_vs_mistral_small_creative",
-    "context": "A later scene. The relationship has progressed to physical closeness. The gyaru character's bravado cracks at moments of real vulnerability.",
+    "context": "A later scene. The relationship has progressed to physical closeness.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. Bell's bravado cracks at moments of real vulnerability. Intimate but not explicit."
+    },
     "responses": [
       {
         "model": "gpt_4_1",
@@ -271,6 +366,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_100_gemini_2_5_flash_vs_deepseek_v3_2",
     "context": "A fantasy romance scene. Two characters are in a quiet morning moment together when an unexpected knock at the door interrupts the intimacy. A third character arrives with urgent news.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. The relationship has deepened through shared danger. Valen deflects vulnerability with charm. Merlin is direct but emotionally guarded. A third character (Gervan, young soldier) arrives."
+    },
     "responses": [
       {
         "model": "gemini_2_5_flash",
@@ -284,7 +384,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_51_grok_4_1_vs_mistral_small_creative",
-    "context": "A mid-story scene. The characters have spent time together outside school. The gyaru character shows a different side in private — less performative, more genuine.",
+    "context": "A mid-story scene. The characters have spent time together outside school.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. Bell shows a different side in private — less performative, more genuine. The slowburn is progressing."
+    },
     "responses": [
       {
         "model": "grok_4_1",
@@ -299,6 +404,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_50_gpt_4_1_vs_gemma_4_26b",
     "context": "A fantasy drama scene. Two characters have just survived a dangerous encounter in a dark alley. Tension is high, injuries are present, and the emotional fallout of what just happened hangs in the air.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Valen is a spy and soldier with a charming exterior hiding deep loyalty. Merlin is a mage recovering from overuse of magic. They have a growing romantic tension but neither has named it. Setting: medieval fantasy world (Esperia) with magic, political intrigue, and an ongoing threat."
+    },
     "responses": [
       {
         "model": "gpt_4_1",
@@ -312,7 +422,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_101_grok_4_1_vs_llama_4_maverick",
-    "context": "A domestic scene — the characters are at one of their apartments. The dynamic is intimate but the gyaru character still deflects with humor when things get too real.",
+    "context": "A domestic scene — at one of their apartments. Intimate but the gyaru still deflects with humor.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. The relationship is established. Bell uses humor as a coping mechanism for sincerity."
+    },
     "responses": [
       {
         "model": "grok_4_1",
@@ -327,6 +442,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_500_claude_sonnet_4_5_vs_deepseek_v3_2",
     "context": "A fantasy scene. Mid-story, the characters are navigating both a romantic relationship and a dangerous mission. The tone balances tender moments with strategic tension.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. Deep into the story. The couple faces external threats while building their relationship. Multiple supporting characters involved."
+    },
     "responses": [
       {
         "model": "claude_sonnet_4_5",
@@ -340,7 +460,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_8_qwen3_5_flash_vs_llama_4_maverick",
-    "context": "A school scene. The transfer student rushes to class after an encounter in the hallway. The school environment is detailed — other students, classroom sounds, a strict teacher.",
+    "context": "A school scene. The transfer student rushes to class after an encounter in the hallway.",
+    "character_info": {
+      "character_name": "Ryujin High Narrator",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same school setting. Multiple NPCs — teacher, classmates. The school has specific rules and social dynamics."
+    },
     "responses": [
       {
         "model": "qwen3_5_flash",
@@ -354,7 +479,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_12_minimax_m2_7_vs_llama_4_maverick",
-    "context": "A classroom scene. The protagonist settles into a new class. Multiple NPCs are present. The setting is a prestigious school with specific social hierarchies.",
+    "context": "A classroom scene. Multiple NPCs are present. The setting is a prestigious school with specific social hierarchies.",
+    "character_info": {
+      "character_name": "Ryujin High Narrator",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same setting. Classroom scene with multiple characters. Student council has special authority."
+    },
     "responses": [
       {
         "model": "minimax_m2_7",
@@ -369,6 +499,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_150_qwen3_5_flash_vs_llama_4_maverick",
     "context": "A fantasy scene where two characters with an established dynamic navigate a tense social situation. The supernatural character tries to protect the human from a veiled threat.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Same setting. Strovolos and Levi have an established bond. A dangerous social situation requires Strovolos to balance his protective instincts with political savvy."
+    },
     "responses": [
       {
         "model": "qwen3_5_flash",
@@ -382,7 +517,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_0_deepseek_v3_2_vs_mistral_small_creative",
-    "context": "An ERP/romance scene. Two supernatural roommates (a demon and a half-demon) welcome their human partner home after a long day. Playful, affectionate, mildly competitive dynamic between the three.",
+    "context": "An ERP/romance scene. Two supernatural roommates welcome their human partner home after a long day. Playful, affectionate, mildly competitive dynamic between the three.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Akira is a quiet, possessive half-demon athlete. Agi is a loud, theatrical full demon with red skin and glowing eyes. Angie is their human partner. The three live together. Agi is competitive for attention, Akira is deadpan but deeply caring. Both can lactate (supernatural trait). Tone: playful, intimate, comedic."
+    },
     "responses": [
       {
         "model": "deepseek_v3_2",
@@ -396,7 +536,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_0_qwen3_5_flash_vs_llama_4_maverick",
-    "context": "An ERP/romance scene. Two supernatural roommates (a demon and a half-demon) welcome their human partner home after a long day. Playful, affectionate, mildly competitive dynamic between the three.",
+    "context": "An ERP/romance scene. Two supernatural roommates welcome their human partner home after a long day. Playful, affectionate, mildly competitive dynamic between the three.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Akira is a quiet, possessive half-demon athlete. Agi is a loud, theatrical full demon with red skin and glowing eyes. Angie is their human partner. The three live together. Agi is competitive for attention, Akira is deadpan but deeply caring. Both can lactate (supernatural trait). Tone: playful, intimate, comedic."
+    },
     "responses": [
       {
         "model": "qwen3_5_flash",
@@ -411,6 +556,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_50_claude_sonnet_4_5_vs_glm_4_7",
     "context": "A fantasy comedy scene in an interdimensional setting. A flamboyant supernatural character interacts with a human visitor in a colorful, over-the-top establishment.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Strovolos is a flamboyant, theatrical demon who runs an interdimensional bordello. He's dramatic, protective of his staff, and hides genuine warmth under showmanship. Levi is a human visitor. The tone is comedic with genuine emotional undertones."
+    },
     "responses": [
       {
         "model": "claude_sonnet_4_5",
@@ -425,6 +575,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_50_minimax_m2_7_vs_mistral_small_creative",
     "context": "A fantasy comedy scene in an interdimensional setting. A flamboyant supernatural character interacts with a human visitor in a colorful, over-the-top establishment.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Strovolos is a flamboyant, theatrical demon who runs an interdimensional bordello. He's dramatic, protective of his staff, and hides genuine warmth under showmanship. Levi is a human visitor. The tone is comedic with genuine emotional undertones."
+    },
     "responses": [
       {
         "model": "minimax_m2_7",
@@ -439,6 +594,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_500_gpt_4_1_vs_minimax_m2_7",
     "context": "A fantasy scene. Mid-story, the characters are navigating both a romantic relationship and a dangerous mission. The tone balances tender moments with strategic tension.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. Deep into the story. The couple faces external threats while building their relationship. Multiple supporting characters involved."
+    },
     "responses": [
       {
         "model": "gpt_4_1",
@@ -453,6 +613,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_200_gemini_2_5_flash_vs_minimax_m2_7",
     "context": "A fantasy drama scene. The protagonist is recovering from exhaustion in a healer's chamber. A military general arrives to deliver strategic intelligence about a growing magical threat.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. Merlin is bedridden. General Hogan (gruff, professional military commander) delivers news about poisoned leylines. Valen is protective but restrained."
+    },
     "responses": [
       {
         "model": "gemini_2_5_flash",
@@ -466,7 +631,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_30_glm_4_7_vs_llama_4_maverick",
-    "context": "An intimate scene between established partners. The characters' distinct personalities (one loud and theatrical, one quiet and possessive) shape how they express affection.",
+    "context": "An intimate scene between established partners. The characters' distinct personalities shape how they express affection.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Explicit content. Characters should maintain distinct voices during intimate scenes."
+    },
     "responses": [
       {
         "model": "glm_4_7",
@@ -480,7 +650,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_119_mistral_small_creative_vs_llama_4_maverick",
-    "context": "Near the end of the current arc. A quiet morning scene. The relationship is established. The writing should show earned comfort without losing character voice.",
+    "context": "Near the end of the arc. A quiet morning scene. The relationship is established.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. Late-stage comfort. Should show earned growth without losing Bell's core personality (loud, smug, teasing)."
+    },
     "responses": [
       {
         "model": "mistral_small_creative",
@@ -494,7 +669,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_20_gemini_2_5_flash_vs_mistral_small_creative",
-    "context": "A domestic romance scene. The characters navigate daily life together — morning routines, work schedules, casual intimacy. The supernatural elements are treated as mundane.",
+    "context": "A domestic romance scene. The characters navigate daily life together — morning routines, work schedules, casual intimacy.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Daily life — supernatural elements treated as mundane."
+    },
     "responses": [
       {
         "model": "gemini_2_5_flash",
@@ -508,7 +688,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_70_minimax_m2_7_vs_llama_4_maverick",
-    "context": "An outing scene — the characters go somewhere together outside their apartment. Their public dynamic differs from their private one.",
+    "context": "An outing scene — the characters go somewhere together outside their apartment.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Public outing — their dynamic shifts in public vs private."
+    },
     "responses": [
       {
         "model": "minimax_m2_7",
@@ -523,6 +708,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_200_grok_4_1_vs_llama_4_maverick",
     "context": "A fantasy drama scene. The protagonist is recovering from exhaustion in a healer's chamber. A military general arrives to deliver strategic intelligence about a growing magical threat.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. Merlin is bedridden. General Hogan (gruff, professional military commander) delivers news about poisoned leylines. Valen is protective but restrained."
+    },
     "responses": [
       {
         "model": "grok_4_1",
@@ -536,7 +726,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_30_claude_sonnet_4_5_vs_grok_4_1",
-    "context": "An intimate scene between established partners. The characters' distinct personalities (one loud and theatrical, one quiet and possessive) shape how they express affection.",
+    "context": "An intimate scene between established partners. The characters' distinct personalities shape how they express affection.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Explicit content. Characters should maintain distinct voices during intimate scenes."
+    },
     "responses": [
       {
         "model": "claude_sonnet_4_5",
@@ -551,6 +746,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_150_deepseek_v3_2_vs_llama_4_maverick",
     "context": "A fantasy scene where two characters with an established dynamic navigate a tense social situation. The supernatural character tries to protect the human from a veiled threat.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Same setting. Strovolos and Levi have an established bond. A dangerous social situation requires Strovolos to balance his protective instincts with political savvy."
+    },
     "responses": [
       {
         "model": "deepseek_v3_2",
@@ -564,7 +764,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_119_minimax_m2_7_vs_llama_4_maverick",
-    "context": "Near the end of the current arc. A quiet morning scene. The relationship is established. The writing should show earned comfort without losing character voice.",
+    "context": "Near the end of the arc. A quiet morning scene. The relationship is established.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. Late-stage comfort. Should show earned growth without losing Bell's core personality (loud, smug, teasing)."
+    },
     "responses": [
       {
         "model": "minimax_m2_7",
@@ -578,7 +783,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_50_qwen3_5_flash_vs_mistral_small_creative",
-    "context": "A later scene in the relationship. The characters have settled into patterns. The dynamic is comfortable but still charged with playful tension.",
+    "context": "A later scene in the relationship. The characters have settled into patterns. The dynamic is comfortable but still charged.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Comfortable domesticity with playful tension."
+    },
     "responses": [
       {
         "model": "qwen3_5_flash",
@@ -593,6 +803,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_450_mistral_small_creative_vs_llama_4_maverick",
     "context": "A quiet aftermath scene. Characters process the fallout of recent events over tea. The mood is reflective, with humor breaking through the heaviness.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Same setting. Post-crisis recovery. Strovolos's theatrical persona softens in private moments."
+    },
     "responses": [
       {
         "model": "mistral_small_creative",
@@ -606,7 +821,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_12_mistral_small_creative_vs_llama_4_maverick",
-    "context": "A classroom scene. The protagonist settles into a new class. Multiple NPCs are present. The setting is a prestigious school with specific social hierarchies.",
+    "context": "A classroom scene. Multiple NPCs are present. The setting is a prestigious school with specific social hierarchies.",
+    "character_info": {
+      "character_name": "Ryujin High Narrator",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same setting. Classroom scene with multiple characters. Student council has special authority."
+    },
     "responses": [
       {
         "model": "mistral_small_creative",
@@ -620,7 +840,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_101_gemini_2_5_flash_vs_deepseek_v3_2",
-    "context": "A domestic scene — the characters are at one of their apartments. The dynamic is intimate but the gyaru character still deflects with humor when things get too real.",
+    "context": "A domestic scene — at one of their apartments. Intimate but the gyaru still deflects with humor.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. The relationship is established. Bell uses humor as a coping mechanism for sincerity."
+    },
     "responses": [
       {
         "model": "gemini_2_5_flash",
@@ -634,7 +859,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_12_deepseek_v3_2_vs_qwen3_5_flash",
-    "context": "A classroom scene. The protagonist settles into a new class. Multiple NPCs are present. The setting is a prestigious school with specific social hierarchies.",
+    "context": "A classroom scene. Multiple NPCs are present. The setting is a prestigious school with specific social hierarchies.",
+    "character_info": {
+      "character_name": "Ryujin High Narrator",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same setting. Classroom scene with multiple characters. Student council has special authority."
+    },
     "responses": [
       {
         "model": "deepseek_v3_2",
@@ -648,7 +878,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_4_mistral_small_creative_vs_llama_4_maverick",
-    "context": "A school romance scene. The transfer student meets a charismatic upperclassman who wears a captain's hat and speaks in nautical metaphors. First conversation, mutual curiosity.",
+    "context": "A school romance scene. The transfer student meets a charismatic upperclassman who wears a captain's hat and speaks in nautical metaphors.",
+    "character_info": {
+      "character_name": "Nanase (via Narrator)",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Nanase is a third-year, captain of the yacht club, wears a navy captain's hat. She speaks with nautical metaphors, is confident and slightly mysterious. The narrator should weave nautical imagery throughout."
+    },
     "responses": [
       {
         "model": "mistral_small_creative",
@@ -662,7 +897,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_26_minimax_m2_7_vs_mistral_small_creative",
-    "context": "A late-in-the-day school scene. The relationship between the two characters has progressed through small moments. An emotionally charged exchange in a quiet corridor.",
+    "context": "A late-in-the-day school scene. An emotionally charged exchange in a quiet corridor.",
+    "character_info": {
+      "character_name": "Nanase (via Narrator)",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same setting. Emotional escalation — the dynamic has shifted from casual to something more."
+    },
     "responses": [
       {
         "model": "minimax_m2_7",
@@ -676,7 +916,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_70_glm_4_7_vs_mistral_small_creative",
-    "context": "An outing scene — the characters go somewhere together outside their apartment. Their public dynamic differs from their private one.",
+    "context": "An outing scene — the characters go somewhere together outside their apartment.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Public outing — their dynamic shifts in public vs private."
+    },
     "responses": [
       {
         "model": "glm_4_7",
@@ -690,7 +935,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_3_grok_4_1_vs_llama_4_maverick",
-    "context": "A school comedy/romance scene. A gyaru girl teases a classmate during break period. They have a rivalry-turned-flirtation dynamic. Early stage — all banter, no vulnerability.",
+    "context": "A school comedy/romance scene. A gyaru girl teases a classmate during break period. Early stage — all banter, no vulnerability.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Bell is a 17yo gyaru — loud, platinum hair, smug, teases aggressively. She's the user's classmate. This is a slowburn: early stage is pure banter and rivalry. She deflects everything with humor. No HawThorne director — preset only."
+    },
     "responses": [
       {
         "model": "grok_4_1",
@@ -705,6 +955,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_50_mistral_small_creative_vs_llama_4_maverick",
     "context": "A fantasy drama scene. Two characters have just survived a dangerous encounter in a dark alley. Tension is high, injuries are present, and the emotional fallout of what just happened hangs in the air.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Valen is a spy and soldier with a charming exterior hiding deep loyalty. Merlin is a mage recovering from overuse of magic. They have a growing romantic tension but neither has named it. Setting: medieval fantasy world (Esperia) with magic, political intrigue, and an ongoing threat."
+    },
     "responses": [
       {
         "model": "mistral_small_creative",
@@ -718,7 +973,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_3_gpt_4_1_vs_glm_4_7",
-    "context": "A school comedy/romance scene. A gyaru girl teases a classmate during break period. They have a rivalry-turned-flirtation dynamic. Early stage — all banter, no vulnerability.",
+    "context": "A school comedy/romance scene. A gyaru girl teases a classmate during break period. Early stage — all banter, no vulnerability.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Bell is a 17yo gyaru — loud, platinum hair, smug, teases aggressively. She's the user's classmate. This is a slowburn: early stage is pure banter and rivalry. She deflects everything with humor. No HawThorne director — preset only."
+    },
     "responses": [
       {
         "model": "gpt_4_1",
@@ -733,6 +993,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_50_gemma_4_26b_vs_qwen3_5_flash",
     "context": "A fantasy drama scene. Two characters have just survived a dangerous encounter in a dark alley. Tension is high, injuries are present, and the emotional fallout of what just happened hangs in the air.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Valen is a spy and soldier with a charming exterior hiding deep loyalty. Merlin is a mage recovering from overuse of magic. They have a growing romantic tension but neither has named it. Setting: medieval fantasy world (Esperia) with magic, political intrigue, and an ongoing threat."
+    },
     "responses": [
       {
         "model": "gemma_4_26b",
@@ -747,6 +1012,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_350_qwen3_5_flash_vs_mistral_small_creative",
     "context": "A fantasy romance scene. After days of recovery and growing closer, two characters share a quiet morning in a courtyard. The relationship has deepened but remains unspoken.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. Weeks have passed. The relationship is established but still navigating boundaries. Training scenes, quiet domestic moments."
+    },
     "responses": [
       {
         "model": "qwen3_5_flash",
@@ -760,7 +1030,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_119_claude_sonnet_4_5_vs_mistral_small_creative",
-    "context": "Near the end of the current arc. A quiet morning scene. The relationship is established. The writing should show earned comfort without losing character voice.",
+    "context": "Near the end of the arc. A quiet morning scene. The relationship is established.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. Late-stage comfort. Should show earned growth without losing Bell's core personality (loud, smug, teasing)."
+    },
     "responses": [
       {
         "model": "claude_sonnet_4_5",
@@ -775,6 +1050,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_500_mistral_small_creative_vs_llama_4_maverick",
     "context": "A fantasy scene. Mid-story, the characters are navigating both a romantic relationship and a dangerous mission. The tone balances tender moments with strategic tension.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. Deep into the story. The couple faces external threats while building their relationship. Multiple supporting characters involved."
+    },
     "responses": [
       {
         "model": "mistral_small_creative",
@@ -788,7 +1068,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_8_gemma_4_26b_vs_mistral_small_creative",
-    "context": "A school scene. The transfer student rushes to class after an encounter in the hallway. The school environment is detailed — other students, classroom sounds, a strict teacher.",
+    "context": "A school scene. The transfer student rushes to class after an encounter in the hallway.",
+    "character_info": {
+      "character_name": "Ryujin High Narrator",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same school setting. Multiple NPCs — teacher, classmates. The school has specific rules and social dynamics."
+    },
     "responses": [
       {
         "model": "gemma_4_26b",
@@ -802,7 +1087,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_119_gpt_4_1_vs_llama_4_maverick",
-    "context": "Near the end of the current arc. A quiet morning scene. The relationship is established. The writing should show earned comfort without losing character voice.",
+    "context": "Near the end of the arc. A quiet morning scene. The relationship is established.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. Late-stage comfort. Should show earned growth without losing Bell's core personality (loud, smug, teasing)."
+    },
     "responses": [
       {
         "model": "gpt_4_1",
@@ -817,6 +1107,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_erp_10_claude_sonnet_4_5_vs_gpt_4_1",
     "context": "A continuing romance scene. The three characters have an established intimate dynamic. The scene balances humor, affection, and physical closeness.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting and characters. The dynamic is established and comfortable."
+    },
     "responses": [
       {
         "model": "claude_sonnet_4_5",
@@ -831,6 +1126,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_300_gemini_2_5_flash_vs_mistral_small_creative",
     "context": "A dramatic scene where political intrigue intersects with personal relationships. Multiple characters debate strategy while emotional tensions simmer beneath the surface.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Same setting. Multiple NPCs present (David, others). Political stakes are high. Characters hide personal feelings behind strategic discussion."
+    },
     "responses": [
       {
         "model": "gemini_2_5_flash",
@@ -844,7 +1144,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_101_mistral_small_creative_vs_llama_4_maverick",
-    "context": "A domestic scene — the characters are at one of their apartments. The dynamic is intimate but the gyaru character still deflects with humor when things get too real.",
+    "context": "A domestic scene — at one of their apartments. Intimate but the gyaru still deflects with humor.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. The relationship is established. Bell uses humor as a coping mechanism for sincerity."
+    },
     "responses": [
       {
         "model": "mistral_small_creative",
@@ -858,7 +1163,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_18_mistral_small_creative_vs_llama_4_maverick",
-    "context": "A hallway scene between classes. The transfer student and the captain character cross paths again. The school buzzes with activity around them.",
+    "context": "A hallway scene between classes. The transfer student and the captain character cross paths again.",
+    "character_info": {
+      "character_name": "Nanase (via Narrator)",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same setting. The relationship is developing through brief encounters."
+    },
     "responses": [
       {
         "model": "mistral_small_creative",
@@ -872,7 +1182,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_4_gemini_2_5_flash_vs_mistral_small_creative",
-    "context": "A school romance scene. The transfer student meets a charismatic upperclassman who wears a captain's hat and speaks in nautical metaphors. First conversation, mutual curiosity.",
+    "context": "A school romance scene. The transfer student meets a charismatic upperclassman who wears a captain's hat and speaks in nautical metaphors.",
+    "character_info": {
+      "character_name": "Nanase (via Narrator)",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Nanase is a third-year, captain of the yacht club, wears a navy captain's hat. She speaks with nautical metaphors, is confident and slightly mysterious. The narrator should weave nautical imagery throughout."
+    },
     "responses": [
       {
         "model": "gemini_2_5_flash",
@@ -886,7 +1201,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_81_grok_4_1_vs_llama_4_maverick",
-    "context": "A later scene. The relationship has progressed to physical closeness. The gyaru character's bravado cracks at moments of real vulnerability.",
+    "context": "A later scene. The relationship has progressed to physical closeness.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. Bell's bravado cracks at moments of real vulnerability. Intimate but not explicit."
+    },
     "responses": [
       {
         "model": "grok_4_1",
@@ -901,6 +1221,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_500_qwen3_5_flash_vs_llama_4_maverick",
     "context": "A fantasy scene. Mid-story, the characters are navigating both a romantic relationship and a dangerous mission. The tone balances tender moments with strategic tension.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. Deep into the story. The couple faces external threats while building their relationship. Multiple supporting characters involved."
+    },
     "responses": [
       {
         "model": "qwen3_5_flash",
@@ -915,6 +1240,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_erp_10_gpt_4_1_vs_mistral_small_creative",
     "context": "A continuing romance scene. The three characters have an established intimate dynamic. The scene balances humor, affection, and physical closeness.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting and characters. The dynamic is established and comfortable."
+    },
     "responses": [
       {
         "model": "gpt_4_1",
@@ -928,7 +1258,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_3_qwen3_5_flash_vs_llama_4_maverick",
-    "context": "A school comedy/romance scene. A gyaru girl teases a classmate during break period. They have a rivalry-turned-flirtation dynamic. Early stage — all banter, no vulnerability.",
+    "context": "A school comedy/romance scene. A gyaru girl teases a classmate during break period. Early stage — all banter, no vulnerability.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Bell is a 17yo gyaru — loud, platinum hair, smug, teases aggressively. She's the user's classmate. This is a slowburn: early stage is pure banter and rivalry. She deflects everything with humor. No HawThorne director — preset only."
+    },
     "responses": [
       {
         "model": "qwen3_5_flash",
@@ -942,7 +1277,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_70_grok_4_1_vs_mistral_small_creative",
-    "context": "An outing scene — the characters go somewhere together outside their apartment. Their public dynamic differs from their private one.",
+    "context": "An outing scene — the characters go somewhere together outside their apartment.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Public outing — their dynamic shifts in public vs private."
+    },
     "responses": [
       {
         "model": "grok_4_1",
@@ -956,7 +1296,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_4_minimax_m2_7_vs_llama_4_maverick",
-    "context": "A school romance scene. The transfer student meets a charismatic upperclassman who wears a captain's hat and speaks in nautical metaphors. First conversation, mutual curiosity.",
+    "context": "A school romance scene. The transfer student meets a charismatic upperclassman who wears a captain's hat and speaks in nautical metaphors.",
+    "character_info": {
+      "character_name": "Nanase (via Narrator)",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Nanase is a third-year, captain of the yacht club, wears a navy captain's hat. She speaks with nautical metaphors, is confident and slightly mysterious. The narrator should weave nautical imagery throughout."
+    },
     "responses": [
       {
         "model": "minimax_m2_7",
@@ -971,6 +1316,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_50_qwen3_5_flash_vs_llama_4_maverick",
     "context": "A fantasy drama scene. Two characters have just survived a dangerous encounter in a dark alley. Tension is high, injuries are present, and the emotional fallout of what just happened hangs in the air.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Valen is a spy and soldier with a charming exterior hiding deep loyalty. Merlin is a mage recovering from overuse of magic. They have a growing romantic tension but neither has named it. Setting: medieval fantasy world (Esperia) with magic, political intrigue, and an ongoing threat."
+    },
     "responses": [
       {
         "model": "qwen3_5_flash",
@@ -985,6 +1335,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_50_gpt_4_1_vs_minimax_m2_7",
     "context": "A fantasy comedy scene in an interdimensional setting. A flamboyant supernatural character interacts with a human visitor in a colorful, over-the-top establishment.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Strovolos is a flamboyant, theatrical demon who runs an interdimensional bordello. He's dramatic, protective of his staff, and hides genuine warmth under showmanship. Levi is a human visitor. The tone is comedic with genuine emotional undertones."
+    },
     "responses": [
       {
         "model": "gpt_4_1",
@@ -998,7 +1353,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_8_grok_4_1_vs_llama_4_maverick",
-    "context": "A school scene. The transfer student rushes to class after an encounter in the hallway. The school environment is detailed — other students, classroom sounds, a strict teacher.",
+    "context": "A school scene. The transfer student rushes to class after an encounter in the hallway.",
+    "character_info": {
+      "character_name": "Ryujin High Narrator",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same school setting. Multiple NPCs — teacher, classmates. The school has specific rules and social dynamics."
+    },
     "responses": [
       {
         "model": "grok_4_1",
@@ -1012,7 +1372,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_12_claude_sonnet_4_5_vs_minimax_m2_7",
-    "context": "A classroom scene. The protagonist settles into a new class. Multiple NPCs are present. The setting is a prestigious school with specific social hierarchies.",
+    "context": "A classroom scene. Multiple NPCs are present. The setting is a prestigious school with specific social hierarchies.",
+    "character_info": {
+      "character_name": "Ryujin High Narrator",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same setting. Classroom scene with multiple characters. Student council has special authority."
+    },
     "responses": [
       {
         "model": "claude_sonnet_4_5",
@@ -1026,7 +1391,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_119_gemini_2_5_flash_vs_glm_4_7",
-    "context": "Near the end of the current arc. A quiet morning scene. The relationship is established. The writing should show earned comfort without losing character voice.",
+    "context": "Near the end of the arc. A quiet morning scene. The relationship is established.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. Late-stage comfort. Should show earned growth without losing Bell's core personality (loud, smug, teasing)."
+    },
     "responses": [
       {
         "model": "gemini_2_5_flash",
@@ -1040,7 +1410,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_30_qwen3_5_flash_vs_mistral_small_creative",
-    "context": "An intimate scene between established partners. The characters' distinct personalities (one loud and theatrical, one quiet and possessive) shape how they express affection.",
+    "context": "An intimate scene between established partners. The characters' distinct personalities shape how they express affection.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Explicit content. Characters should maintain distinct voices during intimate scenes."
+    },
     "responses": [
       {
         "model": "qwen3_5_flash",
@@ -1055,6 +1430,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_500_deepseek_v3_2_vs_qwen3_5_flash",
     "context": "A fantasy scene. Mid-story, the characters are navigating both a romantic relationship and a dangerous mission. The tone balances tender moments with strategic tension.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. Deep into the story. The couple faces external threats while building their relationship. Multiple supporting characters involved."
+    },
     "responses": [
       {
         "model": "deepseek_v3_2",
@@ -1068,7 +1448,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_70_deepseek_v3_2_vs_grok_4_1",
-    "context": "An outing scene — the characters go somewhere together outside their apartment. Their public dynamic differs from their private one.",
+    "context": "An outing scene — the characters go somewhere together outside their apartment.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Public outing — their dynamic shifts in public vs private."
+    },
     "responses": [
       {
         "model": "deepseek_v3_2",
@@ -1082,7 +1467,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_21_mistral_small_creative_vs_llama_4_maverick",
-    "context": "A school scene, slightly further into the relationship. The gyaru's teasing has a softer edge now. They're eating lunch together. The dynamic is shifting but neither acknowledges it.",
+    "context": "A school scene. The gyaru's teasing has a softer edge now. They're eating lunch together.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. The dynamic is shifting — still teasing but with growing warmth underneath."
+    },
     "responses": [
       {
         "model": "mistral_small_creative",
@@ -1096,7 +1486,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_50_gpt_4_1_vs_glm_4_7",
-    "context": "A later scene in the relationship. The characters have settled into patterns. The dynamic is comfortable but still charged with playful tension.",
+    "context": "A later scene in the relationship. The characters have settled into patterns. The dynamic is comfortable but still charged.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Comfortable domesticity with playful tension."
+    },
     "responses": [
       {
         "model": "gpt_4_1",
@@ -1110,7 +1505,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_0_mistral_small_creative_vs_llama_4_maverick",
-    "context": "An ERP/romance scene. Two supernatural roommates (a demon and a half-demon) welcome their human partner home after a long day. Playful, affectionate, mildly competitive dynamic between the three.",
+    "context": "An ERP/romance scene. Two supernatural roommates welcome their human partner home after a long day. Playful, affectionate, mildly competitive dynamic between the three.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Akira is a quiet, possessive half-demon athlete. Agi is a loud, theatrical full demon with red skin and glowing eyes. Angie is their human partner. The three live together. Agi is competitive for attention, Akira is deadpan but deeply caring. Both can lactate (supernatural trait). Tone: playful, intimate, comedic."
+    },
     "responses": [
       {
         "model": "mistral_small_creative",
@@ -1125,6 +1525,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_350_glm_4_7_vs_minimax_m2_7",
     "context": "A fantasy romance scene. After days of recovery and growing closer, two characters share a quiet morning in a courtyard. The relationship has deepened but remains unspoken.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. Weeks have passed. The relationship is established but still navigating boundaries. Training scenes, quiet domestic moments."
+    },
     "responses": [
       {
         "model": "glm_4_7",
@@ -1138,7 +1543,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_26_qwen3_5_flash_vs_mistral_small_creative",
-    "context": "A late-in-the-day school scene. The relationship between the two characters has progressed through small moments. An emotionally charged exchange in a quiet corridor.",
+    "context": "A late-in-the-day school scene. An emotionally charged exchange in a quiet corridor.",
+    "character_info": {
+      "character_name": "Nanase (via Narrator)",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same setting. Emotional escalation — the dynamic has shifted from casual to something more."
+    },
     "responses": [
       {
         "model": "qwen3_5_flash",
@@ -1152,7 +1562,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_21_claude_sonnet_4_5_vs_gpt_4_1",
-    "context": "A school scene, slightly further into the relationship. The gyaru's teasing has a softer edge now. They're eating lunch together. The dynamic is shifting but neither acknowledges it.",
+    "context": "A school scene. The gyaru's teasing has a softer edge now. They're eating lunch together.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. The dynamic is shifting — still teasing but with growing warmth underneath."
+    },
     "responses": [
       {
         "model": "claude_sonnet_4_5",
@@ -1167,6 +1582,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_450_minimax_m2_7_vs_llama_4_maverick",
     "context": "A quiet aftermath scene. Characters process the fallout of recent events over tea. The mood is reflective, with humor breaking through the heaviness.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Same setting. Post-crisis recovery. Strovolos's theatrical persona softens in private moments."
+    },
     "responses": [
       {
         "model": "minimax_m2_7",
@@ -1180,7 +1600,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_8_glm_4_7_vs_minimax_m2_7",
-    "context": "A school scene. The transfer student rushes to class after an encounter in the hallway. The school environment is detailed — other students, classroom sounds, a strict teacher.",
+    "context": "A school scene. The transfer student rushes to class after an encounter in the hallway.",
+    "character_info": {
+      "character_name": "Ryujin High Narrator",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same school setting. Multiple NPCs — teacher, classmates. The school has specific rules and social dynamics."
+    },
     "responses": [
       {
         "model": "glm_4_7",
@@ -1195,6 +1620,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_300_qwen3_5_flash_vs_llama_4_maverick",
     "context": "A dramatic scene where political intrigue intersects with personal relationships. Multiple characters debate strategy while emotional tensions simmer beneath the surface.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Same setting. Multiple NPCs present (David, others). Political stakes are high. Characters hide personal feelings behind strategic discussion."
+    },
     "responses": [
       {
         "model": "qwen3_5_flash",
@@ -1209,6 +1639,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_300_mistral_small_creative_vs_llama_4_maverick",
     "context": "A dramatic scene where political intrigue intersects with personal relationships. Multiple characters debate strategy while emotional tensions simmer beneath the surface.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Same setting. Multiple NPCs present (David, others). Political stakes are high. Characters hide personal feelings behind strategic discussion."
+    },
     "responses": [
       {
         "model": "mistral_small_creative",
@@ -1222,7 +1657,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_0_glm_4_7_vs_minimax_m2_7",
-    "context": "An ERP/romance scene. Two supernatural roommates (a demon and a half-demon) welcome their human partner home after a long day. Playful, affectionate, mildly competitive dynamic between the three.",
+    "context": "An ERP/romance scene. Two supernatural roommates welcome their human partner home after a long day. Playful, affectionate, mildly competitive dynamic between the three.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Akira is a quiet, possessive half-demon athlete. Agi is a loud, theatrical full demon with red skin and glowing eyes. Angie is their human partner. The three live together. Agi is competitive for attention, Akira is deadpan but deeply caring. Both can lactate (supernatural trait). Tone: playful, intimate, comedic."
+    },
     "responses": [
       {
         "model": "glm_4_7",
@@ -1236,7 +1676,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_26_gpt_4_1_vs_gemini_2_5_flash",
-    "context": "A late-in-the-day school scene. The relationship between the two characters has progressed through small moments. An emotionally charged exchange in a quiet corridor.",
+    "context": "A late-in-the-day school scene. An emotionally charged exchange in a quiet corridor.",
+    "character_info": {
+      "character_name": "Nanase (via Narrator)",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same setting. Emotional escalation — the dynamic has shifted from casual to something more."
+    },
     "responses": [
       {
         "model": "gpt_4_1",
@@ -1250,7 +1695,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_4_deepseek_v3_2_vs_glm_4_7",
-    "context": "A school romance scene. The transfer student meets a charismatic upperclassman who wears a captain's hat and speaks in nautical metaphors. First conversation, mutual curiosity.",
+    "context": "A school romance scene. The transfer student meets a charismatic upperclassman who wears a captain's hat and speaks in nautical metaphors.",
+    "character_info": {
+      "character_name": "Nanase (via Narrator)",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Nanase is a third-year, captain of the yacht club, wears a navy captain's hat. She speaks with nautical metaphors, is confident and slightly mysterious. The narrator should weave nautical imagery throughout."
+    },
     "responses": [
       {
         "model": "deepseek_v3_2",
@@ -1264,7 +1714,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_30_minimax_m2_7_vs_qwen3_5_flash",
-    "context": "An intimate scene between established partners. The characters' distinct personalities (one loud and theatrical, one quiet and possessive) shape how they express affection.",
+    "context": "An intimate scene between established partners. The characters' distinct personalities shape how they express affection.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Explicit content. Characters should maintain distinct voices during intimate scenes."
+    },
     "responses": [
       {
         "model": "minimax_m2_7",
@@ -1279,6 +1734,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_350_gemma_4_26b_vs_grok_4_1",
     "context": "A fantasy romance scene. After days of recovery and growing closer, two characters share a quiet morning in a courtyard. The relationship has deepened but remains unspoken.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. Weeks have passed. The relationship is established but still navigating boundaries. Training scenes, quiet domestic moments."
+    },
     "responses": [
       {
         "model": "gemma_4_26b",
@@ -1293,6 +1753,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_100_glm_4_7_vs_gemma_4_26b",
     "context": "A fantasy romance scene. Two characters are in a quiet morning moment together when an unexpected knock at the door interrupts the intimacy. A third character arrives with urgent news.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. The relationship has deepened through shared danger. Valen deflects vulnerability with charm. Merlin is direct but emotionally guarded. A third character (Gervan, young soldier) arrives."
+    },
     "responses": [
       {
         "model": "glm_4_7",
@@ -1307,6 +1772,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_500_minimax_m2_7_vs_qwen3_5_flash",
     "context": "A fantasy scene. Mid-story, the characters are navigating both a romantic relationship and a dangerous mission. The tone balances tender moments with strategic tension.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. Deep into the story. The couple faces external threats while building their relationship. Multiple supporting characters involved."
+    },
     "responses": [
       {
         "model": "minimax_m2_7",
@@ -1320,7 +1790,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_30_gpt_4_1_vs_qwen3_5_flash",
-    "context": "An intimate scene between established partners. The characters' distinct personalities (one loud and theatrical, one quiet and possessive) shape how they express affection.",
+    "context": "An intimate scene between established partners. The characters' distinct personalities shape how they express affection.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Explicit content. Characters should maintain distinct voices during intimate scenes."
+    },
     "responses": [
       {
         "model": "gpt_4_1",
@@ -1334,7 +1809,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_3_gemini_2_5_flash_vs_deepseek_v3_2",
-    "context": "A school comedy/romance scene. A gyaru girl teases a classmate during break period. They have a rivalry-turned-flirtation dynamic. Early stage — all banter, no vulnerability.",
+    "context": "A school comedy/romance scene. A gyaru girl teases a classmate during break period. Early stage — all banter, no vulnerability.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Bell is a 17yo gyaru — loud, platinum hair, smug, teases aggressively. She's the user's classmate. This is a slowburn: early stage is pure banter and rivalry. She deflects everything with humor. No HawThorne director — preset only."
+    },
     "responses": [
       {
         "model": "gemini_2_5_flash",
@@ -1349,6 +1829,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_erp_10_glm_4_7_vs_grok_4_1",
     "context": "A continuing romance scene. The three characters have an established intimate dynamic. The scene balances humor, affection, and physical closeness.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting and characters. The dynamic is established and comfortable."
+    },
     "responses": [
       {
         "model": "glm_4_7",
@@ -1362,7 +1847,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_21_gemma_4_26b_vs_qwen3_5_flash",
-    "context": "A school scene, slightly further into the relationship. The gyaru's teasing has a softer edge now. They're eating lunch together. The dynamic is shifting but neither acknowledges it.",
+    "context": "A school scene. The gyaru's teasing has a softer edge now. They're eating lunch together.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. The dynamic is shifting — still teasing but with growing warmth underneath."
+    },
     "responses": [
       {
         "model": "gemma_4_26b",
@@ -1377,6 +1867,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_150_gpt_4_1_vs_gemma_4_26b",
     "context": "A fantasy scene where two characters with an established dynamic navigate a tense social situation. The supernatural character tries to protect the human from a veiled threat.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Same setting. Strovolos and Levi have an established bond. A dangerous social situation requires Strovolos to balance his protective instincts with political savvy."
+    },
     "responses": [
       {
         "model": "gpt_4_1",
@@ -1390,7 +1885,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_81_claude_sonnet_4_5_vs_mistral_small_creative",
-    "context": "A later scene. The relationship has progressed to physical closeness. The gyaru character's bravado cracks at moments of real vulnerability.",
+    "context": "A later scene. The relationship has progressed to physical closeness.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. Bell's bravado cracks at moments of real vulnerability. Intimate but not explicit."
+    },
     "responses": [
       {
         "model": "claude_sonnet_4_5",
@@ -1405,6 +1905,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_100_mistral_small_creative_vs_llama_4_maverick",
     "context": "A fantasy romance scene. Two characters are in a quiet morning moment together when an unexpected knock at the door interrupts the intimacy. A third character arrives with urgent news.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. The relationship has deepened through shared danger. Valen deflects vulnerability with charm. Merlin is direct but emotionally guarded. A third character (Gervan, young soldier) arrives."
+    },
     "responses": [
       {
         "model": "mistral_small_creative",
@@ -1418,7 +1923,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_8_mistral_small_creative_vs_llama_4_maverick",
-    "context": "A school scene. The transfer student rushes to class after an encounter in the hallway. The school environment is detailed — other students, classroom sounds, a strict teacher.",
+    "context": "A school scene. The transfer student rushes to class after an encounter in the hallway.",
+    "character_info": {
+      "character_name": "Ryujin High Narrator",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same school setting. Multiple NPCs — teacher, classmates. The school has specific rules and social dynamics."
+    },
     "responses": [
       {
         "model": "mistral_small_creative",
@@ -1432,7 +1942,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_21_qwen3_5_flash_vs_mistral_small_creative",
-    "context": "A school scene, slightly further into the relationship. The gyaru's teasing has a softer edge now. They're eating lunch together. The dynamic is shifting but neither acknowledges it.",
+    "context": "A school scene. The gyaru's teasing has a softer edge now. They're eating lunch together.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. The dynamic is shifting — still teasing but with growing warmth underneath."
+    },
     "responses": [
       {
         "model": "qwen3_5_flash",
@@ -1447,6 +1962,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_300_deepseek_v3_2_vs_glm_4_7",
     "context": "A dramatic scene where political intrigue intersects with personal relationships. Multiple characters debate strategy while emotional tensions simmer beneath the surface.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Same setting. Multiple NPCs present (David, others). Political stakes are high. Characters hide personal feelings behind strategic discussion."
+    },
     "responses": [
       {
         "model": "deepseek_v3_2",
@@ -1460,7 +1980,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_81_deepseek_v3_2_vs_minimax_m2_7",
-    "context": "A later scene. The relationship has progressed to physical closeness. The gyaru character's bravado cracks at moments of real vulnerability.",
+    "context": "A later scene. The relationship has progressed to physical closeness.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. Bell's bravado cracks at moments of real vulnerability. Intimate but not explicit."
+    },
     "responses": [
       {
         "model": "deepseek_v3_2",
@@ -1474,7 +1999,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_0_claude_sonnet_4_5_vs_grok_4_1",
-    "context": "A school slice-of-life scene. A transfer student arrives at an elite Tokyo high school on their first day. Cherry blossoms, shoe lockers, morning light.",
+    "context": "A school slice-of-life scene. A transfer student arrives at an elite Tokyo high school on their first day.",
+    "character_info": {
+      "character_name": "Ryujin High Narrator",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Narrator-driven. Ryujin High is an elite Tokyo school with rigid social hierarchy. The narrator controls all NPCs and environment. Second-person perspective. Heavy lorebook world with specific locations, clubs, and characters."
+    },
     "responses": [
       {
         "model": "claude_sonnet_4_5",
@@ -1488,7 +2018,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_4_qwen3_5_flash_vs_llama_4_maverick",
-    "context": "A school romance scene. The transfer student meets a charismatic upperclassman who wears a captain's hat and speaks in nautical metaphors. First conversation, mutual curiosity.",
+    "context": "A school romance scene. The transfer student meets a charismatic upperclassman who wears a captain's hat and speaks in nautical metaphors.",
+    "character_info": {
+      "character_name": "Nanase (via Narrator)",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Nanase is a third-year, captain of the yacht club, wears a navy captain's hat. She speaks with nautical metaphors, is confident and slightly mysterious. The narrator should weave nautical imagery throughout."
+    },
     "responses": [
       {
         "model": "qwen3_5_flash",
@@ -1503,6 +2038,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_300_grok_4_1_vs_mistral_small_creative",
     "context": "A dramatic scene where political intrigue intersects with personal relationships. Multiple characters debate strategy while emotional tensions simmer beneath the surface.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Same setting. Multiple NPCs present (David, others). Political stakes are high. Characters hide personal feelings behind strategic discussion."
+    },
     "responses": [
       {
         "model": "grok_4_1",
@@ -1517,6 +2057,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_350_grok_4_1_vs_llama_4_maverick",
     "context": "A fantasy romance scene. After days of recovery and growing closer, two characters share a quiet morning in a courtyard. The relationship has deepened but remains unspoken.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. Weeks have passed. The relationship is established but still navigating boundaries. Training scenes, quiet domestic moments."
+    },
     "responses": [
       {
         "model": "grok_4_1",
@@ -1530,7 +2075,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_21_gemini_2_5_flash_vs_gemma_4_26b",
-    "context": "A school scene, slightly further into the relationship. The gyaru's teasing has a softer edge now. They're eating lunch together. The dynamic is shifting but neither acknowledges it.",
+    "context": "A school scene. The gyaru's teasing has a softer edge now. They're eating lunch together.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. The dynamic is shifting — still teasing but with growing warmth underneath."
+    },
     "responses": [
       {
         "model": "gemini_2_5_flash",
@@ -1544,7 +2094,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_51_mistral_small_creative_vs_llama_4_maverick",
-    "context": "A mid-story scene. The characters have spent time together outside school. The gyaru character shows a different side in private — less performative, more genuine.",
+    "context": "A mid-story scene. The characters have spent time together outside school.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. Bell shows a different side in private — less performative, more genuine. The slowburn is progressing."
+    },
     "responses": [
       {
         "model": "mistral_small_creative",
@@ -1559,6 +2114,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_50_glm_4_7_vs_minimax_m2_7",
     "context": "A fantasy comedy scene in an interdimensional setting. A flamboyant supernatural character interacts with a human visitor in a colorful, over-the-top establishment.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Strovolos is a flamboyant, theatrical demon who runs an interdimensional bordello. He's dramatic, protective of his staff, and hides genuine warmth under showmanship. Levi is a human visitor. The tone is comedic with genuine emotional undertones."
+    },
     "responses": [
       {
         "model": "glm_4_7",
@@ -1572,7 +2132,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_0_grok_4_1_vs_qwen3_5_flash",
-    "context": "An ERP/romance scene. Two supernatural roommates (a demon and a half-demon) welcome their human partner home after a long day. Playful, affectionate, mildly competitive dynamic between the three.",
+    "context": "An ERP/romance scene. Two supernatural roommates welcome their human partner home after a long day. Playful, affectionate, mildly competitive dynamic between the three.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Akira is a quiet, possessive half-demon athlete. Agi is a loud, theatrical full demon with red skin and glowing eyes. Angie is their human partner. The three live together. Agi is competitive for attention, Akira is deadpan but deeply caring. Both can lactate (supernatural trait). Tone: playful, intimate, comedic."
+    },
     "responses": [
       {
         "model": "grok_4_1",
@@ -1586,7 +2151,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_20_mistral_small_creative_vs_llama_4_maverick",
-    "context": "A domestic romance scene. The characters navigate daily life together — morning routines, work schedules, casual intimacy. The supernatural elements are treated as mundane.",
+    "context": "A domestic romance scene. The characters navigate daily life together — morning routines, work schedules, casual intimacy.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Daily life — supernatural elements treated as mundane."
+    },
     "responses": [
       {
         "model": "mistral_small_creative",
@@ -1600,7 +2170,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_20_gpt_4_1_vs_gemini_2_5_flash",
-    "context": "A domestic romance scene. The characters navigate daily life together — morning routines, work schedules, casual intimacy. The supernatural elements are treated as mundane.",
+    "context": "A domestic romance scene. The characters navigate daily life together — morning routines, work schedules, casual intimacy.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Daily life — supernatural elements treated as mundane."
+    },
     "responses": [
       {
         "model": "gpt_4_1",
@@ -1615,6 +2190,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_500_gemma_4_26b_vs_llama_4_maverick",
     "context": "A fantasy scene. Mid-story, the characters are navigating both a romantic relationship and a dangerous mission. The tone balances tender moments with strategic tension.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. Deep into the story. The couple faces external threats while building their relationship. Multiple supporting characters involved."
+    },
     "responses": [
       {
         "model": "gemma_4_26b",
@@ -1628,7 +2208,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_101_gpt_4_1_vs_mistral_small_creative",
-    "context": "A domestic scene — the characters are at one of their apartments. The dynamic is intimate but the gyaru character still deflects with humor when things get too real.",
+    "context": "A domestic scene — at one of their apartments. Intimate but the gyaru still deflects with humor.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. The relationship is established. Bell uses humor as a coping mechanism for sincerity."
+    },
     "responses": [
       {
         "model": "gpt_4_1",
@@ -1642,7 +2227,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_12_glm_4_7_vs_minimax_m2_7",
-    "context": "A classroom scene. The protagonist settles into a new class. Multiple NPCs are present. The setting is a prestigious school with specific social hierarchies.",
+    "context": "A classroom scene. Multiple NPCs are present. The setting is a prestigious school with specific social hierarchies.",
+    "character_info": {
+      "character_name": "Ryujin High Narrator",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same setting. Classroom scene with multiple characters. Student council has special authority."
+    },
     "responses": [
       {
         "model": "glm_4_7",
@@ -1657,6 +2247,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_450_gemma_4_26b_vs_mistral_small_creative",
     "context": "A quiet aftermath scene. Characters process the fallout of recent events over tea. The mood is reflective, with humor breaking through the heaviness.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Same setting. Post-crisis recovery. Strovolos's theatrical persona softens in private moments."
+    },
     "responses": [
       {
         "model": "gemma_4_26b",
@@ -1671,6 +2266,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_500_gemini_2_5_flash_vs_glm_4_7",
     "context": "A fantasy scene. Mid-story, the characters are navigating both a romantic relationship and a dangerous mission. The tone balances tender moments with strategic tension.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. Deep into the story. The couple faces external threats while building their relationship. Multiple supporting characters involved."
+    },
     "responses": [
       {
         "model": "gemini_2_5_flash",
@@ -1684,7 +2284,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_21_minimax_m2_7_vs_mistral_small_creative",
-    "context": "A school scene, slightly further into the relationship. The gyaru's teasing has a softer edge now. They're eating lunch together. The dynamic is shifting but neither acknowledges it.",
+    "context": "A school scene. The gyaru's teasing has a softer edge now. They're eating lunch together.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. The dynamic is shifting — still teasing but with growing warmth underneath."
+    },
     "responses": [
       {
         "model": "minimax_m2_7",
@@ -1698,7 +2303,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_30_gemma_4_26b_vs_qwen3_5_flash",
-    "context": "An intimate scene between established partners. The characters' distinct personalities (one loud and theatrical, one quiet and possessive) shape how they express affection.",
+    "context": "An intimate scene between established partners. The characters' distinct personalities shape how they express affection.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Explicit content. Characters should maintain distinct voices during intimate scenes."
+    },
     "responses": [
       {
         "model": "gemma_4_26b",
@@ -1712,7 +2322,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_4_claude_sonnet_4_5_vs_gemini_2_5_flash",
-    "context": "A school romance scene. The transfer student meets a charismatic upperclassman who wears a captain's hat and speaks in nautical metaphors. First conversation, mutual curiosity.",
+    "context": "A school romance scene. The transfer student meets a charismatic upperclassman who wears a captain's hat and speaks in nautical metaphors.",
+    "character_info": {
+      "character_name": "Nanase (via Narrator)",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Nanase is a third-year, captain of the yacht club, wears a navy captain's hat. She speaks with nautical metaphors, is confident and slightly mysterious. The narrator should weave nautical imagery throughout."
+    },
     "responses": [
       {
         "model": "claude_sonnet_4_5",
@@ -1726,7 +2341,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_119_qwen3_5_flash_vs_llama_4_maverick",
-    "context": "Near the end of the current arc. A quiet morning scene. The relationship is established. The writing should show earned comfort without losing character voice.",
+    "context": "Near the end of the arc. A quiet morning scene. The relationship is established.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. Late-stage comfort. Should show earned growth without losing Bell's core personality (loud, smug, teasing)."
+    },
     "responses": [
       {
         "model": "qwen3_5_flash",
@@ -1741,6 +2361,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_300_gpt_4_1_vs_gemma_4_26b",
     "context": "A dramatic scene where political intrigue intersects with personal relationships. Multiple characters debate strategy while emotional tensions simmer beneath the surface.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Same setting. Multiple NPCs present (David, others). Political stakes are high. Characters hide personal feelings behind strategic discussion."
+    },
     "responses": [
       {
         "model": "gpt_4_1",
@@ -1754,7 +2379,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_81_gemini_2_5_flash_vs_minimax_m2_7",
-    "context": "A later scene. The relationship has progressed to physical closeness. The gyaru character's bravado cracks at moments of real vulnerability.",
+    "context": "A later scene. The relationship has progressed to physical closeness.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. Bell's bravado cracks at moments of real vulnerability. Intimate but not explicit."
+    },
     "responses": [
       {
         "model": "gemini_2_5_flash",
@@ -1769,6 +2399,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_erp_10_deepseek_v3_2_vs_glm_4_7",
     "context": "A continuing romance scene. The three characters have an established intimate dynamic. The scene balances humor, affection, and physical closeness.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting and characters. The dynamic is established and comfortable."
+    },
     "responses": [
       {
         "model": "deepseek_v3_2",
@@ -1782,7 +2417,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_50_minimax_m2_7_vs_mistral_small_creative",
-    "context": "A later scene in the relationship. The characters have settled into patterns. The dynamic is comfortable but still charged with playful tension.",
+    "context": "A later scene in the relationship. The characters have settled into patterns. The dynamic is comfortable but still charged.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Comfortable domesticity with playful tension."
+    },
     "responses": [
       {
         "model": "minimax_m2_7",
@@ -1796,7 +2436,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_18_qwen3_5_flash_vs_mistral_small_creative",
-    "context": "A hallway scene between classes. The transfer student and the captain character cross paths again. The school buzzes with activity around them.",
+    "context": "A hallway scene between classes. The transfer student and the captain character cross paths again.",
+    "character_info": {
+      "character_name": "Nanase (via Narrator)",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same setting. The relationship is developing through brief encounters."
+    },
     "responses": [
       {
         "model": "qwen3_5_flash",
@@ -1810,7 +2455,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_12_grok_4_1_vs_qwen3_5_flash",
-    "context": "A classroom scene. The protagonist settles into a new class. Multiple NPCs are present. The setting is a prestigious school with specific social hierarchies.",
+    "context": "A classroom scene. Multiple NPCs are present. The setting is a prestigious school with specific social hierarchies.",
+    "character_info": {
+      "character_name": "Ryujin High Narrator",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same setting. Classroom scene with multiple characters. Student council has special authority."
+    },
     "responses": [
       {
         "model": "grok_4_1",
@@ -1824,7 +2474,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_50_deepseek_v3_2_vs_mistral_small_creative",
-    "context": "A later scene in the relationship. The characters have settled into patterns. The dynamic is comfortable but still charged with playful tension.",
+    "context": "A later scene in the relationship. The characters have settled into patterns. The dynamic is comfortable but still charged.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Comfortable domesticity with playful tension."
+    },
     "responses": [
       {
         "model": "deepseek_v3_2",
@@ -1839,6 +2494,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_200_gpt_4_1_vs_gemini_2_5_flash",
     "context": "A fantasy drama scene. The protagonist is recovering from exhaustion in a healer's chamber. A military general arrives to deliver strategic intelligence about a growing magical threat.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. Merlin is bedridden. General Hogan (gruff, professional military commander) delivers news about poisoned leylines. Valen is protective but restrained."
+    },
     "responses": [
       {
         "model": "gpt_4_1",
@@ -1853,6 +2513,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_200_deepseek_v3_2_vs_mistral_small_creative",
     "context": "A fantasy drama scene. The protagonist is recovering from exhaustion in a healer's chamber. A military general arrives to deliver strategic intelligence about a growing magical threat.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. Merlin is bedridden. General Hogan (gruff, professional military commander) delivers news about poisoned leylines. Valen is protective but restrained."
+    },
     "responses": [
       {
         "model": "deepseek_v3_2",
@@ -1866,7 +2531,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_101_claude_sonnet_4_5_vs_llama_4_maverick",
-    "context": "A domestic scene — the characters are at one of their apartments. The dynamic is intimate but the gyaru character still deflects with humor when things get too real.",
+    "context": "A domestic scene — at one of their apartments. Intimate but the gyaru still deflects with humor.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. The relationship is established. Bell uses humor as a coping mechanism for sincerity."
+    },
     "responses": [
       {
         "model": "claude_sonnet_4_5",
@@ -1880,7 +2550,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_26_gemini_2_5_flash_vs_mistral_small_creative",
-    "context": "A late-in-the-day school scene. The relationship between the two characters has progressed through small moments. An emotionally charged exchange in a quiet corridor.",
+    "context": "A late-in-the-day school scene. An emotionally charged exchange in a quiet corridor.",
+    "character_info": {
+      "character_name": "Nanase (via Narrator)",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same setting. Emotional escalation — the dynamic has shifted from casual to something more."
+    },
     "responses": [
       {
         "model": "gemini_2_5_flash",
@@ -1895,6 +2570,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_350_mistral_small_creative_vs_llama_4_maverick",
     "context": "A fantasy romance scene. After days of recovery and growing closer, two characters share a quiet morning in a courtyard. The relationship has deepened but remains unspoken.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. Weeks have passed. The relationship is established but still navigating boundaries. Training scenes, quiet domestic moments."
+    },
     "responses": [
       {
         "model": "mistral_small_creative",
@@ -1908,7 +2588,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_0_gemma_4_26b_vs_mistral_small_creative",
-    "context": "An ERP/romance scene. Two supernatural roommates (a demon and a half-demon) welcome their human partner home after a long day. Playful, affectionate, mildly competitive dynamic between the three.",
+    "context": "An ERP/romance scene. Two supernatural roommates welcome their human partner home after a long day. Playful, affectionate, mildly competitive dynamic between the three.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Akira is a quiet, possessive half-demon athlete. Agi is a loud, theatrical full demon with red skin and glowing eyes. Angie is their human partner. The three live together. Agi is competitive for attention, Akira is deadpan but deeply caring. Both can lactate (supernatural trait). Tone: playful, intimate, comedic."
+    },
     "responses": [
       {
         "model": "gemma_4_26b",
@@ -1923,6 +2608,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_150_gemma_4_26b_vs_grok_4_1",
     "context": "A fantasy scene where two characters with an established dynamic navigate a tense social situation. The supernatural character tries to protect the human from a veiled threat.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Same setting. Strovolos and Levi have an established bond. A dangerous social situation requires Strovolos to balance his protective instincts with political savvy."
+    },
     "responses": [
       {
         "model": "gemma_4_26b",
@@ -1936,7 +2626,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_4_gemma_4_26b_vs_mistral_small_creative",
-    "context": "A school romance scene. The transfer student meets a charismatic upperclassman who wears a captain's hat and speaks in nautical metaphors. First conversation, mutual curiosity.",
+    "context": "A school romance scene. The transfer student meets a charismatic upperclassman who wears a captain's hat and speaks in nautical metaphors.",
+    "character_info": {
+      "character_name": "Nanase (via Narrator)",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Nanase is a third-year, captain of the yacht club, wears a navy captain's hat. She speaks with nautical metaphors, is confident and slightly mysterious. The narrator should weave nautical imagery throughout."
+    },
     "responses": [
       {
         "model": "gemma_4_26b",
@@ -1950,7 +2645,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_12_gpt_4_1_vs_grok_4_1",
-    "context": "A classroom scene. The protagonist settles into a new class. Multiple NPCs are present. The setting is a prestigious school with specific social hierarchies.",
+    "context": "A classroom scene. Multiple NPCs are present. The setting is a prestigious school with specific social hierarchies.",
+    "character_info": {
+      "character_name": "Ryujin High Narrator",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same setting. Classroom scene with multiple characters. Student council has special authority."
+    },
     "responses": [
       {
         "model": "gpt_4_1",
@@ -1965,6 +2665,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_450_claude_sonnet_4_5_vs_gemini_2_5_flash",
     "context": "A quiet aftermath scene. Characters process the fallout of recent events over tea. The mood is reflective, with humor breaking through the heaviness.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Same setting. Post-crisis recovery. Strovolos's theatrical persona softens in private moments."
+    },
     "responses": [
       {
         "model": "claude_sonnet_4_5",
@@ -1979,6 +2684,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_200_glm_4_7_vs_llama_4_maverick",
     "context": "A fantasy drama scene. The protagonist is recovering from exhaustion in a healer's chamber. A military general arrives to deliver strategic intelligence about a growing magical threat.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. Merlin is bedridden. General Hogan (gruff, professional military commander) delivers news about poisoned leylines. Valen is protective but restrained."
+    },
     "responses": [
       {
         "model": "glm_4_7",
@@ -1993,6 +2703,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_erp_10_grok_4_1_vs_llama_4_maverick",
     "context": "A continuing romance scene. The three characters have an established intimate dynamic. The scene balances humor, affection, and physical closeness.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting and characters. The dynamic is established and comfortable."
+    },
     "responses": [
       {
         "model": "grok_4_1",
@@ -2006,7 +2721,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_12_gemini_2_5_flash_vs_minimax_m2_7",
-    "context": "A classroom scene. The protagonist settles into a new class. Multiple NPCs are present. The setting is a prestigious school with specific social hierarchies.",
+    "context": "A classroom scene. Multiple NPCs are present. The setting is a prestigious school with specific social hierarchies.",
+    "character_info": {
+      "character_name": "Ryujin High Narrator",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same setting. Classroom scene with multiple characters. Student council has special authority."
+    },
     "responses": [
       {
         "model": "gemini_2_5_flash",
@@ -2020,7 +2740,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_18_deepseek_v3_2_vs_llama_4_maverick",
-    "context": "A hallway scene between classes. The transfer student and the captain character cross paths again. The school buzzes with activity around them.",
+    "context": "A hallway scene between classes. The transfer student and the captain character cross paths again.",
+    "character_info": {
+      "character_name": "Nanase (via Narrator)",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same setting. The relationship is developing through brief encounters."
+    },
     "responses": [
       {
         "model": "deepseek_v3_2",
@@ -2035,6 +2760,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_450_grok_4_1_vs_qwen3_5_flash",
     "context": "A quiet aftermath scene. Characters process the fallout of recent events over tea. The mood is reflective, with humor breaking through the heaviness.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Same setting. Post-crisis recovery. Strovolos's theatrical persona softens in private moments."
+    },
     "responses": [
       {
         "model": "grok_4_1",
@@ -2049,6 +2779,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_erp_10_gemma_4_26b_vs_minimax_m2_7",
     "context": "A continuing romance scene. The three characters have an established intimate dynamic. The scene balances humor, affection, and physical closeness.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting and characters. The dynamic is established and comfortable."
+    },
     "responses": [
       {
         "model": "gemma_4_26b",
@@ -2063,6 +2798,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_50_qwen3_5_flash_vs_mistral_small_creative",
     "context": "A fantasy comedy scene in an interdimensional setting. A flamboyant supernatural character interacts with a human visitor in a colorful, over-the-top establishment.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Strovolos is a flamboyant, theatrical demon who runs an interdimensional bordello. He's dramatic, protective of his staff, and hides genuine warmth under showmanship. Levi is a human visitor. The tone is comedic with genuine emotional undertones."
+    },
     "responses": [
       {
         "model": "qwen3_5_flash",
@@ -2076,7 +2816,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_18_grok_4_1_vs_mistral_small_creative",
-    "context": "A hallway scene between classes. The transfer student and the captain character cross paths again. The school buzzes with activity around them.",
+    "context": "A hallway scene between classes. The transfer student and the captain character cross paths again.",
+    "character_info": {
+      "character_name": "Nanase (via Narrator)",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same setting. The relationship is developing through brief encounters."
+    },
     "responses": [
       {
         "model": "grok_4_1",
@@ -2090,7 +2835,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_8_deepseek_v3_2_vs_llama_4_maverick",
-    "context": "A school scene. The transfer student rushes to class after an encounter in the hallway. The school environment is detailed — other students, classroom sounds, a strict teacher.",
+    "context": "A school scene. The transfer student rushes to class after an encounter in the hallway.",
+    "character_info": {
+      "character_name": "Ryujin High Narrator",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same school setting. Multiple NPCs — teacher, classmates. The school has specific rules and social dynamics."
+    },
     "responses": [
       {
         "model": "deepseek_v3_2",
@@ -2104,7 +2854,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_81_glm_4_7_vs_qwen3_5_flash",
-    "context": "A later scene. The relationship has progressed to physical closeness. The gyaru character's bravado cracks at moments of real vulnerability.",
+    "context": "A later scene. The relationship has progressed to physical closeness.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. Bell's bravado cracks at moments of real vulnerability. Intimate but not explicit."
+    },
     "responses": [
       {
         "model": "glm_4_7",
@@ -2118,7 +2873,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_81_minimax_m2_7_vs_qwen3_5_flash",
-    "context": "A later scene. The relationship has progressed to physical closeness. The gyaru character's bravado cracks at moments of real vulnerability.",
+    "context": "A later scene. The relationship has progressed to physical closeness.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. Bell's bravado cracks at moments of real vulnerability. Intimate but not explicit."
+    },
     "responses": [
       {
         "model": "minimax_m2_7",
@@ -2132,7 +2892,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_119_grok_4_1_vs_minimax_m2_7",
-    "context": "Near the end of the current arc. A quiet morning scene. The relationship is established. The writing should show earned comfort without losing character voice.",
+    "context": "Near the end of the arc. A quiet morning scene. The relationship is established.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. Late-stage comfort. Should show earned growth without losing Bell's core personality (loud, smug, teasing)."
+    },
     "responses": [
       {
         "model": "grok_4_1",
@@ -2146,7 +2911,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_101_qwen3_5_flash_vs_mistral_small_creative",
-    "context": "A domestic scene — the characters are at one of their apartments. The dynamic is intimate but the gyaru character still deflects with humor when things get too real.",
+    "context": "A domestic scene — at one of their apartments. Intimate but the gyaru still deflects with humor.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. The relationship is established. Bell uses humor as a coping mechanism for sincerity."
+    },
     "responses": [
       {
         "model": "qwen3_5_flash",
@@ -2160,7 +2930,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_20_claude_sonnet_4_5_vs_deepseek_v3_2",
-    "context": "A domestic romance scene. The characters navigate daily life together — morning routines, work schedules, casual intimacy. The supernatural elements are treated as mundane.",
+    "context": "A domestic romance scene. The characters navigate daily life together — morning routines, work schedules, casual intimacy.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Daily life — supernatural elements treated as mundane."
+    },
     "responses": [
       {
         "model": "claude_sonnet_4_5",
@@ -2174,7 +2949,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_0_grok_4_1_vs_mistral_small_creative",
-    "context": "A school slice-of-life scene. A transfer student arrives at an elite Tokyo high school on their first day. Cherry blossoms, shoe lockers, morning light.",
+    "context": "A school slice-of-life scene. A transfer student arrives at an elite Tokyo high school on their first day.",
+    "character_info": {
+      "character_name": "Ryujin High Narrator",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Narrator-driven. Ryujin High is an elite Tokyo school with rigid social hierarchy. The narrator controls all NPCs and environment. Second-person perspective. Heavy lorebook world with specific locations, clubs, and characters."
+    },
     "responses": [
       {
         "model": "grok_4_1",
@@ -2188,7 +2968,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_50_claude_sonnet_4_5_vs_gemma_4_26b",
-    "context": "A later scene in the relationship. The characters have settled into patterns. The dynamic is comfortable but still charged with playful tension.",
+    "context": "A later scene in the relationship. The characters have settled into patterns. The dynamic is comfortable but still charged.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Comfortable domesticity with playful tension."
+    },
     "responses": [
       {
         "model": "claude_sonnet_4_5",
@@ -2202,7 +2987,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_20_grok_4_1_vs_minimax_m2_7",
-    "context": "A domestic romance scene. The characters navigate daily life together — morning routines, work schedules, casual intimacy. The supernatural elements are treated as mundane.",
+    "context": "A domestic romance scene. The characters navigate daily life together — morning routines, work schedules, casual intimacy.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Daily life — supernatural elements treated as mundane."
+    },
     "responses": [
       {
         "model": "grok_4_1",
@@ -2217,6 +3007,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_300_gemma_4_26b_vs_qwen3_5_flash",
     "context": "A dramatic scene where political intrigue intersects with personal relationships. Multiple characters debate strategy while emotional tensions simmer beneath the surface.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Same setting. Multiple NPCs present (David, others). Political stakes are high. Characters hide personal feelings behind strategic discussion."
+    },
     "responses": [
       {
         "model": "gemma_4_26b",
@@ -2230,7 +3025,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_50_grok_4_1_vs_mistral_small_creative",
-    "context": "A later scene in the relationship. The characters have settled into patterns. The dynamic is comfortable but still charged with playful tension.",
+    "context": "A later scene in the relationship. The characters have settled into patterns. The dynamic is comfortable but still charged.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Comfortable domesticity with playful tension."
+    },
     "responses": [
       {
         "model": "grok_4_1",
@@ -2244,7 +3044,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_51_gemma_4_26b_vs_qwen3_5_flash",
-    "context": "A mid-story scene. The characters have spent time together outside school. The gyaru character shows a different side in private — less performative, more genuine.",
+    "context": "A mid-story scene. The characters have spent time together outside school.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. Bell shows a different side in private — less performative, more genuine. The slowburn is progressing."
+    },
     "responses": [
       {
         "model": "gemma_4_26b",
@@ -2258,7 +3063,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_119_glm_4_7_vs_mistral_small_creative",
-    "context": "Near the end of the current arc. A quiet morning scene. The relationship is established. The writing should show earned comfort without losing character voice.",
+    "context": "Near the end of the arc. A quiet morning scene. The relationship is established.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. Late-stage comfort. Should show earned growth without losing Bell's core personality (loud, smug, teasing)."
+    },
     "responses": [
       {
         "model": "glm_4_7",
@@ -2273,6 +3083,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_450_deepseek_v3_2_vs_gemma_4_26b",
     "context": "A quiet aftermath scene. Characters process the fallout of recent events over tea. The mood is reflective, with humor breaking through the heaviness.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Same setting. Post-crisis recovery. Strovolos's theatrical persona softens in private moments."
+    },
     "responses": [
       {
         "model": "deepseek_v3_2",
@@ -2286,7 +3101,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_70_gpt_4_1_vs_glm_4_7",
-    "context": "An outing scene — the characters go somewhere together outside their apartment. Their public dynamic differs from their private one.",
+    "context": "An outing scene — the characters go somewhere together outside their apartment.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Public outing — their dynamic shifts in public vs private."
+    },
     "responses": [
       {
         "model": "gpt_4_1",
@@ -2300,7 +3120,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_0_gpt_4_1_vs_grok_4_1",
-    "context": "A school slice-of-life scene. A transfer student arrives at an elite Tokyo high school on their first day. Cherry blossoms, shoe lockers, morning light.",
+    "context": "A school slice-of-life scene. A transfer student arrives at an elite Tokyo high school on their first day.",
+    "character_info": {
+      "character_name": "Ryujin High Narrator",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Narrator-driven. Ryujin High is an elite Tokyo school with rigid social hierarchy. The narrator controls all NPCs and environment. Second-person perspective. Heavy lorebook world with specific locations, clubs, and characters."
+    },
     "responses": [
       {
         "model": "gpt_4_1",
@@ -2314,7 +3139,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_4_glm_4_7_vs_gemma_4_26b",
-    "context": "A school romance scene. The transfer student meets a charismatic upperclassman who wears a captain's hat and speaks in nautical metaphors. First conversation, mutual curiosity.",
+    "context": "A school romance scene. The transfer student meets a charismatic upperclassman who wears a captain's hat and speaks in nautical metaphors.",
+    "character_info": {
+      "character_name": "Nanase (via Narrator)",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Nanase is a third-year, captain of the yacht club, wears a navy captain's hat. She speaks with nautical metaphors, is confident and slightly mysterious. The narrator should weave nautical imagery throughout."
+    },
     "responses": [
       {
         "model": "glm_4_7",
@@ -2328,7 +3158,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_4_gpt_4_1_vs_gemini_2_5_flash",
-    "context": "A school romance scene. The transfer student meets a charismatic upperclassman who wears a captain's hat and speaks in nautical metaphors. First conversation, mutual curiosity.",
+    "context": "A school romance scene. The transfer student meets a charismatic upperclassman who wears a captain's hat and speaks in nautical metaphors.",
+    "character_info": {
+      "character_name": "Nanase (via Narrator)",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Nanase is a third-year, captain of the yacht club, wears a navy captain's hat. She speaks with nautical metaphors, is confident and slightly mysterious. The narrator should weave nautical imagery throughout."
+    },
     "responses": [
       {
         "model": "gpt_4_1",
@@ -2342,7 +3177,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_51_deepseek_v3_2_vs_mistral_small_creative",
-    "context": "A mid-story scene. The characters have spent time together outside school. The gyaru character shows a different side in private — less performative, more genuine.",
+    "context": "A mid-story scene. The characters have spent time together outside school.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. Bell shows a different side in private — less performative, more genuine. The slowburn is progressing."
+    },
     "responses": [
       {
         "model": "deepseek_v3_2",
@@ -2356,7 +3196,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_26_mistral_small_creative_vs_llama_4_maverick",
-    "context": "A late-in-the-day school scene. The relationship between the two characters has progressed through small moments. An emotionally charged exchange in a quiet corridor.",
+    "context": "A late-in-the-day school scene. An emotionally charged exchange in a quiet corridor.",
+    "character_info": {
+      "character_name": "Nanase (via Narrator)",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same setting. Emotional escalation — the dynamic has shifted from casual to something more."
+    },
     "responses": [
       {
         "model": "mistral_small_creative",
@@ -2370,7 +3215,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_3_minimax_m2_7_vs_qwen3_5_flash",
-    "context": "A school comedy/romance scene. A gyaru girl teases a classmate during break period. They have a rivalry-turned-flirtation dynamic. Early stage — all banter, no vulnerability.",
+    "context": "A school comedy/romance scene. A gyaru girl teases a classmate during break period. Early stage — all banter, no vulnerability.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Bell is a 17yo gyaru — loud, platinum hair, smug, teases aggressively. She's the user's classmate. This is a slowburn: early stage is pure banter and rivalry. She deflects everything with humor. No HawThorne director — preset only."
+    },
     "responses": [
       {
         "model": "minimax_m2_7",
@@ -2384,7 +3234,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_51_gpt_4_1_vs_qwen3_5_flash",
-    "context": "A mid-story scene. The characters have spent time together outside school. The gyaru character shows a different side in private — less performative, more genuine.",
+    "context": "A mid-story scene. The characters have spent time together outside school.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. Bell shows a different side in private — less performative, more genuine. The slowburn is progressing."
+    },
     "responses": [
       {
         "model": "gpt_4_1",
@@ -2398,7 +3253,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_0_minimax_m2_7_vs_llama_4_maverick",
-    "context": "A school slice-of-life scene. A transfer student arrives at an elite Tokyo high school on their first day. Cherry blossoms, shoe lockers, morning light.",
+    "context": "A school slice-of-life scene. A transfer student arrives at an elite Tokyo high school on their first day.",
+    "character_info": {
+      "character_name": "Ryujin High Narrator",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Narrator-driven. Ryujin High is an elite Tokyo school with rigid social hierarchy. The narrator controls all NPCs and environment. Second-person perspective. Heavy lorebook world with specific locations, clubs, and characters."
+    },
     "responses": [
       {
         "model": "minimax_m2_7",
@@ -2412,7 +3272,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_81_mistral_small_creative_vs_llama_4_maverick",
-    "context": "A later scene. The relationship has progressed to physical closeness. The gyaru character's bravado cracks at moments of real vulnerability.",
+    "context": "A later scene. The relationship has progressed to physical closeness.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. Bell's bravado cracks at moments of real vulnerability. Intimate but not explicit."
+    },
     "responses": [
       {
         "model": "mistral_small_creative",
@@ -2427,6 +3292,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_200_claude_sonnet_4_5_vs_gpt_4_1",
     "context": "A fantasy drama scene. The protagonist is recovering from exhaustion in a healer's chamber. A military general arrives to deliver strategic intelligence about a growing magical threat.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. Merlin is bedridden. General Hogan (gruff, professional military commander) delivers news about poisoned leylines. Valen is protective but restrained."
+    },
     "responses": [
       {
         "model": "claude_sonnet_4_5",
@@ -2441,6 +3311,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_100_qwen3_5_flash_vs_mistral_small_creative",
     "context": "A fantasy romance scene. Two characters are in a quiet morning moment together when an unexpected knock at the door interrupts the intimacy. A third character arrives with urgent news.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. The relationship has deepened through shared danger. Valen deflects vulnerability with charm. Merlin is direct but emotionally guarded. A third character (Gervan, young soldier) arrives."
+    },
     "responses": [
       {
         "model": "qwen3_5_flash",
@@ -2454,7 +3329,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_20_deepseek_v3_2_vs_grok_4_1",
-    "context": "A domestic romance scene. The characters navigate daily life together — morning routines, work schedules, casual intimacy. The supernatural elements are treated as mundane.",
+    "context": "A domestic romance scene. The characters navigate daily life together — morning routines, work schedules, casual intimacy.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Daily life — supernatural elements treated as mundane."
+    },
     "responses": [
       {
         "model": "deepseek_v3_2",
@@ -2468,7 +3348,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_30_grok_4_1_vs_mistral_small_creative",
-    "context": "An intimate scene between established partners. The characters' distinct personalities (one loud and theatrical, one quiet and possessive) shape how they express affection.",
+    "context": "An intimate scene between established partners. The characters' distinct personalities shape how they express affection.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Explicit content. Characters should maintain distinct voices during intimate scenes."
+    },
     "responses": [
       {
         "model": "grok_4_1",
@@ -2482,7 +3367,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_81_qwen3_5_flash_vs_llama_4_maverick",
-    "context": "A later scene. The relationship has progressed to physical closeness. The gyaru character's bravado cracks at moments of real vulnerability.",
+    "context": "A later scene. The relationship has progressed to physical closeness.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. Bell's bravado cracks at moments of real vulnerability. Intimate but not explicit."
+    },
     "responses": [
       {
         "model": "qwen3_5_flash",
@@ -2496,7 +3386,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_8_minimax_m2_7_vs_mistral_small_creative",
-    "context": "A school scene. The transfer student rushes to class after an encounter in the hallway. The school environment is detailed — other students, classroom sounds, a strict teacher.",
+    "context": "A school scene. The transfer student rushes to class after an encounter in the hallway.",
+    "character_info": {
+      "character_name": "Ryujin High Narrator",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same school setting. Multiple NPCs — teacher, classmates. The school has specific rules and social dynamics."
+    },
     "responses": [
       {
         "model": "minimax_m2_7",
@@ -2511,6 +3406,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_erp_10_mistral_small_creative_vs_llama_4_maverick",
     "context": "A continuing romance scene. The three characters have an established intimate dynamic. The scene balances humor, affection, and physical closeness.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting and characters. The dynamic is established and comfortable."
+    },
     "responses": [
       {
         "model": "mistral_small_creative",
@@ -2525,6 +3425,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_erp_10_gemini_2_5_flash_vs_grok_4_1",
     "context": "A continuing romance scene. The three characters have an established intimate dynamic. The scene balances humor, affection, and physical closeness.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting and characters. The dynamic is established and comfortable."
+    },
     "responses": [
       {
         "model": "gemini_2_5_flash",
@@ -2538,7 +3443,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_30_deepseek_v3_2_vs_minimax_m2_7",
-    "context": "An intimate scene between established partners. The characters' distinct personalities (one loud and theatrical, one quiet and possessive) shape how they express affection.",
+    "context": "An intimate scene between established partners. The characters' distinct personalities shape how they express affection.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Explicit content. Characters should maintain distinct voices during intimate scenes."
+    },
     "responses": [
       {
         "model": "deepseek_v3_2",
@@ -2553,6 +3463,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_100_gemma_4_26b_vs_grok_4_1",
     "context": "A fantasy romance scene. Two characters are in a quiet morning moment together when an unexpected knock at the door interrupts the intimacy. A third character arrives with urgent news.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. The relationship has deepened through shared danger. Valen deflects vulnerability with charm. Merlin is direct but emotionally guarded. A third character (Gervan, young soldier) arrives."
+    },
     "responses": [
       {
         "model": "gemma_4_26b",
@@ -2567,6 +3482,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_50_minimax_m2_7_vs_llama_4_maverick",
     "context": "A fantasy drama scene. Two characters have just survived a dangerous encounter in a dark alley. Tension is high, injuries are present, and the emotional fallout of what just happened hangs in the air.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Valen is a spy and soldier with a charming exterior hiding deep loyalty. Merlin is a mage recovering from overuse of magic. They have a growing romantic tension but neither has named it. Setting: medieval fantasy world (Esperia) with magic, political intrigue, and an ongoing threat."
+    },
     "responses": [
       {
         "model": "minimax_m2_7",
@@ -2580,7 +3500,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_4_grok_4_1_vs_qwen3_5_flash",
-    "context": "A school romance scene. The transfer student meets a charismatic upperclassman who wears a captain's hat and speaks in nautical metaphors. First conversation, mutual curiosity.",
+    "context": "A school romance scene. The transfer student meets a charismatic upperclassman who wears a captain's hat and speaks in nautical metaphors.",
+    "character_info": {
+      "character_name": "Nanase (via Narrator)",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Nanase is a third-year, captain of the yacht club, wears a navy captain's hat. She speaks with nautical metaphors, is confident and slightly mysterious. The narrator should weave nautical imagery throughout."
+    },
     "responses": [
       {
         "model": "grok_4_1",
@@ -2594,7 +3519,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_20_minimax_m2_7_vs_mistral_small_creative",
-    "context": "A domestic romance scene. The characters navigate daily life together — morning routines, work schedules, casual intimacy. The supernatural elements are treated as mundane.",
+    "context": "A domestic romance scene. The characters navigate daily life together — morning routines, work schedules, casual intimacy.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Daily life — supernatural elements treated as mundane."
+    },
     "responses": [
       {
         "model": "minimax_m2_7",
@@ -2609,6 +3539,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_300_minimax_m2_7_vs_qwen3_5_flash",
     "context": "A dramatic scene where political intrigue intersects with personal relationships. Multiple characters debate strategy while emotional tensions simmer beneath the surface.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Same setting. Multiple NPCs present (David, others). Political stakes are high. Characters hide personal feelings behind strategic discussion."
+    },
     "responses": [
       {
         "model": "minimax_m2_7",
@@ -2622,7 +3557,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_50_glm_4_7_vs_gemma_4_26b",
-    "context": "A later scene in the relationship. The characters have settled into patterns. The dynamic is comfortable but still charged with playful tension.",
+    "context": "A later scene in the relationship. The characters have settled into patterns. The dynamic is comfortable but still charged.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Comfortable domesticity with playful tension."
+    },
     "responses": [
       {
         "model": "glm_4_7",
@@ -2636,7 +3576,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_8_claude_sonnet_4_5_vs_gemini_2_5_flash",
-    "context": "A school scene. The transfer student rushes to class after an encounter in the hallway. The school environment is detailed — other students, classroom sounds, a strict teacher.",
+    "context": "A school scene. The transfer student rushes to class after an encounter in the hallway.",
+    "character_info": {
+      "character_name": "Ryujin High Narrator",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same school setting. Multiple NPCs — teacher, classmates. The school has specific rules and social dynamics."
+    },
     "responses": [
       {
         "model": "claude_sonnet_4_5",
@@ -2650,7 +3595,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_12_qwen3_5_flash_vs_mistral_small_creative",
-    "context": "A classroom scene. The protagonist settles into a new class. Multiple NPCs are present. The setting is a prestigious school with specific social hierarchies.",
+    "context": "A classroom scene. Multiple NPCs are present. The setting is a prestigious school with specific social hierarchies.",
+    "character_info": {
+      "character_name": "Ryujin High Narrator",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same setting. Classroom scene with multiple characters. Student council has special authority."
+    },
     "responses": [
       {
         "model": "qwen3_5_flash",
@@ -2665,6 +3615,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_100_gpt_4_1_vs_qwen3_5_flash",
     "context": "A fantasy romance scene. Two characters are in a quiet morning moment together when an unexpected knock at the door interrupts the intimacy. A third character arrives with urgent news.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. The relationship has deepened through shared danger. Valen deflects vulnerability with charm. Merlin is direct but emotionally guarded. A third character (Gervan, young soldier) arrives."
+    },
     "responses": [
       {
         "model": "gpt_4_1",
@@ -2678,7 +3633,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_0_mistral_small_creative_vs_llama_4_maverick",
-    "context": "A school slice-of-life scene. A transfer student arrives at an elite Tokyo high school on their first day. Cherry blossoms, shoe lockers, morning light.",
+    "context": "A school slice-of-life scene. A transfer student arrives at an elite Tokyo high school on their first day.",
+    "character_info": {
+      "character_name": "Ryujin High Narrator",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Narrator-driven. Ryujin High is an elite Tokyo school with rigid social hierarchy. The narrator controls all NPCs and environment. Second-person perspective. Heavy lorebook world with specific locations, clubs, and characters."
+    },
     "responses": [
       {
         "model": "mistral_small_creative",
@@ -2693,6 +3653,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_50_grok_4_1_vs_minimax_m2_7",
     "context": "A fantasy comedy scene in an interdimensional setting. A flamboyant supernatural character interacts with a human visitor in a colorful, over-the-top establishment.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Strovolos is a flamboyant, theatrical demon who runs an interdimensional bordello. He's dramatic, protective of his staff, and hides genuine warmth under showmanship. Levi is a human visitor. The tone is comedic with genuine emotional undertones."
+    },
     "responses": [
       {
         "model": "grok_4_1",
@@ -2706,7 +3671,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_30_mistral_small_creative_vs_llama_4_maverick",
-    "context": "An intimate scene between established partners. The characters' distinct personalities (one loud and theatrical, one quiet and possessive) shape how they express affection.",
+    "context": "An intimate scene between established partners. The characters' distinct personalities shape how they express affection.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Explicit content. Characters should maintain distinct voices during intimate scenes."
+    },
     "responses": [
       {
         "model": "mistral_small_creative",
@@ -2720,7 +3690,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_20_gemma_4_26b_vs_grok_4_1",
-    "context": "A domestic romance scene. The characters navigate daily life together — morning routines, work schedules, casual intimacy. The supernatural elements are treated as mundane.",
+    "context": "A domestic romance scene. The characters navigate daily life together — morning routines, work schedules, casual intimacy.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Daily life — supernatural elements treated as mundane."
+    },
     "responses": [
       {
         "model": "gemma_4_26b",
@@ -2735,6 +3710,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_200_minimax_m2_7_vs_qwen3_5_flash",
     "context": "A fantasy drama scene. The protagonist is recovering from exhaustion in a healer's chamber. A military general arrives to deliver strategic intelligence about a growing magical threat.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. Merlin is bedridden. General Hogan (gruff, professional military commander) delivers news about poisoned leylines. Valen is protective but restrained."
+    },
     "responses": [
       {
         "model": "minimax_m2_7",
@@ -2748,7 +3728,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_0_deepseek_v3_2_vs_mistral_small_creative",
-    "context": "A school slice-of-life scene. A transfer student arrives at an elite Tokyo high school on their first day. Cherry blossoms, shoe lockers, morning light.",
+    "context": "A school slice-of-life scene. A transfer student arrives at an elite Tokyo high school on their first day.",
+    "character_info": {
+      "character_name": "Ryujin High Narrator",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Narrator-driven. Ryujin High is an elite Tokyo school with rigid social hierarchy. The narrator controls all NPCs and environment. Second-person perspective. Heavy lorebook world with specific locations, clubs, and characters."
+    },
     "responses": [
       {
         "model": "deepseek_v3_2",
@@ -2762,7 +3747,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_50_gemini_2_5_flash_vs_gemma_4_26b",
-    "context": "A later scene in the relationship. The characters have settled into patterns. The dynamic is comfortable but still charged with playful tension.",
+    "context": "A later scene in the relationship. The characters have settled into patterns. The dynamic is comfortable but still charged.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Comfortable domesticity with playful tension."
+    },
     "responses": [
       {
         "model": "gemini_2_5_flash",
@@ -2776,7 +3766,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_0_gemini_2_5_flash_vs_llama_4_maverick",
-    "context": "An ERP/romance scene. Two supernatural roommates (a demon and a half-demon) welcome their human partner home after a long day. Playful, affectionate, mildly competitive dynamic between the three.",
+    "context": "An ERP/romance scene. Two supernatural roommates welcome their human partner home after a long day. Playful, affectionate, mildly competitive dynamic between the three.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Akira is a quiet, possessive half-demon athlete. Agi is a loud, theatrical full demon with red skin and glowing eyes. Angie is their human partner. The three live together. Agi is competitive for attention, Akira is deadpan but deeply caring. Both can lactate (supernatural trait). Tone: playful, intimate, comedic."
+    },
     "responses": [
       {
         "model": "gemini_2_5_flash",
@@ -2790,7 +3785,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_20_glm_4_7_vs_minimax_m2_7",
-    "context": "A domestic romance scene. The characters navigate daily life together — morning routines, work schedules, casual intimacy. The supernatural elements are treated as mundane.",
+    "context": "A domestic romance scene. The characters navigate daily life together — morning routines, work schedules, casual intimacy.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Daily life — supernatural elements treated as mundane."
+    },
     "responses": [
       {
         "model": "glm_4_7",
@@ -2804,7 +3804,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_30_gemini_2_5_flash_vs_gemma_4_26b",
-    "context": "An intimate scene between established partners. The characters' distinct personalities (one loud and theatrical, one quiet and possessive) shape how they express affection.",
+    "context": "An intimate scene between established partners. The characters' distinct personalities shape how they express affection.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Explicit content. Characters should maintain distinct voices during intimate scenes."
+    },
     "responses": [
       {
         "model": "gemini_2_5_flash",
@@ -2819,6 +3824,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_100_grok_4_1_vs_qwen3_5_flash",
     "context": "A fantasy romance scene. Two characters are in a quiet morning moment together when an unexpected knock at the door interrupts the intimacy. A third character arrives with urgent news.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. The relationship has deepened through shared danger. Valen deflects vulnerability with charm. Merlin is direct but emotionally guarded. A third character (Gervan, young soldier) arrives."
+    },
     "responses": [
       {
         "model": "grok_4_1",
@@ -2832,7 +3842,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_18_gemini_2_5_flash_vs_deepseek_v3_2",
-    "context": "A hallway scene between classes. The transfer student and the captain character cross paths again. The school buzzes with activity around them.",
+    "context": "A hallway scene between classes. The transfer student and the captain character cross paths again.",
+    "character_info": {
+      "character_name": "Nanase (via Narrator)",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same setting. The relationship is developing through brief encounters."
+    },
     "responses": [
       {
         "model": "gemini_2_5_flash",
@@ -2847,6 +3862,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_200_mistral_small_creative_vs_llama_4_maverick",
     "context": "A fantasy drama scene. The protagonist is recovering from exhaustion in a healer's chamber. A military general arrives to deliver strategic intelligence about a growing magical threat.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. Merlin is bedridden. General Hogan (gruff, professional military commander) delivers news about poisoned leylines. Valen is protective but restrained."
+    },
     "responses": [
       {
         "model": "mistral_small_creative",
@@ -2860,7 +3880,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_50_gemma_4_26b_vs_grok_4_1",
-    "context": "A later scene in the relationship. The characters have settled into patterns. The dynamic is comfortable but still charged with playful tension.",
+    "context": "A later scene in the relationship. The characters have settled into patterns. The dynamic is comfortable but still charged.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Comfortable domesticity with playful tension."
+    },
     "responses": [
       {
         "model": "gemma_4_26b",
@@ -2875,6 +3900,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_erp_10_minimax_m2_7_vs_mistral_small_creative",
     "context": "A continuing romance scene. The three characters have an established intimate dynamic. The scene balances humor, affection, and physical closeness.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting and characters. The dynamic is established and comfortable."
+    },
     "responses": [
       {
         "model": "minimax_m2_7",
@@ -2888,7 +3918,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_18_gpt_4_1_vs_gemma_4_26b",
-    "context": "A hallway scene between classes. The transfer student and the captain character cross paths again. The school buzzes with activity around them.",
+    "context": "A hallway scene between classes. The transfer student and the captain character cross paths again.",
+    "character_info": {
+      "character_name": "Nanase (via Narrator)",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same setting. The relationship is developing through brief encounters."
+    },
     "responses": [
       {
         "model": "gpt_4_1",
@@ -2902,7 +3937,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_101_glm_4_7_vs_gemma_4_26b",
-    "context": "A domestic scene — the characters are at one of their apartments. The dynamic is intimate but the gyaru character still deflects with humor when things get too real.",
+    "context": "A domestic scene — at one of their apartments. Intimate but the gyaru still deflects with humor.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. The relationship is established. Bell uses humor as a coping mechanism for sincerity."
+    },
     "responses": [
       {
         "model": "glm_4_7",
@@ -2917,6 +3957,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_100_deepseek_v3_2_vs_llama_4_maverick",
     "context": "A fantasy romance scene. Two characters are in a quiet morning moment together when an unexpected knock at the door interrupts the intimacy. A third character arrives with urgent news.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. The relationship has deepened through shared danger. Valen deflects vulnerability with charm. Merlin is direct but emotionally guarded. A third character (Gervan, young soldier) arrives."
+    },
     "responses": [
       {
         "model": "deepseek_v3_2",
@@ -2931,6 +3976,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_150_minimax_m2_7_vs_mistral_small_creative",
     "context": "A fantasy scene where two characters with an established dynamic navigate a tense social situation. The supernatural character tries to protect the human from a veiled threat.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Same setting. Strovolos and Levi have an established bond. A dangerous social situation requires Strovolos to balance his protective instincts with political savvy."
+    },
     "responses": [
       {
         "model": "minimax_m2_7",
@@ -2944,7 +3994,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_21_grok_4_1_vs_minimax_m2_7",
-    "context": "A school scene, slightly further into the relationship. The gyaru's teasing has a softer edge now. They're eating lunch together. The dynamic is shifting but neither acknowledges it.",
+    "context": "A school scene. The gyaru's teasing has a softer edge now. They're eating lunch together.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. The dynamic is shifting — still teasing but with growing warmth underneath."
+    },
     "responses": [
       {
         "model": "grok_4_1",
@@ -2959,6 +4014,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_50_glm_4_7_vs_mistral_small_creative",
     "context": "A fantasy drama scene. Two characters have just survived a dangerous encounter in a dark alley. Tension is high, injuries are present, and the emotional fallout of what just happened hangs in the air.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Valen is a spy and soldier with a charming exterior hiding deep loyalty. Merlin is a mage recovering from overuse of magic. They have a growing romantic tension but neither has named it. Setting: medieval fantasy world (Esperia) with magic, political intrigue, and an ongoing threat."
+    },
     "responses": [
       {
         "model": "glm_4_7",
@@ -2973,6 +4033,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_450_gemini_2_5_flash_vs_glm_4_7",
     "context": "A quiet aftermath scene. Characters process the fallout of recent events over tea. The mood is reflective, with humor breaking through the heaviness.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Same setting. Post-crisis recovery. Strovolos's theatrical persona softens in private moments."
+    },
     "responses": [
       {
         "model": "gemini_2_5_flash",
@@ -2986,7 +4051,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_81_gemma_4_26b_vs_grok_4_1",
-    "context": "A later scene. The relationship has progressed to physical closeness. The gyaru character's bravado cracks at moments of real vulnerability.",
+    "context": "A later scene. The relationship has progressed to physical closeness.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. Bell's bravado cracks at moments of real vulnerability. Intimate but not explicit."
+    },
     "responses": [
       {
         "model": "gemma_4_26b",
@@ -3001,6 +4071,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_150_claude_sonnet_4_5_vs_llama_4_maverick",
     "context": "A fantasy scene where two characters with an established dynamic navigate a tense social situation. The supernatural character tries to protect the human from a veiled threat.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Same setting. Strovolos and Levi have an established bond. A dangerous social situation requires Strovolos to balance his protective instincts with political savvy."
+    },
     "responses": [
       {
         "model": "claude_sonnet_4_5",
@@ -3014,7 +4089,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_51_minimax_m2_7_vs_llama_4_maverick",
-    "context": "A mid-story scene. The characters have spent time together outside school. The gyaru character shows a different side in private — less performative, more genuine.",
+    "context": "A mid-story scene. The characters have spent time together outside school.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. Bell shows a different side in private — less performative, more genuine. The slowburn is progressing."
+    },
     "responses": [
       {
         "model": "minimax_m2_7",
@@ -3028,7 +4108,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_26_glm_4_7_vs_mistral_small_creative",
-    "context": "A late-in-the-day school scene. The relationship between the two characters has progressed through small moments. An emotionally charged exchange in a quiet corridor.",
+    "context": "A late-in-the-day school scene. An emotionally charged exchange in a quiet corridor.",
+    "character_info": {
+      "character_name": "Nanase (via Narrator)",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same setting. Emotional escalation — the dynamic has shifted from casual to something more."
+    },
     "responses": [
       {
         "model": "glm_4_7",
@@ -3042,7 +4127,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_0_gpt_4_1_vs_mistral_small_creative",
-    "context": "An ERP/romance scene. Two supernatural roommates (a demon and a half-demon) welcome their human partner home after a long day. Playful, affectionate, mildly competitive dynamic between the three.",
+    "context": "An ERP/romance scene. Two supernatural roommates welcome their human partner home after a long day. Playful, affectionate, mildly competitive dynamic between the three.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Akira is a quiet, possessive half-demon athlete. Agi is a loud, theatrical full demon with red skin and glowing eyes. Angie is their human partner. The three live together. Agi is competitive for attention, Akira is deadpan but deeply caring. Both can lactate (supernatural trait). Tone: playful, intimate, comedic."
+    },
     "responses": [
       {
         "model": "gpt_4_1",
@@ -3057,6 +4147,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_50_deepseek_v3_2_vs_llama_4_maverick",
     "context": "A fantasy drama scene. Two characters have just survived a dangerous encounter in a dark alley. Tension is high, injuries are present, and the emotional fallout of what just happened hangs in the air.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Valen is a spy and soldier with a charming exterior hiding deep loyalty. Merlin is a mage recovering from overuse of magic. They have a growing romantic tension but neither has named it. Setting: medieval fantasy world (Esperia) with magic, political intrigue, and an ongoing threat."
+    },
     "responses": [
       {
         "model": "deepseek_v3_2",
@@ -3070,7 +4165,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_51_claude_sonnet_4_5_vs_gemini_2_5_flash",
-    "context": "A mid-story scene. The characters have spent time together outside school. The gyaru character shows a different side in private — less performative, more genuine.",
+    "context": "A mid-story scene. The characters have spent time together outside school.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. Bell shows a different side in private — less performative, more genuine. The slowburn is progressing."
+    },
     "responses": [
       {
         "model": "claude_sonnet_4_5",
@@ -3085,6 +4185,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_50_grok_4_1_vs_minimax_m2_7",
     "context": "A fantasy drama scene. Two characters have just survived a dangerous encounter in a dark alley. Tension is high, injuries are present, and the emotional fallout of what just happened hangs in the air.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Valen is a spy and soldier with a charming exterior hiding deep loyalty. Merlin is a mage recovering from overuse of magic. They have a growing romantic tension but neither has named it. Setting: medieval fantasy world (Esperia) with magic, political intrigue, and an ongoing threat."
+    },
     "responses": [
       {
         "model": "grok_4_1",
@@ -3098,7 +4203,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_21_deepseek_v3_2_vs_minimax_m2_7",
-    "context": "A school scene, slightly further into the relationship. The gyaru's teasing has a softer edge now. They're eating lunch together. The dynamic is shifting but neither acknowledges it.",
+    "context": "A school scene. The gyaru's teasing has a softer edge now. They're eating lunch together.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. The dynamic is shifting — still teasing but with growing warmth underneath."
+    },
     "responses": [
       {
         "model": "deepseek_v3_2",
@@ -3112,7 +4222,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_8_gpt_4_1_vs_minimax_m2_7",
-    "context": "A school scene. The transfer student rushes to class after an encounter in the hallway. The school environment is detailed — other students, classroom sounds, a strict teacher.",
+    "context": "A school scene. The transfer student rushes to class after an encounter in the hallway.",
+    "character_info": {
+      "character_name": "Ryujin High Narrator",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same school setting. Multiple NPCs — teacher, classmates. The school has specific rules and social dynamics."
+    },
     "responses": [
       {
         "model": "gpt_4_1",
@@ -3127,6 +4242,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_200_qwen3_5_flash_vs_llama_4_maverick",
     "context": "A fantasy drama scene. The protagonist is recovering from exhaustion in a healer's chamber. A military general arrives to deliver strategic intelligence about a growing magical threat.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. Merlin is bedridden. General Hogan (gruff, professional military commander) delivers news about poisoned leylines. Valen is protective but restrained."
+    },
     "responses": [
       {
         "model": "qwen3_5_flash",
@@ -3141,6 +4261,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_500_glm_4_7_vs_minimax_m2_7",
     "context": "A fantasy scene. Mid-story, the characters are navigating both a romantic relationship and a dangerous mission. The tone balances tender moments with strategic tension.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. Deep into the story. The couple faces external threats while building their relationship. Multiple supporting characters involved."
+    },
     "responses": [
       {
         "model": "glm_4_7",
@@ -3154,7 +4279,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_26_grok_4_1_vs_mistral_small_creative",
-    "context": "A late-in-the-day school scene. The relationship between the two characters has progressed through small moments. An emotionally charged exchange in a quiet corridor.",
+    "context": "A late-in-the-day school scene. An emotionally charged exchange in a quiet corridor.",
+    "character_info": {
+      "character_name": "Nanase (via Narrator)",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same setting. Emotional escalation — the dynamic has shifted from casual to something more."
+    },
     "responses": [
       {
         "model": "grok_4_1",
@@ -3169,6 +4299,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_150_glm_4_7_vs_gemma_4_26b",
     "context": "A fantasy scene where two characters with an established dynamic navigate a tense social situation. The supernatural character tries to protect the human from a veiled threat.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Same setting. Strovolos and Levi have an established bond. A dangerous social situation requires Strovolos to balance his protective instincts with political savvy."
+    },
     "responses": [
       {
         "model": "glm_4_7",
@@ -3182,7 +4317,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_50_mistral_small_creative_vs_llama_4_maverick",
-    "context": "A later scene in the relationship. The characters have settled into patterns. The dynamic is comfortable but still charged with playful tension.",
+    "context": "A later scene in the relationship. The characters have settled into patterns. The dynamic is comfortable but still charged.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Comfortable domesticity with playful tension."
+    },
     "responses": [
       {
         "model": "mistral_small_creative",
@@ -3197,6 +4337,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_350_deepseek_v3_2_vs_minimax_m2_7",
     "context": "A fantasy romance scene. After days of recovery and growing closer, two characters share a quiet morning in a courtyard. The relationship has deepened but remains unspoken.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. Weeks have passed. The relationship is established but still navigating boundaries. Training scenes, quiet domestic moments."
+    },
     "responses": [
       {
         "model": "deepseek_v3_2",
@@ -3210,7 +4355,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_51_qwen3_5_flash_vs_mistral_small_creative",
-    "context": "A mid-story scene. The characters have spent time together outside school. The gyaru character shows a different side in private — less performative, more genuine.",
+    "context": "A mid-story scene. The characters have spent time together outside school.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. Bell shows a different side in private — less performative, more genuine. The slowburn is progressing."
+    },
     "responses": [
       {
         "model": "qwen3_5_flash",
@@ -3224,7 +4374,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_21_gpt_4_1_vs_glm_4_7",
-    "context": "A school scene, slightly further into the relationship. The gyaru's teasing has a softer edge now. They're eating lunch together. The dynamic is shifting but neither acknowledges it.",
+    "context": "A school scene. The gyaru's teasing has a softer edge now. They're eating lunch together.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. The dynamic is shifting — still teasing but with growing warmth underneath."
+    },
     "responses": [
       {
         "model": "gpt_4_1",
@@ -3239,6 +4394,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_300_claude_sonnet_4_5_vs_qwen3_5_flash",
     "context": "A dramatic scene where political intrigue intersects with personal relationships. Multiple characters debate strategy while emotional tensions simmer beneath the surface.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Same setting. Multiple NPCs present (David, others). Political stakes are high. Characters hide personal feelings behind strategic discussion."
+    },
     "responses": [
       {
         "model": "claude_sonnet_4_5",
@@ -3253,6 +4413,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_50_claude_sonnet_4_5_vs_qwen3_5_flash",
     "context": "A fantasy drama scene. Two characters have just survived a dangerous encounter in a dark alley. Tension is high, injuries are present, and the emotional fallout of what just happened hangs in the air.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Valen is a spy and soldier with a charming exterior hiding deep loyalty. Merlin is a mage recovering from overuse of magic. They have a growing romantic tension but neither has named it. Setting: medieval fantasy world (Esperia) with magic, political intrigue, and an ongoing threat."
+    },
     "responses": [
       {
         "model": "claude_sonnet_4_5",
@@ -3266,7 +4431,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_0_glm_4_7_vs_mistral_small_creative",
-    "context": "A school slice-of-life scene. A transfer student arrives at an elite Tokyo high school on their first day. Cherry blossoms, shoe lockers, morning light.",
+    "context": "A school slice-of-life scene. A transfer student arrives at an elite Tokyo high school on their first day.",
+    "character_info": {
+      "character_name": "Ryujin High Narrator",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Narrator-driven. Ryujin High is an elite Tokyo school with rigid social hierarchy. The narrator controls all NPCs and environment. Second-person perspective. Heavy lorebook world with specific locations, clubs, and characters."
+    },
     "responses": [
       {
         "model": "glm_4_7",
@@ -3280,7 +4450,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_51_gemini_2_5_flash_vs_minimax_m2_7",
-    "context": "A mid-story scene. The characters have spent time together outside school. The gyaru character shows a different side in private — less performative, more genuine.",
+    "context": "A mid-story scene. The characters have spent time together outside school.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. Bell shows a different side in private — less performative, more genuine. The slowburn is progressing."
+    },
     "responses": [
       {
         "model": "gemini_2_5_flash",
@@ -3294,7 +4469,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_101_deepseek_v3_2_vs_qwen3_5_flash",
-    "context": "A domestic scene — the characters are at one of their apartments. The dynamic is intimate but the gyaru character still deflects with humor when things get too real.",
+    "context": "A domestic scene — at one of their apartments. Intimate but the gyaru still deflects with humor.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. The relationship is established. Bell uses humor as a coping mechanism for sincerity."
+    },
     "responses": [
       {
         "model": "deepseek_v3_2",
@@ -3309,6 +4489,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_350_minimax_m2_7_vs_qwen3_5_flash",
     "context": "A fantasy romance scene. After days of recovery and growing closer, two characters share a quiet morning in a courtyard. The relationship has deepened but remains unspoken.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. Weeks have passed. The relationship is established but still navigating boundaries. Training scenes, quiet domestic moments."
+    },
     "responses": [
       {
         "model": "minimax_m2_7",
@@ -3322,7 +4507,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_26_claude_sonnet_4_5_vs_mistral_small_creative",
-    "context": "A late-in-the-day school scene. The relationship between the two characters has progressed through small moments. An emotionally charged exchange in a quiet corridor.",
+    "context": "A late-in-the-day school scene. An emotionally charged exchange in a quiet corridor.",
+    "character_info": {
+      "character_name": "Nanase (via Narrator)",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same setting. Emotional escalation — the dynamic has shifted from casual to something more."
+    },
     "responses": [
       {
         "model": "claude_sonnet_4_5",
@@ -3337,6 +4527,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_450_glm_4_7_vs_minimax_m2_7",
     "context": "A quiet aftermath scene. Characters process the fallout of recent events over tea. The mood is reflective, with humor breaking through the heaviness.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Same setting. Post-crisis recovery. Strovolos's theatrical persona softens in private moments."
+    },
     "responses": [
       {
         "model": "glm_4_7",
@@ -3351,6 +4546,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_50_mistral_small_creative_vs_llama_4_maverick",
     "context": "A fantasy comedy scene in an interdimensional setting. A flamboyant supernatural character interacts with a human visitor in a colorful, over-the-top establishment.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Strovolos is a flamboyant, theatrical demon who runs an interdimensional bordello. He's dramatic, protective of his staff, and hides genuine warmth under showmanship. Levi is a human visitor. The tone is comedic with genuine emotional undertones."
+    },
     "responses": [
       {
         "model": "mistral_small_creative",
@@ -3364,7 +4564,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_21_glm_4_7_vs_grok_4_1",
-    "context": "A school scene, slightly further into the relationship. The gyaru's teasing has a softer edge now. They're eating lunch together. The dynamic is shifting but neither acknowledges it.",
+    "context": "A school scene. The gyaru's teasing has a softer edge now. They're eating lunch together.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. The dynamic is shifting — still teasing but with growing warmth underneath."
+    },
     "responses": [
       {
         "model": "glm_4_7",
@@ -3378,7 +4583,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_3_claude_sonnet_4_5_vs_glm_4_7",
-    "context": "A school comedy/romance scene. A gyaru girl teases a classmate during break period. They have a rivalry-turned-flirtation dynamic. Early stage — all banter, no vulnerability.",
+    "context": "A school comedy/romance scene. A gyaru girl teases a classmate during break period. Early stage — all banter, no vulnerability.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Bell is a 17yo gyaru — loud, platinum hair, smug, teases aggressively. She's the user's classmate. This is a slowburn: early stage is pure banter and rivalry. She deflects everything with humor. No HawThorne director — preset only."
+    },
     "responses": [
       {
         "model": "claude_sonnet_4_5",
@@ -3393,6 +4603,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_50_gemma_4_26b_vs_llama_4_maverick",
     "context": "A fantasy comedy scene in an interdimensional setting. A flamboyant supernatural character interacts with a human visitor in a colorful, over-the-top establishment.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Strovolos is a flamboyant, theatrical demon who runs an interdimensional bordello. He's dramatic, protective of his staff, and hides genuine warmth under showmanship. Levi is a human visitor. The tone is comedic with genuine emotional undertones."
+    },
     "responses": [
       {
         "model": "gemma_4_26b",
@@ -3406,7 +4621,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_0_gemini_2_5_flash_vs_deepseek_v3_2",
-    "context": "A school slice-of-life scene. A transfer student arrives at an elite Tokyo high school on their first day. Cherry blossoms, shoe lockers, morning light.",
+    "context": "A school slice-of-life scene. A transfer student arrives at an elite Tokyo high school on their first day.",
+    "character_info": {
+      "character_name": "Ryujin High Narrator",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Narrator-driven. Ryujin High is an elite Tokyo school with rigid social hierarchy. The narrator controls all NPCs and environment. Second-person perspective. Heavy lorebook world with specific locations, clubs, and characters."
+    },
     "responses": [
       {
         "model": "gemini_2_5_flash",
@@ -3421,6 +4641,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_50_deepseek_v3_2_vs_llama_4_maverick",
     "context": "A fantasy comedy scene in an interdimensional setting. A flamboyant supernatural character interacts with a human visitor in a colorful, over-the-top establishment.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Strovolos is a flamboyant, theatrical demon who runs an interdimensional bordello. He's dramatic, protective of his staff, and hides genuine warmth under showmanship. Levi is a human visitor. The tone is comedic with genuine emotional undertones."
+    },
     "responses": [
       {
         "model": "deepseek_v3_2",
@@ -3434,7 +4659,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_119_gemma_4_26b_vs_mistral_small_creative",
-    "context": "Near the end of the current arc. A quiet morning scene. The relationship is established. The writing should show earned comfort without losing character voice.",
+    "context": "Near the end of the arc. A quiet morning scene. The relationship is established.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. Late-stage comfort. Should show earned growth without losing Bell's core personality (loud, smug, teasing)."
+    },
     "responses": [
       {
         "model": "gemma_4_26b",
@@ -3448,7 +4678,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_18_minimax_m2_7_vs_qwen3_5_flash",
-    "context": "A hallway scene between classes. The transfer student and the captain character cross paths again. The school buzzes with activity around them.",
+    "context": "A hallway scene between classes. The transfer student and the captain character cross paths again.",
+    "character_info": {
+      "character_name": "Nanase (via Narrator)",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same setting. The relationship is developing through brief encounters."
+    },
     "responses": [
       {
         "model": "minimax_m2_7",
@@ -3462,7 +4697,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_3_glm_4_7_vs_minimax_m2_7",
-    "context": "A school comedy/romance scene. A gyaru girl teases a classmate during break period. They have a rivalry-turned-flirtation dynamic. Early stage — all banter, no vulnerability.",
+    "context": "A school comedy/romance scene. A gyaru girl teases a classmate during break period. Early stage — all banter, no vulnerability.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Bell is a 17yo gyaru — loud, platinum hair, smug, teases aggressively. She's the user's classmate. This is a slowburn: early stage is pure banter and rivalry. She deflects everything with humor. No HawThorne director — preset only."
+    },
     "responses": [
       {
         "model": "glm_4_7",
@@ -3477,6 +4717,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_100_minimax_m2_7_vs_qwen3_5_flash",
     "context": "A fantasy romance scene. Two characters are in a quiet morning moment together when an unexpected knock at the door interrupts the intimacy. A third character arrives with urgent news.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. The relationship has deepened through shared danger. Valen deflects vulnerability with charm. Merlin is direct but emotionally guarded. A third character (Gervan, young soldier) arrives."
+    },
     "responses": [
       {
         "model": "minimax_m2_7",
@@ -3491,6 +4736,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_50_gemini_2_5_flash_vs_llama_4_maverick",
     "context": "A fantasy comedy scene in an interdimensional setting. A flamboyant supernatural character interacts with a human visitor in a colorful, over-the-top establishment.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Strovolos is a flamboyant, theatrical demon who runs an interdimensional bordello. He's dramatic, protective of his staff, and hides genuine warmth under showmanship. Levi is a human visitor. The tone is comedic with genuine emotional undertones."
+    },
     "responses": [
       {
         "model": "gemini_2_5_flash",
@@ -3504,7 +4754,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_70_gemma_4_26b_vs_minimax_m2_7",
-    "context": "An outing scene — the characters go somewhere together outside their apartment. Their public dynamic differs from their private one.",
+    "context": "An outing scene — the characters go somewhere together outside their apartment.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Public outing — their dynamic shifts in public vs private."
+    },
     "responses": [
       {
         "model": "gemma_4_26b",
@@ -3518,7 +4773,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_26_deepseek_v3_2_vs_mistral_small_creative",
-    "context": "A late-in-the-day school scene. The relationship between the two characters has progressed through small moments. An emotionally charged exchange in a quiet corridor.",
+    "context": "A late-in-the-day school scene. An emotionally charged exchange in a quiet corridor.",
+    "character_info": {
+      "character_name": "Nanase (via Narrator)",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same setting. Emotional escalation — the dynamic has shifted from casual to something more."
+    },
     "responses": [
       {
         "model": "deepseek_v3_2",
@@ -3533,6 +4793,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_350_gemini_2_5_flash_vs_glm_4_7",
     "context": "A fantasy romance scene. After days of recovery and growing closer, two characters share a quiet morning in a courtyard. The relationship has deepened but remains unspoken.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. Weeks have passed. The relationship is established but still navigating boundaries. Training scenes, quiet domestic moments."
+    },
     "responses": [
       {
         "model": "gemini_2_5_flash",
@@ -3546,7 +4811,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_101_gemma_4_26b_vs_qwen3_5_flash",
-    "context": "A domestic scene — the characters are at one of their apartments. The dynamic is intimate but the gyaru character still deflects with humor when things get too real.",
+    "context": "A domestic scene — at one of their apartments. Intimate but the gyaru still deflects with humor.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. The relationship is established. Bell uses humor as a coping mechanism for sincerity."
+    },
     "responses": [
       {
         "model": "gemma_4_26b",
@@ -3560,7 +4830,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_119_deepseek_v3_2_vs_gemma_4_26b",
-    "context": "Near the end of the current arc. A quiet morning scene. The relationship is established. The writing should show earned comfort without losing character voice.",
+    "context": "Near the end of the arc. A quiet morning scene. The relationship is established.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. Late-stage comfort. Should show earned growth without losing Bell's core personality (loud, smug, teasing)."
+    },
     "responses": [
       {
         "model": "deepseek_v3_2",
@@ -3574,7 +4849,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_8_gemini_2_5_flash_vs_glm_4_7",
-    "context": "A school scene. The transfer student rushes to class after an encounter in the hallway. The school environment is detailed — other students, classroom sounds, a strict teacher.",
+    "context": "A school scene. The transfer student rushes to class after an encounter in the hallway.",
+    "character_info": {
+      "character_name": "Ryujin High Narrator",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same school setting. Multiple NPCs — teacher, classmates. The school has specific rules and social dynamics."
+    },
     "responses": [
       {
         "model": "gemini_2_5_flash",
@@ -3589,6 +4869,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_200_gemma_4_26b_vs_minimax_m2_7",
     "context": "A fantasy drama scene. The protagonist is recovering from exhaustion in a healer's chamber. A military general arrives to deliver strategic intelligence about a growing magical threat.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. Merlin is bedridden. General Hogan (gruff, professional military commander) delivers news about poisoned leylines. Valen is protective but restrained."
+    },
     "responses": [
       {
         "model": "gemma_4_26b",
@@ -3603,6 +4888,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_100_claude_sonnet_4_5_vs_mistral_small_creative",
     "context": "A fantasy romance scene. Two characters are in a quiet morning moment together when an unexpected knock at the door interrupts the intimacy. A third character arrives with urgent news.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. The relationship has deepened through shared danger. Valen deflects vulnerability with charm. Merlin is direct but emotionally guarded. A third character (Gervan, young soldier) arrives."
+    },
     "responses": [
       {
         "model": "claude_sonnet_4_5",
@@ -3617,6 +4907,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_erp_10_qwen3_5_flash_vs_mistral_small_creative",
     "context": "A continuing romance scene. The three characters have an established intimate dynamic. The scene balances humor, affection, and physical closeness.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting and characters. The dynamic is established and comfortable."
+    },
     "responses": [
       {
         "model": "qwen3_5_flash",
@@ -3631,6 +4926,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_500_grok_4_1_vs_minimax_m2_7",
     "context": "A fantasy scene. Mid-story, the characters are navigating both a romantic relationship and a dangerous mission. The tone balances tender moments with strategic tension.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. Deep into the story. The couple faces external threats while building their relationship. Multiple supporting characters involved."
+    },
     "responses": [
       {
         "model": "grok_4_1",
@@ -3644,7 +4944,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_bell_51_glm_4_7_vs_mistral_small_creative",
-    "context": "A mid-story scene. The characters have spent time together outside school. The gyaru character shows a different side in private — less performative, more genuine.",
+    "context": "A mid-story scene. The characters have spent time together outside school.",
+    "character_info": {
+      "character_name": "Bell",
+      "user_name": "Transfer Student",
+      "setting_summary": "Same characters. Bell shows a different side in private — less performative, more genuine. The slowburn is progressing."
+    },
     "responses": [
       {
         "model": "glm_4_7",
@@ -3659,6 +4964,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_strovolos_150_gemini_2_5_flash_vs_mistral_small_creative",
     "context": "A fantasy scene where two characters with an established dynamic navigate a tense social situation. The supernatural character tries to protect the human from a veiled threat.",
+    "character_info": {
+      "character_name": "Strovolos",
+      "user_name": "Levi",
+      "setting_summary": "Same setting. Strovolos and Levi have an established bond. A dangerous social situation requires Strovolos to balance his protective instincts with political savvy."
+    },
     "responses": [
       {
         "model": "gemini_2_5_flash",
@@ -3672,7 +4982,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_0_minimax_m2_7_vs_qwen3_5_flash",
-    "context": "An ERP/romance scene. Two supernatural roommates (a demon and a half-demon) welcome their human partner home after a long day. Playful, affectionate, mildly competitive dynamic between the three.",
+    "context": "An ERP/romance scene. Two supernatural roommates welcome their human partner home after a long day. Playful, affectionate, mildly competitive dynamic between the three.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Akira is a quiet, possessive half-demon athlete. Agi is a loud, theatrical full demon with red skin and glowing eyes. Angie is their human partner. The three live together. Agi is competitive for attention, Akira is deadpan but deeply caring. Both can lactate (supernatural trait). Tone: playful, intimate, comedic."
+    },
     "responses": [
       {
         "model": "minimax_m2_7",
@@ -3686,7 +5001,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_erp_70_gemini_2_5_flash_vs_llama_4_maverick",
-    "context": "An outing scene — the characters go somewhere together outside their apartment. Their public dynamic differs from their private one.",
+    "context": "An outing scene — the characters go somewhere together outside their apartment.",
+    "character_info": {
+      "character_name": "Akira & Agi",
+      "user_name": "Angie",
+      "setting_summary": "Same setting. Public outing — their dynamic shifts in public vs private."
+    },
     "responses": [
       {
         "model": "gemini_2_5_flash",
@@ -3700,7 +5020,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_26_gemma_4_26b_vs_grok_4_1",
-    "context": "A late-in-the-day school scene. The relationship between the two characters has progressed through small moments. An emotionally charged exchange in a quiet corridor.",
+    "context": "A late-in-the-day school scene. An emotionally charged exchange in a quiet corridor.",
+    "character_info": {
+      "character_name": "Nanase (via Narrator)",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same setting. Emotional escalation — the dynamic has shifted from casual to something more."
+    },
     "responses": [
       {
         "model": "gemma_4_26b",
@@ -3715,6 +5040,11 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   {
     "id": "completion_valen_350_gpt_4_1_vs_mistral_small_creative",
     "context": "A fantasy romance scene. After days of recovery and growing closer, two characters share a quiet morning in a courtyard. The relationship has deepened but remains unspoken.",
+    "character_info": {
+      "character_name": "Valen",
+      "user_name": "Merlin",
+      "setting_summary": "Same setting. Weeks have passed. The relationship is established but still navigating boundaries. Training scenes, quiet domestic moments."
+    },
     "responses": [
       {
         "model": "gpt_4_1",
@@ -3728,7 +5058,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_12_gemma_4_26b_vs_grok_4_1",
-    "context": "A classroom scene. The protagonist settles into a new class. Multiple NPCs are present. The setting is a prestigious school with specific social hierarchies.",
+    "context": "A classroom scene. Multiple NPCs are present. The setting is a prestigious school with specific social hierarchies.",
+    "character_info": {
+      "character_name": "Ryujin High Narrator",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same setting. Classroom scene with multiple characters. Student council has special authority."
+    },
     "responses": [
       {
         "model": "gemma_4_26b",
@@ -3742,7 +5077,12 @@ export const BENCHMARK_SCENARIOS: Scenario[] = [
   },
   {
     "id": "completion_ryujin_18_claude_sonnet_4_5_vs_qwen3_5_flash",
-    "context": "A hallway scene between classes. The transfer student and the captain character cross paths again. The school buzzes with activity around them.",
+    "context": "A hallway scene between classes. The transfer student and the captain character cross paths again.",
+    "character_info": {
+      "character_name": "Nanase (via Narrator)",
+      "user_name": "Transfer Student (You)",
+      "setting_summary": "Same setting. The relationship is developing through brief encounters."
+    },
     "responses": [
       {
         "model": "claude_sonnet_4_5",

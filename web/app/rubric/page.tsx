@@ -64,6 +64,9 @@ interface FlatResponse {
   context: string;
   model: string;
   content: string;
+  character_name?: string;
+  user_name?: string;
+  setting_summary?: string;
 }
 
 export default function RubricPage() {
@@ -83,6 +86,9 @@ export default function RubricPage() {
           context: s.context,
           model: r.model,
           content: r.content,
+          character_name: s.character_info?.character_name,
+          user_name: s.character_info?.user_name,
+          setting_summary: s.character_info?.setting_summary,
         });
       }
     }
@@ -155,8 +161,19 @@ export default function RubricPage() {
         {/* Left: Context + Response */}
         <div className="space-y-4">
           <div className="p-4 rounded-lg border border-[var(--border)] bg-[var(--card)]">
+            {current.character_name && (
+              <div className="flex gap-4 text-xs mb-3 pb-2 border-b border-[var(--border)]">
+                <span><span className="text-[var(--muted)]">Character:</span> <span className="text-[var(--accent)]">{current.character_name}</span></span>
+                <span><span className="text-[var(--muted)]">User plays:</span> <span className="text-[var(--purple)]">{current.user_name}</span></span>
+              </div>
+            )}
+            {current.setting_summary && (
+              <div className="text-xs text-[var(--muted)] mb-3 leading-relaxed">
+                {current.setting_summary}
+              </div>
+            )}
             <div className="text-xs uppercase tracking-wider text-[var(--muted)] mb-2">
-              Context
+              Scene
             </div>
             <div className="rp-prose text-sm max-h-36 overflow-y-auto">
               {formatRP(current.context)}

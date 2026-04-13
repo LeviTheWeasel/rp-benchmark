@@ -134,15 +134,28 @@ export default function ArenaPage() {
       {/* Main content (hidden if NSFW warning is showing) */}
       {(!currentIsNSFW || showNSFW || nsfwDismissed) && <>
 
-      {/* Context — collapsible, compact */}
-      <details className="shrink-0 border-b border-[var(--border)] bg-[var(--card)]">
-        <summary className="px-4 py-2 text-xs uppercase tracking-wider text-[var(--muted)] cursor-pointer hover:text-[var(--foreground)] select-none">
-          Conversation Context
-        </summary>
-        <div className="px-4 pb-3 rp-prose text-sm max-h-40 overflow-y-auto">
-          {formatRP(current.context)}
-        </div>
-      </details>
+      {/* Character info + Context */}
+      <div className="shrink-0 border-b border-[var(--border)] bg-[var(--card)]">
+        {current.character_info && (
+          <div className="px-4 py-2 flex gap-6 text-xs border-b border-[var(--border)]">
+            <span><span className="text-[var(--muted)]">Character:</span> <span className="text-[var(--accent)]">{current.character_info.character_name}</span></span>
+            <span><span className="text-[var(--muted)]">User plays:</span> <span className="text-[var(--purple)]">{current.character_info.user_name}</span></span>
+          </div>
+        )}
+        <details>
+          <summary className="px-4 py-2 text-xs uppercase tracking-wider text-[var(--muted)] cursor-pointer hover:text-[var(--foreground)] select-none">
+            Scene Context {current.character_info ? `& Setting` : ''}
+          </summary>
+          <div className="px-4 pb-3 text-sm max-h-40 overflow-y-auto space-y-2">
+            {current.character_info && (
+              <p className="text-[var(--muted)] text-xs leading-relaxed">
+                {current.character_info.setting_summary}
+              </p>
+            )}
+            <div className="rp-prose">{formatRP(current.context)}</div>
+          </div>
+        </details>
+      </div>
 
       {/* Responses — fill remaining height */}
       <div className="flex-1 min-h-0 grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-px bg-[var(--border)]">
