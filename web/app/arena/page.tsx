@@ -6,7 +6,6 @@ import { saveVote } from "@/lib/votes";
 import { SAMPLE_SCENARIOS } from "@/lib/sample-data";
 
 function formatRP(text: string) {
-  // Convert *actions* to italics and preserve paragraph breaks
   return text
     .split("\n\n")
     .map((p, i) => {
@@ -26,9 +25,8 @@ export default function ArenaPage() {
   const scenarios = SAMPLE_SCENARIOS;
   const current = scenarios[currentIdx % scenarios.length];
 
-  // Randomize which model is A/B
   const [shuffled] = useState(() =>
-    scenarios.map((s) => (Math.random() > 0.5 ? [0, 1] : [1, 0]))
+    scenarios.map(() => (Math.random() > 0.5 ? [0, 1] : [1, 0]))
   );
   const order = shuffled[currentIdx % shuffled.length];
   const responseA = current.responses[order[0]];
@@ -69,106 +67,119 @@ export default function ArenaPage() {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
-      <div className="flex items-center justify-between mb-6">
+    <div className="flex flex-col h-[calc(100vh-3.5rem)]">
+      {/* Header bar */}
+      <div className="shrink-0 px-4 py-3 flex items-center justify-between border-b border-[var(--border)]">
         <div>
-          <h1 className="text-2xl font-bold">Arena</h1>
-          <p className="text-sm text-[var(--muted)]">
-            Which response is better? Models are hidden until you vote.
-          </p>
+          <span className="font-semibold">Arena</span>
+          <span className="text-sm text-[var(--muted)] ml-3">
+            Which response is better? Models hidden until you vote.
+          </span>
         </div>
         <div className="text-sm text-[var(--muted)]">
-          Votes this session: <span className="text-[var(--accent)]">{voteCount}</span>
+          Votes: <span className="text-[var(--accent)] font-semibold">{voteCount}</span>
         </div>
       </div>
 
-      {/* Context */}
-      <div className="mb-6 p-4 rounded-lg border border-[var(--border)] bg-[var(--card)]">
-        <div className="text-xs uppercase tracking-wider text-[var(--muted)] mb-2">
+      {/* Context — collapsible, compact */}
+      <details className="shrink-0 border-b border-[var(--border)] bg-[var(--card)]">
+        <summary className="px-4 py-2 text-xs uppercase tracking-wider text-[var(--muted)] cursor-pointer hover:text-[var(--foreground)] select-none">
           Conversation Context
-        </div>
-        <div className="rp-prose text-sm max-h-48 overflow-y-auto">
+        </summary>
+        <div className="px-4 pb-3 rp-prose text-sm max-h-40 overflow-y-auto">
           {formatRP(current.context)}
         </div>
-      </div>
+      </details>
 
-      {/* Responses side by side */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+      {/* Responses — fill remaining height */}
+      <div className="flex-1 min-h-0 grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-px bg-[var(--border)]">
         {[
           { label: "Response A", response: responseA, key: "A" as const },
           { label: "Response B", response: responseB, key: "B" as const },
         ].map(({ label, response, key }) => (
           <div
             key={key}
-            className={`rounded-lg border p-4 transition cursor-pointer ${
+            className={`flex flex-col overflow-hidden transition-colors ${
               winner === key
-                ? "border-[var(--green)] bg-[var(--green)]/5"
+                ? "bg-[var(--green)]/5"
                 : winner && winner !== key && winner !== "tie"
-                  ? "border-[var(--border)] opacity-50"
-                  : "border-[var(--border)] bg-[var(--card)] hover:border-[var(--accent)]"
+                  ? "bg-[var(--background)] opacity-40"
+                  : "bg-[var(--background)] hover:bg-[var(--card)] cursor-pointer"
             }`}
             onClick={() => !revealed && handleVote(key)}
           >
-            <div className="flex items-center justify-between mb-3">
-              <span className="text-sm font-semibold text-[var(--accent)]">
+            {/* Response header */}
+            <div className="shrink-0 px-5 py-2.5 flex items-center justify-between border-b border-[var(--border)]">
+              <span
+                className={`text-sm font-semibold ${
+                  key === "A" ? "text-[var(--accent)]" : "text-[var(--purple)]"
+                }`}
+              >
                 {label}
               </span>
               {revealed && (
-                <span className="text-xs px-2 py-0.5 rounded bg-[var(--border)] text-[var(--foreground)]">
+                <span className="text-xs px-2 py-0.5 rounded bg-[var(--card-raised)] text-[var(--foreground)]">
                   {response.model}
                 </span>
               )}
+              {winner === key && (
+                <span className="text-xs px-2 py-0.5 rounded bg-[var(--green)]/20 text-[var(--green)] font-semibold">
+                  Winner
+                </span>
+              )}
             </div>
-            <div className="rp-prose text-sm max-h-96 overflow-y-auto">
+
+            {/* Response body — scrollable, fills remaining space */}
+            <div className="flex-1 overflow-y-auto px-5 py-4 rp-prose">
               {formatRP(response.content)}
             </div>
           </div>
         ))}
       </div>
 
-      {/* Vote buttons */}
-      {!revealed ? (
-        <div className="flex gap-3 justify-center">
-          <button
-            onClick={() => handleVote("A")}
-            className="px-6 py-2.5 rounded-lg bg-[var(--accent)] text-[var(--background)] font-semibold hover:bg-[var(--accent-hover)] transition"
-          >
-            A is better
-          </button>
-          <button
-            onClick={() => handleVote("tie")}
-            className="px-6 py-2.5 rounded-lg border border-[var(--border)] text-[var(--muted)] hover:text-[var(--foreground)] hover:border-[var(--muted)] transition"
-          >
-            Tie
-          </button>
-          <button
-            onClick={() => handleVote("B")}
-            className="px-6 py-2.5 rounded-lg bg-[var(--purple)] text-[var(--background)] font-semibold hover:opacity-90 transition"
-          >
-            B is better
-          </button>
-        </div>
-      ) : (
-        <div className="flex flex-col items-center gap-3">
-          <div className="text-sm text-[var(--muted)]">
-            You picked{" "}
-            <span className="text-[var(--foreground)] font-semibold">
-              {winner === "tie" ? "Tie" : `Response ${winner}`}
-            </span>
-            {winner !== "tie" && (
-              <>
-                {" "}({winner === "A" ? responseA.model : responseB.model})
-              </>
-            )}
+      {/* Vote bar — pinned at bottom */}
+      <div className="shrink-0 border-t border-[var(--border)] bg-[var(--card)] px-4 py-3">
+        {!revealed ? (
+          <div className="flex gap-3 justify-center">
+            <button
+              onClick={() => handleVote("A")}
+              className="px-8 py-2.5 rounded-lg bg-[var(--accent)] text-[var(--background)] font-semibold hover:bg-[var(--accent-hover)]"
+            >
+              A is better
+            </button>
+            <button
+              onClick={() => handleVote("tie")}
+              className="px-6 py-2.5 rounded-lg border border-[var(--border)] text-[var(--muted)] hover:text-[var(--foreground)] hover:border-[var(--muted)]"
+            >
+              Tie
+            </button>
+            <button
+              onClick={() => handleVote("B")}
+              className="px-8 py-2.5 rounded-lg bg-[var(--purple)] text-[var(--background)] font-semibold hover:opacity-90"
+            >
+              B is better
+            </button>
           </div>
-          <button
-            onClick={handleNext}
-            className="px-6 py-2.5 rounded-lg bg-[var(--green)] text-[var(--background)] font-semibold hover:opacity-90 transition"
-          >
-            Next matchup
-          </button>
-        </div>
-      )}
+        ) : (
+          <div className="flex items-center justify-center gap-4">
+            <span className="text-sm text-[var(--muted)]">
+              You picked{" "}
+              <span className="text-[var(--foreground)] font-semibold">
+                {winner === "tie" ? "Tie" : `Response ${winner}`}
+              </span>
+              {winner !== "tie" && (
+                <> ({winner === "A" ? responseA.model : responseB.model})</>
+              )}
+            </span>
+            <button
+              onClick={handleNext}
+              className="px-6 py-2.5 rounded-lg bg-[var(--green)] text-[var(--background)] font-semibold hover:opacity-90"
+            >
+              Next matchup
+            </button>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
