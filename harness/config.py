@@ -5,7 +5,7 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).parent.parent
 PROMPTS_DIR = PROJECT_ROOT / "prompts"
 RESULTS_DIR = PROJECT_ROOT / "results"
-BENCHMARK_FILE = PROJECT_ROOT / "benchmark_v0.2.json"
+BENCHMARK_FILE = PROJECT_ROOT / "benchmark_v0.3.json"
 PAYLOADS_FILE = PROJECT_ROOT / "eval_payloads.json"
 
 # OpenRouter
