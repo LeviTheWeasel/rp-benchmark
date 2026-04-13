@@ -1,36 +1,40 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0d1117;
-  --foreground: #e6edf3;
-  --card: #161b22;
-  --border: #30363d;
-  --accent: #58a6ff;
-  --accent-hover: #79c0ff;
-  --muted: #8b949e;
-  --green: #3fb950;
-  --amber: #d29922;
-  --red: #f85149;
-  --purple: #bc8cff;
+  /* Bumped contrast — card is lighter, text is brighter */
+  --background: #0b0f14;
+  --foreground: #f0f3f6;
+  --card: #1a2030;
+  --card-raised: #212d40;
+  --border: #3a4558;
+  --accent: #6cb4ff;
+  --accent-hover: #93ccff;
+  --muted: #9ca8b8;
+  --green: #4fd268;
+  --amber: #e5ac30;
+  --red: #f8625a;
+  --purple: #cda0ff;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sans);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Geist Mono", ui-monospace, monospace;
+  font-family: var(--font-sans), "DM Sans", system-ui, sans-serif;
 }
 
-/* RP prose styling */
+/* RP prose styling — Lora serif for reading */
 .rp-prose {
-  line-height: 1.7;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 0.95rem;
+  font-family: var(--font-prose), "Lora", Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--foreground);
+  letter-spacing: 0.01em;
 }
 
 .rp-prose em, .rp-prose i {
@@ -39,7 +43,11 @@ body {
 }
 
 .rp-prose p {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.rp-prose p:last-child {
+  margin-bottom: 0;
 }
 
 /* Scrollbar */
@@ -47,3 +55,8 @@ body {
 ::-webkit-scrollbar-track { background: var(--card); }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+
+/* Smooth hover transitions */
+a, button {
+  transition: all 150ms ease;
+}

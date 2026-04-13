@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
-import { Geist_Mono } from "next/font/google";
+import { DM_Sans, Lora } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const dmSans = DM_Sans({
+  variable: "--font-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const lora = Lora({
+  variable: "--font-prose",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -20,7 +28,7 @@ function Nav() {
         <Link href="/" className="text-[var(--accent)] font-bold text-lg tracking-tight">
           RP-Bench
         </Link>
-        <div className="flex gap-4 text-sm">
+        <div className="flex gap-4 text-sm font-medium">
           <Link href="/arena" className="text-[var(--muted)] hover:text-[var(--foreground)] transition">
             Arena
           </Link>
@@ -42,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistMono.variable} h-full antialiased dark`}>
+    <html lang="en" className={`${dmSans.variable} ${lora.variable} h-full antialiased dark`}>
       <body className="min-h-full flex flex-col">
         <Nav />
         <main className="flex-1">{children}</main>
