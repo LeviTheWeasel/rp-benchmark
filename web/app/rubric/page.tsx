@@ -4,6 +4,7 @@ import { useState, useCallback } from "react";
 import { Vote, RUBRIC_DIMENSIONS } from "@/lib/types";
 import { saveVote } from "@/lib/votes";
 import { SAMPLE_SCENARIOS } from "@/lib/sample-data";
+import { BENCHMARK_SCENARIOS } from "@/lib/benchmark-data";
 
 function formatRP(text: string) {
   return text
@@ -58,17 +59,45 @@ function ScoreButton({
   );
 }
 
+interface FlatResponse {
+  scenario_id: string;
+  context: string;
+  model: string;
+  content: string;
+}
+
 export default function RubricPage() {
   const [currentIdx, setCurrentIdx] = useState(0);
-  const [responseIdx, setResponseIdx] = useState(0);
   const [scores, setScores] = useState<Record<string, number>>({});
   const [notes, setNotes] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [voteCount, setVoteCount] = useState(0);
 
-  const scenarios = SAMPLE_SCENARIOS;
-  const current = scenarios[currentIdx % scenarios.length];
-  const response = current.responses[responseIdx % current.responses.length];
+  // Flatten all responses into a shuffled list
+  const [responses] = useState(() => {
+    const flat: FlatResponse[] = [];
+    for (const s of [...SAMPLE_SCENARIOS, ...BENCHMARK_SCENARIOS]) {
+      for (const r of s.responses) {
+        flat.push({
+          scenario_id: s.id,
+          context: s.context,
+          model: r.model,
+          content: r.content,
+        });
+      }
+    }
+    // Shuffle
+    for (let i = flat.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [flat[i], flat[j]] = [flat[j], flat[i]];
+    }
+    return flat;
+  });
+
+  const current = responses[currentIdx % responses.length];
+
+  // Alias for compatibility with the rest of the component
+  const response = { model: current.model, content: current.content };
 
   const handleScore = (dimId: string, value: number) => {
     setScores((prev) => ({ ...prev, [dimId]: value }));
@@ -82,7 +111,7 @@ export default function RubricPage() {
       id: crypto.randomUUID(),
       timestamp: new Date().toISOString(),
       mode: "rubric",
-      scenario_id: current.id,
+      scenario_id: current.scenario_id,
       context: current.context,
       model: response.model,
       response: response.content,
@@ -95,18 +124,7 @@ export default function RubricPage() {
   }, [current, response, scores, notes]);
 
   const handleNext = () => {
-    // Move to next response (cycle through all responses across scenarios)
-    const totalResponses = scenarios.reduce((sum, s) => sum + s.responses.length, 0);
-    let nextGlobal = (currentIdx * current.responses.length + responseIdx + 1);
-    let accum = 0;
-    for (let i = 0; i < scenarios.length; i++) {
-      if (accum + scenarios[i].responses.length > nextGlobal % totalResponses) {
-        setCurrentIdx(i);
-        setResponseIdx((nextGlobal % totalResponses) - accum);
-        break;
-      }
-      accum += scenarios[i].responses.length;
-    }
+    setCurrentIdx((i) => i + 1);
     setScores({});
     setNotes("");
     setSubmitted(false);
@@ -124,8 +142,9 @@ export default function RubricPage() {
             Rate this response on each dimension. Model is hidden until you submit.
           </p>
         </div>
-        <div className="text-sm text-[var(--muted)]">
-          Scored: <span className="text-[var(--accent)]">{voteCount}</span>
+        <div className="text-sm text-[var(--muted)] flex gap-4">
+          <span>Response {(currentIdx % responses.length) + 1} / {responses.length}</span>
+          <span>Scored: <span className="text-[var(--accent)]">{voteCount}</span></span>
         </div>
       </div>
 
