@@ -10,6 +10,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 from harness.config import TEST_MODELS, JUDGE_MODELS, RESULTS_DIR
 from harness.runner import run_benchmark
+from harness.multiturn import run_multiturn_benchmark, print_multiturn_results
 from harness.aggregate import (
     aggregate_run,
     aggregate_latest,
@@ -127,6 +128,33 @@ def cmd_list_models(args):
         print("  %s: %s" % (key, model_id))
 
 
+def cmd_multiturn(args):
+    """Run multi-turn session benchmark."""
+    if args.models:
+        test_models = {k: v for k, v in TEST_MODELS.items() if k in args.models}
+        if not test_models:
+            print("No matching test models. Available: %s" % list(TEST_MODELS.keys()))
+            sys.exit(1)
+    else:
+        test_models = TEST_MODELS
+
+    if args.judges:
+        judge_models = {k: v for k, v in JUDGE_MODELS.items() if k in args.judges}
+    else:
+        judge_models = JUDGE_MODELS
+
+    results = run_multiturn_benchmark(
+        test_models=test_models,
+        judge_models=judge_models,
+        user_sim_model=args.user_sim,
+        num_turns=args.turns,
+        max_seeds=args.max_seeds,
+        seed_ids=args.seeds,
+    )
+
+    print_multiturn_results(results)
+
+
 def cmd_test(args):
     """Quick test with 1 scenario, 1 model, 1 judge."""
     print("Quick test: 1 scenario, 1 model, 1 judge")
@@ -201,6 +229,30 @@ def main():
         "--charts", action="store_true", help="Auto-generate visualization charts after run"
     )
     run_parser.set_defaults(func=cmd_run)
+
+    # multiturn
+    mt_parser = subparsers.add_parser("multiturn", help="Run multi-turn session benchmark")
+    mt_parser.add_argument(
+        "--models", nargs="+", help="Test model keys (default: all)"
+    )
+    mt_parser.add_argument(
+        "--judges", nargs="+", help="Judge model keys (default: all)"
+    )
+    mt_parser.add_argument(
+        "--user-sim", default="google/gemini-2.5-flash",
+        help="Model for user simulation (default: gemini-2.5-flash)",
+    )
+    mt_parser.add_argument(
+        "--turns", type=int, default=20,
+        help="Turns per session (default: 20)",
+    )
+    mt_parser.add_argument(
+        "--max-seeds", type=int, help="Limit number of seeds"
+    )
+    mt_parser.add_argument(
+        "--seeds", nargs="+", help="Specific seed IDs to run"
+    )
+    mt_parser.set_defaults(func=cmd_multiturn)
 
     # charts
     charts_parser = subparsers.add_parser("charts", help="Generate visualization charts")
