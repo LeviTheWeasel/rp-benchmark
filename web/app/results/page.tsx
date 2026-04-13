@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { getVotes, exportVotes, getVoteStats } from "@/lib/votes";
+import { getServerVotes, exportVotes } from "@/lib/votes";
 import { Vote, RUBRIC_DIMENSIONS } from "@/lib/types";
 
 export default function ResultsPage() {
@@ -9,8 +9,12 @@ export default function ResultsPage() {
   const [stats, setStats] = useState({ total: 0, arena: 0, rubric: 0 });
 
   useEffect(() => {
-    setVotes(getVotes());
-    setStats(getVoteStats());
+    getServerVotes().then((v) => {
+      setVotes(v);
+      const arena = v.filter((x) => x.mode === "arena").length;
+      const rubric = v.filter((x) => x.mode === "rubric").length;
+      setStats({ total: v.length, arena, rubric });
+    });
   }, []);
 
   // Arena win rates
