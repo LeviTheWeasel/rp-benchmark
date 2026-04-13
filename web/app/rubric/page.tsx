@@ -103,8 +103,10 @@ export default function RubricPage() {
     setScores((prev) => ({ ...prev, [dimId]: value }));
   };
 
+  const requiredDims = RUBRIC_DIMENSIONS.filter((d) => d.tier <= 2);
   const scoredCount = Object.keys(scores).length;
-  const allScored = scoredCount >= RUBRIC_DIMENSIONS.length;
+  const requiredScored = requiredDims.filter((d) => scores[d.id] !== undefined).length;
+  const allRequiredScored = requiredScored >= requiredDims.length;
 
   const handleSubmit = useCallback(() => {
     const vote: Vote = {
@@ -132,6 +134,7 @@ export default function RubricPage() {
 
   const tier1 = RUBRIC_DIMENSIONS.filter((d) => d.tier === 1);
   const tier2 = RUBRIC_DIMENSIONS.filter((d) => d.tier === 2);
+  const tier3 = RUBRIC_DIMENSIONS.filter((d) => d.tier === 3);
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-8">
@@ -233,6 +236,36 @@ export default function RubricPage() {
             </div>
           </div>
 
+          {/* Tier 3 */}
+          <div className="p-4 rounded-lg border border-[var(--border)] bg-[var(--card)]">
+            <h3 className="text-sm font-semibold text-[var(--purple)] mb-1">
+              Tier 3: Genre Craft
+            </h3>
+            <p className="text-xs text-[var(--muted)] mb-3">
+              Score only if applicable to this scene. Skip dimensions that don't apply.
+            </p>
+            <div className="space-y-4">
+              {tier3.map((dim) => (
+                <div key={dim.id}>
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="text-sm font-medium">{dim.name}</span>
+                    <span className="text-xs text-[var(--muted)]">{dim.description}</span>
+                  </div>
+                  <div className="flex gap-4 justify-between">
+                    {[1, 2, 3, 4, 5].map((v) => (
+                      <ScoreButton
+                        key={v}
+                        value={v}
+                        selected={scores[dim.id] === v}
+                        onClick={() => !submitted && handleScore(dim.id, v)}
+                      />
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* Notes */}
           <textarea
             placeholder="Optional notes — what stood out? (good or bad)"
@@ -246,16 +279,16 @@ export default function RubricPage() {
           {!submitted ? (
             <button
               onClick={handleSubmit}
-              disabled={!allScored}
+              disabled={!allRequiredScored}
               className={`w-full py-3 rounded-lg font-semibold transition ${
-                allScored
+                allRequiredScored
                   ? "bg-[var(--accent)] text-[var(--background)] hover:bg-[var(--accent-hover)]"
                   : "bg-[var(--border)] text-[var(--muted)] cursor-not-allowed"
               }`}
             >
-              {allScored
-                ? "Submit Scores"
-                : `Score all dimensions (${scoredCount}/${RUBRIC_DIMENSIONS.length})`}
+              {allRequiredScored
+                ? `Submit Scores (${scoredCount} dimensions)`
+                : `Score Tier 1 + 2 first (${requiredScored}/${requiredDims.length})`}
             </button>
           ) : (
             <button
