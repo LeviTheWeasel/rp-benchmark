@@ -1,0 +1,23 @@
+{
+  "run_id": "mt_20260413_171311",
+  "type": "multiturn",
+  "timestamp": "2026-04-13T17:13:11.968119+00:00",
+  "config": {
+    "test_models": {
+      "gemma_4_26b": "google/gemma-4-26b-a4b-it"
+    },
+    "judge_models": {
+      "claude_sonnet": "anthropic/claude-sonnet-4"
+    },
+    "user_sim_model": "google/gemini-2.5-flash",
+    "num_turns": 10,
+    "seed_count": 1
+  },
+  "sessions": [
+    {
+      "seed_id": "seed_fantasy_slowburn_01",
+      "test_model": "gemma_4_26b",
+      "error": "'\\n  \"session_dimensions\"'"
+    }
+  ]
+}

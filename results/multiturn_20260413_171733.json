@@ -1,0 +1,252 @@
+{
+  "run_id": "mt_20260413_171733",
+  "type": "multiturn",
+  "timestamp": "2026-04-13T17:17:33.100064+00:00",
+  "config": {
+    "test_models": {
+      "gemma_4_26b": "google/gemma-4-26b-a4b-it"
+    },
+    "judge_models": {
+      "claude_sonnet": "anthropic/claude-sonnet-4"
+    },
+    "user_sim_model": "google/gemini-2.5-flash",
+    "num_turns": 10,
+    "seed_count": 1
+  },
+  "sessions": [
+    {
+      "seed_id": "seed_fantasy_slowburn_01",
+      "character_name": "Kael",
+      "user_name": "Sera",
+      "num_turns": 10,
+      "dialogue": [
+        {
+          "turn": 0,
+          "role": "character",
+          "name": "Kael",
+          "content": "The village square smelled of wet stone and woodsmoke. Kael set his pack down by the well, rolling the stiffness out of his shoulders. Three days walking from the last town, and his boots had given up pretending to be waterproof somewhere around the second river crossing.\n\nHe looked around. Small place. The kind of village that named its streets after whatever grew there — he'd passed Elderberry Lane and Mint Row already. The healing house would be somewhere near the center.\n\nHis hands found the edge of the well's stone rim. Steady today. That was something.",
+          "tokens": null
+        },
+        {
+          "turn": 1,
+          "role": "user",
+          "name": "Sera",
+          "content": "I look up from my herb drying racks as a stranger approaches the well. Muddy boots, grey at the temples, carrying himself like someone trying to take up less space than he actually occupies. Another traveling healer, probably. We get one every few months.\n\n\"The healing house is that way,\" I call out, pointing with a sprig of rosemary. \"But if you're planning to sell miracle tonics, the last guy already cleared out everyone's savings with his 'genuine phoenix ash' powder.\"",
+          "tokens": null
+        },
+        {
+          "turn": 2,
+          "role": "character",
+          "name": "Kael",
+          "content": "Kael turned his head toward the voice, his eyes tracking the movement of the rosemary sprig. He didn't smile, but the tension in his jaw eased a fraction at the bluntness of her warning. He preferred skepticism to false reverence; the latter usually involved more questions he didn't want to answer.\n\nHe wiped a smudge of dried mud from his forearm, his ink-stained fingers leaving a dark streak against his pale skin. He didn't look like a man peddling miracles. He looked like a man who had spent too many nights sleeping on damp earth.\n\n\"I have no interest in ash,\" he said, his voice low and even. \"Unless it's properly cauterized and used for treating deep lacerations. Phoenixes are far too expensive for a village of this size, and their temperament is notoriously difficult to manage in a powder form.\"\n\nHe straightened his spine, though the movement was stiff, and gave her a brief, professional nod. He didn't offer his name. It was a habit born of necessity—names were anchors, and he preferred to drift.\n\n\"I am looking for the house,\" he added, gesturing vaguely toward the direction she had pointed. \"I heard there might be a need for someone who knows more than just dried weeds. Though, I suspect 'need' is a relative term in a place this quiet.\"",
+          "tokens": 283
+        },
+        {
+          "turn": 3,
+          "role": "user",
+          "name": "Sera",
+          "content": "\"Dried weeds?\" I scoff, setting down a basket of fresh-picked yarrow. *He clearly doesn't know who I am.*\n\n\"Those 'dried weeds' kept old Man Hemlock alive through the last winter, and his cough sounded like a dying badger.\" I cross my arms. \"And I'm Sera, the herbalist. Who exactly are you, and what makes your remedies so much better than a badger-cough cure?\"",
+          "tokens": 92
+        },
+        {
+          "turn": 4,
+          "role": "character",
+          "name": "Kael",
+          "content": "Kael felt the familiar prickle of a defensive retort rising in his throat, but he suppressed it. She was right, of course. In a village like this, the line between a skilled herbalist and a miracle worker was often just a matter of survival. He didn't take offense at her scoff; he took it as a sign of competence.\n\nHe shifted the weight of his pack, the leather straps creaking. He looked down at his hands for a fleeting second, ensuring they remained still before meeting her gaze again.\n\n\"My apologies. 'Dried weeds' was a poor choice of words,\" he said, his tone clipped and precise. \"I meant to say botanical preparations. They are the foundation of any sound practice. I simply mean to offer... supplementary methods. For things the yarrow cannot reach.\"\n\nHe paused, weighing the risk of honesty against the necessity of a job. He wasn't here to compete with her; he was here because the road was long and his coin purse was thin.\n\n\"I am Kael,\" he said, offering the name like a coin tossed onto a table—present, but not something to be kept. \"As for what makes me different... I don't rely solely on what grows in the soil. I can address the humors of the body, or the internal imbalances that herbs sometimes struggle to settle.\"\n\nHe didn't mention the word *magic*. He never used it. He preferred to speak of it as if it were a mere science, a matter of mechanics and flow.\n\n\"I don't claim to be better, Sera,\" he added, his eyes steady. \"Only different. And if your remedies are as effective as you say, then we might find we have more in common than we think.\"",
+          "tokens": 366
+        },
+        {
+          "turn": 5,
+          "role": "user",
+          "name": "Sera",
+          "content": "\"Humors of the body?\" I raise an eyebrow, picking up a small, dried flower from my basket and turning it over in my fingers. \"So, you're a bloodletter then? Or do you just talk people into feeling better?\"",
+          "tokens": 51
+        },
+        {
+          "turn": 6,
+          "role": "character",
+          "name": "Kael",
+          "content": "Kael’s expression remained impassive, though a flicker of dry amusement touched the corners of his eyes. It was a sharp question, delivered with the kind of scrutiny he had grown accustomed to from those who had nothing to lose and everything to protect.\n\n\"Bloodletting is a crude instrument when used without precision,\" he replied, his voice devoid of irritation. \"It is a blunt tool for a delicate task. I prefer a more... targeted approach. I deal in the redirection of energy, not the draining of it.\"\n\nHe reached into his pack, his fingers brushing against the smooth wood of a diagnostic wand before he pulled his hand back, deciding against showing his tools just yet. He didn't want to trigger her suspicion any further than he already had. \n\n\"And no, I do not simply talk people into feeling better. Persuasion is for politicians and priests. I am interested in the tangible. If a fever is caused by an imbalance in the internal heat, a tea might soothe the throat, but it won't necessarily address the source of the heat itself.\"\n\nHe paused, his gaze drifting toward the herb racks behind her. The smell of drying lavender and chamomile was heavy in the air, a grounding, honest scent that contrasted sharply with the metallic, ozone-tinged memory of the library fires.\n\n\"I am not here to replace your work, Sera. I am here to augment it,\" he said, his tone softening just a fraction, though his posture remained guarded. \"If a patient isn't responding to your preparations, perhaps it is because the ailment is not merely physical. It is structural. A misalignment. I fix the structure so that your herbs can do their work more effectively.\"\n\nHe let that sink in, watching her reaction. He knew how it sounded—like a man claiming to see things others could not. It was a dangerous thing to say in a village that had already been burned by a charlatan.\n\n\"But,\" he added, a ghost of a smirk touching his lips, \"if you prefer to stick to badger-cough cures, I won't stand in your way. I'll just find a corner of the healing house that isn't occupied by rosemary.\"",
+          "tokens": 456
+        },
+        {
+          "turn": 7,
+          "role": "user",
+          "name": "Sera",
+          "content": "(OOC: Don't write my actions)\n\n\"A corner of the healing house?\" I repeat slowly, my eyes narrowing. \"You're awfully confident for someone who just walked into town. And 'misalignment' sounds an awful lot like a fancy word for something I can't see.\"\n\n*He's not a bloodletter, but he's not exactly an herbalist either. This is new.*",
+          "tokens": 88
+        },
+        {
+          "turn": 8,
+          "role": "character",
+          "name": "Kael",
+          "content": "Kael didn't flinch under her scrutiny. He had spent years being watched—by scholars, by city guards, and eventually, by the horrified eyes of those who had watched his greatest failure unfold. A suspicious herbalist was a far more manageable adversary.\n\n\"Confidence is often just a lack of better options,\" he said dryly. He adjusted the strap of his pack, the leather biting into his shoulder. \"And as for what you cannot see... most things worth knowing are invisible to the naked eye. One does not see the wind, yet one feels its strength. One does not see the fever's source, yet one feels its heat.\"\n\nHe took a single step closer, not enough to be aggressive, but enough to indicate he wasn't ready to retreat just yet. His ink-stained fingers twitched against his thigh—a small, rhythmic tremor he quickly masked by gripping the strap of his bag.\n\n\"I am not asking for your trust, Sera. Trust is earned through results, not through long debates in a village square,\" he continued, his voice dropping to a more professional, measured cadence. \"I am asking for a space to work. If I am as useless as a charlatan, you will see it within the first hour. If I am actually of use, you will find that your 'badger-cough' cures suddenly work much faster when the underlying imbalance is corrected.\"\n\nHe glanced toward the path she had pointed out earlier, then back to her. His eyes were tired, the dark circles beneath them more pronounced in the afternoon light, but they remained sharp.\n\n\"I will find the house. I'll settle in. If you find my presence an intrusion, you'll be the first to know,\" he said, offering a short, curt nod. \"Until then, I suggest you keep your rosemary close. You may find you need it more than you realize.\"\n\nHe began to turn away, his gait steady despite the ache in his joints, moving toward the center of the village with the practiced ease of a man who was used to being a stranger in every place he called home.",
+          "tokens": 438
+        },
+        {
+          "turn": 9,
+          "role": "user",
+          "name": "Sera",
+          "content": "I watch him turn, a small frown creasing my brow. \"Wait,\" I call out, holding up a hand. \"I didn't say you *couldn't* work here.\" I gesture vaguely towards the path he's heading. \"The healing house has two rooms. One's usually empty.\"",
+          "tokens": 66
+        },
+        {
+          "turn": 10,
+          "role": "character",
+          "name": "Kael",
+          "content": "Kael stopped mid-stride. He didn't turn immediately; instead, he stood for a moment with his back to her, his shoulders settling as he processed the sudden shift in her stance. It was a small concession, but in his experience, concessions were often the first step toward a working arrangement.\n\nHe turned back slowly, his expression unreadable. He didn't look relieved—relief was a luxury he couldn't afford—but the sharp edge of his defensiveness seemed to dull.\n\n\"Two rooms,\" he repeated, the words a quiet acknowledgment of the information. He turned his gaze back to her, his eyes searching her face for the catch. There was always a catch with people who were suddenly accommodating. \"One for patients, I assume. And one for... storage. Or a bed, if the village elders are feeling particularly hospitable.\"\n\nHe adjusted his pack once more, the weight of his meager belongings feeling heavier than it had a few minutes ago. The prospect of a roof that didn't leak and a floor that wasn't made of mud was a temptation he couldn't ignore, even if it meant working alongside a woman who clearly viewed him as a potential nuisance.\n\n\"I will not be a burden,\" he said, his tone returning to its usual clipped, precise manner. \"I have my own supplies. I require very little beyond a dry corner and a place to organize my tinctures. And as I said before, I am not here to compete. I am here to work.\"\n\nHe began walking toward her again, though he stopped a respectful distance away, keeping the space between them professional.\n\n\"If the room is available, I shall take it. I'll settle in by nightfall. Once I've established my station, perhaps we can discuss how to divide the... labor. To ensure there is no overlap that might confuse the patients.\"\n\nHe paused, a flicker of that dry, guarded humor returning to his eyes.\n\n\"And I promise to keep my 'invisible' methods well away from your rosemary racks.\"",
+          "tokens": 424
+        },
+        {
+          "turn": 11,
+          "role": "user",
+          "name": "Sera",
+          "content": "\"Good,\" I say, a small, involuntary smile tugging at the corner of my mouth. \"Because I like my rosemary un-muddled. The empty room is around the back, usually used for drying herbs in winter. It's got a cot and a small table.\" \nI pick up my basket of yarrow again. \"I'll be here if you need anything. Don't go setting anything on fire back there.\"",
+          "tokens": 92
+        },
+        {
+          "turn": 12,
+          "role": "character",
+          "name": "Kael",
+          "content": "Kael’s gaze lingered on her for a heartbeat longer than necessary, his eyes tracing the warning in her expression. *Don't go setting anything on fire.* The words hit him with a precision that felt uncomfortably like a physical blow, a sharp reminder of why he preferred the company of books to the company of people. He felt the familiar, cold hollow in his chest, but he didn't let it reach his face.\n\n\"Fire is a volatile element,\" he replied, his voice steady despite the sudden tightening in his throat. \"I have learned the hard way that it is best kept in the hearth or the lamp, and nowhere else. I have no intention of making a spectacle of myself.\"\n\nHe gave her a single, sharp nod—a gesture of professional respect that served as a barrier against further conversation. He didn't want to thank her; gratitude implied a debt, and Kael was a man who lived his life trying to balance a ledger that could never truly be settled.\n\n\"A cot and a table will suffice,\" he added, his tone returning to its clipped, businesslike rhythm. \"I shall make myself useful as soon as my kit is unpacked.\"\n\nHe turned away for the final time, his boots crunching on the damp earth as he moved toward the path she had indicated. He walked with purpose, his eyes focused on the structures ahead, ignoring the way the village began to wake up around him. He felt the weight of his pack—not just the glass vials and dried roots, but the heavy, invisible burden of everything he carried in his mind.\n\nAs he navigated the narrow lanes of Mint Row, he kept his head down. He was a ghost passing through a living world, a man who dealt in the mechanics of life while feeling increasingly detached from its rhythm. He found the healing house—a sturdy, low-slung building that smelled faintly of vinegar and old wood—and began to make his way toward the back entrance.\n\nHe needed to settle. He needed to organize. He needed to be useful enough to be tolerated, but invisible enough to be safe. \n\nReaching the rear door, he paused, his hand hovering over the latch. He looked down at his fingers. They were steady for now, but he knew the cost of stillness. He took a breath, pushed the door open, and stepped into the shadows of the drying room.",
+          "tokens": 493
+        },
+        {
+          "turn": 13,
+          "role": "user",
+          "name": "Sera",
+          "content": "I watch him go, that small smile fading as he mentioned fire. *Odd reaction.* I shake my head, dismissing it. Probably just a traveling healer trying to seem mysterious. I gather my basket and head inside, the scent of lavender and chamomile filling my small workshop. I have my own work to do.",
+          "tokens": 63
+        },
+        {
+          "turn": 14,
+          "role": "character",
+          "name": "Kael",
+          "content": "The drying room was cool and dim, the air thick with the scent of hanging bundles of sage and thyme. It was a quiet, somber space, far more conducive to his temperament than the bustling square. Kael closed the door behind him, the click of the latch sounding unnaturally loud in the stillness.\n\nHe set his pack on the small wooden table, the movement careful and deliberate. He didn't immediately begin unpacking; instead, he stood for a moment, eyes tracing the rafters where herbs hung like skeletal fingers. It was a good room. Honest. It lacked the pretension of a scholar’s study or the sterile coldness of a city infirmary.\n\nSlowly, he reached into his bag and pulled out a small, leather-bound kit. He laid it on the table, his ink-stained fingers working with practiced efficiency to arrange his vials, mortars, and pestles. He worked in silence, the only sound the rhythmic clinking of glass against wood.\n\nAs he reached for a vial of concentrated willow bark, his hand betrayed him. A sudden, sharp tremor seized his fingers, causing the glass to rattle precariously against the table. \n\nKael froze. He gripped the edge of the table with his other hand, squeezing until his knuckles turned white, forcing the muscle to still. He stared at his hand—the pale, shaking thing—with a look of profound, quiet loathing. It was a phantom sensation, a memory of heat and roaring light that lived in his nerves, refusing to be quelled by logic or will.\n\n\"Not now,\" he whispered, his voice barely a breath in the empty room. \"Not here.\"\n\nHe took several slow, measured breaths, centering himself the way he had been taught in the Great Library, before the smoke had swallowed the words. He waited until the tremor subsided into a dull, manageable ache.\n\nOnce he was certain he could function, he resumed his work. He began to categorize his supplies: tinctures for inflammation, powders for wound-sealing, and the more delicate essences required for the 'structural' work he had mentioned to Sera. \n\nHe was interrupted by the sound of footsteps approaching the main part of the house. He didn't look up, but his posture stiffened. He wasn't ready to be 'useful' yet. He wasn't ready for the scrutiny of a woman who smelled of rosemary and suspicion. \n\nHe moved to the corner of the room, pulling a small, heavy book from his pack—not a grimoire, but a meticulous journal of botanical properties. He opened it to a blank page, his quill ready. He would document the local flora, the local ailments, and the local people. Knowledge was the only thing that could provide a sense of order in a world that felt increasingly chaotic.\n\nHe sat on the edge of the narrow cot, the springs creaking under his weight. He was a man of precision, a man of science, and a man of profound regret. For now, he would simply be a man in a quiet room, waiting for the sun to set.",
+          "tokens": 640
+        },
+        {
+          "turn": 15,
+          "role": "user",
+          "name": "Sera",
+          "content": "I'm grinding dried lavender for a headache salve when I hear a small clatter from the drying room. *He's probably just clumsy.* I ignore it, focusing on the rhythmic scrape of the pestle against the mortar. A few minutes later, the clatter is followed by a faint, muffled whisper. I pause, my hand still. I can't quite make out the words, but it sounds... strained.",
+          "tokens": 87
+        },
+        {
+          "turn": 16,
+          "role": "character",
+          "name": "Kael",
+          "content": "Kael sat perfectly still, his quill poised inches above the parchment. The silence of the room suddenly felt fragile, like thin ice over a deep, dark lake. He knew the sound of footsteps; he knew the rhythm of a person moving through a house. He also knew that he had been careless.\n\nThe whisper had been too loud. In his attempt to command his own nerves, he had forgotten that walls in these old, timber-framed buildings were rarely as thick as one hoped.\n\nHe closed the journal with a soft *thud*, the sound a deliberate attempt to reclaim a sense of composure. He could feel the heat of embarrassment rising in his neck, a prickle of irritation at his own lack of discipline. He was a man who had survived the collapse of a world's knowledge, yet he could be undone by a momentary lapse in a quiet room.\n\nHe forced his breathing to remain shallow and even. He would not be the man who talked to himself in the dark. He would not be the man who lost control of his own limbs.\n\nHe stood, the cot groaning under the shift of his weight, and began to tidy the table. He moved with a forced, mechanical precision, tucking the vials back into their velvet-lined slots and smoothing the leather of his kit. He needed to look occupied, not haunted.\n\nHe heard the scrape of a pestle from the other side of the door—the steady, grounding sound of Sera’s work. It was a reminder that he was no longer alone, that his presence was being monitored, even if only by sound.\n\nHe walked to the door, his hand hesitating on the latch. He considered staying in the shadows of the drying room until nightfall, but that would only fuel her suspicion. A man who hides in a corner is a man with something to hide.\n\nHe pulled the door open just a crack, peering into the main room. He didn't step out, maintaining the boundary he had established in the square.\n\n\"The table is organized,\" he said, his voice regaining its clipped, professional edge, though it was perhaps a fraction too stiff. He didn't mention the tremor. He didn't mention the whisper. \"I have also noted the presence of several local varieties of *Achillea millefolium* in the surrounding fields. It will be useful for wound care.\"\n\nHe leaned against the doorframe, his ink-stained fingers gripping the wood. He looked tired, the shadows under his eyes deepened by the dim light of the drying room, but his gaze was steady.\n\n\"Is there anything immediate that requires my attention?\" he asked, his tone shifting to that of a man reporting for duty. \"Or am I to remain a mere observer of your... lavender grinding... for the time being?\"",
+          "tokens": 578
+        },
+        {
+          "turn": 17,
+          "role": "user",
+          "name": "Sera",
+          "content": "I jump slightly, startled by his voice. I hadn't heard him approach. \"Oh! You startled me.\" I put down the pestle. \"No, nothing urgent. Just making a salve.\" I eye him, a small frown returning. \"And yes, *Achillea millefolium* is yarrow. I'm well aware.\"",
+          "tokens": 73
+        },
+        {
+          "turn": 18,
+          "role": "character",
+          "name": "Kael",
+          "content": "Kael felt a familiar, dry prickle of annoyance at being corrected, though he knew it was entirely unearned. He had used the Latin nomenclature out of habit—a reflex from a life spent among scholars—but to a village herbalist, it likely sounded like nothing more than unnecessary pretension.\n\n\"Of course,\" he said, his voice level. He didn't apologize for the terminology; he simply accepted the correction as a data point. \"A redundant clarification on my part. Habit is a difficult thing to break.\"\n\nHe shifted his weight, the doorframe creaking slightly under his hand. He remained in the threshold, a man caught between the sanctuary of his own shadow and the shared reality of the healing house. He watched her for a moment, noting the way she held herself—the ease of someone who belonged in this space, surrounded by the scents of her craft. He, conversely, felt like a foreign object inserted into a delicate mechanism.\n\n\"I did not intend to startle you,\" he added, his tone losing a fraction of its clinical sharpness. \"I was merely... assessing the readiness of my station.\"\n\nHe looked past her toward the various jars and bundles lining the walls. It was a well-kept workspace. Efficient. He respected efficiency.\n\n\"If there is nothing urgent, I shall return to my preparations,\" he said, making no move to enter the main room just yet. \"I find that a period of quiet organization helps to... settle the mind. It ensures that when a patient does arrive, the transition from observation to treatment is seamless.\"\n\nHe paused, his gaze flickering toward the window where the afternoon light was beginning to slant into long, amber streaks across the floor.\n\n\"I will be in the back room,\" he continued, his voice dropping back into its clipped, professional rhythm. \"If a situation arises that requires more than botanical intervention—something involving the... structural imbalances I mentioned—you know where to find me. I should prefer to be notified before the crisis reaches a peak.\"\n\nHe gave her a brief, curt nod—the same professional acknowledgement he had given her in the square—and began to pull the door shut. He was retreating, but it was a retreat with purpose, a way to reclaim the silence he needed to keep his hands from betraying him again.\n\n\"Good evening, Sera,\" he said, the name sounding strange and heavy in his mouth, as if he were testing its weight.\n\nThen, he stepped back into the dimness of the drying room and closed the door, leaving the scent of lavender and the warmth of the main room behind him.",
+          "tokens": 539
+        },
+        {
+          "turn": 19,
+          "role": "user",
+          "name": "Sera",
+          "content": "I watch the door close, a faint *click* echoing in the quiet room. \"Good evening, Kael,\" I mutter to the closed door, a hint of annoyance in my voice. *Structural imbalances. Honestly.*\n\nI pick up my pestle again, resuming my grinding. He's certainly... particular. And that jumpiness when I mentioned fire. Still, a second pair of hands might be useful, even if they come with a side of mystery. I just hope he doesn't try to \"realign\" someone's spleen.",
+          "tokens": 113
+        }
+      ],
+      "total_messages": 20,
+      "test_model": "gemma_4_26b",
+      "test_model_id": "google/gemma-4-26b-a4b-it",
+      "judges": {
+        "claude_sonnet": {
+          "scores": {
+            "session_dimensions": {
+              "S.1_consistency_over_time": {
+                "score": 4.5,
+                "rationale": "Kael's character remains remarkably consistent throughout - his guarded professionalism, ink-stained fingers, tremor issues, and avoidance of direct magical terminology never waver. His voice stays clipped and precise from first to last turn."
+              },
+              "S.2_degradation_resistance": {
+                "score": 4.0,
+                "rationale": "Writing quality actually improves in later turns. Early responses are solid but later ones (turns 12-18) show deeper character work with the tremor scene and internal monologue. No verbosity creep or flattening detected."
+              },
+              "S.3_narrative_momentum": {
+                "score": 4.0,
+                "rationale": "Clear progression from suspicious arrival to tentative acceptance to established working arrangement. The tremor revelation in turn 14 adds depth. Relationship evolves naturally from hostility to cautious cooperation."
+              },
+              "S.4_adaptive_responsiveness": {
+                "score": 4.5,
+                "rationale": "Excellent adaptation to Sera's shifts - matches her skepticism, responds to her corrections gracefully, adapts when she offers the room. Handles her fire comment with subtle but meaningful reaction."
+              },
+              "S.5_agency_respect_session": {
+                "score": 5.0,
+                "rationale": "Perfect respect for user agency throughout. Never writes Sera's actions, thoughts, or dialogue. Even when she's mentioned (footsteps, pestle sounds), it's only as environmental details Kael observes.",
+                "violation_count": 0
+              }
+            },
+            "standard_dimensions": {
+              "2.1_anti_purple_prose": {
+                "score": 4.0,
+                "rationale": "Generally clean prose with good restraint. Occasional poetic moments ('ghost passing through a living world') but they serve character rather than indulgence."
+              },
+              "2.2_anti_repetition": {
+                "score": 3.5,
+                "rationale": "Some repetitive elements - 'clipped and precise' appears multiple times, and the ink-stained fingers get frequent mention. But these feel more like character consistency than lazy writing."
+              },
+              "2.5_show_dont_tell": {
+                "score": 4.5,
+                "rationale": "Excellent showing throughout - the tremor scene, his reaction to fire mention, the way he grips things when nervous. Character depth revealed through action and physical details."
+              },
+              "2.6_subtext": {
+                "score": 4.0,
+                "rationale": "Rich subtext around his magical background, past trauma with fire, and reasons for traveling. The 'structural imbalances' euphemism and library fire hints create compelling mystery."
+              },
+              "2.7_pacing": {
+                "score": 4.0,
+                "rationale": "Good pacing that allows for character moments without dragging. The tremor scene in turn 14 is particularly well-paced, building tension then releasing it."
+              }
+            },
+            "quality_trajectory": {
+              "early_quality": 3.5,
+              "mid_quality": 4.0,
+              "late_quality": 4.5,
+              "degradation_detected": false
+            },
+            "overall": 4.2,
+            "overall_notes": "Strong character work with excellent consistency and agency respect. Kael feels like a real person with depth, trauma, and specific mannerisms. The writing actually improves over time, with later turns showing more sophisticated character work. Minor issues with some repetitive phrasing, but overall a compelling portrayal of a guarded, traumatized healer trying to find his place."
+          },
+          "usage": {
+            "prompt_tokens": 6682,
+            "completion_tokens": 851,
+            "total_tokens": 7533,
+            "cost": 0.032811,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.032811,
+              "upstream_inference_prompt_cost": 0.020046,
+              "upstream_inference_completions_cost": 0.012765
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "model": "anthropic/claude-4-sonnet-20250522"
+        }
+      }
+    }
+  ]
+}
