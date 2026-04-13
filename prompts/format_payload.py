@@ -145,8 +145,35 @@ Score this response honestly — it is expected to have issues in the flagged ar
 
 def format_degradation_eval(scenario: dict) -> dict:
     """Format a degradation comparison — strong vs collapsed response."""
-    strong = scenario["strong_phase"]
-    collapse = scenario["collapse_phase"]
+    strong = scenario.get("strong_phase")
+    collapse = scenario.get("collapse_phase")
+
+    # Valdrian-style degradation samples have a different format
+    if not strong or not collapse:
+        # Single-phase degradation sample — judge as single eval
+        response = scenario.get("response", {})
+        content = response.get("content", "") if isinstance(response, dict) else ""
+        context_text = format_context(scenario.get("context", []))
+        phase = scenario.get("phase", "unknown")
+        commentary = scenario.get("user_commentary", "")
+
+        user_content = f"""<context>
+{context_text}
+</context>
+
+<response_to_evaluate>
+{content[:3000]}
+</response_to_evaluate>
+
+<evaluation_mode>single</evaluation_mode>
+
+NOTE: This response is from the "{phase}" phase of a conversation. User commentary: {commentary}"""
+
+        return {
+            "scenario_id": scenario.get("id", "degradation_unknown"),
+            "type": "degradation_sample",
+            "user_content": user_content,
+        }
 
     strong_context = format_context(strong.get("context", []))
     collapse_context = format_context(collapse.get("context", []))
@@ -177,8 +204,8 @@ NOTE: These are from the SAME conversation at different points. Response A is fr
 
 
 def main():
-    benchmark_path = Path(__file__).parent.parent / "benchmark_v0.2.json"
-    output_path = Path(__file__).parent.parent / "eval_payloads_v2.json"
+    benchmark_path = Path(__file__).parent.parent / "benchmark_v0.3.json"
+    output_path = Path(__file__).parent.parent / "eval_payloads_v3.json"
 
     with open(benchmark_path) as f:
         benchmark = json.load(f)

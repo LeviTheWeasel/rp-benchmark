@@ -15,13 +15,19 @@ from .config import (
 )
 
 
-def load_judge_prompt(judge_key: str) -> str:
-    """Load the appropriate judge system prompt."""
-    if "claude" in judge_key:
-        path = PROMPTS_DIR / "judge_claude.md"
+def load_judge_prompt(judge_key: str, mode: str = "standard") -> str:
+    """Load the appropriate judge system prompt.
+
+    Modes: "standard" (1-5 scale), "flaw_hunter" (100-point deduction), "comparative" (A/B)
+    """
+    if mode == "flaw_hunter":
+        return (PROMPTS_DIR / "judge_flaw_hunter.md").read_text()
+    elif mode == "comparative":
+        return (PROMPTS_DIR / "judge_comparative.md").read_text()
     else:
-        path = PROMPTS_DIR / "judge_gpt.md"
-    return path.read_text()
+        if "claude" in judge_key:
+            return (PROMPTS_DIR / "judge_claude.md").read_text()
+        return (PROMPTS_DIR / "judge_gpt.md").read_text()
 
 
 def load_benchmark() -> dict:
