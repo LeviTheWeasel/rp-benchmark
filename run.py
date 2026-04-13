@@ -41,9 +41,12 @@ def cmd_run(args):
     scenario_types = args.types or ["completion"]
     num_runs = args.runs or 1
 
+    language = getattr(args, 'language', None)
+
     print("Test models: %s" % list(test_models.keys()))
     print("Judge models: %s" % list(judge_models.keys()))
     print("Scenario types: %s" % scenario_types)
+    print("Language: %s" % (language or "all"))
     print("Max scenarios: %s" % (args.max or "all"))
     print("Runs per scenario: %d" % num_runs)
     print()
@@ -61,6 +64,7 @@ def cmd_run(args):
             judge_models=judge_models,
             scenario_types=scenario_types,
             max_scenarios=args.max,
+            language=language,
         )
 
         run_file = RESULTS_DIR / ("run_%s.json" % results["run_id"])
@@ -218,6 +222,9 @@ def main():
     )
     run_parser.add_argument(
         "--runs", type=int, default=1, help="Number of independent runs per scenario (default: 1, use 3 for confidence intervals)"
+    )
+    run_parser.add_argument(
+        "--language", choices=["en", "ru"], help="Filter scenarios by language (default: all)"
     )
     run_parser.add_argument(
         "--view",

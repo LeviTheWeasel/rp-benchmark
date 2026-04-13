@@ -283,6 +283,7 @@ def run_benchmark(
     scenario_filter: list[str] | None = None,
     scenario_types: list[str] | None = None,
     max_scenarios: int | None = None,
+    language: str | None = None,
 ) -> dict:
     """Run the full benchmark pipeline.
 
@@ -328,6 +329,17 @@ def run_benchmark(
                 for p in all_payloads:
                     if p.get("scenario_id") in scenario_ids:
                         prebuilt_payloads.append(p)
+
+    # Language filter
+    if language:
+        gen_scenarios = [s for s in gen_scenarios if s.get("language", "en") == language]
+        # For prebuilt, filter by scenario ID patterns (ru scenarios have russian source names)
+        if language == "ru":
+            ru_sources = {"lucian", "agora", "valdrian", "narlos", "rowena", "exiledking"}
+            prebuilt_payloads = [p for p in prebuilt_payloads if any(src in p.get("scenario_id", "").lower() for src in ru_sources)]
+        elif language == "en":
+            ru_sources = {"lucian", "agora", "valdrian", "narlos", "rowena", "exiledking"}
+            prebuilt_payloads = [p for p in prebuilt_payloads if not any(src in p.get("scenario_id", "").lower() for src in ru_sources)]
 
     if scenario_filter:
         gen_scenarios = [s for s in gen_scenarios if s["id"] in scenario_filter]

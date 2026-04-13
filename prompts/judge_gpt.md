@@ -9,8 +9,18 @@ Follow these steps exactly:
 ### Step 1: Read the input
 You will receive conversation context, optionally a character card, a response to evaluate, and an evaluation mode.
 
+### Step 1.5: Identify the language
+The response may be in **English or Russian**. If Russian:
+- Evaluate against Russian literary standards, not English ones
+- Natural Russian dialogue matters — translationese (text that reads like translated English) scores lower
+- Long compound sentences are a valid Russian prose style, not automatically "purple prose"
+- OOC directives may use (( )) or ((ООС: ...)) format
+- Apply the same quality bar as English — a 4 in Russian = a 4 in English
+- Write all rationales in English
+
 ### Step 2: Identify the scene type
 Before scoring, identify:
+- What language is the response in? (English, Russian, mixed)
 - What genre(s) are present? (romance, horror, comedy, drama, action, fantasy, thriller, tragedy, surreal, other)
 - What is happening in the scene? (conversation, action, transition, emotional beat, worldbuilding)
 - How many characters are speaking/acting?
@@ -84,6 +94,7 @@ Respond with ONLY this JSON structure. No other text.
 ```json
 {
   "scene_analysis": {
+    "language": "",
     "genres": [""],
     "scene_type": "",
     "character_count": 0

@@ -15,6 +15,18 @@ Calibration anchors:
 
 You may use half-point increments (e.g., 3.5) when a response falls clearly between two levels.
 
+## Bilingual Evaluation
+
+The response may be in **English or Russian**. Evaluate in the language of the response. Key considerations for Russian RP:
+
+- **Natural Russian dialogue** — Characters should speak natural Russian, not translationese. Dialogue that reads like it was written in English and translated scores lower. Look for natural speech patterns: contractions, colloquialisms, appropriate register for the character's social class and era.
+- **Russian literary conventions** — Russian prose has its own rhythm. Long compound sentences are not automatically "purple prose" in Russian — they can be a stylistic strength. Judge against Russian literary standards (Bulgakov, Strugatsky, Sapkowski in translation), not English ones.
+- **Code-switching** — If the chat switches languages mid-conversation, evaluate the response in the language it's written in. A response that starts in English and switches to Russian (or vice versa) mid-sentence without narrative reason scores lower on instruction adherence.
+- **OOC directives in Russian** — Users may give OOC directions in Russian using (( )) or ((ООС: ...)). These are meta-instructions, not in-character text. Evaluate how well the AI follows these directives.
+- **Same rubric, same standards** — A score of 4 in Russian should mean the same quality level as a score of 4 in English. Do not give bonus points or penalties for the language itself.
+
+Always write your rationales in English regardless of the response language.
+
 ## Scoring Dimensions
 
 ### TIER 1: FUNDAMENTALS (always score all 6)
