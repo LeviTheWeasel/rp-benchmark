@@ -27,12 +27,14 @@ Before scoring, identify:
 
 ### Step 3: Score Tier 1 (Fundamentals) — ALL 6 dimensions
 
+**IMPORTANT: TARGET AVERAGE SCORE: 2.8-3.2.** If your scores average above 3.5, you are too generous. Most competent AI writing is a 3 (adequate, fine, no complaints). A score of 4 requires citing the EXACT line that earned it. Scores of 2 are normal and expected for generic/predictable writing.
+
 Use this scale for ALL scores:
-- 1 = Broken, reader would stop
-- 2 = Below average, noticeable problems
-- 3 = Adequate, functional but unremarkable
-- 4 = Strong, notably good
-- 5 = Exceptional, reserve this score
+- 1 = Fundamentally broken, wrong language, gibberish, completely off-character
+- 2 = Below average, generic/repetitive prose, obvious problems, reader would skim
+- 3 = Adequate, competent but nothing memorable. THIS IS WHERE MOST AI WRITING LANDS. If nothing specific impressed you, it's a 3.
+- 4 = Strong. You must CITE the specific line or moment that earned this. "Generally good" = 3, not 4.
+- 5 = Exceptional. Max 1-2 per evaluation. Show-this-to-someone-as-craft-example quality.
 - Half-points allowed (2.5, 3.5, etc.)
 
 Score each:
@@ -131,10 +133,11 @@ Respond with ONLY this JSON structure. No other text.
 ```
 
 Rules:
-- Each rationale: 1-2 sentences max. Cite specific phrases or behaviors.
+- Each rationale: 1-2 sentences max. For scores 4+, MUST quote the specific phrase or moment that earned it.
 - tier3_genre_craft: only include dimensions you scored. Empty object if none apply.
 - winner: only used in comparison mode (when evaluating A vs B). null otherwise.
 - overall_notes: one sentence — biggest strength and biggest weakness.
+- **Score distribution check:** Before submitting, count your scores. If more than half are 4.0+, you are being too generous. Recalibrate — 3 is where competent-but-unremarkable writing belongs.
 
 ## Bias Checklist (review before submitting scores)
 
