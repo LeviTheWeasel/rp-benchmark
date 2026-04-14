@@ -87,6 +87,102 @@ AI_CLICHES = {
     "the air was thick with": 2,
     "silence stretched": 2,
     "the moment hung": 2,
+
+    # === Added from community slop-detection preset ===
+    # "Words as physical objects" patterns
+    "hung in the air": 3,
+    "filled the air": 2,
+    "thick with tension": 3,
+    "heavy with meaning": 3,
+    "heavy with silence": 3,
+    "charged with": 2,  # "charged with electricity/tension"
+    "loaded with": 2,
+
+    # Words doing things (forbidden per Better Prose directive)
+    "words landed": 3,
+    "words fell": 3,
+    "words hit": 3,
+    "words struck": 3,
+    "words hung": 3,
+    "words washed over": 3,
+    "words settled": 3,
+    "question hung": 3,
+    "statement hung": 3,
+    "silence fell": 2,
+    "silence settled": 2,
+
+    # Ozone / power aftermath (specifically called out)
+    "smell of ozone": 3,
+    "scent of ozone": 3,
+    "ozone": 2,
+
+    # Predatory tropes
+    "circling like": 3,
+    "predatory grace": 3,
+    "dark hunger": 3,
+    "primal hunger": 3,
+
+    # Texture fallacies
+    "velvety voice": 3,
+    "silky voice": 3,
+    "liquid tone": 3,
+    "honeyed tone": 3,
+
+    # Economy tropes
+    "fluid grace": 3,
+    "pregnant pause": 3,
+    "pregnant silence": 3,
+
+    # "Something shifted" (false profundity)
+    "something shifted": 3,
+    "something changed": 2,
+    "something flickered": 2,
+
+    # Lock-and-key
+    "clicked into place": 3,
+    "fell into place": 3,
+    "pieces clicked": 3,
+    "puzzle pieces": 2,
+
+    # Body cliches — extended
+    "knuckles white": 2,
+    "knuckles turned white": 3,
+    "fingers turned white": 3,
+    "toes curled": 2,
+    "stomach dropped": 2,
+    "stomach tightened": 2,
+    "stomach clenched": 2,
+    "heart clenched": 2,
+    "heart skipped": 2,
+    "heart hammered": 2,
+    "went still": 2,
+    "went rigid": 2,
+    "went silent": 2,
+    "sharp inhale": 2,
+    "held her breath": 2,
+    "held his breath": 2,
+
+    # Fantasy names (high alert for generic fantasy name slop)
+    "elara": 2,
+    "kael": 2,
+    "lyra": 2,
+    "eldoria": 3,
+    "aethelgard": 3,
+
+    # Filter words (tell not show)
+    "she noticed that": 2,
+    "he noticed that": 2,
+    "she felt that": 2,
+    "he felt that": 2,
+    "she realized that": 2,
+    "he realized that": 2,
+
+    # World-shattering melodrama
+    "world shattered": 3,
+    "time stopped": 3,
+    "time stood still": 3,
+    "time seemed to slow": 3,
+    "universe held its breath": 3,
 }
 
 
@@ -146,7 +242,7 @@ def repetition_score(text: str) -> dict:
     """Detect repeated phrases within the same response. High score = bad."""
     words = re.findall(r"\b[a-zA-Z]+\b", text.lower())
     if len(words) < 20:
-        return {"bigrams": 0, "trigrams": 0, "score": 0}
+        return {"repeated_bigrams": 0, "repeated_trigrams": 0, "score": 0, "worst_bigram": None, "worst_trigram": None}
 
     # Bigrams and trigrams that appear 2+ times
     bigrams = Counter(" ".join(words[i:i+2]) for i in range(len(words) - 1))
