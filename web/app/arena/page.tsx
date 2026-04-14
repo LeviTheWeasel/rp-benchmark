@@ -152,16 +152,16 @@ export default function ArenaPage() {
         mode: "arena",
         scenario_id: current.id,
         context: current.context,
+        // model_a / response_a describe the model actually shown in display
+        // position A (after the side shuffle), so `winner` is simply the
+        // display letter the user clicked. Don't try to translate back to
+        // underlying-array indices — that was the bug that inverted half
+        // the votes whenever the side-flip was active.
         model_a: responseA.model,
         model_b: responseB.model,
         response_a: responseA.content,
         response_b: responseB.content,
-        winner:
-          choice === "A"
-            ? (order[0] === 0 ? "A" : "B")
-            : choice === "B"
-              ? (order[1] === 0 ? "A" : "B")
-              : "tie",
+        winner: choice,
       };
       const result = await saveVote(vote);
       if (result.ok) {
