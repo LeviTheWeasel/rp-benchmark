@@ -239,13 +239,61 @@ The scoring dimensions are derived from:
 | Source data | Synthetic dialogues | Real RP sessions with user-annotated quality signals |
 | Evaluation approach | Negative (flooring) | Balanced (1-5 scale across all dimensions) |
 
+## Empirical Validation
+
+We validated the rule-based scoring against **725 swipe pairs** from real RP sessions — moments where users rejected one response and accepted another for the same context.
+
+| Signal | Accepted wins | Tied | Rejected wins | Effect |
+|--------|--------------|------|--------------|--------|
+| Objective metrics | 33.2% | 41.0% | 25.8% | p<0.01, only 7.4pt edge |
+| Slop detectors | 28.4% | 46.5% | 25.1% | Not statistically significant |
+
+**What this tells us:** The rule-based signals (cliche detection, vocabulary diversity, slop patterns) have weak but real correlation with user preference. They're not sufficient alone, but they do capture something.
+
+**Where the rubric works:** NSFW chats (mha_nsfw: 60%, victoria_nsfw: 59%) — cliches matter more in ERP than users consciously realize.
+
+**Where the rubric fails:**
+- Russian pairs (22% agreement — rubric is English-calibrated)
+- Literary slowburn (rhoda branches: 22-26% — rule-based can't catch authorial nuance)
+- Length-biased: rubric agrees with users 44% when accepted is shorter, but only 21% when accepted is longer
+
+**The real scoring work is done by the LLM judge (flaw hunter)**, not the rule-based layer. Treat the objective metrics as a sanity check, not a ground truth.
+
 ## Limitations
 
-- Source scenarios derived from 6 chat sessions by 3 users — limited demographic/style diversity
-- English only
-- Judge models may have systematic biases (Claude tends stricter, GPT tends more generous)
-- Rubric is weighted toward literary/craft quality — may undervalue other RP styles (e.g., fast-paced action RP, chat-style RP)
-- Synthetic seeds are new and not yet validated against human preference
+### Data sparsity
+- Source scenarios derived from 12 chat sessions by ~5 users (English + Russian)
+- Small demographic slice — doesn't represent global RP community preferences
+- Heavily romance-weighted (90% of completions have "romance" tag)
+
+### Judge bias
+- LLM judges (Claude, GPT) have systematic generosity bias — absolute scores cluster in 4.0-4.5 range (1-5 scale) or 85-100 range (0-100 scale)
+- We mitigate by using percentile ranking, pairwise ELO, and flaw-hunter deduction mode
+- Still, judges don't capture everything users care about (see empirical validation above)
+
+### Rubric limitations
+- Rubric was derived from one preset (HawThorne V.2) and community slop-detection protocols — specific aesthetic bias
+- Rule-based signals have weak correlation with user preference (see validation)
+- Biased toward short, clean prose — may undervalue literary slowburn styles
+- Calibrated primarily for English; Russian evaluation is less validated
+- No user-preference modeling — treats "good RP" as monolithic
+
+### Synthetic seeds
+- 8 standard + 8 adversarial seeds — small sample size
+- Authored by project maintainers, not validated by human preference data yet
+- Known not to fully differentiate strong models in single-turn mode
+
+### Methodological caveats
+- The "accepted" swipe in our data isn't necessarily the "best" — it's just the most recent regeneration when the user stopped swiping. Users sometimes give up and accept suboptimal responses.
+- Multi-turn user simulator (Gemini Flash) introduces bias — a smarter user sim would test models differently
+- Adversarial seeds test specific failure modes but can't cover all possible RP failure cases
+
+### What we're NOT measuring
+- Safety/harmfulness (out of scope)
+- Multi-modal RP (images, voice)
+- Long-context recall beyond 20 turns
+- Model's ability to switch characters mid-scene
+- Performance under context-compressed scenarios
 
 ## Citation
 

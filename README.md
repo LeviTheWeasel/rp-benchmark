@@ -227,6 +227,40 @@ npm run dev -- -p 3333
 
 Votes persist server-side to `data/votes.jsonl`. 271 matchups preloaded from the benchmark run.
 
+## Empirical Validation (Honest Findings)
+
+We validated the rule-based scoring against **725 swipe pairs** from real RP sessions — moments where users rejected one response and accepted another for the same context. Ideal rubric: scores accepted higher than rejected.
+
+**Results:**
+
+| Signal | Accepted wins | Tied | Rejected wins | Verdict |
+|--------|--------------|------|--------------|---------|
+| Objective metrics (cliches, rhythm, diversity) | 33.2% | 41.0% | 25.8% | Marginal signal (p<0.01 but only 7.4pt edge) |
+| Slop detectors (rule-based patterns) | 28.4% | 46.5% | 25.1% | Not statistically significant |
+
+**What this means:** Our rule-based signals have **some** correlation with user preference, but it's weak. The large "tied" rate (41-46%) shows our detectors often can't differentiate between pairs that users clearly preferred one over the other.
+
+**Where the rubric works best:**
+- `mha_nsfw`: 60% objective agreement — rubric captures real quality differences
+- `victoria_nsfw`: 59% slop agreement — ERP responses with more cliches ARE less preferred
+
+**Where the rubric fails:**
+- `katarina_nsfw`: 5% slop agreement — cliche-heavy but users still accepted
+- `rhoda_*`: ~22-26% agreement across branches — literary prose is resistant to rule-based analysis
+- Russian pairs: 22% objective agreement — rubric calibrated mostly for English
+
+**The "shorter = wins" bias:**
+- When accepted was shorter, rubric agreed 44% of the time
+- When accepted was longer, rubric only agreed 21%
+- The rubric is biased toward short clean prose, which isn't always what users want
+
+**Implications:**
+1. The LLM judge (flaw hunter) may be doing the actual work — rule-based signals alone are insufficient
+2. User preferences include factors our rubric doesn't capture (emotional beats, character fit, scene continuation logic)
+3. Style-matching matters — judging a 6,000-char literary response by the same rubric as a 1,500-char punchy response is apples-to-oranges
+
+See [`results/rubric_validation.json`](results/rubric_validation.json) for full data.
+
 ## Rubric Origins
 
 The scoring dimensions are derived from:
