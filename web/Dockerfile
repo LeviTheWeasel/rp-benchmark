@@ -20,7 +20,10 @@ COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 RUN mkdir -p /app/data && chown nextjs:nodejs /app/data
-VOLUME /app/data
+# Persistence is provided by a Railway volume mounted at /app/data.
+# The VOLUME keyword is intentionally omitted — Railway disallows it and
+# relies on its own volume config instead. See:
+# https://docs.railway.com/reference/volumes
 USER nextjs
 EXPOSE 3000
 ENV PORT=3000
