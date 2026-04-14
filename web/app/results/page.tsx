@@ -19,6 +19,40 @@ export default function ResultsPage() {
 
   // Arena win rates
   const arenaVotes = votes.filter((v) => v.mode === "arena");
+
+  // Coverage: per-pair vote count across all arena votes we can see.
+  // Excludes catch pairs since they're for voter-quality, not model ranking.
+  const coverageCounts: Record<string, number> = {};
+  for (const v of arenaVotes) {
+    if (v.is_catch) continue;
+    coverageCounts[v.scenario_id] = (coverageCounts[v.scenario_id] ?? 0) + 1;
+  }
+  const coverageValues = Object.values(coverageCounts);
+  const coverageSorted = [...coverageValues].sort((a, b) => a - b);
+  const coverage = {
+    uniquePairs: Object.keys(coverageCounts).length,
+    min: coverageSorted[0] ?? 0,
+    median: coverageSorted.length
+      ? coverageSorted[Math.floor(coverageSorted.length / 2)]
+      : 0,
+    max: coverageSorted[coverageSorted.length - 1] ?? 0,
+    zeroCount: 0, // set below once total scenario count is known (not tracked here)
+  };
+  // Histogram buckets
+  const buckets = [0, 1, 2, 3, 5, 10] as const;
+  const histogram = buckets.map((b, i) => {
+    const upper = buckets[i + 1];
+    const label = upper === undefined ? `${b}+` : `${b}-${upper - 1}`;
+    const count = coverageValues.filter(
+      (v) => v >= b && (upper === undefined || v < upper)
+    ).length;
+    return { label, count };
+  });
+  // Least-voted leaderboard (bottom 10)
+  const leastVoted = Object.entries(coverageCounts)
+    .sort((a, b) => a[1] - b[1])
+    .slice(0, 10);
+
   const modelWins: Record<string, { wins: number; losses: number; ties: number }> = {};
   for (const v of arenaVotes) {
     const models = [v.model_a!, v.model_b!];
@@ -83,6 +117,70 @@ export default function ResultsPage() {
         </div>
       ) : (
         <div className="space-y-8">
+          {/* Coverage — shows how evenly votes are spread across pairs */}
+          {coverage.uniquePairs > 0 && (
+            <div className="p-6 rounded-lg border border-[var(--border)] bg-[var(--card)]">
+              <h2 className="text-lg font-semibold mb-1">Coverage</h2>
+              <p className="text-xs text-[var(--muted)] mb-4">
+                Arena votes spread across {coverage.uniquePairs} pairs. More even = tighter per-pair confidence. Catch/calibration pairs excluded.
+              </p>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
+                <div className="px-3 py-2 rounded border border-[var(--border)]">
+                  <div className="text-xs text-[var(--muted)]">Min</div>
+                  <div className="text-lg font-semibold">{coverage.min}</div>
+                </div>
+                <div className="px-3 py-2 rounded border border-[var(--border)]">
+                  <div className="text-xs text-[var(--muted)]">Median</div>
+                  <div className="text-lg font-semibold">{coverage.median}</div>
+                </div>
+                <div className="px-3 py-2 rounded border border-[var(--border)]">
+                  <div className="text-xs text-[var(--muted)]">Max</div>
+                  <div className="text-lg font-semibold">{coverage.max}</div>
+                </div>
+                <div className="px-3 py-2 rounded border border-[var(--border)]">
+                  <div className="text-xs text-[var(--muted)]">Pairs covered</div>
+                  <div className="text-lg font-semibold">{coverage.uniquePairs}</div>
+                </div>
+              </div>
+              <div className="space-y-1 mb-5">
+                <div className="text-xs uppercase tracking-wider text-[var(--muted)]">Votes per pair</div>
+                {histogram.map((h) => {
+                  const max = Math.max(1, ...histogram.map((x) => x.count));
+                  const pct = (h.count / max) * 100;
+                  return (
+                    <div key={h.label} className="flex items-center gap-3 text-sm">
+                      <span className="w-12 text-[var(--muted)] text-xs">{h.label}</span>
+                      <div className="flex-1 h-4 bg-[var(--background)] rounded overflow-hidden">
+                        <div
+                          className="h-full bg-[var(--accent)]"
+                          style={{ width: `${pct}%` }}
+                        />
+                      </div>
+                      <span className="w-10 text-xs text-[var(--muted)] text-right">{h.count}</span>
+                    </div>
+                  );
+                })}
+              </div>
+              {leastVoted.length > 0 && (
+                <div>
+                  <div className="text-xs uppercase tracking-wider text-[var(--muted)] mb-2">
+                    Least-voted pairs (help these out next)
+                  </div>
+                  <ul className="space-y-1 text-xs">
+                    {leastVoted.map(([sid, count]) => (
+                      <li key={sid} className="flex justify-between gap-4">
+                        <span className="truncate font-mono text-[var(--muted)]">{sid}</span>
+                        <span className="text-[var(--foreground)]">
+                          {count} {count === 1 ? "vote" : "votes"}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          )}
+
           {/* Arena results */}
           {Object.keys(modelWins).length > 0 && (
             <div className="p-6 rounded-lg border border-[var(--border)] bg-[var(--card)]">

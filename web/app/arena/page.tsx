@@ -31,6 +31,7 @@ export default function ArenaPage() {
   const [voteCount, setVoteCount] = useState(0);
   const [showNSFW, setShowNSFW] = useState(false);
   const [nsfwDismissed, setNsfwDismissed] = useState(false);
+  const [rateLimit, setRateLimit] = useState<{ retryAfterSeconds: number } | null>(null);
 
   // Scenario list ordered by vote-count priority, with scenarios this voter
   // has already voted on filtered out. Initial render uses a random shuffle;
@@ -46,6 +47,19 @@ export default function ArenaPage() {
     return all;
   });
   const [exhausted, setExhausted] = useState(false);
+  // Vote counts keyed by scenario id. Seeded from /api/vote-counts, then
+  // optimistically bumped locally on each successful vote so the "N votes
+  // on this pair" display reflects the voter's own contribution right away.
+  const [pairVotes, setPairVotes] = useState<Record<string, number>>({});
+
+  useEffect(() => {
+    if (!rateLimit) return;
+    const t = setTimeout(
+      () => setRateLimit(null),
+      Math.max(1, rateLimit.retryAfterSeconds) * 1000
+    );
+    return () => clearTimeout(t);
+  }, [rateLimit]);
 
   useEffect(() => {
     let cancelled = false;
@@ -54,6 +68,7 @@ export default function ArenaPage() {
       .then((data) => {
         if (cancelled) return;
         const counts: Record<string, number> = data.counts ?? {};
+        setPairVotes(counts);
         const votedByMe = new Set<string>(data.voted_by_me ?? []);
         setScenarios((prev) => {
           const catchIds = new Set(CATCH_PAIRS.map((c) => c.id));
@@ -151,6 +166,10 @@ export default function ArenaPage() {
       const result = await saveVote(vote);
       if (result.ok) {
         setVoteCount((c) => c + 1);
+        setPairVotes((counts) => ({
+          ...counts,
+          [current.id]: (counts[current.id] ?? 0) + 1,
+        }));
         return;
       }
       if (result.alreadyVoted) {
@@ -161,6 +180,14 @@ export default function ArenaPage() {
           if (next.length === 0) setExhausted(true);
           return next;
         });
+        return;
+      }
+      if (result.rateLimited) {
+        // Roll back the reveal so the user can re-submit after the cooldown.
+        setRevealed(false);
+        setWinner(null);
+        setRateLimit({ retryAfterSeconds: result.retryAfterSeconds ?? 3 });
+        return;
       }
     },
     [current, responseA, responseB, order]
@@ -199,7 +226,14 @@ export default function ArenaPage() {
         </div>
         <div className="text-sm text-[var(--muted)] flex gap-4">
           <span>Matchup {(currentIdx % scenarios.length) + 1} / {scenarios.length}</span>
-          <span>Votes: <span className="text-[var(--accent)] font-semibold">{voteCount}</span></span>
+          <span>
+            This pair:{" "}
+            <span className="text-[var(--foreground)] font-semibold">
+              {pairVotes[current.id] ?? 0}
+            </span>{" "}
+            {pairVotes[current.id] === 1 ? "vote" : "votes"}
+          </span>
+          <span>Your votes: <span className="text-[var(--accent)] font-semibold">{voteCount}</span></span>
         </div>
       </div>
 
@@ -311,6 +345,11 @@ export default function ArenaPage() {
 
       {/* Vote bar — pinned at bottom */}
       <div className="shrink-0 border-t border-[var(--border)] bg-[var(--card)] px-4 py-3">
+        {rateLimit && (
+          <div className="mb-2 text-center text-xs text-[var(--amber)]">
+            Slow down — please wait ~{rateLimit.retryAfterSeconds}s before the next vote.
+          </div>
+        )}
         {!revealed ? (
           <div className="flex gap-3 justify-center">
             <button

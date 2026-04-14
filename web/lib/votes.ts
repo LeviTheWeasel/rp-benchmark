@@ -4,7 +4,13 @@ const STORAGE_KEY = "rpbench_votes";
 
 export type SaveVoteResult =
   | { ok: true }
-  | { ok: false; alreadyVoted: boolean; error?: string };
+  | {
+      ok: false;
+      alreadyVoted: boolean;
+      rateLimited: boolean;
+      retryAfterSeconds?: number;
+      error?: string;
+    };
 
 export async function saveVote(vote: Vote): Promise<SaveVoteResult> {
   // Save to localStorage (offline backup)
@@ -24,11 +30,16 @@ export async function saveVote(vote: Vote): Promise<SaveVoteResult> {
     return {
       ok: false,
       alreadyVoted: Boolean(data?.already_voted),
+      rateLimited: Boolean(data?.rate_limited) || resp.status === 429,
+      retryAfterSeconds:
+        typeof data?.retry_after_seconds === "number"
+          ? data.retry_after_seconds
+          : undefined,
       error: data?.error,
     };
   } catch (e) {
     console.warn("Failed to save vote to server, saved locally:", e);
-    return { ok: false, alreadyVoted: false, error: "network" };
+    return { ok: false, alreadyVoted: false, rateLimited: false, error: "network" };
   }
 }
 

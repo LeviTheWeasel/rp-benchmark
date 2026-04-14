@@ -3,6 +3,7 @@ import { promises as fs } from "fs";
 import path from "path";
 import { getOrCreateVoterId } from "@/lib/voter";
 import { CATCH_EXPECTED_WINNER, isCatchScenario } from "@/lib/catch-pairs";
+import { checkRate } from "@/lib/rate-limit";
 
 const VOTES_FILE = path.join(process.cwd(), "data", "votes.jsonl");
 
@@ -59,6 +60,22 @@ export async function POST(req: NextRequest) {
     }
 
     const { voterId } = await getOrCreateVoterId();
+
+    // Rate limit before touching disk. Applies to arena and rubric alike.
+    const rate = checkRate(voterId);
+    if (!rate.allowed) {
+      return NextResponse.json(
+        {
+          error: rate.reason === "too_fast" ? "voting too fast" : "rate limit reached",
+          rate_limited: true,
+          retry_after_seconds: rate.retryAfterSeconds,
+        },
+        {
+          status: 429,
+          headers: { "Retry-After": String(rate.retryAfterSeconds) },
+        }
+      );
+    }
 
     // Enforce one arena vote per (voter, scenario). Rubric votes are allowed
     // to repeat since a single user may re-score the same response.
