@@ -18,19 +18,22 @@ Every RP benchmark is either vibes-based ("I tried it and it felt good") or test
 
 ## Current Leaderboard (ELO)
 
-Based on 1,134 pairwise matchups across 58 scenarios (30 English + 28 Russian), judged by Claude Sonnet in flaw-hunting mode:
+Based on 1,507 pairwise matchups across 58 scenarios (30 English + 28 Russian), judged by Claude Sonnet in flaw-hunting mode:
 
 | Rank | Model | ELO | Tier |
 |------|-------|-----|------|
-| #1 | DeepSeek v3.2 | 1668 | **S** |
-| #2 | Claude Sonnet 4.5 | 1571 | A |
-| #3 | GPT-4.1 | 1552 | A |
-| #4 | GLM 4.7 | 1532 | A |
-| #5 | Gemini 2.5 Flash | 1444 | B |
-| #6 | Mistral Small Creative | 1382 | C |
-| #7 | Qwen 3.5 Flash | 1351 | C |
+| **#1** | **Claude Opus 4.6** | **1706** | **S+** |
+| #2 | DeepSeek v3.2 | 1638 | S |
+| #3 | Claude Sonnet 4.5 | 1541 | A |
+| #4 | GPT-4.1 | 1523 | A |
+| #5 | GLM 4.7 | 1492 | A |
+| #6 | Gemini 2.5 Flash | 1408 | B |
+| #7 | Mistral Small Creative | 1360 | C |
+| #8 | Qwen 3.5 Flash | 1332 | C |
 
-See [`results/elo_leaderboard.json`](results/elo_leaderboard.json) for head-to-head win rates.
+Opus beats DeepSeek 58.2% head-to-head and Qwen 91.3%. Has the highest bonus rate per response (1.55 — finds novel specific details most often).
+
+**Tension between scoring modes:** Opus wins on subjective quality (flaw hunter), but uses MORE cliches than GPT-4.1 per rule-based detection. GPT-4.1 wins on objective metrics despite losing on judge-based quality. See all four leaderboards in [`results/`](results/).
 
 ## Four Scoring Modes
 
