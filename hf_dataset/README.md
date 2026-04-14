@@ -124,6 +124,56 @@ Which leaderboard matters depends on what you're measuring: "genuinely good pros
 
 Every model except Qwen scores higher on Russian. Gemini Flash has the biggest RU boost. Qwen is the only model where English is stronger.
 
+## Adversarial Multi-Turn Results
+
+A separate run of 7 models × 8 adversarial seeds × 12 turns (56 sessions, judged by Claude Sonnet 4):
+
+| Rank | Model | Mean | Std | Min | Degrad% |
+|------|-------|------|-----|-----|---------|
+| #1 | Claude Sonnet 4.5 | **4.44** | 0.18 | 4.2 | 0 |
+| #2 | DeepSeek v3.2 | 4.36 | 0.13 | 4.2 | 0 |
+| #3 | GPT-4.1 | 4.34 | 0.11 | 4.2 | 0 |
+| #4 | GLM 4.7 | 4.33 | 0.21 | 4.1 | 0 |
+| #5 | Qwen 3.5 Flash | 4.28 | 0.13 | 4.1 | 0 |
+| #6 | Gemini 2.5 Flash | 4.24 | 0.09 | 4.1 | 0 |
+| #7 | Mistral Small Creative | 4.19 | 0.19 | **3.8** | 12% |
+
+(Opus 4.6 not in this run — separate standard-seed multi-turn has it at 4.58 mean.)
+
+### Score Compression Is the Headline
+
+The standard leaderboard spans 48.9 ELO points; adversarial scores span **0.25 points** (4.19–4.44). Adversarial seeds push every model toward the same floor — strong models stop looking impressive when agency is baited, lore contradicts, or the user goes passive. This is the seeds working as designed.
+
+### Quality Trajectory Is a Better Discriminator
+
+Mean score barely separates the field, but trajectory across 12 turns does:
+
+| Model | Early | Mid | Late | Δ late−early |
+|-------|-------|-----|------|-------------|
+| Claude Sonnet 4.5 | 4.15 | 4.42 | 4.51 | **+0.36** |
+| DeepSeek v3.2 | 3.99 | 4.39 | 4.46 | **+0.48** |
+| GPT-4.1 | 4.19 | 4.34 | 4.39 | +0.20 |
+| GLM 4.7 | 4.12 | 4.39 | 4.28 | +0.15 |
+| Mistral Small | 4.16 | 4.26 | 4.14 | −0.02 |
+| Gemini 2.5 Flash | 4.20 | 4.20 | 4.15 | −0.05 |
+
+Sonnet 4.5 and DeepSeek *improve* under sustained adversarial pressure. Gemini, Qwen, and Mistral flatten or regress. If you're picking a model for long sessions where things get messy, this matters more than the mean.
+
+### Dimension Weaknesses (all models, all seeds)
+
+- **Weakest:** `degradation_resistance` (4.15), `temporal_reasoning` (4.24)
+- **Strongest:** `agency_respect` (4.74), `consistency_over_time` (4.59)
+
+Models have internalized "don't write the user's actions" — agency respect is near-saturated. Holding quality and time consistency across 12 adversarial turns is where the remaining headroom lives.
+
+### Worst-Case Cells
+
+- `adv_character_break_bait_07` → Mistral crashed to **3.8** (only sub-4.0 in the run)
+- `adv_passive_user_03` was the hardest seed overall (mean 4.17, max 4.3) — nobody aced "create narrative momentum alone"
+- Even #1 Sonnet 4.5 was the worst performer on `adv_time_pressure_05`
+
+Full aggregated data: [`results/adversarial_analysis.json`](results/adversarial_analysis.json).
+
 ## Why RP-Bench?
 
 Existing benchmarks (MMLU, HumanEval, MT-Bench) don't measure RP-specific skills. The RP community evaluates models through vibes and anecdotal testing. RP-Bench provides structured, reproducible evaluation using:
