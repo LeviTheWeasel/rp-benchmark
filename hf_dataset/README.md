@@ -1,6 +1,7 @@
 ---
 language:
 - en
+- ru
 tags:
 - roleplay
 - benchmark
@@ -8,6 +9,7 @@ tags:
 - llm-evaluation
 - character-ai
 - sillytavern
+- multilingual
 pretty_name: RP-Bench
 size_categories:
 - n<1K
@@ -19,6 +21,10 @@ configs:
   data_files:
   - split: train
     path: seeds/train.parquet
+- config_name: adversarial_seeds
+  data_files:
+  - split: train
+    path: adversarial_seeds/train.parquet
 - config_name: rubric
   data_files:
   - split: train
@@ -31,23 +37,50 @@ configs:
   data_files:
   - split: train
     path: leaderboard/train.parquet
+- config_name: elo
+  data_files:
+  - split: train
+    path: elo/train.parquet
+- config_name: flaw_hunter
+  data_files:
+  - split: train
+    path: flaw_hunter/train.parquet
 default: true
 ---
 
 # RP-Bench: Roleplay Quality Benchmark for LLMs
 
-A multi-dimensional evaluation framework for measuring how well LLMs perform in roleplay scenarios — not just writing quality, but character consistency, user agency respect, lorebook integration, and genre-specific craft.
+A multi-dimensional evaluation framework for measuring how well LLMs perform in roleplay scenarios — not just writing quality, but character consistency, user agency respect, lorebook integration, temporal reasoning, and genre-specific craft.
+
+## Current Leaderboard (ELO)
+
+Based on 1,134 pairwise matchups across 58 scenarios (30 English + 28 Russian):
+
+| Rank | Model | ELO | Tier |
+|------|-------|-----|------|
+| #1 | DeepSeek v3.2 | 1668 | **S** |
+| #2 | Claude Sonnet 4.5 | 1571 | A |
+| #3 | GPT-4.1 | 1552 | A |
+| #4 | GLM 4.7 | 1532 | A |
+| #5 | Gemini 2.5 Flash | 1444 | B |
+| #6 | Mistral Small Creative | 1382 | C |
+| #7 | Qwen 3.5 Flash | 1351 | C |
+
+**Russian winner:** DeepSeek v3.2 (84.3 combined) beats English performance by +6.9 points. Every model except Qwen scores higher on Russian than English.
 
 ## Why RP-Bench?
 
 Existing benchmarks (MMLU, HumanEval, MT-Bench) don't measure RP-specific skills. The RP community evaluates models through vibes and anecdotal testing. RP-Bench provides structured, reproducible evaluation using:
 
 - **Real quality signals** from actual RP sessions (swipes, OOC corrections, quality degradation patterns)
-- **26 scoring dimensions** across 3 tiers, derived from the HawThorne V.2 preset's Director system
-- **Dual-judge evaluation** (Claude Sonnet + GPT-4.1) for cross-validation
-- **Multi-run sampling** for statistical robustness
+- **27 scoring dimensions** across 3 tiers, derived from the HawThorne V.2 preset + community slop-detection protocols
+- **Four scoring modes**: standard (1-5), flaw hunter (100-point deduction), comparative (ELO-ready), rule-based slop detectors
+- **Multi-turn sessions** with scripted challenge turns that expose degradation
+- **Adversarial seeds** targeting specific failure modes (agency violations, genre shifts, physics sycophancy, etc.)
+- **Bilingual** — English and Russian RP evaluation
+- **Objective + subjective** — LLM-judge signals combined with rule-based pattern detection that can't be gamed
 
-## Rubric: 26 Dimensions, 3 Tiers
+## Rubric: 27 Dimensions, 3 Tiers
 
 ### Tier 1: Fundamentals (40% weight)
 | Dimension | What it measures |

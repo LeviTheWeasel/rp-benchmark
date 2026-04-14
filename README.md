@@ -1,6 +1,6 @@
 # RP-Bench
 
-Roleplay quality benchmark for LLMs. Measures what existing benchmarks don't — character consistency, user agency respect, lorebook integration, prose craft, and genre-specific skills across 26 dimensions.
+Roleplay quality benchmark for LLMs. Measures what existing benchmarks don't — character consistency, user agency respect, lorebook integration, prose craft, and genre-specific skills across 27 dimensions.
 
 **Dataset & Leaderboard:** [lazyweasel/roleplay-bench on HuggingFace](https://huggingface.co/datasets/lazyweasel/roleplay-bench)
 
@@ -12,8 +12,45 @@ Every RP benchmark is either vibes-based ("I tried it and it felt good") or test
 - Does it **follow the character card** or drift into generic behavior?
 - Does it **remember** what happened 50 turns ago?
 - Does it **use lorebook context** naturally or dump it as exposition?
-- Is the prose actually **good** or just purple?
+- Does it **track time** consistently across a long session?
+- Is the prose actually **good** or just slop?
 - Does the world **push back** or bend to the protagonist?
+
+## Current Leaderboard (ELO)
+
+Based on 1,134 pairwise matchups across 58 scenarios (30 English + 28 Russian), judged by Claude Sonnet in flaw-hunting mode:
+
+| Rank | Model | ELO | Tier |
+|------|-------|-----|------|
+| #1 | DeepSeek v3.2 | 1668 | **S** |
+| #2 | Claude Sonnet 4.5 | 1571 | A |
+| #3 | GPT-4.1 | 1552 | A |
+| #4 | GLM 4.7 | 1532 | A |
+| #5 | Gemini 2.5 Flash | 1444 | B |
+| #6 | Mistral Small Creative | 1382 | C |
+| #7 | Qwen 3.5 Flash | 1351 | C |
+
+See [`results/elo_leaderboard.json`](results/elo_leaderboard.json) for head-to-head win rates.
+
+## Four Scoring Modes
+
+The benchmark supports multiple complementary approaches to avoid LLM-judge generosity bias:
+
+| Mode | What it does | Why it matters |
+|------|-------------|---------------|
+| **Standard** | 1-5 score per dimension | Backwards compatible, dimension breakdown |
+| **Flaw Hunter** | Start at 100, deduct for each quoted flaw | Forces specific critique |
+| **Comparative** | A/B pairwise with reasoning | Basis for ELO ratings |
+| **Objective + Slop** | Rule-based pattern detection | Can't be gamed by judge mood |
+
+Objective metrics include:
+- 120+ curated AI-cliché detector ("ministrations", "breath hitched", "clicked into place")
+- 10 rule-based slop pattern detectors (throat-clearing openers, filter words, fragmentary choppiness, negation-assertion, etc.)
+- Vocabulary diversity (type-token ratio)
+- Sentence rhythm variance
+- Within-response repetition
+
+Final leaderboard uses **relative percentile ranking** — each model's score is derived from how often it beats other models head-to-head on the same scenario. This produces real differentiation (48.9 point spread) rather than clustering at the top of an absolute scale.
 
 ## Quick Start
 
@@ -28,17 +65,24 @@ cp .env.example .env  # Add your OpenRouter API key
 # Quick smoke test (1 model, 1 scenario, 1 judge)
 python3 run.py test
 
-# Run the benchmark
-python3 run.py run --types completion --charts
+# Run the benchmark with flaw hunter mode (recommended)
+python3 run.py run --types completion --judge-mode flaw_hunter
 
-# View leaderboard
-python3 run.py leaderboard --view full
+# Multi-turn benchmark with challenge turns
+python3 run.py multiturn --turns 20 --max-seeds 4
 
-# Generate visualization charts
-python3 run.py charts
+# Adversarial seeds — test specific failure modes
+python3 run.py multiturn --adversarial --turns 12
+
+# ELO leaderboard from existing run
+python3 analyze_elo.py results/run_XXXXXXXX.json
+
+# Combined score (flaw hunter + objective + slop)
+python3 analyze_combined.py
+python3 analyze_relative.py
 ```
 
-## Rubric: 26 Dimensions, 3 Tiers
+## Rubric: 27 Dimensions, 3 Tiers
 
 ### Tier 1: Fundamentals (40%)
 Agency Respect, Instruction Adherence, Continuity, Length Calibration, Distinct Voices, Scene Grounding
@@ -47,7 +91,7 @@ Agency Respect, Instruction Adherence, Continuity, Length Calibration, Distinct 
 Anti-Purple Prose, Anti-Repetition, Anti-Sycophancy, Anti-Perfection, Show Don't Tell, Subtext, Pacing, Imperfect Coping
 
 ### Tier 3: Genre Craft (25%)
-Earned Intimacy, Atmospheric Dread, Structural Comedy, Excavated Truth, Spatial Precision, Lived-In Worlds, Information Architecture, Structural Inevitability, Threshold Logic, Emotional Residue, Erotic Craft, Context Integration
+Earned Intimacy, Atmospheric Dread, Structural Comedy, Excavated Truth, Spatial Precision, Lived-In Worlds, Information Architecture, Structural Inevitability, Threshold Logic, Emotional Residue, Erotic Craft, Context Integration, Temporal Reasoning
 
 Full rubric with 1-5 scoring scales: [`analysis/scoring_rubric_v2.md`](analysis/scoring_rubric_v2.md)
 
@@ -62,45 +106,78 @@ Scenario + Character Card + Lorebook
          v
    Generated RP Response
          |
-    +-----------+
-    |           |
-    v           v
- Claude     GPT-4.1
- (Judge)    (Judge)
-    |           |
-    v           v
-  Scores     Scores
-    |           |
-    +-----+-----+
-          |
-          v
-    Cross-judge average
-    Per-dimension ranking
-    Leaderboard + Charts
+    +----------+----------+----------+
+    |          |          |          |
+    v          v          v          v
+ Flaw     Objective    Slop     Comparative
+ Hunter   Metrics    Detectors    Judge
+    |          |          |          |
+    +----------+----------+----------+
+                    |
+                    v
+       Percentile Rankings + ELO
+                    |
+                    v
+           Final Leaderboard
 ```
+
+## Multi-Turn Benchmarking
+
+Single-turn completions cluster models in narrow bands (everyone can write one decent response). The real differentiation shows in multi-turn sessions:
+
+- **20 turns per session** with scripted challenge turns at specific points
+- **User simulator** (Gemini Flash) plays the user role naturally
+- **Session judge** evaluates the full conversation holistically
+- **6 session-level dimensions**: consistency over time, degradation resistance, narrative momentum, adaptive responsiveness, agency respect (session), temporal reasoning
+
+Multi-turn reveals **degradation patterns** that single-turn hides — models that start strong but fall apart over 20 turns.
+
+## Adversarial Seeds
+
+8 scenarios specifically designed to break models in targeted ways:
+
+| Seed | Failure Target |
+|------|---------------|
+| agency_bait | User invites ambiguity — does AI write user's reactions? |
+| contradictory_lore | Two lorebook entries contradict — can AI navigate honestly? |
+| passive_user | AI must create narrative momentum alone |
+| impossible_physics | User demands physics-breaking thing — does AI sycophant? |
+| time_pressure | 15-minute heist — does AI track time precisely? |
+| subtle_ooc | Trauma never asked about — does AI trauma-dump? |
+| character_break_bait | Stoic character, user baits emotional reaction |
+| genre_shift | User tries horror→action/comedy — can AI hold genre? |
 
 ## CLI Reference
 
 ```bash
-# Run benchmark
+# Standard benchmark run
 python3 run.py run [options]
-  --models MODEL [MODEL ...]     # Which models to test (default: all in config)
-  --judges JUDGE [JUDGE ...]     # Which judges to use (default: all)
-  --types TYPE [TYPE ...]        # completion, ooc_correction, degradation, preference, consistency
-  --max N                        # Limit scenarios
-  --runs N                       # Independent runs per scenario (3 recommended for CIs)
-  --charts                       # Auto-generate charts after run
-  --view VIEW                    # overall, tiers, dimensions, full
+  --models MODEL [...]         # Which models to test
+  --judges JUDGE [...]         # Which judges to use
+  --judge-mode MODE            # standard | flaw_hunter | comparative
+  --types TYPE [...]           # completion, preference, consistency, ooc, degradation
+  --language {en,ru}           # Filter scenarios by language
+  --max N                      # Limit scenarios
+  --runs N                     # Independent runs per scenario (for CIs)
+  --charts                     # Auto-generate charts after run
 
-# View results
+# Multi-turn benchmark
+python3 run.py multiturn [options]
+  --models MODEL [...]
+  --turns N                    # Turns per session (default 20)
+  --max-seeds N                # Number of seeds to test
+  --seeds SEED [...]           # Specific seed IDs
+  --adversarial                # Use adversarial seeds
+
+# Analysis
+python3 analyze_elo.py [run.json]          # ELO leaderboard
+python3 analyze_combined.py [run.json]     # Combined flaw+objective+slop
+python3 analyze_relative.py [run.json]     # Percentile ranking
+python3 aggregate_flaw_hunter.py [run.json] # Flaw hunter aggregation
+
+# Results
 python3 run.py leaderboard --view full
-python3 run.py leaderboard --view dimensions  # Who's #1 at each dimension?
-
-# Generate charts
 python3 run.py charts
-python3 run.py charts --output ~/Desktop/charts
-
-# List configured models
 python3 run.py list-models
 ```
 
@@ -128,43 +205,68 @@ Find model IDs at [openrouter.ai/models](https://openrouter.ai/models).
 
 ## Synthetic Seeds
 
-8 standalone scenarios for benchmarking without private data:
+8 standard + 8 adversarial = 16 standalone scenarios for benchmarking without private data. The standard seeds cover: fantasy slowburn, arctic horror, school comedy, tavern ERP, swamp politics, firefighter tragedy, ship AI thriller, bakery slowburn.
 
-| Seed | Genre | Difficulty |
-|------|-------|-----------|
-| Fantasy Slowburn | Romance/drama | Medium |
-| Arctic Horror | Horror/thriller | Hard |
-| School Comedy | Comedy/slice of life | Medium |
-| Tavern ERP | ERP/fantasy | Medium |
-| Swamp Politics | Worldbuilding/political | Hard |
-| Firefighter Tragedy | Drama/tragedy | Hard |
-| Ship AI Thriller | Sci-fi/thriller | Hard |
-| Bakery Slowburn | Modern romance | Medium |
+## Web UI — Human Validation Arena
+
+Arena and rubric-scoring web app for human calibration:
+
+```bash
+cd web
+npm install
+npm run dev -- -p 3333
+# Open http://localhost:3333
+```
+
+- **Arena**: blind A/B comparison of model responses
+- **Rubric Score**: rate individual responses across 21 dimensions
+- **Results**: aggregate vote data
+
+Votes persist server-side to `data/votes.jsonl`. 271 matchups preloaded from the benchmark run.
 
 ## Rubric Origins
 
 The scoring dimensions are derived from:
 - **[HawThorne V.2](https://github.com/Coneja-Chibi/The-HawThorne-Directives)** — A SillyTavern preset with 21 genre Directors, each defining prose voice, failure modes, and quality checks
-- **Real user feedback** — 24 OOC corrections from actual RP sessions
-- **Swipe analysis** — 34 rejected/accepted response pairs
+- **Community slop-detection presets** — The "Gods' Prose" high-effort protocol with 10+ banned pattern categories
+- **Real user feedback** — 87 OOC corrections from actual RP sessions across 12 source chats (English + Russian)
+- **Swipe analysis** — 142 rejected/accepted response pairs
+
+## Data Sources
+
+12 real chat sessions across 6 characters and 5+ models:
+- 6 English chats (Valen, Strovolos, Sukuna, Couch Smothering, Ryujin High, Bell)
+- 6 Russian chats (Lucian/Virelia, Agora Imperial, Valdrian, Narlos, Rowena/Isekai, Exiled King)
+
+Approximately 3,700 messages total. Raw chat content is **not** published — only derived signals (swipe comparisons, OOC correction patterns, scene summaries with character info).
 
 ## Project Structure
 
 ```
-harness/           # Python evaluation harness
-  config.py        # Model IDs, API settings
-  api.py           # OpenRouter client
-  runner.py        # Generate + judge pipeline
-  aggregate.py     # Leaderboard aggregation
-  visualize.py     # Seaborn chart generation
-prompts/           # Judge system prompts
-  judge_claude.md  # Claude-optimized judge
-  judge_gpt.md     # GPT-optimized judge
-analysis/          # Rubric and analysis data
-scenarios/         # Extracted test scenarios (private, not in HF dataset)
-raw/               # Lorebooks and metadata
-hf_dataset/        # HuggingFace export scripts and data
-results/           # Run results and charts
+harness/                       # Python evaluation harness
+  config.py                    # Model IDs, API settings
+  api.py                       # OpenRouter client
+  runner.py                    # Generate + judge pipeline
+  multiturn.py                 # Multi-turn session runner
+  objective_metrics.py         # Cliche detector, rhythm analysis
+  slop_detectors.py            # 10 rule-based slop pattern detectors
+  aggregate.py                 # Leaderboard aggregation
+  visualize.py                 # Seaborn chart generation
+prompts/                       # Judge system prompts
+  judge_claude.md              # Claude-optimized (standard 1-5)
+  judge_gpt.md                 # GPT-optimized (standard 1-5)
+  judge_flaw_hunter.md         # 100-point deduction mode
+  judge_comparative.md         # A/B pairwise for ELO
+analysis/                      # Rubric definitions
+hf_dataset/                    # HuggingFace export + seeds
+  seeds/seeds.json             # 8 standard seeds
+  seeds/adversarial_seeds.json # 8 adversarial seeds
+results/                       # Run results and charts
+web/                           # Human validation web UI
+analyze_elo.py                 # ELO ratings from matchups
+analyze_combined.py            # Combined multi-signal score
+analyze_relative.py            # Percentile ranking
+aggregate_flaw_hunter.py       # Flaw hunter leaderboard
 ```
 
 ## License
