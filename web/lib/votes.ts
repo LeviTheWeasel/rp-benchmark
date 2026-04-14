@@ -2,7 +2,11 @@ import { Vote } from "./types";
 
 const STORAGE_KEY = "rpbench_votes";
 
-export async function saveVote(vote: Vote): Promise<void> {
+export type SaveVoteResult =
+  | { ok: true }
+  | { ok: false; alreadyVoted: boolean; error?: string };
+
+export async function saveVote(vote: Vote): Promise<SaveVoteResult> {
   // Save to localStorage (offline backup)
   const votes = getLocalVotes();
   votes.push(vote);
@@ -10,13 +14,21 @@ export async function saveVote(vote: Vote): Promise<void> {
 
   // Save to server
   try {
-    await fetch("/api/vote", {
+    const resp = await fetch("/api/vote", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(vote),
     });
+    if (resp.ok) return { ok: true };
+    const data = await resp.json().catch(() => ({}) as any);
+    return {
+      ok: false,
+      alreadyVoted: Boolean(data?.already_voted),
+      error: data?.error,
+    };
   } catch (e) {
     console.warn("Failed to save vote to server, saved locally:", e);
+    return { ok: false, alreadyVoted: false, error: "network" };
   }
 }
 

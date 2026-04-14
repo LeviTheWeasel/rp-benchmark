@@ -29,9 +29,11 @@ export default function ArenaPage() {
   const [showNSFW, setShowNSFW] = useState(false);
   const [nsfwDismissed, setNsfwDismissed] = useState(false);
 
-  // Scenario list ordered by vote-count priority. Initial render uses a random
-  // shuffle (before server counts arrive); once counts load we re-sort by
-  // ascending vote count with a random tiebreak, then freeze for the session.
+  // Scenario list ordered by vote-count priority, with scenarios this voter
+  // has already voted on filtered out. Initial render uses a random shuffle;
+  // once /api/vote-counts resolves we re-sort by ascending vote count (random
+  // tiebreak) and remove already-voted pairs. Order is then frozen for the
+  // session so new votes don't teleport the user.
   const [scenarios, setScenarios] = useState(() => {
     const all = [...SAMPLE_SCENARIOS, ...BENCHMARK_SCENARIOS];
     for (let i = all.length - 1; i > 0; i--) {
@@ -40,6 +42,7 @@ export default function ArenaPage() {
     }
     return all;
   });
+  const [exhausted, setExhausted] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -48,8 +51,14 @@ export default function ArenaPage() {
       .then((data) => {
         if (cancelled) return;
         const counts: Record<string, number> = data.counts ?? {};
+        const votedByMe = new Set<string>(data.voted_by_me ?? []);
         setScenarios((prev) => {
-          const decorated = prev.map((s) => ({
+          const filtered = prev.filter((s) => !votedByMe.has(s.id));
+          if (filtered.length === 0) {
+            setExhausted(true);
+            return prev;
+          }
+          const decorated = filtered.map((s) => ({
             scenario: s,
             votes: counts[s.id] ?? 0,
             jitter: Math.random(),
@@ -85,7 +94,7 @@ export default function ArenaPage() {
   const responseB = current.responses[order[1]];
 
   const handleVote = useCallback(
-    (choice: "A" | "B" | "tie") => {
+    async (choice: "A" | "B" | "tie") => {
       setWinner(choice);
       setRevealed(true);
 
@@ -106,8 +115,20 @@ export default function ArenaPage() {
               ? (order[1] === 0 ? "A" : "B")
               : "tie",
       };
-      saveVote(vote);
-      setVoteCount((c) => c + 1);
+      const result = await saveVote(vote);
+      if (result.ok) {
+        setVoteCount((c) => c + 1);
+        return;
+      }
+      if (result.alreadyVoted) {
+        // Race: another tab or the same voter already logged this pair.
+        // Drop it from the visible list and move on without counting.
+        setScenarios((prev) => {
+          const next = prev.filter((s) => s.id !== current.id);
+          if (next.length === 0) setExhausted(true);
+          return next;
+        });
+      }
     },
     [current, responseA, responseB, order]
   );
@@ -118,6 +139,20 @@ export default function ArenaPage() {
     setRevealed(false);
     setShowNSFW(false);
   };
+
+  if (exhausted || !current) {
+    return (
+      <div className="flex flex-col h-[calc(100vh-3.5rem)] items-center justify-center p-8">
+        <div className="max-w-md text-center">
+          <div className="text-xl font-semibold mb-3">All matchups covered</div>
+          <p className="text-sm text-[var(--muted)] mb-6">
+            You&apos;ve voted on every pair available for this voter id. Thank you — your votes are saved server-side. Check back after new scenarios are added, or clear the <code>rpbench_voter_id</code> cookie to start fresh.
+          </p>
+          <div className="text-sm text-[var(--muted)]">Votes this session: <span className="text-[var(--accent)] font-semibold">{voteCount}</span></div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-col h-[calc(100vh-3.5rem)]">

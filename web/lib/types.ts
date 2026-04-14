@@ -4,6 +4,8 @@ export interface Vote {
   mode: "arena" | "rubric";
   scenario_id: string;
   context: string;
+  /** Set server-side from the voter cookie; clients never populate this. */
+  voter_id?: string;
   // Arena mode
   model_a?: string;
   model_b?: string;
