@@ -1,0 +1,143 @@
+{
+  "n_pairs": 1621,
+  "logistic_regression_cv_accuracy": 0.6357511080674921,
+  "top_features_linear": [
+    {
+      "feature": "word_count",
+      "coefficient": 1.2642595479747332,
+      "direction": "more"
+    },
+    {
+      "feature": "length",
+      "coefficient": -1.127056458211791,
+      "direction": "less"
+    },
+    {
+      "feature": "sentence_count",
+      "coefficient": -1.0055472928499847,
+      "direction": "less"
+    },
+    {
+      "feature": "dialogue_lines",
+      "coefficient": 0.5349241426648301,
+      "direction": "more"
+    },
+    {
+      "feature": "dialogue_density",
+      "coefficient": -0.47692382090342805,
+      "direction": "less"
+    },
+    {
+      "feature": "avg_paragraph_length",
+      "coefficient": 0.38706427610902266,
+      "direction": "more"
+    },
+    {
+      "feature": "paragraph_count",
+      "coefficient": 0.23090357351492408,
+      "direction": "more"
+    },
+    {
+      "feature": "avg_sentence_length",
+      "coefficient": -0.20543171770634858,
+      "direction": "less"
+    },
+    {
+      "feature": "body_phrases_per_1k",
+      "coefficient": -0.1812892147071615,
+      "direction": "less"
+    },
+    {
+      "feature": "action_words_per_1k",
+      "coefficient": -0.1568437296129317,
+      "direction": "less"
+    },
+    {
+      "feature": "rep_bigrams_per_1k",
+      "coefficient": 0.14591148063027437,
+      "direction": "more"
+    },
+    {
+      "feature": "long_sentences",
+      "coefficient": -0.14103352691633095,
+      "direction": "less"
+    },
+    {
+      "feature": "cliches_per_1k",
+      "coefficient": -0.12734074003712212,
+      "direction": "less"
+    },
+    {
+      "feature": "short_sentences",
+      "coefficient": 0.12339828293906,
+      "direction": "more"
+    },
+    {
+      "feature": "rhythm_score",
+      "coefficient": -0.12282081154319623,
+      "direction": "less"
+    }
+  ],
+  "top_features_importance": [
+    {
+      "feature": "avg_paragraph_length",
+      "importance": 0.15442247822780794
+    },
+    {
+      "feature": "sensory_words_per_1k",
+      "importance": 0.058691388580172976
+    },
+    {
+      "feature": "sentence_count",
+      "importance": 0.058690011604254355
+    },
+    {
+      "feature": "length",
+      "importance": 0.05640566494187237
+    },
+    {
+      "feature": "action_words_per_1k",
+      "importance": 0.052069518743142126
+    },
+    {
+      "feature": "body_phrases_per_1k",
+      "importance": 0.05159383774386942
+    },
+    {
+      "feature": "rhythm_score",
+      "importance": 0.04846325849541449
+    },
+    {
+      "feature": "italic_actions",
+      "importance": 0.044874598333227426
+    },
+    {
+      "feature": "paragraph_count",
+      "importance": 0.040610714065011044
+    },
+    {
+      "feature": "exclamations_per_1k",
+      "importance": 0.03983611333524321
+    },
+    {
+      "feature": "word_count",
+      "importance": 0.037578336268139625
+    },
+    {
+      "feature": "dialogue_lines",
+      "importance": 0.03375025034939735
+    },
+    {
+      "feature": "dialogue_density",
+      "importance": 0.033278367561456954
+    },
+    {
+      "feature": "slop_per_1k",
+      "importance": 0.032456422989300834
+    },
+    {
+      "feature": "question_marks_per_1k",
+      "importance": 0.03204558383006725
+    }
+  ]
+}

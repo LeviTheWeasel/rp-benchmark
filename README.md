@@ -273,6 +273,22 @@ Despite these limitations, meaningful patterns emerge:
 
 See [`results/rubric_validation.json`](results/rubric_validation.json) and [`results/flaw_hunter_validation.json`](results/flaw_hunter_validation.json) for full data.
 
+### Can We Learn a Rubric From Swipe Data?
+
+We trained classifiers on 1,621 swipe pairs (24 features × symmetric +/- examples) to see whether **combinations** of features predict user preference where individual features could not.
+
+| Model | 5-fold CV Accuracy |
+|-------|--------------------|
+| Logistic Regression | 57.1% (± 6.1%) |
+| Random Forest | 63.2% (± 9.1%) |
+| Gradient Boosting | **63.6% (± 8.6%)** |
+
+Non-linear models beat the linear baseline by ~6 points, confirming that **feature interactions matter** — no single metric is predictive, but the joint shape of "paragraph rhythm × sensory density × dialogue mix" weakly tracks preference. Top RF feature importance: `avg_paragraph_length` (0.154) — ~3× anything else.
+
+Per-source variance is large: `mha_rpg_b125` hits 70% agreement, `rhoda_b3_loom` only 46%. Some genres are learnable from these features; literary slowburn isn't. See [`learn_rubric_classifier.py`](learn_rubric_classifier.py) and [`results/learned_rubric.json`](results/learned_rubric.json).
+
+> **ML runs in this repo** should set `n_jobs=1` in sklearn and launch with `OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1` — otherwise joblib/BLAS thread pools can balloon memory well past dataset size.
+
 ## Rubric Origins
 
 The scoring dimensions are derived from:

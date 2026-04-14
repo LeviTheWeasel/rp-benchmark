@@ -1,0 +1,221 @@
+{
+  "n_pairs": 1621,
+  "features": {
+    "length": {
+      "acc_higher": 791,
+      "rej_higher": 825,
+      "tied": 5,
+      "avg_delta": -241.19,
+      "agreement_rate": 50.9,
+      "accepted_direction": "LESS",
+      "total": 1621
+    },
+    "word_count": {
+      "acc_higher": 789,
+      "rej_higher": 826,
+      "tied": 6,
+      "avg_delta": -30.772,
+      "agreement_rate": 51.0,
+      "accepted_direction": "LESS",
+      "total": 1621
+    },
+    "sentence_count": {
+      "acc_higher": 756,
+      "rej_higher": 819,
+      "tied": 46,
+      "avg_delta": -3.635,
+      "agreement_rate": 50.5,
+      "accepted_direction": "LESS",
+      "total": 1621
+    },
+    "avg_sentence_length": {
+      "acc_higher": 809,
+      "rej_higher": 802,
+      "tied": 10,
+      "avg_delta": -0.05,
+      "agreement_rate": 49.9,
+      "accepted_direction": "MORE",
+      "total": 1621
+    },
+    "short_sentences": {
+      "acc_higher": 661,
+      "rej_higher": 780,
+      "tied": 180,
+      "avg_delta": -0.788,
+      "agreement_rate": 48.1,
+      "accepted_direction": "LESS",
+      "total": 1621
+    },
+    "long_sentences": {
+      "acc_higher": 664,
+      "rej_higher": 739,
+      "tied": 218,
+      "avg_delta": -0.379,
+      "agreement_rate": 45.6,
+      "accepted_direction": "LESS",
+      "total": 1621
+    },
+    "paragraph_count": {
+      "acc_higher": 649,
+      "rej_higher": 726,
+      "tied": 246,
+      "avg_delta": -1.545,
+      "agreement_rate": 44.8,
+      "accepted_direction": "LESS",
+      "total": 1621
+    },
+    "avg_paragraph_length": {
+      "acc_higher": 894,
+      "rej_higher": 725,
+      "tied": 2,
+      "avg_delta": 24.078,
+      "agreement_rate": 55.2,
+      "accepted_direction": "MORE",
+      "total": 1621
+    },
+    "dialogue_lines": {
+      "acc_higher": 577,
+      "rej_higher": 610,
+      "tied": 434,
+      "avg_delta": -0.347,
+      "agreement_rate": 37.6,
+      "accepted_direction": "LESS",
+      "total": 1621
+    },
+    "italic_actions": {
+      "acc_higher": 563,
+      "rej_higher": 638,
+      "tied": 420,
+      "avg_delta": -0.677,
+      "agreement_rate": 39.4,
+      "accepted_direction": "LESS",
+      "total": 1621
+    },
+    "ellipses_per_1k": {
+      "acc_higher": 477,
+      "rej_higher": 475,
+      "tied": 669,
+      "avg_delta": 0.016,
+      "agreement_rate": 29.4,
+      "accepted_direction": "MORE",
+      "total": 1621
+    },
+    "em_dashes_per_1k": {
+      "acc_higher": 658,
+      "rej_higher": 678,
+      "tied": 285,
+      "avg_delta": 0.056,
+      "agreement_rate": 41.8,
+      "accepted_direction": "LESS",
+      "total": 1621
+    },
+    "question_marks_per_1k": {
+      "acc_higher": 715,
+      "rej_higher": 642,
+      "tied": 264,
+      "avg_delta": 0.043,
+      "agreement_rate": 44.1,
+      "accepted_direction": "MORE",
+      "total": 1621
+    },
+    "exclamations_per_1k": {
+      "acc_higher": 333,
+      "rej_higher": 320,
+      "tied": 968,
+      "avg_delta": -0.027,
+      "agreement_rate": 20.5,
+      "accepted_direction": "MORE",
+      "total": 1621
+    },
+    "body_phrases_per_1k": {
+      "acc_higher": 558,
+      "rej_higher": 676,
+      "tied": 387,
+      "avg_delta": -0.045,
+      "agreement_rate": 41.7,
+      "accepted_direction": "LESS",
+      "total": 1621
+    },
+    "sensory_words_per_1k": {
+      "acc_higher": 647,
+      "rej_higher": 738,
+      "tied": 236,
+      "avg_delta": 0.029,
+      "agreement_rate": 45.5,
+      "accepted_direction": "LESS",
+      "total": 1621
+    },
+    "action_words_per_1k": {
+      "acc_higher": 503,
+      "rej_higher": 561,
+      "tied": 557,
+      "avg_delta": -0.045,
+      "agreement_rate": 34.6,
+      "accepted_direction": "LESS",
+      "total": 1621
+    },
+    "dialogue_density": {
+      "acc_higher": 655,
+      "rej_higher": 687,
+      "tied": 279,
+      "avg_delta": -0.068,
+      "agreement_rate": 42.4,
+      "accepted_direction": "LESS",
+      "total": 1621
+    },
+    "cliches_per_1k": {
+      "acc_higher": 362,
+      "rej_higher": 402,
+      "tied": 857,
+      "avg_delta": -0.028,
+      "agreement_rate": 24.8,
+      "accepted_direction": "LESS",
+      "total": 1621
+    },
+    "ttr": {
+      "acc_higher": 851,
+      "rej_higher": 756,
+      "tied": 14,
+      "avg_delta": 0.005,
+      "agreement_rate": 52.5,
+      "accepted_direction": "MORE",
+      "total": 1621
+    },
+    "rhythm_score": {
+      "acc_higher": 760,
+      "rej_higher": 812,
+      "tied": 49,
+      "avg_delta": -0.03,
+      "agreement_rate": 50.1,
+      "accepted_direction": "LESS",
+      "total": 1621
+    },
+    "rep_bigrams_per_1k": {
+      "acc_higher": 715,
+      "rej_higher": 704,
+      "tied": 202,
+      "avg_delta": -0.005,
+      "agreement_rate": 44.1,
+      "accepted_direction": "MORE",
+      "total": 1621
+    },
+    "rep_trigrams_per_1k": {
+      "acc_higher": 657,
+      "rej_higher": 695,
+      "tied": 269,
+      "avg_delta": -0.015,
+      "agreement_rate": 42.9,
+      "accepted_direction": "LESS",
+      "total": 1621
+    },
+    "slop_per_1k": {
+      "acc_higher": 431,
+      "rej_higher": 407,
+      "tied": 783,
+      "avg_delta": 0.004,
+      "agreement_rate": 26.6,
+      "accepted_direction": "MORE",
+      "total": 1621
+    }
+  }
+}
