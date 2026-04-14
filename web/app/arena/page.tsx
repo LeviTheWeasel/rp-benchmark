@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { Vote } from "@/lib/types";
 import { saveVote } from "@/lib/votes";
 import { SAMPLE_SCENARIOS } from "@/lib/sample-data";
@@ -29,8 +29,10 @@ export default function ArenaPage() {
   const [showNSFW, setShowNSFW] = useState(false);
   const [nsfwDismissed, setNsfwDismissed] = useState(false);
 
-  // Merge sample + benchmark scenarios, shuffle once on mount
-  const [scenarios] = useState(() => {
+  // Scenario list ordered by vote-count priority. Initial render uses a random
+  // shuffle (before server counts arrive); once counts load we re-sort by
+  // ascending vote count with a random tiebreak, then freeze for the session.
+  const [scenarios, setScenarios] = useState(() => {
     const all = [...SAMPLE_SCENARIOS, ...BENCHMARK_SCENARIOS];
     for (let i = all.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -38,13 +40,47 @@ export default function ArenaPage() {
     }
     return all;
   });
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch("/api/vote-counts")
+      .then((r) => r.json())
+      .then((data) => {
+        if (cancelled) return;
+        const counts: Record<string, number> = data.counts ?? {};
+        setScenarios((prev) => {
+          const decorated = prev.map((s) => ({
+            scenario: s,
+            votes: counts[s.id] ?? 0,
+            jitter: Math.random(),
+          }));
+          decorated.sort((a, b) => a.votes - b.votes || a.jitter - b.jitter);
+          return decorated.map((d) => d.scenario);
+        });
+      })
+      .catch(() => {
+        // Non-fatal: keep the random order we already seeded with.
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   const current = scenarios[currentIdx % scenarios.length];
   const currentIsNSFW = isNSFW(current);
 
-  const [shuffled] = useState(() =>
-    scenarios.map(() => (Math.random() > 0.5 ? [0, 1] : [1, 0]))
-  );
-  const order = shuffled[currentIdx % shuffled.length];
+  // A/B side assignment is keyed by scenario id so re-sorting the scenarios
+  // list after counts load doesn't cause the same matchup to show with
+  // inverted sides.
+  const [sideFlips] = useState(() => {
+    const m: Record<string, 0 | 1> = {};
+    for (const s of [...SAMPLE_SCENARIOS, ...BENCHMARK_SCENARIOS]) {
+      m[s.id] = Math.random() > 0.5 ? 1 : 0;
+    }
+    return m;
+  });
+  const flip = sideFlips[current.id] ?? 0;
+  const order: [number, number] = flip === 0 ? [0, 1] : [1, 0];
   const responseA = current.responses[order[0]];
   const responseB = current.responses[order[1]];
 
