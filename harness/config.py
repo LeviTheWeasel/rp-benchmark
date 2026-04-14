@@ -19,6 +19,7 @@ JUDGE_MODELS = {
 
 # Test models (models being benchmarked — add more as needed)
 TEST_MODELS = {
+    "claude_opus_4_6": "anthropic/claude-opus-4.6",
     "claude_sonnet_4_5": "anthropic/claude-sonnet-4.5",
     "gpt_4_1": "openai/gpt-4.1",
     "gemini_2_5_flash": "google/gemini-2.5-flash",
