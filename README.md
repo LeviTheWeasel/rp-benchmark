@@ -229,37 +229,49 @@ Votes persist server-side to `data/votes.jsonl`. 271 matchups preloaded from the
 
 ## Empirical Validation (Honest Findings)
 
-We validated the rule-based scoring against **725 swipe pairs** from real RP sessions — moments where users rejected one response and accepted another for the same context. Ideal rubric: scores accepted higher than rejected.
+We validated all scoring signals against real user preferences — pairs of responses where users rejected one and accepted another for the same context.
 
-**Results:**
+### Signal vs User Preference
 
-| Signal | Accepted wins | Tied | Rejected wins | Verdict |
-|--------|--------------|------|--------------|---------|
-| Objective metrics (cliches, rhythm, diversity) | 33.2% | 41.0% | 25.8% | Marginal signal (p<0.01 but only 7.4pt edge) |
-| Slop detectors (rule-based patterns) | 28.4% | 46.5% | 25.1% | Not statistically significant |
+| Signal | Agreement | Ties | Disagree | Verdict |
+|--------|-----------|------|----------|---------|
+| Objective metrics (length-normalized) | 42.3% | 25.9% | 31.7% | Weak signal (p<0.01) |
+| Slop detectors (density-normalized) | 30.6% | 42.5% | 26.9% | Not significant |
+| **Flaw Hunter (LLM judge, sampled)** | **38.7%** | **10.7%** | **50.7%** | **Not significant, inverted-leaning** |
 
-**What this means:** Our rule-based signals have **some** correlation with user preference, but it's weak. The large "tied" rate (41-46%) shows our detectors often can't differentiate between pairs that users clearly preferred one over the other.
+**Rule-based signals weakly track user preference. The LLM judge does NOT.**
 
-**Where the rubric works best:**
-- `mha_nsfw`: 60% objective agreement — rubric captures real quality differences
-- `victoria_nsfw`: 59% slop agreement — ERP responses with more cliches ARE less preferred
+### What This Reveals
 
-**Where the rubric fails:**
-- `katarina_nsfw`: 5% slop agreement — cliche-heavy but users still accepted
-- `rhoda_*`: ~22-26% agreement across branches — literary prose is resistant to rule-based analysis
-- Russian pairs: 22% objective agreement — rubric calibrated mostly for English
+The flaw hunter validation (75 pairs, $10) showed:
+- **Judge disagreed with users more often than it agreed** (50.7% vs 38.7%)
+- When the judge disagreed, it did so confidently (avg delta -6.68 points)
+- `mha_rpg`: 100% agreement (judge matches users perfectly on this style)
+- `rhoda_main`: 0% agreement (judge actively disagrees on literary slowburn)
+- `lucian_virelia`: 0% agreement (Opus 4.6 chats the user loved, but judge nitpicks)
 
-**The "shorter = wins" bias:**
-- When accepted was shorter, rubric agreed 44% of the time
-- When accepted was longer, rubric only agreed 21%
-- The rubric is biased toward short clean prose, which isn't always what users want
+### Possible Reasons
 
-**Implications:**
-1. The LLM judge (flaw hunter) may be doing the actual work — rule-based signals alone are insufficient
-2. User preferences include factors our rubric doesn't capture (emotional beats, character fit, scene continuation logic)
-3. Style-matching matters — judging a 6,000-char literary response by the same rubric as a 1,500-char punchy response is apples-to-oranges
+1. **The "accepted" label is noisy** — users sometimes accept the second try because they're tired, not because it's better
+2. **Judges have their own aesthetic preferences** — Claude Sonnet as judge prefers certain styles that don't match what RPers actually want
+3. **Context stripped away** — judging a response in isolation misses character history, scene continuity, and relationship dynamics that users evaluate holistically
+4. **Flaw-counting is inherently flawed** — some "purple prose" or "recycled descriptions" are intentional stylistic choices users appreciate
 
-See [`results/rubric_validation.json`](results/rubric_validation.json) for full data.
+### Where the Rubric Does Work
+
+Despite these limitations, meaningful patterns emerge:
+- **NSFW/ERP evaluation**: both objective (60%) and slop (59%) agree with users on `mha_nsfw` and `victoria_nsfw` — cliche density matters more in explicit content
+- **Length normalization halved the length-bias gap** — from 23pt to 12pt between "short wins" and "long wins"
+- **English agreement jumped to 45%** after length normalization
+
+### What This Means For The Leaderboard
+
+**Our model rankings still tell a story — but it's "how models compare to each other under our specific rubric," not "what users actually prefer."** The rubric is an internally consistent lens with known biases, not a ground truth. Users interested in model selection should:
+1. Check multiple leaderboards (ELO, Flaw Hunter, Relative) — they disagree
+2. Look at per-source/per-style scores, not just overall
+3. Trust human-validated outputs (the arena) over automated ones
+
+See [`results/rubric_validation.json`](results/rubric_validation.json) and [`results/flaw_hunter_validation.json`](results/flaw_hunter_validation.json) for full data.
 
 ## Rubric Origins
 

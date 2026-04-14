@@ -239,25 +239,50 @@ The scoring dimensions are derived from:
 | Source data | Synthetic dialogues | Real RP sessions with user-annotated quality signals |
 | Evaluation approach | Negative (flooring) | Balanced (1-5 scale across all dimensions) |
 
-## Empirical Validation
+## Empirical Validation (Honest Findings)
 
-We validated the rule-based scoring against **725 swipe pairs** from real RP sessions — moments where users rejected one response and accepted another for the same context.
+We validated all scoring signals against real user preferences — swipe pairs where users rejected one response and accepted another for the same context.
 
-| Signal | Accepted wins | Tied | Rejected wins | Effect |
-|--------|--------------|------|--------------|--------|
-| Objective metrics | 33.2% | 41.0% | 25.8% | p<0.01, only 7.4pt edge |
-| Slop detectors | 28.4% | 46.5% | 25.1% | Not statistically significant |
+### Signal vs User Preference
 
-**What this tells us:** The rule-based signals (cliche detection, vocabulary diversity, slop patterns) have weak but real correlation with user preference. They're not sufficient alone, but they do capture something.
+| Signal | N | Agreement | Tied | Disagree | Effect |
+|--------|---|-----------|------|----------|--------|
+| Objective metrics (length-normalized) | 725 | 42.3% | 25.9% | 31.7% | p<0.01, weak |
+| Slop detectors (density-normalized) | 725 | 30.6% | 42.5% | 26.9% | Not significant |
+| **Flaw Hunter (LLM judge)** | **75** | **38.7%** | **10.7%** | **50.7%** | **Inverted-leaning** |
 
-**Where the rubric works:** NSFW chats (mha_nsfw: 60%, victoria_nsfw: 59%) — cliches matter more in ERP than users consciously realize.
+**Rule-based signals weakly track user preference. The LLM judge does NOT agree with users.**
 
-**Where the rubric fails:**
-- Russian pairs (22% agreement — rubric is English-calibrated)
-- Literary slowburn (rhoda branches: 22-26% — rule-based can't catch authorial nuance)
-- Length-biased: rubric agrees with users 44% when accepted is shorter, but only 21% when accepted is longer
+### The Flaw Hunter Problem
 
-**The real scoring work is done by the LLM judge (flaw hunter)**, not the rule-based layer. Treat the objective metrics as a sanity check, not a ground truth.
+The flaw hunter validation ($10, 75 sampled pairs) revealed:
+- Judge disagreed with users more often than it agreed (50.7% vs 38.7%)
+- When the judge disagreed, it did so confidently (avg delta -6.68 points)
+- Per-source variance is huge: `mha_rpg` 100% agreement, `rhoda_main` 0%
+- Judge-user disagreement is not random — it's systematic, suggesting the judge has its own aesthetic preferences
+
+### Why This Might Happen
+
+1. **"Accepted" label is noisy** — users sometimes accept the second try because they're tired or because the first was good enough, not because it was actually better
+2. **Judge aesthetic bias** — Claude Sonnet as judge has preferences (economy, subtext, specific detail) that don't match what RPers actually want in-flow
+3. **Missing context** — judging a response in isolation loses character history, scene continuity, and relationship dynamics that users weigh heavily
+4. **Flaw-counting is reductive** — some "flaws" are intentional stylistic choices users appreciate
+
+### Where The Rubric Does Work
+
+- **NSFW/ERP**: Objective metrics agree at 60% on `mha_nsfw`, slop at 59% on `victoria_nsfw` — cliches matter more in explicit content
+- **Length normalization worked**: reduced length bias gap from 23pt to 12pt
+- **English improved to 45%** after normalization
+
+### What This Means For Users
+
+**Our leaderboard is "how models compare under our specific rubric," not "what users actually prefer."** The rubric is internally consistent with known biases, not ground truth. For model selection:
+
+1. Check multiple leaderboards (ELO, Flaw Hunter, Relative) — they disagree for a reason
+2. Look at per-source/per-style breakdowns
+3. Weight human-validated data (the arena) over automated scoring when available
+
+The benchmark's most reliable signal may be **not which model is #1, but which models consistently appear near the top across different scoring modes.**
 
 ## Limitations
 
