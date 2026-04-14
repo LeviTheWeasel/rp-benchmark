@@ -52,21 +52,77 @@ default: true
 
 A multi-dimensional evaluation framework for measuring how well LLMs perform in roleplay scenarios — not just writing quality, but character consistency, user agency respect, lorebook integration, temporal reasoning, and genre-specific craft.
 
-## Current Leaderboard (ELO)
+## Current Leaderboards
 
-Based on 1,134 pairwise matchups across 58 scenarios (30 English + 28 Russian):
+Based on 1,507 pairwise matchups across 58 scenarios (30 English + 28 Russian). The three leaderboards tell different but complementary stories.
+
+### ELO Ratings (head-to-head dominance)
 
 | Rank | Model | ELO | Tier |
 |------|-------|-----|------|
-| #1 | DeepSeek v3.2 | 1668 | **S** |
-| #2 | Claude Sonnet 4.5 | 1571 | A |
-| #3 | GPT-4.1 | 1552 | A |
-| #4 | GLM 4.7 | 1532 | A |
-| #5 | Gemini 2.5 Flash | 1444 | B |
-| #6 | Mistral Small Creative | 1382 | C |
-| #7 | Qwen 3.5 Flash | 1351 | C |
+| **#1** | **Claude Opus 4.6** | **1706** | **S+** |
+| #2 | DeepSeek v3.2 | 1638 | S |
+| #3 | Claude Sonnet 4.5 | 1541 | A |
+| #4 | GPT-4.1 | 1523 | A |
+| #5 | GLM 4.7 | 1492 | A |
+| #6 | Gemini 2.5 Flash | 1408 | B |
+| #7 | Mistral Small Creative | 1360 | C |
+| #8 | Qwen 3.5 Flash | 1332 | C |
 
-**Russian winner:** DeepSeek v3.2 (84.3 combined) beats English performance by +6.9 points. Every model except Qwen scores higher on Russian than English.
+### Flaw Hunter (subjective quality, 0-100)
+
+Score = 100 minus deductions for quoted flaws found by judge.
+
+| Rank | Model | Score | Fatal Flaws | Avg Bonuses |
+|------|-------|-------|-------------|-------------|
+| #1 | Claude Opus 4.6 | 72.1 | 0.15 | **1.55** |
+| #2 | DeepSeek v3.2 | 68.8 | 0.07 | 1.12 |
+| #3 | Claude Sonnet 4.5 | 67.1 | **0.04** | 1.21 |
+| #4 | GLM 4.7 | 65.6 | 0.11 | 1.37 |
+| #5 | GPT-4.1 | 65.5 | **0.04** | 1.12 |
+| #6 | Gemini 2.5 Flash | 60.0 | 0.18 | 0.75 |
+| #7 | Mistral Small Creative | 59.6 | 0.14 | 1.04 |
+| #8 | Qwen 3.5 Flash | 58.3 | 0.16 | 0.93 |
+
+### Relative Percentile (objective + slop detectors combined)
+
+Percentile = average share of other models this one beats on rule-based metrics (cliche detection, vocabulary diversity, sentence rhythm, slop patterns).
+
+| Rank | Model | Combined % | FlawHunt % | Objective % | Slop % |
+|------|-------|-----------|-----------|-------------|--------|
+| **#1** | **GPT-4.1** | **69.4** | 56.5 | **78.5** | **85.9** |
+| #2 | Claude Sonnet 4.5 | 67.7 | 62.6 | 72.4 | 73.1 |
+| #3 | DeepSeek v3.2 | 63.6 | 69.0 | 60.9 | 55.4 |
+| #4 | Gemini 2.5 Flash | 50.1 | 37.3 | 58.0 | 68.0 |
+| #5 | GLM 4.7 | 50.0 | 49.0 | 55.6 | 46.5 |
+| #6 | Claude Opus 4.6 | 43.6 | **72.6** | 20.4 | 9.1 |
+| #7 | Qwen 3.5 Flash | 29.9 | 26.2 | 31.2 | 36.2 |
+| #8 | Mistral Small Creative | 25.3 | 27.3 | 22.2 | 24.5 |
+
+### Key Insight: Three Signals Disagree
+
+These leaderboards reveal a genuine tension:
+
+- **Claude Opus 4.6** dominates subjective quality (ELO #1, Flaw Hunter #1) but uses the most community-flagged cliches (Slop percentile: 9.1 — dead last)
+- **GPT-4.1** wins on objective metrics (cleanest prose by rules) but is only mid-pack on judge evaluation
+- **DeepSeek v3.2** is the most balanced — top 3 on every signal
+
+Which leaderboard matters depends on what you're measuring: "genuinely good prose" (ELO) vs "clean prose by community standards" (Relative).
+
+### Russian vs English
+
+| Model | English | Russian | RU-EN Δ |
+|-------|---------|---------|---------|
+| Claude Opus 4.6 | 70.2 | 73.6 | +3.3 |
+| DeepSeek v3.2 | 65.9 | 71.3 | +5.4 |
+| Claude Sonnet 4.5 | 64.3 | 69.6 | +5.3 |
+| GLM 4.7 | 64.7 | 66.5 | +1.8 |
+| GPT-4.1 | 65.0 | 65.9 | +0.8 |
+| Gemini 2.5 Flash | 56.9 | 62.8 | **+6.0** |
+| Mistral Small Creative | 59.1 | 60.0 | +0.9 |
+| Qwen 3.5 Flash | 58.6 | 58.1 | **−0.5** |
+
+Every model except Qwen scores higher on Russian. Gemini Flash has the biggest RU boost. Qwen is the only model where English is stronger.
 
 ## Why RP-Bench?
 
