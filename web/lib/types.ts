@@ -6,6 +6,10 @@ export interface Vote {
   context: string;
   /** Set server-side from the voter cookie; clients never populate this. */
   voter_id?: string;
+  /** Server-set: true when this vote was on a calibration/catch pair. */
+  is_catch?: boolean;
+  /** Server-set: true if the voter picked the pre-declared good response on a catch pair, false if they didn't, undefined for non-catch votes. */
+  catch_correct?: boolean;
   // Arena mode
   model_a?: string;
   model_b?: string;

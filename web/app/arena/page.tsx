@@ -5,6 +5,9 @@ import { Vote } from "@/lib/types";
 import { saveVote } from "@/lib/votes";
 import { SAMPLE_SCENARIOS } from "@/lib/sample-data";
 import { BENCHMARK_SCENARIOS } from "@/lib/benchmark-data";
+import { CATCH_PAIRS } from "@/lib/catch-pairs";
+
+const CATCH_CADENCE = 10; // inject a catch pair every Nth slot
 
 function formatRP(text: string) {
   return text
@@ -53,18 +56,48 @@ export default function ArenaPage() {
         const counts: Record<string, number> = data.counts ?? {};
         const votedByMe = new Set<string>(data.voted_by_me ?? []);
         setScenarios((prev) => {
-          const filtered = prev.filter((s) => !votedByMe.has(s.id));
-          if (filtered.length === 0) {
-            setExhausted(true);
-            return prev;
-          }
-          const decorated = filtered.map((s) => ({
+          const catchIds = new Set(CATCH_PAIRS.map((c) => c.id));
+          // Main pool = real scenarios the voter hasn't seen, sorted by coverage.
+          const main = prev.filter((s) => !votedByMe.has(s.id) && !catchIds.has(s.id));
+          const mainDecorated = main.map((s) => ({
             scenario: s,
             votes: counts[s.id] ?? 0,
             jitter: Math.random(),
           }));
-          decorated.sort((a, b) => a.votes - b.votes || a.jitter - b.jitter);
-          return decorated.map((d) => d.scenario);
+          mainDecorated.sort((a, b) => a.votes - b.votes || a.jitter - b.jitter);
+          const mainOrdered = mainDecorated.map((d) => d.scenario);
+
+          // Catch pool = catches the voter hasn't seen, shuffled so each voter
+          // gets a different sequence of catches.
+          const catches = CATCH_PAIRS.filter((c) => !votedByMe.has(c.id));
+          for (let i = catches.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [catches[i], catches[j]] = [catches[j], catches[i]];
+          }
+
+          // Interleave: every CATCH_CADENCE-th slot pulls the next catch. If
+          // catches run out we just continue with the main pool.
+          const interleaved: typeof mainOrdered = [];
+          let mi = 0;
+          let ci = 0;
+          const total = mainOrdered.length + catches.length;
+          for (let slot = 0; slot < total; slot++) {
+            const isCatchSlot =
+              slot > 0 && slot % CATCH_CADENCE === 0 && ci < catches.length;
+            if (isCatchSlot) {
+              interleaved.push(catches[ci++]);
+            } else if (mi < mainOrdered.length) {
+              interleaved.push(mainOrdered[mi++]);
+            } else if (ci < catches.length) {
+              interleaved.push(catches[ci++]);
+            }
+          }
+
+          if (interleaved.length === 0) {
+            setExhausted(true);
+            return prev;
+          }
+          return interleaved;
         });
       })
       .catch(() => {
