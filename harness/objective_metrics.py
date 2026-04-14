@@ -297,26 +297,44 @@ def compute_all(text: str) -> dict:
     }
 
 
-def objective_score(metrics: dict) -> dict:
+def objective_score(metrics: dict, normalize_length: bool = True) -> dict:
     """Convert metrics into a 0-100 objective score.
 
     Starts at 100, deducts for objective flaws. Complements the flaw hunter
     judge which handles subjective flaws.
+
+    Args:
+        normalize_length: If True, deductions are computed per 1000 chars
+            (density-based). If False, absolute counts (biases against longer text).
+            Default True — validation showed absolute counts penalize length unfairly.
     """
     score = 100
     deductions = []
 
+    text_len = max(100, metrics.get("length", 1000))  # avoid div-by-zero
+    norm_factor = 1000.0 / text_len if normalize_length else 1.0
+    # norm_factor < 1 for long text (scales deductions down)
+    # norm_factor > 1 for short text (scales deductions up)
+
     # Cliche weight (up to -30)
-    cliche_deduction = min(30, metrics["cliches"]["total_weight"] * 2)
+    raw_cliche_weight = metrics["cliches"]["total_weight"]
+    if normalize_length:
+        # Density: cliches per 1000 chars. Good prose = <0.5/1000, bad = >2/1000
+        density = raw_cliche_weight * norm_factor
+        cliche_deduction = min(30, density * 10)  # density 1.0 = -10pts, 3.0+ = cap at -30
+    else:
+        cliche_deduction = min(30, raw_cliche_weight * 2)
+
     if cliche_deduction > 0:
         deductions.append({
             "type": "cliches",
-            "amount": -cliche_deduction,
-            "detail": f"{metrics['cliches']['total_hits']} cliches ({metrics['cliches']['unique_cliches']} unique)",
+            "amount": -round(cliche_deduction, 1),
+            "detail": f"{metrics['cliches']['total_hits']} cliches ({metrics['cliches']['unique_cliches']} unique)" + (f", density={raw_cliche_weight*norm_factor:.2f}/1k" if normalize_length else ""),
         })
         score -= cliche_deduction
 
     # Low vocabulary diversity (-10 if < 0.4, -20 if < 0.3)
+    # TTR is already normalized (ratio), no length bias — keep absolute
     vd = metrics["vocabulary_diversity"]
     if vd < 0.3:
         deductions.append({"type": "low_diversity", "amount": -20, "detail": f"TTR={vd}"})
@@ -326,19 +344,27 @@ def objective_score(metrics: dict) -> dict:
         score -= 10
 
     # Monotonous rhythm (-10 if rhythm_score < 0.2)
+    # rhythm_score is already a ratio — keep absolute
     rhythm = metrics["sentence_rhythm"].get("rhythm_score", 1)
     if rhythm > 0 and rhythm < 0.2:
         deductions.append({"type": "monotonous_rhythm", "amount": -10, "detail": f"sentence length stdev/avg = {rhythm}"})
         score -= 10
 
-    # Within-response repetition (-2 per repeated bigram, -5 per trigram, max -20)
+    # Within-response repetition — normalize by length
     rep = metrics["repetition"]
-    rep_deduction = min(20, rep["repeated_bigrams"] * 2 + rep["repeated_trigrams"] * 5)
+    if normalize_length:
+        # Repetitions per 1000 chars
+        bigram_density = rep["repeated_bigrams"] * norm_factor
+        trigram_density = rep["repeated_trigrams"] * norm_factor
+        rep_deduction = min(20, bigram_density * 2 + trigram_density * 5)
+    else:
+        rep_deduction = min(20, rep["repeated_bigrams"] * 2 + rep["repeated_trigrams"] * 5)
+
     if rep_deduction > 0:
         detail = f"{rep['repeated_bigrams']} bigrams, {rep['repeated_trigrams']} trigrams"
         if rep.get("worst_trigram"):
             detail += f" (worst: '{rep['worst_trigram'][0]}' x{rep['worst_trigram'][1]})"
-        deductions.append({"type": "repetition", "amount": -rep_deduction, "detail": detail})
+        deductions.append({"type": "repetition", "amount": -round(rep_deduction, 1), "detail": detail})
         score -= rep_deduction
 
     return {

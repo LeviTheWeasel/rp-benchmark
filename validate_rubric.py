@@ -46,19 +46,22 @@ def main():
         if len(acc_text) < 50:
             continue
 
-        # Score accepted
-        acc_obj = objective_score(compute_obj(acc_text))
+        # Score accepted (length-normalized)
+        acc_obj = objective_score(compute_obj(acc_text), normalize_length=True)
         acc_slop = detect_all_slop(acc_text)
 
         # Score each rejected (average if multiple)
         rej_obj_scores = []
         rej_slop_weights = []
+        rej_slop_densities = []
         for r in rejected:
             rt = r.get("text_clean", "")
             if len(rt) < 50:
                 continue
-            rej_obj_scores.append(objective_score(compute_obj(rt))["objective_score"])
-            rej_slop_weights.append(detect_all_slop(rt)["total_weight"])
+            rej_obj_scores.append(objective_score(compute_obj(rt), normalize_length=True)["objective_score"])
+            rs = detect_all_slop(rt)
+            rej_slop_weights.append(rs["total_weight"])
+            rej_slop_densities.append(rs.get("weight_per_1k_chars", 0))
 
         if not rej_obj_scores:
             continue
@@ -67,6 +70,8 @@ def main():
         rej_score = sum(rej_obj_scores) / len(rej_obj_scores)
         acc_slop_w = acc_slop["total_weight"]
         rej_slop_w = sum(rej_slop_weights) / len(rej_slop_weights)
+        acc_slop_density = acc_slop.get("weight_per_1k_chars", 0)
+        rej_slop_density = sum(rej_slop_densities) / len(rej_slop_densities) if rej_slop_densities else 0
 
         results.append({
             "source": s.get("source", "unknown"),
@@ -75,6 +80,8 @@ def main():
             "rej_obj": rej_score,
             "acc_slop_weight": acc_slop_w,
             "rej_slop_weight": rej_slop_w,
+            "acc_slop_density": acc_slop_density,
+            "rej_slop_density": rej_slop_density,
             "acc_len": len(acc_text),
             "rej_len": sum(len(r.get("text_clean", "")) for r in rejected) / len(rejected),
         })
@@ -115,24 +122,24 @@ def main():
     else:
         print(f"  Not statistically significant")
 
-    # ============ SLOP DETECTOR VALIDATION ============
+    # ============ SLOP DETECTOR VALIDATION (density-normalized) ============
     print()
     print("=" * 75)
-    print("SLOP DETECTORS — does rejected have more slop?")
+    print("SLOP DETECTORS (length-normalized) — does rejected have higher slop DENSITY?")
     print("=" * 75)
 
-    slop_accepted_less = sum(1 for r in results if r["acc_slop_weight"] < r["rej_slop_weight"])
-    slop_ties = sum(1 for r in results if r["acc_slop_weight"] == r["rej_slop_weight"])
-    slop_accepted_more = sum(1 for r in results if r["acc_slop_weight"] > r["rej_slop_weight"])
+    slop_accepted_less = sum(1 for r in results if r["acc_slop_density"] < r["rej_slop_density"])
+    slop_ties = sum(1 for r in results if r["acc_slop_density"] == r["rej_slop_density"])
+    slop_accepted_more = sum(1 for r in results if r["acc_slop_density"] > r["rej_slop_density"])
 
-    print(f"\nAccepted had LESS slop: {slop_accepted_less}/{n} ({100*slop_accepted_less/n:.1f}%)")
-    print(f"Tied:                    {slop_ties}/{n} ({100*slop_ties/n:.1f}%)")
-    print(f"Accepted had MORE slop:  {slop_accepted_more}/{n} ({100*slop_accepted_more/n:.1f}%)")
+    print(f"\nAccepted had LESS slop density: {slop_accepted_less}/{n} ({100*slop_accepted_less/n:.1f}%)")
+    print(f"Tied:                           {slop_ties}/{n} ({100*slop_ties/n:.1f}%)")
+    print(f"Accepted had MORE slop density:  {slop_accepted_more}/{n} ({100*slop_accepted_more/n:.1f}%)")
 
-    avg_acc_slop = sum(r["acc_slop_weight"] for r in results) / n
-    avg_rej_slop = sum(r["rej_slop_weight"] for r in results) / n
-    print(f"\nAvg accepted slop weight: {avg_acc_slop:.2f}")
-    print(f"Avg rejected slop weight: {avg_rej_slop:.2f}")
+    avg_acc_slop = sum(r["acc_slop_density"] for r in results) / n
+    avg_rej_slop = sum(r["rej_slop_density"] for r in results) / n
+    print(f"\nAvg accepted slop density: {avg_acc_slop:.2f} per 1k chars")
+    print(f"Avg rejected slop density: {avg_rej_slop:.2f} per 1k chars")
 
     if slop_accepted_less + slop_accepted_more > 0:
         p = slop_accepted_less / (slop_accepted_less + slop_accepted_more)
@@ -161,7 +168,7 @@ def main():
     for src, items in sorted(by_src.items(), key=lambda x: -len(x[1])):
         if len(items) < 5: continue
         obj_w = sum(1 for r in items if r["acc_obj"] > r["rej_obj"])
-        slop_w = sum(1 for r in items if r["acc_slop_weight"] < r["rej_slop_weight"])
+        slop_w = sum(1 for r in items if r["acc_slop_density"] < r["rej_slop_density"])
         n_src = len(items)
         print(f'{src:<25} {n_src:<5} {obj_w:>3}/{n_src} ({100*obj_w/n_src:>3.0f}%)  {slop_w:>3}/{n_src} ({100*slop_w/n_src:>3.0f}%)')
 
@@ -174,7 +181,7 @@ def main():
         items = [r for r in results if r["lang"] == lang]
         if not items: continue
         obj_w = sum(1 for r in items if r["acc_obj"] > r["rej_obj"])
-        slop_w = sum(1 for r in items if r["acc_slop_weight"] < r["rej_slop_weight"])
+        slop_w = sum(1 for r in items if r["acc_slop_density"] < r["rej_slop_density"])
         print(f'\n{lang.upper()}: {len(items)} pairs')
         print(f'  Objective agrees with user: {obj_w}/{len(items)} ({100*obj_w/len(items):.0f}%)')
         print(f'  Slop agrees with user:      {slop_w}/{len(items)} ({100*slop_w/len(items):.0f}%)')

@@ -339,9 +339,14 @@ def detect_all_slop(text: str) -> dict:
         d = h["detector"]
         by_detector.setdefault(d, []).append(h)
 
+    # Length-normalized: slop density per 1000 chars
+    text_len = max(100, len(text))
+    weight_per_1k = total_weight * 1000 / text_len
+
     return {
         "total_hits": len(all_hits),
         "total_weight": total_weight,
+        "weight_per_1k_chars": round(weight_per_1k, 2),
         "by_detector": by_detector,
         "hits": all_hits,
     }
