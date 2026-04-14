@@ -1,0 +1,60 @@
+{
+  "leaderboard": [
+    {
+      "model": "deepseek_v3_2",
+      "combined": 81.2,
+      "flaw_hunter": 68.8,
+      "objective": 89.0,
+      "slop": 98.0,
+      "n": 56
+    },
+    {
+      "model": "gpt_4_1",
+      "combined": 80.2,
+      "flaw_hunter": 65.5,
+      "objective": 90.0,
+      "slop": 99.7,
+      "n": 56
+    },
+    {
+      "model": "glm_4_7",
+      "combined": 79.7,
+      "flaw_hunter": 65.6,
+      "objective": 88.9,
+      "slop": 98.7,
+      "n": 54
+    },
+    {
+      "model": "claude_sonnet_4_5",
+      "combined": 79.2,
+      "flaw_hunter": 67.1,
+      "objective": 86.3,
+      "slop": 96.4,
+      "n": 57
+    },
+    {
+      "model": "gemini_2_5_flash",
+      "combined": 76.4,
+      "flaw_hunter": 60.0,
+      "objective": 86.8,
+      "slop": 98.8,
+      "n": 57
+    },
+    {
+      "model": "mistral_small_creative",
+      "combined": 75.7,
+      "flaw_hunter": 59.6,
+      "objective": 85.2,
+      "slop": 98.3,
+      "n": 57
+    },
+    {
+      "model": "qwen3_5_flash",
+      "combined": 75.5,
+      "flaw_hunter": 58.3,
+      "objective": 86.6,
+      "slop": 98.7,
+      "n": 55
+    }
+  ]
+}
