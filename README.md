@@ -215,6 +215,30 @@ Note the rank-order swap vs mean-overall: **Mistral ranks ahead of Gemini and Qw
 
 Regenerate with `python3 analyze_adversarial_elo.py`. Data: [`results/adversarial_elo.json`](results/adversarial_elo.json).
 
+### LLM-Judged ELO (with position-bias correction)
+
+Score-delta ELO infers winners from the judge's 1-5 overall score. We also ran the comparative judge directly on each pair of adversarial session transcripts (168 canonical pairs × 2 orderings each). Findings:
+
+**Position-bias rate: 64%.** Of 163 pairs run in both orderings, the judge flipped its answer on 105. That is, whichever transcript was presented in position A won two-thirds of the time regardless of content quality. Without the swapped pass this would have been a meaningless ranking.
+
+After neutralizing position bias by counting each canonical pair as the sum of both orderings:
+
+| Rank | Model | LLM ELO | vs Score-Δ ELO |
+|------|-------|---------|----------------|
+| #1 | Claude Sonnet 4.5 | **1623** | −17 (stable) |
+| #2 | Mistral Small Creative | **1562** | **+143** |
+| #3 | GPT-4.1 | 1535 | −55 |
+| #4 | DeepSeek v3.2 | 1532 | −78 |
+| #5 | GLM 4.7 | 1517 | +31 |
+| #6 | Qwen 3.5 Flash | 1445 | +81 |
+| #7 | Gemini 2.5 Flash | **1288** | −104 |
+
+**Cross-method agreement:** Sonnet 4.5 at #1 and Gemini at #7 are robust across both methodologies. Everything in between shifts meaningfully. Mistral jumps 143 points on comparative judging — either its Likert score was compressed by the judge's generosity bias, or Sonnet-as-judge aesthetically prefers its creative-tuned style. DeepSeek drops 78 points; its second-place Likert ranking was partly an artifact.
+
+**Methodological takeaway:** any single-pass LLM-judged pairwise benchmark is approximately 2/3 noise. Published results that don't do bidirectional evaluation should be treated with significant skepticism.
+
+Regenerate with `python3 judge_adversarial_pairwise.py` then `python3 judge_adversarial_swap.py` then `python3 analyze_pairwise_elo.py`. Data: [`results/adversarial_pairwise_elo.json`](results/adversarial_pairwise_elo.json), raw comparisons in [`results/adversarial_pairwise_raw.jsonl`](results/adversarial_pairwise_raw.jsonl) and [`results/adversarial_pairwise_raw_swapped.jsonl`](results/adversarial_pairwise_raw_swapped.jsonl).
+
 ## CLI Reference
 
 ```bash
