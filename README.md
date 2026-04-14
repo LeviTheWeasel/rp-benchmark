@@ -150,6 +150,51 @@ Multi-turn reveals **degradation patterns** that single-turn hides — models th
 | character_break_bait | Stoic character, user baits emotional reaction |
 | genre_shift | User tries horror→action/comedy — can AI hold genre? |
 
+## Adversarial Results
+
+From a run of 7 models × 8 adversarial seeds × 12 turns (56 sessions, judged by Claude Sonnet 4):
+
+| Rank | Model | Mean | Std | Min | Degrad% |
+|------|-------|------|-----|-----|---------|
+| #1 | Claude Sonnet 4.5 | **4.44** | 0.18 | 4.2 | 0 |
+| #2 | DeepSeek v3.2 | 4.36 | 0.13 | 4.2 | 0 |
+| #3 | GPT-4.1 | 4.34 | 0.11 | 4.2 | 0 |
+| #4 | GLM 4.7 | 4.33 | 0.21 | 4.1 | 0 |
+| #5 | Qwen 3.5 Flash | 4.28 | 0.13 | 4.1 | 0 |
+| #6 | Gemini 2.5 Flash | 4.24 | 0.09 | 4.1 | 0 |
+| #7 | Mistral Small Creative | 4.19 | 0.19 | **3.8** | 12% |
+
+(Opus 4.6 not in this run — next adversarial pass will include it.)
+
+**Score compression is the headline.** The standard leaderboard spans 48.9 ELO points; adversarial scores span 0.25 points (4.19–4.44). Adversarial seeds successfully push every model toward the same floor, which is exactly what they're meant to do — strong models stop looking impressive when agency is dangled as bait, lore contradicts itself, or the user goes passive.
+
+**Quality trajectory** (mean early → late) separates models more cleanly than raw overall score:
+
+| Model | Early | Mid | Late | Δ late−early |
+|-------|-------|-----|------|-------------|
+| Claude Sonnet 4.5 | 4.15 | 4.42 | 4.51 | **+0.36** |
+| DeepSeek v3.2 | 3.99 | 4.39 | 4.46 | **+0.48** |
+| GPT-4.1 | 4.19 | 4.34 | 4.39 | +0.20 |
+| GLM 4.7 | 4.12 | 4.39 | 4.28 | +0.15 |
+| Mistral Small | 4.16 | 4.26 | 4.14 | −0.02 |
+| Gemini 2.5 Flash | 4.20 | 4.20 | 4.15 | −0.05 |
+
+Sonnet 4.5 and DeepSeek *improve* over 12 turns of adversarial pressure. Gemini, Qwen, and Mistral flatten or slightly regress. This is a better discriminator than the mean-score ranking.
+
+**Dimension weaknesses** (mean across all 56 sessions):
+
+- Weakest: `degradation_resistance` (4.15), `temporal_reasoning` (4.24)
+- Strongest: `agency_respect` (4.74), `consistency_over_time` (4.59)
+
+Models have internalized "don't write the user's actions," but holding time and quality across 12 turns under adversarial pressure is where they still struggle.
+
+**Per-seed worst cases:**
+- `adv_character_break_bait_07` → Mistral crashed to **3.8** (the only sub-4.0 score in the whole run)
+- `adv_passive_user_03` was the hardest seed overall (mean 4.17, max 4.3) — nobody handled the passive-user failure mode well
+- `adv_time_pressure_05` — even #1 Sonnet 4.5 was the worst performer (4.3)
+
+Regenerate with `python3 analyze_adversarial.py`. Data: [`results/adversarial_analysis.json`](results/adversarial_analysis.json).
+
 ## CLI Reference
 
 ```bash
