@@ -274,10 +274,12 @@ def export_leaderboard(run_path: Path | None = None):
 
 def export_flaw_hunter_results():
     """Export flaw hunter per-model results to Parquet."""
-    fh_path = PROJECT_ROOT / "results" / "flaw_leaderboard_20260413_231835.json"
-    if not fh_path.exists():
-        # Find any flaw leaderboard
-        results_dir = PROJECT_ROOT / "results"
+    # Prefer merged (has Opus), fall back to any
+    results_dir = PROJECT_ROOT / "results"
+    merged = results_dir / "flaw_leaderboard_merged_opus.json"
+    if merged.exists():
+        fh_path = merged
+    else:
         files = sorted(results_dir.glob("flaw_leaderboard_*.json"), reverse=True)
         if not files:
             print("No flaw hunter leaderboard found")
