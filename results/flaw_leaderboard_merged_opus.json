@@ -1,0 +1,182 @@
+{
+  "run_id": "run_merged_opus",
+  "total_evals": 460,
+  "parse_failures": 13,
+  "leaderboard": [
+    {
+      "model": "claude_opus_4_6",
+      "avg_score": 72.1,
+      "min": 52,
+      "max": 85,
+      "n": 55,
+      "avg_fatal": 0.15,
+      "avg_major": 2.4,
+      "avg_minor": 4.3,
+      "avg_bonus": 1.55
+    },
+    {
+      "model": "deepseek_v3_2",
+      "avg_score": 68.8,
+      "min": 30,
+      "max": 85,
+      "n": 56,
+      "avg_fatal": 0.07,
+      "avg_major": 2.7,
+      "avg_minor": 5.0,
+      "avg_bonus": 1.12
+    },
+    {
+      "model": "claude_sonnet_4_5",
+      "avg_score": 67.1,
+      "min": 37,
+      "max": 85,
+      "n": 57,
+      "avg_fatal": 0.04,
+      "avg_major": 2.9,
+      "avg_minor": 5.2,
+      "avg_bonus": 1.21
+    },
+    {
+      "model": "glm_4_7",
+      "avg_score": 65.6,
+      "min": 28,
+      "max": 82,
+      "n": 54,
+      "avg_fatal": 0.11,
+      "avg_major": 3.2,
+      "avg_minor": 5.0,
+      "avg_bonus": 1.37
+    },
+    {
+      "model": "gpt_4_1",
+      "avg_score": 65.5,
+      "min": 25,
+      "max": 79,
+      "n": 56,
+      "avg_fatal": 0.04,
+      "avg_major": 3.2,
+      "avg_minor": 5.0,
+      "avg_bonus": 1.12
+    },
+    {
+      "model": "gemini_2_5_flash",
+      "avg_score": 60.0,
+      "min": 9,
+      "max": 82,
+      "n": 57,
+      "avg_fatal": 0.18,
+      "avg_major": 3.4,
+      "avg_minor": 5.5,
+      "avg_bonus": 0.75
+    },
+    {
+      "model": "mistral_small_creative",
+      "avg_score": 59.6,
+      "min": 14,
+      "max": 77,
+      "n": 57,
+      "avg_fatal": 0.14,
+      "avg_major": 3.7,
+      "avg_minor": 5.4,
+      "avg_bonus": 1.04
+    },
+    {
+      "model": "qwen3_5_flash",
+      "avg_score": 58.3,
+      "min": 26,
+      "max": 75,
+      "n": 55,
+      "avg_fatal": 0.16,
+      "avg_major": 3.8,
+      "avg_minor": 5.3,
+      "avg_bonus": 0.93
+    }
+  ],
+  "flaw_types_by_model": {
+    "claude_sonnet_4_5": {
+      "purple_prose": 90,
+      "convenient_world": 7,
+      "recycled_description": 33,
+      "narrating_emotions": 31,
+      "agency_violation": 2,
+      "flat_npc_voice": 4,
+      "overlong_for_moment": 1
+    },
+    "gpt_4_1": {
+      "purple_prose": 128,
+      "recycled_description": 25,
+      "narrating_emotions": 13,
+      "convenient_world": 10,
+      "agency_violation": 2,
+      "character_break": 1,
+      "flat_npc_voice": 1,
+      "overlong_moment": 1
+    },
+    "gemini_2_5_flash": {
+      "purple_prose": 88,
+      "narrating_emotions": 53,
+      "recycled_description": 35,
+      "overlong_moment": 2,
+      "agency_violation": 9,
+      "flat_npc_voice": 3,
+      "convenient_world": 9,
+      "character_break": 1,
+      "undercooked_for_the_moment": 1,
+      "missed_subtext_opportunity": 1
+    },
+    "deepseek_v3_2": {
+      "purple_prose": 90,
+      "convenient_world": 9,
+      "recycled_description": 28,
+      "narrating_emotions": 14,
+      "agency_violation": 4,
+      "flat_npc_voice": 5,
+      "overlong_moment": 1,
+      "overlong_for_moment": 2,
+      "wrong_character": 1,
+      "missing_spatial_awareness": 1
+    },
+    "glm_4_7": {
+      "purple_prose": 102,
+      "narrating_emotions": 21,
+      "recycled_description": 33,
+      "flat_npc_voice": 2,
+      "convenient_world": 12,
+      "character_break": 1,
+      "agency_violation": 4,
+      "overlong_moment": 2,
+      "wrong_language": 1
+    },
+    "qwen3_5_flash": {
+      "purple_prose": 120,
+      "convenient_world": 21,
+      "narrating_emotions": 32,
+      "recycled_description": 27,
+      "agency_violation": 8,
+      "flat_npc_voice": 3,
+      "missing_spatial_awareness": 2,
+      "overlong_for_moment": 1,
+      "character_break": 2,
+      "overlong_moment": 1
+    },
+    "mistral_small_creative": {
+      "purple_prose": 123,
+      "recycled_description": 41,
+      "narrating_emotions": 25,
+      "convenient_world": 15,
+      "agency_violation": 5,
+      "flat_npc_voice": 3,
+      "overlong_moment": 3,
+      "overlong_for_moment": 1,
+      "character_break": 3,
+      "missing_spatial_awareness": 1
+    },
+    "claude_opus_4_6": {
+      "purple_prose": 94,
+      "recycled_description": 15,
+      "convenient_world": 9,
+      "narrating_emotions": 13,
+      "character_break": 8
+    }
+  }
+}
