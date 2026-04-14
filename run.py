@@ -157,6 +157,7 @@ def cmd_multiturn(args):
         num_turns=args.turns,
         max_seeds=args.max_seeds,
         seed_ids=args.seeds,
+        adversarial=getattr(args, "adversarial", False),
     )
 
     print_multiturn_results(results)
@@ -267,6 +268,10 @@ def main():
     )
     mt_parser.add_argument(
         "--seeds", nargs="+", help="Specific seed IDs to run"
+    )
+    mt_parser.add_argument(
+        "--adversarial", action="store_true",
+        help="Use adversarial seeds (test specific failure modes)",
     )
     mt_parser.set_defaults(func=cmd_multiturn)
 

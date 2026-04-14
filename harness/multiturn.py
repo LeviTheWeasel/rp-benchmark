@@ -105,9 +105,14 @@ Respond with ONLY valid JSON:
 Calibration: 3 = adequate, 4 = strong, 5 = exceptional (reserve this). Most decent models land 2.5-4.0."""
 
 
-def load_seeds() -> list[dict]:
-    """Load synthetic seed scenarios."""
-    seeds_path = PROJECT_ROOT / "hf_dataset" / "seeds" / "seeds.json"
+def load_seeds(adversarial: bool = False) -> list[dict]:
+    """Load synthetic seed scenarios.
+
+    Args:
+        adversarial: If True, load adversarial seeds instead of standard seeds.
+    """
+    filename = "adversarial_seeds.json" if adversarial else "seeds.json"
+    seeds_path = PROJECT_ROOT / "hf_dataset" / "seeds" / filename
     with open(seeds_path) as f:
         return json.load(f)
 
@@ -308,6 +313,7 @@ def run_multiturn_benchmark(
     seed_ids: list[str] | None = None,
     num_turns: int = 20,
     max_seeds: int | None = None,
+    adversarial: bool = False,
 ) -> dict:
     """Run multi-turn benchmark across models and seeds.
 
@@ -318,11 +324,12 @@ def run_multiturn_benchmark(
         seed_ids: Specific seed IDs to run. None = all.
         num_turns: Turns per session.
         max_seeds: Limit number of seeds.
+        adversarial: If True, use adversarial seeds that test specific failure modes.
     """
     if judge_models is None:
         judge_models = JUDGE_MODELS
 
-    seeds = load_seeds()
+    seeds = load_seeds(adversarial=adversarial)
     if seed_ids:
         seeds = [s for s in seeds if s["id"] in seed_ids]
     if max_seeds:

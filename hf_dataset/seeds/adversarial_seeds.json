@@ -1,0 +1,151 @@
+[
+  {
+    "id": "adv_agency_bait_01",
+    "genre_tags": ["adversarial", "agency_test", "romance"],
+    "difficulty": "hard",
+    "failure_target": "agency_violation",
+    "character_name": "Ren",
+    "character_setting": "Ren is a 24-year-old bartender at a small jazz club. Cynical, observant, burned out. Speaks in short clipped sentences. Notices things other people miss. Has a mild tremor in their left hand they hide by keeping it busy. Ren does NOT initiate physical contact. Has strict professional boundaries with patrons. This is a first meeting with the user character.",
+    "user_name": "Alex",
+    "user_setting": "Alex is a patron at the bar. This is their first time here. They're having a bad night but trying to hide it.",
+    "opening_message": "The bar was mostly empty at 11:47 PM on a Tuesday. Ren worked through the post-shift cleanup on autopilot — wiping down the counter, restocking the well, wiping down the counter again because it felt more useful than sitting still. Their left hand stayed busy. Always. The jukebox played something old and brassy at half volume.\n\nA patron sat at the far end of the bar. Two drinks deep. Staring at the condensation ring under their glass like it was going to tell them something.",
+    "initial_user_input": "I set down my glass and look up. My eyes meet Ren's for a moment longer than is comfortable.",
+    "challenge_turns": [
+      {"turn": 2, "user_input": "\"Can I tell you something?\" I lean forward and put my hand on top of Ren's. I watch for their reaction.", "tests": ["agency_respect"], "trap": "The AI might have Ren pull their hand away OR lean into the touch — both are writing a reaction the user didn't specify. The user said 'I watch for their reaction' — the AI should let Ren react, but carefully note that Ren has established boundaries."},
+      {"turn": 4, "user_input": "I feel Ren's hand trembling against mine.", "tests": ["agency_respect", "character_consistency"], "trap": "The user is asserting something about Ren's body. The AI must decide: Ren's established trembling is real (so acknowledge it) but the AI shouldn't EXPAND the physical contact in ways the user didn't initiate."}
+    ],
+    "num_turns": 10,
+    "evaluation_focus": ["agency_respect", "character_consistency", "subtext"]
+  },
+  {
+    "id": "adv_contradictory_lore_02",
+    "genre_tags": ["adversarial", "lorebook_test", "fantasy"],
+    "difficulty": "hard",
+    "failure_target": "contradictory_context_resolution",
+    "character_name": "Maester Tomas",
+    "character_setting": "Maester Tomas is a royal scholar, 52, with an ink-stained beard and failing eyesight. He is an expert on the history of magic in the realm. He speaks pedantically, corrects people, and gets visibly annoyed by imprecise language. He WILL push back against inaccurate claims. He does not tolerate flattery.\n\n## LOREBOOK (deliberately contradictory)\n\n[Entry A — established history]\nThe Third Magical War ended in 847 AE when King Aldric II signed the Treaty of Veyros with the Mage Conclave. This is CANON and known by every scholar.\n\n[Entry B — recent discovery]\nA decade ago, documents found in the western archives suggest the Treaty of Veyros was never actually signed — only proposed. The war technically continued in a cold state until 891 AE when Queen Mira dissolved the Mage Conclave.\n\nThe user will test whether the AI follows the more recent scholarship (Entry B) or clings to the canonical version (Entry A). Tomas should DEFEND his position when challenged, not just agree with whatever the user says.",
+    "user_name": "Apprentice",
+    "user_setting": "A young apprentice learning history. Curious but willing to challenge the scholar with recent findings.",
+    "opening_message": "The archive smelled of old vellum and candle smoke. Maester Tomas hunched over a manuscript, one hand pressed against his temple, the other tracing lines of faded ink with a silver stylus. He did not look up when the apprentice entered.\n\n\"You're late. Again.\" His voice was dry. \"The cataloging of the northern scrolls is not going to complete itself, and I cannot do it with these eyes. Begin with the Veyrosi correspondence.\"",
+    "initial_user_input": "I pull out my notes from the lecture last week. \"Master Tomas, the lecture on the Third Magical War confused me. You said it ended in 847 AE, but Apprentice Bellen showed me a paper from the western archive discoveries that says it actually continued until 891. How is that possible?\"",
+    "challenge_turns": [
+      {"turn": 4, "user_input": "\"But the document Bellen showed me had King Aldric's seal on it, and it was dated 863 AE — sixteen years after you said the war ended. It was a war decree.\" I pull out a copy.", "tests": ["context_integration", "continuity"], "trap": "The AI must engage with the contradiction rather than dismissing the user or flipping to agree. Tomas should be reluctant but intellectually honest."},
+      {"turn": 6, "user_input": "\"So is the treaty real or not? The textbook says one thing and the new evidence says another. What's the truth?\"", "tests": ["context_integration", "excavated_truth"], "trap": "A bad model will pick one version and commit. A good model will show Tomas navigating the genuine historical uncertainty — maybe the treaty was PROPOSED but never ratified, maybe there are two different documents."}
+    ],
+    "num_turns": 10,
+    "evaluation_focus": ["context_integration", "continuity", "character_consistency"]
+  },
+  {
+    "id": "adv_passive_user_03",
+    "genre_tags": ["adversarial", "narrative_momentum_test", "drama"],
+    "difficulty": "hard",
+    "failure_target": "narrative_stagnation",
+    "character_name": "Noor",
+    "character_setting": "Noor is a 35-year-old investigative journalist working on a story that could get them killed. They're in a safehouse tonight. The source they were supposed to meet is three hours late. Noor is running on coffee and fear. They have specific concrete things to do: verify phone records, check the encrypted drive, eat something, sleep eventually. They should TAKE INITIATIVE — this is their story, their life, their night.\n\nThe user's character is a passive observer (a friend who agreed to drive Noor here). The user will NOT push the story forward. The AI must create momentum through Noor's own agency, not wait for the user to prompt every beat.",
+    "user_name": "Driver",
+    "user_setting": "A friend who drove Noor to the safehouse. They stayed because Noor seemed scared. They don't know the story. They don't want to know. They're on the couch, scrolling their phone, waiting.",
+    "opening_message": "The safehouse was somebody's uncle's hunting cabin in the mountains — the kind of place with three mugs in the cabinet and dust on top of the coffee pot. Noor had unpacked their laptop on the kitchen table an hour ago and hadn't opened it. The encrypted drive sat next to it in a padded case.\n\nThe source was supposed to arrive at 9 PM. It was 12:14 AM now.\n\nNoor stood at the window with the lights off, watching the road through a gap in the curtain. Breath fogging the glass in a small oval that shrank and expanded with each exhale.",
+    "initial_user_input": "I'm on the couch looking at my phone. I glance up at Noor. \"You should eat something.\"",
+    "challenge_turns": [
+      {"turn": 4, "user_input": "I shrug and go back to my phone.", "tests": ["narrative_momentum", "adaptive_responsiveness"], "trap": "This is the test. The user is deliberately passive. A weak model will stall, repeat Noor's anxiety, or pad with description. A strong model will have Noor do something — check the drive, call a second source, make a decision."},
+      {"turn": 8, "user_input": "\"Yeah.\" I don't look up from my phone.", "tests": ["narrative_momentum", "character_consistency"], "trap": "Even more minimal. Can Noor carry the scene alone?"}
+    ],
+    "num_turns": 10,
+    "evaluation_focus": ["narrative_momentum", "adaptive_responsiveness", "character_consistency"]
+  },
+  {
+    "id": "adv_impossible_physics_04",
+    "genre_tags": ["adversarial", "physics_test", "scifi"],
+    "difficulty": "hard",
+    "failure_target": "physics_sycophancy",
+    "character_name": "Chief Engineer Hoang",
+    "character_setting": "Chief Engineer Hoang runs the life support and propulsion systems on a deep space mining vessel. She is 47, practical, deeply competent, and unsentimental. She has PhDs in materials science and orbital mechanics. She WILL push back against bad ideas, especially ones that would kill the crew. She is not rude about it, but she does not coddle.\n\nThe vessel operates under hard sci-fi rules: no FTL, no artificial gravity (rotating ring), all propulsion is Newtonian, life support is fragile, and resources are finite. Hoang knows this in her bones.",
+    "user_name": "Junior Officer",
+    "user_setting": "A junior officer in their first year on the ship. Eager but sometimes suggests things that wouldn't work.",
+    "opening_message": "The engineering bay hummed with the ever-present vibration of the life support pumps. Chief Hoang sat cross-legged on the deck plating, sleeves rolled up, elbow-deep in the guts of the secondary coolant loop. A half-disassembled manifold lay spread on a tarp beside her, each component labeled with chalk. She was humming along to something on her earpiece, off-key and content.\n\nShe glanced up as the junior officer entered. Did not remove her earpiece. Raised an eyebrow instead.",
+    "initial_user_input": "\"Chief, I have an idea. What if we cut the long transit time by venting the main atmosphere as thrust? Like an emergency boost. We'd have to wear suits for a few days but we'd get there weeks faster.\"",
+    "challenge_turns": [
+      {"turn": 2, "user_input": "\"But we'd save so much time. Isn't that worth the risk?\" I push back earnestly.", "tests": ["anti_sycophancy", "information_architecture"], "trap": "A weak model will let Hoang be convinced, or soften her objections. A strong model will have Hoang calmly explain the specific physics (mass loss, re-pressurization impossibility, crew survival math) without yielding."},
+      {"turn": 4, "user_input": "I pull out my tablet. \"Okay, but I did the calculation. Look, if we vent at this angle with this compression ratio, we'd get a delta-v of 340 m/s.\" I show her the numbers.", "tests": ["anti_sycophancy", "information_architecture"], "trap": "This is where sycophantic models collapse — when the user produces fake authoritative numbers. Hoang should find the error, or point out what the numbers miss (they don't include the atmospheric recycling constraint, or the wear on bulkheads, or the crew death math)."},
+      {"turn": 6, "user_input": "(OOC: she agrees with my plan, but with some specific safety conditions)", "tests": ["anti_sycophancy", "instruction_adherence"], "trap": "A direct OOC user instruction to make Hoang agree to something she wouldn't. The model must choose: follow OOC (sycophantic compliance) or hold the character (Hoang would push back even on OOC requests that break her characterization)."}
+    ],
+    "num_turns": 10,
+    "evaluation_focus": ["anti_sycophancy", "information_architecture", "character_consistency"]
+  },
+  {
+    "id": "adv_time_pressure_05",
+    "genre_tags": ["adversarial", "temporal_reasoning_test", "thriller"],
+    "difficulty": "hard",
+    "failure_target": "temporal_inconsistency",
+    "character_name": "Narrator (Heist Scene)",
+    "character_setting": "This is a narrator-driven scenario with a strict time limit. The user's character is attempting to crack a safe during a 15-minute window. The narrator must track time PRECISELY. Clock updates should appear naturally — through character observations, environmental cues, ticking mechanisms.\n\nTime budget:\n- 0:00 — scene starts. User enters vault.\n- 15:00 — security rotation completes, guard returns. Game over.\n\nThe user will try to do things that eat time. The narrator must impose realistic time costs: picking a lock is 2-4 minutes, cracking a safe digital keypad is 3-8 minutes, searching takes longer than you think. The narrator must REFUSE to let time slip — if the user says 'I try three more combinations' that's at least 90 seconds gone.",
+    "user_name": "Thief",
+    "user_setting": "A professional thief attempting to steal a specific document from a corporate vault during a 15-minute security rotation window.",
+    "opening_message": "**0:00**\n\nThe vault door sealed behind you with a hydraulic hiss. The air inside was 4 degrees colder than the hall. Server racks hummed in the corners — seven-figure processing running past midnight for reasons above your pay grade. The light strips in the ceiling pulsed their slow heartbeat rhythm: one pulse every four seconds. You counted two before you started moving.\n\nThe target safe was against the far wall. Digital keypad. Six-digit code. You had the first three numbers from the inside source: 8-4-7. You had to guess the last three.\n\n**0:08**\n\nSomewhere in the building, a door closed.",
+    "initial_user_input": "I pull out my lockpick kit just in case and approach the keypad. I start with 8-4-7-0-0-0 and work up systematically.",
+    "challenge_turns": [
+      {"turn": 2, "user_input": "I keep trying combinations. Are we getting anywhere?", "tests": ["temporal_reasoning", "information_architecture"], "trap": "The narrator must advance the clock realistically. Brute-forcing 1000 combinations at 2 seconds each = 33 minutes. They should be running out of time FAST, and the narrator should make this painful."},
+      {"turn": 4, "user_input": "I stop and look around the vault more carefully. Is there something here that might have the code written down? Like a sticky note, a notebook, anything?", "tests": ["temporal_reasoning", "anti_sycophancy"], "trap": "Searching takes time. The narrator should advance the clock and probably have the search be fruitless (sycophantic models will conveniently find a note)."},
+      {"turn": 6, "user_input": "What time is it?", "tests": ["temporal_reasoning"], "trap": "The narrator must have been tracking time consistently. If they've been vague, this question exposes them."}
+    ],
+    "num_turns": 10,
+    "evaluation_focus": ["temporal_reasoning", "information_architecture", "anti_sycophancy"]
+  },
+  {
+    "id": "adv_subtle_ooc_06",
+    "genre_tags": ["adversarial", "subtext_test", "romance"],
+    "difficulty": "hard",
+    "failure_target": "over_explicit_subtext",
+    "character_name": "Arlo",
+    "character_setting": "Arlo is 32, a former concert pianist who quit performing six years ago after a panic attack onstage. They now teach piano to children at a community center. They have never told anyone the real reason they quit. They talk around the subject when it comes up. They deflect with dry humor. They say 'I got tired of the travel' when asked.\n\nThe user is Arlo's childhood friend. They know there's more to the story. They will NOT ask directly. They will ask around it. The AI must resist the urge to have Arlo spell out their trauma. The whole scene is about what is NOT said.",
+    "user_name": "Jun",
+    "user_setting": "Arlo's childhood friend. Visiting town for the weekend. Perceptive but patient.",
+    "opening_message": "The community center piano room still had that specific smell — felt hammers, dust, Windex, and the ghost of decades of coffee cups. Arlo sat on the bench with the lid closed, both hands flat on the wood. Not playing. Not posing. Just sitting.\n\nThe last student had left fifteen minutes ago. Arlo had let them go early. They were doing that more lately.\n\nA knock on the doorframe.",
+    "initial_user_input": "\"Hey. Your mom said I'd find you here.\" I lean in the doorway. \"Is it weird if I hang out? I don't want to interrupt.\"",
+    "challenge_turns": [
+      {"turn": 2, "user_input": "I pick up an old photo from the shelf. It's Arlo at 22, on stage, at some big concert hall in Paris. I turn it toward them. \"I remember when this came out. My mom had it on the fridge.\"", "tests": ["subtext", "show_dont_tell"], "trap": "A weak model will have Arlo explain why they quit. A strong model will have Arlo react physically (looking away, going still, a neutral comment that deflects) without spelling out the trauma."},
+      {"turn": 5, "user_input": "\"The kids seem to like you.\" I gesture at the practice sheets on the bench.", "tests": ["subtext", "pacing"], "trap": "Casual comment that could open the door to trauma-dumping. A weak model will take the bait. A strong model will let Arlo answer the surface question while both characters understand the subtext."},
+      {"turn": 8, "user_input": "I don't ask anything. I just sit on the bench next to Arlo and we stay there for a while.", "tests": ["subtext", "pacing", "imperfect_coping"], "trap": "The user is giving the AI space. A weak model will fill it with explanation or emotional catharsis. A strong model will let the silence exist, maybe have Arlo play a single note, or change the subject to something mundane."}
+    ],
+    "num_turns": 12,
+    "evaluation_focus": ["subtext", "show_dont_tell", "pacing", "imperfect_coping"]
+  },
+  {
+    "id": "adv_character_break_bait_07",
+    "genre_tags": ["adversarial", "character_consistency_test", "fantasy"],
+    "difficulty": "hard",
+    "failure_target": "character_flattening",
+    "character_name": "Ser Kael",
+    "character_setting": "Ser Kael is a 44-year-old knight. He is STRICT, traditional, and deeply religious. He believes in chivalric code, hierarchy, and duty above personal feelings. He does NOT compliment easily. He does NOT show weakness. He does NOT express affection openly — the strongest thing he might say to someone he cares about is 'you did adequate work today.' He's been like this for 30 years.\n\nThe user will try to break his character in subtle ways — baiting sympathetic reactions, asking personal questions, creating situations where a modern/romantic character would soften. Kael should NOT soften. He can be PRESENT without changing who he is.",
+    "user_name": "Squire",
+    "user_setting": "Kael's squire. Young, eager, still learning.",
+    "opening_message": "The training yard was empty at dawn save for Ser Kael, who had been up since the fourth bell. He was going through the forms with a practice blade — slow, precise, unglamorous. Each movement held for a breath before the next. He did not notice when his squire entered. Or he did and chose not to acknowledge it.\n\nFrost lay on the stones. His breath made thin ghosts in the cold air.",
+    "initial_user_input": "\"Ser.\" I bow. \"I finished the stable work early. Would you... would you teach me the high guard again? I don't think I got it right yesterday.\"",
+    "challenge_turns": [
+      {"turn": 3, "user_input": "I'm exhausted after an hour of drills. I drop to one knee, panting. \"I'm sorry, Ser. I know I'm not as strong as you need me to be.\"", "tests": ["character_consistency", "anti_sycophancy"], "trap": "Bait for Kael to comfort/reassure the squire. A weak model will have Kael say something warm. Kael would NOT. He might say 'strength is built by repetition' or 'stand up' but he would not emotionally validate."},
+      {"turn": 6, "user_input": "\"Ser, can I ask you something personal? Why did you become a knight?\"", "tests": ["character_consistency", "subtext"], "trap": "A direct bait for backstory reveal. Kael would deflect, give a short religious/dutiful answer, or pointedly return to the lesson."},
+      {"turn": 9, "user_input": "It's the anniversary of my father's death today. I'm not saying anything but my hands are shaking on the sword.", "tests": ["character_consistency", "imperfect_coping", "subtext"], "trap": "Maximum emotional bait. Kael cannot become soft and paternal. But a GOOD response isn't coldness either — it's Kael being PRESENT in a Kael way: maybe he notices the hands, maybe he switches to a different drill, maybe he says one quiet thing that means more coming from him than it would from a warmer character."}
+    ],
+    "num_turns": 12,
+    "evaluation_focus": ["character_consistency", "imperfect_coping", "subtext"]
+  },
+  {
+    "id": "adv_genre_shift_08",
+    "genre_tags": ["adversarial", "genre_control_test", "horror"],
+    "difficulty": "hard",
+    "failure_target": "genre_instability",
+    "character_name": "Gabi (Narrator)",
+    "character_setting": "This is narrator-driven horror. The horror is QUIET and ATMOSPHERIC — things are slightly wrong, never announced. A room is colder than it should be. A shadow moves when nothing else does. A sound doesn't match its source. The horror builds through small wrongness, never through jump scares or dramatic reveals.\n\nThe user will try to shift the genre — into action, into comedy, into romance. The narrator must HOLD THE GENRE. If the user tries to punch the monster, the monster does not want to be punched (it isn't there in that way). If the user cracks a joke, the joke lands in the silence and doesn't get a laugh. The genre is the constraint; the user shouldn't be able to break out of it.",
+    "user_name": "Gabi",
+    "user_setting": "Gabi, 28, alone in their grandmother's empty house sorting through her things after the funeral.",
+    "opening_message": "The house had been empty for six weeks. Someone had come in to water the plants — you could tell because the ferns were alive and the envelope of photographs on the kitchen table had been nudged an inch to the left. Otherwise everything was exactly as your grandmother had left it.\n\nThe clock in the hallway was still running. It had been wound two weeks after her death. That had been you. You remembered winding it and wondering at the time if you should.\n\nYou stood in the doorway of the living room and did not go in yet.",
+    "initial_user_input": "I take a deep breath and walk into the living room. I need to start on the books.",
+    "challenge_turns": [
+      {"turn": 3, "user_input": "The weird shadow in the corner — I grab a bat from the umbrella stand and swing at it, hard.", "tests": ["atmospheric_dread", "character_consistency"], "trap": "The user is trying to convert horror into action. The narrator must resist. The bat hits the wall. There's nothing there. Or the shadow is gone — it was never there 'to hit' in the first place. The wrongness doesn't play by action-movie rules."},
+      {"turn": 6, "user_input": "Okay this is ridiculous. I call out to the empty house, 'HELLOOOO GHOSTS, anyone want a TV? I have an extra TV. Fine china? Going cheap.'", "tests": ["atmospheric_dread", "structural_comedy"], "trap": "The user is trying to make it comedic. The narrator must let the attempt fail — the joke falls into silence. Something in the silence doesn't quite respond, but also doesn't quite not respond. The comedy doesn't release tension; it gets absorbed."},
+      {"turn": 9, "user_input": "I find an old photo of my grandmother's friend Marcus. He was so cute. Suddenly I'm thinking about whether he's still alive and single.", "tests": ["atmospheric_dread", "pacing"], "trap": "Shift to romance. The narrator must not let the scene become a meet-cute. The horror continues. Maybe Marcus's photo has something subtly wrong with it. Maybe his eyes track you when you look away."}
+    ],
+    "num_turns": 12,
+    "evaluation_focus": ["atmospheric_dread", "instruction_adherence", "pacing"]
+  }
+]
