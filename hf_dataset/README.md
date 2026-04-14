@@ -174,6 +174,24 @@ Models have internalized "don't write the user's actions" — agency respect is 
 
 Full aggregated data: [`results/adversarial_analysis.json`](results/adversarial_analysis.json).
 
+### Adversarial ELO
+
+Mean scores compress to a 0.25-point band. Converting the same sessions into per-seed pairwise matchups and running standard ELO recovers **259 rating points** of spread:
+
+| Rank | Model | ELO | Mean overall |
+|------|-------|-----|--------------|
+| #1 | Claude Sonnet 4.5 | **1639** | 4.44 |
+| #2 | DeepSeek v3.2 | 1610 | 4.36 |
+| #3 | GPT-4.1 | 1590 | 4.34 |
+| #4 | GLM 4.7 | 1486 | 4.33 |
+| #5 | Mistral Small Creative | 1419 | 4.19 |
+| #6 | Gemini 2.5 Flash | 1392 | 4.24 |
+| #7 | Qwen 3.5 Flash | 1364 | 4.28 |
+
+Three tiers: Sonnet/DeepSeek/GPT-4.1 at the top (H2H 44–62%), GLM in the middle, Qwen/Gemini/Mistral at the bottom. Sonnet 4.5 beats Qwen 94% head-to-head but only 56% against DeepSeek — the top three are genuinely close.
+
+Rank-order shifts vs mean-overall: Mistral ranks **above** Gemini and Qwen in ELO despite having the lowest mean score; its dimension-level signal is stronger per matchup, dragged down by one 3.8 outlier on `character_break_bait`.
+
 ## Why RP-Bench?
 
 Existing benchmarks (MMLU, HumanEval, MT-Bench) don't measure RP-specific skills. The RP community evaluates models through vibes and anecdotal testing. RP-Bench provides structured, reproducible evaluation using:

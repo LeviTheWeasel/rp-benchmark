@@ -195,6 +195,26 @@ Models have internalized "don't write the user's actions," but holding time and 
 
 Regenerate with `python3 analyze_adversarial.py`. Data: [`results/adversarial_analysis.json`](results/adversarial_analysis.json).
 
+### Adversarial ELO (recovering spread)
+
+Mean overall scores collapse into a 0.25-point band, hiding real differences. Converting the same sessions into pairwise matchups per seed (higher score wins; dimension-sum tiebreak) and running standard ELO recovers **259 rating points** of spread:
+
+| Rank | Model | ELO | ± | Mean overall |
+|------|-------|-----|---|--------------|
+| #1 | Claude Sonnet 4.5 | **1639** | 24 | 4.44 |
+| #2 | DeepSeek v3.2 | 1610 | 22 | 4.36 |
+| #3 | GPT-4.1 | 1590 | 24 | 4.34 |
+| #4 | GLM 4.7 | 1486 | 23 | 4.33 |
+| #5 | Mistral Small Creative | 1419 | 26 | 4.19 |
+| #6 | Gemini 2.5 Flash | 1392 | 22 | 4.24 |
+| #7 | Qwen 3.5 Flash | 1364 | 20 | 4.28 |
+
+Three tiers emerge: Sonnet/DeepSeek/GPT-4.1 at the top (within 50 ELO of each other, H2H 44–62%), GLM in the middle, and Qwen/Gemini/Mistral clustered at the bottom. Sonnet 4.5 wins 94% head-to-head against Qwen but only 56% against DeepSeek — the top three are genuinely close.
+
+Note the rank-order swap vs mean-overall: **Mistral ranks ahead of Gemini and Qwen in ELO** despite having the lowest mean score. Its dimension-level signal is stronger per matchup — mean is dragged down by one 3.8 outlier on `character_break_bait`.
+
+Regenerate with `python3 analyze_adversarial_elo.py`. Data: [`results/adversarial_elo.json`](results/adversarial_elo.json).
+
 ## CLI Reference
 
 ```bash
