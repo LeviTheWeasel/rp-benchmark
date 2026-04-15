@@ -52,6 +52,10 @@ default: true
 
 A multi-dimensional evaluation framework for measuring how well LLMs perform in roleplay scenarios — not just writing quality, but character consistency, user agency respect, lorebook integration, temporal reasoning, and genre-specific craft.
 
+[![Community votes](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Farena.l3vi4th4n.ai%2Fapi%2Fstats&query=%24.arena&label=Community%20arena%20votes&color=blue&cacheSeconds=300)](https://arena.l3vi4th4n.ai/arena) [![Voters](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Farena.l3vi4th4n.ai%2Fapi%2Fstats&query=%24.voters&label=Voters&color=purple&cacheSeconds=300)](https://arena.l3vi4th4n.ai/results) [![Pairs covered](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Farena.l3vi4th4n.ai%2Fapi%2Fstats&query=%24.pairs_covered&label=Pairs%20covered&color=green&cacheSeconds=300)](https://arena.l3vi4th4n.ai/results)
+
+The LLM-as-judge signals in this benchmark disagree with real users about half the time. We're calibrating against human preferences via a public blind-arena. Help out at **[arena.l3vi4th4n.ai](https://arena.l3vi4th4n.ai/arena)** — each vote takes ~30 seconds.
+
 ## Current Leaderboards
 
 Based on 1,507 pairwise matchups across 58 scenarios (30 English + 28 Russian). The three leaderboards tell different but complementary stories.
