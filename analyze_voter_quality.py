@@ -17,6 +17,16 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
+# Catches that turned out to be ambiguous on community feedback — the "bad"
+# response in these cases is a technically-wrong-but-emotionally-resonant
+# alternative that many voters legitimately prefer. We keep them in the
+# pool (the preference data is interesting in its own right) but exclude
+# them from voter-quality scoring so attentive voters aren't flagged for
+# having a real taste.
+AMBIGUOUS_CATCHES = {
+    "catch_user_hijack_cafe",
+}
+
 
 def main():
     path = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("web/data/votes.jsonl")
@@ -43,11 +53,17 @@ def main():
         voter = v.get("voter_id", "anonymous")
         total[voter] += 1
         if v.get("is_catch"):
-            catches[voter] += 1
-            per_catch[v["scenario_id"]]["total"] += 1
+            sid = v["scenario_id"]
+            # Per-catch stats include all catches so we can see distributions.
+            per_catch[sid]["total"] += 1
             if v.get("catch_correct"):
-                correct[voter] += 1
-                per_catch[v["scenario_id"]]["correct"] += 1
+                per_catch[sid]["correct"] += 1
+            # Per-voter quality scoring excludes catches we've marked
+            # ambiguous — those are data, not calibration signal.
+            if sid not in AMBIGUOUS_CATCHES:
+                catches[voter] += 1
+                if v.get("catch_correct"):
+                    correct[voter] += 1
 
     if not total:
         print("No arena votes.")
@@ -96,7 +112,8 @@ def main():
     for sid in sorted(per_catch, key=lambda s: per_catch[s]["correct"] / max(per_catch[s]["total"], 1)):
         rec = per_catch[sid]
         rate = rec["correct"] / rec["total"] if rec["total"] else 0
-        print(f'{sid:<36}{rec["total"]:<10}{rec["correct"]:<10}{rate*100:.0f}%')
+        tag = "  (ambiguous — excluded from voter scoring)" if sid in AMBIGUOUS_CATCHES else ""
+        print(f'{sid:<36}{rec["total"]:<10}{rec["correct"]:<10}{rate*100:.0f}%{tag}')
 
 
 if __name__ == "__main__":
