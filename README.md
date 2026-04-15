@@ -2,6 +2,10 @@
 
 Roleplay quality benchmark for LLMs. Measures what existing benchmarks don't — character consistency, user agency respect, lorebook integration, prose craft, and genre-specific skills across 27 dimensions.
 
+**Live calibration arena:** [![Community votes](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Farena.l3vi4th4n.ai%2Fapi%2Fstats&query=%24.arena&label=Community%20arena%20votes&color=blue&cacheSeconds=300)](https://arena.l3vi4th4n.ai/arena) [![Voters](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Farena.l3vi4th4n.ai%2Fapi%2Fstats&query=%24.voters&label=Voters&color=purple&cacheSeconds=300)](https://arena.l3vi4th4n.ai/results) [![Pairs covered](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Farena.l3vi4th4n.ai%2Fapi%2Fstats&query=%24.pairs_covered&label=Pairs%20covered&color=green&cacheSeconds=300)](https://arena.l3vi4th4n.ai/results)
+
+The LLM-as-judge signals in this benchmark disagree with real users about half the time. We're calibrating against human preferences via a public blind-arena. Help us out at **[arena.l3vi4th4n.ai](https://arena.l3vi4th4n.ai/arena)** — each vote takes ~30 seconds.
+
 **Dataset & Leaderboard:** [lazyweasel/roleplay-bench on HuggingFace](https://huggingface.co/datasets/lazyweasel/roleplay-bench)
 
 ## Why?
