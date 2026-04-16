@@ -45,6 +45,14 @@ configs:
   data_files:
   - split: train
     path: flaw_hunter/train.parquet
+- config_name: community_arena
+  data_files:
+  - split: train
+    path: community_arena/train.parquet
+- config_name: community_votes
+  data_files:
+  - split: train
+    path: community_votes/train.parquet
 default: true
 ---
 

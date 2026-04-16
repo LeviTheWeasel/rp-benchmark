@@ -313,6 +313,78 @@ def export_flaw_hunter_results():
     print("Exported: %s (%d models)" % (out, len(lb)))
 
 
+def export_community_arena():
+    """Export community-voted leaderboard + raw votes to Parquet.
+
+    Two outputs:
+      - community_arena/train.parquet   — per-model aggregate (leaderboard)
+      - community_votes/train.parquet   — one row per arena vote (voter ids
+                                          are opaque UUIDs, no PII)
+    """
+    snapshot = PROJECT_ROOT / "results" / "community_arena_1000.json"
+    if not snapshot.exists():
+        candidates = sorted(
+            (PROJECT_ROOT / "results").glob("community_arena*.json"), reverse=True
+        )
+        if not candidates:
+            print("No community arena snapshot found (run analyze_community_arena.py)")
+            return
+        snapshot = candidates[0]
+
+    with open(snapshot) as f:
+        agg = json.load(f)
+
+    lb = agg.get("leaderboard", [])
+    if lb:
+        table = pa.table({
+            "rank": [e["rank"] for e in lb],
+            "model": [e["model"] for e in lb],
+            "elo": [e["elo"] for e in lb],
+            "elo_stability": [e["stability"] for e in lb],
+            "overall_winrate": [e["overall_winrate"] for e in lb],
+            "overall_n": [e["overall_n"] for e in lb],
+            "sfw_winrate": [e["sfw_winrate"] for e in lb],
+            "sfw_n": [e["sfw_n"] for e in lb],
+            "nsfw_winrate": [e["nsfw_winrate"] for e in lb],
+            "nsfw_n": [e["nsfw_n"] for e in lb],
+        })
+        out_dir = HF_DIR / "community_arena"
+        out_dir.mkdir(exist_ok=True)
+        pq.write_table(table, out_dir / "train.parquet")
+        print("Exported: community_arena/train.parquet (%d models)" % len(lb))
+
+    # Raw votes — pulled live so the dataset tracks the current arena state.
+    # Skipped if the production endpoint is unreachable.
+    import urllib.request
+    try:
+        with urllib.request.urlopen("https://arena.l3vi4th4n.ai/api/votes", timeout=30) as resp:
+            votes = json.load(resp).get("votes", [])
+    except Exception as e:
+        print("Could not fetch live votes (%s) — skipping community_votes export" % e)
+        return
+
+    arena = [v for v in votes if v.get("mode") == "arena"]
+    if not arena:
+        print("No arena votes to export")
+        return
+
+    table = pa.table({
+        "vote_id": [v.get("id", "") for v in arena],
+        "voter_id": [v.get("voter_id", "") for v in arena],
+        "timestamp": [v.get("timestamp", "") for v in arena],
+        "scenario_id": [v.get("scenario_id", "") for v in arena],
+        "model_a": [v.get("model_a", "") for v in arena],
+        "model_b": [v.get("model_b", "") for v in arena],
+        "winner": [v.get("winner", "") for v in arena],
+        "is_catch": [bool(v.get("is_catch")) for v in arena],
+        "catch_correct": [v.get("catch_correct") for v in arena],
+    })
+    out_dir = HF_DIR / "community_votes"
+    out_dir.mkdir(exist_ok=True)
+    pq.write_table(table, out_dir / "train.parquet")
+    print("Exported: community_votes/train.parquet (%d votes)" % len(arena))
+
+
 def main():
     print("Exporting RP-Bench data to HuggingFace format...\n")
     export_seeds()
@@ -322,6 +394,7 @@ def main():
     export_leaderboard()
     export_elo()
     export_flaw_hunter_results()
+    export_community_arena()
     print("\nDone. Files are in %s" % HF_DIR)
     print("\nTo upload to HuggingFace:")
     print("  cd %s" % HF_DIR)
