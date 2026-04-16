@@ -56,9 +56,33 @@ A multi-dimensional evaluation framework for measuring how well LLMs perform in 
 
 The LLM-as-judge signals in this benchmark disagree with real users about half the time. We're calibrating against human preferences via a public blind-arena. Help out at **[arena.l3vi4th4n.ai](https://arena.l3vi4th4n.ai/arena)** — each vote takes ~30 seconds.
 
-## Current Leaderboards
+## Community Leaderboard (human-voted ELO) 🎯
 
-Based on 1,507 pairwise matchups across 58 scenarios (30 English + 28 Russian). The three leaderboards tell different but complementary stories.
+**The headline signal.** Based on 910 pairwise votes from 162 community voters in our public calibration arena at [arena.l3vi4th4n.ai](https://arena.l3vi4th4n.ai/arena). Suspect voters filtered via catch-pair calibration. Covers 271 matchups at median 3 votes per pair.
+
+| Rank | Model | ELO | ± | SFW | NSFW |
+|------|-------|-----|---|-----|------|
+| **#1** | **Gemma 4 26B** | **1546** | 39 | 56% | 59% |
+| **#2** | **Gemini 2.5 Flash** | **1539** | 42 | 57% | 52% |
+| #3 | Mistral Small Creative | 1517 | 42 | 49% | 61% |
+| #4 | GPT-4.1 | 1509 | 41 | 49% | 52% |
+| #5 | Grok 4.1 | 1507 | 48 | 49% | 57% |
+| #6 | Claude Sonnet 4.5 | 1497 | 39 | 50% | 45% |
+| #7 | Qwen 3.5 Flash | 1496 | 46 | 53% | 42% |
+| #8 | GLM 4.7 | 1483 | 41 | 44% | 56% |
+| #9 | DeepSeek v3.2 | 1479 | 35 | 50% | 33% |
+| #10 | MiniMax M2.7 | 1473 | 40 | 51% | 34% |
+| #11 | Llama 4 Maverick | 1453 | 42 | 45% | 38% |
+
+Top-2 tier (Gemma, Gemini) is statistically separated from the rest. Bottom-3 tier (MiniMax, DeepSeek, Llama) is also clearly separated downward. Middle cluster (#3–#8) is within shared error bars.
+
+**Key finding — community and LLM judges disagree systematically:** Gemma 4 26B (not in the LLM-judge leaderboards at all) tops community voting. Gemini 2.5 Flash jumps from LLM-rank #6 to community-rank #2. Claude Sonnet 4.5 drops from LLM-rank #3 to community-rank #6. DeepSeek drops from LLM-rank #2 to community-rank #9. This divergence is the whole reason the calibration campaign exists — LLM-as-judge measures what judges aesthetically prefer, not what users prefer.
+
+Raw data: `results/community_arena_1000.json` in the source repo.
+
+## LLM-Judge Leaderboards
+
+Based on 1,507 pairwise matchups across 58 scenarios (30 English + 28 Russian). The three leaderboards below tell different but complementary stories — all use Claude Sonnet as judge in various modes. **They reproducibly disagree with the community leaderboard above.**
 
 ### ELO Ratings (head-to-head dominance)
 
