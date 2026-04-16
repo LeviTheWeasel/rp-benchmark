@@ -21,7 +21,7 @@ HF_DIR = Path(__file__).parent
 
 def export_seeds():
     """Export synthetic seeds to Parquet."""
-    with open(HF_DIR / "seeds" / "seeds.json") as f:
+    with open(HF_DIR / "_source" / "seeds.json") as f:
         seeds = json.load(f)
 
     table = pa.table({
@@ -46,7 +46,7 @@ def export_seeds():
 
 def export_adversarial_seeds():
     """Export adversarial seeds to Parquet."""
-    path = HF_DIR / "seeds" / "adversarial_seeds.json"
+    path = HF_DIR / "_source" / "adversarial_seeds.json"
     if not path.exists():
         print("No adversarial seeds found")
         return
