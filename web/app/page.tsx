@@ -24,6 +24,20 @@ export default function Home() {
         </Link>
 
         <Link
+          href="/multiturn-arena"
+          className="block p-6 rounded-lg border border-[var(--border)] bg-[var(--card)] hover:border-[var(--accent)] transition group"
+        >
+          <h2 className="text-xl font-semibold mb-1 group-hover:text-[var(--accent)] transition">
+            Multi-Turn Arena
+          </h2>
+          <p className="text-sm text-[var(--muted)]">
+            Compare full 12-turn RP sessions side by side. Higher effort per
+            vote (~5 min) but tests what single responses can&apos;t — consistency,
+            degradation, and narrative momentum across a full scene.
+          </p>
+        </Link>
+
+        <Link
           href="/rubric"
           className="block p-6 rounded-lg border border-[var(--border)] bg-[var(--card)] hover:border-[var(--purple)] transition group"
         >
