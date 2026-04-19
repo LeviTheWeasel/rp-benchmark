@@ -32,6 +32,9 @@ function Nav() {
           <Link href="/arena" className="text-[var(--muted)] hover:text-[var(--foreground)] transition">
             Arena
           </Link>
+          <Link href="/multiturn-arena" className="text-[var(--muted)] hover:text-[var(--foreground)] transition">
+            Multi-Turn
+          </Link>
           <Link href="/rubric" className="text-[var(--muted)] hover:text-[var(--foreground)] transition">
             Rubric Score
           </Link>

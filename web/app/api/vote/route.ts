@@ -35,7 +35,7 @@ async function hasVotedArena(voterId: string, scenarioId: string): Promise<boole
       try {
         const v = JSON.parse(line);
         if (
-          v.mode === "arena" &&
+          (v.mode === "arena" || v.mode === "multiturn_arena") &&
           v.voter_id === voterId &&
           v.scenario_id === scenarioId
         ) {
@@ -77,9 +77,10 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Enforce one arena vote per (voter, scenario). Rubric votes are allowed
-    // to repeat since a single user may re-score the same response.
-    if (vote.mode === "arena" && (await hasVotedArena(voterId, vote.scenario_id))) {
+    // Enforce one vote per (voter, scenario) for arena modes. Rubric votes
+    // are allowed to repeat since a user may re-score the same response.
+    const isArenaMode = vote.mode === "arena" || vote.mode === "multiturn_arena";
+    if (isArenaMode && (await hasVotedArena(voterId, vote.scenario_id))) {
       return NextResponse.json(
         { error: "already voted on this matchup", already_voted: true },
         { status: 409 }

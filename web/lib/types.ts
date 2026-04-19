@@ -1,7 +1,7 @@
 export interface Vote {
   id: string;
   timestamp: string;
-  mode: "arena" | "rubric";
+  mode: "arena" | "rubric" | "multiturn_arena";
   scenario_id: string;
   context: string;
   /** Set server-side from the voter cookie; clients never populate this. */

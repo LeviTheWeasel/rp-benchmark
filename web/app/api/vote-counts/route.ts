@@ -1,12 +1,13 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { promises as fs } from "fs";
 import path from "path";
 import { getOrCreateVoterId } from "@/lib/voter";
 
 const VOTES_FILE = path.join(process.cwd(), "data", "votes.jsonl");
 
-export async function GET() {
+export async function GET(req: NextRequest) {
   const { voterId } = await getOrCreateVoterId();
+  const modeFilter = req.nextUrl.searchParams.get("mode") ?? "arena";
   const counts: Record<string, number> = {};
   const votedByMe: string[] = [];
 
@@ -16,7 +17,7 @@ export async function GET() {
       if (!line.trim()) continue;
       try {
         const vote = JSON.parse(line);
-        if (vote.mode !== "arena") continue;
+        if (vote.mode !== modeFilter) continue;
         const id = vote.scenario_id;
         if (!id) continue;
         counts[id] = (counts[id] ?? 0) + 1;

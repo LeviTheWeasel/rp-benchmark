@@ -13,8 +13,10 @@ export async function GET() {
   let total = 0;
   let arena = 0;
   let rubric = 0;
+  let multiturnArena = 0;
   const voterIds = new Set<string>();
   const pairs = new Set<string>();
+  const multiturnPairs = new Set<string>();
   let catchTotal = 0;
   let catchCorrect = 0;
 
@@ -32,6 +34,9 @@ export async function GET() {
             catchTotal += 1;
             if (v.catch_correct) catchCorrect += 1;
           }
+        } else if (v.mode === "multiturn_arena") {
+          multiturnArena += 1;
+          if (v.scenario_id) multiturnPairs.add(v.scenario_id);
         } else if (v.mode === "rubric") {
           rubric += 1;
         }
@@ -51,8 +56,10 @@ export async function GET() {
       total,
       arena,
       rubric,
+      multiturn_arena: multiturnArena,
       voters: voterIds.size,
       pairs_covered: pairs.size,
+      multiturn_pairs_covered: multiturnPairs.size,
       catch_pass_rate:
         catchTotal > 0 ? Math.round((catchCorrect / catchTotal) * 100) : null,
     },

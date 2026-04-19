@@ -1,0 +1,709 @@
+{
+  "total_arena_votes": 1591,
+  "real_votes": 1527,
+  "catch_votes": 64,
+  "unique_voters": 249,
+  "suspect_voters": 2,
+  "catch_pass_rate": 74.5,
+  "ambiguous_catch": {
+    "attentive_voters": 12,
+    "prefer_restrained": 8,
+    "prefer_emotional": 4,
+    "restrained_pct": 66.7
+  },
+  "clean_pool": {
+    "votes": 1451,
+    "pairs": 271,
+    "coverage_min": 3,
+    "coverage_median": 5,
+    "coverage_max": 7
+  },
+  "leaderboard": [
+    {
+      "rank": 1,
+      "model": "gemma_4_26b",
+      "elo": 1544.9,
+      "stability": 46.64,
+      "overall_winrate": 55.3,
+      "overall_n": 235,
+      "sfw_winrate": 54.6,
+      "sfw_n": 184,
+      "nsfw_winrate": 57.8,
+      "nsfw_n": 51
+    },
+    {
+      "rank": 2,
+      "model": "gemini_2_5_flash",
+      "elo": 1530.6,
+      "stability": 46.78,
+      "overall_winrate": 55.0,
+      "overall_n": 191,
+      "sfw_winrate": 55.1,
+      "sfw_n": 156,
+      "nsfw_winrate": 54.3,
+      "nsfw_n": 35
+    },
+    {
+      "rank": 3,
+      "model": "mistral_small_creative",
+      "elo": 1520.9,
+      "stability": 49.44,
+      "overall_winrate": 53.9,
+      "overall_n": 499,
+      "sfw_winrate": 49.5,
+      "sfw_n": 371,
+      "nsfw_winrate": 66.8,
+      "nsfw_n": 128
+    },
+    {
+      "rank": 4,
+      "model": "deepseek_v3_2",
+      "elo": 1504.1,
+      "stability": 45.78,
+      "overall_winrate": 50.3,
+      "overall_n": 195,
+      "sfw_winrate": 54.1,
+      "sfw_n": 158,
+      "nsfw_winrate": 33.8,
+      "nsfw_n": 37
+    },
+    {
+      "rank": 5,
+      "model": "claude_sonnet_4_5",
+      "elo": 1500.1,
+      "stability": 45.64,
+      "overall_winrate": 50.0,
+      "overall_n": 156,
+      "sfw_winrate": 50.0,
+      "sfw_n": 126,
+      "nsfw_winrate": 50.0,
+      "nsfw_n": 30
+    },
+    {
+      "rank": 6,
+      "model": "minimax_m2_7",
+      "elo": 1498.9,
+      "stability": 48.91,
+      "overall_winrate": 49.8,
+      "overall_n": 301,
+      "sfw_winrate": 52.5,
+      "sfw_n": 237,
+      "nsfw_winrate": 39.8,
+      "nsfw_n": 64
+    },
+    {
+      "rank": 7,
+      "model": "grok_4_1",
+      "elo": 1497.9,
+      "stability": 47.43,
+      "overall_winrate": 50.2,
+      "overall_n": 251,
+      "sfw_winrate": 48.9,
+      "sfw_n": 180,
+      "nsfw_winrate": 53.5,
+      "nsfw_n": 71
+    },
+    {
+      "rank": 8,
+      "model": "qwen3_5_flash",
+      "elo": 1487.0,
+      "stability": 46.12,
+      "overall_winrate": 48.4,
+      "overall_n": 312,
+      "sfw_winrate": 49.1,
+      "sfw_n": 264,
+      "nsfw_winrate": 44.8,
+      "nsfw_n": 48
+    },
+    {
+      "rank": 9,
+      "model": "glm_4_7",
+      "elo": 1478.9,
+      "stability": 44.78,
+      "overall_winrate": 46.1,
+      "overall_n": 217,
+      "sfw_winrate": 45.8,
+      "sfw_n": 168,
+      "nsfw_winrate": 46.9,
+      "nsfw_n": 49
+    },
+    {
+      "rank": 10,
+      "model": "llama_4_maverick",
+      "elo": 1470.8,
+      "stability": 37.4,
+      "overall_winrate": 44.7,
+      "overall_n": 379,
+      "sfw_winrate": 47.6,
+      "sfw_n": 316,
+      "nsfw_winrate": 30.2,
+      "nsfw_n": 63
+    },
+    {
+      "rank": 11,
+      "model": "gpt_4_1",
+      "elo": 1465.9,
+      "stability": 43.76,
+      "overall_winrate": 44.9,
+      "overall_n": 166,
+      "sfw_winrate": 43.8,
+      "sfw_n": 130,
+      "nsfw_winrate": 48.6,
+      "nsfw_n": 36
+    }
+  ],
+  "head_to_head": {
+    "deepseek_v3_2": {
+      "glm_4_7": {
+        "wins": 7,
+        "losses": 8,
+        "ties": 1
+      },
+      "qwen3_5_flash": {
+        "wins": 8,
+        "losses": 12,
+        "ties": 2
+      },
+      "gemini_2_5_flash": {
+        "wins": 14,
+        "losses": 14,
+        "ties": 1
+      },
+      "grok_4_1": {
+        "wins": 4,
+        "losses": 11,
+        "ties": 1
+      },
+      "claude_sonnet_4_5": {
+        "wins": 5,
+        "losses": 5,
+        "ties": 1
+      },
+      "mistral_small_creative": {
+        "wins": 15,
+        "losses": 18,
+        "ties": 1
+      },
+      "llama_4_maverick": {
+        "wins": 20,
+        "losses": 11,
+        "ties": 4
+      },
+      "gemma_4_26b": {
+        "wins": 8,
+        "losses": 4,
+        "ties": 0
+      },
+      "minimax_m2_7": {
+        "wins": 11,
+        "losses": 8,
+        "ties": 1
+      }
+    },
+    "glm_4_7": {
+      "deepseek_v3_2": {
+        "wins": 8,
+        "losses": 7,
+        "ties": 1
+      },
+      "qwen3_5_flash": {
+        "wins": 3,
+        "losses": 2,
+        "ties": 0
+      },
+      "gemini_2_5_flash": {
+        "wins": 11,
+        "losses": 15,
+        "ties": 1
+      },
+      "grok_4_1": {
+        "wins": 4,
+        "losses": 11,
+        "ties": 1
+      },
+      "claude_sonnet_4_5": {
+        "wins": 5,
+        "losses": 5,
+        "ties": 2
+      },
+      "mistral_small_creative": {
+        "wins": 14,
+        "losses": 16,
+        "ties": 4
+      },
+      "gpt_4_1": {
+        "wins": 10,
+        "losses": 12,
+        "ties": 2
+      },
+      "llama_4_maverick": {
+        "wins": 7,
+        "losses": 1,
+        "ties": 4
+      },
+      "gemma_4_26b": {
+        "wins": 9,
+        "losses": 13,
+        "ties": 6
+      },
+      "minimax_m2_7": {
+        "wins": 17,
+        "losses": 23,
+        "ties": 3
+      }
+    },
+    "qwen3_5_flash": {
+      "deepseek_v3_2": {
+        "wins": 12,
+        "losses": 8,
+        "ties": 2
+      },
+      "glm_4_7": {
+        "wins": 2,
+        "losses": 3,
+        "ties": 0
+      },
+      "grok_4_1": {
+        "wins": 13,
+        "losses": 11,
+        "ties": 3
+      },
+      "claude_sonnet_4_5": {
+        "wins": 7,
+        "losses": 9,
+        "ties": 0
+      },
+      "mistral_small_creative": {
+        "wins": 28,
+        "losses": 40,
+        "ties": 5
+      },
+      "gpt_4_1": {
+        "wins": 7,
+        "losses": 5,
+        "ties": 4
+      },
+      "llama_4_maverick": {
+        "wins": 33,
+        "losses": 26,
+        "ties": 3
+      },
+      "gemma_4_26b": {
+        "wins": 15,
+        "losses": 20,
+        "ties": 1
+      },
+      "minimax_m2_7": {
+        "wins": 22,
+        "losses": 27,
+        "ties": 6
+      }
+    },
+    "gemini_2_5_flash": {
+      "deepseek_v3_2": {
+        "wins": 14,
+        "losses": 14,
+        "ties": 1
+      },
+      "glm_4_7": {
+        "wins": 15,
+        "losses": 11,
+        "ties": 1
+      },
+      "grok_4_1": {
+        "wins": 3,
+        "losses": 2,
+        "ties": 0
+      },
+      "claude_sonnet_4_5": {
+        "wins": 10,
+        "losses": 12,
+        "ties": 1
+      },
+      "mistral_small_creative": {
+        "wins": 13,
+        "losses": 8,
+        "ties": 4
+      },
+      "gpt_4_1": {
+        "wins": 13,
+        "losses": 9,
+        "ties": 0
+      },
+      "llama_4_maverick": {
+        "wins": 10,
+        "losses": 5,
+        "ties": 1
+      },
+      "gemma_4_26b": {
+        "wins": 9,
+        "losses": 9,
+        "ties": 3
+      },
+      "minimax_m2_7": {
+        "wins": 11,
+        "losses": 9,
+        "ties": 3
+      }
+    },
+    "grok_4_1": {
+      "deepseek_v3_2": {
+        "wins": 11,
+        "losses": 4,
+        "ties": 1
+      },
+      "glm_4_7": {
+        "wins": 11,
+        "losses": 4,
+        "ties": 1
+      },
+      "qwen3_5_flash": {
+        "wins": 11,
+        "losses": 13,
+        "ties": 3
+      },
+      "gemini_2_5_flash": {
+        "wins": 2,
+        "losses": 3,
+        "ties": 0
+      },
+      "claude_sonnet_4_5": {
+        "wins": 2,
+        "losses": 8,
+        "ties": 1
+      },
+      "mistral_small_creative": {
+        "wins": 21,
+        "losses": 25,
+        "ties": 4
+      },
+      "gpt_4_1": {
+        "wins": 8,
+        "losses": 1,
+        "ties": 1
+      },
+      "llama_4_maverick": {
+        "wins": 16,
+        "losses": 17,
+        "ties": 5
+      },
+      "gemma_4_26b": {
+        "wins": 19,
+        "losses": 25,
+        "ties": 4
+      },
+      "minimax_m2_7": {
+        "wins": 14,
+        "losses": 14,
+        "ties": 2
+      }
+    },
+    "claude_sonnet_4_5": {
+      "deepseek_v3_2": {
+        "wins": 5,
+        "losses": 5,
+        "ties": 1
+      },
+      "glm_4_7": {
+        "wins": 5,
+        "losses": 5,
+        "ties": 2
+      },
+      "qwen3_5_flash": {
+        "wins": 9,
+        "losses": 7,
+        "ties": 0
+      },
+      "gemini_2_5_flash": {
+        "wins": 12,
+        "losses": 10,
+        "ties": 1
+      },
+      "grok_4_1": {
+        "wins": 8,
+        "losses": 2,
+        "ties": 1
+      },
+      "mistral_small_creative": {
+        "wins": 14,
+        "losses": 19,
+        "ties": 5
+      },
+      "gpt_4_1": {
+        "wins": 10,
+        "losses": 11,
+        "ties": 2
+      },
+      "llama_4_maverick": {
+        "wins": 6,
+        "losses": 5,
+        "ties": 1
+      },
+      "gemma_4_26b": {
+        "wins": 2,
+        "losses": 2,
+        "ties": 1
+      },
+      "minimax_m2_7": {
+        "wins": 0,
+        "losses": 5,
+        "ties": 0
+      }
+    },
+    "mistral_small_creative": {
+      "deepseek_v3_2": {
+        "wins": 18,
+        "losses": 15,
+        "ties": 1
+      },
+      "glm_4_7": {
+        "wins": 16,
+        "losses": 14,
+        "ties": 4
+      },
+      "qwen3_5_flash": {
+        "wins": 40,
+        "losses": 28,
+        "ties": 5
+      },
+      "gemini_2_5_flash": {
+        "wins": 8,
+        "losses": 13,
+        "ties": 4
+      },
+      "grok_4_1": {
+        "wins": 25,
+        "losses": 21,
+        "ties": 4
+      },
+      "claude_sonnet_4_5": {
+        "wins": 19,
+        "losses": 14,
+        "ties": 5
+      },
+      "gpt_4_1": {
+        "wins": 10,
+        "losses": 11,
+        "ties": 2
+      },
+      "llama_4_maverick": {
+        "wins": 72,
+        "losses": 56,
+        "ties": 16
+      },
+      "gemma_4_26b": {
+        "wins": 15,
+        "losses": 18,
+        "ties": 2
+      },
+      "minimax_m2_7": {
+        "wins": 22,
+        "losses": 16,
+        "ties": 5
+      }
+    },
+    "gpt_4_1": {
+      "glm_4_7": {
+        "wins": 12,
+        "losses": 10,
+        "ties": 2
+      },
+      "qwen3_5_flash": {
+        "wins": 5,
+        "losses": 7,
+        "ties": 4
+      },
+      "gemini_2_5_flash": {
+        "wins": 9,
+        "losses": 13,
+        "ties": 0
+      },
+      "grok_4_1": {
+        "wins": 1,
+        "losses": 8,
+        "ties": 1
+      },
+      "claude_sonnet_4_5": {
+        "wins": 11,
+        "losses": 10,
+        "ties": 2
+      },
+      "mistral_small_creative": {
+        "wins": 11,
+        "losses": 10,
+        "ties": 2
+      },
+      "llama_4_maverick": {
+        "wins": 2,
+        "losses": 3,
+        "ties": 0
+      },
+      "gemma_4_26b": {
+        "wins": 9,
+        "losses": 13,
+        "ties": 0
+      },
+      "minimax_m2_7": {
+        "wins": 9,
+        "losses": 12,
+        "ties": 0
+      }
+    },
+    "llama_4_maverick": {
+      "deepseek_v3_2": {
+        "wins": 11,
+        "losses": 20,
+        "ties": 4
+      },
+      "glm_4_7": {
+        "wins": 1,
+        "losses": 7,
+        "ties": 4
+      },
+      "qwen3_5_flash": {
+        "wins": 26,
+        "losses": 33,
+        "ties": 3
+      },
+      "gemini_2_5_flash": {
+        "wins": 5,
+        "losses": 10,
+        "ties": 1
+      },
+      "grok_4_1": {
+        "wins": 17,
+        "losses": 16,
+        "ties": 5
+      },
+      "claude_sonnet_4_5": {
+        "wins": 5,
+        "losses": 6,
+        "ties": 1
+      },
+      "mistral_small_creative": {
+        "wins": 56,
+        "losses": 72,
+        "ties": 16
+      },
+      "gpt_4_1": {
+        "wins": 3,
+        "losses": 2,
+        "ties": 0
+      },
+      "gemma_4_26b": {
+        "wins": 6,
+        "losses": 5,
+        "ties": 0
+      },
+      "minimax_m2_7": {
+        "wins": 19,
+        "losses": 18,
+        "ties": 7
+      }
+    },
+    "gemma_4_26b": {
+      "deepseek_v3_2": {
+        "wins": 4,
+        "losses": 8,
+        "ties": 0
+      },
+      "glm_4_7": {
+        "wins": 13,
+        "losses": 9,
+        "ties": 6
+      },
+      "qwen3_5_flash": {
+        "wins": 20,
+        "losses": 15,
+        "ties": 1
+      },
+      "gemini_2_5_flash": {
+        "wins": 9,
+        "losses": 9,
+        "ties": 3
+      },
+      "grok_4_1": {
+        "wins": 25,
+        "losses": 19,
+        "ties": 4
+      },
+      "claude_sonnet_4_5": {
+        "wins": 2,
+        "losses": 2,
+        "ties": 1
+      },
+      "mistral_small_creative": {
+        "wins": 18,
+        "losses": 15,
+        "ties": 2
+      },
+      "gpt_4_1": {
+        "wins": 13,
+        "losses": 9,
+        "ties": 0
+      },
+      "llama_4_maverick": {
+        "wins": 5,
+        "losses": 6,
+        "ties": 0
+      },
+      "minimax_m2_7": {
+        "wins": 12,
+        "losses": 4,
+        "ties": 1
+      }
+    },
+    "minimax_m2_7": {
+      "deepseek_v3_2": {
+        "wins": 8,
+        "losses": 11,
+        "ties": 1
+      },
+      "glm_4_7": {
+        "wins": 23,
+        "losses": 17,
+        "ties": 3
+      },
+      "qwen3_5_flash": {
+        "wins": 27,
+        "losses": 22,
+        "ties": 6
+      },
+      "gemini_2_5_flash": {
+        "wins": 9,
+        "losses": 11,
+        "ties": 3
+      },
+      "grok_4_1": {
+        "wins": 14,
+        "losses": 14,
+        "ties": 2
+      },
+      "claude_sonnet_4_5": {
+        "wins": 5,
+        "losses": 0,
+        "ties": 0
+      },
+      "mistral_small_creative": {
+        "wins": 16,
+        "losses": 22,
+        "ties": 5
+      },
+      "gpt_4_1": {
+        "wins": 12,
+        "losses": 9,
+        "ties": 0
+      },
+      "llama_4_maverick": {
+        "wins": 18,
+        "losses": 19,
+        "ties": 7
+      },
+      "gemma_4_26b": {
+        "wins": 4,
+        "losses": 12,
+        "ties": 1
+      }
+    }
+  }
+}
