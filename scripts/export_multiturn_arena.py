@@ -64,9 +64,6 @@ def main():
         adv_seeds = json.load(open(seed_meta_path))
         for s in adv_seeds:
             setting = s.get("character_setting", "")
-            # Truncate to a usable summary (~200 chars)
-            if len(setting) > 200:
-                setting = setting[:197] + "..."
             seed_meta[s["id"]] = {
                 "failure_target": s.get("failure_target", ""),
                 "setting_summary": setting,
