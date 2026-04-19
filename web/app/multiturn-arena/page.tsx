@@ -3,7 +3,7 @@
 import { useState, useCallback, useEffect } from "react";
 import { Vote } from "@/lib/types";
 import { saveVote } from "@/lib/votes";
-import { MULTITURN_SESSIONS, MULTITURN_PAIRS } from "@/lib/multiturn-data";
+import { MULTITURN_SESSIONS, MULTITURN_PAIRS, SEED_METADATA } from "@/lib/multiturn-data";
 import { MultiturnSession, MultiturnPair } from "@/lib/multiturn-types";
 
 function formatRP(text: string) {
@@ -197,26 +197,48 @@ export default function MultiturnArenaPage() {
       </div>
 
       {/* Seed info */}
-      <div className="shrink-0 border-b border-[var(--border)] bg-[var(--card)]">
-        <div className="px-4 py-2 flex gap-6 text-xs">
-          <span>
-            <span className="text-[var(--muted)]">Seed:</span>{" "}
-            <span className="text-[var(--accent)] capitalize">{seedLabel(current.seed_id)}</span>
-          </span>
-          <span>
-            <span className="text-[var(--muted)]">Character:</span>{" "}
-            <span className="text-[var(--accent)]">{charName}</span>
-          </span>
-          <span>
-            <span className="text-[var(--muted)]">User:</span>{" "}
-            <span className="text-[var(--purple)]">{userName}</span>
-          </span>
-          <span>
-            <span className="text-[var(--muted)]">Turns:</span>{" "}
-            {sessionA?.dialogue.length ?? "?"}
-          </span>
-        </div>
-      </div>
+      {(() => {
+        const meta = SEED_METADATA[current.seed_id];
+        const failTarget = meta?.failure_target?.replaceAll("_", " ") ?? "";
+        return (
+          <div className="shrink-0 border-b border-[var(--border)] bg-[var(--card)]">
+            <div className="px-4 py-2 flex gap-6 text-xs border-b border-[var(--border)]">
+              <span>
+                <span className="text-[var(--muted)]">Seed:</span>{" "}
+                <span className="text-[var(--accent)] capitalize">{seedLabel(current.seed_id)}</span>
+              </span>
+              <span>
+                <span className="text-[var(--muted)]">Character:</span>{" "}
+                <span className="text-[var(--accent)]">{charName}</span>
+              </span>
+              <span>
+                <span className="text-[var(--muted)]">User:</span>{" "}
+                <span className="text-[var(--purple)]">{userName}</span>
+              </span>
+              <span>
+                <span className="text-[var(--muted)]">Turns:</span>{" "}
+                {sessionA?.dialogue.length ?? "?"}
+              </span>
+              {failTarget && (
+                <span>
+                  <span className="text-[var(--muted)]">Tests:</span>{" "}
+                  <span className="text-[var(--amber)] capitalize">{failTarget}</span>
+                </span>
+              )}
+            </div>
+            {meta?.setting_summary && (
+              <details>
+                <summary className="px-4 py-2 text-xs uppercase tracking-wider text-[var(--muted)] cursor-pointer hover:text-[var(--foreground)] select-none">
+                  Character &amp; Setting
+                </summary>
+                <div className="px-4 pb-3 text-sm text-[var(--muted)] leading-relaxed">
+                  {meta.setting_summary}
+                </div>
+              </details>
+            )}
+          </div>
+        );
+      })()}
 
       {/* Sessions side by side */}
       <div className="flex-1 min-h-0 grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-px bg-[var(--border)]">

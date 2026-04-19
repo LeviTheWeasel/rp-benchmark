@@ -18,3 +18,10 @@ export interface MultiturnPair {
   model_a: string;
   model_b: string;
 }
+
+export interface SeedMeta {
+  failure_target: string;
+  setting_summary: string;
+  character_name: string;
+  user_name: string;
+}
