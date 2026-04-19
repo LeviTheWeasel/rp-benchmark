@@ -255,6 +255,84 @@ export default function ResultsPage() {
             </div>
           )}
 
+          {/* Multi-turn coverage */}
+          {mtCoverage.uniquePairs > 0 && (() => {
+            const mtBuckets = [0, 1, 2, 3, 5, 10] as const;
+            const mtHistogram = mtBuckets.map((b, i) => {
+              const upper = mtBuckets[i + 1];
+              const label = upper === undefined ? `${b}+` : `${b}-${upper - 1}`;
+              const count = mtCoverageValues.filter(
+                (v) => v >= b && (upper === undefined || v < upper)
+              ).length;
+              return { label, count };
+            });
+            const mtLeastVoted = Object.entries(mtCoverageCounts)
+              .sort((a, b) => a[1] - b[1])
+              .slice(0, 10);
+            return (
+              <div className="p-6 rounded-lg border border-[var(--border)] bg-[var(--card)]">
+                <h2 className="text-lg font-semibold mb-1">Multi-Turn Coverage</h2>
+                <p className="text-xs text-[var(--muted)] mb-4">
+                  Multi-turn votes spread across {mtCoverage.uniquePairs} pairs (168 total). Each vote compares two full 12-turn sessions.
+                </p>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
+                  <div className="px-3 py-2 rounded border border-[var(--border)]">
+                    <div className="text-xs text-[var(--muted)]">Min</div>
+                    <div className="text-lg font-semibold">{mtCoverage.min}</div>
+                  </div>
+                  <div className="px-3 py-2 rounded border border-[var(--border)]">
+                    <div className="text-xs text-[var(--muted)]">Median</div>
+                    <div className="text-lg font-semibold">{mtCoverage.median}</div>
+                  </div>
+                  <div className="px-3 py-2 rounded border border-[var(--border)]">
+                    <div className="text-xs text-[var(--muted)]">Max</div>
+                    <div className="text-lg font-semibold">{mtCoverage.max}</div>
+                  </div>
+                  <div className="px-3 py-2 rounded border border-[var(--border)]">
+                    <div className="text-xs text-[var(--muted)]">Pairs covered</div>
+                    <div className="text-lg font-semibold">{mtCoverage.uniquePairs}</div>
+                  </div>
+                </div>
+                <div className="space-y-1 mb-5">
+                  <div className="text-xs uppercase tracking-wider text-[var(--muted)]">Votes per pair</div>
+                  {mtHistogram.map((h) => {
+                    const max = Math.max(1, ...mtHistogram.map((x) => x.count));
+                    const pct = (h.count / max) * 100;
+                    return (
+                      <div key={h.label} className="flex items-center gap-3 text-sm">
+                        <span className="w-12 text-[var(--muted)] text-xs">{h.label}</span>
+                        <div className="flex-1 h-4 bg-[var(--background)] rounded overflow-hidden">
+                          <div
+                            className="h-full bg-[var(--accent)]"
+                            style={{ width: `${pct}%` }}
+                          />
+                        </div>
+                        <span className="w-10 text-xs text-[var(--muted)] text-right">{h.count}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+                {mtLeastVoted.length > 0 && (
+                  <div>
+                    <div className="text-xs uppercase tracking-wider text-[var(--muted)] mb-2">
+                      Least-voted pairs
+                    </div>
+                    <ul className="space-y-1 text-xs">
+                      {mtLeastVoted.map(([sid, count]) => (
+                        <li key={sid} className="flex justify-between gap-4">
+                          <span className="truncate font-mono text-[var(--muted)]">{sid}</span>
+                          <span className="text-[var(--foreground)]">
+                            {count} {count === 1 ? "vote" : "votes"}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            );
+          })()}
+
           {/* Multi-turn arena results */}
           {multiturnVotes.length > 0 && (
             <div className="p-6 rounded-lg border border-[var(--border)] bg-[var(--card)]">
@@ -262,10 +340,7 @@ export default function ResultsPage() {
                 Multi-Turn Arena
               </h2>
               <p className="text-xs text-[var(--muted)] mb-4">
-                Full 12-turn session comparisons. {multiturnVotes.length} votes across {mtCoverage.uniquePairs} pairs
-                {mtCoverage.uniquePairs > 0 && (
-                  <> (coverage: min {mtCoverage.min}, median {mtCoverage.median}, max {mtCoverage.max})</>
-                )}.
+                {multiturnVotes.length} votes across {mtCoverage.uniquePairs} pairs.
               </p>
               <div className="space-y-3">
                 {Object.entries(mtModelWins)
