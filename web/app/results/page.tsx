@@ -6,14 +6,15 @@ import { Vote, RUBRIC_DIMENSIONS } from "@/lib/types";
 
 export default function ResultsPage() {
   const [votes, setVotes] = useState<Vote[]>([]);
-  const [stats, setStats] = useState({ total: 0, arena: 0, rubric: 0 });
+  const [stats, setStats] = useState({ total: 0, arena: 0, rubric: 0, multiturn: 0 });
 
   useEffect(() => {
     getServerVotes().then((v) => {
       setVotes(v);
       const arena = v.filter((x) => x.mode === "arena").length;
       const rubric = v.filter((x) => x.mode === "rubric").length;
-      setStats({ total: v.length, arena, rubric });
+      const multiturn = v.filter((x) => x.mode === "multiturn_arena").length;
+      setStats({ total: v.length, arena, rubric, multiturn });
     });
   }, []);
 
@@ -70,6 +71,40 @@ export default function ResultsPage() {
     }
   }
 
+  // Multi-turn arena
+  const multiturnVotes = votes.filter((v) => v.mode === "multiturn_arena");
+  const mtCoverageCounts: Record<string, number> = {};
+  for (const v of multiturnVotes) {
+    mtCoverageCounts[v.scenario_id] = (mtCoverageCounts[v.scenario_id] ?? 0) + 1;
+  }
+  const mtCoverageValues = Object.values(mtCoverageCounts);
+  const mtCoverageSorted = [...mtCoverageValues].sort((a, b) => a - b);
+  const mtCoverage = {
+    uniquePairs: Object.keys(mtCoverageCounts).length,
+    min: mtCoverageSorted[0] ?? 0,
+    median: mtCoverageSorted.length
+      ? mtCoverageSorted[Math.floor(mtCoverageSorted.length / 2)]
+      : 0,
+    max: mtCoverageSorted[mtCoverageSorted.length - 1] ?? 0,
+  };
+
+  const mtModelWins: Record<string, { wins: number; losses: number; ties: number }> = {};
+  for (const v of multiturnVotes) {
+    const models = [v.model_a!, v.model_b!];
+    for (const m of models) {
+      if (!mtModelWins[m]) mtModelWins[m] = { wins: 0, losses: 0, ties: 0 };
+    }
+    if (v.winner === "tie") {
+      mtModelWins[v.model_a!].ties++;
+      mtModelWins[v.model_b!].ties++;
+    } else {
+      const winnerModel = v.winner === "A" ? v.model_a! : v.model_b!;
+      const loserModel = v.winner === "A" ? v.model_b! : v.model_a!;
+      mtModelWins[winnerModel].wins++;
+      mtModelWins[loserModel].losses++;
+    }
+  }
+
   // Rubric averages per model
   const rubricVotes = votes.filter((v) => v.mode === "rubric");
   const modelRubric: Record<string, Record<string, number[]>> = {};
@@ -99,7 +134,7 @@ export default function ResultsPage() {
         <div>
           <h1 className="text-2xl font-bold">Results</h1>
           <p className="text-sm text-[var(--muted)]">
-            {stats.total} votes ({stats.arena} arena, {stats.rubric} rubric)
+            {stats.total} votes ({stats.arena} arena, {stats.multiturn} multi-turn, {stats.rubric} rubric)
           </p>
         </div>
         <button
@@ -193,6 +228,57 @@ export default function ResultsPage() {
                   .map(([model, record]) => {
                     const total = record.wins + record.losses + record.ties;
                     const winRate = total > 0 ? (record.wins / total) * 100 : 0;
+                    return (
+                      <div key={model} className="flex items-center gap-3">
+                        <span className="text-sm w-48 truncate">{model}</span>
+                        <div className="flex-1 h-6 bg-[var(--background)] rounded overflow-hidden">
+                          <div
+                            className="h-full rounded transition-all"
+                            style={{
+                              width: `${winRate}%`,
+                              backgroundColor:
+                                winRate >= 60
+                                  ? "var(--green)"
+                                  : winRate >= 40
+                                    ? "var(--amber)"
+                                    : "var(--red)",
+                            }}
+                          />
+                        </div>
+                        <span className="text-xs text-[var(--muted)] w-32 text-right">
+                          {record.wins}W / {record.losses}L / {record.ties}T ({winRate.toFixed(0)}%)
+                        </span>
+                      </div>
+                    );
+                  })}
+              </div>
+            </div>
+          )}
+
+          {/* Multi-turn arena results */}
+          {multiturnVotes.length > 0 && (
+            <div className="p-6 rounded-lg border border-[var(--border)] bg-[var(--card)]">
+              <h2 className="text-lg font-semibold text-[var(--accent)] mb-1">
+                Multi-Turn Arena
+              </h2>
+              <p className="text-xs text-[var(--muted)] mb-4">
+                Full 12-turn session comparisons. {multiturnVotes.length} votes across {mtCoverage.uniquePairs} pairs
+                {mtCoverage.uniquePairs > 0 && (
+                  <> (coverage: min {mtCoverage.min}, median {mtCoverage.median}, max {mtCoverage.max})</>
+                )}.
+              </p>
+              <div className="space-y-3">
+                {Object.entries(mtModelWins)
+                  .sort((a, b) => {
+                    const aTotal = a[1].wins + a[1].losses + a[1].ties;
+                    const bTotal = b[1].wins + b[1].losses + b[1].ties;
+                    const aWr = aTotal > 0 ? (a[1].wins + 0.5 * a[1].ties) / aTotal : 0;
+                    const bWr = bTotal > 0 ? (b[1].wins + 0.5 * b[1].ties) / bTotal : 0;
+                    return bWr - aWr;
+                  })
+                  .map(([model, record]) => {
+                    const total = record.wins + record.losses + record.ties;
+                    const winRate = total > 0 ? ((record.wins + 0.5 * record.ties) / total) * 100 : 0;
                     return (
                       <div key={model} className="flex items-center gap-3">
                         <span className="text-sm w-48 truncate">{model}</span>
