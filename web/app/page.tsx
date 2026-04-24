@@ -11,29 +11,38 @@ export default function Home() {
 
       <div className="grid gap-4">
         <Link
-          href="/arena"
-          className="block p-6 rounded-lg border border-[var(--border)] bg-[var(--card)] hover:border-[var(--accent)] transition group"
+          href="/multiturn-arena"
+          className="block p-6 rounded-lg border border-[var(--accent)]/30 bg-[var(--card)] hover:border-[var(--accent)] transition group"
         >
-          <h2 className="text-xl font-semibold mb-1 group-hover:text-[var(--accent)] transition">
-            Arena
-          </h2>
+          <div className="flex items-center gap-2 mb-1">
+            <h2 className="text-xl font-semibold group-hover:text-[var(--accent)] transition">
+              Multi-Turn Arena
+            </h2>
+            <span className="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-[var(--accent)]/10 text-[var(--accent)] font-semibold">
+              Active
+            </span>
+          </div>
           <p className="text-sm text-[var(--muted)]">
-            Two responses, side by side, models hidden. Pick the better one.
-            Fast and fun — each vote takes 30 seconds.
+            Compare full 12-turn RP sessions side by side. Tests consistency,
+            degradation, and narrative momentum across a whole scene. ~5 min per vote.
           </p>
         </Link>
 
         <Link
-          href="/multiturn-arena"
-          className="block p-6 rounded-lg border border-[var(--border)] bg-[var(--card)] hover:border-[var(--accent)] transition group"
+          href="/arena"
+          className="block p-6 rounded-lg border border-[var(--border)] bg-[var(--card)] hover:border-[var(--muted)] transition group opacity-60"
         >
-          <h2 className="text-xl font-semibold mb-1 group-hover:text-[var(--accent)] transition">
-            Multi-Turn Arena
-          </h2>
+          <div className="flex items-center gap-2 mb-1">
+            <h2 className="text-xl font-semibold group-hover:text-[var(--muted)] transition">
+              Single-Turn Arena
+            </h2>
+            <span className="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-[var(--green)]/10 text-[var(--green)] font-semibold">
+              Complete — 2,000+ votes
+            </span>
+          </div>
           <p className="text-sm text-[var(--muted)]">
-            Compare full 12-turn RP sessions side by side. Higher effort per
-            vote (~5 min) but tests what single responses can&apos;t — consistency,
-            degradation, and narrative momentum across a full scene.
+            Two responses side by side, models hidden. Voting is closed —
+            see results below.
           </p>
         </Link>
 
