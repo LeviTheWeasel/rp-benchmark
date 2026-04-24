@@ -88,6 +88,44 @@ Top-3 tier (Gemma, Mistral, Gemini) is statistically separated from the rest and
 
 Raw data: `results/community_arena_2000.json` in the source repo.
 
+## Failure-Mode Rankings
+
+The community leaderboard captures *engagement*. The failure-mode breakdown captures *reliability*. They're orthogonal — see below.
+
+Based on 240 multi-turn sessions (12 models × 20 adversarial seeds × 12 turns), judged by Sonnet 4. Lower rank = fewer failures.
+
+| Use Case | Best Model | Avoid |
+|---|---|---|
+| **Long sessions with detailed character cards** (F13) | Sonnet 4.5 / DeepSeek (4.60) | Grok (4.07), Mistral (4.20) |
+| **Strict system prompts / speech rules** (F12) | Opus 4.6 (4.47) | **Qwen (3.17, floor 2.5)**, Llama (3.77) |
+| **Passive user / narrative momentum** (F8) | GPT-4.1 / MiniMax (4.30) | Grok (3.80) |
+| **Romance / emotional scenes** (F1 agency) | Opus 4.6 (4.55) | Qwen (3.80), Llama (3.83) |
+| **Strict 2nd-person POV** (F2) | Opus 4.6 (4.47) | Llama (3.93) |
+| **Lore-heavy worldbuilding** (F3) | Opus 4.6 (4.60) | Llama / Gemini (4.10) |
+| **Engagement** (community ELO) | Gemma / Mistral / Gemini | GPT-4.1 (community last) |
+| **NSFW / ERP** | Mistral 67%, Grok 52%, Gemini 54% | DeepSeek 30%, Llama 34%, MiniMax 34% |
+
+**Cross-model failure rank (lower = fewer failures):**
+
+```
+#1  Opus 4.6              avg 2.6   wins F1/F2/F3/F12 — but #10 on F8
+#2  Sonnet 4.5            avg 3.1   wins F13 — community #6
+#3  DeepSeek v3.2         avg 3.6   wins F13 (tie) — community #7
+#4  GPT-4.1               avg 3.7   wins F8 — community LAST
+#5  GLM 4.7               avg 5.1
+#6  MiniMax M2.7          avg 5.9   community #4
+#7  Gemma 4 26B           avg 6.6   community #1
+#8  Mistral SC            avg 7.7   community #2 — but #10 on F13
+#9  Gemini 2.5 Flash      avg 9.0
+#10 Qwen 3.5 Flash        avg 9.6
+#11 Grok 4.1              avg 9.7
+#12 Llama 4 Maverick      avg 11.4  last on most modes
+```
+
+**Key insight:** The "failure rank" and "community rank" are nearly orthogonal. Frontier models (Opus, Sonnet, DeepSeek) dominate failure-rank — they're best at *not breaking rules*. Community favorites (Gemma, Mistral, Gemini) dominate engagement — they're best at *being fun to write with*. Pick by use case.
+
+Raw per-model multi-signal profiles: `results/model_profiles.json` in the source repo.
+
 ## LLM-Judge Leaderboards
 
 Based on 1,507 pairwise matchups across 58 scenarios (30 English + 28 Russian). The three leaderboards below tell different but complementary stories — all use Claude Sonnet as judge in various modes. **They reproducibly disagree with the community leaderboard above.**

@@ -47,6 +47,157 @@ Based on **1,857 pairwise votes** from **338 community voters** collected via th
 
 Raw data: [`results/community_arena_2000.json`](results/community_arena_2000.json). Reproduce with `python3 analyze_community_arena.py`.
 
+## Failure-Mode Rankings (Multi-Turn)
+
+The community leaderboard captures *engagement*. The failure-mode breakdown captures *reliability*. They're orthogonal — the model that engages best is not the model that fails least, and vice versa. Both matter, for different use cases.
+
+Based on 240 multi-turn sessions (12 models × 20 adversarial seeds × 12 turns), judged by Sonnet 4. Lower rank = fewer failures.
+
+| Use Case | What to Pick | Winner | Notable Avoid |
+|---|---|---|---|
+| **Long sessions with detailed character cards** | Best F13 (context attention) | Sonnet 4.5, DeepSeek (tied 4.60) | Grok 4.07, Mistral 4.20 |
+| **System prompts with strict rules** | Best F12 (instruction drift) | Opus 4.47 | **Qwen 3.17 (floor 2.5)**, Llama 3.77 |
+| **Scenes where the user goes passive** | Best F8 (narrative momentum) | **GPT-4.1 4.30**, MiniMax 4.30 | Grok 3.80 |
+| **Romance / emotional scenes** | Best F1 (agency respect) | Opus 4.55, Sonnet 4.50 | Qwen 3.80, Llama 3.83 |
+| **Strict 2nd-person narrators** | Best F2 (POV/tense) | Opus 4.47 | Llama 3.93 |
+| **Lore-heavy worldbuilding** | Best F3 (lore contradiction) | Opus 4.60, DeepSeek 4.50 | Llama 4.10, Gemini 4.10 |
+| **Engagement / "fun to write with"** | Community ELO | Gemma, Mistral, Gemini | GPT-4.1 (community last) |
+| **NSFW / ERP** | Community NSFW win rate | Mistral 67%, Grok 52%, Gemini 54% | DeepSeek 30%, Llama 34%, MiniMax 34% |
+
+**Cross-model failure rank (lower = fewer failures):**
+
+```
+#1  Opus 4.6              avg 2.6   wins F1/F2/F3/F12 — but #10 on F8 (over-narrates passive scenes)
+#2  Sonnet 4.5            avg 3.1   wins F13, top-3 on F1/F12 — community #6
+#3  DeepSeek v3.2         avg 3.6   ties F13, top-2 on F2/F3 — community #7
+#4  GPT-4.1               avg 3.7   wins F8, solid on rest — community DEAD LAST
+#5  GLM 4.7               avg 5.1
+#6  MiniMax M2.7          avg 5.9   ties F8 with GPT-4.1, weak on POV/lore
+#7  Gemma 4 26B           avg 6.6   community #1, no failure mode it dominates
+#8  Mistral SC            avg 7.7   community #2, but #10 on F13
+#9  Gemini 2.5 Flash      avg 9.0   ⚠ floor 2.8 on F1 agency
+#10 Qwen 3.5 Flash        avg 9.6   ⚠ floor 2.5 on F1 AND F12
+#11 Grok 4.1              avg 9.7   #12 on both F8 and F13
+#12 Llama 4 Maverick      avg 11.4  last or near-last on every mode, multiple floors
+```
+
+Raw per-model profiles: [`results/model_profiles.json`](results/model_profiles.json). Reproduce with `python3 analyze_model_profiles.py`.
+
+## Multi-Signal Model Profiles
+
+Each model's complete signature across community arena + LLM-judge multi-turn + per-failure-mode breakdown.
+
+```
+─────────────────────────────────────────────────────────────────────────────
+Claude Opus 4.6
+─────────────────────────────────────────────────────────────────────────────
+Community arena:    not in pool yet
+Multi-turn judge:   4.51 mean (20 sessions)
+Failure ranks:      F1 #1   F2 #1   F3 #1   F8 #10  F12 #1   F13 #3
+Strength:           Universal rule-follower; tops 4 of 7 failure modes
+Weakness:           When the user goes passive, over-narrates (F8 mediocre)
+
+─────────────────────────────────────────────────────────────────────────────
+Claude Sonnet 4.5
+─────────────────────────────────────────────────────────────────────────────
+Community arena:    #6 (1506 ELO, SFW 51%, NSFW 51%, n=194)
+Multi-turn judge:   4.42 mean
+Failure ranks:      F1 #2   F2 #6   F3 #6   F8 #3   F12 #2   F13 #1
+Strength:           Best at tracking buried details in long character cards
+Weakness:           Community ranks mid-pack — judge favorite, user mid-tier
+
+─────────────────────────────────────────────────────────────────────────────
+DeepSeek v3.2
+─────────────────────────────────────────────────────────────────────────────
+Community arena:    #7 (1489 ELO, SFW 51%, NSFW 30%, n=241)
+Multi-turn judge:   4.38 mean
+Failure ranks:      F1 #5   F2 #2   F3 #2   F8 #5   F12 #4   F13 #2
+Strength:           Excellent on rules and big cards
+Weakness:           Catastrophic on NSFW (30% community win rate)
+
+─────────────────────────────────────────────────────────────────────────────
+GPT-4.1
+─────────────────────────────────────────────────────────────────────────────
+Community arena:    #11 (1470 ELO, SFW 43%, NSFW 46%, n=215)
+Multi-turn judge:   4.34 mean
+Failure ranks:      F1 #4   F2 #4   F3 #3   F8 #1   F12 #3   F13 #5
+Strength:           Wins narrative momentum (F8) — only model that does
+Weakness:           Community last — reliable but boring
+
+─────────────────────────────────────────────────────────────────────────────
+GLM 4.7
+─────────────────────────────────────────────────────────────────────────────
+Community arena:    #9 (1483 ELO, SFW 46%, NSFW 49%, n=285)
+Multi-turn judge:   4.37 mean
+Failure ranks:      F1 #6   F2 #3   F3 #7   F8 #7   F12 #5   F13 #4
+Strength:           Solid mid-pack across the board, no clear weakness
+Weakness:           No clear strength either
+
+─────────────────────────────────────────────────────────────────────────────
+MiniMax M2.7
+─────────────────────────────────────────────────────────────────────────────
+Community arena:    #4 (1510 ELO, SFW 54%, NSFW 45%, n=393)
+Multi-turn judge:   4.34 mean
+Failure ranks:      F1 #3   F2 #8   F3 #9   F8 #2   F12 #9   F13 #7
+Strength:           Strong on F8 (narrative) and F1 (agency); top-4 community
+Weakness:           Weak on POV/lore/instruction drift
+
+─────────────────────────────────────────────────────────────────────────────
+Gemma 4 26B  ⭐ community #1
+─────────────────────────────────────────────────────────────────────────────
+Community arena:    #1 (1535 ELO, SFW 55%, NSFW 51%, n=302)
+Multi-turn judge:   4.29 mean
+Failure ranks:      F1 #9   F2 #7   F3 #5   F8 #6   F12 #6   F13 #6
+Strength:           Engagement and balanced SFW/NSFW; smallest model in pool
+Weakness:           No failure mode it dominates; mid-pack on every probe
+
+─────────────────────────────────────────────────────────────────────────────
+Mistral Small Creative  ⭐ community #2 / NSFW specialist
+─────────────────────────────────────────────────────────────────────────────
+Community arena:    #2 (1526 ELO, SFW 51%, NSFW 67%, n=646)
+Multi-turn judge:   4.22 mean
+Failure ranks:      F1 #8   F2 #5   F3 #4   F8 #9   F12 #7   F13 #10
+Strength:           Best NSFW performance by a wide margin
+Weakness:           Loses buried details in big cards (F13 #10)
+
+─────────────────────────────────────────────────────────────────────────────
+Gemini 2.5 Flash
+─────────────────────────────────────────────────────────────────────────────
+Community arena:    #3 (1515 ELO, SFW 53%, NSFW 54%, n=241)
+Multi-turn judge:   4.14 mean
+Failure ranks:      F1 #10 ⚠2.8  F2 #10  F3 #11  F8 #4  F12 #10  F13 #9
+Strength:           High community engagement, balanced SFW/NSFW
+Weakness:           Floor of 2.8 on agency — writes user's character at times
+
+─────────────────────────────────────────────────────────────────────────────
+Qwen 3.5 Flash
+─────────────────────────────────────────────────────────────────────────────
+Community arena:    #8 (1487 ELO, SFW 48%, NSFW 42%, n=401)
+Multi-turn judge:   3.98 mean
+Failure ranks:      F1 #12 ⚠2.5  F2 #11  F3 #8   F8 #8   F12 #12 ⚠2.5  F13 #8
+Strength:           None
+Weakness:           Catastrophic on agency AND instruction drift (floor 2.5 both)
+
+─────────────────────────────────────────────────────────────────────────────
+Grok 4.1
+─────────────────────────────────────────────────────────────────────────────
+Community arena:    #5 (1506 ELO, SFW 50%, NSFW 52%, n=322)
+Multi-turn judge:   4.19 mean
+Failure ranks:      F1 #7   F2 #9   F3 #10  F8 #12  F12 #8   F13 #12
+Strength:           Solid community ranking despite low failure marks
+Weakness:           Worst on F8 (passive user) and F13 (big cards)
+
+─────────────────────────────────────────────────────────────────────────────
+Llama 4 Maverick
+─────────────────────────────────────────────────────────────────────────────
+Community arena:    #10 (1473 ELO, SFW 47%, NSFW 34%, n=474)
+Multi-turn judge:   3.96 mean
+Failure ranks:      F1 #11 ⚠3.0  F2 #12  F3 #12  F8 #11  F12 #11 ⚠3.2  F13 #11
+Strength:           None
+Weakness:           Last or near-last on every mode; multiple floors below 3.5
+─────────────────────────────────────────────────────────────────────────────
+```
+
 ## LLM-Judge Leaderboard (ELO)
 
 Based on 1,507 pairwise matchups across 58 scenarios (30 English + 28 Russian), judged by Claude Sonnet in flaw-hunting mode. **This is a different measurement than the community leaderboard above** — it captures what Claude-as-judge aesthetically prefers, which reproducibly differs from what real users prefer.
