@@ -1,0 +1,695 @@
+{
+  "methodology": "Bayesian Bradley-Terry model: Stage 1 uses IRLS to find per-seed MLE with bootstrap standard errors (200 resamples). Stage 2 combines per-seed estimates via Normal conjugate updating with a regularizing prior (std=200.0). This correctly handles the high tie rate (63%) by treating ties as 0.5 outcomes (no information) in logit space.",
+  "source": "results/multiturn_20260414_042100.json",
+  "prior_std": 200.0,
+  "kappa": 400.0,
+  "n_bootstrap": 200,
+  "per_seed": [
+    {
+      "seed": "adv_agency_bait_01",
+      "n_matchups": 21,
+      "mean": {
+        "claude_sonnet_4_5": 3497.8205980066455,
+        "deepseek_v3_2": -295.5437430786262,
+        "gemini_2_5_flash": 3428.3632336655596,
+        "glm_4_7": -15.729789590254072,
+        "gpt_4_1": 3506.750830564785,
+        "mistral_small_creative": 228.36323366555985,
+        "qwen3_5_flash": 149.97563676633524
+      },
+      "se": {
+        "claude_sonnet_4_5": 773.7198866766686,
+        "deepseek_v3_2": 735.7795839092012,
+        "gemini_2_5_flash": 684.7319251055839,
+        "glm_4_7": 678.1259378906412,
+        "gpt_4_1": 658.2518121582481,
+        "mistral_small_creative": 731.8472860680431,
+        "qwen3_5_flash": 707.4257364712126
+      },
+      "top": {
+        "model": "gpt_4_1",
+        "rating": 3506.8
+      },
+      "bottom": {
+        "model": "deepseek_v3_2",
+        "rating": -295.5
+      }
+    },
+    {
+      "seed": "adv_contradictory_lore_02",
+      "n_matchups": 21,
+      "mean": {
+        "claude_sonnet_4_5": 764.050534037459,
+        "deepseek_v3_2": 4687.502334821959,
+        "gemini_2_5_flash": -955.9542205090761,
+        "glm_4_7": -387.3104549082202,
+        "gpt_4_1": 2848.0633713131037,
+        "mistral_small_creative": 3371.824217622387,
+        "qwen3_5_flash": 171.8242176223872
+      },
+      "se": {
+        "claude_sonnet_4_5": 746.6885139736405,
+        "deepseek_v3_2": 910.3102877885226,
+        "gemini_2_5_flash": 926.3882014262972,
+        "glm_4_7": 843.1753438004835,
+        "gpt_4_1": 843.8879820770264,
+        "mistral_small_creative": 787.9111096842577,
+        "qwen3_5_flash": 782.2719496361461
+      },
+      "top": {
+        "model": "deepseek_v3_2",
+        "rating": 4687.5
+      },
+      "bottom": {
+        "model": "gemini_2_5_flash",
+        "rating": -956.0
+      }
+    },
+    {
+      "seed": "adv_passive_user_03",
+      "n_matchups": 21,
+      "mean": {
+        "claude_sonnet_4_5": 2686.7917970107737,
+        "deepseek_v3_2": 2939.833159541188,
+        "gemini_2_5_flash": 2982.655543969411,
+        "glm_4_7": -458.70698644421395,
+        "gpt_4_1": 2912.5825512686815,
+        "mistral_small_creative": -260.16684045881243,
+        "qwen3_5_flash": -302.98922488703624
+      },
+      "se": {
+        "claude_sonnet_4_5": 571.5065381573762,
+        "deepseek_v3_2": 632.96152766918,
+        "gemini_2_5_flash": 628.5469686414895,
+        "glm_4_7": 657.3444650475551,
+        "gpt_4_1": 801.1686630733119,
+        "mistral_small_creative": 693.6388634500394,
+        "qwen3_5_flash": 683.221828310374
+      },
+      "top": {
+        "model": "gemini_2_5_flash",
+        "rating": 2982.7
+      },
+      "bottom": {
+        "model": "glm_4_7",
+        "rating": -458.7
+      }
+    },
+    {
+      "seed": "adv_impossible_physics_04",
+      "n_matchups": 21,
+      "mean": {
+        "claude_sonnet_4_5": 3401.147835707371,
+        "deepseek_v3_2": 3703.180749550546,
+        "gemini_2_5_flash": 197.01747107361837,
+        "glm_4_7": 3892.661227123957,
+        "gpt_4_1": -2268.810215276818,
+        "mistral_small_creative": 692.6612271239569,
+        "qwen3_5_flash": 882.1417046973677
+      },
+      "se": {
+        "claude_sonnet_4_5": 852.099172039685,
+        "deepseek_v3_2": 868.4354157389326,
+        "gemini_2_5_flash": 832.8853364498439,
+        "glm_4_7": 937.6181453150814,
+        "gpt_4_1": 939.8270954371436,
+        "mistral_small_creative": 792.5412910631178,
+        "qwen3_5_flash": 735.4445326189922
+      },
+      "top": {
+        "model": "glm_4_7",
+        "rating": 3892.7
+      },
+      "bottom": {
+        "model": "gpt_4_1",
+        "rating": -2268.8
+      }
+    },
+    {
+      "seed": "adv_time_pressure_05",
+      "n_matchups": 21,
+      "mean": {
+        "claude_sonnet_4_5": 531.1581422692532,
+        "deepseek_v3_2": 3494.1211052322165,
+        "gemini_2_5_flash": 478.4832451499117,
+        "glm_4_7": 3849.6766607877717,
+        "gpt_4_1": 491.6519694297474,
+        "mistral_small_creative": 649.6766607877719,
+        "qwen3_5_flash": 1005.2322163433275
+      },
+      "se": {
+        "claude_sonnet_4_5": 718.6783765462044,
+        "deepseek_v3_2": 662.9902242888573,
+        "gemini_2_5_flash": 725.989141013149,
+        "glm_4_7": 675.5060640621845,
+        "gpt_4_1": 695.2494414315638,
+        "mistral_small_creative": 723.6061887644393,
+        "qwen3_5_flash": 693.6413054818372
+      },
+      "top": {
+        "model": "glm_4_7",
+        "rating": 3849.7
+      },
+      "bottom": {
+        "model": "gemini_2_5_flash",
+        "rating": 478.5
+      }
+    },
+    {
+      "seed": "adv_subtle_ooc_06",
+      "n_matchups": 21,
+      "mean": {
+        "claude_sonnet_4_5": 4367.489656031199,
+        "deepseek_v3_2": 2623.1416232248275,
+        "gemini_2_5_flash": -2178.443225620214,
+        "glm_4_7": -1737.4748829758935,
+        "gpt_4_1": 4059.2682526475464,
+        "mistral_small_creative": 1462.5251170241067,
+        "qwen3_5_flash": 1903.493459668427
+      },
+      "se": {
+        "claude_sonnet_4_5": 892.3705388662327,
+        "deepseek_v3_2": 765.7055052832836,
+        "gemini_2_5_flash": 848.3605369929857,
+        "glm_4_7": 824.0816986802537,
+        "gpt_4_1": 991.8312794363304,
+        "mistral_small_creative": 766.1920038767769,
+        "qwen3_5_flash": 845.5276990782781
+      },
+      "top": {
+        "model": "claude_sonnet_4_5",
+        "rating": 4367.5
+      },
+      "bottom": {
+        "model": "gemini_2_5_flash",
+        "rating": -2178.4
+      }
+    },
+    {
+      "seed": "adv_character_break_bait_07",
+      "n_matchups": 21,
+      "mean": {
+        "claude_sonnet_4_5": 2641.66043380703,
+        "deepseek_v3_2": 1602.9169783096477,
+        "gemini_2_5_flash": 848.9902767389669,
+        "glm_4_7": 1854.2258788332078,
+        "gpt_4_1": 2876.2154076290194,
+        "mistral_small_creative": -1262.0044876589386,
+        "qwen3_5_flash": 1937.9955123410614
+      },
+      "se": {
+        "claude_sonnet_4_5": 771.3355928498922,
+        "deepseek_v3_2": 731.5855504829335,
+        "gemini_2_5_flash": 665.5484035821662,
+        "glm_4_7": 673.6746348089772,
+        "gpt_4_1": 705.9264531041474,
+        "mistral_small_creative": 739.2083662619287,
+        "qwen3_5_flash": 715.4234561869732
+      },
+      "top": {
+        "model": "gpt_4_1",
+        "rating": 2876.2
+      },
+      "bottom": {
+        "model": "mistral_small_creative",
+        "rating": -1262.0
+      }
+    },
+    {
+      "seed": "adv_genre_shift_08",
+      "n_matchups": 21,
+      "mean": {
+        "claude_sonnet_4_5": 2764.1116639214815,
+        "deepseek_v3_2": 2626.5467841718873,
+        "gemini_2_5_flash": 1458.449791422571,
+        "glm_4_7": 1366.2749825949631,
+        "gpt_4_1": 3523.6980183729256,
+        "mistral_small_creative": -2219.5406202419163,
+        "qwen3_5_flash": 980.4593797580835
+      },
+      "se": {
+        "claude_sonnet_4_5": 997.4032460567706,
+        "deepseek_v3_2": 820.9967617084865,
+        "gemini_2_5_flash": 756.2426534311961,
+        "glm_4_7": 741.7630512081437,
+        "gpt_4_1": 776.4391918019018,
+        "mistral_small_creative": 961.4182063510597,
+        "qwen3_5_flash": 812.346213439711
+      },
+      "top": {
+        "model": "gpt_4_1",
+        "rating": 3523.7
+      },
+      "bottom": {
+        "model": "mistral_small_creative",
+        "rating": -2219.5
+      }
+    }
+  ],
+  "combined": {
+    "mean": {
+      "claude_sonnet_4_5": 1839.96,
+      "deepseek_v3_2": 1891.78,
+      "gemini_2_5_flash": 1361.85,
+      "glm_4_7": 1327.72,
+      "gpt_4_1": 1790.73,
+      "mistral_small_creative": 1110.35,
+      "qwen3_5_flash": 1240.5
+    },
+    "var": {
+      "claude_sonnet_4_5": 25785.92,
+      "deepseek_v3_2": 25504.68,
+      "gemini_2_5_flash": 25275.7,
+      "glm_4_7": 25177.59,
+      "gpt_4_1": 26210.26,
+      "mistral_small_creative": 25857.47,
+      "qwen3_5_flash": 25271.83
+    },
+    "std": {
+      "claude_sonnet_4_5": 160.58,
+      "deepseek_v3_2": 159.7,
+      "gemini_2_5_flash": 158.98,
+      "glm_4_7": 158.67,
+      "gpt_4_1": 161.9,
+      "mistral_small_creative": 160.8,
+      "qwen3_5_flash": 158.97
+    }
+  },
+  "leaderboard": [
+    {
+      "model": "deepseek_v3_2",
+      "rating": 1891.8,
+      "se": 735.8,
+      "std": 159.7,
+      "ci_95_lower": 1578.8,
+      "ci_95_upper": 2204.8,
+      "n_seeds": 8
+    },
+    {
+      "model": "claude_sonnet_4_5",
+      "rating": 1840.0,
+      "se": 773.7,
+      "std": 160.6,
+      "ci_95_lower": 1525.2,
+      "ci_95_upper": 2154.7,
+      "n_seeds": 8
+    },
+    {
+      "model": "gpt_4_1",
+      "rating": 1790.7,
+      "se": 658.3,
+      "std": 161.9,
+      "ci_95_lower": 1473.4,
+      "ci_95_upper": 2108.0,
+      "n_seeds": 8
+    },
+    {
+      "model": "gemini_2_5_flash",
+      "rating": 1361.8,
+      "se": 684.7,
+      "std": 159.0,
+      "ci_95_lower": 1050.2,
+      "ci_95_upper": 1673.5,
+      "n_seeds": 8
+    },
+    {
+      "model": "glm_4_7",
+      "rating": 1327.7,
+      "se": 678.1,
+      "std": 158.7,
+      "ci_95_lower": 1016.7,
+      "ci_95_upper": 1638.7,
+      "n_seeds": 8
+    },
+    {
+      "model": "qwen3_5_flash",
+      "rating": 1240.5,
+      "se": 707.4,
+      "std": 159.0,
+      "ci_95_lower": 928.9,
+      "ci_95_upper": 1552.1,
+      "n_seeds": 8
+    },
+    {
+      "model": "mistral_small_creative",
+      "rating": 1110.3,
+      "se": 731.8,
+      "std": 160.8,
+      "ci_95_lower": 795.2,
+      "ci_95_upper": 1425.5,
+      "n_seeds": 8
+    }
+  ],
+  "head_to_head": {
+    "deepseek_v3_2": {
+      "claude_sonnet_4_5": {
+        "frequentist_wr": 0.7,
+        "bayes_pwin": 0.5896,
+        "wins": 2,
+        "losses": 0,
+        "ties": 3,
+        "n": 5
+      },
+      "gpt_4_1": {
+        "frequentist_wr": 0.8,
+        "bayes_pwin": 0.6726,
+        "wins": 3,
+        "losses": 0,
+        "ties": 2,
+        "n": 5
+      },
+      "gemini_2_5_flash": {
+        "frequentist_wr": 0.9286,
+        "bayes_pwin": 0.9904,
+        "wins": 6,
+        "losses": 0,
+        "ties": 1,
+        "n": 7
+      },
+      "glm_4_7": {
+        "frequentist_wr": 0.8333,
+        "bayes_pwin": 0.9938,
+        "wins": 4,
+        "losses": 0,
+        "ties": 2,
+        "n": 6
+      },
+      "qwen3_5_flash": {
+        "frequentist_wr": 0.8125,
+        "bayes_pwin": 0.9981,
+        "wins": 5,
+        "losses": 0,
+        "ties": 3,
+        "n": 8
+      },
+      "mistral_small_creative": {
+        "frequentist_wr": 0.875,
+        "bayes_pwin": 0.9998,
+        "wins": 6,
+        "losses": 0,
+        "ties": 2,
+        "n": 8
+      }
+    },
+    "claude_sonnet_4_5": {
+      "deepseek_v3_2": {
+        "frequentist_wr": 0.75,
+        "bayes_pwin": 0.4103,
+        "wins": 3,
+        "losses": 0,
+        "ties": 3,
+        "n": 6
+      },
+      "gpt_4_1": {
+        "frequentist_wr": 0.8333,
+        "bayes_pwin": 0.5855,
+        "wins": 4,
+        "losses": 0,
+        "ties": 2,
+        "n": 6
+      },
+      "gemini_2_5_flash": {
+        "frequentist_wr": 0.875,
+        "bayes_pwin": 0.9827,
+        "wins": 6,
+        "losses": 0,
+        "ties": 2,
+        "n": 8
+      },
+      "glm_4_7": {
+        "frequentist_wr": 0.8333,
+        "bayes_pwin": 0.9881,
+        "wins": 4,
+        "losses": 0,
+        "ties": 2,
+        "n": 6
+      },
+      "qwen3_5_flash": {
+        "frequentist_wr": 0.8125,
+        "bayes_pwin": 0.9958,
+        "wins": 5,
+        "losses": 0,
+        "ties": 3,
+        "n": 8
+      },
+      "mistral_small_creative": {
+        "frequentist_wr": 0.9286,
+        "bayes_pwin": 0.9993,
+        "wins": 6,
+        "losses": 0,
+        "ties": 1,
+        "n": 7
+      }
+    },
+    "gpt_4_1": {
+      "deepseek_v3_2": {
+        "frequentist_wr": 0.8,
+        "bayes_pwin": 0.3269,
+        "wins": 3,
+        "losses": 0,
+        "ties": 2,
+        "n": 5
+      },
+      "claude_sonnet_4_5": {
+        "frequentist_wr": 0.75,
+        "bayes_pwin": 0.4158,
+        "wins": 2,
+        "losses": 0,
+        "ties": 2,
+        "n": 4
+      },
+      "gemini_2_5_flash": {
+        "frequentist_wr": 0.8571,
+        "bayes_pwin": 0.9702,
+        "wins": 5,
+        "losses": 0,
+        "ties": 2,
+        "n": 7
+      },
+      "glm_4_7": {
+        "frequentist_wr": 0.9167,
+        "bayes_pwin": 0.9794,
+        "wins": 5,
+        "losses": 0,
+        "ties": 1,
+        "n": 6
+      },
+      "qwen3_5_flash": {
+        "frequentist_wr": 0.8571,
+        "bayes_pwin": 0.9923,
+        "wins": 5,
+        "losses": 0,
+        "ties": 2,
+        "n": 7
+      },
+      "mistral_small_creative": {
+        "frequentist_wr": 0.8571,
+        "bayes_pwin": 0.9987,
+        "wins": 5,
+        "losses": 0,
+        "ties": 2,
+        "n": 7
+      }
+    },
+    "gemini_2_5_flash": {
+      "deepseek_v3_2": {
+        "frequentist_wr": 0.75,
+        "bayes_pwin": 0.009,
+        "wins": 1,
+        "losses": 0,
+        "ties": 1,
+        "n": 2
+      },
+      "claude_sonnet_4_5": {
+        "frequentist_wr": 0.5,
+        "bayes_pwin": 0.0173,
+        "wins": 0,
+        "losses": 0,
+        "ties": 2,
+        "n": 2
+      },
+      "gpt_4_1": {
+        "frequentist_wr": 0.6667,
+        "bayes_pwin": 0.0292,
+        "wins": 1,
+        "losses": 0,
+        "ties": 2,
+        "n": 3
+      },
+      "glm_4_7": {
+        "frequentist_wr": 0.75,
+        "bayes_pwin": 0.5596,
+        "wins": 2,
+        "losses": 0,
+        "ties": 2,
+        "n": 4
+      },
+      "qwen3_5_flash": {
+        "frequentist_wr": 0.7,
+        "bayes_pwin": 0.7068,
+        "wins": 2,
+        "losses": 0,
+        "ties": 3,
+        "n": 5
+      },
+      "mistral_small_creative": {
+        "frequentist_wr": 0.8333,
+        "bayes_pwin": 0.8666,
+        "wins": 4,
+        "losses": 0,
+        "ties": 2,
+        "n": 6
+      }
+    },
+    "glm_4_7": {
+      "deepseek_v3_2": {
+        "frequentist_wr": 0.75,
+        "bayes_pwin": 0.0064,
+        "wins": 2,
+        "losses": 0,
+        "ties": 2,
+        "n": 4
+      },
+      "claude_sonnet_4_5": {
+        "frequentist_wr": 0.75,
+        "bayes_pwin": 0.0115,
+        "wins": 2,
+        "losses": 0,
+        "ties": 2,
+        "n": 4
+      },
+      "gpt_4_1": {
+        "frequentist_wr": 0.8333,
+        "bayes_pwin": 0.0203,
+        "wins": 2,
+        "losses": 0,
+        "ties": 1,
+        "n": 3
+      },
+      "gemini_2_5_flash": {
+        "frequentist_wr": 0.8333,
+        "bayes_pwin": 0.4407,
+        "wins": 4,
+        "losses": 0,
+        "ties": 2,
+        "n": 6
+      },
+      "qwen3_5_flash": {
+        "frequentist_wr": 0.6429,
+        "bayes_pwin": 0.6524,
+        "wins": 2,
+        "losses": 0,
+        "ties": 5,
+        "n": 7
+      },
+      "mistral_small_creative": {
+        "frequentist_wr": 0.8333,
+        "bayes_pwin": 0.8331,
+        "wins": 4,
+        "losses": 0,
+        "ties": 2,
+        "n": 6
+      }
+    },
+    "qwen3_5_flash": {
+      "deepseek_v3_2": {
+        "frequentist_wr": 0.5,
+        "bayes_pwin": 0.0019,
+        "wins": 0,
+        "losses": 0,
+        "ties": 3,
+        "n": 3
+      },
+      "claude_sonnet_4_5": {
+        "frequentist_wr": 0.5,
+        "bayes_pwin": 0.0039,
+        "wins": 0,
+        "losses": 0,
+        "ties": 3,
+        "n": 3
+      },
+      "gpt_4_1": {
+        "frequentist_wr": 0.6667,
+        "bayes_pwin": 0.0078,
+        "wins": 1,
+        "losses": 0,
+        "ties": 2,
+        "n": 3
+      },
+      "gemini_2_5_flash": {
+        "frequentist_wr": 0.75,
+        "bayes_pwin": 0.2943,
+        "wins": 3,
+        "losses": 0,
+        "ties": 3,
+        "n": 6
+      },
+      "glm_4_7": {
+        "frequentist_wr": 0.5833,
+        "bayes_pwin": 0.3469,
+        "wins": 1,
+        "losses": 0,
+        "ties": 5,
+        "n": 6
+      },
+      "mistral_small_creative": {
+        "frequentist_wr": 0.6429,
+        "bayes_pwin": 0.7161,
+        "wins": 2,
+        "losses": 0,
+        "ties": 5,
+        "n": 7
+      }
+    },
+    "mistral_small_creative": {
+      "deepseek_v3_2": {
+        "frequentist_wr": 0.5,
+        "bayes_pwin": 0.0003,
+        "wins": 0,
+        "losses": 0,
+        "ties": 2,
+        "n": 2
+      },
+      "claude_sonnet_4_5": {
+        "frequentist_wr": 0.75,
+        "bayes_pwin": 0.0006,
+        "wins": 1,
+        "losses": 0,
+        "ties": 1,
+        "n": 2
+      },
+      "gpt_4_1": {
+        "frequentist_wr": 0.6667,
+        "bayes_pwin": 0.0013,
+        "wins": 1,
+        "losses": 0,
+        "ties": 2,
+        "n": 3
+      },
+      "gemini_2_5_flash": {
+        "frequentist_wr": 0.75,
+        "bayes_pwin": 0.1328,
+        "wins": 2,
+        "losses": 0,
+        "ties": 2,
+        "n": 4
+      },
+      "glm_4_7": {
+        "frequentist_wr": 0.75,
+        "bayes_pwin": 0.1678,
+        "wins": 2,
+        "losses": 0,
+        "ties": 2,
+        "n": 4
+      },
+      "qwen3_5_flash": {
+        "frequentist_wr": 0.5833,
+        "bayes_pwin": 0.282,
+        "wins": 1,
+        "losses": 0,
+        "ties": 5,
+        "n": 6
+      }
+    }
+  }
+}
