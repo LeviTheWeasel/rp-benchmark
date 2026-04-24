@@ -405,7 +405,14 @@ def run_multiturn_benchmark(
                     "error": str(e),
                 })
 
-    # Save
+            # Save incrementally so progress is visible and work
+            # isn't lost if the process crashes mid-run.
+            RESULTS_DIR.mkdir(exist_ok=True)
+            partial_path = RESULTS_DIR / ("multiturn_%s.json" % run_id)
+            with open(partial_path, "w") as f:
+                json.dump(results, f, indent=2, ensure_ascii=False)
+
+    # Final save (same path — last incremental write is the final one)
     RESULTS_DIR.mkdir(exist_ok=True)
     out_path = RESULTS_DIR / ("multiturn_%s.json" % run_id)
     with open(out_path, "w") as f:
