@@ -112,7 +112,11 @@ def load_seeds(adversarial: bool = False) -> list[dict]:
         adversarial: If True, load adversarial seeds instead of standard seeds.
     """
     filename = "adversarial_seeds.json" if adversarial else "seeds.json"
-    seeds_path = PROJECT_ROOT / "hf_dataset" / "seeds" / filename
+    # Seeds live in _source/ (moved there to avoid HF dataset viewer conflicts)
+    seeds_path = PROJECT_ROOT / "hf_dataset" / "_source" / filename
+    if not seeds_path.exists():
+        # Fallback to old location
+        seeds_path = PROJECT_ROOT / "hf_dataset" / "seeds" / filename
     with open(seeds_path) as f:
         return json.load(f)
 
