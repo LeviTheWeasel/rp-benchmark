@@ -31,6 +31,15 @@ TEST_MODELS = {
     "qwen3_5_flash": "qwen/qwen3.5-flash-02-23",
     "mistral_small_creative": "mistralai/mistral-small-creative",
     "llama_4_maverick": "meta-llama/llama-4-maverick",
+    # 2026-04-24: next-gen roster for the v2/v3 seed comparison
+    "claude_opus_4_7": "anthropic/claude-opus-4.7",
+    "deepseek_v4_pro": "deepseek/deepseek-v4-pro",
+    "deepseek_v4_flash": "deepseek/deepseek-v4-flash",
+    "glm_5_1": "z-ai/glm-5.1",
+    "gemini_3_1_pro": "google/gemini-3.1-pro-preview",
+    "gemini_3_1_flash_lite": "google/gemini-3.1-flash-lite-preview",
+    "kimi_k2_5": "moonshotai/kimi-k2.5",
+    "kimi_k2_6": "moonshotai/kimi-k2.6",
 }
 
 # Generation settings for test models

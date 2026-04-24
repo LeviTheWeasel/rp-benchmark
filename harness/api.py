@@ -88,7 +88,11 @@ def chat_completion(
             resp.raise_for_status()
             data = resp.json()
 
-            content = data["choices"][0]["message"]["content"]
+            # Reasoning models can leave content=None when their internal
+            # thinking exhausts max_tokens. Treat that as an empty response
+            # so callers can decide what to do (skip / retry with higher
+            # budget) instead of crashing on .strip() downstream.
+            content = data["choices"][0]["message"].get("content") or ""
             return {
                 "content": content,
                 "model": data.get("model", model),
