@@ -66,27 +66,27 @@ The LLM-as-judge signals in this benchmark disagree with real users about half t
 
 ## Community Leaderboard (human-voted ELO) 🎯
 
-**The headline signal.** Based on 910 pairwise votes from 162 community voters in our public calibration arena at [arena.l3vi4th4n.ai](https://arena.l3vi4th4n.ai/arena). Suspect voters filtered via catch-pair calibration. Covers 271 matchups at median 3 votes per pair.
+**The headline signal.** Based on 1,857 pairwise votes from 338 community voters in our public calibration arena at [arena.l3vi4th4n.ai](https://arena.l3vi4th4n.ai/arena). Suspect voters filtered via catch-pair calibration (pass rate 75%). Covers 271 matchups at median 7 votes per pair.
 
 | Rank | Model | ELO | ± | SFW | NSFW |
 |------|-------|-----|---|-----|------|
-| **#1** | **Gemma 4 26B** | **1546** | 39 | 56% | 59% |
-| **#2** | **Gemini 2.5 Flash** | **1539** | 42 | 57% | 52% |
-| #3 | Mistral Small Creative | 1517 | 42 | 49% | 61% |
-| #4 | GPT-4.1 | 1509 | 41 | 49% | 52% |
-| #5 | Grok 4.1 | 1507 | 48 | 49% | 57% |
-| #6 | Claude Sonnet 4.5 | 1497 | 39 | 50% | 45% |
-| #7 | Qwen 3.5 Flash | 1496 | 46 | 53% | 42% |
-| #8 | GLM 4.7 | 1483 | 41 | 44% | 56% |
-| #9 | DeepSeek v3.2 | 1479 | 35 | 50% | 33% |
-| #10 | MiniMax M2.7 | 1473 | 40 | 51% | 34% |
-| #11 | Llama 4 Maverick | 1453 | 42 | 45% | 38% |
+| **#1** | **Gemma 4 26B** | **1535** | 44 | 55% | 51% |
+| **#2** | **Mistral Small Creative** | **1526** | 50 | 51% | 67% |
+| **#3** | **Gemini 2.5 Flash** | **1515** | 48 | 53% | 54% |
+| #4 | MiniMax M2.7 | 1510 | 48 | 54% | 45% |
+| #5 | Grok 4.1 | 1506 | 47 | 50% | 52% |
+| #6 | Claude Sonnet 4.5 | 1506 | 45 | 51% | 51% |
+| #7 | DeepSeek v3.2 | 1489 | 45 | 51% | 30% |
+| #8 | Qwen 3.5 Flash | 1487 | 47 | 48% | 42% |
+| #9 | GLM 4.7 | 1483 | 43 | 46% | 48% |
+| #10 | Llama 4 Maverick | 1473 | 42 | 47% | 34% |
+| #11 | GPT-4.1 | 1470 | 44 | 43% | 46% |
 
-Top-2 tier (Gemma, Gemini) is statistically separated from the rest. Bottom-3 tier (MiniMax, DeepSeek, Llama) is also clearly separated downward. Middle cluster (#3–#8) is within shared error bars.
+Top-3 tier (Gemma, Mistral, Gemini) is statistically separated from the rest and has been stable across six consecutive snapshots (540–2,000 votes). GPT-4.1 settled to last — it was #4 at 1,000 votes on a small sample, then dropped as data grew.
 
-**Key finding — community and LLM judges disagree systematically:** Gemma 4 26B (not in the LLM-judge leaderboards at all) tops community voting. Gemini 2.5 Flash jumps from LLM-rank #6 to community-rank #2. Claude Sonnet 4.5 drops from LLM-rank #3 to community-rank #6. DeepSeek drops from LLM-rank #2 to community-rank #9. This divergence is the whole reason the calibration campaign exists — LLM-as-judge measures what judges aesthetically prefer, not what users prefer.
+**Key finding — community and LLM judges disagree systematically:** Gemma 4 26B (not in the LLM-judge pool at all) tops community voting. Mistral Small Creative jumps from LLM-rank #7 to community-rank #2. GPT-4.1 drops from LLM-rank #4 to community dead last. The divergence is reproducible and stable — LLM-as-judge measures what judges aesthetically prefer, not what users prefer.
 
-Raw data: `results/community_arena_1000.json` in the source repo.
+Raw data: `results/community_arena_2000.json` in the source repo.
 
 ## LLM-Judge Leaderboards
 

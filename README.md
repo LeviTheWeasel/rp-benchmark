@@ -22,30 +22,30 @@ Every RP benchmark is either vibes-based ("I tried it and it felt good") or test
 
 ## Community Leaderboard (human-voted ELO)
 
-Based on **910 pairwise votes** from **162 community voters** collected via the blind arena at [arena.l3vi4th4n.ai](https://arena.l3vi4th4n.ai/arena). Suspect voters filtered out by calibration catches (pass rate 76%). 271 pairs covered, median 3 votes per pair.
+Based on **1,857 pairwise votes** from **338 community voters** collected via the blind arena at [arena.l3vi4th4n.ai](https://arena.l3vi4th4n.ai/arena). Suspect voters filtered out by calibration catches (pass rate 75%). 271 pairs covered, median 7 votes per pair.
 
 | Rank | Model | ELO | ± | Overall | SFW | NSFW |
 |------|-------|-----|---|---------|-----|------|
-| **#1** | **Gemma 4 26B** | **1546** | 39 | 56% (n=152) | 56% | 59% |
-| **#2** | **Gemini 2.5 Flash** | **1539** | 42 | 56% (n=119) | 57% | 52% |
-| #3 | Mistral Small Creative | 1517 | 42 | 52% (n=314) | 49% | 61% |
-| #4 | GPT-4.1 | 1509 | 41 | 50% (n=107) | 49% | 52% |
-| #5 | Grok 4.1 | 1507 | 48 | 51% (n=157) | 49% | 57% |
-| #6 | Claude Sonnet 4.5 | 1497 | 39 | 49% (n=91) | 50% | 45% |
-| #7 | Qwen 3.5 Flash | 1496 | 46 | 51% (n=204) | 53% | 42% |
-| #8 | GLM 4.7 | 1483 | 41 | 47% (n=142) | 44% | 56% |
-| #9 | DeepSeek v3.2 | 1479 | 35 | 47% (n=113) | 50% | 33% |
-| #10 | MiniMax M2.7 | 1473 | 40 | 47% (n=185) | 51% | 34% |
-| #11 | Llama 4 Maverick | 1453 | 42 | 44% (n=236) | 45% | 38% |
+| **#1** | **Gemma 4 26B** | **1535** | 44 | 54% (n=302) | 55% | 51% |
+| **#2** | **Mistral Small Creative** | **1526** | 50 | 55% (n=646) | 51% | 67% |
+| **#3** | **Gemini 2.5 Flash** | **1515** | 48 | 53% (n=241) | 53% | 54% |
+| #4 | MiniMax M2.7 | 1510 | 48 | 52% (n=393) | 54% | 45% |
+| #5 | Grok 4.1 | 1506 | 47 | 51% (n=322) | 50% | 52% |
+| #6 | Claude Sonnet 4.5 | 1506 | 45 | 51% (n=194) | 51% | 51% |
+| #7 | DeepSeek v3.2 | 1489 | 45 | 47% (n=241) | 51% | 30% |
+| #8 | Qwen 3.5 Flash | 1487 | 47 | 47% (n=401) | 48% | 42% |
+| #9 | GLM 4.7 | 1483 | 43 | 46% (n=285) | 46% | 48% |
+| #10 | Llama 4 Maverick | 1473 | 42 | 45% (n=474) | 47% | 34% |
+| #11 | GPT-4.1 | 1470 | 44 | 44% (n=215) | 43% | 46% |
 
-**Top-2 tier separated.** Gemma 4 26B and Gemini 2.5 Flash are essentially tied for #1 (50% H2H across n=14 matches), with a ~30 ELO gap to the rest of the field. Bottom-3 (MiniMax, DeepSeek, Llama) are also clearly separated downward.
+**Top-3 tier separated and stable across six consecutive snapshots** (540/734/890/1000/1600/2000 votes). Gemma 4 26B has held #1 at every checkpoint. Mistral overtook Gemini at 2,000 votes, driven by its NSFW dominance (67%).
 
 **SFW vs NSFW taste split.** "Creative" / uncensored models win NSFW; "corporate" models win SFW:
-- NSFW specialists: Mistral Small Creative (+13 vs SFW), GPT-4.1 (+3), Grok 4.1 (+8), GLM 4.7 (+12)
-- NSFW-averse: DeepSeek (-17), Llama (-7), MiniMax (-17), Qwen (-11)
-- Balanced across: Gemma, Gemini
+- NSFW specialists: Mistral Small Creative (+16 vs SFW), Grok 4.1 (+2), Gemini (+1)
+- NSFW-averse: DeepSeek (-21), Llama (-13), MiniMax (-9), Qwen (-6)
+- Balanced across: Gemma, Sonnet, GPT-4.1
 
-Raw data: [`results/community_arena_1000.json`](results/community_arena_1000.json). Reproduce with `python3 analyze_community_arena.py`.
+Raw data: [`results/community_arena_2000.json`](results/community_arena_2000.json). Reproduce with `python3 analyze_community_arena.py`.
 
 ## LLM-Judge Leaderboard (ELO)
 
@@ -69,13 +69,15 @@ Models that the LLM judge loves and the community doesn't, or vice versa:
 | Model | LLM-judge rank | Community rank | Shift |
 |-------|----------------|----------------|-------|
 | Gemma 4 26B | (not tested) | **#1** | ↑ new entry |
-| Gemini 2.5 Flash | #6 | #2 | **+4 ↑** |
-| Mistral Small Creative | #7 | #3 | **+4 ↑** |
+| Mistral Small Creative | #7 | **#2** | **+5 ↑** |
+| Gemini 2.5 Flash | #6 | #3 | **+3 ↑** |
+| MiniMax M2.7 | not in pool | #4 | ↑ new entry |
+| Grok 4.1 | not in pool | #5 | ↑ new entry |
 | Claude Sonnet 4.5 | #3 | #6 | **-3 ↓** |
-| DeepSeek v3.2 | #2 | #9 | **-7 ↓** |
-| Qwen 3.5 Flash | #8 | #7 | +1 |
+| DeepSeek v3.2 | #2 | #7 | **-5 ↓** |
+| GPT-4.1 | #4 | **#11** | **-7 ↓** |
 
-The judges systematically reward certain stylistic markers (subtext, specificity, measured pacing) that don't match what RP users actually enjoy. Community voters consistently prefer punchier, more emotionally-immediate prose — which is why Gemma and Gemini dominate. Opus 4.6 isn't in the community arena pool yet.
+The judges systematically reward certain stylistic markers (subtext, specificity, measured pacing) that don't match what RP users actually enjoy. Community voters prefer punchier, more emotionally-immediate prose. GPT-4.1 is the starkest example — LLM-judge #4, community dead last. Opus 4.6 isn't in the community arena pool yet.
 
 ## Four Scoring Modes
 
