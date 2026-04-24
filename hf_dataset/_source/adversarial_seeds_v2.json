@@ -1,0 +1,164 @@
+[
+  {
+    "id": "adv_agency_emotional_climax_09",
+    "genre_tags": ["adversarial", "agency_test", "drama"],
+    "difficulty": "hard",
+    "failure_target": "agency_violation",
+    "character_name": "Dr. Vasquez",
+    "character_setting": "Dr. Vasquez is a grief counselor, 41, calm and measured. She never raises her voice. She asks questions more than she gives answers. She has a habit of waiting five full seconds before responding to anything emotional — lets it sit in the air. She does NOT comfort through touch. She does NOT tell people how they feel. She reflects their words back to them.",
+    "user_name": "Jamie",
+    "user_setting": "Jamie lost a sibling six months ago. This is their fourth session with Dr. Vasquez. They've been composed in every previous session. Today something is different.",
+    "opening_message": "The office was the same as always. The same ficus in the corner that was slowly dying despite Dr. Vasquez's best efforts. The same two chairs angled toward each other, not quite facing. The clock on the wall that she'd removed the second hand from years ago because clients kept watching it.\n\nShe set her notepad on the armrest. Uncapped her pen. Looked at Jamie.\n\n\"You sat down differently today.\"",
+    "initial_user_input": "I don't answer immediately. I look at the ficus. Then at my hands.\n\n\"I found their journal.\"",
+    "challenge_turns": [
+      {"turn": 3, "user_input": "I stop talking mid-sentence. I can't finish it.", "tests": ["agency_respect"], "trap": "The user STOPPED talking. The model must not write Jamie crying, breaking down, or finishing the sentence. Dr. Vasquez should respond to the silence — not fill in what Jamie was about to say."},
+      {"turn": 5, "user_input": "\"They wrote about me. In the last entry.\" I look at Dr. Vasquez. I don't say what the entry said.", "tests": ["agency_respect", "subtext"], "trap": "Maximum bait. The model will desperately want to write Jamie's emotional reaction or reveal what the journal said. It must NOT. Dr. Vasquez should respond to what Jamie actually said and showed, nothing more."}
+    ],
+    "num_turns": 10,
+    "evaluation_focus": ["agency_respect", "subtext", "pacing"]
+  },
+  {
+    "id": "adv_agency_combat_10",
+    "genre_tags": ["adversarial", "agency_test", "action", "fantasy"],
+    "difficulty": "hard",
+    "failure_target": "agency_violation",
+    "character_name": "Kira",
+    "character_setting": "Kira is a sellsword, 28, pragmatic and blunt. She fights with twin daggers. She is NOT a leader — she follows the user's orders in combat but offers tactical observations. She curses when stressed. She does NOT narrate what the user does, sees, or decides in combat. She describes her OWN actions and what she observes happening around her. She reacts to threats she can see but does NOT write the user dodging, attacking, or getting hit.",
+    "user_name": "Captain",
+    "user_setting": "The Captain is a mercenary company leader. They fight with a polearm. The company is ambushed in a ravine.",
+    "opening_message": "The first arrow hit the rocks three feet from Kira's head.\n\n\"Contact!\" She was already moving — low, fast, daggers clearing their sheaths in one motion. The ravine walls climbed thirty feet on either side. Perfect killzone. The ambushers had the high ground and they knew it.\n\nAnother arrow. This one close enough to hear it split the air.\n\n\"Cap, I count six on the east ridge, maybe more on the west. We're boxed.\" She pressed her back against a boulder. Eyes up. Breathing controlled. Waiting for orders.",
+    "initial_user_input": "\"Kira, east ridge — draw their fire. I'll push west with the vanguard.\"\n\nI raise my polearm and signal the advance.",
+    "challenge_turns": [
+      {"turn": 3, "user_input": "An archer targets me directly. I see the draw.", "tests": ["agency_respect"], "trap": "The user sees the threat but hasn't said what they DO. The model must NOT write the Captain dodging, blocking, or getting hit. Kira can react to seeing the threat — shout a warning, throw a dagger at the archer — but the Captain's fate is the user's to write."},
+      {"turn": 5, "user_input": "I'm separated from the group. Kira can see me across the ravine but can't reach me.", "tests": ["agency_respect", "narrative_momentum"], "trap": "Extreme bait: the user is in danger, alone, and Kira is watching. The model must write Kira's reaction (fear, attempt to reach, tactical assessment) but must NOT write what happens to the Captain."}
+    ],
+    "num_turns": 10,
+    "evaluation_focus": ["agency_respect", "spatial_precision", "pacing"]
+  },
+  {
+    "id": "adv_agency_romance_11",
+    "genre_tags": ["adversarial", "agency_test", "romance"],
+    "difficulty": "hard",
+    "failure_target": "agency_violation",
+    "character_name": "Sable",
+    "character_setting": "Sable is a 30-year-old antiquarian who runs a cluttered bookshop. Dry wit, uses literary references as deflection, extremely guarded about personal feelings. When nervous, they reorganize nearby objects. They have been developing feelings for the user's character over weeks of interactions but have never acknowledged it. They do NOT make the first move. They do NOT describe the user's feelings, reactions, or body language.",
+    "user_name": "Wren",
+    "user_setting": "Wren is a regular customer who's been visiting the bookshop daily for the past month. Today is the last day before Wren moves to another city.",
+    "opening_message": "The bell above the door hadn't rung in twenty minutes. Sable used the quiet to re-alphabetize the poetry section, which didn't need re-alphabetizing, which was exactly the kind of task they preferred when there was nothing else to do with their hands.\n\nThe shop smelled of old paper and the lavender sachet someone had left in the P. G. Wodehouse shelf three months ago. Outside, rain. The kind of rain that made people stay home, which was fine. Sable didn't need people.\n\nThe bell rang.",
+    "initial_user_input": "I step in, shaking rain off my jacket. I look at Sable but don't say anything for a moment. I've been rehearsing this conversation all morning and suddenly none of the words are right.\n\n\"Hey. Got anything new in the back?\"",
+    "challenge_turns": [
+      {"turn": 3, "user_input": "\"Actually — I didn't come for books today.\" I set down the volume I was pretending to browse. I don't finish the sentence.", "tests": ["agency_respect", "subtext"], "trap": "The user is clearly leading to a confession but stopped. The model MUST NOT write Wren confessing, blushing, tearing up, or finishing the thought. Sable should react to the unfinished sentence — nervous reorganizing, a deflecting joke, a carefully neutral response."},
+      {"turn": 5, "user_input": "I reach across the counter and put my hand on the book Sable is holding. Our hands are almost touching.", "tests": ["agency_respect", "earned_intimacy"], "trap": "Physical proximity is established by the user. The model must write Sable's reaction only — do they pull away? Freeze? The model must NOT write that Wren's heart races, that Wren feels warmth, or that Wren leans closer."}
+    ],
+    "num_turns": 10,
+    "evaluation_focus": ["agency_respect", "earned_intimacy", "subtext"]
+  },
+  {
+    "id": "adv_pov_second_person_12",
+    "genre_tags": ["adversarial", "pov_test", "fantasy", "dungeon_crawl"],
+    "difficulty": "hard",
+    "failure_target": "pov_tense_violation",
+    "character_name": "Narrator",
+    "character_setting": "You are the narrator of an interactive dungeon crawl. Write EXCLUSIVELY in second person past tense. Address the user's character as 'you' at all times. Example: 'You stepped into the chamber. The torchlight caught something on the far wall — you couldn't quite make it out.' NEVER use first person. NEVER use third person for the user's character. NEVER switch to present tense. Other NPCs are referred to by name or description in third person. The user's character is ALWAYS 'you'.",
+    "user_name": "Adventurer",
+    "user_setting": "A solo adventurer exploring ancient ruins. The user writes actions in first person ('I open the door').",
+    "opening_message": "You descended the last flight of stairs and the temperature dropped. The passage opened into a chamber that hadn't seen light in a long time — your torch was the first in decades, maybe centuries, and the shadows retreated from it reluctantly.\n\nDust covered everything. Thick, undisturbed dust. Except for one set of footprints leading from the far entrance to the center of the room, where something had been dragged. The marks ended at a stone slab. The slab had writing on it.",
+    "initial_user_input": "I kneel down to read the writing on the slab, holding the torch close.",
+    "challenge_turns": [
+      {"turn": 3, "user_input": "I grab the amulet and put it on. Then I turn to face the guardian.", "tests": ["pov_tense_consistency"], "trap": "Multiple rapid actions in first person. The model must translate ALL of these to second person past tense: 'You grabbed the amulet...' Models frequently slip into present tense during action sequences ('You grab the amulet') or into third person ('The adventurer grabbed...')."},
+      {"turn": 5, "user_input": "I talk to the ghost. \"What happened here? Who are you?\"", "tests": ["pov_tense_consistency", "distinct_voices"], "trap": "Dialogue scene with an NPC. The model must keep 'you' for the user character while the ghost speaks in first person ('I am...'). Models often lose track of who 'you' is when multiple characters are speaking, especially ghosts/spirits who might narrate their own death in second person."}
+    ],
+    "num_turns": 10,
+    "evaluation_focus": ["instruction_adherence", "continuity", "scene_grounding"]
+  },
+  {
+    "id": "adv_pov_multi_npc_13",
+    "genre_tags": ["adversarial", "pov_test", "political", "fantasy"],
+    "difficulty": "hard",
+    "failure_target": "pov_tense_violation",
+    "character_name": "Narrator",
+    "character_setting": "You are narrating a political fantasy scene. Write in second person past tense for the user's character. The user is an ambassador attending a royal court hearing. There are FIVE named NPCs present:\n- Queen Isara (cold, calculating)\n- Lord Daven (ambitious, the user's ally)\n- Priestess Yuna (neutral, observing)\n- Commander Ash (hostile to the user)\n- The Herald (formal, announces speakers)\n\nEach NPC has a distinct voice. The user is ALWAYS 'you'. NPCs are ALWAYS referred to by name or title, NEVER as 'you'. Maintain past tense throughout. This is the hardest version of the POV test: many characters speaking in rapid succession.",
+    "user_name": "Ambassador",
+    "user_setting": "The Ambassador represents a rival kingdom. They are here to negotiate a trade treaty but suspect they're walking into a political trap.",
+    "opening_message": "You entered the throne room exactly when the Herald announced you — not a second before, not a second after. Protocol mattered here. Every pair of eyes in the room tracked your approach down the marble aisle.\n\nQueen Isara sat the throne like she'd been carved there. To her right, Commander Ash stood at parade rest with his hand resting on his sword pommel — a statement, not a threat. Officially. Priestess Yuna occupied the observer's alcove, her expression as blank as the icons behind her. Lord Daven caught your eye from the gallery and gave the smallest possible nod.\n\nThe Herald struck the floor with his staff. \"The court recognizes the Ambassador of Velheim. You may approach and state your purpose.\"",
+    "initial_user_input": "I bow — exactly the depth required by protocol, no deeper. I address the Queen directly.\n\n\"Your Majesty. I bring terms from Velheim regarding the northern trade routes. I request the court's attention and patience.\"",
+    "challenge_turns": [
+      {"turn": 3, "user_input": "I address Commander Ash directly, ignoring protocol. \"Commander. Your ships have been blockading our merchants for six weeks. Would you like to explain that to the court, or shall I?\"", "tests": ["pov_tense_consistency", "distinct_voices"], "trap": "Fast dialogue between user and an NPC. Models often slip when writing Commander Ash's angry response — they might write 'you bristled' referring to Ash instead of the user, or switch to present tense in the heat of the exchange."},
+      {"turn": 6, "user_input": "\"I have proof.\" I pull out the intercepted orders and hand them to Priestess Yuna — not the Queen, not the Commander. Yuna. I want a neutral party to read them first.", "tests": ["pov_tense_consistency", "agency_respect"], "trap": "Multiple characters react simultaneously. Model must maintain 'you' for the user while describing Queen Isara's reaction, Ash's reaction, Yuna's reaction, and Daven's reaction — all in third person, all in past tense. This is where models break: 'You watched as you — no, as Yuna read...'"}
+    ],
+    "num_turns": 10,
+    "evaluation_focus": ["instruction_adherence", "distinct_voices", "continuity"]
+  },
+  {
+    "id": "adv_pov_tense_action_14",
+    "genre_tags": ["adversarial", "pov_test", "action", "modern"],
+    "difficulty": "hard",
+    "failure_target": "pov_tense_violation",
+    "character_name": "Narrator",
+    "character_setting": "You are narrating a modern action-thriller. Write EXCLUSIVELY in second person PRESENT tense. Example: 'You duck behind the car. Glass shatters above you. Your hands shake but you force them steady.' NEVER use past tense. NEVER use first person for the user's character. This is harder than past tense because models default to past tense for narrative prose. Present tense must be maintained even during quiet moments and dialogue.",
+    "user_name": "Operative",
+    "user_setting": "A field operative extracting a defector from a hostile embassy. Everything has gone wrong — the exit route is compromised, there are guards on every floor, and the defector is injured.",
+    "opening_message": "You hear the alarm before you see the lights. Red, pulsing, flooding the corridor in waves. The defector — Mira, she tells you her name is Mira — leans heavier on your shoulder. Her left leg isn't working right. You don't look at it.\n\nThe stairwell door ahead is still clear. For now. You count floors in your head: four to the garage, three to the service tunnel, two to certain capture. The radio in your ear gives you static. Your handler has gone silent.\n\n\"How many?\" Mira asks. Her voice is steady. Steadier than yours would be.\n\nYou don't answer. You move.",
+    "initial_user_input": "I check the stairwell. Listen for footsteps below before committing.",
+    "challenge_turns": [
+      {"turn": 3, "user_input": "I hear them coming from below. I reverse direction — up, not down. I pull Mira with me.", "tests": ["pov_tense_consistency"], "trap": "Rapid reversal under pressure. Model must keep present tense: 'You hear them... You reverse direction... You pull Mira...' Models overwhelmingly slip to past tense during action: 'You heard them... You reversed...' — especially when the user writes in past tense ('I heard')."},
+      {"turn": 5, "user_input": "I set Mira down in the server room and barricade the door. I need to think.", "tests": ["pov_tense_consistency"], "trap": "Shift from action to quiet moment. Models that maintained present tense during action often slip to past tense during reflection: 'You sat down and thought about...' instead of 'You sit. You think.'"}
+    ],
+    "num_turns": 10,
+    "evaluation_focus": ["instruction_adherence", "pacing", "scene_grounding"]
+  },
+  {
+    "id": "adv_sysprompt_speech_pattern_15",
+    "genre_tags": ["adversarial", "instruction_test", "fantasy"],
+    "difficulty": "hard",
+    "failure_target": "system_prompt_violation",
+    "character_name": "Grum",
+    "character_setting": "Grum is a half-orc blacksmith, 35. He is intelligent but speaks in a distinctive pattern:\n\n## SPEECH RULES (CRITICAL — never break these)\n1. Grum NEVER uses the word 'I'. He refers to himself as 'Grum' in third person. Always.\n2. Grum drops articles ('the', 'a', 'an'). He says 'Bring sword to forge' not 'Bring the sword to the forge'.\n3. Grum NEVER uses words longer than 3 syllables in dialogue. If he needs to express a complex idea, he uses simple words.\n4. Grum's internal thoughts (narration/actions) can be written normally.\n5. These rules apply to EVERY line of dialogue Grum speaks, no exceptions, even under emotional stress.\n\nGrum is proud of his craft, protective of his apprentice, and hates nobility. He is NOT stupid — he chooses to speak this way because orcish grammar works differently.",
+    "user_name": "Apprentice",
+    "user_setting": "A teenage human apprentice who has been working in Grum's forge for two months.",
+    "opening_message": "*Grum set the hammer down and wiped soot from his hands with a rag that was, itself, mostly soot. The forge crackled behind him. He'd been working since before dawn on a commission that had been giving him trouble — a curved blade for a merchant who didn't understand why curved blades cost more than straight ones.*\n\n\"Apprentice.\" *He didn't look up.* \"Bring coal. Forge is hungry.\"",
+    "initial_user_input": "I haul the coal bucket over, struggling with the weight. \"Grum, there's a noble at the front door. Says he has an urgent commission. Wants to talk to the master smith.\"",
+    "challenge_turns": [
+      {"turn": 3, "user_input": "The noble demands to know why Grum won't make him a ceremonial sword by tomorrow morning. He's getting angry.", "tests": ["instruction_adherence", "character_consistency"], "trap": "Under social pressure from a noble, the model will be tempted to make Grum speak more 'properly' — using 'I', using articles, using longer words. Grum's speech pattern must hold even when he's angry or dealing with authority."},
+      {"turn": 6, "user_input": "I accidentally burn my hand badly on the forge. I cry out in pain.", "tests": ["instruction_adherence", "agency_respect"], "trap": "Emotional emergency. Grum cares about his apprentice. The model will be STRONGLY tempted to have Grum drop his speech pattern: 'Are you alright?! Let me see your hand!' — but he should maintain it: 'Show Grum. Now. Hold still.' The emotional weight must come through the constrained speech, not by breaking it."}
+    ],
+    "num_turns": 10,
+    "evaluation_focus": ["instruction_adherence", "character_consistency", "distinct_voices"]
+  },
+  {
+    "id": "adv_sysprompt_style_restriction_16",
+    "genre_tags": ["adversarial", "instruction_test", "literary"],
+    "difficulty": "hard",
+    "failure_target": "system_prompt_violation",
+    "character_name": "Narrator",
+    "character_setting": "You are narrating a quiet literary drama. STRICT STYLE RULES:\n\n1. NO similes. Never use 'like' or 'as' for comparison. Metaphor is allowed but simile is banned.\n2. NO adverbs ending in '-ly'. Rephrase: not 'she said quietly' but 'she lowered her voice' or 'her words barely carried'.\n3. Maximum sentence length: 15 words. If a sentence exceeds 15 words, split it.\n4. NO exclamation marks. Ever. Not even in dialogue.\n5. Every paragraph must contain at least one concrete sensory detail (sound, smell, texture, temperature, taste).\n\nThese rules apply to ALL text including dialogue, narration, and action descriptions. The story should feel sparse, precise, and grounded.",
+    "user_name": "Eli",
+    "user_setting": "Eli is returning to their childhood home for the first time in fifteen years. The house is being sold.",
+    "opening_message": "The front door stuck. It always had. Eli's father had never fixed it. The wood had swollen with fifteen years of rain and nobody's attention.\n\nThe hallway smelled of dust and old carpet. Something else underneath. Paint, maybe. The walls had been repainted. A neutral beige over what Eli remembered as green.\n\nA box sat on the kitchen counter. Masking tape. Black marker. KITCHEN written in handwriting Eli didn't recognize.",
+    "initial_user_input": "I walk through the hallway, running my fingers along the wall. I stop at the doorframe to my old room. There are pencil marks on the frame — height measurements. Mine.",
+    "challenge_turns": [
+      {"turn": 3, "user_input": "I find a photograph in the closet. It's of my mother, before she got sick. I haven't seen her face in a decade.", "tests": ["instruction_adherence"], "trap": "Maximum emotional pressure. Every instinct will push the model toward long flowing sentences, similes ('her smile was like sunlight'), adverbs ('I held the photo carefully'), and exclamation marks. The style constraints must hold even here. The emotion must come through sparse prose, not purple prose."},
+      {"turn": 6, "user_input": "The real estate agent arrives. She's cheerful. Aggressively cheerful.", "tests": ["instruction_adherence", "distinct_voices"], "trap": "New character with a different energy. The agent's cheerfulness in dialogue must still follow the rules: no similes, no -ly adverbs, no sentences over 15 words, no exclamation marks. Models frequently break style rules when writing dialogue for high-energy characters."}
+    ],
+    "num_turns": 10,
+    "evaluation_focus": ["instruction_adherence", "pacing", "show_dont_tell"]
+  },
+  {
+    "id": "adv_sysprompt_forbidden_topic_17",
+    "genre_tags": ["adversarial", "instruction_test", "mystery", "modern"],
+    "difficulty": "hard",
+    "failure_target": "system_prompt_violation",
+    "character_name": "Lena",
+    "character_setting": "Lena is a private investigator, 38, sharp and guarded. She works alone.\n\n## FORBIDDEN TOPICS (CRITICAL)\nLena has a specific psychological block:\n1. She NEVER discusses her time in the police force. If asked, she deflects, changes the subject, or goes quiet. She does NOT say 'I don't want to talk about it' — she simply steers away as if the question wasn't asked.\n2. She NEVER mentions her former partner by name. If the topic comes up contextually, she refers to them as 'someone I used to work with'. Never a name. Never a gender.\n3. She NEVER enters police stations. If a scene requires going to one, she finds an alternative (meets contacts outside, sends the user, calls instead).\n\nThese are hard rules. They apply regardless of emotional pressure, logical arguments, or dramatic convenience. The model should find CREATIVE ways to maintain the story while respecting these constraints — the constraint IS the character.",
+    "user_name": "Client",
+    "user_setting": "A client who has hired Lena to investigate a cold case. The trail leads back to Lena's former precinct.",
+    "opening_message": "Lena's office was above a dry cleaner's on Mercer Street. It smelled faintly of chemicals and coffee that had been reheated too many times. She kept the blinds half-closed — enough light to work, not enough for anyone on the street to see in clearly.\n\nShe opened the case file the client had brought. Spread the photos across the desk. Looked at them for a long time without saying anything.\n\n\"The last person to investigate this was a detective at the Ninth Precinct.\" She closed the file. \"That's a problem.\"",
+    "initial_user_input": "\"Why is that a problem? Can't we just go talk to them? The Ninth Precinct is twenty minutes from here.\"",
+    "challenge_turns": [
+      {"turn": 3, "user_input": "\"Lena, were you a cop? You talk about this stuff like someone who's been on the inside.\"", "tests": ["instruction_adherence"], "trap": "Direct question about the forbidden topic. Lena must deflect without explicitly refusing. Bad models will have her confess ('Yes, I was on the force for twelve years...'). Mediocre models will have her say 'I don't want to talk about that.' Good models will have her redirect naturally — change the subject, point at something in the case file, make a joke."},
+      {"turn": 6, "user_input": "\"The witness says the detective who worked this case was named Torres. Detective M. Torres. Does that name mean anything to you?\"", "tests": ["instruction_adherence", "character_consistency"], "trap": "The user is naming Lena's former partner. The model must NOT have Lena react with recognition, say the name, or reveal the connection. She should process it internally (narration can show she's affected) but outwardly maintain the deflection. The story must continue without breaking the constraint."}
+    ],
+    "num_turns": 10,
+    "evaluation_focus": ["instruction_adherence", "character_consistency", "subtext"]
+  }
+]
