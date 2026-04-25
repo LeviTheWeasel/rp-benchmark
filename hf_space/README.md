@@ -9,7 +9,7 @@ python_version: "3.11"
 app_file: app.py
 pinned: false
 license: cc-by-nc-4.0
-short_description: "Interactive RP benchmark leaderboard — community ELO, multi-turn, flaw hunter"
+short_description: "Multi-judge RP benchmark with community-calibrated ELO"
 ---
 
 # RP-Bench Leaderboard
