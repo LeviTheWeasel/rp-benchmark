@@ -26,7 +26,7 @@ from collections import defaultdict
 from pathlib import Path
 
 INPUTS = [
-    "results/multiturn_merged_all.json",
+    "results/multiturn_merged_all_v2.json",
     "results/multiturn_phase_a_new_gen.json",
     "results/multiturn_phase_b_frontier.json",
 ]

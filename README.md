@@ -120,53 +120,88 @@ Population avg: 259 words, 0.657 unique-word ratio, 0.049 bigram repetition.
 
 Raw data: [`results/behavioral_metrics.json`](results/behavioral_metrics.json). Reproduce with `python3 analyze_behavioral_metrics.py`.
 
-## Phase A: Next-Gen Cheap Models (preliminary)
+## Next-Gen Models — Phases A + B
 
-Five next-generation models tested on the v2/v3 seeds (60 sessions, partial preliminary results — Phase B with frontier models still running). These are the "cheap" tier of the new roster:
+Eight next-generation models tested on the v2/v3 seeds (96 sessions). Combined with the 12 original models, the dataset now spans **20 models × 12-20 seeds = 336 sessions**.
 
-| Rank | Model | Overall | F1 Agency | F2 POV/Tense | F12 Instruction | F13 Big-Card |
-|------|-------|---------|-----------|--------------|-----------------|--------------|
-| 1 | Kimi K2.5 | **4.40** | 4.47 | 4.20 | 4.37 | 4.57 |
-| 2 | GLM 5.1 | 4.39 | 4.50 | 4.17 | 4.33 | 4.57 |
-| 3 | DeepSeek V4 Flash | 4.38 | 4.50 | 4.20 | 4.30 | 4.53 |
-| 4 | Gemini 3.1 Flash Lite | 4.30 | 4.33 | 4.23 | 4.30 | 4.33 |
-| 5 | **Kimi K2.6** | **4.18** | **3.77 ⚠ floor 2.5** | 4.27 | 4.30 | 4.40 |
+**Full 20-model leaderboard** by multi-turn judge mean:
 
-Kimi K2.5 (3-month-old) leads the cheap tier. Kimi K2.6 (newer) regressed by 0.22 points overall, with a catastrophic floor of 2.5 on F1 agency — the newer model is *worse at respecting user agency* than its predecessor.
+| Rank | Model | MT mean | n_seeds | Notes |
+|------|-------|---------|---------|-------|
+| #1 | **Claude Opus 4.7** | **4.54** | 12 | newest Anthropic frontier |
+| #2 | Claude Opus 4.6 | 4.51 | 20 | |
+| #3 | DeepSeek V4 Pro | 4.42 | 12 | |
+| #4 | Claude Sonnet 4.5 | 4.42 | 20 | |
+| #5 | Kimi K2.5 | 4.40 | 12 | top open-weights candidate |
+| #6 | GLM 5.1 | 4.39 | 12 | |
+| #7 | DeepSeek V3.2 | 4.38 | 20 | |
+| #8 | DeepSeek V4 Flash | 4.38 | 12 | |
+| #9 | GLM 4.7 | 4.37 | 20 | |
+| #10 | GPT-4.1 | 4.34 | 20 | |
+| #11 | MiniMax M2.7 | 4.34 | 20 | |
+| #12 | Gemini 3.1 Pro | 4.33 | 12 | newest Gemini frontier |
+| #13 | Gemini 3.1 Flash Lite | 4.30 | 12 | |
+| #14 | Gemma 4 26B | 4.29 | 20 | community #1 |
+| #15 | Mistral SC | 4.22 | 20 | community #2 |
+| #16 | Grok 4.1 | 4.19 | 20 | |
+| #17 | **Kimi K2.6** | **4.18** | 12 | ⚠ floor 2.5 on F1 |
+| #18 | Gemini 2.5 Flash | 4.14 | 20 | |
+| #19 | Qwen 3.5 Flash | 3.98 | 20 | |
+| #20 | Llama 4 Maverick | 3.96 | 20 | |
 
-**Generation-over-generation deltas** (same seeds, same harness):
+### Generation-over-generation deltas
 
-| Generation | Old → New | Δ |
-|---|---|---|
-| DeepSeek V3.2 → V4 Flash | 4.40 → 4.38 | **−0.02** (flat) |
-| GLM 4.7 → 5.1 | 4.39 → 4.39 | **0.00** (zero improvement) |
-| Gemini 2.5 Flash → 3.1 Flash Lite | 4.08 → 4.30 | **+0.22** (real improvement) |
-| Kimi K2.5 → K2.6 | 4.40 → 4.18 | **−0.22** (regression) |
+The most useful comparison this run produced — same seeds, same harness, same judge:
 
-The headline finding: **most "next-gen" cheap models do not improve on their predecessors at multi-turn RP.** Two are flat, one regresses, one (Gemini) shows real improvement. This is consistent with the pattern that frontier evals reward instruction following and benchmarks not directly tested for during training.
+| Old → New | Old | New | Δ | Verdict |
+|---|---|---|---|---|
+| Opus 4.6 → 4.7 | 4.51 | 4.54 | **+0.03** | marginal |
+| DeepSeek V3.2 → V4 Pro | 4.38 | 4.42 | **+0.04** | marginal |
+| DeepSeek V3.2 → V4 Flash | 4.38 | 4.38 | **0.00** | flat |
+| GLM 4.7 → 5.1 | 4.37 | 4.39 | **+0.02** | flat |
+| Gemini 2.5 Flash → 3.1 Pro | 4.14 | 4.33 | **+0.19** | real improvement |
+| Gemini 2.5 Flash → 3.1 Flash Lite | 4.14 | 4.30 | **+0.16** | real improvement |
+| Kimi K2.5 → K2.6 | 4.40 | 4.18 | **−0.22** | regression |
 
-Where these models slot into the existing leaderboard (sorted by overall mean on v2/v3 seeds):
+**Headline: most "next-gen" releases do not improve at multi-turn RP.** Anthropic and DeepSeek made marginal gains (+0.03 to +0.04). GLM and DeepSeek-Flash were flat. Only Gemini's 2.5 → 3.1 transition showed real improvement (+0.16 to +0.19). Kimi K2.6 actively regressed from K2.5 with a catastrophic floor of 2.5 on F1 agency — newer model is *worse at respecting user agency*.
 
-```
-4.52  Opus 4.6                  (existing #1)
-4.40  Sonnet 4.5 / DeepSeek V3.2 / Kimi K2.5
-4.39  GLM 4.7 / GLM 5.1
-4.38  DeepSeek V4 Flash
-4.34  GPT-4.1
-4.31  MiniMax M2.7
-4.30  Gemini 3.1 Flash Lite
-4.26  Gemma 4 26B
-4.25  Mistral SC
-4.19  Grok 4.1
-4.18  Kimi K2.6
-4.08  Gemini 2.5 Flash
-3.89  Llama 4 Maverick
-3.79  Qwen 3.5 Flash
-```
+### "Pro" vs "Flash" — does the upgrade matter?
 
-Phase A models cluster in the middle — better than the bottom tier (Llama, Qwen) but no breakouts. The interesting story is that Kimi K2.5 is genuinely competitive with Sonnet 4.5 and DeepSeek V3.2 at a fraction of the cost.
+A direct comparison within the Gemini 3.1 generation:
 
-Phase B (Opus 4.7, DeepSeek V4 Pro, Gemini 3.1 Pro) is still running. Final analysis with all 20 models will follow.
+| Variant | MT mean | F1 | F12 | F13 |
+|---|---|---|---|---|
+| Gemini 3.1 Pro | 4.33 | 4.43 | 4.33 | 4.37 |
+| Gemini 3.1 Flash Lite | 4.30 | 4.33 | 4.30 | 4.33 |
+| Δ Pro − Lite | +0.03 | +0.10 | +0.03 | +0.04 |
+
+**The Pro tier costs ~10× more for a 0.03-point improvement.** Lite is the better deal for RP unless you specifically need F1 agency precision (where Pro wins by 0.10).
+
+DeepSeek V4 Pro vs V4 Flash:
+
+| Variant | MT mean | F1 | F12 | F13 |
+|---|---|---|---|---|
+| DeepSeek V4 Pro | 4.42 | 4.40 | 4.40 | 4.57 |
+| DeepSeek V4 Flash | 4.38 | 4.50 | 4.30 | 4.53 |
+| Δ Pro − Flash | +0.04 | **−0.10** | +0.10 | +0.04 |
+
+DeepSeek's Pro/Flash split shows a different pattern: Pro wins overall but **loses** to Flash on F1 agency (4.40 vs 4.50). The cheaper Flash is actually safer for romance/emotional scenes.
+
+### Where to put which model
+
+**Best at the top (frontier closed-source):** Opus 4.7 leads on F1 (4.60), F12 (4.57), F13 (4.57). Worth the cost if you have it.
+
+**Best open-weights:** Kimi K2.5 (4.40 overall, ties original-DeepSeek and Sonnet 4.5). Cheap, no platform dependency. K2.6 is a regression — stick with K2.5.
+
+**Best cheap closed:** DeepSeek V4 Flash (4.38) ≈ DeepSeek V3.2 (4.38). Use whichever is available.
+
+**Best for instruction-following:** Opus 4.7 → Opus 4.6 → DeepSeek V4 Pro on F12.
+
+**Best for emotional scenes:** Opus 4.7 → Opus 4.6 → Sonnet 4.5 → DeepSeek V4 Flash → GLM 5.1 on F1.
+
+**Avoid for RP:** Kimi K2.6 (regression), Llama 4 Maverick (last on most modes), Qwen 3.5 Flash (catastrophic on F1 + F12).
+
+Raw data: [`results/multiturn_merged_all_v2.json`](results/multiturn_merged_all_v2.json) (336 sessions).
 
 ## Multi-Signal Model Profiles
 

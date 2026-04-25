@@ -59,7 +59,7 @@ TAXONOMY = {
 
 
 def main():
-    merged = json.load(open("results/multiturn_merged_all.json"))
+    merged = json.load(open("results/multiturn_merged_all_v2.json"))
     comm = json.load(open("results/community_arena_2000.json"))
     comm_by_model = {e["model"]: e for e in comm["leaderboard"]}
 
