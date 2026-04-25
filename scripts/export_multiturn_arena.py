@@ -14,7 +14,7 @@ import sys
 from itertools import combinations
 from pathlib import Path
 
-SRC = Path("results/multiturn_20260414_042100.json")
+SRC = Path("results/multiturn_merged_all_v2.json")
 OUT = Path("web/lib/multiturn-data.ts")
 
 
@@ -35,7 +35,10 @@ def main():
             "dialogue": [
                 {
                     "role": "assistant" if m["role"] in ("assistant", "character") else "user",
-                    "content": m["content"],
+                    # Coerce None -> "" so the TypeScript string type holds.
+                    # None content occurs when reasoning models exhaust tokens
+                    # before producing output. Empty string is the honest signal.
+                    "content": m["content"] or "",
                 }
                 for m in s["dialogue"]
             ],
