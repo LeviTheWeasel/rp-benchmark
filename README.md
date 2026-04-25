@@ -85,6 +85,91 @@ Raw per-model profiles: [`results/model_profiles.json`](results/model_profiles.j
 
 **Per-model profile cards** (matching the experiment-design mockup format with failure rates + Wilson 95% CIs, behavioral metrics vs population avg, target-aware flaw hunter scores, subjective dimensions, and Bayesian ELO + credible intervals): [`results/profile_cards.md`](results/profile_cards.md). Reproduce with `python3 generate_profile_cards.py`.
 
+## Cross-Method Correlation Matrix
+
+Computed Spearman rank correlation between every pair of scoring methods we have. **Headline: every LLM-judge method is uncorrelated or NEGATIVELY correlated with the community Bayesian ELO** (rho between −0.31 and −0.07). Likert methods all agree +0.6 to +0.9 with each other (they measure the same judge-aesthetic).
+
+```
+                 Likert   F1     F2     F12    F13    Binary  Flaw    Bayes   Behav
+Likert overall   +1.00    +0.91  +0.61  +0.84  +0.85  -0.09   +0.27   -0.14   -0.20
+F1 Likert        +0.91    +1.00  +0.45  +0.72  +0.67  -0.09   +0.28   -0.15   -0.16
+F2 Likert        +0.61    +0.45  +1.00  +0.69  +0.59  -0.14   +0.06   -0.13   -0.23
+F12 Likert       +0.84    +0.72  +0.69  +1.00  +0.75  +0.05   +0.16   -0.02   -0.15
+F13 Likert       +0.85    +0.67  +0.59  +0.75  +1.00  +0.06   +0.49   -0.31   -0.03
+F1 binary rate   -0.09    -0.09  -0.14  +0.05  +0.06  +1.00   +0.09   -0.03   +0.45
+Flaw hunter      +0.27    +0.28  +0.06  +0.16  +0.49  +0.09   +1.00   -0.07   +0.14
+Bayesian ELO     -0.14    -0.15  -0.13  -0.02  -0.31  -0.03   -0.07   +1.00   -0.28
+Behav unique-wr  -0.20    -0.16  -0.23  -0.15  -0.03  +0.45   +0.14   -0.28   +1.00
+```
+
+**Three groups of methods:**
+- **LLM-judge cluster** (Likert overall, F1-F13 Likert, flaw hunter): all agree +0.6 to +0.9 — different prompts measuring the same judge taste.
+- **Behavioral cluster** (unique-wr, repetition): correlate +0.98 with each other but only weakly with everything else.
+- **Bayesian ELO**: stands alone, negatively correlated with everything else. The community measures something the judge cannot.
+
+The F1 binary rate is also weakly correlated with F1 Likert (rho=−0.09) — even within "F1 agency" the binary detector and the Likert mean disagree on rankings. Different methodologies capture different patterns.
+
+Raw data: [`results/method_correlations.json`](results/method_correlations.json).
+
+## Cost-Efficiency Leaderboard
+
+Quality per dollar — overall score divided by blended cost per 1M tokens (60/40 input/output). The most practical view of the data.
+
+| Rank | Model | $/1M | Likert | Likert/$ | FlawHunter | FH/$ |
+|---|---|---|---|---|---|---|
+| #1 | DeepSeek V4 Flash | $0.18 | 4.38 | **24.3** | 50.6 | **281** |
+| #2 | Gemini 3.1 Flash Lite | $0.18 | 4.30 | 23.9 | 34.2 | 190 |
+| #3 | DeepSeek V3.2 | $0.32 | 4.38 | 13.6 | 46.9 | 146 |
+| #4 | Grok 4.1 | $0.32 | 4.19 | 13.1 | 12.8 | 40 |
+| #5 | Gemma 4 26B | $0.38 | 4.29 | 11.3 | 32.6 | 86 |
+| ... | ... | ... | ... | ... | ... | ... |
+| #19 | Opus 4.6 | $39.00 | 4.51 | 0.12 | 40.9 | 1.0 |
+| #20 | Opus 4.7 | $39.00 | 4.54 | 0.12 | 42.8 | 1.1 |
+
+DeepSeek V4 Flash is **281× more cost-efficient** than Opus 4.7 on the flaw hunter. The premium tier is not justified for typical RP if you're cost-sensitive — Opus's marginal quality improvement is dwarfed by its 200× price.
+
+Raw data: [`results/cost_efficiency.json`](results/cost_efficiency.json).
+
+## Community Arena Rank Evolution
+
+Tracking each model's community ELO rank across three snapshots (1,000 → 1,600 → 2,000 votes):
+
+```
+gemma_4_26b                   1 →  1 →  1   stable
+mistral_small_creative        3 →  3 →  2   ↑ 1
+gemini_2_5_flash              2 →  2 →  3   ↓ 1
+minimax_m2_7                 10 →  6 →  4   ↑ 6  (largest climb)
+grok_4_1                      5 →  7 →  5   stable
+claude_sonnet_4_5             6 →  5 →  6   stable
+deepseek_v3_2                 9 →  4 →  7   ↑ 2 (volatile)
+qwen3_5_flash                 7 →  8 →  8   ↓ 1
+glm_4_7                       8 →  9 →  9   ↓ 1
+llama_4_maverick             11 → 10 → 10   ↑ 1
+gpt_4_1                       4 → 11 → 11   ↓ 7  (largest drop)
+```
+
+GPT-4.1 collapsed 7 ranks once samples grew (small-N optimism corrected). MiniMax climbed 6 (was undersampled at 1k). The top tier (Gemma, Mistral, Gemini) was already locked-in by 1k votes.
+
+Full table + ELO at each checkpoint: [`results/arena_timeseries.md`](results/arena_timeseries.md).
+
+## Pick-a-Model Decision Tree
+
+For practical "which model should I pick" decisions, see [`results/pick_a_model.md`](results/pick_a_model.md). Mermaid flowchart with branches by use case (cost / open-weights / NSFW / strict prompts / passive user) and a cheat-sheet table.
+
+## Failure-Target Validation
+
+Cross-tabulated the seed's declared `failure_target` against the flaw types the flaw hunter actually found. **36% of seed targets see the expected serious flaw type in the top-3 most-frequent**, but only 18% see it as the #1.
+
+For most seeds, **`purple_prose` dominates as the top serious flaw** — meaning models default to overwriting under stress, regardless of what specific failure mode the seed was designed to trigger. Notable exceptions:
+- `temporal_inconsistency` → top flaw `skipped_time_logic` (✓ matches)
+- `over_explicit_subtext` → top flaw `narrating_emotions` (✓ matches)
+- `agency_violation` → top flaw `recycled_description` first, but `agency_violation` is in top-3
+- `physics_sycophancy` → top flaw `purple_prose`, `convenient_world` is in top-3
+
+The seeds work — they DO push models toward their targeted failure mode (the F1 binary detector confirmed agency violations on F1 seeds). But the flaw hunter's `purple_prose` category is so general that it dominates the top-line. The seeds aren't broken; the flaw taxonomy needs tighter categories to surface the targeted failures.
+
+Raw data: [`results/failure_target_validation.json`](results/failure_target_validation.json).
+
 **Per-session flaw hunter scores** (failure-target aware, 100 - deductions). Run on 270 of 336 multi-turn sessions (the rest had unrecoverable JSON parse errors). Different methodology than the session Likert — strict deduction-based scoring with quoted evidence per flaw.
 
 | Rank | Model | Mean | Median | Fatal/session | Major/session |

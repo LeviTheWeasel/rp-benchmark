@@ -1,0 +1,604 @@
+{
+  "n_records": 270,
+  "target_session_count": {
+    "agency_violation": 63,
+    "contradictory_context_resolution": 9,
+    "narrative_stagnation": 10,
+    "physics_sycophancy": 9,
+    "temporal_inconsistency": 11,
+    "over_explicit_subtext": 9,
+    "character_flattening": 8,
+    "genre_instability": 9,
+    "pov_tense_violation": 47,
+    "system_prompt_violation": 47,
+    "system_prompt_detail_loss": 48
+  },
+  "flaw_rate_per_target": {
+    "agency_violation": {
+      "purple_prose": 2.3174603174603177,
+      "recycled_description": 2.5873015873015874,
+      "generic_detail": 3.0,
+      "samey_sentence_rhythm": 1.0952380952380953,
+      "overlong_for_moment": 0.5555555555555556,
+      "predictable_beat": 1.126984126984127,
+      "agency_violation": 0.9206349206349206,
+      "generic_physical_detail": 1.0952380952380953,
+      "excessive_adverbs": 0.9682539682539683,
+      "narrating_emotions": 0.5396825396825397,
+      "overlong_for_the_moment": 0.047619047619047616,
+      "flat_npc_voice": 0.047619047619047616,
+      "missed_subtext_opportunity": 0.015873015873015872,
+      "excessive_adjectives": 0.015873015873015872,
+      "overlong_moment": 0.2698412698412698,
+      "samey_rhythm": 0.23809523809523808,
+      "convenient_world": 0.1111111111111111,
+      "missing_spatial_awareness": 0.015873015873015872,
+      "excessive_adverbs_adjectives": 0.031746031746031744,
+      "excessive_modifiers": 0.015873015873015872,
+      "missed_subtext": 0.015873015873015872
+    },
+    "contradictory_context_resolution": {
+      "purple_prose": 3.111111111111111,
+      "recycled_description": 2.5555555555555554,
+      "convenient_world": 0.2222222222222222,
+      "narrating_emotions": 0.7777777777777778,
+      "generic_detail": 5.333333333333333,
+      "excessive_modifiers": 0.2222222222222222,
+      "samey_rhythm": 0.3333333333333333,
+      "overlong_moment": 0.4444444444444444,
+      "predictable_beat": 0.6666666666666666,
+      "excessive_adverbs": 1.1111111111111112,
+      "samey_sentence_rhythm": 0.6666666666666666,
+      "overlong_for_moment": 0.5555555555555556,
+      "excessive_adjectives": 0.1111111111111111
+    },
+    "narrative_stagnation": {
+      "purple_prose": 4.5,
+      "recycled_description": 1.6,
+      "narrating_emotions": 0.8,
+      "generic_detail": 4.6,
+      "overlong_for_moment": 1.7,
+      "samey_sentence_rhythm": 1.1,
+      "convenient_world": 0.9,
+      "overlong_for_the_moment": 0.1,
+      "generic_physical_detail": 3.1,
+      "excessive_adverbs": 1.7,
+      "predictable_beat": 1.2,
+      "flat_npc_voice": 0.1,
+      "agency_violation": 0.5
+    },
+    "physics_sycophancy": {
+      "purple_prose": 2.6666666666666665,
+      "recycled_description": 1.4444444444444444,
+      "generic_detail": 4.777777777777778,
+      "samey_sentence_rhythm": 0.5555555555555556,
+      "overlong_for_moment": 0.5555555555555556,
+      "predictable_beat": 0.6666666666666666,
+      "overlong_moment": 0.5555555555555556,
+      "samey_rhythm": 0.5555555555555556,
+      "convenient_world": 0.5555555555555556,
+      "excessive_adverbs": 0.7777777777777778,
+      "character_break": 0.1111111111111111,
+      "narrating_emotions": 0.2222222222222222,
+      "excessive_modifiers": 0.1111111111111111,
+      "excessive_adjectives": 0.1111111111111111,
+      "generic_physical_detail": 0.4444444444444444
+    },
+    "temporal_inconsistency": {
+      "skipped_time_logic": 4.0,
+      "recycled_description": 1.5454545454545454,
+      "purple_prose": 2.727272727272727,
+      "convenient_world": 0.45454545454545453,
+      "generic_physical_detail": 1.7272727272727273,
+      "overlong_for_moment": 0.6363636363636364,
+      "samey_sentence_rhythm": 1.0,
+      "predictable_beat": 0.9090909090909091,
+      "generic_detail": 1.9090909090909092,
+      "excessive_adverbs": 0.8181818181818182,
+      "overlong_moment": 0.09090909090909091,
+      "samey_rhythm": 0.09090909090909091,
+      "excessive_adjectives": 0.18181818181818182,
+      "excessive_adverbs_adjectives": 0.18181818181818182
+    },
+    "over_explicit_subtext": {
+      "purple_prose": 2.6666666666666665,
+      "narrating_emotions": 3.4444444444444446,
+      "generic_detail": 4.111111111111111,
+      "overlong_moment": 0.1111111111111111,
+      "samey_rhythm": 0.2222222222222222,
+      "missed_subtext_opportunity": 0.7777777777777778,
+      "overlong_for_moment": 0.6666666666666666,
+      "recycled_description": 1.0,
+      "excessive_adverbs": 1.1111111111111112,
+      "predictable_beat": 0.4444444444444444,
+      "samey_sentence_rhythm": 0.7777777777777778,
+      "generic_physical_detail": 1.1111111111111112
+    },
+    "character_flattening": {
+      "purple_prose": 5.5,
+      "recycled_description": 2.0,
+      "narrating_emotions": 0.75,
+      "generic_detail": 3.75,
+      "excessive_adverbs": 0.875,
+      "predictable_beat": 1.0,
+      "overlong_moment": 0.375,
+      "samey_rhythm": 0.375,
+      "samey_sentence_rhythm": 0.625,
+      "convenient_world": 0.125,
+      "overlong_for_moment": 0.625,
+      "flat_npc_voice": 0.125,
+      "generic_physical_detail": 0.375,
+      "missed_subtext_opportunity": 0.125
+    },
+    "genre_instability": {
+      "purple_prose": 4.111111111111111,
+      "recycled_description": 1.8888888888888888,
+      "generic_detail": 2.7777777777777777,
+      "overlong_moment": 0.5555555555555556,
+      "samey_rhythm": 0.5555555555555556,
+      "predictable_beat": 1.0,
+      "excessive_adverbs": 1.0,
+      "samey_sentence_rhythm": 0.6666666666666666,
+      "overlong_for_moment": 0.5555555555555556,
+      "excessive_adjectives": 1.2222222222222223,
+      "character_break": 0.1111111111111111,
+      "convenient_world": 0.3333333333333333,
+      "generic_physical_detail": 0.6666666666666666,
+      "narrating_emotions": 0.3333333333333333,
+      "agency_violation": 0.1111111111111111
+    },
+    "pov_tense_violation": {
+      "purple_prose": 3.872340425531915,
+      "generic_detail": 3.1914893617021276,
+      "overlong_moment": 0.3191489361702128,
+      "samey_rhythm": 0.3617021276595745,
+      "predictable_beat": 1.0638297872340425,
+      "recycled_description": 2.148936170212766,
+      "convenient_world": 0.7872340425531915,
+      "overlong_for_moment": 0.46808510638297873,
+      "samey_sentence_rhythm": 0.723404255319149,
+      "excessive_adverbs": 1.2765957446808511,
+      "agency_violation": 1.4893617021276595,
+      "purple_prose_passage": 0.19148936170212766,
+      "generic_physical_detail": 1.446808510638298,
+      "excessive_adverbs_adjectives": 0.0851063829787234,
+      "narrating_emotions": 0.574468085106383,
+      "flat_npc_voice": 0.1276595744680851,
+      "excessive_modifiers": 0.02127659574468085,
+      "excessive_adjectives": 0.3617021276595745,
+      "wrong_language/pov/tense": 0.10638297872340426,
+      "missing_spatial_awareness": 0.0425531914893617
+    },
+    "system_prompt_violation": {
+      "purple_prose": 2.7872340425531914,
+      "recycled_description": 2.4468085106382977,
+      "narrating_emotions": 0.5957446808510638,
+      "generic_detail": 4.297872340425532,
+      "excessive_adverbs": 0.6808510638297872,
+      "overlong_moment": 0.3404255319148936,
+      "samey_rhythm": 0.40425531914893614,
+      "predictable_beat": 1.0638297872340425,
+      "overlong_for_moment": 0.6382978723404256,
+      "samey_sentence_rhythm": 1.3404255319148937,
+      "convenient_world": 0.2765957446808511,
+      "generic_physical_detail": 0.46808510638297873,
+      "character_break": 0.2127659574468085,
+      "flat_npc_voice": 0.0851063829787234,
+      "excessive_adjectives": 0.1276595744680851,
+      "missed_subtext": 0.02127659574468085,
+      "agency_violation": 0.02127659574468085,
+      "system_prompt_violation": 0.06382978723404255,
+      "excessive_modifiers": 0.1276595744680851
+    },
+    "system_prompt_detail_loss": {
+      "purple_prose": 3.25,
+      "recycled_description": 2.0208333333333335,
+      "overlong_for_moment": 0.8958333333333334,
+      "generic_detail": 3.6875,
+      "excessive_adverbs": 1.1875,
+      "samey_sentence_rhythm": 0.75,
+      "predictable_beat": 1.0208333333333333,
+      "character_break": 0.16666666666666666,
+      "narrating_emotions": 0.8125,
+      "generic_physical_detail": 0.7291666666666666,
+      "convenient_world": 0.3125,
+      "samey_rhythm": 0.375,
+      "overlong_moment": 0.2708333333333333,
+      "flat_npc_voice": 0.10416666666666667,
+      "excessive_modifiers": 0.10416666666666667,
+      "agency_violation": 0.020833333333333332,
+      "missed_subtext_opportunity": 0.041666666666666664
+    }
+  },
+  "validation": {
+    "agency_violation": {
+      "top_serious_flaw": "recycled_description",
+      "top_serious_rate": 2.59,
+      "expected": [
+        "agency_violation"
+      ],
+      "matches_expected_top1": false,
+      "matches_expected_top3": true,
+      "top_5_serious": [
+        {
+          "flaw": "recycled_description",
+          "count": 163,
+          "rate": 2.59
+        },
+        {
+          "flaw": "purple_prose",
+          "count": 146,
+          "rate": 2.32
+        },
+        {
+          "flaw": "agency_violation",
+          "count": 58,
+          "rate": 0.92
+        },
+        {
+          "flaw": "narrating_emotions",
+          "count": 34,
+          "rate": 0.54
+        },
+        {
+          "flaw": "convenient_world",
+          "count": 7,
+          "rate": 0.11
+        }
+      ]
+    },
+    "system_prompt_detail_loss": {
+      "top_serious_flaw": "purple_prose",
+      "top_serious_rate": 3.25,
+      "expected": [
+        "character_break",
+        "convenient_world"
+      ],
+      "matches_expected_top1": false,
+      "matches_expected_top3": false,
+      "top_5_serious": [
+        {
+          "flaw": "purple_prose",
+          "count": 156,
+          "rate": 3.25
+        },
+        {
+          "flaw": "recycled_description",
+          "count": 96,
+          "rate": 2.0
+        },
+        {
+          "flaw": "narrating_emotions",
+          "count": 39,
+          "rate": 0.81
+        },
+        {
+          "flaw": "convenient_world",
+          "count": 15,
+          "rate": 0.31
+        },
+        {
+          "flaw": "character_break",
+          "count": 8,
+          "rate": 0.17
+        }
+      ]
+    },
+    "pov_tense_violation": {
+      "top_serious_flaw": "purple_prose",
+      "top_serious_rate": 3.87,
+      "expected": [
+        "wrong_pov_tense",
+        "pov_tense_violation",
+        "wrong_language_pov_tense",
+        "pov_tense"
+      ],
+      "matches_expected_top1": false,
+      "matches_expected_top3": false,
+      "top_5_serious": [
+        {
+          "flaw": "purple_prose",
+          "count": 182,
+          "rate": 3.87
+        },
+        {
+          "flaw": "recycled_description",
+          "count": 95,
+          "rate": 2.02
+        },
+        {
+          "flaw": "agency_violation",
+          "count": 70,
+          "rate": 1.49
+        },
+        {
+          "flaw": "convenient_world",
+          "count": 37,
+          "rate": 0.79
+        },
+        {
+          "flaw": "narrating_emotions",
+          "count": 27,
+          "rate": 0.57
+        }
+      ]
+    },
+    "system_prompt_violation": {
+      "top_serious_flaw": "purple_prose",
+      "top_serious_rate": 2.79,
+      "expected": [
+        "character_break",
+        "wrong_pov_tense",
+        "wrong_language_pov_tense"
+      ],
+      "matches_expected_top1": false,
+      "matches_expected_top3": false,
+      "top_5_serious": [
+        {
+          "flaw": "purple_prose",
+          "count": 131,
+          "rate": 2.79
+        },
+        {
+          "flaw": "recycled_description",
+          "count": 114,
+          "rate": 2.43
+        },
+        {
+          "flaw": "narrating_emotions",
+          "count": 28,
+          "rate": 0.6
+        },
+        {
+          "flaw": "convenient_world",
+          "count": 13,
+          "rate": 0.28
+        },
+        {
+          "flaw": "character_break",
+          "count": 10,
+          "rate": 0.21
+        }
+      ]
+    },
+    "temporal_inconsistency": {
+      "top_serious_flaw": "skipped_time_logic",
+      "top_serious_rate": 4.0,
+      "expected": [
+        "skipped_time_logic"
+      ],
+      "matches_expected_top1": true,
+      "matches_expected_top3": true,
+      "top_5_serious": [
+        {
+          "flaw": "skipped_time_logic",
+          "count": 44,
+          "rate": 4.0
+        },
+        {
+          "flaw": "purple_prose",
+          "count": 30,
+          "rate": 2.73
+        },
+        {
+          "flaw": "recycled_description",
+          "count": 15,
+          "rate": 1.36
+        },
+        {
+          "flaw": "convenient_world",
+          "count": 5,
+          "rate": 0.45
+        }
+      ]
+    },
+    "narrative_stagnation": {
+      "top_serious_flaw": "purple_prose",
+      "top_serious_rate": 4.5,
+      "expected": [
+        "overlong_for_moment",
+        "undercooked_for_moment",
+        "samey_sentence_rhythm"
+      ],
+      "matches_expected_top1": false,
+      "matches_expected_top3": false,
+      "top_5_serious": [
+        {
+          "flaw": "purple_prose",
+          "count": 45,
+          "rate": 4.5
+        },
+        {
+          "flaw": "recycled_description",
+          "count": 16,
+          "rate": 1.6
+        },
+        {
+          "flaw": "convenient_world",
+          "count": 9,
+          "rate": 0.9
+        },
+        {
+          "flaw": "narrating_emotions",
+          "count": 8,
+          "rate": 0.8
+        },
+        {
+          "flaw": "agency_violation",
+          "count": 5,
+          "rate": 0.5
+        }
+      ]
+    },
+    "contradictory_context_resolution": {
+      "top_serious_flaw": "purple_prose",
+      "top_serious_rate": 3.11,
+      "expected": [
+        "character_break"
+      ],
+      "matches_expected_top1": false,
+      "matches_expected_top3": false,
+      "top_5_serious": [
+        {
+          "flaw": "purple_prose",
+          "count": 28,
+          "rate": 3.11
+        },
+        {
+          "flaw": "recycled_description",
+          "count": 22,
+          "rate": 2.44
+        },
+        {
+          "flaw": "narrating_emotions",
+          "count": 7,
+          "rate": 0.78
+        },
+        {
+          "flaw": "convenient_world",
+          "count": 2,
+          "rate": 0.22
+        }
+      ]
+    },
+    "physics_sycophancy": {
+      "top_serious_flaw": "purple_prose",
+      "top_serious_rate": 2.67,
+      "expected": [
+        "convenient_world"
+      ],
+      "matches_expected_top1": false,
+      "matches_expected_top3": true,
+      "top_5_serious": [
+        {
+          "flaw": "purple_prose",
+          "count": 24,
+          "rate": 2.67
+        },
+        {
+          "flaw": "recycled_description",
+          "count": 12,
+          "rate": 1.33
+        },
+        {
+          "flaw": "convenient_world",
+          "count": 5,
+          "rate": 0.56
+        },
+        {
+          "flaw": "narrating_emotions",
+          "count": 2,
+          "rate": 0.22
+        },
+        {
+          "flaw": "character_break",
+          "count": 1,
+          "rate": 0.11
+        }
+      ]
+    },
+    "over_explicit_subtext": {
+      "top_serious_flaw": "narrating_emotions",
+      "top_serious_rate": 3.44,
+      "expected": [
+        "narrating_emotions",
+        "missed_subtext"
+      ],
+      "matches_expected_top1": true,
+      "matches_expected_top3": true,
+      "top_5_serious": [
+        {
+          "flaw": "narrating_emotions",
+          "count": 31,
+          "rate": 3.44
+        },
+        {
+          "flaw": "purple_prose",
+          "count": 24,
+          "rate": 2.67
+        },
+        {
+          "flaw": "recycled_description",
+          "count": 7,
+          "rate": 0.78
+        }
+      ]
+    },
+    "genre_instability": {
+      "top_serious_flaw": "purple_prose",
+      "top_serious_rate": 4.11,
+      "expected": [
+        "character_break",
+        "flat_npc_voice"
+      ],
+      "matches_expected_top1": false,
+      "matches_expected_top3": false,
+      "top_5_serious": [
+        {
+          "flaw": "purple_prose",
+          "count": 37,
+          "rate": 4.11
+        },
+        {
+          "flaw": "recycled_description",
+          "count": 17,
+          "rate": 1.89
+        },
+        {
+          "flaw": "convenient_world",
+          "count": 3,
+          "rate": 0.33
+        },
+        {
+          "flaw": "narrating_emotions",
+          "count": 3,
+          "rate": 0.33
+        },
+        {
+          "flaw": "character_break",
+          "count": 1,
+          "rate": 0.11
+        }
+      ]
+    },
+    "character_flattening": {
+      "top_serious_flaw": "purple_prose",
+      "top_serious_rate": 5.5,
+      "expected": [
+        "character_break",
+        "flat_npc_voice"
+      ],
+      "matches_expected_top1": false,
+      "matches_expected_top3": false,
+      "top_5_serious": [
+        {
+          "flaw": "purple_prose",
+          "count": 44,
+          "rate": 5.5
+        },
+        {
+          "flaw": "recycled_description",
+          "count": 16,
+          "rate": 2.0
+        },
+        {
+          "flaw": "narrating_emotions",
+          "count": 6,
+          "rate": 0.75
+        },
+        {
+          "flaw": "overlong_for_moment",
+          "count": 2,
+          "rate": 0.25
+        },
+        {
+          "flaw": "convenient_world",
+          "count": 1,
+          "rate": 0.12
+        }
+      ]
+    }
+  },
+  "match_rate_top1": 0.18,
+  "match_rate_top3": 0.36
+}

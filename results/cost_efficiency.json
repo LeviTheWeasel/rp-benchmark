@@ -1,0 +1,206 @@
+{
+  "pricing_source": "OpenRouter approx 2026-04",
+  "blended_share_input": 0.6,
+  "leaderboard": [
+    {
+      "model": "deepseek_v4_flash",
+      "cost_per_1m": 0.18,
+      "likert": 4.38,
+      "fh": 50.6,
+      "bayesian_elo": null,
+      "likert_per_dollar": 24.333,
+      "fh_per_dollar": 281.111,
+      "bay_per_dollar": null
+    },
+    {
+      "model": "gemini_3_1_flash_lite",
+      "cost_per_1m": 0.18,
+      "likert": 4.3,
+      "fh": 34.2,
+      "bayesian_elo": null,
+      "likert_per_dollar": 23.889,
+      "fh_per_dollar": 190.0,
+      "bay_per_dollar": null
+    },
+    {
+      "model": "deepseek_v3_2",
+      "cost_per_1m": 0.322,
+      "likert": 4.38,
+      "fh": 46.9,
+      "bayesian_elo": 1492.1,
+      "likert_per_dollar": 13.602,
+      "fh_per_dollar": 145.652,
+      "bay_per_dollar": 4633.9
+    },
+    {
+      "model": "grok_4_1",
+      "cost_per_1m": 0.32,
+      "likert": 4.19,
+      "fh": 12.8,
+      "bayesian_elo": 1517.0,
+      "likert_per_dollar": 13.094,
+      "fh_per_dollar": 40.0,
+      "bay_per_dollar": 4740.6
+    },
+    {
+      "model": "gemma_4_26b",
+      "cost_per_1m": 0.38,
+      "likert": 4.29,
+      "fh": 32.6,
+      "bayesian_elo": 1533.7,
+      "likert_per_dollar": 11.289,
+      "fh_per_dollar": 85.789,
+      "bay_per_dollar": 4036.1
+    },
+    {
+      "model": "qwen3_5_flash",
+      "cost_per_1m": 0.36,
+      "likert": 3.98,
+      "fh": 39.6,
+      "bayesian_elo": 1492.6,
+      "likert_per_dollar": 11.056,
+      "fh_per_dollar": 110.0,
+      "bay_per_dollar": 4146.1
+    },
+    {
+      "model": "llama_4_maverick",
+      "cost_per_1m": 0.36,
+      "likert": 3.96,
+      "fh": 30.6,
+      "bayesian_elo": 1483.3,
+      "likert_per_dollar": 11.0,
+      "fh_per_dollar": 85.0,
+      "bay_per_dollar": 4120.3
+    },
+    {
+      "model": "mistral_small_creative",
+      "cost_per_1m": 0.5,
+      "likert": 4.22,
+      "fh": 27.1,
+      "bayesian_elo": 1533.5,
+      "likert_per_dollar": 8.44,
+      "fh_per_dollar": 54.2,
+      "bay_per_dollar": 3067.0
+    },
+    {
+      "model": "minimax_m2_7",
+      "cost_per_1m": 0.62,
+      "likert": 4.34,
+      "fh": 41.5,
+      "bayesian_elo": 1514.4,
+      "likert_per_dollar": 7.0,
+      "fh_per_dollar": 66.935,
+      "bay_per_dollar": 2442.6
+    },
+    {
+      "model": "gemini_2_5_flash",
+      "cost_per_1m": 0.66,
+      "likert": 4.14,
+      "fh": 43.6,
+      "bayesian_elo": 1529.1,
+      "likert_per_dollar": 6.273,
+      "fh_per_dollar": 66.061,
+      "bay_per_dollar": 2316.8
+    },
+    {
+      "model": "glm_4_7",
+      "cost_per_1m": 0.9,
+      "likert": 4.37,
+      "fh": 36.8,
+      "bayesian_elo": 1490.0,
+      "likert_per_dollar": 4.856,
+      "fh_per_dollar": 40.889,
+      "bay_per_dollar": 1655.6
+    },
+    {
+      "model": "kimi_k2_5",
+      "cost_per_1m": 1.36,
+      "likert": 4.4,
+      "fh": 42,
+      "bayesian_elo": null,
+      "likert_per_dollar": 3.235,
+      "fh_per_dollar": 30.882,
+      "bay_per_dollar": null
+    },
+    {
+      "model": "kimi_k2_6",
+      "cost_per_1m": 1.36,
+      "likert": 4.18,
+      "fh": 49.5,
+      "bayesian_elo": null,
+      "likert_per_dollar": 3.074,
+      "fh_per_dollar": 36.397,
+      "bay_per_dollar": null
+    },
+    {
+      "model": "glm_5_1",
+      "cost_per_1m": 1.8,
+      "likert": 4.39,
+      "fh": 45.8,
+      "bayesian_elo": null,
+      "likert_per_dollar": 2.439,
+      "fh_per_dollar": 25.444,
+      "bay_per_dollar": null
+    },
+    {
+      "model": "deepseek_v4_pro",
+      "cost_per_1m": 3.2,
+      "likert": 4.42,
+      "fh": 19.4,
+      "bayesian_elo": null,
+      "likert_per_dollar": 1.381,
+      "fh_per_dollar": 6.062,
+      "bay_per_dollar": null
+    },
+    {
+      "model": "gpt_4_1",
+      "cost_per_1m": 4.4,
+      "likert": 4.34,
+      "fh": 27.6,
+      "bayesian_elo": 1471.9,
+      "likert_per_dollar": 0.986,
+      "fh_per_dollar": 6.273,
+      "bay_per_dollar": 334.5
+    },
+    {
+      "model": "claude_sonnet_4_5",
+      "cost_per_1m": 7.8,
+      "likert": 4.42,
+      "fh": 45.3,
+      "bayesian_elo": 1513.0,
+      "likert_per_dollar": 0.567,
+      "fh_per_dollar": 5.808,
+      "bay_per_dollar": 194.0
+    },
+    {
+      "model": "gemini_3_1_pro",
+      "cost_per_1m": 12.2,
+      "likert": 4.33,
+      "fh": 29.2,
+      "bayesian_elo": null,
+      "likert_per_dollar": 0.355,
+      "fh_per_dollar": 2.393,
+      "bay_per_dollar": null
+    },
+    {
+      "model": "claude_opus_4_6",
+      "cost_per_1m": 39.0,
+      "likert": 4.51,
+      "fh": 40.9,
+      "bayesian_elo": null,
+      "likert_per_dollar": 0.116,
+      "fh_per_dollar": 1.049,
+      "bay_per_dollar": null
+    },
+    {
+      "model": "claude_opus_4_7",
+      "cost_per_1m": 39.0,
+      "likert": 4.54,
+      "fh": 42.8,
+      "bayesian_elo": null,
+      "likert_per_dollar": 0.116,
+      "fh_per_dollar": 1.097,
+      "bay_per_dollar": null
+    }
+  ]
+}
