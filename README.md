@@ -83,6 +83,43 @@ Based on 240 multi-turn sessions (12 models × 20 adversarial seeds × 12 turns)
 
 Raw per-model profiles: [`results/model_profiles.json`](results/model_profiles.json). Reproduce with `python3 analyze_model_profiles.py`.
 
+## Behavioral Metrics (rule-based prose statistics)
+
+Computed across 3,569 model-generated responses from 17 models (240 + 60 multi-turn sessions). Pure prose statistics — no LLM judging required, can't be gamed by judge taste.
+
+| Model | Avg words | Unique-word ratio | Bigram repetition | Sentence-length var |
+|-------|-----------|-------------------|--------------------|---------------------|
+| Grok 4.1 | 137 | **0.796** | **0.015** | 113.8 |
+| Gemini 2.5 Flash | 141 | 0.728 | 0.030 | 59.3 |
+| DeepSeek v3.2 | 178 | 0.713 | 0.029 | 54.3 |
+| DeepSeek V4 Flash | 173 | 0.709 | 0.030 | 68.8 |
+| GPT-4.1 | 212 | 0.688 | 0.031 | 89.1 |
+| Kimi K2.5 | 253 | 0.681 | 0.037 | 118.8 |
+| Kimi K2.6 | 221 | 0.677 | 0.038 | 102.3 |
+| GLM 4.7 | 222 | 0.667 | 0.038 | 78.8 |
+| GLM 5.1 | 240 | 0.653 | 0.041 | 73.5 |
+| MiniMax M2.7 | 261 | 0.649 | 0.046 | 63.6 |
+| Llama 4 Maverick | 172 | 0.646 | 0.064 | 71.1 |
+| Gemini 3.1 Flash-Lite | 264 | 0.643 | 0.049 | 91.3 |
+| Qwen 3.5 Flash | 229 | 0.634 | **0.069** | 108.7 |
+| Sonnet 4.5 | 314 | 0.625 | 0.053 | 69.9 |
+| Gemma 4 26B | 350 | 0.597 | 0.069 | 87.6 |
+| Mistral SC | 439 | 0.557 | **0.095** | 75.8 |
+| Opus 4.6 | **534** | 0.551 | 0.076 | 122.1 |
+
+Population avg: 259 words, 0.657 unique-word ratio, 0.049 bigram repetition.
+
+**Important caveat:** unique-word ratio is length-biased — longer responses naturally have lower diversity (Heaps' law). Compare models within similar length tiers, not across them.
+
+**Within-length-tier readings:**
+- **Terse models** (~140-180 words): Grok 0.796 ≫ Gemini 0.728 ≫ DeepSeek 0.713 ≫ Llama 0.646. Llama is genuinely repetitive for its length tier.
+- **Medium** (~210-260 words): GPT-4.1 0.688 > Kimi 0.681 > GLM 0.667 > MiniMax 0.649 > Qwen 0.634. Qwen's 6.9% bigram repetition is high here.
+- **Long** (~310-540 words): Sonnet 0.625 > Gemma 0.597 > Mistral 0.557 > Opus 0.551. Mistral's 9.5% bigram repetition is the highest in the dataset — its "creative" tuning shows up as recycled phrases.
+
+**Headline finding**: Mistral's bigram repetition (9.5%) is **6× higher than Grok's** (1.5%). Both models are community-popular but for different reasons — Grok wins on prose freshness, Mistral on length and NSFW handling.
+
+Raw data: [`results/behavioral_metrics.json`](results/behavioral_metrics.json). Reproduce with `python3 analyze_behavioral_metrics.py`.
+
 ## Phase A: Next-Gen Cheap Models (preliminary)
 
 Five next-generation models tested on the v2/v3 seeds (60 sessions, partial preliminary results — Phase B with frontier models still running). These are the "cheap" tier of the new roster:
