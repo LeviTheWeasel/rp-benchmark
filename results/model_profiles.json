@@ -57,6 +57,20 @@
         "rank": 1
       }
     },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.67,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.75,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.46,
+        "n": 20
+      }
+    },
     "avg_failure_rank": 2.57
   },
   "claude_sonnet_4_5": {
@@ -115,6 +129,20 @@
         "floor": 4.3,
         "n": 5,
         "rank": 2
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.58,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.67,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.37,
+        "n": 20
       }
     },
     "avg_failure_rank": 3.14
@@ -177,6 +205,20 @@
         "rank": 5
       }
     },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.61,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.63,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.32,
+        "n": 20
+      }
+    },
     "avg_failure_rank": 3.57
   },
   "gemini_2_5_flash": {
@@ -235,6 +277,20 @@
         "floor": 4.2,
         "n": 5,
         "rank": 9
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.07,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.5,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.33,
+        "n": 20
       }
     },
     "avg_failure_rank": 9
@@ -297,6 +353,20 @@
         "rank": 7
       }
     },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.49,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.59,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.32,
+        "n": 20
+      }
+    },
     "avg_failure_rank": 6.57
   },
   "glm_4_7": {
@@ -355,6 +425,20 @@
         "floor": 4.2,
         "n": 5,
         "rank": 4
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.41,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.62,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.42,
+        "n": 20
       }
     },
     "avg_failure_rank": 5.14
@@ -417,6 +501,20 @@
         "rank": 6
       }
     },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.38,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.6,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.38,
+        "n": 20
+      }
+    },
     "avg_failure_rank": 3.71
   },
   "grok_4_1": {
@@ -475,6 +573,20 @@
         "floor": 4.1,
         "n": 5,
         "rank": 10
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.36,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.53,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.26,
+        "n": 20
       }
     },
     "avg_failure_rank": 9.71
@@ -537,6 +649,20 @@
         "rank": 12
       }
     },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.15,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.3,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.2,
+        "n": 20
+      }
+    },
     "avg_failure_rank": 11.43
   },
   "minimax_m2_7": {
@@ -595,6 +721,20 @@
         "floor": 4.3,
         "n": 5,
         "rank": 3
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.49,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.59,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.33,
+        "n": 20
       }
     },
     "avg_failure_rank": 5.86
@@ -657,6 +797,20 @@
         "rank": 11
       }
     },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.46,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.59,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.35,
+        "n": 20
+      }
+    },
     "avg_failure_rank": 7.71
   },
   "qwen3_5_flash": {
@@ -715,6 +869,20 @@
         "floor": 4.2,
         "n": 5,
         "rank": 8
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.18,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.16,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.13,
+        "n": 20
       }
     },
     "avg_failure_rank": 9.57

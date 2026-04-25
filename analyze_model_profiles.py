@@ -63,9 +63,20 @@ def main():
     comm = json.load(open("results/community_arena_2000.json"))
     comm_by_model = {e["model"]: e for e in comm["leaderboard"]}
 
-    # Group MT scores by model + mode
+    # Group MT scores by model + mode + per-dimension
     mt_by_mode = defaultdict(lambda: defaultdict(list))
     mt_overall = defaultdict(list)
+    # Subjective dimensions — mapped from existing rubric:
+    #   Engagement       <- S.3_narrative_momentum
+    #   Tone consistency <- S.1_consistency_over_time
+    #   Collaboration    <- S.4_adaptive_responsiveness
+    SUBJECTIVE_MAP = {
+        "engagement": "S.3_narrative_momentum",
+        "tone_consistency": "S.1_consistency_over_time",
+        "collaboration": "S.4_adaptive_responsiveness",
+    }
+    mt_subjective = defaultdict(lambda: defaultdict(list))
+
     for s in merged["sessions"]:
         if "judges" not in s:
             continue
@@ -78,6 +89,13 @@ def main():
         for mode, sids in TAXONOMY.items():
             if s["seed_id"] in sids:
                 mt_by_mode[mode][m].append(o)
+
+        # Subjective dimensions from session_dimensions
+        sd = j.get("session_dimensions", {})
+        for label, src_dim in SUBJECTIVE_MAP.items():
+            entry = sd.get(src_dim, {})
+            if isinstance(entry, dict) and "score" in entry:
+                mt_subjective[label][m].append(entry["score"])
 
     # Compute per-mode rankings
     mode_ranks = {}
@@ -105,6 +123,16 @@ def main():
                     "rank": mode_ranks[mode].get(m),
                 }
 
+        # Subjective dimensions (mapped from rubric)
+        subjective = {}
+        for label in ("engagement", "tone_consistency", "collaboration"):
+            scores = mt_subjective[label].get(m, [])
+            if scores:
+                subjective[label] = {
+                    "mean": round(st.mean(scores), 2),
+                    "n": len(scores),
+                }
+
         profiles[m] = {
             "community": {
                 "rank": comm_entry.get("rank"),
@@ -120,6 +148,7 @@ def main():
                 "n_sessions": len(mt_overall[m]),
             },
             "failure_modes": per_mode,
+            "subjective_dimensions": subjective,
         }
 
     # Average failure-mode rank per model
@@ -168,6 +197,16 @@ def main():
                 if fm["floor"] < 3.5:
                     flag = "  ⚠ FLOOR " + str(fm["floor"])
                 print(f"    {mode:<32} {fm['mean']:.2f}  {rank_str:<7}  {bar}{flag}")
+
+        # Subjective dimensions (mapped from existing rubric)
+        subj = p.get("subjective_dimensions", {})
+        if subj:
+            print(f"  Subjective (proxied from rubric, scale 1-5):")
+            for label in ("engagement", "tone_consistency", "collaboration"):
+                if label in subj:
+                    e = subj[label]
+                    bar = "█" * int(max(0, e["mean"] - 3.5) * 4)
+                    print(f"    {label:<32} {e['mean']:.2f}/5  {bar}")
 
 
 if __name__ == "__main__":
