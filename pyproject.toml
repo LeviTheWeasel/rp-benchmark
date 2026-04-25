@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rp-bench"
+version = "0.5.0"
+description = "Roleplay quality benchmark for LLMs — multi-judge, community-calibrated, with per-failure-mode analysis"
+readme = "README.md"
+license = {text = "CC-BY-NC-4.0"}
+authors = [
+    {name = "Mykhailo (l3vi4th4n)", email = "levionaleash@gmail.com"},
+]
+keywords = ["benchmark", "llm", "roleplay", "evaluation", "rp", "creative-writing"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "License :: Other/Proprietary License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.27.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+analysis = [
+    "numpy>=1.24",
+    "pyarrow>=14.0",
+    "pandas>=2.0",
+]
+visualize = [
+    "matplotlib>=3.7",
+    "seaborn>=0.13",
+]
+all = [
+    "numpy>=1.24",
+    "pyarrow>=14.0",
+    "pandas>=2.0",
+    "matplotlib>=3.7",
+    "seaborn>=0.13",
+]
+
+[project.urls]
+Homepage = "https://github.com/LeviTheWeasel/rp-benchmark"
+Dataset = "https://huggingface.co/datasets/lazyweasel/roleplay-bench"
+Arena = "https://arena.l3vi4th4n.ai"
+Issues = "https://github.com/LeviTheWeasel/rp-benchmark/issues"
+
+[project.scripts]
+rp-bench = "harness.cli:main"
+
+[tool.setuptools]
+packages = ["harness"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+harness = ["../prompts/*.md", "../hf_dataset/_source/*.json"]

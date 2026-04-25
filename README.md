@@ -8,6 +8,42 @@ The LLM-as-judge signals in this benchmark disagree with real users about half t
 
 **Dataset & Leaderboard:** [lazyweasel/roleplay-bench on HuggingFace](https://huggingface.co/datasets/lazyweasel/roleplay-bench)
 
+## Install
+
+```sh
+# From this repo
+pip install -e .
+
+# Or with optional analysis dependencies (numpy, pandas, pyarrow)
+pip install -e .[analysis]
+
+# Or with everything (analysis + matplotlib/seaborn for charts)
+pip install -e .[all]
+```
+
+After install, the `rp-bench` console script is available:
+
+```sh
+rp-bench list-models
+rp-bench test                                            # 1 scenario / 1 model smoke test
+rp-bench run --types completion --judge-mode flaw_hunter  # full single-turn benchmark
+rp-bench multiturn --turns 12 --adversarial               # adversarial multi-turn run
+rp-bench leaderboard --view full                          # show latest aggregation
+```
+
+The legacy `python run.py ...` entrypoint still works.
+
+## Interactive Leaderboard
+
+A Gradio app in `hf_space/` renders all the analyses (community ELO, multi-turn, flaw hunter, cost efficiency, behavioral metrics, correlations, per-model profile cards) as interactive tables. Run locally:
+
+```sh
+pip install -r hf_space/requirements.txt
+python hf_space/app.py
+```
+
+Or deploy to HuggingFace Spaces by pushing the `hf_space/` directory as a new Gradio Space.
+
 ## Why?
 
 Every RP benchmark is either vibes-based ("I tried it and it felt good") or tests generic writing quality. RP-Bench tests what actually matters in a roleplay session:
