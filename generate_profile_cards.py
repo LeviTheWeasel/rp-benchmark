@@ -48,6 +48,7 @@ def derive_strength_weakness(
     bayesian_by_model: dict,
     bayesian_n: int,
     mode_pool_sizes: dict[str, int],
+    flaw_hunter: dict | None = None,
 ) -> tuple[str, str]:
     """Pick the most notable strength + weakness for this model."""
     prof = profiles.get(m, {})
@@ -90,6 +91,14 @@ def derive_strength_weakness(
             rep = beh["bigram_repetition"]["mean"]
             if rep <= 0.020:
                 strength = f"Lowest phrase repetition ({rep:.3f} vs population {behavioral['population']['bigram_repetition']['mean']:.3f})"
+
+    # 7. Flaw hunter top-3
+    if not strength and flaw_hunter and m in flaw_hunter.get("per_model", {}):
+        fh_models = flaw_hunter["per_model"]
+        sorted_fh = sorted(fh_models.items(), key=lambda x: -x[1]["mean"])
+        rank = next((i for i, (mm, _) in enumerate(sorted_fh, 1) if mm == m), 0)
+        if rank and rank <= 3:
+            strength = f"Top-{rank} on flaw hunter ({fh_models[m]['mean']:.1f}/100)"
 
     if not strength:
         strength = "No standout strength on tested dimensions"
@@ -145,6 +154,12 @@ def derive_strength_weakness(
             if rep > pop_rep * 1.5:
                 weakness = f"High phrase repetition ({rep:.3f} vs population {pop_rep:.3f})"
 
+    # 8. Flaw hunter bottom (high fatal-flaws-per-session)
+    if not weakness and flaw_hunter and m in flaw_hunter.get("per_model", {}):
+        fh = flaw_hunter["per_model"][m]
+        if fh["fatal_per_session"] >= 0.75:
+            weakness = f"Frequent fatal flaws ({fh['fatal_per_session']:.2f} per session, mean score {fh['mean']:.0f}/100)"
+
     if not weakness:
         weakness = "No standout weakness on tested dimensions"
 
@@ -156,6 +171,9 @@ def main():
     behavioral = json.load(open("results/behavioral_metrics.json"))
     profiles = json.load(open("results/model_profiles.json"))
     bayesian = json.load(open("results/community_arena_bayesian.json"))
+    # Flaw hunter aggregates per model
+    fh_path = Path("results/flaw_hunter_session_summary.json")
+    flaw_hunter = json.load(open(fh_path)) if fh_path.exists() else None
 
     # Per-(model, mode) failure rate
     failure_rates = defaultdict(lambda: defaultdict(lambda: [0, 0]))
@@ -251,6 +269,32 @@ def main():
                     "delta": round(val - pop_val, 4),
                 }
 
+        # ---- FLAW HUNTER (deduction-based 0-100) ----
+        fh_blocks = []
+        fh_json = {}
+        if flaw_hunter and m in flaw_hunter.get("per_model", {}):
+            fh = flaw_hunter["per_model"][m]
+            mean = fh["mean"]
+            median = fh["median"]
+            band = ("exceptional" if mean >= 80 else "strong" if mean >= 70
+                    else "good" if mean >= 55 else "mediocre" if mean >= 40
+                    else "weak")
+            top_flaws = ", ".join(f["flaw"].split(":", 1)[-1] for f in fh.get("top_flaws", [])[:3]) or "—"
+            fh_blocks.append(f"  Mean score              {mean:>7.1f}/100  ({band})")
+            fh_blocks.append(f"  Median score            {median:>7.1f}/100")
+            fh_blocks.append(f"  Fatal flaws/session     {fh['fatal_per_session']:>7.2f}")
+            fh_blocks.append(f"  Major flaws/session     {fh['major_per_session']:>7.2f}")
+            fh_blocks.append(f"  Top flaws:              {top_flaws}")
+            fh_blocks.append(f"  Sessions scored:        {fh['n']:>7}")
+            fh_json = {
+                "mean": mean,
+                "median": median,
+                "fatal_per_session": fh["fatal_per_session"],
+                "major_per_session": fh["major_per_session"],
+                "top_flaws": [f["flaw"] for f in fh.get("top_flaws", [])[:3]],
+                "n_sessions": fh["n"],
+            }
+
         # ---- SUBJECTIVE ----
         s_blocks = []
         s_json = {}
@@ -282,7 +326,7 @@ def main():
         # ---- STRENGTH / WEAKNESS ----
         strength, weakness = derive_strength_weakness(
             m, profiles, behavioral, failure_rates, bayesian_by_model,
-            len(bayesian_by_model), mode_pool_sizes,
+            len(bayesian_by_model), mode_pool_sizes, flaw_hunter,
         )
 
         # Build markdown card
@@ -300,6 +344,10 @@ def main():
             lines.append("")
             lines.append("BEHAVIORAL METRICS")
             lines.extend(b_blocks)
+        if fh_blocks:
+            lines.append("")
+            lines.append("FLAW HUNTER (100 - deductions, target-aware)")
+            lines.extend(fh_blocks)
         if s_blocks:
             lines.append("")
             lines.append("SUBJECTIVE (LLM-judge, rubric proxy)")
@@ -321,6 +369,7 @@ def main():
                 "failure_rates": f_json,
                 "behavioral": b_json,
                 "subjective": s_json,
+                "flaw_hunter": fh_json,
                 "community": {
                     "rank": comm.get("rank"),
                     "elo": comm.get("elo"),

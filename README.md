@@ -83,7 +83,42 @@ Based on 240 multi-turn sessions (12 models × 20 adversarial seeds × 12 turns)
 
 Raw per-model profiles: [`results/model_profiles.json`](results/model_profiles.json). Reproduce with `python3 analyze_model_profiles.py`.
 
-**Per-model profile cards** (matching the experiment-design mockup format with failure rates + Wilson 95% CIs, behavioral metrics vs population avg, subjective dimensions, and Bayesian ELO + credible intervals): [`results/profile_cards.md`](results/profile_cards.md). Reproduce with `python3 generate_profile_cards.py`.
+**Per-model profile cards** (matching the experiment-design mockup format with failure rates + Wilson 95% CIs, behavioral metrics vs population avg, target-aware flaw hunter scores, subjective dimensions, and Bayesian ELO + credible intervals): [`results/profile_cards.md`](results/profile_cards.md). Reproduce with `python3 generate_profile_cards.py`.
+
+**Per-session flaw hunter scores** (failure-target aware, 100 - deductions). Run on 270 of 336 multi-turn sessions (the rest had unrecoverable JSON parse errors). Different methodology than the session Likert — strict deduction-based scoring with quoted evidence per flaw.
+
+| Rank | Model | Mean | Median | Fatal/session | Major/session |
+|---|---|---|---|---|---|
+| 1 | DeepSeek V4 Flash | **50.6** | 58 | 0.36 | 5.27 |
+| 2 | Kimi K2.6 | 49.5 | 52 | 0.12 | 5.25 |
+| 3 | DeepSeek V3.2 | 46.9 | 47 | 0.40 | 5.53 |
+| 4 | GLM 5.1 | 45.8 | 46 | 0.11 | 6.44 |
+| 5 | Sonnet 4.5 | 45.3 | 44 | 0.22 | 6.22 |
+| 6 | Gemini 2.5 Flash | 43.6 | 41 | 0.19 | 6.44 |
+| 7 | Opus 4.7 | 42.8 | 48 | 0.75 | 5.92 |
+| 8 | Kimi K2.5 | 42.0 | 42 | 0.44 | 6.33 |
+| 9 | MiniMax M2.7 | 41.5 | 44 | 0.79 | 6.00 |
+| 10 | Opus 4.6 | 40.9 | 42 | 0.29 | 6.82 |
+| 11 | Qwen 3.5 Flash | 39.6 | 39 | 0.50 | 6.50 |
+| 12 | GLM 4.7 | 36.8 | 37 | 0.71 | 6.76 |
+| 13 | Gemini 3.1 Flash Lite | 34.2 | 34 | 0.17 | 8.00 |
+| 14 | Gemma 4 26B | 32.6 | 33 | 0.62 | 7.38 |
+| 15 | Llama 4 Maverick | 30.6 | 36 | 0.95 | 6.65 |
+| 16 | Gemini 3.1 Pro | 29.2 | 35 | 1.00 | 6.75 |
+| 17 | GPT-4.1 | 27.6 | 42 | 0.75 | 6.83 |
+| 18 | Mistral SC | 27.1 | 37 | 0.95 | 7.70 |
+| 19 | DeepSeek V4 Pro | 19.4 | 46 | 0.50 | 9.00 |
+| 20 | Grok 4.1 | 12.8 | 34 | 1.33 | 8.17 |
+
+**The flaw hunter ranking is dramatically different from the Likert ranking.** DeepSeek V4 Flash tops it, Opus 4.7 (Likert #1) drops to #7, Grok crashes to last. The mean of 36 / median ~42 also reflects how strict the deduction methodology is — anyone scoring above 70 would be "strong"; nobody does.
+
+**Per failure-target hardness:**
+- Hardest seeds: `character_flattening` (mean 23), `pov_tense_violation` (mean 25), `narrative_stagnation` (mean 29)
+- Easiest seeds: `physics_sycophancy` (mean 52), `contradictory_lore` (mean 45)
+
+Notable: many bottom-ranked models (Grok, GPT-4.1, Mistral, V4 Pro) have *high medians* but very negative outliers (one Grok session scored −108, one V4 Pro session scored −177). Their mean is dragged down by occasional catastrophic failures. The median tells a more stable story.
+
+Raw data: [`results/session_flaw_hunter.jsonl`](results/session_flaw_hunter.jsonl), summary: [`results/flaw_hunter_session_summary.json`](results/flaw_hunter_session_summary.json). Reproduce: `python3 judge_session_flaw_hunter.py && python3 analyze_flaw_hunter_sessions.py`.
 
 **Per-turn binary failure rates** for F1 (agency) and F2 (POV/tense), based on 1,439 individual turn checks via Sonnet 4 binary classifier. Headline finding: **Mistral Small Creative has 15.9% F1 agency violation rate** (highest of any model), while Sonnet 4.5, Gemini, GPT-4.1, Grok, and many others sit at 0%. F2 POV/tense violations are 0% across all 20 models — either modern LLMs genuinely don't slip on POV under our seed conditions, or our detector is too strict. Worth flagging.
 

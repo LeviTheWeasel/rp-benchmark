@@ -13,6 +13,14 @@ BEHAVIORAL METRICS
   Prose quality (unique wr)  0.597  (population avg: 0.655) ↓
   Repetition score           0.069  (population avg: 0.049) ↑
 
+FLAW HUNTER (100 - deductions, target-aware)
+  Mean score                 32.6/100  (weak)
+  Median score               33.0/100
+  Fatal flaws/session        0.62
+  Major flaws/session        7.38
+  Top flaws:              purple_prose, recycled_description, narrating_emotions
+  Sessions scored:             16
+
 SUBJECTIVE (LLM-judge, rubric proxy)
   Engagement                  4.49/5
   Tone consistency            4.59/5
@@ -39,6 +47,14 @@ BEHAVIORAL METRICS
   Avg words                439.238  (population avg: 264.589)
   Prose quality (unique wr)  0.557  (population avg: 0.655) ↓
   Repetition score           0.095  (population avg: 0.049) ↑
+
+FLAW HUNTER (100 - deductions, target-aware)
+  Mean score                 27.1/100  (weak)
+  Median score               37.0/100
+  Fatal flaws/session        0.95
+  Major flaws/session        7.70
+  Top flaws:              purple_prose, recycled_description, agency_violation
+  Sessions scored:             20
 
 SUBJECTIVE (LLM-judge, rubric proxy)
   Engagement                  4.46/5
@@ -67,6 +83,14 @@ BEHAVIORAL METRICS
   Prose quality (unique wr)  0.728  (population avg: 0.655) ↑
   Repetition score           0.030  (population avg: 0.049) ↓
 
+FLAW HUNTER (100 - deductions, target-aware)
+  Mean score                 43.6/100  (mediocre)
+  Median score               41.5/100
+  Fatal flaws/session        0.19
+  Major flaws/session        6.44
+  Top flaws:              purple_prose, recycled_description, narrating_emotions
+  Sessions scored:             16
+
 SUBJECTIVE (LLM-judge, rubric proxy)
   Engagement                  4.07/5
   Tone consistency            4.50/5
@@ -93,6 +117,14 @@ BEHAVIORAL METRICS
   Avg words                136.728  (population avg: 264.589)
   Prose quality (unique wr)  0.796  (population avg: 0.655) ↑
   Repetition score           0.015  (population avg: 0.049) ↓
+
+FLAW HUNTER (100 - deductions, target-aware)
+  Mean score                 12.8/100  (weak)
+  Median score               34.5/100
+  Fatal flaws/session        1.33
+  Major flaws/session        8.17
+  Top flaws:              purple_prose, recycled_description, agency_violation
+  Sessions scored:             12
 
 SUBJECTIVE (LLM-judge, rubric proxy)
   Engagement                  4.36/5
@@ -121,6 +153,14 @@ BEHAVIORAL METRICS
   Prose quality (unique wr)  0.649  (population avg: 0.655)
   Repetition score           0.046  (population avg: 0.049)
 
+FLAW HUNTER (100 - deductions, target-aware)
+  Mean score                 41.5/100  (mediocre)
+  Median score               44.5/100
+  Fatal flaws/session        0.79
+  Major flaws/session        6.00
+  Top flaws:              purple_prose, recycled_description, narrating_emotions
+  Sessions scored:             14
+
 SUBJECTIVE (LLM-judge, rubric proxy)
   Engagement                  4.49/5
   Tone consistency            4.59/5
@@ -130,7 +170,7 @@ SUBJECTIVE (LLM-judge, rubric proxy)
 OVERALL RELIABILITY RANK: #5 of 11   [Bayesian ELO: 1514 ± 75, 95% CI [1386, 1646]]
 
 Strength:  Top-2 on narrative momentum (4.30/5)
-Weakness:  No standout weakness on tested dimensions
+Weakness:  Frequent fatal flaws (0.79 per session, mean score 42/100)
 ```
 
 ### claude_sonnet_4_5
@@ -147,6 +187,14 @@ BEHAVIORAL METRICS
   Avg words                313.754  (population avg: 264.589)
   Prose quality (unique wr)  0.625  (population avg: 0.655)
   Repetition score           0.053  (population avg: 0.049)
+
+FLAW HUNTER (100 - deductions, target-aware)
+  Mean score                 45.3/100  (mediocre)
+  Median score               44.5/100
+  Fatal flaws/session        0.22
+  Major flaws/session        6.22
+  Top flaws:              purple_prose, recycled_description, narrating_emotions
+  Sessions scored:             18
 
 SUBJECTIVE (LLM-judge, rubric proxy)
   Engagement                  4.58/5
@@ -175,6 +223,14 @@ BEHAVIORAL METRICS
   Prose quality (unique wr)  0.634  (population avg: 0.655)
   Repetition score           0.069  (population avg: 0.049) ↑
 
+FLAW HUNTER (100 - deductions, target-aware)
+  Mean score                 39.6/100  (weak)
+  Median score               39.5/100
+  Fatal flaws/session        0.50
+  Major flaws/session        6.50
+  Top flaws:              recycled_description, purple_prose, narrating_emotions
+  Sessions scored:             18
+
 SUBJECTIVE (LLM-judge, rubric proxy)
   Engagement                  4.18/5
   Tone consistency            4.16/5
@@ -201,6 +257,14 @@ BEHAVIORAL METRICS
   Avg words                178.179  (population avg: 264.589)
   Prose quality (unique wr)  0.713  (population avg: 0.655) ↑
   Repetition score           0.029  (population avg: 0.049) ↓
+
+FLAW HUNTER (100 - deductions, target-aware)
+  Mean score                 46.9/100  (mediocre)
+  Median score               47.0/100
+  Fatal flaws/session        0.40
+  Major flaws/session        5.53
+  Top flaws:              purple_prose, recycled_description, narrating_emotions
+  Sessions scored:             15
 
 SUBJECTIVE (LLM-judge, rubric proxy)
   Engagement                  4.61/5
@@ -229,6 +293,14 @@ BEHAVIORAL METRICS
   Prose quality (unique wr)  0.667  (population avg: 0.655)
   Repetition score           0.038  (population avg: 0.049) ↓
 
+FLAW HUNTER (100 - deductions, target-aware)
+  Mean score                 36.8/100  (weak)
+  Median score               37.0/100
+  Fatal flaws/session        0.71
+  Major flaws/session        6.76
+  Top flaws:              purple_prose, recycled_description, narrating_emotions
+  Sessions scored:             17
+
 SUBJECTIVE (LLM-judge, rubric proxy)
   Engagement                  4.41/5
   Tone consistency            4.62/5
@@ -255,6 +327,14 @@ BEHAVIORAL METRICS
   Avg words                171.529  (population avg: 264.589)
   Prose quality (unique wr)  0.646  (population avg: 0.655)
   Repetition score           0.064  (population avg: 0.049) ↑
+
+FLAW HUNTER (100 - deductions, target-aware)
+  Mean score                 30.6/100  (weak)
+  Median score               36.5/100
+  Fatal flaws/session        0.95
+  Major flaws/session        6.65
+  Top flaws:              recycled_description, purple_prose, agency_violation
+  Sessions scored:             20
 
 SUBJECTIVE (LLM-judge, rubric proxy)
   Engagement                  4.15/5
@@ -283,6 +363,14 @@ BEHAVIORAL METRICS
   Prose quality (unique wr)  0.688  (population avg: 0.655)
   Repetition score           0.031  (population avg: 0.049) ↓
 
+FLAW HUNTER (100 - deductions, target-aware)
+  Mean score                 27.6/100  (weak)
+  Median score               42.0/100
+  Fatal flaws/session        0.75
+  Major flaws/session        6.83
+  Top flaws:              purple_prose, recycled_description, agency_violation
+  Sessions scored:             12
+
 SUBJECTIVE (LLM-judge, rubric proxy)
   Engagement                  4.38/5
   Tone consistency            4.60/5
@@ -310,6 +398,14 @@ BEHAVIORAL METRICS
   Prose quality (unique wr)  0.571  (population avg: 0.655) ↓
   Repetition score           0.071  (population avg: 0.049) ↑
 
+FLAW HUNTER (100 - deductions, target-aware)
+  Mean score                 42.8/100  (mediocre)
+  Median score               48.0/100
+  Fatal flaws/session        0.75
+  Major flaws/session        5.92
+  Top flaws:              purple_prose, recycled_description, agency_violation
+  Sessions scored:             12
+
 SUBJECTIVE (LLM-judge, rubric proxy)
   Engagement                  4.61/5
   Tone consistency            4.75/5
@@ -319,7 +415,7 @@ SUBJECTIVE (LLM-judge, rubric proxy)
 NOT IN COMMUNITY ARENA POOL.  MT-judge mean: 4.54
 
 Strength:  Top-1 on agency respect (4.60/5)
-Weakness:  No standout weakness on tested dimensions
+Weakness:  Frequent fatal flaws (0.75 per session, mean score 43/100)
 ```
 
 ### claude_opus_4_6
@@ -336,6 +432,14 @@ BEHAVIORAL METRICS
   Avg words                533.525  (population avg: 264.589)
   Prose quality (unique wr)  0.551  (population avg: 0.655) ↓
   Repetition score           0.076  (population avg: 0.049) ↑
+
+FLAW HUNTER (100 - deductions, target-aware)
+  Mean score                 40.9/100  (mediocre)
+  Median score               42.0/100
+  Fatal flaws/session        0.29
+  Major flaws/session        6.82
+  Top flaws:              purple_prose, recycled_description, narrating_emotions
+  Sessions scored:             17
 
 SUBJECTIVE (LLM-judge, rubric proxy)
   Engagement                  4.67/5
@@ -364,6 +468,14 @@ BEHAVIORAL METRICS
   Prose quality (unique wr)  0.664  (population avg: 0.655)
   Repetition score           0.040  (population avg: 0.049)
 
+FLAW HUNTER (100 - deductions, target-aware)
+  Mean score                 19.4/100  (weak)
+  Median score               46.5/100
+  Fatal flaws/session        0.50
+  Major flaws/session        9.00
+  Top flaws:              purple_prose, recycled_description, narrating_emotions
+  Sessions scored:              8
+
 SUBJECTIVE (LLM-judge, rubric proxy)
   Engagement                  4.53/5
   Tone consistency            4.70/5
@@ -390,6 +502,14 @@ BEHAVIORAL METRICS
   Avg words                252.944  (population avg: 264.589)
   Prose quality (unique wr)  0.681  (population avg: 0.655)
   Repetition score           0.037  (population avg: 0.049) ↓
+
+FLAW HUNTER (100 - deductions, target-aware)
+  Mean score                 42.0/100  (mediocre)
+  Median score               42.0/100
+  Fatal flaws/session        0.44
+  Major flaws/session        6.33
+  Top flaws:              recycled_description, purple_prose, narrating_emotions
+  Sessions scored:              9
 
 SUBJECTIVE (LLM-judge, rubric proxy)
   Engagement                  4.56/5
@@ -418,6 +538,14 @@ BEHAVIORAL METRICS
   Prose quality (unique wr)  0.653  (population avg: 0.655)
   Repetition score           0.041  (population avg: 0.049)
 
+FLAW HUNTER (100 - deductions, target-aware)
+  Mean score                 45.8/100  (mediocre)
+  Median score               46.0/100
+  Fatal flaws/session        0.11
+  Major flaws/session        6.44
+  Top flaws:              purple_prose, recycled_description, convenient_world
+  Sessions scored:              9
+
 SUBJECTIVE (LLM-judge, rubric proxy)
   Engagement                  4.49/5
   Tone consistency            4.65/5
@@ -444,6 +572,14 @@ BEHAVIORAL METRICS
   Avg words                172.929  (population avg: 264.589)
   Prose quality (unique wr)  0.709  (population avg: 0.655) ↑
   Repetition score           0.030  (population avg: 0.049) ↓
+
+FLAW HUNTER (100 - deductions, target-aware)
+  Mean score                 50.6/100  (mediocre)
+  Median score               58.0/100
+  Fatal flaws/session        0.36
+  Major flaws/session        5.27
+  Top flaws:              purple_prose, recycled_description, convenient_world
+  Sessions scored:             11
 
 SUBJECTIVE (LLM-judge, rubric proxy)
   Engagement                  4.47/5
@@ -472,6 +608,14 @@ BEHAVIORAL METRICS
   Prose quality (unique wr)  0.667  (population avg: 0.655)
   Repetition score           0.040  (population avg: 0.049)
 
+FLAW HUNTER (100 - deductions, target-aware)
+  Mean score                 29.2/100  (weak)
+  Median score               35.5/100
+  Fatal flaws/session        1.00
+  Major flaws/session        6.75
+  Top flaws:              recycled_description, purple_prose, agency_violation
+  Sessions scored:             12
+
 SUBJECTIVE (LLM-judge, rubric proxy)
   Engagement                  4.50/5
   Tone consistency            4.62/5
@@ -481,7 +625,7 @@ SUBJECTIVE (LLM-judge, rubric proxy)
 NOT IN COMMUNITY ARENA POOL.  MT-judge mean: 4.33
 
 Strength:  Strong on tone consistency (4.62/5)
-Weakness:  No standout weakness on tested dimensions
+Weakness:  Frequent fatal flaws (1.00 per session, mean score 29/100)
 ```
 
 ### gemini_3_1_flash_lite
@@ -498,6 +642,14 @@ BEHAVIORAL METRICS
   Avg words                263.924  (population avg: 264.589)
   Prose quality (unique wr)  0.643  (population avg: 0.655)
   Repetition score           0.049  (population avg: 0.049)
+
+FLAW HUNTER (100 - deductions, target-aware)
+  Mean score                 34.2/100  (weak)
+  Median score               34.0/100
+  Fatal flaws/session        0.17
+  Major flaws/session        8.00
+  Top flaws:              purple_prose, recycled_description, narrating_emotions
+  Sessions scored:              6
 
 SUBJECTIVE (LLM-judge, rubric proxy)
   Engagement                  4.43/5
@@ -526,6 +678,14 @@ BEHAVIORAL METRICS
   Prose quality (unique wr)  0.677  (population avg: 0.655)
   Repetition score           0.038  (population avg: 0.049) ↓
 
+FLAW HUNTER (100 - deductions, target-aware)
+  Mean score                 49.5/100  (mediocre)
+  Median score               52.0/100
+  Fatal flaws/session        0.12
+  Major flaws/session        5.25
+  Top flaws:              recycled_description, purple_prose, convenient_world
+  Sessions scored:              8
+
 SUBJECTIVE (LLM-judge, rubric proxy)
   Engagement                  4.44/5
   Tone consistency            4.39/5
@@ -534,6 +694,6 @@ SUBJECTIVE (LLM-judge, rubric proxy)
 
 NOT IN COMMUNITY ARENA POOL.  MT-judge mean: 4.18
 
-Strength:  No standout strength on tested dimensions
+Strength:  Top-2 on flaw hunter (49.5/100)
 Weakness:  Catastrophic floor on agency respect (lowest session: 2.5)
 ```

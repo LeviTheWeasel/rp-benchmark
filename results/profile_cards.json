@@ -38,6 +38,18 @@
         "tone_consistency": 4.59,
         "collaboration": 4.32
       },
+      "flaw_hunter": {
+        "mean": 32.6,
+        "median": 33.0,
+        "fatal_per_session": 0.62,
+        "major_per_session": 7.38,
+        "top_flaws": [
+          "MAJOR:purple_prose",
+          "MAJOR:recycled_description",
+          "MAJOR:narrating_emotions"
+        ],
+        "n_sessions": 16
+      },
       "community": {
         "rank": 1,
         "elo": 1535.1,
@@ -93,6 +105,18 @@
         "engagement": 4.46,
         "tone_consistency": 4.59,
         "collaboration": 4.35
+      },
+      "flaw_hunter": {
+        "mean": 27.1,
+        "median": 37.0,
+        "fatal_per_session": 0.95,
+        "major_per_session": 7.7,
+        "top_flaws": [
+          "MAJOR:purple_prose",
+          "MAJOR:recycled_description",
+          "FATAL:agency_violation"
+        ],
+        "n_sessions": 20
       },
       "community": {
         "rank": 2,
@@ -150,6 +174,18 @@
         "tone_consistency": 4.5,
         "collaboration": 4.33
       },
+      "flaw_hunter": {
+        "mean": 43.6,
+        "median": 41.5,
+        "fatal_per_session": 0.19,
+        "major_per_session": 6.44,
+        "top_flaws": [
+          "MAJOR:purple_prose",
+          "MAJOR:recycled_description",
+          "MAJOR:narrating_emotions"
+        ],
+        "n_sessions": 16
+      },
       "community": {
         "rank": 3,
         "elo": 1515.4,
@@ -205,6 +241,18 @@
         "engagement": 4.36,
         "tone_consistency": 4.53,
         "collaboration": 4.26
+      },
+      "flaw_hunter": {
+        "mean": 12.8,
+        "median": 34.5,
+        "fatal_per_session": 1.33,
+        "major_per_session": 8.17,
+        "top_flaws": [
+          "MAJOR:purple_prose",
+          "MAJOR:recycled_description",
+          "FATAL:agency_violation"
+        ],
+        "n_sessions": 12
       },
       "community": {
         "rank": 5,
@@ -262,6 +310,18 @@
         "tone_consistency": 4.59,
         "collaboration": 4.33
       },
+      "flaw_hunter": {
+        "mean": 41.5,
+        "median": 44.5,
+        "fatal_per_session": 0.79,
+        "major_per_session": 6.0,
+        "top_flaws": [
+          "MAJOR:purple_prose",
+          "MAJOR:recycled_description",
+          "MAJOR:narrating_emotions"
+        ],
+        "n_sessions": 14
+      },
       "community": {
         "rank": 4,
         "elo": 1510.3,
@@ -278,7 +338,7 @@
       },
       "multiturn_judge_mean": 4.34,
       "strength": "Top-2 on narrative momentum (4.30/5)",
-      "weakness": "No standout weakness on tested dimensions"
+      "weakness": "Frequent fatal flaws (0.79 per session, mean score 42/100)"
     },
     {
       "model": "claude_sonnet_4_5",
@@ -317,6 +377,18 @@
         "engagement": 4.58,
         "tone_consistency": 4.67,
         "collaboration": 4.37
+      },
+      "flaw_hunter": {
+        "mean": 45.3,
+        "median": 44.5,
+        "fatal_per_session": 0.22,
+        "major_per_session": 6.22,
+        "top_flaws": [
+          "MAJOR:purple_prose",
+          "MAJOR:recycled_description",
+          "MAJOR:narrating_emotions"
+        ],
+        "n_sessions": 18
       },
       "community": {
         "rank": 6,
@@ -374,6 +446,18 @@
         "tone_consistency": 4.16,
         "collaboration": 4.13
       },
+      "flaw_hunter": {
+        "mean": 39.6,
+        "median": 39.5,
+        "fatal_per_session": 0.5,
+        "major_per_session": 6.5,
+        "top_flaws": [
+          "MAJOR:recycled_description",
+          "MAJOR:purple_prose",
+          "MAJOR:narrating_emotions"
+        ],
+        "n_sessions": 18
+      },
       "community": {
         "rank": 8,
         "elo": 1486.6,
@@ -429,6 +513,18 @@
         "engagement": 4.61,
         "tone_consistency": 4.63,
         "collaboration": 4.32
+      },
+      "flaw_hunter": {
+        "mean": 46.9,
+        "median": 47,
+        "fatal_per_session": 0.4,
+        "major_per_session": 5.53,
+        "top_flaws": [
+          "MAJOR:purple_prose",
+          "MAJOR:recycled_description",
+          "MAJOR:narrating_emotions"
+        ],
+        "n_sessions": 15
       },
       "community": {
         "rank": 7,
@@ -486,6 +582,18 @@
         "tone_consistency": 4.62,
         "collaboration": 4.42
       },
+      "flaw_hunter": {
+        "mean": 36.8,
+        "median": 37,
+        "fatal_per_session": 0.71,
+        "major_per_session": 6.76,
+        "top_flaws": [
+          "MAJOR:purple_prose",
+          "MAJOR:recycled_description",
+          "MAJOR:narrating_emotions"
+        ],
+        "n_sessions": 17
+      },
       "community": {
         "rank": 9,
         "elo": 1483.4,
@@ -541,6 +649,18 @@
         "engagement": 4.15,
         "tone_consistency": 4.3,
         "collaboration": 4.2
+      },
+      "flaw_hunter": {
+        "mean": 30.6,
+        "median": 36.5,
+        "fatal_per_session": 0.95,
+        "major_per_session": 6.65,
+        "top_flaws": [
+          "MAJOR:recycled_description",
+          "MAJOR:purple_prose",
+          "FATAL:agency_violation"
+        ],
+        "n_sessions": 20
       },
       "community": {
         "rank": 10,
@@ -598,6 +718,18 @@
         "tone_consistency": 4.6,
         "collaboration": 4.38
       },
+      "flaw_hunter": {
+        "mean": 27.6,
+        "median": 42.0,
+        "fatal_per_session": 0.75,
+        "major_per_session": 6.83,
+        "top_flaws": [
+          "MAJOR:purple_prose",
+          "MAJOR:recycled_description",
+          "FATAL:agency_violation"
+        ],
+        "n_sessions": 12
+      },
       "community": {
         "rank": 11,
         "elo": 1469.7,
@@ -654,6 +786,18 @@
         "tone_consistency": 4.75,
         "collaboration": 4.53
       },
+      "flaw_hunter": {
+        "mean": 42.8,
+        "median": 48.0,
+        "fatal_per_session": 0.75,
+        "major_per_session": 5.92,
+        "top_flaws": [
+          "MAJOR:purple_prose",
+          "MAJOR:recycled_description",
+          "FATAL:agency_violation"
+        ],
+        "n_sessions": 12
+      },
       "community": {
         "rank": null,
         "elo": null,
@@ -662,7 +806,7 @@
       "bayesian": null,
       "multiturn_judge_mean": 4.54,
       "strength": "Top-1 on agency respect (4.60/5)",
-      "weakness": "No standout weakness on tested dimensions"
+      "weakness": "Frequent fatal flaws (0.75 per session, mean score 43/100)"
     },
     {
       "model": "claude_opus_4_6",
@@ -701,6 +845,18 @@
         "engagement": 4.67,
         "tone_consistency": 4.75,
         "collaboration": 4.46
+      },
+      "flaw_hunter": {
+        "mean": 40.9,
+        "median": 42,
+        "fatal_per_session": 0.29,
+        "major_per_session": 6.82,
+        "top_flaws": [
+          "MAJOR:purple_prose",
+          "MAJOR:recycled_description",
+          "MAJOR:narrating_emotions"
+        ],
+        "n_sessions": 17
       },
       "community": {
         "rank": null,
@@ -750,6 +906,18 @@
         "tone_consistency": 4.7,
         "collaboration": 4.38
       },
+      "flaw_hunter": {
+        "mean": 19.4,
+        "median": 46.5,
+        "fatal_per_session": 0.5,
+        "major_per_session": 9.0,
+        "top_flaws": [
+          "MAJOR:purple_prose",
+          "MAJOR:recycled_description",
+          "MAJOR:narrating_emotions"
+        ],
+        "n_sessions": 8
+      },
       "community": {
         "rank": null,
         "elo": null,
@@ -797,6 +965,18 @@
         "engagement": 4.56,
         "tone_consistency": 4.67,
         "collaboration": 4.39
+      },
+      "flaw_hunter": {
+        "mean": 42,
+        "median": 42,
+        "fatal_per_session": 0.44,
+        "major_per_session": 6.33,
+        "top_flaws": [
+          "MAJOR:recycled_description",
+          "MAJOR:purple_prose",
+          "MAJOR:narrating_emotions"
+        ],
+        "n_sessions": 9
       },
       "community": {
         "rank": null,
@@ -846,6 +1026,18 @@
         "tone_consistency": 4.65,
         "collaboration": 4.34
       },
+      "flaw_hunter": {
+        "mean": 45.8,
+        "median": 46,
+        "fatal_per_session": 0.11,
+        "major_per_session": 6.44,
+        "top_flaws": [
+          "MAJOR:purple_prose",
+          "MAJOR:recycled_description",
+          "MAJOR:convenient_world"
+        ],
+        "n_sessions": 9
+      },
       "community": {
         "rank": null,
         "elo": null,
@@ -893,6 +1085,18 @@
         "engagement": 4.47,
         "tone_consistency": 4.6,
         "collaboration": 4.27
+      },
+      "flaw_hunter": {
+        "mean": 50.6,
+        "median": 58,
+        "fatal_per_session": 0.36,
+        "major_per_session": 5.27,
+        "top_flaws": [
+          "MAJOR:purple_prose",
+          "MAJOR:recycled_description",
+          "MAJOR:convenient_world"
+        ],
+        "n_sessions": 11
       },
       "community": {
         "rank": null,
@@ -942,6 +1146,18 @@
         "tone_consistency": 4.62,
         "collaboration": 4.42
       },
+      "flaw_hunter": {
+        "mean": 29.2,
+        "median": 35.5,
+        "fatal_per_session": 1.0,
+        "major_per_session": 6.75,
+        "top_flaws": [
+          "MAJOR:recycled_description",
+          "MAJOR:purple_prose",
+          "FATAL:agency_violation"
+        ],
+        "n_sessions": 12
+      },
       "community": {
         "rank": null,
         "elo": null,
@@ -950,7 +1166,7 @@
       "bayesian": null,
       "multiturn_judge_mean": 4.33,
       "strength": "Strong on tone consistency (4.62/5)",
-      "weakness": "No standout weakness on tested dimensions"
+      "weakness": "Frequent fatal flaws (1.00 per session, mean score 29/100)"
     },
     {
       "model": "gemini_3_1_flash_lite",
@@ -989,6 +1205,18 @@
         "engagement": 4.43,
         "tone_consistency": 4.6,
         "collaboration": 4.31
+      },
+      "flaw_hunter": {
+        "mean": 34.2,
+        "median": 34.0,
+        "fatal_per_session": 0.17,
+        "major_per_session": 8.0,
+        "top_flaws": [
+          "MAJOR:purple_prose",
+          "MAJOR:recycled_description",
+          "MAJOR:narrating_emotions"
+        ],
+        "n_sessions": 6
       },
       "community": {
         "rank": null,
@@ -1038,6 +1266,18 @@
         "tone_consistency": 4.39,
         "collaboration": 4.12
       },
+      "flaw_hunter": {
+        "mean": 49.5,
+        "median": 52.0,
+        "fatal_per_session": 0.12,
+        "major_per_session": 5.25,
+        "top_flaws": [
+          "MAJOR:recycled_description",
+          "MAJOR:purple_prose",
+          "MAJOR:convenient_world"
+        ],
+        "n_sessions": 8
+      },
       "community": {
         "rank": null,
         "elo": null,
@@ -1045,7 +1285,7 @@
       },
       "bayesian": null,
       "multiturn_judge_mean": 4.18,
-      "strength": "No standout strength on tested dimensions",
+      "strength": "Top-2 on flaw hunter (49.5/100)",
       "weakness": "Catastrophic floor on agency respect (lowest session: 2.5)"
     }
   ]

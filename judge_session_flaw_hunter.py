@@ -203,13 +203,32 @@ def main():
         if m:
             candidates.append(m.group(0))
 
-        # Repair pattern 1: `"text" (note),` -> `"text (note)",`
-        # i.e. trailing parenthetical leaked outside the string
-        repair_pattern = re.compile(r'"([^"]*?)"\s*\(([^)]*?)\)\s*([,\}\]])', re.DOTALL)
+        # Common repair patterns for invalid JSON the judge sometimes emits:
+        # 1. `"text" (note),` -> `"text (note)",`  — trailing parenthetical leaked
+        # 2. `"text" / "more text",` -> `"text / more text",`  — slash-joined quotes
+        # 3. `"text" — "more text",` -> `"text — more text",`  — em-dash-joined
+        repair_patterns = [
+            (re.compile(r'"([^"]*?)"\s*\(([^)]*?)\)\s*([,\}\]])', re.DOTALL),
+             r'"\1 (\2)"\3'),
+            (re.compile(r'"([^"]*?)"\s*/\s*"([^"]*?)"\s*([,\}\]])', re.DOTALL),
+             r'"\1 / \2"\3'),
+            (re.compile(r'"([^"]*?)"\s*—\s*"([^"]*?)"\s*([,\}\]])', re.DOTALL),
+             r'"\1 — \2"\3'),
+        ]
         for base in [cleaned, m.group(0) if m else None]:
             if base is None:
                 continue
-            repaired = repair_pattern.sub(r'"\1 (\2)"\3', base)
+            repaired = base
+            for pat, repl in repair_patterns:
+                repaired = pat.sub(repl, repaired)
+            candidates.append(repaired)
+            # Also try applying multiple times (in case of nested issues)
+            for _ in range(3):
+                prev = repaired
+                for pat, repl in repair_patterns:
+                    repaired = pat.sub(repl, repaired)
+                if repaired == prev:
+                    break
             candidates.append(repaired)
 
         for cand in candidates:
