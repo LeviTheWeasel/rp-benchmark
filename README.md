@@ -83,6 +83,10 @@ Based on 240 multi-turn sessions (12 models × 20 adversarial seeds × 12 turns)
 
 Raw per-model profiles: [`results/model_profiles.json`](results/model_profiles.json). Reproduce with `python3 analyze_model_profiles.py`.
 
+**Per-model profile cards** (matching the experiment-design mockup format with failure rates + Wilson 95% CIs, behavioral metrics vs population avg, subjective dimensions, and Bayesian ELO + credible intervals): [`results/profile_cards.md`](results/profile_cards.md). Reproduce with `python3 generate_profile_cards.py`.
+
+**Per-turn binary failure rates** for F1 (agency) and F2 (POV/tense), based on 1,439 individual turn checks via Sonnet 4 binary classifier. Headline finding: **Mistral Small Creative has 15.9% F1 agency violation rate** (highest of any model), while Sonnet 4.5, Gemini, GPT-4.1, Grok, and many others sit at 0%. F2 POV/tense violations are 0% across all 20 models — either modern LLMs genuinely don't slip on POV under our seed conditions, or our detector is too strict. Worth flagging.
+
 ## Behavioral Metrics (rule-based prose statistics)
 
 Computed across 3,569 model-generated responses from 17 models (240 + 60 multi-turn sessions). Pure prose statistics — no LLM judging required, can't be gamed by judge taste.

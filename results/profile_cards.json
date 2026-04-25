@@ -1,0 +1,1012 @@
+{
+  "models": [
+    {
+      "model": "gemma_4_26b",
+      "failure_rates": {
+        "F1_agency": {
+          "rate_pct": 2.27,
+          "ci_half_pct": 5.7,
+          "n": 44,
+          "failures": 1
+        },
+        "F2_pov_tense": {
+          "rate_pct": 0.0,
+          "ci_half_pct": 5.21,
+          "n": 33,
+          "failures": 0
+        }
+      },
+      "behavioral": {
+        "word_count": {
+          "value": 350.0042,
+          "population_avg": 264.5894,
+          "delta": 85.4148
+        },
+        "unique_word_ratio": {
+          "value": 0.5971,
+          "population_avg": 0.655,
+          "delta": -0.0579
+        },
+        "bigram_repetition": {
+          "value": 0.0688,
+          "population_avg": 0.049,
+          "delta": 0.0198
+        }
+      },
+      "subjective": {
+        "engagement": 4.49,
+        "tone_consistency": 4.59,
+        "collaboration": 4.32
+      },
+      "community": {
+        "rank": 1,
+        "elo": 1535.1,
+        "n_votes": 302
+      },
+      "bayesian": {
+        "rank": 1,
+        "model": "gemma_4_26b",
+        "elo_mean": 1533.7,
+        "elo_std": 74.8,
+        "ci_low_95": 1404.6,
+        "ci_high_95": 1662.4,
+        "ci_width_95": 257.8
+      },
+      "multiturn_judge_mean": 4.29
+    },
+    {
+      "model": "mistral_small_creative",
+      "failure_rates": {
+        "F1_agency": {
+          "rate_pct": 15.91,
+          "ci_half_pct": 10.72,
+          "n": 44,
+          "failures": 7
+        },
+        "F2_pov_tense": {
+          "rate_pct": 0.0,
+          "ci_half_pct": 5.21,
+          "n": 33,
+          "failures": 0
+        }
+      },
+      "behavioral": {
+        "word_count": {
+          "value": 439.2375,
+          "population_avg": 264.5894,
+          "delta": 174.6481
+        },
+        "unique_word_ratio": {
+          "value": 0.5567,
+          "population_avg": 0.655,
+          "delta": -0.0983
+        },
+        "bigram_repetition": {
+          "value": 0.0945,
+          "population_avg": 0.049,
+          "delta": 0.0455
+        }
+      },
+      "subjective": {
+        "engagement": 4.46,
+        "tone_consistency": 4.59,
+        "collaboration": 4.35
+      },
+      "community": {
+        "rank": 2,
+        "elo": 1525.7,
+        "n_votes": 646
+      },
+      "bayesian": {
+        "rank": 2,
+        "model": "mistral_small_creative",
+        "elo_mean": 1533.5,
+        "elo_std": 74.7,
+        "ci_low_95": 1396.3,
+        "ci_high_95": 1660.3,
+        "ci_width_95": 264.0
+      },
+      "multiturn_judge_mean": 4.22
+    },
+    {
+      "model": "gemini_2_5_flash",
+      "failure_rates": {
+        "F1_agency": {
+          "rate_pct": 0.0,
+          "ci_half_pct": 4.01,
+          "n": 44,
+          "failures": 0
+        },
+        "F2_pov_tense": {
+          "rate_pct": 0.0,
+          "ci_half_pct": 5.21,
+          "n": 33,
+          "failures": 0
+        }
+      },
+      "behavioral": {
+        "word_count": {
+          "value": 141.1034,
+          "population_avg": 264.5894,
+          "delta": -123.486
+        },
+        "unique_word_ratio": {
+          "value": 0.7278,
+          "population_avg": 0.655,
+          "delta": 0.0728
+        },
+        "bigram_repetition": {
+          "value": 0.0299,
+          "population_avg": 0.049,
+          "delta": -0.0191
+        }
+      },
+      "subjective": {
+        "engagement": 4.07,
+        "tone_consistency": 4.5,
+        "collaboration": 4.33
+      },
+      "community": {
+        "rank": 3,
+        "elo": 1515.4,
+        "n_votes": 241
+      },
+      "bayesian": {
+        "rank": 3,
+        "model": "gemini_2_5_flash",
+        "elo_mean": 1529.1,
+        "elo_std": 77.2,
+        "ci_low_95": 1389.1,
+        "ci_high_95": 1664.6,
+        "ci_width_95": 275.4
+      },
+      "multiturn_judge_mean": 4.14
+    },
+    {
+      "model": "grok_4_1",
+      "failure_rates": {
+        "F1_agency": {
+          "rate_pct": 0.0,
+          "ci_half_pct": 4.1,
+          "n": 43,
+          "failures": 0
+        },
+        "F2_pov_tense": {
+          "rate_pct": 0.0,
+          "ci_half_pct": 5.21,
+          "n": 33,
+          "failures": 0
+        }
+      },
+      "behavioral": {
+        "word_count": {
+          "value": 136.728,
+          "population_avg": 264.5894,
+          "delta": -127.8614
+        },
+        "unique_word_ratio": {
+          "value": 0.796,
+          "population_avg": 0.655,
+          "delta": 0.141
+        },
+        "bigram_repetition": {
+          "value": 0.0151,
+          "population_avg": 0.049,
+          "delta": -0.0339
+        }
+      },
+      "subjective": {
+        "engagement": 4.36,
+        "tone_consistency": 4.53,
+        "collaboration": 4.26
+      },
+      "community": {
+        "rank": 5,
+        "elo": 1505.9,
+        "n_votes": 322
+      },
+      "bayesian": {
+        "rank": 4,
+        "model": "grok_4_1",
+        "elo_mean": 1517.0,
+        "elo_std": 75.9,
+        "ci_low_95": 1384.8,
+        "ci_high_95": 1650.9,
+        "ci_width_95": 266.1
+      },
+      "multiturn_judge_mean": 4.19
+    },
+    {
+      "model": "minimax_m2_7",
+      "failure_rates": {
+        "F1_agency": {
+          "rate_pct": 9.3,
+          "ci_half_pct": 8.96,
+          "n": 43,
+          "failures": 4
+        },
+        "F2_pov_tense": {
+          "rate_pct": 0.0,
+          "ci_half_pct": 5.21,
+          "n": 33,
+          "failures": 0
+        }
+      },
+      "behavioral": {
+        "word_count": {
+          "value": 260.5021,
+          "population_avg": 264.5894,
+          "delta": -4.0873
+        },
+        "unique_word_ratio": {
+          "value": 0.649,
+          "population_avg": 0.655,
+          "delta": -0.006
+        },
+        "bigram_repetition": {
+          "value": 0.0458,
+          "population_avg": 0.049,
+          "delta": -0.0032
+        }
+      },
+      "subjective": {
+        "engagement": 4.49,
+        "tone_consistency": 4.59,
+        "collaboration": 4.33
+      },
+      "community": {
+        "rank": 4,
+        "elo": 1510.3,
+        "n_votes": 393
+      },
+      "bayesian": {
+        "rank": 5,
+        "model": "minimax_m2_7",
+        "elo_mean": 1514.4,
+        "elo_std": 75.2,
+        "ci_low_95": 1386.4,
+        "ci_high_95": 1645.6,
+        "ci_width_95": 259.2
+      },
+      "multiturn_judge_mean": 4.34
+    },
+    {
+      "model": "claude_sonnet_4_5",
+      "failure_rates": {
+        "F1_agency": {
+          "rate_pct": 0.0,
+          "ci_half_pct": 4.01,
+          "n": 44,
+          "failures": 0
+        },
+        "F2_pov_tense": {
+          "rate_pct": 0.0,
+          "ci_half_pct": 5.21,
+          "n": 33,
+          "failures": 0
+        }
+      },
+      "behavioral": {
+        "word_count": {
+          "value": 313.7542,
+          "population_avg": 264.5894,
+          "delta": 49.1648
+        },
+        "unique_word_ratio": {
+          "value": 0.6253,
+          "population_avg": 0.655,
+          "delta": -0.0297
+        },
+        "bigram_repetition": {
+          "value": 0.0526,
+          "population_avg": 0.049,
+          "delta": 0.0036
+        }
+      },
+      "subjective": {
+        "engagement": 4.58,
+        "tone_consistency": 4.67,
+        "collaboration": 4.37
+      },
+      "community": {
+        "rank": 6,
+        "elo": 1505.9,
+        "n_votes": 194
+      },
+      "bayesian": {
+        "rank": 6,
+        "model": "claude_sonnet_4_5",
+        "elo_mean": 1513.0,
+        "elo_std": 76.5,
+        "ci_low_95": 1373.0,
+        "ci_high_95": 1653.2,
+        "ci_width_95": 280.2
+      },
+      "multiturn_judge_mean": 4.42
+    },
+    {
+      "model": "qwen3_5_flash",
+      "failure_rates": {
+        "F1_agency": {
+          "rate_pct": 0.0,
+          "ci_half_pct": 4.01,
+          "n": 44,
+          "failures": 0
+        },
+        "F2_pov_tense": {
+          "rate_pct": 0.0,
+          "ci_half_pct": 5.21,
+          "n": 33,
+          "failures": 0
+        }
+      },
+      "behavioral": {
+        "word_count": {
+          "value": 229.4625,
+          "population_avg": 264.5894,
+          "delta": -35.1269
+        },
+        "unique_word_ratio": {
+          "value": 0.6341,
+          "population_avg": 0.655,
+          "delta": -0.0209
+        },
+        "bigram_repetition": {
+          "value": 0.0693,
+          "population_avg": 0.049,
+          "delta": 0.0203
+        }
+      },
+      "subjective": {
+        "engagement": 4.18,
+        "tone_consistency": 4.16,
+        "collaboration": 4.13
+      },
+      "community": {
+        "rank": 8,
+        "elo": 1486.6,
+        "n_votes": 401
+      },
+      "bayesian": {
+        "rank": 7,
+        "model": "qwen3_5_flash",
+        "elo_mean": 1492.6,
+        "elo_std": 75.7,
+        "ci_low_95": 1361.0,
+        "ci_high_95": 1634.2,
+        "ci_width_95": 273.2
+      },
+      "multiturn_judge_mean": 3.98
+    },
+    {
+      "model": "deepseek_v3_2",
+      "failure_rates": {
+        "F1_agency": {
+          "rate_pct": 4.55,
+          "ci_half_pct": 6.94,
+          "n": 44,
+          "failures": 2
+        },
+        "F2_pov_tense": {
+          "rate_pct": 0.0,
+          "ci_half_pct": 5.21,
+          "n": 33,
+          "failures": 0
+        }
+      },
+      "behavioral": {
+        "word_count": {
+          "value": 178.1792,
+          "population_avg": 264.5894,
+          "delta": -86.4102
+        },
+        "unique_word_ratio": {
+          "value": 0.7126,
+          "population_avg": 0.655,
+          "delta": 0.0576
+        },
+        "bigram_repetition": {
+          "value": 0.0288,
+          "population_avg": 0.049,
+          "delta": -0.0202
+        }
+      },
+      "subjective": {
+        "engagement": 4.61,
+        "tone_consistency": 4.63,
+        "collaboration": 4.32
+      },
+      "community": {
+        "rank": 7,
+        "elo": 1489.0,
+        "n_votes": 241
+      },
+      "bayesian": {
+        "rank": 8,
+        "model": "deepseek_v3_2",
+        "elo_mean": 1492.1,
+        "elo_std": 76.6,
+        "ci_low_95": 1357.6,
+        "ci_high_95": 1625.4,
+        "ci_width_95": 267.8
+      },
+      "multiturn_judge_mean": 4.38
+    },
+    {
+      "model": "glm_4_7",
+      "failure_rates": {
+        "F1_agency": {
+          "rate_pct": 9.09,
+          "ci_half_pct": 8.78,
+          "n": 44,
+          "failures": 4
+        },
+        "F2_pov_tense": {
+          "rate_pct": 0.0,
+          "ci_half_pct": 5.36,
+          "n": 32,
+          "failures": 0
+        }
+      },
+      "behavioral": {
+        "word_count": {
+          "value": 221.9331,
+          "population_avg": 264.5894,
+          "delta": -42.6563
+        },
+        "unique_word_ratio": {
+          "value": 0.6667,
+          "population_avg": 0.655,
+          "delta": 0.0117
+        },
+        "bigram_repetition": {
+          "value": 0.0382,
+          "population_avg": 0.049,
+          "delta": -0.0108
+        }
+      },
+      "subjective": {
+        "engagement": 4.41,
+        "tone_consistency": 4.62,
+        "collaboration": 4.42
+      },
+      "community": {
+        "rank": 9,
+        "elo": 1483.4,
+        "n_votes": 285
+      },
+      "bayesian": {
+        "rank": 9,
+        "model": "glm_4_7",
+        "elo_mean": 1490.0,
+        "elo_std": 75.6,
+        "ci_low_95": 1352.6,
+        "ci_high_95": 1623.1,
+        "ci_width_95": 270.6
+      },
+      "multiturn_judge_mean": 4.37
+    },
+    {
+      "model": "llama_4_maverick",
+      "failure_rates": {
+        "F1_agency": {
+          "rate_pct": 6.82,
+          "ci_half_pct": 7.94,
+          "n": 44,
+          "failures": 3
+        },
+        "F2_pov_tense": {
+          "rate_pct": 0.0,
+          "ci_half_pct": 5.21,
+          "n": 33,
+          "failures": 0
+        }
+      },
+      "behavioral": {
+        "word_count": {
+          "value": 171.5292,
+          "population_avg": 264.5894,
+          "delta": -93.0602
+        },
+        "unique_word_ratio": {
+          "value": 0.6456,
+          "population_avg": 0.655,
+          "delta": -0.0094
+        },
+        "bigram_repetition": {
+          "value": 0.0637,
+          "population_avg": 0.049,
+          "delta": 0.0147
+        }
+      },
+      "subjective": {
+        "engagement": 4.15,
+        "tone_consistency": 4.3,
+        "collaboration": 4.2
+      },
+      "community": {
+        "rank": 10,
+        "elo": 1473.0,
+        "n_votes": 474
+      },
+      "bayesian": {
+        "rank": 10,
+        "model": "llama_4_maverick",
+        "elo_mean": 1483.3,
+        "elo_std": 75.8,
+        "ci_low_95": 1349.8,
+        "ci_high_95": 1616.5,
+        "ci_width_95": 266.7
+      },
+      "multiturn_judge_mean": 3.96
+    },
+    {
+      "model": "gpt_4_1",
+      "failure_rates": {
+        "F1_agency": {
+          "rate_pct": 0.0,
+          "ci_half_pct": 4.01,
+          "n": 44,
+          "failures": 0
+        },
+        "F2_pov_tense": {
+          "rate_pct": 0.0,
+          "ci_half_pct": 5.21,
+          "n": 33,
+          "failures": 0
+        }
+      },
+      "behavioral": {
+        "word_count": {
+          "value": 211.675,
+          "population_avg": 264.5894,
+          "delta": -52.9144
+        },
+        "unique_word_ratio": {
+          "value": 0.6878,
+          "population_avg": 0.655,
+          "delta": 0.0328
+        },
+        "bigram_repetition": {
+          "value": 0.0313,
+          "population_avg": 0.049,
+          "delta": -0.0177
+        }
+      },
+      "subjective": {
+        "engagement": 4.38,
+        "tone_consistency": 4.6,
+        "collaboration": 4.38
+      },
+      "community": {
+        "rank": 11,
+        "elo": 1469.7,
+        "n_votes": 215
+      },
+      "bayesian": {
+        "rank": 11,
+        "model": "gpt_4_1",
+        "elo_mean": 1471.9,
+        "elo_std": 76.8,
+        "ci_low_95": 1337.6,
+        "ci_high_95": 1610.1,
+        "ci_width_95": 272.5
+      },
+      "multiturn_judge_mean": 4.34
+    },
+    {
+      "model": "claude_opus_4_7",
+      "failure_rates": {
+        "F1_agency": {
+          "rate_pct": 6.06,
+          "ci_half_pct": 8.96,
+          "n": 33,
+          "failures": 2
+        },
+        "F2_pov_tense": {
+          "rate_pct": 0.0,
+          "ci_half_pct": 5.21,
+          "n": 33,
+          "failures": 0
+        }
+      },
+      "behavioral": {
+        "word_count": {
+          "value": 407.2431,
+          "population_avg": 264.5894,
+          "delta": 142.6537
+        },
+        "unique_word_ratio": {
+          "value": 0.5711,
+          "population_avg": 0.655,
+          "delta": -0.0839
+        },
+        "bigram_repetition": {
+          "value": 0.071,
+          "population_avg": 0.049,
+          "delta": 0.022
+        }
+      },
+      "subjective": {
+        "engagement": 4.61,
+        "tone_consistency": 4.75,
+        "collaboration": 4.53
+      },
+      "community": {
+        "rank": null,
+        "elo": null,
+        "n_votes": null
+      },
+      "bayesian": null,
+      "multiturn_judge_mean": 4.54
+    },
+    {
+      "model": "claude_opus_4_6",
+      "failure_rates": {
+        "F1_agency": {
+          "rate_pct": 4.55,
+          "ci_half_pct": 6.94,
+          "n": 44,
+          "failures": 2
+        },
+        "F2_pov_tense": {
+          "rate_pct": 0.0,
+          "ci_half_pct": 5.21,
+          "n": 33,
+          "failures": 0
+        }
+      },
+      "behavioral": {
+        "word_count": {
+          "value": 533.525,
+          "population_avg": 264.5894,
+          "delta": 268.9356
+        },
+        "unique_word_ratio": {
+          "value": 0.551,
+          "population_avg": 0.655,
+          "delta": -0.104
+        },
+        "bigram_repetition": {
+          "value": 0.0757,
+          "population_avg": 0.049,
+          "delta": 0.0267
+        }
+      },
+      "subjective": {
+        "engagement": 4.67,
+        "tone_consistency": 4.75,
+        "collaboration": 4.46
+      },
+      "community": {
+        "rank": null,
+        "elo": null,
+        "n_votes": null
+      },
+      "bayesian": null,
+      "multiturn_judge_mean": 4.51
+    },
+    {
+      "model": "deepseek_v4_pro",
+      "failure_rates": {
+        "F1_agency": {
+          "rate_pct": 0.0,
+          "ci_half_pct": 5.21,
+          "n": 33,
+          "failures": 0
+        },
+        "F2_pov_tense": {
+          "rate_pct": 0.0,
+          "ci_half_pct": 5.21,
+          "n": 33,
+          "failures": 0
+        }
+      },
+      "behavioral": {
+        "word_count": {
+          "value": 258.8333,
+          "population_avg": 264.5894,
+          "delta": -5.7561
+        },
+        "unique_word_ratio": {
+          "value": 0.6642,
+          "population_avg": 0.655,
+          "delta": 0.0092
+        },
+        "bigram_repetition": {
+          "value": 0.0402,
+          "population_avg": 0.049,
+          "delta": -0.0088
+        }
+      },
+      "subjective": {
+        "engagement": 4.53,
+        "tone_consistency": 4.7,
+        "collaboration": 4.38
+      },
+      "community": {
+        "rank": null,
+        "elo": null,
+        "n_votes": null
+      },
+      "bayesian": null,
+      "multiturn_judge_mean": 4.42
+    },
+    {
+      "model": "kimi_k2_5",
+      "failure_rates": {
+        "F1_agency": {
+          "rate_pct": 6.06,
+          "ci_half_pct": 8.96,
+          "n": 33,
+          "failures": 2
+        },
+        "F2_pov_tense": {
+          "rate_pct": 0.0,
+          "ci_half_pct": 5.21,
+          "n": 33,
+          "failures": 0
+        }
+      },
+      "behavioral": {
+        "word_count": {
+          "value": 252.9444,
+          "population_avg": 264.5894,
+          "delta": -11.645
+        },
+        "unique_word_ratio": {
+          "value": 0.681,
+          "population_avg": 0.655,
+          "delta": 0.026
+        },
+        "bigram_repetition": {
+          "value": 0.037,
+          "population_avg": 0.049,
+          "delta": -0.012
+        }
+      },
+      "subjective": {
+        "engagement": 4.56,
+        "tone_consistency": 4.67,
+        "collaboration": 4.39
+      },
+      "community": {
+        "rank": null,
+        "elo": null,
+        "n_votes": null
+      },
+      "bayesian": null,
+      "multiturn_judge_mean": 4.4
+    },
+    {
+      "model": "glm_5_1",
+      "failure_rates": {
+        "F1_agency": {
+          "rate_pct": 3.03,
+          "ci_half_pct": 7.39,
+          "n": 33,
+          "failures": 1
+        },
+        "F2_pov_tense": {
+          "rate_pct": 0.0,
+          "ci_half_pct": 5.21,
+          "n": 33,
+          "failures": 0
+        }
+      },
+      "behavioral": {
+        "word_count": {
+          "value": 240.0903,
+          "population_avg": 264.5894,
+          "delta": -24.4991
+        },
+        "unique_word_ratio": {
+          "value": 0.6534,
+          "population_avg": 0.655,
+          "delta": -0.0016
+        },
+        "bigram_repetition": {
+          "value": 0.0409,
+          "population_avg": 0.049,
+          "delta": -0.0081
+        }
+      },
+      "subjective": {
+        "engagement": 4.49,
+        "tone_consistency": 4.65,
+        "collaboration": 4.34
+      },
+      "community": {
+        "rank": null,
+        "elo": null,
+        "n_votes": null
+      },
+      "bayesian": null,
+      "multiturn_judge_mean": 4.39
+    },
+    {
+      "model": "deepseek_v4_flash",
+      "failure_rates": {
+        "F1_agency": {
+          "rate_pct": 0.0,
+          "ci_half_pct": 5.36,
+          "n": 32,
+          "failures": 0
+        },
+        "F2_pov_tense": {
+          "rate_pct": 0.0,
+          "ci_half_pct": 5.36,
+          "n": 32,
+          "failures": 0
+        }
+      },
+      "behavioral": {
+        "word_count": {
+          "value": 172.9286,
+          "population_avg": 264.5894,
+          "delta": -91.6608
+        },
+        "unique_word_ratio": {
+          "value": 0.7088,
+          "population_avg": 0.655,
+          "delta": 0.0538
+        },
+        "bigram_repetition": {
+          "value": 0.0302,
+          "population_avg": 0.049,
+          "delta": -0.0188
+        }
+      },
+      "subjective": {
+        "engagement": 4.47,
+        "tone_consistency": 4.6,
+        "collaboration": 4.27
+      },
+      "community": {
+        "rank": null,
+        "elo": null,
+        "n_votes": null
+      },
+      "bayesian": null,
+      "multiturn_judge_mean": 4.38
+    },
+    {
+      "model": "gemini_3_1_pro",
+      "failure_rates": {
+        "F1_agency": {
+          "rate_pct": 0.0,
+          "ci_half_pct": 5.51,
+          "n": 31,
+          "failures": 0
+        },
+        "F2_pov_tense": {
+          "rate_pct": 0.0,
+          "ci_half_pct": 5.36,
+          "n": 32,
+          "failures": 0
+        }
+      },
+      "behavioral": {
+        "word_count": {
+          "value": 263.1241,
+          "population_avg": 264.5894,
+          "delta": -1.4653
+        },
+        "unique_word_ratio": {
+          "value": 0.6675,
+          "population_avg": 0.655,
+          "delta": 0.0125
+        },
+        "bigram_repetition": {
+          "value": 0.0401,
+          "population_avg": 0.049,
+          "delta": -0.0089
+        }
+      },
+      "subjective": {
+        "engagement": 4.5,
+        "tone_consistency": 4.62,
+        "collaboration": 4.42
+      },
+      "community": {
+        "rank": null,
+        "elo": null,
+        "n_votes": null
+      },
+      "bayesian": null,
+      "multiturn_judge_mean": 4.33
+    },
+    {
+      "model": "gemini_3_1_flash_lite",
+      "failure_rates": {
+        "F1_agency": {
+          "rate_pct": 3.03,
+          "ci_half_pct": 7.39,
+          "n": 33,
+          "failures": 1
+        },
+        "F2_pov_tense": {
+          "rate_pct": 0.0,
+          "ci_half_pct": 5.21,
+          "n": 33,
+          "failures": 0
+        }
+      },
+      "behavioral": {
+        "word_count": {
+          "value": 263.9236,
+          "population_avg": 264.5894,
+          "delta": -0.6658
+        },
+        "unique_word_ratio": {
+          "value": 0.6435,
+          "population_avg": 0.655,
+          "delta": -0.0115
+        },
+        "bigram_repetition": {
+          "value": 0.0485,
+          "population_avg": 0.049,
+          "delta": -0.0005
+        }
+      },
+      "subjective": {
+        "engagement": 4.43,
+        "tone_consistency": 4.6,
+        "collaboration": 4.31
+      },
+      "community": {
+        "rank": null,
+        "elo": null,
+        "n_votes": null
+      },
+      "bayesian": null,
+      "multiturn_judge_mean": 4.3
+    },
+    {
+      "model": "kimi_k2_6",
+      "failure_rates": {
+        "F1_agency": {
+          "rate_pct": 0.0,
+          "ci_half_pct": 5.51,
+          "n": 31,
+          "failures": 0
+        },
+        "F2_pov_tense": {
+          "rate_pct": 0.0,
+          "ci_half_pct": 5.68,
+          "n": 30,
+          "failures": 0
+        }
+      },
+      "behavioral": {
+        "word_count": {
+          "value": 221.1797,
+          "population_avg": 264.5894,
+          "delta": -43.4097
+        },
+        "unique_word_ratio": {
+          "value": 0.677,
+          "population_avg": 0.655,
+          "delta": 0.022
+        },
+        "bigram_repetition": {
+          "value": 0.0376,
+          "population_avg": 0.049,
+          "delta": -0.0114
+        }
+      },
+      "subjective": {
+        "engagement": 4.44,
+        "tone_consistency": 4.39,
+        "collaboration": 4.12
+      },
+      "community": {
+        "rank": null,
+        "elo": null,
+        "n_votes": null
+      },
+      "bayesian": null,
+      "multiturn_judge_mean": 4.18
+    }
+  ]
+}
