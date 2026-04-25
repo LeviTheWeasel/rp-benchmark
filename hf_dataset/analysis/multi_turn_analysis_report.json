@@ -1,0 +1,570 @@
+{
+  "title": "RP-Bench Multi-Turn Factor Analysis Report",
+  "data_source": "unknown",
+  "n_sessions": 56,
+  "n_models": 7,
+  "n_dimensions": 11,
+  "dimensions": [
+    "2.1_anti_purple_prose",
+    "2.2_anti_repetition",
+    "2.5_show_dont_tell",
+    "2.6_subtext",
+    "2.7_pacing",
+    "S.1_consistency_over_time",
+    "S.2_degradation_resistance",
+    "S.3_narrative_momentum",
+    "S.4_adaptive_responsiveness",
+    "S.5_agency_respect_session",
+    "S.6_temporal_reasoning"
+  ],
+  "model_dimension_matrix": {
+    "models": [
+      "claude_sonnet_4_5",
+      "deepseek_v3_2",
+      "gemini_2_5_flash",
+      "glm_4_7",
+      "gpt_4_1",
+      "mistral_small_creative",
+      "qwen3_5_flash"
+    ],
+    "dimensions": [
+      "2.1_anti_purple_prose",
+      "2.2_anti_repetition",
+      "2.5_show_dont_tell",
+      "2.6_subtext",
+      "2.7_pacing",
+      "S.1_consistency_over_time",
+      "S.2_degradation_resistance",
+      "S.3_narrative_momentum",
+      "S.4_adaptive_responsiveness",
+      "S.5_agency_respect_session",
+      "S.6_temporal_reasoning"
+    ],
+    "means": [
+      [
+        4.35,
+        4.0375,
+        4.55,
+        4.45,
+        4.4125,
+        4.6875,
+        4.4125,
+        4.575,
+        4.375,
+        4.7625,
+        4.3625
+      ],
+      [
+        4.25,
+        4.05,
+        4.5,
+        4.25,
+        4.2125,
+        4.6125,
+        4.1875,
+        4.575,
+        4.3,
+        4.8375,
+        4.325
+      ],
+      [
+        4.1,
+        3.7625,
+        4.3625,
+        4.275,
+        4.1625,
+        4.5375,
+        4.0625,
+        4.15,
+        4.3875,
+        4.85,
+        4.175
+      ],
+      [
+        4.1375,
+        3.85,
+        4.525,
+        4.175,
+        4.2875,
+        4.575,
+        4.1875,
+        4.3625,
+        4.35,
+        4.8375,
+        4.2125
+      ],
+      [
+        4.1875,
+        3.975,
+        4.5,
+        4.2875,
+        4.225,
+        4.575,
+        4.125,
+        4.425,
+        4.2875,
+        4.925,
+        4.2625
+      ],
+      [
+        3.975,
+        3.5375,
+        4.4375,
+        4.275,
+        4.175,
+        4.5375,
+        3.9375,
+        4.4625,
+        4.325,
+        4.4875,
+        4.175
+      ],
+      [
+        4.225,
+        3.6875,
+        4.45,
+        4.2875,
+        4.1875,
+        4.575,
+        4.125,
+        4.2375,
+        4.35,
+        4.5125,
+        4.2
+      ]
+    ]
+  },
+  "correlation_matrix": {
+    "dimensions": [
+      "2.1_anti_purple_prose",
+      "2.2_anti_repetition",
+      "2.5_show_dont_tell",
+      "2.6_subtext",
+      "2.7_pacing",
+      "S.1_consistency_over_time",
+      "S.2_degradation_resistance",
+      "S.3_narrative_momentum",
+      "S.4_adaptive_responsiveness",
+      "S.5_agency_respect_session",
+      "S.6_temporal_reasoning"
+    ],
+    "matrix": [
+      [
+        1.0,
+        0.7984,
+        0.6185,
+        0.5623,
+        0.6739,
+        0.8829,
+        0.9123,
+        0.3764,
+        0.0762,
+        0.3268,
+        0.84
+      ],
+      [
+        0.7984,
+        1.0,
+        0.654,
+        0.293,
+        0.5986,
+        0.7386,
+        0.7875,
+        0.5349,
+        -0.2131,
+        0.7642,
+        0.8768
+      ],
+      [
+        0.6185,
+        0.654,
+        1.0,
+        0.2395,
+        0.8036,
+        0.7628,
+        0.7328,
+        0.7522,
+        -0.2993,
+        0.2485,
+        0.7497
+      ],
+      [
+        0.5623,
+        0.293,
+        0.2395,
+        1.0,
+        0.5886,
+        0.7012,
+        0.5693,
+        0.3563,
+        0.3078,
+        -0.1062,
+        0.5827
+      ],
+      [
+        0.6739,
+        0.5986,
+        0.8036,
+        0.5886,
+        1.0,
+        0.8798,
+        0.8984,
+        0.5554,
+        0.2647,
+        0.2517,
+        0.7301
+      ],
+      [
+        0.8829,
+        0.7386,
+        0.7628,
+        0.7012,
+        0.8798,
+        1.0,
+        0.9414,
+        0.6672,
+        0.1104,
+        0.2072,
+        0.9279
+      ],
+      [
+        0.9123,
+        0.7875,
+        0.7328,
+        0.5693,
+        0.8984,
+        0.9414,
+        1.0,
+        0.4504,
+        0.2528,
+        0.3867,
+        0.838
+      ],
+      [
+        0.3764,
+        0.5349,
+        0.7522,
+        0.3563,
+        0.5554,
+        0.6672,
+        0.4504,
+        1.0,
+        -0.4738,
+        0.0934,
+        0.7847
+      ],
+      [
+        0.0762,
+        -0.2131,
+        -0.2993,
+        0.3078,
+        0.2647,
+        0.1104,
+        0.2528,
+        -0.4738,
+        1.0,
+        -0.1316,
+        -0.1841
+      ],
+      [
+        0.3268,
+        0.7642,
+        0.2485,
+        -0.1062,
+        0.2517,
+        0.2072,
+        0.3867,
+        0.0934,
+        -0.1316,
+        1.0,
+        0.3951
+      ],
+      [
+        0.84,
+        0.8768,
+        0.7497,
+        0.5827,
+        0.7301,
+        0.9279,
+        0.838,
+        0.7847,
+        -0.1841,
+        0.3951,
+        1.0
+      ]
+    ]
+  },
+  "pca": {
+    "method": "SVD on z-scored dimension matrix",
+    "total_variance_explained": 1.0,
+    "components": [
+      {
+        "pc": "PC1",
+        "singular_value": 6.3535,
+        "variance_explained": 0.6116,
+        "cumulative_variance": 0.6116,
+        "strong_loadings": [
+          [
+            "2.1_anti_purple_prose",
+            -0.7285
+          ],
+          [
+            "S.1_consistency_over_time",
+            0.4559
+          ],
+          [
+            "2.5_show_dont_tell",
+            0.3902
+          ]
+        ]
+      },
+      {
+        "pc": "PC2",
+        "singular_value": 3.3021,
+        "variance_explained": 0.1652,
+        "cumulative_variance": 0.7768,
+        "strong_loadings": [
+          [
+            "2.2_anti_repetition",
+            -0.5073
+          ],
+          [
+            "2.7_pacing",
+            -0.4932
+          ],
+          [
+            "2.1_anti_purple_prose",
+            0.4887
+          ],
+          [
+            "2.5_show_dont_tell",
+            0.3566
+          ],
+          [
+            "S.2_degradation_resistance",
+            0.3335
+          ]
+        ]
+      },
+      {
+        "pc": "PC3",
+        "singular_value": 2.7897,
+        "variance_explained": 0.1179,
+        "cumulative_variance": 0.8948,
+        "strong_loadings": [
+          [
+            "S.1_consistency_over_time",
+            -0.6951
+          ],
+          [
+            "2.5_show_dont_tell",
+            0.6116
+          ]
+        ]
+      },
+      {
+        "pc": "PC4",
+        "singular_value": 1.9125,
+        "variance_explained": 0.0554,
+        "cumulative_variance": 0.9502,
+        "strong_loadings": [
+          [
+            "2.6_subtext",
+            0.8736
+          ]
+        ]
+      },
+      {
+        "pc": "PC5",
+        "singular_value": 1.5217,
+        "variance_explained": 0.0351,
+        "cumulative_variance": 0.9853,
+        "strong_loadings": [
+          [
+            "S.2_degradation_resistance",
+            0.8057
+          ],
+          [
+            "S.1_consistency_over_time",
+            -0.3989
+          ],
+          [
+            "2.5_show_dont_tell",
+            -0.3009
+          ]
+        ]
+      },
+      {
+        "pc": "PC6",
+        "singular_value": 0.9866,
+        "variance_explained": 0.0147,
+        "cumulative_variance": 1.0,
+        "strong_loadings": [
+          [
+            "2.7_pacing",
+            0.7182
+          ],
+          [
+            "2.2_anti_repetition",
+            -0.6511
+          ]
+        ]
+      }
+    ]
+  },
+  "model_clusters": {
+    "method": "K-means on z-scored model profiles",
+    "n_clusters": 3,
+    "clusters": [
+      {
+        "cluster_id": 0,
+        "models": [
+          "gemini_2_5_flash",
+          "mistral_small_creative",
+          "qwen3_5_flash"
+        ],
+        "n_models": 3,
+        "top_dimensions": [
+          [
+            "S.5_agency_respect_session",
+            4.6167
+          ],
+          [
+            "S.1_consistency_over_time",
+            4.55
+          ],
+          [
+            "2.5_show_dont_tell",
+            4.4167
+          ],
+          [
+            "S.4_adaptive_responsiveness",
+            4.3542
+          ],
+          [
+            "S.3_narrative_momentum",
+            4.2833
+          ]
+        ],
+        "dimension_means": {
+          "2.1_anti_purple_prose": 4.1,
+          "2.2_anti_repetition": 3.6625,
+          "2.5_show_dont_tell": 4.4167,
+          "2.6_subtext": 4.2792,
+          "2.7_pacing": 4.175,
+          "S.1_consistency_over_time": 4.55,
+          "S.2_degradation_resistance": 4.0417,
+          "S.3_narrative_momentum": 4.2833,
+          "S.4_adaptive_responsiveness": 4.3542,
+          "S.5_agency_respect_session": 4.6167,
+          "S.6_temporal_reasoning": 4.1833
+        }
+      },
+      {
+        "cluster_id": 1,
+        "models": [
+          "deepseek_v3_2",
+          "glm_4_7",
+          "gpt_4_1"
+        ],
+        "n_models": 3,
+        "top_dimensions": [
+          [
+            "S.5_agency_respect_session",
+            4.8667
+          ],
+          [
+            "S.1_consistency_over_time",
+            4.5875
+          ],
+          [
+            "2.5_show_dont_tell",
+            4.5083
+          ],
+          [
+            "S.3_narrative_momentum",
+            4.4542
+          ],
+          [
+            "S.4_adaptive_responsiveness",
+            4.3125
+          ]
+        ],
+        "dimension_means": {
+          "2.1_anti_purple_prose": 4.1917,
+          "2.2_anti_repetition": 3.9583,
+          "2.5_show_dont_tell": 4.5083,
+          "2.6_subtext": 4.2375,
+          "2.7_pacing": 4.2417,
+          "S.1_consistency_over_time": 4.5875,
+          "S.2_degradation_resistance": 4.1667,
+          "S.3_narrative_momentum": 4.4542,
+          "S.4_adaptive_responsiveness": 4.3125,
+          "S.5_agency_respect_session": 4.8667,
+          "S.6_temporal_reasoning": 4.2667
+        }
+      },
+      {
+        "cluster_id": 2,
+        "models": [
+          "claude_sonnet_4_5"
+        ],
+        "n_models": 1,
+        "top_dimensions": [
+          [
+            "S.5_agency_respect_session",
+            4.7625
+          ],
+          [
+            "S.1_consistency_over_time",
+            4.6875
+          ],
+          [
+            "S.3_narrative_momentum",
+            4.575
+          ],
+          [
+            "2.5_show_dont_tell",
+            4.55
+          ],
+          [
+            "2.6_subtext",
+            4.45
+          ]
+        ],
+        "dimension_means": {
+          "2.1_anti_purple_prose": 4.35,
+          "2.2_anti_repetition": 4.0375,
+          "2.5_show_dont_tell": 4.55,
+          "2.6_subtext": 4.45,
+          "2.7_pacing": 4.4125,
+          "S.1_consistency_over_time": 4.6875,
+          "S.2_degradation_resistance": 4.4125,
+          "S.3_narrative_momentum": 4.575,
+          "S.4_adaptive_responsiveness": 4.375,
+          "S.5_agency_respect_session": 4.7625,
+          "S.6_temporal_reasoning": 4.3625
+        }
+      }
+    ],
+    "model_assignments": {
+      "claude_sonnet_4_5": 2,
+      "deepseek_v3_2": 1,
+      "gemini_2_5_flash": 0,
+      "glm_4_7": 1,
+      "gpt_4_1": 1,
+      "mistral_small_creative": 0,
+      "qwen3_5_flash": 0
+    }
+  },
+  "findings": [
+    "PC1 (61.2% variance): 'Prose Craft' factor \u2014 dimensions ['2.1_anti_purple_prose', 'S.1_consistency_over_time', '2.5_show_dont_tell'] cluster together",
+    "Most independent dimensions: ['S.4_adaptive_responsiveness'] (low average correlation with other dimensions)",
+    "S.5_agency_respect_session is near-saturated (cluster means: ['4.62', '4.87', '4.76']) \u2014 not a meaningful differentiator"
+  ],
+  "recommendations": [
+    "Consider collapsing Tier 1 + Tier 2 rubric dimensions \u2014 they load on the same PC1 factor",
+    "S.4_adaptive_responsiveness is the most independent dimension \u2014 keep it separate in scoring",
+    "S.5_agency_respect_session is near-saturated \u2014 consider dropping from active scoring"
+  ]
+}

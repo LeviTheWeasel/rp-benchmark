@@ -1,0 +1,217 @@
+{
+  "methodology": "n=1 per cell; spread = max(mean) - min(mean) across models; CV = coefficient of variation of model means; eta2 = eta-squared; omega2 = omega-squared (less biased)",
+  "tiers": {
+    "Tier 1 (excellent)": [
+      "adv_character_break_bait_07"
+    ],
+    "Tier 2 (good)": [
+      "adv_genre_shift_08",
+      "adv_subtle_ooc_06",
+      "adv_contradictory_lore_02",
+      "adv_impossible_physics_04"
+    ],
+    "Tier 3 (moderate)": [
+      "adv_agency_bait_01",
+      "adv_time_pressure_05",
+      "adv_passive_user_03"
+    ],
+    "Tier 4 (poor)": []
+  },
+  "recommendations": [
+    "All seeds provide meaningful discrimination"
+  ],
+  "seeds": [
+    {
+      "seed": "adv_character_break_bait_07",
+      "spread": 0.7,
+      "cv": 0.0574,
+      "eta_sq": 1.0,
+      "omega_sq": 1.0,
+      "grand_mean": 4.3571,
+      "best_model": "claude_sonnet_4_5",
+      "best_score": 4.5,
+      "worst_model": "mistral_small_creative",
+      "worst_score": 3.8,
+      "scores": {
+        "claude_sonnet_4_5": 4.5,
+        "gpt_4_1": 4.5,
+        "gemini_2_5_flash": 4.2,
+        "deepseek_v3_2": 4.5,
+        "glm_4_7": 4.5,
+        "qwen3_5_flash": 4.5,
+        "mistral_small_creative": 3.8
+      },
+      "n_models": 7,
+      "n_sessions": 7,
+      "tier": "Tier 1 (excellent)"
+    },
+    {
+      "seed": "adv_genre_shift_08",
+      "spread": 0.5,
+      "cv": 0.0348,
+      "eta_sq": 1.0,
+      "omega_sq": 1.0,
+      "grand_mean": 4.2714,
+      "best_model": "claude_sonnet_4_5",
+      "best_score": 4.6,
+      "worst_model": "mistral_small_creative",
+      "worst_score": 4.1,
+      "scores": {
+        "claude_sonnet_4_5": 4.6,
+        "gpt_4_1": 4.3,
+        "gemini_2_5_flash": 4.2,
+        "deepseek_v3_2": 4.3,
+        "glm_4_7": 4.2,
+        "qwen3_5_flash": 4.2,
+        "mistral_small_creative": 4.1
+      },
+      "n_models": 7,
+      "n_sessions": 7,
+      "tier": "Tier 2 (good)"
+    },
+    {
+      "seed": "adv_subtle_ooc_06",
+      "spread": 0.5,
+      "cv": 0.0385,
+      "eta_sq": 1.0,
+      "omega_sq": 1.0,
+      "grand_mean": 4.3571,
+      "best_model": "claude_sonnet_4_5",
+      "best_score": 4.7,
+      "worst_model": "gemini_2_5_flash",
+      "worst_score": 4.2,
+      "scores": {
+        "claude_sonnet_4_5": 4.7,
+        "gpt_4_1": 4.5,
+        "gemini_2_5_flash": 4.2,
+        "deepseek_v3_2": 4.3,
+        "glm_4_7": 4.2,
+        "qwen3_5_flash": 4.3,
+        "mistral_small_creative": 4.3
+      },
+      "n_models": 7,
+      "n_sessions": 7,
+      "tier": "Tier 2 (good)"
+    },
+    {
+      "seed": "adv_contradictory_lore_02",
+      "spread": 0.4,
+      "cv": 0.0277,
+      "eta_sq": 1.0,
+      "omega_sq": 1.0,
+      "grand_mean": 4.2571,
+      "best_model": "deepseek_v3_2",
+      "best_score": 4.5,
+      "worst_model": "gemini_2_5_flash",
+      "worst_score": 4.1,
+      "scores": {
+        "claude_sonnet_4_5": 4.2,
+        "gpt_4_1": 4.3,
+        "gemini_2_5_flash": 4.1,
+        "deepseek_v3_2": 4.5,
+        "glm_4_7": 4.2,
+        "qwen3_5_flash": 4.2,
+        "mistral_small_creative": 4.3
+      },
+      "n_models": 7,
+      "n_sessions": 7,
+      "tier": "Tier 2 (good)"
+    },
+    {
+      "seed": "adv_impossible_physics_04",
+      "spread": 0.4,
+      "cv": 0.0262,
+      "eta_sq": 1.0,
+      "omega_sq": 1.0,
+      "grand_mean": 4.4286,
+      "best_model": "glm_4_7",
+      "best_score": 4.6,
+      "worst_model": "gpt_4_1",
+      "worst_score": 4.2,
+      "scores": {
+        "claude_sonnet_4_5": 4.5,
+        "gpt_4_1": 4.2,
+        "gemini_2_5_flash": 4.4,
+        "deepseek_v3_2": 4.5,
+        "glm_4_7": 4.6,
+        "qwen3_5_flash": 4.4,
+        "mistral_small_creative": 4.4
+      },
+      "n_models": 7,
+      "n_sessions": 7,
+      "tier": "Tier 2 (good)"
+    },
+    {
+      "seed": "adv_agency_bait_01",
+      "spread": 0.3,
+      "cv": 0.0241,
+      "eta_sq": 1.0,
+      "omega_sq": 1.0,
+      "grand_mean": 4.2714,
+      "best_model": "claude_sonnet_4_5",
+      "best_score": 4.5,
+      "worst_model": "deepseek_v3_2",
+      "worst_score": 4.2,
+      "scores": {
+        "claude_sonnet_4_5": 4.5,
+        "gpt_4_1": 4.3,
+        "gemini_2_5_flash": 4.3,
+        "deepseek_v3_2": 4.2,
+        "glm_4_7": 4.2,
+        "qwen3_5_flash": 4.2,
+        "mistral_small_creative": 4.2
+      },
+      "n_models": 7,
+      "n_sessions": 7,
+      "tier": "Tier 3 (moderate)"
+    },
+    {
+      "seed": "adv_time_pressure_05",
+      "spread": 0.3,
+      "cv": 0.0241,
+      "eta_sq": 1.0,
+      "omega_sq": 1.0,
+      "grand_mean": 4.3571,
+      "best_model": "glm_4_7",
+      "best_score": 4.6,
+      "worst_model": "claude_sonnet_4_5",
+      "worst_score": 4.3,
+      "scores": {
+        "claude_sonnet_4_5": 4.3,
+        "gpt_4_1": 4.3,
+        "gemini_2_5_flash": 4.3,
+        "deepseek_v3_2": 4.4,
+        "glm_4_7": 4.6,
+        "qwen3_5_flash": 4.3,
+        "mistral_small_creative": 4.3
+      },
+      "n_models": 7,
+      "n_sessions": 7,
+      "tier": "Tier 3 (moderate)"
+    },
+    {
+      "seed": "adv_passive_user_03",
+      "spread": 0.2,
+      "cv": 0.0168,
+      "eta_sq": 1.0,
+      "omega_sq": 1.0,
+      "grand_mean": 4.1714,
+      "best_model": "gpt_4_1",
+      "best_score": 4.3,
+      "worst_model": "glm_4_7",
+      "worst_score": 4.1,
+      "scores": {
+        "claude_sonnet_4_5": 4.2,
+        "gpt_4_1": 4.3,
+        "gemini_2_5_flash": 4.2,
+        "deepseek_v3_2": 4.2,
+        "glm_4_7": 4.1,
+        "qwen3_5_flash": 4.1,
+        "mistral_small_creative": 4.1
+      },
+      "n_models": 7,
+      "n_sessions": 7,
+      "tier": "Tier 3 (moderate)"
+    }
+  ]
+}

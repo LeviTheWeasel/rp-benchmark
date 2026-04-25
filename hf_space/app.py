@@ -31,9 +31,20 @@ DATASET_REPO = "lazyweasel/roleplay-bench"
 
 
 def fetch(filename: str, subdir: str = "") -> Path | None:
-    """Try local first (when running in repo), then HF hub."""
+    """Try local first (when running in repo), then HF hub.
+
+    Order:
+    1. ../results/<filename>      — repo's analysis output dir
+    2. ../hf_dataset/analysis/<filename>  — bundled analysis copy
+    3. ../hf_dataset/<filename>
+    4. ../<filename>
+    5. ./<filename>
+    6. HF dataset analysis/<filename>
+    7. HF dataset <filename> (root)
+    """
     local_paths = [
         Path("..") / "results" / filename,
+        Path("..") / "hf_dataset" / "analysis" / filename,
         Path("..") / "hf_dataset" / filename,
         Path("..") / filename,
         Path(filename),
@@ -42,14 +53,15 @@ def fetch(filename: str, subdir: str = "") -> Path | None:
         if p.exists():
             return p
     if HF_AVAILABLE:
-        try:
-            target = filename if not subdir else f"{subdir}/{filename}"
-            path_str = hf_hub_download(
-                repo_id=DATASET_REPO, filename=target, repo_type="dataset"
-            )
-            return Path(path_str)
-        except Exception:
-            return None
+        # Try analysis/ subdir first, then root
+        for candidate in (f"analysis/{filename}", filename):
+            try:
+                path_str = hf_hub_download(
+                    repo_id=DATASET_REPO, filename=candidate, repo_type="dataset"
+                )
+                return Path(path_str)
+            except Exception:
+                continue
     return None
 
 

@@ -1,0 +1,144 @@
+{
+  "n_clusters": 3,
+  "model_clusters": {
+    "claude_sonnet_4_5": 2,
+    "deepseek_v3_2": 1,
+    "gemini_2_5_flash": 0,
+    "glm_4_7": 1,
+    "gpt_4_1": 1,
+    "mistral_small_creative": 0,
+    "qwen3_5_flash": 0
+  },
+  "clusters": [
+    {
+      "cluster_id": 0,
+      "models": [
+        "gemini_2_5_flash",
+        "mistral_small_creative",
+        "qwen3_5_flash"
+      ],
+      "n_models": 3,
+      "top_dimensions": [
+        [
+          "S.5_agency_respect_session",
+          4.6167
+        ],
+        [
+          "S.1_consistency_over_time",
+          4.55
+        ],
+        [
+          "2.5_show_dont_tell",
+          4.4167
+        ],
+        [
+          "S.4_adaptive_responsiveness",
+          4.3542
+        ],
+        [
+          "S.3_narrative_momentum",
+          4.2833
+        ]
+      ],
+      "dimension_means": {
+        "2.1_anti_purple_prose": 4.1,
+        "2.2_anti_repetition": 3.6625,
+        "2.5_show_dont_tell": 4.4167,
+        "2.6_subtext": 4.2792,
+        "2.7_pacing": 4.175,
+        "S.1_consistency_over_time": 4.55,
+        "S.2_degradation_resistance": 4.0417,
+        "S.3_narrative_momentum": 4.2833,
+        "S.4_adaptive_responsiveness": 4.3542,
+        "S.5_agency_respect_session": 4.6167,
+        "S.6_temporal_reasoning": 4.1833
+      }
+    },
+    {
+      "cluster_id": 1,
+      "models": [
+        "deepseek_v3_2",
+        "glm_4_7",
+        "gpt_4_1"
+      ],
+      "n_models": 3,
+      "top_dimensions": [
+        [
+          "S.5_agency_respect_session",
+          4.8667
+        ],
+        [
+          "S.1_consistency_over_time",
+          4.5875
+        ],
+        [
+          "2.5_show_dont_tell",
+          4.5083
+        ],
+        [
+          "S.3_narrative_momentum",
+          4.4542
+        ],
+        [
+          "S.4_adaptive_responsiveness",
+          4.3125
+        ]
+      ],
+      "dimension_means": {
+        "2.1_anti_purple_prose": 4.1917,
+        "2.2_anti_repetition": 3.9583,
+        "2.5_show_dont_tell": 4.5083,
+        "2.6_subtext": 4.2375,
+        "2.7_pacing": 4.2417,
+        "S.1_consistency_over_time": 4.5875,
+        "S.2_degradation_resistance": 4.1667,
+        "S.3_narrative_momentum": 4.4542,
+        "S.4_adaptive_responsiveness": 4.3125,
+        "S.5_agency_respect_session": 4.8667,
+        "S.6_temporal_reasoning": 4.2667
+      }
+    },
+    {
+      "cluster_id": 2,
+      "models": [
+        "claude_sonnet_4_5"
+      ],
+      "n_models": 1,
+      "top_dimensions": [
+        [
+          "S.5_agency_respect_session",
+          4.7625
+        ],
+        [
+          "S.1_consistency_over_time",
+          4.6875
+        ],
+        [
+          "S.3_narrative_momentum",
+          4.575
+        ],
+        [
+          "2.5_show_dont_tell",
+          4.55
+        ],
+        [
+          "2.6_subtext",
+          4.45
+        ]
+      ],
+      "dimension_means": {
+        "2.1_anti_purple_prose": 4.35,
+        "2.2_anti_repetition": 4.0375,
+        "2.5_show_dont_tell": 4.55,
+        "2.6_subtext": 4.45,
+        "2.7_pacing": 4.4125,
+        "S.1_consistency_over_time": 4.6875,
+        "S.2_degradation_resistance": 4.4125,
+        "S.3_narrative_momentum": 4.575,
+        "S.4_adaptive_responsiveness": 4.375,
+        "S.5_agency_respect_session": 4.7625,
+        "S.6_temporal_reasoning": 4.3625
+      }
+    }
+  ]
+}

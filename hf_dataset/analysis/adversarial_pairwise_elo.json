@@ -1,0 +1,249 @@
+{
+  "method": "LLM-judged pairwise comparative ELO",
+  "n_matchups": 166,
+  "n_ties": 105,
+  "elo": {
+    "claude_sonnet_4_5": 1622.7,
+    "qwen3_5_flash": 1444.5,
+    "deepseek_v3_2": 1531.7,
+    "gemini_2_5_flash": 1287.5,
+    "gpt_4_1": 1535.2,
+    "mistral_small_creative": 1561.6,
+    "glm_4_7": 1516.7
+  },
+  "stability": {
+    "claude_sonnet_4_5": 12.78,
+    "qwen3_5_flash": 15.58,
+    "deepseek_v3_2": 9.96,
+    "gemini_2_5_flash": 14.36,
+    "gpt_4_1": 10.34,
+    "mistral_small_creative": 11.09,
+    "glm_4_7": 14.91
+  },
+  "head_to_head": {
+    "claude_sonnet_4_5": {
+      "qwen3_5_flash": {
+        "wins": 5,
+        "losses": 0,
+        "ties": 3
+      },
+      "deepseek_v3_2": {
+        "wins": 2,
+        "losses": 0,
+        "ties": 5
+      },
+      "gemini_2_5_flash": {
+        "wins": 7,
+        "losses": 0,
+        "ties": 1
+      },
+      "gpt_4_1": {
+        "wins": 2,
+        "losses": 0,
+        "ties": 5
+      },
+      "mistral_small_creative": {
+        "wins": 0,
+        "losses": 0,
+        "ties": 8
+      },
+      "glm_4_7": {
+        "wins": 3,
+        "losses": 0,
+        "ties": 5
+      }
+    },
+    "qwen3_5_flash": {
+      "claude_sonnet_4_5": {
+        "wins": 0,
+        "losses": 5,
+        "ties": 3
+      },
+      "deepseek_v3_2": {
+        "wins": 0,
+        "losses": 3,
+        "ties": 5
+      },
+      "gemini_2_5_flash": {
+        "wins": 5,
+        "losses": 0,
+        "ties": 3
+      },
+      "gpt_4_1": {
+        "wins": 0,
+        "losses": 3,
+        "ties": 5
+      },
+      "mistral_small_creative": {
+        "wins": 0,
+        "losses": 3,
+        "ties": 5
+      },
+      "glm_4_7": {
+        "wins": 1,
+        "losses": 1,
+        "ties": 6
+      }
+    },
+    "deepseek_v3_2": {
+      "claude_sonnet_4_5": {
+        "wins": 0,
+        "losses": 2,
+        "ties": 5
+      },
+      "qwen3_5_flash": {
+        "wins": 3,
+        "losses": 0,
+        "ties": 5
+      },
+      "gemini_2_5_flash": {
+        "wins": 6,
+        "losses": 0,
+        "ties": 2
+      },
+      "gpt_4_1": {
+        "wins": 0,
+        "losses": 0,
+        "ties": 8
+      },
+      "mistral_small_creative": {
+        "wins": 0,
+        "losses": 1,
+        "ties": 7
+      },
+      "glm_4_7": {
+        "wins": 0,
+        "losses": 1,
+        "ties": 7
+      }
+    },
+    "gemini_2_5_flash": {
+      "claude_sonnet_4_5": {
+        "wins": 0,
+        "losses": 7,
+        "ties": 1
+      },
+      "qwen3_5_flash": {
+        "wins": 0,
+        "losses": 5,
+        "ties": 3
+      },
+      "deepseek_v3_2": {
+        "wins": 0,
+        "losses": 6,
+        "ties": 2
+      },
+      "gpt_4_1": {
+        "wins": 0,
+        "losses": 5,
+        "ties": 3
+      },
+      "mistral_small_creative": {
+        "wins": 0,
+        "losses": 5,
+        "ties": 3
+      },
+      "glm_4_7": {
+        "wins": 1,
+        "losses": 6,
+        "ties": 1
+      }
+    },
+    "gpt_4_1": {
+      "claude_sonnet_4_5": {
+        "wins": 0,
+        "losses": 2,
+        "ties": 5
+      },
+      "qwen3_5_flash": {
+        "wins": 3,
+        "losses": 0,
+        "ties": 5
+      },
+      "deepseek_v3_2": {
+        "wins": 0,
+        "losses": 0,
+        "ties": 8
+      },
+      "gemini_2_5_flash": {
+        "wins": 5,
+        "losses": 0,
+        "ties": 3
+      },
+      "mistral_small_creative": {
+        "wins": 0,
+        "losses": 0,
+        "ties": 8
+      },
+      "glm_4_7": {
+        "wins": 0,
+        "losses": 0,
+        "ties": 8
+      }
+    },
+    "mistral_small_creative": {
+      "claude_sonnet_4_5": {
+        "wins": 0,
+        "losses": 0,
+        "ties": 8
+      },
+      "qwen3_5_flash": {
+        "wins": 3,
+        "losses": 0,
+        "ties": 5
+      },
+      "deepseek_v3_2": {
+        "wins": 1,
+        "losses": 0,
+        "ties": 7
+      },
+      "gemini_2_5_flash": {
+        "wins": 5,
+        "losses": 0,
+        "ties": 3
+      },
+      "gpt_4_1": {
+        "wins": 0,
+        "losses": 0,
+        "ties": 8
+      },
+      "glm_4_7": {
+        "wins": 1,
+        "losses": 0,
+        "ties": 7
+      }
+    },
+    "glm_4_7": {
+      "claude_sonnet_4_5": {
+        "wins": 0,
+        "losses": 3,
+        "ties": 5
+      },
+      "qwen3_5_flash": {
+        "wins": 1,
+        "losses": 1,
+        "ties": 6
+      },
+      "deepseek_v3_2": {
+        "wins": 1,
+        "losses": 0,
+        "ties": 7
+      },
+      "gemini_2_5_flash": {
+        "wins": 6,
+        "losses": 1,
+        "ties": 1
+      },
+      "gpt_4_1": {
+        "wins": 0,
+        "losses": 0,
+        "ties": 8
+      },
+      "mistral_small_creative": {
+        "wins": 0,
+        "losses": 1,
+        "ties": 7
+      }
+    }
+  }
+}

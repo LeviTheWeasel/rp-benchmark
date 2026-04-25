@@ -385,6 +385,54 @@ def export_community_arena():
     print("Exported: community_votes/train.parquet (%d votes)" % len(arena))
 
 
+def export_analysis_artifacts():
+    """Copy the project's analysis JSON/MD outputs into hf_dataset/analysis/.
+
+    The HF Spaces leaderboard (and any external consumer) can fetch these
+    via huggingface_hub.hf_hub_download(repo_id, filename="analysis/X.json",
+    repo_type="dataset"). Files are static — re-exported each time this
+    runs to keep them in sync with results/.
+    """
+    import shutil
+
+    src_dir = PROJECT_ROOT / "results"
+    out_dir = HF_DIR / "analysis"
+    out_dir.mkdir(exist_ok=True)
+
+    # Files we want to publish (whitelist — keeps junk from results/ out)
+    files = [
+        "community_arena_2000.json",
+        "community_arena_bayesian.json",
+        "model_profiles.json",
+        "behavioral_metrics.json",
+        "method_correlations.json",
+        "cost_efficiency.json",
+        "flaw_hunter_session_summary.json",
+        "failure_target_validation.json",
+        "adversarial_analysis.json",
+        "adversarial_elo.json",
+        "adversarial_pairwise_elo.json",
+        "phase_a_analysis.json",
+        "profile_cards.md",
+        "profile_cards.json",
+        "arena_timeseries.md",
+        "pick_a_model.md",
+        "model_clusters.json",
+        "factor_analysis_matrix.json",
+        "seed_discrimination_analysis.json",
+        "multi_turn_analysis_report.json",
+    ]
+    n = 0
+    for fname in files:
+        src = src_dir / fname
+        if not src.exists():
+            print("  skip %s (not found)" % fname)
+            continue
+        shutil.copy2(src, out_dir / fname)
+        n += 1
+    print("Exported: analysis/ (%d files)" % n)
+
+
 def main():
     print("Exporting RP-Bench data to HuggingFace format...\n")
     export_seeds()
@@ -395,6 +443,7 @@ def main():
     export_elo()
     export_flaw_hunter_results()
     export_community_arena()
+    export_analysis_artifacts()
     print("\nDone. Files are in %s" % HF_DIR)
     print("\nTo upload to HuggingFace:")
     print("  cd %s" % HF_DIR)

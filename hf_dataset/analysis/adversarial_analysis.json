@@ -1,0 +1,179 @@
+{
+  "n_sessions": 56,
+  "leaderboard": [
+    {
+      "model": "claude_sonnet_4_5",
+      "mean": 4.4375,
+      "std": 0.1846811924835413,
+      "min": 4.2,
+      "max": 4.7,
+      "n": 8,
+      "degradation_pct": 0.0
+    },
+    {
+      "model": "deepseek_v3_2",
+      "mean": 4.3625,
+      "std": 0.1302470180629319,
+      "min": 4.2,
+      "max": 4.5,
+      "n": 8,
+      "degradation_pct": 0.0
+    },
+    {
+      "model": "gpt_4_1",
+      "mean": 4.3375,
+      "std": 0.10606601717798214,
+      "min": 4.2,
+      "max": 4.5,
+      "n": 8,
+      "degradation_pct": 0.0
+    },
+    {
+      "model": "glm_4_7",
+      "mean": 4.325,
+      "std": 0.20528725518857005,
+      "min": 4.1,
+      "max": 4.6,
+      "n": 8,
+      "degradation_pct": 0.0
+    },
+    {
+      "model": "qwen3_5_flash",
+      "mean": 4.275,
+      "std": 0.12817398889233123,
+      "min": 4.1,
+      "max": 4.5,
+      "n": 8,
+      "degradation_pct": 0.0
+    },
+    {
+      "model": "gemini_2_5_flash",
+      "mean": 4.2375,
+      "std": 0.09161253813129051,
+      "min": 4.1,
+      "max": 4.4,
+      "n": 8,
+      "degradation_pct": 0.0
+    },
+    {
+      "model": "mistral_small_creative",
+      "mean": 4.1875,
+      "std": 0.18850918886280935,
+      "min": 3.8,
+      "max": 4.4,
+      "n": 8,
+      "degradation_pct": 12.5
+    }
+  ],
+  "per_seed": [
+    {
+      "seed": "adv_agency_bait_01",
+      "mean": 4.271428571428571,
+      "min": 4.2,
+      "max": 4.5,
+      "spread": 0.2999999999999998,
+      "worst_model": "deepseek_v3_2"
+    },
+    {
+      "seed": "adv_character_break_bait_07",
+      "mean": 4.357142857142857,
+      "min": 3.8,
+      "max": 4.5,
+      "spread": 0.7000000000000002,
+      "worst_model": "mistral_small_creative"
+    },
+    {
+      "seed": "adv_contradictory_lore_02",
+      "mean": 4.257142857142857,
+      "min": 4.1,
+      "max": 4.5,
+      "spread": 0.40000000000000036,
+      "worst_model": "gemini_2_5_flash"
+    },
+    {
+      "seed": "adv_genre_shift_08",
+      "mean": 4.271428571428571,
+      "min": 4.1,
+      "max": 4.6,
+      "spread": 0.5,
+      "worst_model": "mistral_small_creative"
+    },
+    {
+      "seed": "adv_impossible_physics_04",
+      "mean": 4.428571428571429,
+      "min": 4.2,
+      "max": 4.6,
+      "spread": 0.39999999999999947,
+      "worst_model": "gpt_4_1"
+    },
+    {
+      "seed": "adv_passive_user_03",
+      "mean": 4.171428571428572,
+      "min": 4.1,
+      "max": 4.3,
+      "spread": 0.20000000000000018,
+      "worst_model": "glm_4_7"
+    },
+    {
+      "seed": "adv_subtle_ooc_06",
+      "mean": 4.357142857142857,
+      "min": 4.2,
+      "max": 4.7,
+      "spread": 0.5,
+      "worst_model": "gemini_2_5_flash"
+    },
+    {
+      "seed": "adv_time_pressure_05",
+      "mean": 4.357142857142857,
+      "min": 4.3,
+      "max": 4.6,
+      "spread": 0.2999999999999998,
+      "worst_model": "claude_sonnet_4_5"
+    }
+  ],
+  "dimension_means": {
+    "S.2_degradation_resistance": 4.148214285714285,
+    "S.6_temporal_reasoning": 4.244642857142857,
+    "S.4_adaptive_responsiveness": 4.339285714285714,
+    "S.3_narrative_momentum": 4.398214285714285,
+    "S.1_consistency_over_time": 4.585714285714285,
+    "S.5_agency_respect_session": 4.744642857142857
+  },
+  "trajectory": {
+    "claude_sonnet_4_5": {
+      "early": 4.15,
+      "mid": 4.425,
+      "late": 4.5125
+    },
+    "gpt_4_1": {
+      "early": 4.1875,
+      "mid": 4.3375,
+      "late": 4.3875
+    },
+    "gemini_2_5_flash": {
+      "early": 4.2,
+      "mid": 4.2,
+      "late": 4.15
+    },
+    "deepseek_v3_2": {
+      "early": 3.9875,
+      "mid": 4.3875,
+      "late": 4.4625
+    },
+    "glm_4_7": {
+      "early": 4.125,
+      "mid": 4.3875,
+      "late": 4.275
+    },
+    "qwen3_5_flash": {
+      "early": 4.2,
+      "mid": 4.2375,
+      "late": 4.1625
+    },
+    "mistral_small_creative": {
+      "early": 4.1625,
+      "mid": 4.2625,
+      "late": 4.1375
+    }
+  }
+}
