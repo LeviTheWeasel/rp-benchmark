@@ -1,0 +1,167 @@
+{
+  "phase_a_models": [
+    "deepseek_v4_flash",
+    "glm_5_1",
+    "gemini_3_1_flash_lite",
+    "kimi_k2_5",
+    "kimi_k2_6"
+  ],
+  "phase_a_per_model": {
+    "deepseek_v4_flash": {
+      "overall_mean": 4.38,
+      "n_sessions": 12,
+      "F1_agency": {
+        "mean": 4.5,
+        "floor": 4.2,
+        "n": 3
+      },
+      "F2_pov_tense": {
+        "mean": 4.2,
+        "floor": 4.2,
+        "n": 3
+      },
+      "F12_instruction_drift": {
+        "mean": 4.3,
+        "floor": 4.3,
+        "n": 3
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.53,
+        "floor": 4.4,
+        "n": 3
+      }
+    },
+    "glm_5_1": {
+      "overall_mean": 4.39,
+      "n_sessions": 12,
+      "F1_agency": {
+        "mean": 4.5,
+        "floor": 4.3,
+        "n": 3
+      },
+      "F2_pov_tense": {
+        "mean": 4.17,
+        "floor": 4.1,
+        "n": 3
+      },
+      "F12_instruction_drift": {
+        "mean": 4.33,
+        "floor": 4.2,
+        "n": 3
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.57,
+        "floor": 4.5,
+        "n": 3
+      }
+    },
+    "gemini_3_1_flash_lite": {
+      "overall_mean": 4.3,
+      "n_sessions": 12,
+      "F1_agency": {
+        "mean": 4.33,
+        "floor": 4.2,
+        "n": 3
+      },
+      "F2_pov_tense": {
+        "mean": 4.23,
+        "floor": 4.2,
+        "n": 3
+      },
+      "F12_instruction_drift": {
+        "mean": 4.3,
+        "floor": 4.2,
+        "n": 3
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.33,
+        "floor": 4.2,
+        "n": 3
+      }
+    },
+    "kimi_k2_5": {
+      "overall_mean": 4.4,
+      "n_sessions": 12,
+      "F1_agency": {
+        "mean": 4.47,
+        "floor": 4.3,
+        "n": 3
+      },
+      "F2_pov_tense": {
+        "mean": 4.2,
+        "floor": 4.1,
+        "n": 3
+      },
+      "F12_instruction_drift": {
+        "mean": 4.37,
+        "floor": 4.2,
+        "n": 3
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.57,
+        "floor": 4.5,
+        "n": 3
+      }
+    },
+    "kimi_k2_6": {
+      "overall_mean": 4.18,
+      "n_sessions": 12,
+      "F1_agency": {
+        "mean": 3.77,
+        "floor": 2.5,
+        "n": 3
+      },
+      "F2_pov_tense": {
+        "mean": 4.27,
+        "floor": 4.2,
+        "n": 3
+      },
+      "F12_instruction_drift": {
+        "mean": 4.3,
+        "floor": 4.2,
+        "n": 3
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.4,
+        "floor": 4.2,
+        "n": 3
+      }
+    }
+  },
+  "comparison_to_existing_on_same_seeds": {
+    "claude_opus_4_6": 4.52,
+    "claude_sonnet_4_5": 4.4,
+    "gpt_4_1": 4.34,
+    "gemini_2_5_flash": 4.08,
+    "deepseek_v3_2": 4.4,
+    "glm_4_7": 4.39,
+    "gemma_4_26b": 4.26,
+    "grok_4_1": 4.19,
+    "minimax_m2_7": 4.31,
+    "qwen3_5_flash": 3.79,
+    "mistral_small_creative": 4.25,
+    "llama_4_maverick": 3.89
+  },
+  "generation_comparison": {
+    "deepseek_v3_2_to_deepseek_v4_flash": {
+      "old_mean": 4.4,
+      "new_mean": 4.38,
+      "delta": -0.02
+    },
+    "glm_4_7_to_glm_5_1": {
+      "old_mean": 4.39,
+      "new_mean": 4.39,
+      "delta": 0.0
+    },
+    "gemini_2_5_flash_to_gemini_3_1_flash_lite": {
+      "old_mean": 4.08,
+      "new_mean": 4.3,
+      "delta": 0.22
+    },
+    "kimi_k2_5_to_kimi_k2_6": {
+      "old_mean": 4.4,
+      "new_mean": 4.18,
+      "delta": -0.22
+    }
+  }
+}

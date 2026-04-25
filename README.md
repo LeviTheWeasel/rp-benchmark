@@ -83,6 +83,54 @@ Based on 240 multi-turn sessions (12 models × 20 adversarial seeds × 12 turns)
 
 Raw per-model profiles: [`results/model_profiles.json`](results/model_profiles.json). Reproduce with `python3 analyze_model_profiles.py`.
 
+## Phase A: Next-Gen Cheap Models (preliminary)
+
+Five next-generation models tested on the v2/v3 seeds (60 sessions, partial preliminary results — Phase B with frontier models still running). These are the "cheap" tier of the new roster:
+
+| Rank | Model | Overall | F1 Agency | F2 POV/Tense | F12 Instruction | F13 Big-Card |
+|------|-------|---------|-----------|--------------|-----------------|--------------|
+| 1 | Kimi K2.5 | **4.40** | 4.47 | 4.20 | 4.37 | 4.57 |
+| 2 | GLM 5.1 | 4.39 | 4.50 | 4.17 | 4.33 | 4.57 |
+| 3 | DeepSeek V4 Flash | 4.38 | 4.50 | 4.20 | 4.30 | 4.53 |
+| 4 | Gemini 3.1 Flash Lite | 4.30 | 4.33 | 4.23 | 4.30 | 4.33 |
+| 5 | **Kimi K2.6** | **4.18** | **3.77 ⚠ floor 2.5** | 4.27 | 4.30 | 4.40 |
+
+Kimi K2.5 (3-month-old) leads the cheap tier. Kimi K2.6 (newer) regressed by 0.22 points overall, with a catastrophic floor of 2.5 on F1 agency — the newer model is *worse at respecting user agency* than its predecessor.
+
+**Generation-over-generation deltas** (same seeds, same harness):
+
+| Generation | Old → New | Δ |
+|---|---|---|
+| DeepSeek V3.2 → V4 Flash | 4.40 → 4.38 | **−0.02** (flat) |
+| GLM 4.7 → 5.1 | 4.39 → 4.39 | **0.00** (zero improvement) |
+| Gemini 2.5 Flash → 3.1 Flash Lite | 4.08 → 4.30 | **+0.22** (real improvement) |
+| Kimi K2.5 → K2.6 | 4.40 → 4.18 | **−0.22** (regression) |
+
+The headline finding: **most "next-gen" cheap models do not improve on their predecessors at multi-turn RP.** Two are flat, one regresses, one (Gemini) shows real improvement. This is consistent with the pattern that frontier evals reward instruction following and benchmarks not directly tested for during training.
+
+Where these models slot into the existing leaderboard (sorted by overall mean on v2/v3 seeds):
+
+```
+4.52  Opus 4.6                  (existing #1)
+4.40  Sonnet 4.5 / DeepSeek V3.2 / Kimi K2.5
+4.39  GLM 4.7 / GLM 5.1
+4.38  DeepSeek V4 Flash
+4.34  GPT-4.1
+4.31  MiniMax M2.7
+4.30  Gemini 3.1 Flash Lite
+4.26  Gemma 4 26B
+4.25  Mistral SC
+4.19  Grok 4.1
+4.18  Kimi K2.6
+4.08  Gemini 2.5 Flash
+3.89  Llama 4 Maverick
+3.79  Qwen 3.5 Flash
+```
+
+Phase A models cluster in the middle — better than the bottom tier (Llama, Qwen) but no breakouts. The interesting story is that Kimi K2.5 is genuinely competitive with Sonnet 4.5 and DeepSeek V3.2 at a fraction of the cost.
+
+Phase B (Opus 4.7, DeepSeek V4 Pro, Gemini 3.1 Pro) is still running. Final analysis with all 20 models will follow.
+
 ## Multi-Signal Model Profiles
 
 Each model's complete signature across community arena + LLM-judge multi-turn + per-failure-mode breakdown.
