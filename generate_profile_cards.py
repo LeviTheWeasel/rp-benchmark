@@ -29,6 +29,128 @@ def wilson_ci(k: int, n: int, z: float = 1.96) -> tuple[float, float]:
     return max(0, centre - margin), min(1, centre + margin)
 
 
+MODE_LABELS = {
+    "F1_agency": "agency respect",
+    "F2_pov_tense": "POV/tense consistency",
+    "F3_lore_contradiction": "lore consistency",
+    "F8_narrative_momentum": "narrative momentum",
+    "F12_instruction_drift": "instruction following",
+    "F13_context_attention_loss": "long-context attention",
+    "Other": "general adversarial robustness",
+}
+
+
+def derive_strength_weakness(
+    m: str,
+    profiles: dict,
+    behavioral: dict,
+    failure_rates: dict,
+    bayesian_by_model: dict,
+    bayesian_n: int,
+    mode_pool_sizes: dict[str, int],
+) -> tuple[str, str]:
+    """Pick the most notable strength + weakness for this model."""
+    prof = profiles.get(m, {})
+    fail_modes = prof.get("failure_modes", {})
+    comm = prof.get("community", {})
+    subj = prof.get("subjective_dimensions", {})
+    bay = bayesian_by_model.get(m)
+
+    # ---- STRENGTH ----
+    strength = None
+    # 1. Top-3 on a failure mode
+    for mode, data in fail_modes.items():
+        if data.get("rank") in (1, 2):
+            label = MODE_LABELS.get(mode, mode)
+            strength = f"Top-{data['rank']} on {label} ({data['mean']:.2f}/5)"
+            break
+
+    # 2. Top community rank
+    if not strength and comm.get("rank") and comm["rank"] <= 3:
+        strength = f"Community top tier (#{comm['rank']}, ELO {comm['elo']:.0f})"
+
+    # 3. Top Bayesian rank
+    if not strength and bay and bay["rank"] <= 3:
+        strength = f"Top-{bay['rank']} community Bayesian ELO ({bay['elo_mean']:.0f})"
+
+    # 4. Best subjective
+    if not strength and subj:
+        best_subj = max(subj.items(), key=lambda x: x[1]["mean"])
+        if best_subj[1]["mean"] >= 4.5:
+            strength = f"Strong on {best_subj[0].replace('_', ' ')} ({best_subj[1]['mean']:.2f}/5)"
+
+    # 5. NSFW specialist
+    if not strength and comm.get("nsfw_winrate") and comm["nsfw_winrate"] >= 60:
+        strength = f"NSFW specialist ({comm['nsfw_winrate']}% NSFW win rate)"
+
+    # 6. Behavioral outlier (low repetition or high diversity)
+    if not strength and m in behavioral.get("per_model", {}):
+        beh = behavioral["per_model"][m]
+        if "bigram_repetition" in beh:
+            rep = beh["bigram_repetition"]["mean"]
+            if rep <= 0.020:
+                strength = f"Lowest phrase repetition ({rep:.3f} vs population {behavioral['population']['bigram_repetition']['mean']:.3f})"
+
+    if not strength:
+        strength = "No standout strength on tested dimensions"
+
+    # ---- WEAKNESS ----
+    weakness = None
+
+    # 1. Floor < 3.5 on any failure mode
+    for mode, data in fail_modes.items():
+        if data.get("floor", 5) < 3.5:
+            label = MODE_LABELS.get(mode, mode)
+            weakness = f"Catastrophic floor on {label} (lowest session: {data['floor']})"
+            break
+
+    # 2. High binary failure rate
+    if not weakness and m in failure_rates:
+        for mode, (n, k) in failure_rates[m].items():
+            if n >= 20 and k / n >= 0.10:
+                rate = k / n * 100
+                label = MODE_LABELS.get(mode, mode).replace(" consistency", "").replace(" respect", "")
+                weakness = f"High {label} violation rate ({rate:.1f}%)"
+                break
+
+    # 3. Last or second-to-last on a failure mode (using actual pool size per mode)
+    if not weakness and fail_modes:
+        for mode, data in fail_modes.items():
+            rank = data.get("rank")
+            pool_n = mode_pool_sizes.get(mode, 0)
+            if rank and pool_n and rank >= pool_n - 1:
+                label = MODE_LABELS.get(mode, mode)
+                bottom_pos = pool_n - rank + 1
+                weakness = f"Bottom-{bottom_pos} on {label} (rank {rank}/{pool_n})"
+                break
+
+    # 4. Bottom Bayesian rank
+    if not weakness and bay and bay["rank"] >= bayesian_n - 1:
+        weakness = f"Bottom community ELO (#{bay['rank']}/{bayesian_n})"
+
+    # 5. Bottom community rank
+    if not weakness and comm.get("rank") and comm["rank"] >= 9:
+        weakness = f"Lower community half (#{comm['rank']})"
+
+    # 6. NSFW collapse
+    if not weakness and comm.get("nsfw_winrate") and comm["nsfw_winrate"] <= 35:
+        weakness = f"NSFW collapse ({comm['nsfw_winrate']}% NSFW win rate)"
+
+    # 7. Behavioral outlier (high repetition)
+    if not weakness and m in behavioral.get("per_model", {}):
+        beh = behavioral["per_model"][m]
+        if "bigram_repetition" in beh:
+            rep = beh["bigram_repetition"]["mean"]
+            pop_rep = behavioral["population"]["bigram_repetition"]["mean"]
+            if rep > pop_rep * 1.5:
+                weakness = f"High phrase repetition ({rep:.3f} vs population {pop_rep:.3f})"
+
+    if not weakness:
+        weakness = "No standout weakness on tested dimensions"
+
+    return strength, weakness
+
+
 def main():
     failures = [json.loads(l) for l in open("results/per_turn_failures.jsonl")]
     behavioral = json.load(open("results/behavioral_metrics.json"))
@@ -41,6 +163,13 @@ def main():
         failure_rates[r["model"]][r["mode"]][0] += 1
         if r["is_failure"]:
             failure_rates[r["model"]][r["mode"]][1] += 1
+
+    # Per-mode pool sizes (how many models have data on each failure mode)
+    mode_pool_sizes = defaultdict(set)
+    for model_key, prof in profiles.items():
+        for mode in prof.get("failure_modes", {}):
+            mode_pool_sizes[mode].add(model_key)
+    mode_pool_sizes = {mode: len(s) for mode, s in mode_pool_sizes.items()}
 
     bayesian_by_model = {e["model"]: e for e in bayesian["leaderboard"]}
     pop = behavioral["population"]
@@ -150,6 +279,12 @@ def main():
             if mt_mean:
                 rank_block = f"NOT IN COMMUNITY ARENA POOL.  MT-judge mean: {mt_mean}"
 
+        # ---- STRENGTH / WEAKNESS ----
+        strength, weakness = derive_strength_weakness(
+            m, profiles, behavioral, failure_rates, bayesian_by_model,
+            len(bayesian_by_model), mode_pool_sizes,
+        )
+
         # Build markdown card
         lines = []
         lines.append(f"### {m}")
@@ -173,6 +308,9 @@ def main():
             lines.append("─" * 78)
             lines.append("")
             lines.append(rank_block)
+        lines.append("")
+        lines.append(f"Strength:  {strength}")
+        lines.append(f"Weakness:  {weakness}")
         lines.append("```")
         lines.append("")
 
@@ -190,6 +328,8 @@ def main():
                 },
                 "bayesian": bay,
                 "multiturn_judge_mean": prof.get("multiturn_llm_judge", {}).get("overall_mean"),
+                "strength": strength,
+                "weakness": weakness,
             }
         )
 

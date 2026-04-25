@@ -20,6 +20,9 @@ SUBJECTIVE (LLM-judge, rubric proxy)
 ──────────────────────────────────────────────────────────────────────────────
 
 OVERALL RELIABILITY RANK: #1 of 11   [Bayesian ELO: 1534 ± 75, 95% CI [1405, 1662]]
+
+Strength:  Community top tier (#1, ELO 1535)
+Weakness:  No standout weakness on tested dimensions
 ```
 
 ### mistral_small_creative
@@ -44,6 +47,9 @@ SUBJECTIVE (LLM-judge, rubric proxy)
 ──────────────────────────────────────────────────────────────────────────────
 
 OVERALL RELIABILITY RANK: #2 of 11   [Bayesian ELO: 1534 ± 75, 95% CI [1396, 1660]]
+
+Strength:  Community top tier (#2, ELO 1526)
+Weakness:  High agency violation rate (15.9%)
 ```
 
 ### gemini_2_5_flash
@@ -68,6 +74,9 @@ SUBJECTIVE (LLM-judge, rubric proxy)
 ──────────────────────────────────────────────────────────────────────────────
 
 OVERALL RELIABILITY RANK: #3 of 11   [Bayesian ELO: 1529 ± 77, 95% CI [1389, 1665]]
+
+Strength:  Community top tier (#3, ELO 1515)
+Weakness:  Catastrophic floor on agency respect (lowest session: 2.8)
 ```
 
 ### grok_4_1
@@ -92,6 +101,9 @@ SUBJECTIVE (LLM-judge, rubric proxy)
 ──────────────────────────────────────────────────────────────────────────────
 
 OVERALL RELIABILITY RANK: #4 of 11   [Bayesian ELO: 1517 ± 76, 95% CI [1385, 1651]]
+
+Strength:  Strong on tone consistency (4.53/5)
+Weakness:  Bottom-1 on narrative momentum (rank 12/12)
 ```
 
 ### minimax_m2_7
@@ -116,6 +128,9 @@ SUBJECTIVE (LLM-judge, rubric proxy)
 ──────────────────────────────────────────────────────────────────────────────
 
 OVERALL RELIABILITY RANK: #5 of 11   [Bayesian ELO: 1514 ± 75, 95% CI [1386, 1646]]
+
+Strength:  Top-2 on narrative momentum (4.30/5)
+Weakness:  No standout weakness on tested dimensions
 ```
 
 ### claude_sonnet_4_5
@@ -140,6 +155,9 @@ SUBJECTIVE (LLM-judge, rubric proxy)
 ──────────────────────────────────────────────────────────────────────────────
 
 OVERALL RELIABILITY RANK: #6 of 11   [Bayesian ELO: 1513 ± 76, 95% CI [1373, 1653]]
+
+Strength:  Top-1 on long-context attention (4.60/5)
+Weakness:  No standout weakness on tested dimensions
 ```
 
 ### qwen3_5_flash
@@ -164,6 +182,9 @@ SUBJECTIVE (LLM-judge, rubric proxy)
 ──────────────────────────────────────────────────────────────────────────────
 
 OVERALL RELIABILITY RANK: #7 of 11   [Bayesian ELO: 1493 ± 76, 95% CI [1361, 1634]]
+
+Strength:  No standout strength on tested dimensions
+Weakness:  Catastrophic floor on agency respect (lowest session: 2.5)
 ```
 
 ### deepseek_v3_2
@@ -188,6 +209,9 @@ SUBJECTIVE (LLM-judge, rubric proxy)
 ──────────────────────────────────────────────────────────────────────────────
 
 OVERALL RELIABILITY RANK: #8 of 11   [Bayesian ELO: 1492 ± 77, 95% CI [1358, 1625]]
+
+Strength:  Top-2 on lore consistency (4.50/5)
+Weakness:  NSFW collapse (30.4% NSFW win rate)
 ```
 
 ### glm_4_7
@@ -212,6 +236,9 @@ SUBJECTIVE (LLM-judge, rubric proxy)
 ──────────────────────────────────────────────────────────────────────────────
 
 OVERALL RELIABILITY RANK: #9 of 11   [Bayesian ELO: 1490 ± 76, 95% CI [1353, 1623]]
+
+Strength:  Strong on tone consistency (4.62/5)
+Weakness:  Lower community half (#9)
 ```
 
 ### llama_4_maverick
@@ -236,6 +263,9 @@ SUBJECTIVE (LLM-judge, rubric proxy)
 ──────────────────────────────────────────────────────────────────────────────
 
 OVERALL RELIABILITY RANK: #10 of 11   [Bayesian ELO: 1483 ± 76, 95% CI [1350, 1616]]
+
+Strength:  No standout strength on tested dimensions
+Weakness:  Catastrophic floor on agency respect (lowest session: 3.0)
 ```
 
 ### gpt_4_1
@@ -260,6 +290,9 @@ SUBJECTIVE (LLM-judge, rubric proxy)
 ──────────────────────────────────────────────────────────────────────────────
 
 OVERALL RELIABILITY RANK: #11 of 11   [Bayesian ELO: 1472 ± 77, 95% CI [1338, 1610]]
+
+Strength:  Top-1 on narrative momentum (4.30/5)
+Weakness:  Bottom community ELO (#11/11)
 ```
 
 ### claude_opus_4_7
@@ -284,6 +317,9 @@ SUBJECTIVE (LLM-judge, rubric proxy)
 ──────────────────────────────────────────────────────────────────────────────
 
 NOT IN COMMUNITY ARENA POOL.  MT-judge mean: 4.54
+
+Strength:  Top-1 on agency respect (4.60/5)
+Weakness:  No standout weakness on tested dimensions
 ```
 
 ### claude_opus_4_6
@@ -308,6 +344,9 @@ SUBJECTIVE (LLM-judge, rubric proxy)
 ──────────────────────────────────────────────────────────────────────────────
 
 NOT IN COMMUNITY ARENA POOL.  MT-judge mean: 4.51
+
+Strength:  Top-2 on agency respect (4.55/5)
+Weakness:  High phrase repetition (0.076 vs population 0.049)
 ```
 
 ### deepseek_v4_pro
@@ -332,6 +371,9 @@ SUBJECTIVE (LLM-judge, rubric proxy)
 ──────────────────────────────────────────────────────────────────────────────
 
 NOT IN COMMUNITY ARENA POOL.  MT-judge mean: 4.42
+
+Strength:  Strong on tone consistency (4.70/5)
+Weakness:  No standout weakness on tested dimensions
 ```
 
 ### kimi_k2_5
@@ -356,6 +398,9 @@ SUBJECTIVE (LLM-judge, rubric proxy)
 ──────────────────────────────────────────────────────────────────────────────
 
 NOT IN COMMUNITY ARENA POOL.  MT-judge mean: 4.4
+
+Strength:  Strong on tone consistency (4.67/5)
+Weakness:  No standout weakness on tested dimensions
 ```
 
 ### glm_5_1
@@ -380,6 +425,9 @@ SUBJECTIVE (LLM-judge, rubric proxy)
 ──────────────────────────────────────────────────────────────────────────────
 
 NOT IN COMMUNITY ARENA POOL.  MT-judge mean: 4.39
+
+Strength:  Strong on tone consistency (4.65/5)
+Weakness:  No standout weakness on tested dimensions
 ```
 
 ### deepseek_v4_flash
@@ -404,6 +452,9 @@ SUBJECTIVE (LLM-judge, rubric proxy)
 ──────────────────────────────────────────────────────────────────────────────
 
 NOT IN COMMUNITY ARENA POOL.  MT-judge mean: 4.38
+
+Strength:  Strong on tone consistency (4.60/5)
+Weakness:  No standout weakness on tested dimensions
 ```
 
 ### gemini_3_1_pro
@@ -428,6 +479,9 @@ SUBJECTIVE (LLM-judge, rubric proxy)
 ──────────────────────────────────────────────────────────────────────────────
 
 NOT IN COMMUNITY ARENA POOL.  MT-judge mean: 4.33
+
+Strength:  Strong on tone consistency (4.62/5)
+Weakness:  No standout weakness on tested dimensions
 ```
 
 ### gemini_3_1_flash_lite
@@ -452,6 +506,9 @@ SUBJECTIVE (LLM-judge, rubric proxy)
 ──────────────────────────────────────────────────────────────────────────────
 
 NOT IN COMMUNITY ARENA POOL.  MT-judge mean: 4.3
+
+Strength:  Strong on tone consistency (4.60/5)
+Weakness:  No standout weakness on tested dimensions
 ```
 
 ### kimi_k2_6
@@ -476,4 +533,7 @@ SUBJECTIVE (LLM-judge, rubric proxy)
 ──────────────────────────────────────────────────────────────────────────────
 
 NOT IN COMMUNITY ARENA POOL.  MT-judge mean: 4.18
+
+Strength:  No standout strength on tested dimensions
+Weakness:  Catastrophic floor on agency respect (lowest session: 2.5)
 ```

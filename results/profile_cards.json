@@ -52,7 +52,9 @@
         "ci_high_95": 1662.4,
         "ci_width_95": 257.8
       },
-      "multiturn_judge_mean": 4.29
+      "multiturn_judge_mean": 4.29,
+      "strength": "Community top tier (#1, ELO 1535)",
+      "weakness": "No standout weakness on tested dimensions"
     },
     {
       "model": "mistral_small_creative",
@@ -106,7 +108,9 @@
         "ci_high_95": 1660.3,
         "ci_width_95": 264.0
       },
-      "multiturn_judge_mean": 4.22
+      "multiturn_judge_mean": 4.22,
+      "strength": "Community top tier (#2, ELO 1526)",
+      "weakness": "High agency violation rate (15.9%)"
     },
     {
       "model": "gemini_2_5_flash",
@@ -160,7 +164,9 @@
         "ci_high_95": 1664.6,
         "ci_width_95": 275.4
       },
-      "multiturn_judge_mean": 4.14
+      "multiturn_judge_mean": 4.14,
+      "strength": "Community top tier (#3, ELO 1515)",
+      "weakness": "Catastrophic floor on agency respect (lowest session: 2.8)"
     },
     {
       "model": "grok_4_1",
@@ -214,7 +220,9 @@
         "ci_high_95": 1650.9,
         "ci_width_95": 266.1
       },
-      "multiturn_judge_mean": 4.19
+      "multiturn_judge_mean": 4.19,
+      "strength": "Strong on tone consistency (4.53/5)",
+      "weakness": "Bottom-1 on narrative momentum (rank 12/12)"
     },
     {
       "model": "minimax_m2_7",
@@ -268,7 +276,9 @@
         "ci_high_95": 1645.6,
         "ci_width_95": 259.2
       },
-      "multiturn_judge_mean": 4.34
+      "multiturn_judge_mean": 4.34,
+      "strength": "Top-2 on narrative momentum (4.30/5)",
+      "weakness": "No standout weakness on tested dimensions"
     },
     {
       "model": "claude_sonnet_4_5",
@@ -322,7 +332,9 @@
         "ci_high_95": 1653.2,
         "ci_width_95": 280.2
       },
-      "multiturn_judge_mean": 4.42
+      "multiturn_judge_mean": 4.42,
+      "strength": "Top-1 on long-context attention (4.60/5)",
+      "weakness": "No standout weakness on tested dimensions"
     },
     {
       "model": "qwen3_5_flash",
@@ -376,7 +388,9 @@
         "ci_high_95": 1634.2,
         "ci_width_95": 273.2
       },
-      "multiturn_judge_mean": 3.98
+      "multiturn_judge_mean": 3.98,
+      "strength": "No standout strength on tested dimensions",
+      "weakness": "Catastrophic floor on agency respect (lowest session: 2.5)"
     },
     {
       "model": "deepseek_v3_2",
@@ -430,7 +444,9 @@
         "ci_high_95": 1625.4,
         "ci_width_95": 267.8
       },
-      "multiturn_judge_mean": 4.38
+      "multiturn_judge_mean": 4.38,
+      "strength": "Top-2 on lore consistency (4.50/5)",
+      "weakness": "NSFW collapse (30.4% NSFW win rate)"
     },
     {
       "model": "glm_4_7",
@@ -484,7 +500,9 @@
         "ci_high_95": 1623.1,
         "ci_width_95": 270.6
       },
-      "multiturn_judge_mean": 4.37
+      "multiturn_judge_mean": 4.37,
+      "strength": "Strong on tone consistency (4.62/5)",
+      "weakness": "Lower community half (#9)"
     },
     {
       "model": "llama_4_maverick",
@@ -538,7 +556,9 @@
         "ci_high_95": 1616.5,
         "ci_width_95": 266.7
       },
-      "multiturn_judge_mean": 3.96
+      "multiturn_judge_mean": 3.96,
+      "strength": "No standout strength on tested dimensions",
+      "weakness": "Catastrophic floor on agency respect (lowest session: 3.0)"
     },
     {
       "model": "gpt_4_1",
@@ -592,7 +612,9 @@
         "ci_high_95": 1610.1,
         "ci_width_95": 272.5
       },
-      "multiturn_judge_mean": 4.34
+      "multiturn_judge_mean": 4.34,
+      "strength": "Top-1 on narrative momentum (4.30/5)",
+      "weakness": "Bottom community ELO (#11/11)"
     },
     {
       "model": "claude_opus_4_7",
@@ -638,7 +660,9 @@
         "n_votes": null
       },
       "bayesian": null,
-      "multiturn_judge_mean": 4.54
+      "multiturn_judge_mean": 4.54,
+      "strength": "Top-1 on agency respect (4.60/5)",
+      "weakness": "No standout weakness on tested dimensions"
     },
     {
       "model": "claude_opus_4_6",
@@ -684,7 +708,9 @@
         "n_votes": null
       },
       "bayesian": null,
-      "multiturn_judge_mean": 4.51
+      "multiturn_judge_mean": 4.51,
+      "strength": "Top-2 on agency respect (4.55/5)",
+      "weakness": "High phrase repetition (0.076 vs population 0.049)"
     },
     {
       "model": "deepseek_v4_pro",
@@ -730,7 +756,9 @@
         "n_votes": null
       },
       "bayesian": null,
-      "multiturn_judge_mean": 4.42
+      "multiturn_judge_mean": 4.42,
+      "strength": "Strong on tone consistency (4.70/5)",
+      "weakness": "No standout weakness on tested dimensions"
     },
     {
       "model": "kimi_k2_5",
@@ -776,7 +804,9 @@
         "n_votes": null
       },
       "bayesian": null,
-      "multiturn_judge_mean": 4.4
+      "multiturn_judge_mean": 4.4,
+      "strength": "Strong on tone consistency (4.67/5)",
+      "weakness": "No standout weakness on tested dimensions"
     },
     {
       "model": "glm_5_1",
@@ -822,7 +852,9 @@
         "n_votes": null
       },
       "bayesian": null,
-      "multiturn_judge_mean": 4.39
+      "multiturn_judge_mean": 4.39,
+      "strength": "Strong on tone consistency (4.65/5)",
+      "weakness": "No standout weakness on tested dimensions"
     },
     {
       "model": "deepseek_v4_flash",
@@ -868,7 +900,9 @@
         "n_votes": null
       },
       "bayesian": null,
-      "multiturn_judge_mean": 4.38
+      "multiturn_judge_mean": 4.38,
+      "strength": "Strong on tone consistency (4.60/5)",
+      "weakness": "No standout weakness on tested dimensions"
     },
     {
       "model": "gemini_3_1_pro",
@@ -914,7 +948,9 @@
         "n_votes": null
       },
       "bayesian": null,
-      "multiturn_judge_mean": 4.33
+      "multiturn_judge_mean": 4.33,
+      "strength": "Strong on tone consistency (4.62/5)",
+      "weakness": "No standout weakness on tested dimensions"
     },
     {
       "model": "gemini_3_1_flash_lite",
@@ -960,7 +996,9 @@
         "n_votes": null
       },
       "bayesian": null,
-      "multiturn_judge_mean": 4.3
+      "multiturn_judge_mean": 4.3,
+      "strength": "Strong on tone consistency (4.60/5)",
+      "weakness": "No standout weakness on tested dimensions"
     },
     {
       "model": "kimi_k2_6",
@@ -1006,7 +1044,9 @@
         "n_votes": null
       },
       "bayesian": null,
-      "multiturn_judge_mean": 4.18
+      "multiturn_judge_mean": 4.18,
+      "strength": "No standout strength on tested dimensions",
+      "weakness": "Catastrophic floor on agency respect (lowest session: 2.5)"
     }
   ]
 }
