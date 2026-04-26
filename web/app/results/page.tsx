@@ -130,7 +130,7 @@ export default function ResultsPage() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
-      <div className="flex items-center justify-between mb-8">
+      <div className="flex items-center justify-between mb-4">
         <div>
           <h1 className="text-2xl font-bold">Results</h1>
           <p className="text-sm text-[var(--muted)]">
@@ -143,6 +143,46 @@ export default function ResultsPage() {
         >
           Export JSON
         </button>
+      </div>
+
+      <div className="mb-8 p-4 rounded-lg border border-[var(--border)] bg-[var(--card)] flex flex-wrap gap-3 items-center text-xs text-[var(--muted)]">
+        <span className="font-semibold text-[var(--foreground)]">Methodology:</span>
+        <a
+          href="https://github.com/LeviTheWeasel/rp-benchmark/blob/main/docs/METHODOLOGY.md"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[var(--accent)] hover:underline"
+        >
+          docs/METHODOLOGY.md
+        </a>
+        <span className="text-[var(--border)]">·</span>
+        <a
+          href="https://github.com/LeviTheWeasel/rp-benchmark"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[var(--accent)] hover:underline"
+        >
+          GitHub repo
+        </a>
+        <span className="text-[var(--border)]">·</span>
+        <a
+          href="https://huggingface.co/datasets/lazyweasel/roleplay-bench"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[var(--accent)] hover:underline"
+        >
+          HF dataset
+        </a>
+        <span className="text-[var(--border)]">·</span>
+        <a
+          href="https://huggingface.co/spaces/lazyweasel/rp-bench-leaderboard"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[var(--accent)] hover:underline"
+        >
+          HF Spaces leaderboard
+        </a>
+        <span className="ml-auto italic">Curious how votes turn into rankings? All formulas + bias corrections in the methodology doc.</span>
       </div>
 
       {stats.total === 0 ? (
