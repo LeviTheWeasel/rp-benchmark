@@ -407,6 +407,8 @@ def export_analysis_artifacts():
         "behavioral_metrics.json",
         "method_correlations.json",
         "cost_efficiency.json",
+        "latency_leaderboard.json",
+        "quality_speed_leaderboard.json",
         "flaw_hunter_session_summary.json",
         "failure_target_validation.json",
         "adversarial_analysis.json",

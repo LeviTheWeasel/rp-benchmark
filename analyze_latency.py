@@ -167,19 +167,27 @@ def main():
     print("=" * 100)
     print("LATENCY LEADERBOARD (OpenRouter-reported)")
     print("=" * 100)
-    print(f'{"Model":<28}{"calls":<8}{"med TTFT":<11}{"med gen":<11}{"p95 gen":<11}{"tok/s":<10}{"med out tok":<12}{"role":<10}')
-    print("-" * 100)
+    print(f'{"Model":<28}{"calls":<8}{"TTFT":<8}{"med gen":<10}{"p95 gen":<10}{"tok/s":<7}{"out":<8}{"reas":<10}{"trunc":<8}{"$/call":<11}{"role"}')
+    print("-" * 130)
 
     summary = {}
     for key, calls in sorted(per_model.items(), key=lambda x: -len(x[1])):
-        ttfts = [int(r["time_to_first_token_ms"] or 0) for r in calls if r.get("time_to_first_token_ms")]
-        gens = [int(r["generation_time_ms"] or 0) for r in calls if r.get("generation_time_ms")]
-        outs = [int(r["tokens_completion"] or 0) for r in calls if r.get("tokens_completion")]
+        def to_int(v):
+            try: return int(float(v or 0))
+            except: return 0
+
+        ttfts = [to_int(r["time_to_first_token_ms"]) for r in calls if r.get("time_to_first_token_ms")]
+        gens = [to_int(r["generation_time_ms"]) for r in calls if r.get("generation_time_ms")]
+        outs = [to_int(r["tokens_completion"]) for r in calls if r.get("tokens_completion")]
+        reasoning_tokens = [to_int(r.get("tokens_reasoning")) for r in calls]
+        costs = [float(r.get("cost_total") or 0) for r in calls]
+        finishes = [r.get("finish_reason_normalized", "") for r in calls]
+
         # Tokens per second (per call): out_tokens / (gen_time_s)
         rates = []
         for r in calls:
-            ot = int(r.get("tokens_completion") or 0)
-            gt = int(r.get("generation_time_ms") or 0)
+            ot = to_int(r.get("tokens_completion"))
+            gt = to_int(r.get("generation_time_ms"))
             if ot > 50 and gt > 100:
                 rates.append(ot / (gt / 1000))
 
@@ -191,6 +199,14 @@ def main():
         p95_gen = sorted(gens)[int(0.95 * len(gens))]
         median_out = st.median(outs) if outs else 0
         median_rate = st.median(rates) if rates else 0
+        median_reasoning = st.median([r for r in reasoning_tokens if r > 0]) if any(r > 0 for r in reasoning_tokens) else 0
+        reasoning_pct = sum(1 for r in reasoning_tokens if r > 0) / len(reasoning_tokens) * 100
+        # Actual median cost per call (from OR's reported cost)
+        paid_costs = [c for c in costs if c > 0]
+        median_cost = st.median(paid_costs) if paid_costs else 0
+        # Truncation rate (finish_reason='length')
+        n_truncated = sum(1 for f in finishes if f == "length")
+        trunc_pct = 100 * n_truncated / len(finishes) if finishes else 0
 
         role = ""
         if key in JUDGE_KEYS:
@@ -198,7 +214,7 @@ def main():
         elif key in USER_SIM_KEYS:
             role = "user-sim"
 
-        print(f'{key:<28}{len(calls):<8}{int(median_ttft):>5}ms     {int(median_gen):>6}ms    {int(p95_gen):>6}ms    {median_rate:>5.1f}    {int(median_out):>5}        {role}')
+        print(f'{key:<28}{len(calls):<8}{int(median_ttft):>5}ms   {int(median_gen):>6}ms  {int(p95_gen):>6}ms  {median_rate:>5.1f}  {int(median_out):>5}   {int(median_reasoning):>5}     {trunc_pct:>4.0f}%   ${median_cost:.4f}   {role}')
 
         summary[key] = {
             "calls": len(calls),
@@ -206,7 +222,11 @@ def main():
             "median_gen_ms": int(median_gen),
             "p95_gen_ms": int(p95_gen),
             "median_completion_tokens": int(median_out),
+            "median_reasoning_tokens": int(median_reasoning),
+            "uses_reasoning_pct": round(reasoning_pct, 1),
             "tokens_per_second": round(median_rate, 2),
+            "median_actual_cost_usd": round(median_cost, 6),
+            "truncation_pct": round(trunc_pct, 2),
             "role": role or "test_model",
         }
 

@@ -206,6 +206,41 @@ Caveat: gemini_2_5_flash in the data is mostly user-simulator traffic (used 2,56
 
 Raw data: [`results/latency_leaderboard.json`](results/latency_leaderboard.json). Reproduce with `python3 analyze_latency.py`.
 
+## Quality / Speed Leaderboard
+
+Combining quality (multi-turn judge Likert mean) with median wall-clock generation time. Primary metric: **Likert per second**, i.e. how much of a 5.0-scale score you get per second of waiting. Cost column is the **actual** OpenRouter-billed median per call — three of our cost estimates were off by ~3× because we hadn't accounted for `tokens_reasoning` in the bill.
+
+| Rank | Model | Likert | Gen time | Likert/s | $/call | Reas tokens | Trunc |
+|---|---|---|---|---|---|---|---|
+| 1 | Gemini 3.1 Flash Lite | 4.30 | 2.3s | **1.875** | $0.0011 | 0 | 0% |
+| 2 | Mistral SC | 4.22 | 2.8s | 1.484 | $0.0003 | 0 | 0% |
+| 3 | GPT-4.1 | 4.34 | 4.7s | 0.919 | $0.0048 | 0 | 0% |
+| 4 | Llama 4 Maverick | 3.96 | 4.7s | 0.838 | $0.0005 | 0 | 0% |
+| 5 | DeepSeek V4 Flash | 4.38 | 5.3s | 0.828 | BYOK | 137 | 0% |
+| 6 | Grok 4.1 | 4.19 | 6.5s | 0.642 | $0.0005 | 348 | 0% |
+| 7 | DeepSeek V3.2 | 4.38 | 8.4s | 0.519 | $0.0005 | 0 | 0% |
+| 8 | Opus 4.7 | **4.54** | 10.2s | 0.446 | $0.0379 | 0 | 0% |
+| 9 | Gemma 4 26B | 4.29 | 9.8s | 0.440 | $0.0004 | 0 | 0% |
+| 10 | Sonnet 4.5 | 4.42 | 12.1s | 0.367 | $0.0145 | 0 | 0% |
+| 11 | DeepSeek V4 Pro | 4.42 | 17.1s | 0.258 | BYOK | 255 | 0% |
+| 12 | Gemini 3.1 Pro | 4.33 | 19.2s | 0.226 | $0.0251 | 1297 | 1% |
+| 13 | Opus 4.6 | 4.51 | 20.0s | 0.225 | $0.0361 | 0 | 0% |
+| 14 | MiniMax M2.7 | 4.34 | 19.7s | 0.220 | $0.0011 | 222 | 0% |
+| 15 | GLM 5.1 | 4.39 | 20.2s | 0.217 | $0.0037 | 273 | 1% |
+| 16 | Qwen 3.5 Flash | 3.98 | 27.7s | 0.144 | $0.0011 | 3303 | 0% |
+| 17 | GLM 4.7 | 4.37 | 35.9s | 0.122 | $0.0033 | 1314 | 0% |
+| 18 | Kimi K2.5 | 4.40 | 44.7s | 0.099 | $0.0056 | 1474 | 3% |
+| 19 | Kimi K2.6 | 4.18 | 59.4s | **0.070** | $0.0110 | 2746 | **17%** |
+
+**What this exposes that the quality leaderboard alone doesn't:**
+
+- **Gemini 3.1 Flash Lite is the speed-quality leader.** 4.30 Likert in 2.3s — only Opus 4.7 / Sonnet 4.5 / Opus 4.6 score higher, and they cost 7-30× as much per call and take 4-9× as long.
+- **Kimi K2.6 truncates 17% of responses** at the length limit. We hadn't measured this before — it's a quality bug, not just a speed problem. 1 in 6 calls cuts off mid-sentence.
+- **Reasoning models pay a hidden cost.** GLM 4.7, GLM 5.1, MiniMax, Grok 4.1, both DeepSeek V4 variants, and Qwen 3.5 Flash all generate internal "reasoning" tokens you're billed for but never see. Qwen burns 3,303 reasoning tokens per call (the highest); Kimi K2.6 burns 2,746. This explains why our prior `cost_efficiency.json` estimates undercounted some models by 2-3×.
+- **Frontier-quality, frontier-speed-cost.** Opus 4.7 is the highest-quality model (4.54 Likert) but at $0.038/call and 10s gen time, its Likert/$ is 120 — vs Mistral SC at 14,257 (the dollar-efficiency king).
+
+Raw data: [`results/quality_speed_leaderboard.json`](results/quality_speed_leaderboard.json). Reproduce with `python3 analyze_quality_speed.py`.
+
 ## Community Arena Rank Evolution
 
 Tracking each model's community ELO rank across three snapshots (1,000 → 1,600 → 2,000 votes):
