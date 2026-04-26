@@ -20,6 +20,7 @@ from pathlib import Path
 
 import gradio as gr
 import pandas as pd
+import plotly.graph_objects as go
 
 try:
     from huggingface_hub import hf_hub_download
@@ -173,6 +174,110 @@ def cost_efficiency_df() -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
+def quality_speed_cost_plot() -> go.Figure:
+    """Per-model 3D scatter: quality × speed × cost.
+
+    Axes:
+      - X: Likert quality (multi-turn judge mean, 1-5)
+      - Y: Speed = 1 / median generation seconds (higher = faster)
+      - Z: Cost in $/call (log scale)
+
+    Marker size: median completion tokens (longer responses = larger dot).
+    Marker color: whether the model uses internal reasoning tokens.
+    Hover: full per-model breakdown including reasoning, truncation, ELO.
+    """
+    qs = safe_load_json("quality_speed_leaderboard.json")
+    if not qs:
+        # Return an empty placeholder figure
+        fig = go.Figure()
+        fig.add_annotation(text="quality_speed_leaderboard.json not available",
+                           xref="paper", yref="paper", x=0.5, y=0.5, showarrow=False)
+        return fig
+
+    rows = qs["leaderboard"]
+
+    # Floor cost for BYOK / free entries so they appear on the log axis
+    # (instead of dropping off / going to -inf).
+    COST_FLOOR = 0.00005  # $0.00005 ≈ "effectively free"
+
+    xs, ys, zs, sizes, colors, texts, customdata = [], [], [], [], [], [], []
+    for r in rows:
+        likert = r.get("likert_overall")
+        gen_s = r.get("median_gen_seconds")
+        cost = r.get("median_actual_cost_usd") or 0
+        if likert is None or not gen_s:
+            continue
+        cost_plot = max(cost, COST_FLOOR)
+        speed = 1.0 / gen_s  # calls/sec — higher = faster
+        out_tok = r.get("median_completion_tokens", 0) or 0
+        reas_tok = r.get("median_reasoning_tokens", 0) or 0
+        elo = r.get("bayes_elo") or 0
+        trunc = r.get("truncation_pct") or 0
+
+        xs.append(likert)
+        ys.append(speed)
+        zs.append(cost_plot)
+        # Size: scale 0-3500 completion tokens → 8-30px
+        sizes.append(8 + min(out_tok / 130, 22))
+        # Color: reasoning vs non-reasoning
+        colors.append("#d62728" if reas_tok > 0 else "#1f77b4")
+        texts.append(r["model"])
+        customdata.append([
+            r["model"],
+            likert,
+            gen_s,
+            cost,
+            out_tok,
+            reas_tok,
+            elo,
+            trunc,
+            r.get("likert_per_sec") or 0,
+            r.get("likert_per_dollar") or 0,
+        ])
+
+    fig = go.Figure(data=[go.Scatter3d(
+        x=xs, y=ys, z=zs,
+        mode="markers+text",
+        text=texts,
+        textposition="top center",
+        textfont=dict(size=9),
+        marker=dict(
+            size=sizes,
+            color=colors,
+            opacity=0.85,
+            line=dict(color="white", width=1),
+        ),
+        customdata=customdata,
+        hovertemplate=(
+            "<b>%{customdata[0]}</b><br>"
+            "Likert: %{customdata[1]:.2f} / 5<br>"
+            "Median gen time: %{customdata[2]:.1f}s<br>"
+            "Cost/call: $%{customdata[3]:.4f}<br>"
+            "Completion tokens: %{customdata[4]}<br>"
+            "Reasoning tokens: %{customdata[5]}<br>"
+            "Community ELO: %{customdata[6]:.0f}<br>"
+            "Truncation rate: %{customdata[7]:.0f}%%<br>"
+            "<br>"
+            "Likert/s: %{customdata[8]:.3f}<br>"
+            "Likert/$: %{customdata[9]:.0f}"
+            "<extra></extra>"
+        ),
+    )])
+
+    fig.update_layout(
+        scene=dict(
+            xaxis=dict(title="Quality (Likert mean)", range=[3.85, 4.6]),
+            yaxis=dict(title="Speed (1 / gen seconds, higher=faster)", type="log"),
+            zaxis=dict(title="Cost per call ($, log scale)", type="log"),
+            camera=dict(eye=dict(x=1.6, y=-1.6, z=0.9)),
+        ),
+        height=650,
+        margin=dict(l=0, r=0, t=20, b=0),
+        showlegend=False,
+    )
+    return fig
+
+
 def behavioral_df() -> pd.DataFrame:
     b = safe_load_json("behavioral_metrics.json")
     if not b:
@@ -248,6 +353,12 @@ NOTES = {
     "Multi-turn judge": "Sonnet 4 holistic Likert scores per session. F1-F13 columns are means on the seeds that target each failure mode. Lower 'Avg fail rank' = better cross-mode reliability.",
     "Flaw hunter": "Strict 100-point deduction rubric. Mean ~36, median ~42 across all sessions — the methodology forces lower scores than the Likert. Fatal/session column is the rate of -15 deductions; high values flag catastrophic single sessions.",
     "Cost efficiency": "Quality per dollar at OpenRouter prices (60/40 input/output blend, $/1M tokens). DeepSeek V4 Flash is 281× more cost-efficient than Opus 4.7 on flaw hunter for marginal quality difference.",
+    "Speed/Quality/Cost": (
+        "3D view across all 19 test models. **X = Quality** (multi-turn judge Likert mean), "
+        "**Y = Speed** (1/median-gen-seconds, log), **Z = Cost** (actual OpenRouter $/call, log). "
+        "Marker size = median completion tokens. Red = uses internal reasoning tokens. Drag to rotate. "
+        "The corner you want is high-X, high-Y, low-Z — Gemini 3.1 Flash Lite and Mistral SC live there."
+    ),
     "Behavioral": "Pure prose statistics across all 3,569 model-generated responses. Cannot be gamed by judge taste. Length-biased — compare within tiers, not across.",
     "Correlations": "Spearman rank correlation between every pair of methods. **Bayesian ELO row** is the headline: it's uncorrelated with every LLM-judge method.",
 }
@@ -277,6 +388,10 @@ with gr.Blocks(title="RP-Bench Leaderboard", theme=gr.themes.Soft()) as demo:
         with gr.Tab("Cost Efficiency"):
             gr.Markdown("### " + NOTES["Cost efficiency"])
             gr.DataFrame(value=cost_efficiency_df, interactive=False, wrap=True)
+
+        with gr.Tab("Speed / Quality / Cost"):
+            gr.Markdown("### " + NOTES["Speed/Quality/Cost"])
+            gr.Plot(value=quality_speed_cost_plot)
 
         with gr.Tab("Behavioral Metrics"):
             gr.Markdown("### " + NOTES["Behavioral"])
