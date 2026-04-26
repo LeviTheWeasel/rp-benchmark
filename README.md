@@ -168,6 +168,44 @@ DeepSeek V4 Flash is **281× more cost-efficient** than Opus 4.7 on the flaw hun
 
 Raw data: [`results/cost_efficiency.json`](results/cost_efficiency.json).
 
+## Latency Leaderboard
+
+Speed metrics from OpenRouter activity logs across 7,698 RP-Bench calls. Three views matter: **median generation time** (typical wall clock), **p95 generation time** (tail latency — what you actually feel when models hang), and **tokens per second** (length-normalized speed).
+
+| Rank | Model | Median gen | p95 gen | Tok/s | Median TTFT |
+|---|---|---|---|---|---|
+| Fast | Gemini 3.1 Flash Lite | **2.3s** | 3.7s | 154 | 604ms |
+| Fast | Mistral SC | 2.8s | 7.3s | **192** | **230ms** |
+| Fast | GPT-4.1 | 4.7s | 9.4s | 59 | 733ms |
+| Fast | Llama 4 Maverick | 4.7s | 15.8s | 44 | 733ms |
+| Fast | DeepSeek V4 Flash | 5.3s | 8.2s | 70 | 662ms |
+| Mid | Grok 4.1 | 6.5s | 12.0s | 84 | 3985ms |
+| Mid | DeepSeek V3.2 | 8.4s | 38.0s | 22 | 1756ms |
+| Mid | Gemma 4 26B | 9.8s | 31.4s | 48 | 805ms |
+| Mid | Opus 4.7 | 10.2s | 27.5s | 67 | 1060ms |
+| Mid | Sonnet 4.5 | 12.1s | 30.7s | 34 | 1864ms |
+| Slow | DeepSeek V4 Pro | 17.1s | 32.7s | 34 | 1254ms |
+| Slow | Gemini 3.1 Pro | 19.2s | **131s** | 99 | 2644ms |
+| Slow | MiniMax M2.7 | 19.7s | 43.6s | 27 | 1821ms |
+| Slow | Opus 4.6 | 20.0s | 46.8s | 33 | 1905ms |
+| Slow | GLM 5.1 | 20.2s | 53.6s | 29 | 1481ms |
+| Slow | Qwen 3.5 Flash | 27.7s | 55.0s | 134 | 642ms |
+| Slow | GLM 4.7 | 35.9s | 103.9s | 41 | 1116ms |
+| Slow | Kimi K2.5 | 44.7s | **144s** | 36 | 1186ms |
+| Slow | Kimi K2.6 | **59.4s** | **173s** | 40 | 1161ms |
+
+**Key findings:**
+
+- **Mistral Small Creative is the fastest test model** at 192 tok/s, with 230ms TTFT. Combined with its NSFW dominance and #2 community rank, it's the speed-quality leader.
+- **Reasoning models pay a massive latency cost.** Gemini 3.1 Pro (99 tok/s, 131s p95), GLM 5.1 (29 tok/s, 54s p95), and Kimi (36–40 tok/s, 144–173s p95) burn most of their token budget on internal thinking. Their high tok/s for output tokens is misleading because they generate enormous reasoning content first.
+- **Kimi K2.6's tail latency (173s p95) is catastrophic.** 1 in 20 calls takes nearly 3 minutes. Combined with its F1 agency floor of 2.5, K2.6 is hard to recommend for live use.
+- **Frontier models trail mid-tier on speed.** Opus 4.6 / 4.7 medians are 10–20s vs sub-5s for GPT-4.1 / DeepSeek V4 Flash / Mistral SC. Their "polished" outputs come from spending more time per token.
+- **Qwen 3.5 Flash has high tok/s (134) but slow wall time (28s).** It generates a lot of output tokens — its median completion is 3,629 tokens vs ~500 for most models. Verbose, not fast.
+
+Caveat: gemini_2_5_flash in the data is mostly user-simulator traffic (used 2,566 times across all multi-turn runs), not test-model output. Its numbers reflect short-format simulator turns, not full RP responses.
+
+Raw data: [`results/latency_leaderboard.json`](results/latency_leaderboard.json). Reproduce with `python3 analyze_latency.py`.
+
 ## Community Arena Rank Evolution
 
 Tracking each model's community ELO rank across three snapshots (1,000 → 1,600 → 2,000 votes):

@@ -1,0 +1,198 @@
+{
+  "sources": [
+    "/Users/mv/Downloads/openrouter_activity_2026-04-24.csv",
+    "/Users/mv/Downloads/openrouter_activity_2026-04-26.csv"
+  ],
+  "n_rows_after_filter": 7698,
+  "per_model": {
+    "gemini_2_5_flash": {
+      "calls": 2566,
+      "median_ttft_ms": 584,
+      "median_gen_ms": 1088,
+      "p95_gen_ms": 5447,
+      "median_completion_tokens": 49,
+      "tokens_per_second": 56.46,
+      "role": "user-sim"
+    },
+    "claude_sonnet_4": {
+      "calls": 2177,
+      "median_ttft_ms": 1015,
+      "median_gen_ms": 1558,
+      "p95_gen_ms": 16896,
+      "median_completion_tokens": 18,
+      "tokens_per_second": 67.19,
+      "role": "JUDGE"
+    },
+    "minimax_m2_7": {
+      "calls": 220,
+      "median_ttft_ms": 1821,
+      "median_gen_ms": 19720,
+      "p95_gen_ms": 43608,
+      "median_completion_tokens": 513,
+      "tokens_per_second": 26.49,
+      "role": "test_model"
+    },
+    "grok_4_1": {
+      "calls": 220,
+      "median_ttft_ms": 3985,
+      "median_gen_ms": 6529,
+      "p95_gen_ms": 11985,
+      "median_completion_tokens": 553,
+      "tokens_per_second": 84.24,
+      "role": "test_model"
+    },
+    "gemma_4_26b": {
+      "calls": 220,
+      "median_ttft_ms": 805,
+      "median_gen_ms": 9753,
+      "p95_gen_ms": 31439,
+      "median_completion_tokens": 469,
+      "tokens_per_second": 47.79,
+      "role": "test_model"
+    },
+    "claude_opus_4_6": {
+      "calls": 220,
+      "median_ttft_ms": 1905,
+      "median_gen_ms": 20044,
+      "p95_gen_ms": 46837,
+      "median_completion_tokens": 651,
+      "tokens_per_second": 32.94,
+      "role": "test_model"
+    },
+    "llama_4_maverick": {
+      "calls": 220,
+      "median_ttft_ms": 733,
+      "median_gen_ms": 4727,
+      "p95_gen_ms": 15759,
+      "median_completion_tokens": 224,
+      "tokens_per_second": 43.97,
+      "role": "test_model"
+    },
+    "gemini_3_1_pro": {
+      "calls": 133,
+      "median_ttft_ms": 2644,
+      "median_gen_ms": 19166,
+      "p95_gen_ms": 131007,
+      "median_completion_tokens": 1649,
+      "tokens_per_second": 99.19,
+      "role": "test_model"
+    },
+    "claude_opus_4_7": {
+      "calls": 133,
+      "median_ttft_ms": 1060,
+      "median_gen_ms": 10174,
+      "p95_gen_ms": 27467,
+      "median_completion_tokens": 692,
+      "tokens_per_second": 67.55,
+      "role": "test_model"
+    },
+    "kimi_k2_6": {
+      "calls": 133,
+      "median_ttft_ms": 1161,
+      "median_gen_ms": 59435,
+      "p95_gen_ms": 173199,
+      "median_completion_tokens": 2708,
+      "tokens_per_second": 39.99,
+      "role": "test_model"
+    },
+    "kimi_k2_5": {
+      "calls": 133,
+      "median_ttft_ms": 1186,
+      "median_gen_ms": 44666,
+      "p95_gen_ms": 144339,
+      "median_completion_tokens": 1661,
+      "tokens_per_second": 36.35,
+      "role": "test_model"
+    },
+    "gemini_3_1_flash_lite": {
+      "calls": 133,
+      "median_ttft_ms": 604,
+      "median_gen_ms": 2293,
+      "p95_gen_ms": 3709,
+      "median_completion_tokens": 356,
+      "tokens_per_second": 153.46,
+      "role": "test_model"
+    },
+    "glm_5_1": {
+      "calls": 133,
+      "median_ttft_ms": 1481,
+      "median_gen_ms": 20238,
+      "p95_gen_ms": 53639,
+      "median_completion_tokens": 597,
+      "tokens_per_second": 28.73,
+      "role": "test_model"
+    },
+    "qwen3_5_flash": {
+      "calls": 132,
+      "median_ttft_ms": 642,
+      "median_gen_ms": 27719,
+      "p95_gen_ms": 55038,
+      "median_completion_tokens": 3629,
+      "tokens_per_second": 133.5,
+      "role": "test_model"
+    },
+    "glm_4_7": {
+      "calls": 132,
+      "median_ttft_ms": 1116,
+      "median_gen_ms": 35918,
+      "p95_gen_ms": 103850,
+      "median_completion_tokens": 1530,
+      "tokens_per_second": 41.35,
+      "role": "test_model"
+    },
+    "deepseek_v3_2": {
+      "calls": 132,
+      "median_ttft_ms": 1756,
+      "median_gen_ms": 8432,
+      "p95_gen_ms": 38033,
+      "median_completion_tokens": 191,
+      "tokens_per_second": 21.74,
+      "role": "test_model"
+    },
+    "gpt_4_1": {
+      "calls": 132,
+      "median_ttft_ms": 733,
+      "median_gen_ms": 4720,
+      "p95_gen_ms": 9412,
+      "median_completion_tokens": 272,
+      "tokens_per_second": 59.38,
+      "role": "test_model"
+    },
+    "claude_sonnet_4_5": {
+      "calls": 132,
+      "median_ttft_ms": 1864,
+      "median_gen_ms": 12053,
+      "p95_gen_ms": 30669,
+      "median_completion_tokens": 396,
+      "tokens_per_second": 33.6,
+      "role": "test_model"
+    },
+    "mistral_small_creative": {
+      "calls": 132,
+      "median_ttft_ms": 230,
+      "median_gen_ms": 2843,
+      "p95_gen_ms": 7329,
+      "median_completion_tokens": 542,
+      "tokens_per_second": 192.51,
+      "role": "test_model"
+    },
+    "deepseek_v4_pro": {
+      "calls": 132,
+      "median_ttft_ms": 1254,
+      "median_gen_ms": 17110,
+      "p95_gen_ms": 32683,
+      "median_completion_tokens": 587,
+      "tokens_per_second": 33.77,
+      "role": "test_model"
+    },
+    "deepseek_v4_flash": {
+      "calls": 132,
+      "median_ttft_ms": 662,
+      "median_gen_ms": 5288,
+      "p95_gen_ms": 8199,
+      "median_completion_tokens": 379,
+      "tokens_per_second": 70.1,
+      "role": "test_model"
+    }
+  }
+}
