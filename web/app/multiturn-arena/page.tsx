@@ -232,7 +232,9 @@ export default function MultiturnArenaPage() {
                   Character &amp; Setting
                 </summary>
                 <div className="px-4 pb-3 text-sm text-[var(--muted)] leading-relaxed">
-                  {meta.setting_summary}
+                  <pre>
+                    {meta.setting_summary}
+                  </pre>
                 </div>
               </details>
             )}
