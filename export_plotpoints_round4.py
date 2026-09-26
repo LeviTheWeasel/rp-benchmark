@@ -13,7 +13,9 @@ run that prints counts and guard results and writes nothing at all.
             and says nothing about how the pairs were drawn; see "Blind pairs"
             below. Needs PLOTPOINTS_PAIR_ID_SECRET, --check included.
   board     round-4.json: the J leaderboard, aggregates only.
-  cards     model-cards.json: generate_profile_cards_v2's own cards, as data.
+  cards     model-cards.json: generate_profile_cards_v2's own cards, as data,
+            plus each card's `judge` row and the top-level `judge_table`
+            for the index (from results/round4_overview.json).
   youth     The lexical screen for minor-coded terms alone; writes the review
             list to --review-out (never into a git checkout).
 
@@ -29,6 +31,10 @@ Publication rules this script enforces (docs/ROUND4_DESIGN.md sec 9):
   * Allowlisted keys only, in every object of every output.
   * Craft and subjective scores leave only as bands (cell indexes), never as
     a figure, and production-defect examples (quoted model output) stay out.
+    The one exception, by Levi's decision for the cards index: each card's
+    `judge` row (Sonnet 5 session-judge means to ONE decimal, Round 03's table
+    format) and the `judge_table` header, from round4_overview.json. No
+    interval, edge marker or unrounded figure leaves with it.
   * Inputs must match git HEAD; source_commit records which HEAD.
 
 Usage:
@@ -86,6 +92,7 @@ import re
 import subprocess
 import sys
 from collections import Counter, defaultdict
+from decimal import ROUND_FLOOR, Decimal
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent
@@ -101,6 +108,7 @@ from make_j_barchart import NAMES, VENDOR, FINETUNES, reduced  # noqa: E402
 
 RESULTS = PROJECT_ROOT / "results"
 LEADERBOARD = RESULTS / "round4_willingness_leaderboard.json"
+OVERVIEW_NAME = "round4_overview.json"      # analyze_round4_overview.py output
 SEEDS_A = PROJECT_ROOT / "hf_dataset" / "_source" / "adversarial_seeds_r4_track_a.json"
 R4_GLOB = "r4_full_*.json"
 CARD_INPUTS = ("model_card_verdicts.json", "per_turn_failures_v2.jsonl",
@@ -186,16 +194,34 @@ WILLINGNESS_KEYS = {"J", "rank", "ranked", "of", "unranked_reason", "tied_with",
                     "held_under_pressure", "policy_compliance_rate",
                     "overshoot_rate", "empty"}
 CARDS_KEYS = {"schema_version", "reviewed_on", "scope", "sources", "inputs",
-              "source_commit", "export_id", "willingness_source", "cards"}
+              "source_commit", "export_id", "willingness_source", "judge_table",
+              "cards"}
 CARD_KEYS = {"id", "name", "vendor", "is_finetune", "verdict", "coverage",
              "standing_modes", "trap_pooled", "trap_modes", "willingness",
              "behavioral", "craft", "production_defects", "subjective",
-             "community_r1", "strength", "weakness", "elo", "composite"}
+             "community_r1", "strength", "weakness", "elo", "composite", "judge"}
 CRAFT_KEYS = {"axis", "cells", "filled", "sessions", "top_flaws"}
 SUBJECTIVE_KEYS = {"judge", "axis", "cells", "filled", "axes"}
 DEFECT_KEYS = {"turns", "leak_rate", "leak_turns", "selfplay_rate",
                "selfplay_turns", "loop_turns", "loop_rate", "loop_worst_turn",
                "token_overhead_x"}
+# The judge table (Levi's exception to "bands only", for the index): Round
+# 03's columns, one decimal. Card key -> round4_overview.json judge_means key.
+JUDGE_COLUMNS = (("overall", "overall"),
+                 ("agency", "S.5_agency_respect_session"),
+                 ("consistency", "S.1_consistency_over_time"),
+                 ("momentum", "S.3_narrative_momentum"))
+JUDGE_KEYS = {"tier", "overall", "agency", "consistency", "momentum",
+              "n_sessions", "n_seeds", "note"}
+JUDGE_TABLE_KEYS = {"judge", "scale", "bands", "not_comparable_with", "note"}
+JUDGE_BAND_KEYS = {"tier", "lower", "upper", "label"}
+JUDGE_SOURCE = "subagent-sonnet-5"           # the judge name in judge_means
+JUDGE_LABEL = "claude-sonnet-5 (session judge v2)"
+JUDGE_NOT_COMPARABLE = "Round 03 judge (Sonnet 4)"
+# The frozen letters (analyze_round4_overview.TIERS); an overview with any
+# other ranges is refused rather than published under these names.
+JUDGE_TIERS = (("A", 3.8, None), ("B", 3.2, 3.8), ("C", 2.6, 3.2),
+               ("D", 2.0, 2.6), ("E", None, 2.0))
 
 # Display names for the 13 models that have a card but no round-4 row, so
 # make_j_barchart has none. Names from the site's data.ts, in NAMES' style.
@@ -1377,11 +1403,84 @@ def check_board(board):
 # Cards
 # --------------------------------------------------------------------------
 
-def build_cards(lb, results_dir=RESULTS, commit="unknown"):
+def one_decimal(v):
+    """Down to one decimal, as a number. The tier is set on the unrounded mean
+    with fixed lower edges (3.8, 3.2, ...), so rounding half-up would show a
+    B model at 3.76 as "3.8", the bottom of A. Rounding down keeps every shown
+    value inside its own tier's range. Decimal on repr() so a binary value
+    like 3.8 is not floored to 3.7."""
+    return float(Decimal(repr(float(v))).quantize(Decimal("0.1"), ROUND_FLOOR))
+
+
+def read_overview(results_dir=RESULTS):
+    p = Path(results_dir) / OVERVIEW_NAME
+    ov = _read_public_json(p)
+    jm = ov.get("judge_means") or {}
+    if jm.get("judge") != JUDGE_SOURCE or not jm.get("models"):
+        raise ExportError("%s: judge_means missing or not from %s; rerun "
+                          "analyze_round4_overview.py" % (p.name, JUDGE_SOURCE))
+    got = [(r.get("tier"), r.get("lower"), r.get("upper"))
+           for r in (ov.get("bands") or {}).get("ranges") or []]
+    if got != [tuple(t) for t in JUDGE_TIERS]:
+        raise ExportError("%s: tier ranges %s are not the frozen letters %s"
+                          % (p.name, got, list(JUDGE_TIERS)))
+    return ov
+
+
+def judge_row(entry):
+    """A card's judge row: one decimal, no interval, no edge marker."""
+    out = {k: one_decimal(entry[src]) for k, src in JUDGE_COLUMNS}
+    out.update(tier=entry["tier"], n_sessions=int(entry["n_sessions"]),
+               n_seeds=int(entry["n_seeds"]), note=entry["note"])
+    return out
+
+
+def _count(n, one, many):
+    """'Seven tiered models': copy, so small counts are words."""
+    words = ("No", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight",
+             "Nine", "Ten", "Eleven", "Twelve")
+    return "%s %s" % (words[n] if n < len(words) else n, one if n == 1 else many)
+
+
+def build_judge_table(ov):
+    jm = ov["judge_means"]["models"]
+    n_all = max(e["n_seeds"] for e in jm.values())
+    partial = sorted(m for m, e in jm.items() if e["tier"] and e["n_seeds"] < n_all)
+    untiered = sorted(m for m, e in jm.items() if not e["tier"])
+    ranges = ", ".join("%s %s" % (r["tier"], r["label"]) for r in ov["bands"]["ranges"])
+    note = ("Judge: Sonnet 5 (session judge v2), on the %d adversarial craft seeds, "
+            "scale 1-5. Craft is the judge's overall score; Agency, Consist. and "
+            "Moment. are its S.5 agency respect, S.1 consistency and S.3 narrative "
+            "momentum session scores. Each is the model's mean, rounded down to one "
+            "decimal; N is sessions. Craft here is this judge, not the flaw "
+            "hunter's craft band on each card. The tier is set on the unrounded "
+            "Craft mean with fixed ranges (%s)." % (n_all, ranges))
+    if partial:
+        note += (" %s played fewer than %d seeds; %s set on all %d by a model "
+                 "+ seed fit." % (_count(len(partial), "tiered model", "tiered models"),
+                                  n_all, "its means are" if len(partial) == 1
+                                  else "their means are", n_all))
+    if untiered:
+        note += (" %s too few seeds to tier %s listed without a tier, with the "
+                 "seeds played beside the name." % (_count(len(untiered), "model with",
+                                             "models with"),
+                                      "is" if len(untiered) == 1 else "are"))
+    note += (" Not comparable with Round 03's numbers, which came from a different "
+             "judge (Sonnet 4).")
+    return {"judge": JUDGE_LABEL, "scale": "1-5",
+            "bands": [{k: r[k] for k in ("tier", "lower", "upper", "label")}
+                      for r in ov["bands"]["ranges"]],
+            "not_comparable_with": JUDGE_NOT_COMPARABLE, "note": note}
+
+
+def build_cards(lb, results_dir=RESULTS, commit="unknown", overview=None):
     """model-cards.json from generate_profile_cards_v2's own build_card, with
-    the round-4 rows from `lb` (never a re-run of the analyzer)."""
+    the round-4 rows from `lb` (never a re-run of the analyzer), and the judge
+    rows from round4_overview.json (never a re-run of that analyzer either)."""
     for name in CARD_INPUTS:
         _guard_path(Path(results_dir) / name)
+    ov = overview if overview is not None else read_overview(results_dir)
+    jm = ov["judge_means"]["models"]
     ctx = cards_v2.load_inputs(results_dir, r4=cards_v2.r4_rows(lb))
     cards = [cards_v2.build_card(m, ctx) for m in cards_v2.ordered_models(ctx)]
     doc = cards_v2.cards_document(cards, ctx)
@@ -1390,8 +1489,11 @@ def build_cards(lb, results_dir=RESULTS, commit="unknown"):
         name, vendor, fine = display(mid)
         named[mid] = {"id": mid, "name": name, "vendor": vendor,
                       "is_finetune": fine,
-                      **{k: v for k, v in c.items() if k != "id"}}
+                      **{k: v for k, v in c.items() if k != "id"},
+                      "judge": judge_row(jm[mid]) if mid in jm else None}
     doc["cards"] = named
+    doc["inputs"]["judge"] = OVERVIEW_NAME
+    doc["judge_table"] = build_judge_table(ov)
     doc["willingness_source"] = "results/round4_willingness_leaderboard.json"
     doc["source_commit"] = commit
     doc["export_id"] = "r4c-%s-%s" % (
@@ -1401,9 +1503,61 @@ def build_cards(lb, results_dir=RESULTS, commit="unknown"):
     return doc, cards
 
 
-def check_cards(doc, lb):
+def _judge_problems(doc, overview):
+    """The judge table is the one place a figure leaves: one decimal, the
+    allowlisted keys, the frozen letters, and nothing from the JSON-only edge
+    marker or interval."""
+    problems = []
+    t = doc.get("judge_table")
+    if not isinstance(t, dict):
+        return ["cards: judge_table missing"]
+    _keys_exact(t, JUDGE_TABLE_KEYS, "judge_table", problems)
+    if (t.get("judge"), t.get("scale"), t.get("not_comparable_with")) != (
+            JUDGE_LABEL, "1-5", JUDGE_NOT_COMPARABLE):
+        problems.append("judge_table: judge/scale/not_comparable_with changed")
+    bands = t.get("bands") or []
+    for b in bands:
+        _keys_exact(b, JUDGE_BAND_KEYS, "judge_table band %s" % b.get("tier"), problems)
+    if [(b.get("tier"), b.get("lower"), b.get("upper")) for b in bands] != [
+            tuple(x) for x in JUDGE_TIERS]:
+        problems.append("judge_table: bands are not the frozen letters")
+    letters = {x[0] for x in JUDGE_TIERS}
+    jm = (overview or {}).get("judge_means", {}).get("models")
+    for mid, c in doc["cards"].items():
+        j = c.get("judge")
+        if jm is not None and (j is not None) != (mid in jm):
+            problems.append("card %s: judge present iff in judge_means" % mid)
+        if j is None:
+            continue
+        where = "card %s.judge" % mid
+        _keys_exact(j, JUDGE_KEYS, where, problems)
+        for k, _ in JUDGE_COLUMNS:
+            v = j.get(k)
+            if (isinstance(v, bool) or not isinstance(v, (int, float))
+                    or not 1.0 <= v <= 5.0 or v != one_decimal(v)):
+                problems.append("%s.%s is not a 1-5 value to one decimal: %r"
+                                % (where, k, v))
+        for k in ("n_sessions", "n_seeds"):
+            if isinstance(j.get(k), bool) or not isinstance(j.get(k), int) or j[k] < 1:
+                problems.append("%s.%s is not a positive integer" % (where, k))
+        if j.get("tier") is not None and j["tier"] not in letters:
+            problems.append("%s.tier %r is not a fixed letter" % (where, j["tier"]))
+        if (j.get("tier") is None) != bool(j.get("note")):
+            problems.append("%s: an untiered row needs a note, a tiered one none" % where)
+        if jm is not None and mid in jm and j != judge_row(jm[mid]):
+            problems.append("%s differs from round4_overview.json" % where)
+    banned = {"edge", "edge_marked", "edge_models", "spans", "mean_lo", "mean_hi"}
+    hits = banned & (set(_all_keys(t)) | {k for c in doc["cards"].values()
+                                          for k in _all_keys(c.get("judge") or {})})
+    if hits:
+        problems.append("judge table carries %s" % sorted(hits))
+    return problems
+
+
+def check_cards(doc, lb, overview=None):
     problems = []
     _keys_exact(doc, CARDS_KEYS, "cards", problems)
+    problems += _judge_problems(doc, overview)
     lb_models = {r["model"] for r in lb["leaderboard"]}
     for mid, c in doc["cards"].items():
         _keys_exact(c, CARD_KEYS, "card %s" % mid, problems)
@@ -1632,11 +1786,19 @@ def run_board(args, lb, commit, check):
 
 
 def run_cards(args, lb, commit, check):
-    doc, _ = build_cards(lb, RESULTS, commit)
-    problems = check_cards(doc, lb)
+    ov = read_overview(RESULTS)
+    doc, _ = build_cards(lb, RESULTS, commit, overview=ov)
+    problems = check_cards(doc, lb, overview=ov)
     cards = doc["cards"]
     _print_facts("CARDS (model-cards.json)", {
         "cards": len(cards),
+        "with judge row": sum(c["judge"] is not None for c in cards.values()),
+        "with judge tier": sum(bool(c["judge"] and c["judge"]["tier"])
+                               for c in cards.values()),
+        "judge rows without a tier": [(m, c["judge"]["note"]) for m, c in cards.items()
+                                      if c["judge"] and not c["judge"]["tier"]],
+        "no judge row": sorted(m for m, c in cards.items() if c["judge"] is None),
+        "judge models without a card": sorted(set(ov["judge_means"]["models"]) - set(cards)),
         "with willingness": sum(c["willingness"] is not None for c in cards.values()),
         "with craft band": sum(c["craft"] is not None for c in cards.values()),
         "with subjective band": sum(c["subjective"] is not None for c in cards.values()),
@@ -1696,7 +1858,7 @@ def main(argv=None):
         if "sessions" in commands:
             inputs += [SEEDS_A, *r4_paths()]
         if "cards" in commands:
-            inputs += [RESULTS / n for n in CARD_INPUTS]
+            inputs += [RESULTS / n for n in CARD_INPUTS] + [RESULTS / OVERVIEW_NAME]
         dirty = input_problems(inputs)
         print("source_commit %s; %d input files, %s" % (
             commit[:12], len(inputs),

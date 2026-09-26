@@ -1060,7 +1060,9 @@ class GuardModule(unittest.TestCase):
 
 
 def _head_results(dest):
-    """HEAD copies of the card and board inputs, and the committed markdown."""
+    """HEAD copies of the card and board inputs, and the committed markdown.
+    round4_overview.json comes from HEAD once it is committed; until then the
+    working-tree copy stands in (it is derived from tracked inputs only)."""
     names = E.CARD_INPUTS + ("round4_willingness_leaderboard.json",
                              "profile_cards_v2.md")
     (dest / "results").mkdir()
@@ -1068,6 +1070,13 @@ def _head_results(dest):
         blob = subprocess.run(["git", "-C", str(ROOT), "show", "HEAD:results/%s" % n],
                               capture_output=True, check=True).stdout
         (dest / "results" / n).write_bytes(blob)
+    head = subprocess.run(["git", "-C", str(ROOT), "show",
+                           "HEAD:results/%s" % E.OVERVIEW_NAME], capture_output=True)
+    if head.returncode == 0:
+        (dest / "results" / E.OVERVIEW_NAME).write_bytes(head.stdout)
+    else:
+        (dest / "results" / E.OVERVIEW_NAME).write_bytes(
+            (E.RESULTS / E.OVERVIEW_NAME).read_bytes())
     return dest / "results"
 
 
@@ -1085,6 +1094,7 @@ class Cards(unittest.TestCase):
         cls.ctx = G.load_inputs(cls.results, r4=G.r4_rows(cls.lb))
         cls.cards = [G.build_card(m, cls.ctx) for m in G.ordered_models(cls.ctx)]
         cls.doc, _ = E.build_cards(cls.lb, cls.results, commit="test")
+        cls.ov = E.read_overview(cls.results)
 
     @classmethod
     def tearDownClass(cls):
@@ -1126,6 +1136,108 @@ class Cards(unittest.TestCase):
                 self.assertIsNone(c["elo"])
                 self.assertIsNone(c["composite"])
         self.assertEqual(E.check_cards(self.doc, self.lb), [])
+        self.assertEqual(E.check_cards(self.doc, self.lb, overview=self.ov), [])
+
+    def test_judge_rows_come_from_the_overview_to_one_decimal(self):
+        jm = self.ov["judge_means"]["models"]
+        cards = self.doc["cards"]
+        for mid, c in cards.items():
+            with self.subTest(model=mid):
+                self.assertEqual(c["judge"] is not None, mid in jm)
+                if c["judge"] is None:
+                    continue
+                j, e = c["judge"], jm[mid]
+                self.assertEqual(set(j), E.JUDGE_KEYS)
+                self.assertEqual(j["tier"], e["tier"])
+                for k, src in E.JUDGE_COLUMNS:
+                    self.assertEqual(j[k], E.one_decimal(e[src]))
+                    self.assertLessEqual(j[k], e[src] + 1e-9)
+                    self.assertLess(e[src] - j[k], 0.1)
+                    self.assertEqual(j[k], round(j[k], 1))
+                self.assertEqual((j["n_sessions"], j["n_seeds"]),
+                                 (e["n_sessions"], e["n_seeds"]))
+                if j["tier"] is None:
+                    self.assertTrue(j["note"])
+        blob = json.dumps({"t": self.doc["judge_table"],
+                           "j": [c["judge"] for c in cards.values()]})
+        for gone in ('"edge', '"spans"', "mean_lo", "mean_hi", "_plain"):
+            self.assertNotIn(gone, blob)
+
+    def test_roster_snapshot_2026_09_26(self):
+        """The roster Levi signed off on; update when a model is added."""
+        cards = self.doc["cards"]
+        judged = {m: c["judge"] for m, c in cards.items() if c["judge"]}
+        self.assertEqual(len(cards), 70)
+        self.assertEqual(len(judged), 70)          # 69 tiered + mistral_small_2603
+        self.assertEqual(sum(1 for j in judged.values() if j["tier"]), 69)
+        mistral = judged["mistral_small_2603"]
+        self.assertEqual((mistral["tier"], mistral["note"], mistral["n_seeds"]),
+                         (None, "4 of 20 seeds", 4))
+        for gone in ("fugu_max", "rocinante_12b"):
+            self.assertNotIn(gone, cards)
+            self.assertNotIn(gone, self.ov["judge_means"]["models"])
+        older = set(self.ov["counts"]["j_not_in_round_4_models"])
+        self.assertEqual(len(older), 13)
+        self.assertTrue(all(judged[m]["tier"] for m in older))
+        self.assertEqual({j["n_seeds"] for m, j in judged.items() if j["tier"]}, {12, 20})
+
+    def test_judge_table_header(self):
+        t = self.doc["judge_table"]
+        self.assertEqual(set(t), E.JUDGE_TABLE_KEYS)
+        self.assertEqual(t["judge"], "claude-sonnet-5 (session judge v2)")
+        self.assertEqual(t["scale"], "1-5")
+        self.assertEqual(t["not_comparable_with"], "Round 03 judge (Sonnet 4)")
+        self.assertEqual([(b["tier"], b["lower"], b["upper"], b["label"]) for b in t["bands"]],
+                         [("A", 3.8, None, "3.8 and above"), ("B", 3.2, 3.8, "3.2-3.8"),
+                          ("C", 2.6, 3.2, "2.6-3.2"), ("D", 2.0, 2.6, "2.0-2.6"),
+                          ("E", None, 2.0, "below 2.0")])
+        self.assertIn("Sonnet 5", t["note"])
+        self.assertIn("Not comparable with Round 03", t["note"])
+        self.assertIn("not the flaw hunter", t["note"])
+        self.assertEqual(E.copy_problems(t, "judge_table"), [])
+        self.assertEqual(self.doc["inputs"]["judge"], "round4_overview.json")
+
+    def test_check_catches_every_break_of_the_judge_table(self):
+        mid = next(m for m, c in self.doc["cards"].items() if c["judge"] and c["judge"]["tier"])
+
+        def broken(fn):
+            doc = json.loads(json.dumps(self.doc))
+            fn(doc)
+            return E.check_cards(doc, self.lb, overview=self.ov)
+
+        cases = {
+            "edge": lambda d: d["cards"][mid]["judge"].update(edge=True),
+            "two decimals": lambda d: d["cards"][mid]["judge"].update(overall=3.85),
+            "a letter outside the five": lambda d: d["cards"][mid]["judge"].update(tier="F"),
+            "untiered with no note": lambda d: d["cards"][mid]["judge"].update(tier=None),
+            "not the overview's value": lambda d: d["cards"][mid]["judge"].update(
+                agency=1.0 if d["cards"][mid]["judge"]["agency"] != 1.0 else 2.0),
+            "dropped row": lambda d: d["cards"][mid].update(judge=None),
+            "no header": lambda d: d.pop("judge_table"),
+            "a moved band": lambda d: d["judge_table"]["bands"][0].update(lower=4.1),
+            "another judge": lambda d: d["judge_table"].update(judge="sonnet 4"),
+            "edge in the header": lambda d: d["judge_table"].update(edge_models=[]),
+        }
+        for name, fn in cases.items():
+            with self.subTest(name):
+                self.assertTrue(broken(fn), name)
+
+    def test_one_decimal_rounds_down_and_stays_in_its_tier(self):
+        self.assertEqual([E.one_decimal(v) for v in (3.25, 3.795, 2.595, 4.38, 3.749, 5.0, 3.8, 3.2)],
+                         [3.2, 3.7, 2.5, 4.3, 3.7, 5.0, 3.8, 3.2])
+
+    def test_an_overview_with_other_ranges_is_refused(self):
+        with tempfile.TemporaryDirectory() as t:
+            ov = json.loads(json.dumps(self.ov))
+            ov["bands"]["ranges"][0]["lower"] = 4.1
+            (Path(t) / E.OVERVIEW_NAME).write_text(json.dumps(ov))
+            with self.assertRaisesRegex(E.ExportError, "frozen letters"):
+                E.read_overview(t)
+            ov = json.loads(json.dumps(self.ov))
+            ov["judge_means"]["judge"] = "api-gemini"
+            (Path(t) / E.OVERVIEW_NAME).write_text(json.dumps(ov))
+            with self.assertRaisesRegex(E.ExportError, "judge_means"):
+                E.read_overview(t)
 
     def test_the_markdown_still_carries_what_the_json_drops(self):
         md = (self.results / "profile_cards_v2.md").read_text()
