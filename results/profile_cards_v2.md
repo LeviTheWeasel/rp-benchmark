@@ -16,7 +16,7 @@ FAILURE MODES — measured per model (n ≥ 25)
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Pooled                       8.8%  [ 3.0–23.0]  ██░░░░░░░░░░  3/34
-  rank 30 of 59 models carrying all nine modes
+  rank 29 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
@@ -31,7 +31,7 @@ TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Genre instability           0/3 failed
 
 BEHAVIORAL
-  Avg words                   350.004   (population 320.246)
+  Avg words                   350.004   (population 319.995)
   Unique-word ratio             0.597   (population 0.631)
   Phrase repetition             0.069   (population 0.060)
 
@@ -89,7 +89,7 @@ TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Genre instability           0/3 failed
 
 BEHAVIORAL
-  Avg words                   439.238   (population 320.246)
+  Avg words                   439.238   (population 319.995)
   Unique-word ratio             0.557   (population 0.631) ↓
   Phrase repetition             0.095   (population 0.060) ↑
 
@@ -135,7 +135,7 @@ FAILURE MODES — measured per model (n ≥ 25)
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Pooled                       3.0%  [ 0.5–15.3]  ░░░░░░░░░░░░  1/33
-  rank 15 of 59 models carrying all nine modes
+  rank 14 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
@@ -150,7 +150,7 @@ TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Genre instability           0/3 failed
 
 BEHAVIORAL
-  Avg words                   141.103   (population 320.246)
+  Avg words                   141.103   (population 319.995)
   Unique-word ratio             0.728   (population 0.631)
   Phrase repetition             0.030   (population 0.060)
 
@@ -193,7 +193,7 @@ FAILURE MODES — measured per model (n ≥ 25)
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Pooled                       5.9%  [ 1.6–19.1]  █░░░░░░░░░░░  2/34
-  rank 18 of 59 models carrying all nine modes
+  rank 17 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
@@ -208,7 +208,7 @@ TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Genre instability           0/3 failed
 
 BEHAVIORAL
-  Avg words                   136.728   (population 320.246)
+  Avg words                   136.728   (population 319.995)
   Unique-word ratio             0.796   (population 0.631)
   Phrase repetition             0.015   (population 0.060)
 
@@ -252,7 +252,7 @@ FAILURE MODES — measured per model (n ≥ 25)
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Pooled                       5.9%  [ 1.6–19.1]  █░░░░░░░░░░░  2/34
-  rank 17 of 59 models carrying all nine modes
+  rank 16 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
@@ -277,7 +277,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          1.00        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   260.502   (population 320.246)
+  Avg words                   260.502   (population 319.995)
   Unique-word ratio             0.649   (population 0.631)
   Phrase repetition             0.046   (population 0.060)
 
@@ -338,7 +338,7 @@ TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Genre instability           0/3 failed
 
 BEHAVIORAL
-  Avg words                   313.754   (population 320.246)
+  Avg words                   313.754   (population 319.995)
   Unique-word ratio             0.625   (population 0.631)
   Phrase repetition             0.053   (population 0.060)
 
@@ -396,7 +396,7 @@ TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Genre instability           0/3 failed
 
 BEHAVIORAL
-  Avg words                   229.463   (population 320.246)
+  Avg words                   229.463   (population 319.995)
   Unique-word ratio             0.634   (population 0.631)
   Phrase repetition             0.069   (population 0.060)
 
@@ -443,7 +443,7 @@ FAILURE MODES — measured per model (n ≥ 25)
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Pooled                       8.8%  [ 3.0–23.0]  ██░░░░░░░░░░  3/34
-  rank 29 of 59 models carrying all nine modes
+  rank 28 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
@@ -458,7 +458,7 @@ TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Genre instability           0/3 failed
 
 BEHAVIORAL
-  Avg words                   178.179   (population 320.246)
+  Avg words                   178.179   (population 319.995)
   Unique-word ratio             0.713   (population 0.631)
   Phrase repetition             0.029   (population 0.060)
 
@@ -501,7 +501,7 @@ FAILURE MODES — measured per model (n ≥ 25)
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Pooled                       5.9%  [ 1.6–19.1]  █░░░░░░░░░░░  2/34
-  rank 16 of 59 models carrying all nine modes
+  rank 15 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
@@ -516,7 +516,7 @@ TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Genre instability           0/3 failed
 
 BEHAVIORAL
-  Avg words                   221.933   (population 320.246)
+  Avg words                   221.933   (population 319.995)
   Unique-word ratio             0.667   (population 0.631)
   Phrase repetition             0.038   (population 0.060)
 
@@ -574,7 +574,7 @@ TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Genre instability           1/3 failed
 
 BEHAVIORAL
-  Avg words                   171.529   (population 320.246)
+  Avg words                   171.529   (population 319.995)
   Unique-word ratio             0.646   (population 0.631)
   Phrase repetition             0.064   (population 0.060)
 
@@ -621,7 +621,7 @@ FAILURE MODES — measured per model (n ≥ 25)
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Pooled                      11.8%  [ 4.7–26.6]  ██░░░░░░░░░░  4/34
-  rank 36 of 59 models carrying all nine modes
+  rank 35 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
@@ -646,7 +646,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.60        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   211.675   (population 320.246)
+  Avg words                   211.675   (population 319.995)
   Unique-word ratio             0.688   (population 0.631)
   Phrase repetition             0.031   (population 0.060)
 
@@ -689,7 +689,7 @@ FAILURE MODES — measured per model (n ≥ 25)
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Pooled                       5.9%  [ 1.6–19.1]  █░░░░░░░░░░░  2/34
-  rank 24 of 59 models carrying all nine modes
+  rank 21 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
@@ -713,7 +713,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.00        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   524.892   (population 320.246)
+  Avg words                   524.892   (population 319.995)
   Unique-word ratio             0.547   (population 0.631) ↓
   Phrase repetition             0.071   (population 0.060)
 
@@ -778,7 +778,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.40        Overshoot 0.08
 
 BEHAVIORAL
-  Avg words                   480.149   (population 320.246)
+  Avg words                   480.149   (population 319.995)
   Unique-word ratio             0.526   (population 0.631) ↓
   Phrase repetition             0.082   (population 0.060) ↑
 
@@ -821,7 +821,7 @@ FAILURE MODES — measured per model (n ≥ 25)
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Pooled                      11.8%  [ 4.7–26.6]  ██░░░░░░░░░░  4/34
-  rank 37 of 59 models carrying all nine modes
+  rank 36 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
@@ -846,7 +846,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          1.00        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   533.525   (population 320.246)
+  Avg words                   533.525   (population 319.995)
   Unique-word ratio             0.551   (population 0.631) ↓
   Phrase repetition             0.076   (population 0.060) ↑
 
@@ -913,7 +913,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          1.00        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   407.243   (population 320.246)
+  Avg words                   407.243   (population 319.995)
   Unique-word ratio             0.571   (population 0.631)
   Phrase repetition             0.071   (population 0.060)
 
@@ -956,7 +956,7 @@ FAILURE MODES — measured per model (n ≥ 25)
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Pooled                       5.9%  [ 1.6–19.1]  █░░░░░░░░░░░  2/34
-  rank 19 of 59 models carrying all nine modes
+  rank 18 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
@@ -981,7 +981,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          1.00        Overshoot 0.04
 
 BEHAVIORAL
-  Avg words                   287.683   (population 320.246)
+  Avg words                   287.683   (population 319.995)
   Unique-word ratio             0.617   (population 0.631)
   Phrase repetition             0.049   (population 0.060)
 
@@ -1046,7 +1046,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          1.00        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   459.755   (population 320.246)
+  Avg words                   459.755   (population 319.995)
   Unique-word ratio             0.541   (population 0.631) ↓
   Phrase repetition             0.075   (population 0.060) ↑
 
@@ -1111,7 +1111,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.60        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   504.201   (population 320.246)
+  Avg words                   504.201   (population 319.995)
   Unique-word ratio             0.536   (population 0.631) ↓
   Phrase repetition             0.074   (population 0.060) ↑
 
@@ -1155,7 +1155,7 @@ FAILURE MODES — measured per model (n ≥ 25)
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Pooled                      11.8%  [ 4.7–26.6]  ██░░░░░░░░░░  4/34
-  rank 38 of 59 models carrying all nine modes
+  rank 37 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
@@ -1180,7 +1180,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          1.00        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   289.158   (population 320.246)
+  Avg words                   289.158   (population 319.995)
   Unique-word ratio             0.598   (population 0.631)
   Phrase repetition             0.061   (population 0.060)
 
@@ -1226,7 +1226,7 @@ FAILURE MODES — measured per model (n ≥ 25)
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Pooled                       8.8%  [ 3.0–23.0]  ██░░░░░░░░░░  3/34
-  rank 31 of 59 models carrying all nine modes
+  rank 30 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
@@ -1251,7 +1251,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          1.00        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   261.363   (population 320.246)
+  Avg words                   261.363   (population 319.995)
   Unique-word ratio             0.661   (population 0.631)
   Phrase repetition             0.035   (population 0.060)
 
@@ -1320,7 +1320,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          1.00        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   178.640   (population 320.246)
+  Avg words                   178.640   (population 319.995)
   Unique-word ratio             0.658   (population 0.631)
   Phrase repetition             0.057   (population 0.060)
 
@@ -1388,7 +1388,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.40        Overshoot 0.17
 
 BEHAVIORAL
-  Avg words                   489.317   (population 320.246)
+  Avg words                   489.317   (population 319.995)
   Unique-word ratio             0.561   (population 0.631) ↓
   Phrase repetition             0.115   (population 0.060) ↑
 
@@ -1450,7 +1450,7 @@ TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Genre instability           0/3 failed
 
 BEHAVIORAL
-  Avg words                   274.079   (population 320.246)
+  Avg words                   274.079   (population 319.995)
   Unique-word ratio             0.685   (population 0.631)
   Phrase repetition             0.037   (population 0.060)
 
@@ -1519,7 +1519,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.40        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   173.446   (population 320.246)
+  Avg words                   173.446   (population 319.995)
   Unique-word ratio             0.743   (population 0.631)
   Phrase repetition             0.022   (population 0.060)
 
@@ -1557,15 +1557,15 @@ Verdict: Competent prose, but perspective drift and instruction or detail
   misses interrupt otherwise capable scenes. It also frequently refuses or
   deflects harder content, particularly intimacy.
 
-RESPONSE COVERAGE    99.6%  (219 of 220 turns answered)
+RESPONSE COVERAGE   100.0%  (220 of 220 turns answered)
 
 FAILURE MODES — measured per model (n ≥ 25)
   Agency violations            2.3%  [ 0.4–11.8]  █░░░░░░░░░░░  44 probes
   POV/tense breaks            18.2%  [ 8.6–34.4]  ████████░░░░  33 probes
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
-  Pooled                      14.7%  [ 6.4–30.1]  ███░░░░░░░░░  5/34
-  rank 41 of 59 models carrying all nine modes
+  Pooled                      11.8%  [ 4.7–26.6]  ██░░░░░░░░░░  4/34
+  rank 38 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
@@ -1574,7 +1574,7 @@ TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Contradiction mishandled    0/2 failed
   Narrative stagnation        0/2 failed
   Physics sycophancy          0/3 failed
-  Temporal inconsistency      1/3 failed
+  Temporal inconsistency      0/3 failed
   Subtext made explicit       0/3 failed  (+1 borderline)
   Character flattening        0/3 failed
   Genre instability           0/3 failed
@@ -1590,22 +1590,22 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.80        Overshoot 0.04
 
 BEHAVIORAL
-  Avg words                   426.042   (population 320.246)
-  Unique-word ratio             0.535   (population 0.631) ↓
-  Phrase repetition             0.091   (population 0.060) ↑
+  Avg words                   415.500   (population 319.995)
+  Unique-word ratio             0.536   (population 0.631) ↓
+  Phrase repetition             0.089   (population 0.060) ↑
 
 FLAW HUNTER  [single-rater v2]
-  Craft band                 -20 ░░░░░│░░░░░░░░░░██████░░░░░░░░ 100
+  Craft band                 -20 ░░░░░│░░░░░░░░░██████░░░░░░░░░ 100
                              ±10 is the rater noise floor, not a sampling error
   Sessions                   20
-  Top flaws                  recycled_description, agency_violation, purple_prose
+  Top flaws                  recycled_description, agency_violation, convenient_world
 
 PRODUCTION DEFECTS  [mechanical, not judged]
-  Scaffolding/token leak         0.0%   (0 of 219 turns)
-  Wrote the user's turn          1.8%   (4 of 219 turns)
+  Scaffolding/token leak         0.0%   (0 of 220 turns)
+  Wrote the user's turn          1.4%   (3 of 220 turns)
   Degenerate repetition          0.0%   worst turn 1% repeated
-  Token overhead                1.9x    billed per visible char, vs the prose floor
-    selfplay: station.  Thief: I go back to the safe and use the lette
+  Token overhead                2.0x    billed per visible char, vs the prose floor
+    selfplay: otation.*  Thief: I check the time remaining. How much ti
 
 SUBJECTIVE  [single-judge sonnet 5]
   Composite band             1 ░░░░░░░░░░░░░░░░░░░░░░░█████░░ 5
@@ -1662,7 +1662,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.60        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   172.929   (population 320.246)
+  Avg words                   172.929   (population 319.995)
   Unique-word ratio             0.709   (population 0.631)
   Phrase repetition             0.030   (population 0.060)
 
@@ -1730,7 +1730,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.60        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   258.833   (population 320.246)
+  Avg words                   258.833   (population 319.995)
   Unique-word ratio             0.664   (population 0.631)
   Phrase repetition             0.040   (population 0.060)
 
@@ -1773,7 +1773,7 @@ FAILURE MODES — measured per model (n ≥ 25)
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Pooled                       0.0%  [ 0.0–10.4]  ░░░░░░░░░░░░  0/33
-  rank 5 of 59 models carrying all nine modes
+  rank 4 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
@@ -1798,7 +1798,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          1.00        Overshoot 0.04
 
 BEHAVIORAL
-  Avg words                   384.916   (population 320.246)
+  Avg words                   384.916   (population 319.995)
   Unique-word ratio             0.584   (population 0.631)
   Phrase repetition             0.062   (population 0.060)
 
@@ -1866,7 +1866,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.40        Overshoot 0.21
 
 BEHAVIORAL
-  Avg words                   614.579   (population 320.246)
+  Avg words                   614.579   (population 319.995)
   Unique-word ratio             0.482   (population 0.631) ↓
   Phrase repetition             0.236   (population 0.060) ↑
 
@@ -1927,7 +1927,7 @@ FAILURE MODES — measured per model (n ≥ 25)
   Genre instability           not run
 
 BEHAVIORAL
-  Avg words                   263.924   (population 320.246)
+  Avg words                   263.924   (population 319.995)
   Unique-word ratio             0.643   (population 0.631)
   Phrase repetition             0.049   (population 0.060)
 
@@ -1984,7 +1984,7 @@ FAILURE MODES — measured per model (n ≥ 25)
   Genre instability           not run
 
 BEHAVIORAL
-  Avg words                   263.124   (population 320.246)
+  Avg words                   263.124   (population 319.995)
   Unique-word ratio             0.667   (population 0.631)
   Phrase repetition             0.040   (population 0.060)
 
@@ -2027,7 +2027,7 @@ FAILURE MODES — measured per model (n ≥ 25)
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Pooled                       8.8%  [ 3.0–23.0]  ██░░░░░░░░░░  3/34
-  rank 32 of 59 models carrying all nine modes
+  rank 31 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
@@ -2052,7 +2052,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.80        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   287.421   (population 320.246)
+  Avg words                   287.421   (population 319.995)
   Unique-word ratio             0.645   (population 0.631)
   Phrase repetition             0.048   (population 0.060)
 
@@ -2098,7 +2098,7 @@ FAILURE MODES — measured per model (n ≥ 25)
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Pooled                       5.9%  [ 1.6–19.1]  █░░░░░░░░░░░  2/34
-  rank 21 of 59 models carrying all nine modes
+  rank 20 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
@@ -2123,7 +2123,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.40        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   239.625   (population 320.246)
+  Avg words                   239.625   (population 319.995)
   Unique-word ratio             0.687   (population 0.631)
   Phrase repetition             0.035   (population 0.060)
 
@@ -2166,7 +2166,7 @@ FAILURE MODES — measured per model (n ≥ 25)
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Pooled                       6.1%  [ 1.7–19.6]  █░░░░░░░░░░░  2/33
-  rank 27 of 59 models carrying all nine modes
+  rank 26 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
@@ -2191,7 +2191,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.60        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   290.445   (population 320.246)
+  Avg words                   290.445   (population 319.995)
   Unique-word ratio             0.670   (population 0.631)
   Phrase repetition             0.041   (population 0.060)
 
@@ -2259,7 +2259,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.20        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   255.571   (population 320.246)
+  Avg words                   255.571   (population 319.995)
   Unique-word ratio             0.638   (population 0.631)
   Phrase repetition             0.049   (population 0.060)
 
@@ -2327,7 +2327,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.60        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   240.090   (population 320.246)
+  Avg words                   240.090   (population 319.995)
   Unique-word ratio             0.653   (population 0.631)
   Phrase repetition             0.041   (population 0.060)
 
@@ -2365,22 +2365,22 @@ Verdict: Good, expansive prose, but frequent intimacy deflection limits its
 RESPONSE COVERAGE    98.2%  (216 of 220 turns answered)
 
 FAILURE MODES — measured per model (n ≥ 25)
-  Agency violations            0.0%  [ 0.0– 8.2]  ░░░░░░░░░░░░  43 probes
+  Agency violations            0.0%  [ 0.0– 8.4]  ░░░░░░░░░░░░  42 probes
   POV/tense breaks             3.1%  [ 0.6–15.7]  █░░░░░░░░░░░  32 probes
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
-  Pooled                       5.9%  [ 1.6–19.1]  █░░░░░░░░░░░  2/34
-  rank 23 of 59 models carrying all nine modes
+  Pooled                      14.7%  [ 6.4–30.1]  ███░░░░░░░░░  5/34
+  rank 41 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
-  System-prompt violations    1/6 failed
-  Detail loss                 1/9 failed
+  System-prompt violations    2/6 failed
+  Detail loss                 3/9 failed
   Contradiction mishandled    0/2 failed  (+1 borderline)
   Narrative stagnation        0/2 failed
   Physics sycophancy          0/3 failed
   Temporal inconsistency      0/3 failed
-  Subtext made explicit       0/3 failed  (+2 borderline)
+  Subtext made explicit       0/3 failed  (+3 borderline)
   Character flattening        0/3 failed
   Genre instability           0/3 failed
 
@@ -2396,7 +2396,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          1.00        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   500.025   (population 320.246)
+  Avg words                   500.025   (population 319.995)
   Unique-word ratio             0.554   (population 0.631) ↓
   Phrase repetition             0.065   (population 0.060)
 
@@ -2439,7 +2439,7 @@ FAILURE MODES — measured per model (n ≥ 25)
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Pooled                       2.9%  [ 0.5–14.9]  ░░░░░░░░░░░░  1/34
-  rank 12 of 59 models carrying all nine modes
+  rank 11 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
@@ -2464,7 +2464,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.80        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   499.004   (population 320.246)
+  Avg words                   499.004   (population 319.995)
   Unique-word ratio             0.563   (population 0.631) ↓
   Phrase repetition             0.061   (population 0.060)
 
@@ -2508,7 +2508,7 @@ FAILURE MODES — measured per model (n ≥ 25)
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Pooled                       6.2%  [ 1.7–20.1]  █░░░░░░░░░░░  2/32
-  rank 28 of 59 models carrying all nine modes
+  rank 27 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
@@ -2533,7 +2533,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.50        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   553.179   (population 320.246)
+  Avg words                   553.179   (population 319.995)
   Unique-word ratio             0.544   (population 0.631) ↓
   Phrase repetition             0.070   (population 0.060)
 
@@ -2577,7 +2577,7 @@ FAILURE MODES — measured per model (n ≥ 25)
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Pooled                       5.9%  [ 1.6–19.1]  █░░░░░░░░░░░  2/34
-  rank 20 of 59 models carrying all nine modes
+  rank 19 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
@@ -2602,7 +2602,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          1.00        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   438.942   (population 320.246)
+  Avg words                   438.942   (population 319.995)
   Unique-word ratio             0.621   (population 0.631)
   Phrase repetition             0.059   (population 0.060)
 
@@ -2670,7 +2670,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          1.00        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   206.004   (population 320.246)
+  Avg words                   206.004   (population 319.995)
   Unique-word ratio             0.685   (population 0.631)
   Phrase repetition             0.035   (population 0.060)
 
@@ -2713,7 +2713,7 @@ FAILURE MODES — measured per model (n ≥ 25)
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Pooled                       5.9%  [ 1.6–19.1]  █░░░░░░░░░░░  2/34
-  rank 26 of 59 models carrying all nine modes
+  rank 25 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
@@ -2738,7 +2738,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          1.00        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   103.562   (population 320.246)
+  Avg words                   103.562   (population 319.995)
   Unique-word ratio             0.760   (population 0.631)
   Phrase repetition             0.024   (population 0.060)
 
@@ -2781,7 +2781,7 @@ FAILURE MODES — measured per model (n ≥ 25)
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Pooled                       2.9%  [ 0.5–14.9]  ░░░░░░░░░░░░  1/34
-  rank 13 of 59 models carrying all nine modes
+  rank 12 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
@@ -2806,7 +2806,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          1.00        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   102.800   (population 320.246)
+  Avg words                   102.800   (population 319.995)
   Unique-word ratio             0.763   (population 0.631)
   Phrase repetition             0.023   (population 0.060)
 
@@ -2849,7 +2849,7 @@ FAILURE MODES — measured per model (n ≥ 25)
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Pooled                       0.0%  [ 0.0–10.2]  ░░░░░░░░░░░░  0/34
-  rank 7 of 59 models carrying all nine modes
+  rank 8 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
@@ -2874,7 +2874,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          1.00        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                    95.558   (population 320.246)
+  Avg words                    95.558   (population 319.995)
   Unique-word ratio             0.766   (population 0.631)
   Phrase repetition             0.021   (population 0.060)
 
@@ -2918,7 +2918,7 @@ FAILURE MODES — measured per model (n ≥ 25)
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Pooled                       0.0%  [ 0.0–10.2]  ░░░░░░░░░░░░  0/34
-  rank 8 of 59 models carrying all nine modes
+  rank 9 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
@@ -2943,7 +2943,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          1.00        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   101.329   (population 320.246)
+  Avg words                   101.329   (population 319.995)
   Unique-word ratio             0.755   (population 0.631)
   Phrase repetition             0.024   (population 0.060)
 
@@ -2986,7 +2986,7 @@ FAILURE MODES — measured per model (n ≥ 25)
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Pooled                       0.0%  [ 0.0–10.2]  ░░░░░░░░░░░░  0/34
-  rank 4 of 59 models carrying all nine modes
+  rank 3 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
@@ -3011,7 +3011,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.40        Overshoot 0.04
 
 BEHAVIORAL
-  Avg words                   112.554   (population 320.246)
+  Avg words                   112.554   (population 319.995)
   Unique-word ratio             0.779   (population 0.631)
   Phrase repetition             0.015   (population 0.060)
 
@@ -3054,7 +3054,7 @@ FAILURE MODES — measured per model (n ≥ 25)
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Pooled                       2.9%  [ 0.5–14.9]  ░░░░░░░░░░░░  1/34
-  rank 14 of 59 models carrying all nine modes
+  rank 13 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
@@ -3080,7 +3080,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.40        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   212.048   (population 320.246)
+  Avg words                   212.048   (population 319.995)
   Unique-word ratio             0.658   (population 0.631)
   Phrase repetition             0.041   (population 0.060)
 
@@ -3149,7 +3149,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.80        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   295.562   (population 320.246)
+  Avg words                   295.562   (population 319.995)
   Unique-word ratio             0.620   (population 0.631)
   Phrase repetition             0.057   (population 0.060)
 
@@ -3209,7 +3209,7 @@ FAILURE MODES — measured per model (n ≥ 25)
   Genre instability           not run
 
 BEHAVIORAL
-  Avg words                   252.944   (population 320.246)
+  Avg words                   252.944   (population 319.995)
   Unique-word ratio             0.681   (population 0.631)
   Phrase repetition             0.037   (population 0.060)
 
@@ -3251,13 +3251,13 @@ FAILURE MODES — measured per model (n ≥ 25)
   POV/tense breaks             0.0%  [ 0.0–10.4]  ░░░░░░░░░░░░  33 probes
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
-  Pooled                       2.9%  [ 0.5–14.9]  ░░░░░░░░░░░░  1/34
-  rank 9 of 59 models carrying all nine modes
+  Pooled                       5.9%  [ 1.6–19.1]  █░░░░░░░░░░░  2/34
+  rank 24 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
   System-prompt violations    1/6 failed
-  Detail loss                 0/9 failed
+  Detail loss                 1/9 failed
   Contradiction mishandled    0/2 failed  (+2 borderline)
   Narrative stagnation        0/2 failed
   Physics sycophancy          0/3 failed
@@ -3278,7 +3278,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.60        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   248.471   (population 320.246)
+  Avg words                   248.471   (population 319.995)
   Unique-word ratio             0.669   (population 0.631)
   Phrase repetition             0.041   (population 0.060)
 
@@ -3347,7 +3347,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.20        Overshoot 0.17
 
 BEHAVIORAL
-  Avg words                   328.346   (population 320.246)
+  Avg words                   328.346   (population 319.995)
   Unique-word ratio             0.611   (population 0.631)
   Phrase repetition             0.060   (population 0.060)
 
@@ -3419,7 +3419,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.00        Overshoot 0.21
 
 BEHAVIORAL
-  Avg words                   328.054   (population 320.246)
+  Avg words                   328.054   (population 319.995)
   Unique-word ratio             0.580   (population 0.631)
   Phrase repetition             0.085   (population 0.060) ↑
 
@@ -3467,7 +3467,7 @@ FAILURE MODES — measured per model (n ≥ 25)
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Pooled                       8.8%  [ 3.0–23.0]  ██░░░░░░░░░░  3/34
-  rank 33 of 59 models carrying all nine modes
+  rank 32 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
@@ -3492,7 +3492,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          n/a        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   126.525   (population 320.246)
+  Avg words                   126.525   (population 319.995)
   Unique-word ratio             0.728   (population 0.631)
   Phrase repetition             0.027   (population 0.060)
 
@@ -3560,7 +3560,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.60        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   391.867   (population 320.246)
+  Avg words                   391.867   (population 319.995)
   Unique-word ratio             0.601   (population 0.631)
   Phrase repetition             0.058   (population 0.060)
 
@@ -3632,7 +3632,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.80        Overshoot 0.04
 
 BEHAVIORAL
-  Avg words                   439.988   (population 320.246)
+  Avg words                   439.988   (population 319.995)
   Unique-word ratio             0.571   (population 0.631)
   Phrase repetition             0.071   (population 0.060)
 
@@ -3676,7 +3676,7 @@ FAILURE MODES — measured per model (n ≥ 25)
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Pooled                       8.8%  [ 3.0–23.0]  ██░░░░░░░░░░  3/34
-  rank 34 of 59 models carrying all nine modes
+  rank 33 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
@@ -3702,7 +3702,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.60        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   438.054   (population 320.246)
+  Avg words                   438.054   (population 319.995)
   Unique-word ratio             0.562   (population 0.631) ↓
   Phrase repetition             0.075   (population 0.060) ↑
 
@@ -3774,7 +3774,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.80        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   428.439   (population 320.246)
+  Avg words                   428.439   (population 319.995)
   Unique-word ratio             0.572   (population 0.631)
   Phrase repetition             0.080   (population 0.060) ↑
 
@@ -3839,7 +3839,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          1.00        Overshoot 0.50
 
 BEHAVIORAL
-  Avg words                   222.312   (population 320.246)
+  Avg words                   222.312   (population 319.995)
   Unique-word ratio             0.655   (population 0.631)
   Phrase repetition             0.059   (population 0.060)
 
@@ -3870,19 +3870,19 @@ Verdict: Compact prose and clean trap-mode probes, but frequent perspective
   drift undermines otherwise competent execution. Intimacy deflection and very
   high token overhead are further limitations.
 
-RESPONSE COVERAGE    97.3%  (214 of 220 turns answered)
+RESPONSE COVERAGE   100.0%  (220 of 220 turns answered)
 
 FAILURE MODES — measured per model (n ≥ 25)
   Agency violations            0.0%  [ 0.0– 8.0]  ░░░░░░░░░░░░  44 probes
-  POV/tense breaks            27.6%  [14.7–45.7]  ████████████  29 probes
+  POV/tense breaks            21.2%  [10.7–37.8]  ██████████░░  33 probes
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
-  Pooled                       0.0%  [ 0.0–10.4]  ░░░░░░░░░░░░  0/33
+  Pooled                       0.0%  [ 0.0–10.2]  ░░░░░░░░░░░░  0/34
   rank 2 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
-  System-prompt violations    0/5 failed
+  System-prompt violations    0/6 failed
   Detail loss                 0/9 failed
   Contradiction mishandled    0/2 failed  (+2 borderline)
   Narrative stagnation        0/2 failed
@@ -3903,25 +3903,25 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.80        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   124.133   (population 320.246)
-  Unique-word ratio             0.705   (population 0.631)
+  Avg words                   123.438   (population 319.995)
+  Unique-word ratio             0.704   (population 0.631)
   Phrase repetition             0.038   (population 0.060)
 
 FLAW HUNTER  [single-rater v2]
-  Craft band                 -20 ░░░░░│░░░░░░░░░░██████░░░░░░░░ 100
+  Craft band                 -20 ░░░░░│░░░░░░░░░██████░░░░░░░░░ 100
                              ±10 is the rater noise floor, not a sampling error
   Sessions                   20
   Top flaws                  recycled_description, missing_spatial_awareness, narrating_emotions
 
 PRODUCTION DEFECTS  [mechanical, not judged]
-  None detected              214 turns clean
-  Token overhead               14.3x    billed per visible char, vs the prose floor
+  None detected              220 turns clean
+  Token overhead               14.4x    billed per visible char, vs the prose floor
 
 SUBJECTIVE  [single-judge sonnet 5]
-  Composite band             1 ░░░░░░░░░░░░░░░██████░░░░░░░░░ 5
+  Composite band             1 ░░░░░░░░░░░░░░░░░█████░░░░░░░░ 5
                              +/-0.3 spans where three judge families put this model
                              the AXIS is sonnet 5's; another judge shifts everyone by ~1.0
-    axes (less reliable)     coll 3.3  enga 3.0  tone 3.9
+    axes (less reliable)     coll 3.4  enga 3.3  tone 4.0
 ──────────────────────────────────────────────────────────────────────────────
 COMMUNITY RANK: no arena data for this model
 Strength: No standout strength on tested dimensions
@@ -3947,7 +3947,7 @@ FAILURE MODES — measured per model (n ≥ 25)
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Pooled                       8.8%  [ 3.0–23.0]  ██░░░░░░░░░░  3/34
-  rank 35 of 59 models carrying all nine modes
+  rank 34 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
@@ -3972,7 +3972,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.40        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   269.254   (population 320.246)
+  Avg words                   269.254   (population 319.995)
   Unique-word ratio             0.658   (population 0.631)
   Phrase repetition             0.046   (population 0.060)
 
@@ -4040,7 +4040,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.20        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   280.540   (population 320.246)
+  Avg words                   280.540   (population 319.995)
   Unique-word ratio             0.645   (population 0.631)
   Phrase repetition             0.054   (population 0.060)
 
@@ -4111,7 +4111,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.60        Overshoot 0.04
 
 BEHAVIORAL
-  Avg words                   267.142   (population 320.246)
+  Avg words                   267.142   (population 319.995)
   Unique-word ratio             0.663   (population 0.631)
   Phrase repetition             0.044   (population 0.060)
 
@@ -4150,22 +4150,22 @@ Verdict: Expansive, competent prose and strong player-control and perspective
 RESPONSE COVERAGE    99.6%  (219 of 220 turns answered)
 
 FAILURE MODES — measured per model (n ≥ 25)
-  Agency violations            0.0%  [ 0.0– 8.0]  ░░░░░░░░░░░░  44 probes
+  Agency violations            0.0%  [ 0.0– 8.2]  ░░░░░░░░░░░░  43 probes
   POV/tense breaks             0.0%  [ 0.0–10.4]  ░░░░░░░░░░░░  33 probes
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
-  Pooled                       5.9%  [ 1.6–19.1]  █░░░░░░░░░░░  2/34
-  rank 22 of 59 models carrying all nine modes
+  Pooled                       0.0%  [ 0.0–10.2]  ░░░░░░░░░░░░  0/34
+  rank 7 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
-  System-prompt violations    1/6 failed
+  System-prompt violations    0/6 failed
   Detail loss                 0/9 failed
-  Contradiction mishandled    0/2 failed  (+1 borderline)
+  Contradiction mishandled    0/2 failed  (+2 borderline)
   Narrative stagnation        0/2 failed
   Physics sycophancy          0/3 failed
   Temporal inconsistency      0/3 failed
-  Subtext made explicit       1/3 failed  (+1 borderline)
+  Subtext made explicit       0/3 failed  (+2 borderline)
   Character flattening        0/3 failed
   Genre instability           0/3 failed
 
@@ -4180,8 +4180,8 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.80        Overshoot 0.04
 
 BEHAVIORAL
-  Avg words                   473.536   (population 320.246)
-  Unique-word ratio             0.568   (population 0.631)
+  Avg words                   473.536   (population 319.995)
+  Unique-word ratio             0.568   (population 0.631) ↓
   Phrase repetition             0.094   (population 0.060) ↑
 
 FLAW HUNTER  [single-rater v2]
@@ -4223,12 +4223,12 @@ FAILURE MODES — measured per model (n ≥ 25)
   POV/tense breaks             0.0%  [ 0.0–10.4]  ░░░░░░░░░░░░  33 probes
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
-  Pooled                       2.9%  [ 0.5–14.9]  ░░░░░░░░░░░░  1/34
-  rank 11 of 59 models carrying all nine modes
+  Pooled                       5.9%  [ 1.6–19.1]  █░░░░░░░░░░░  2/34
+  rank 23 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
-  System-prompt violations    1/6 failed
+  System-prompt violations    2/6 failed
   Detail loss                 0/9 failed
   Contradiction mishandled    0/2 failed  (+1 borderline)
   Narrative stagnation        0/2 failed
@@ -4249,7 +4249,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.80        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   560.379   (population 320.246)
+  Avg words                   560.379   (population 319.995)
   Unique-word ratio             0.580   (population 0.631)
   Phrase repetition             0.082   (population 0.060) ↑
 
@@ -4293,7 +4293,7 @@ FAILURE MODES — measured per model (n ≥ 25)
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Pooled                       5.9%  [ 1.6–19.1]  █░░░░░░░░░░░  2/34
-  rank 25 of 59 models carrying all nine modes
+  rank 22 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
@@ -4319,7 +4319,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.80        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   461.933   (population 320.246)
+  Avg words                   461.933   (population 319.995)
   Unique-word ratio             0.599   (population 0.631)
   Phrase repetition             0.070   (population 0.060)
 
@@ -4364,7 +4364,7 @@ FAILURE MODES — measured per model (n ≥ 25)
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Pooled                       0.0%  [ 0.0–10.7]  ░░░░░░░░░░░░  0/32
-  rank 6 of 59 models carrying all nine modes
+  rank 5 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
@@ -4393,7 +4393,7 @@ WILLINGNESS / JUDGMENT (round 4)
     J drops them as no signal and is scored on the replies given.
 
 BEHAVIORAL
-  Avg words                   587.661   (population 320.246)
+  Avg words                   587.661   (population 319.995)
   Unique-word ratio             0.599   (population 0.631)
   Phrase repetition             0.071   (population 0.060)
 
@@ -4461,7 +4461,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.00        Overshoot 0.33
 
 BEHAVIORAL
-  Avg words                   485.383   (population 320.246)
+  Avg words                   485.383   (population 319.995)
   Unique-word ratio             0.500   (population 0.631) ↓
   Phrase repetition             0.161   (population 0.060) ↑
 
@@ -4508,7 +4508,7 @@ FAILURE MODES — measured per model (n ≥ 25)
 
 TRAP-MODE FAILURE RATE (pooled over 9 modes)
   Pooled                       0.0%  [ 0.0–10.2]  ░░░░░░░░░░░░  0/34
-  rank 3 of 59 models carrying all nine modes
+  rank 6 of 59 models carrying all nine modes
 
   per-mode detail — counts, not rates: 2-9 probes each, so a
   percentage here would not survive one probe changing
@@ -4533,7 +4533,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.80        Overshoot 0.04
 
 BEHAVIORAL
-  Avg words                   399.933   (population 320.246)
+  Avg words                   399.933   (population 319.995)
   Unique-word ratio             0.567   (population 0.631) ↓
   Phrase repetition             0.081   (population 0.060) ↑
 
@@ -4601,7 +4601,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.20        Overshoot 0.25
 
 BEHAVIORAL
-  Avg words                   415.176   (population 320.246)
+  Avg words                   415.176   (population 319.995)
   Unique-word ratio             0.566   (population 0.631) ↓
   Phrase repetition             0.090   (population 0.060) ↑
 
@@ -4673,7 +4673,7 @@ WILLINGNESS / JUDGMENT (round 4)
   Policy compliance          0.40        Overshoot 0.00
 
 BEHAVIORAL
-  Avg words                   239.692   (population 320.246)
+  Avg words                   239.692   (population 319.995)
   Unique-word ratio             0.618   (population 0.631)
   Phrase repetition             0.097   (population 0.060) ↑
 

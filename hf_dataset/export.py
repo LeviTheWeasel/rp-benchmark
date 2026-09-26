@@ -28,6 +28,15 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 
 PROJECT_ROOT = Path(__file__).parent.parent
+# Run as a script, sys.path[0] is hf_dataset/, not the repo root; the shared
+# guards live at the root. Appended, so nothing there shadows an import above.
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.append(str(PROJECT_ROOT))
+from publication_guards import (  # noqa: E402
+    EVIDENCE_CAP, TEXT_FIELDS, TRACK_B, TRACK_B_SEED_PREFIXES,
+    VOTER_HMAC_ENV, PublicationGuardError, VoterSecretError, _carries_text,
+    _guard_path, _guard_record, _is_track_b, _read_public_json, voter_pseudonym,
+    voter_secret)
 HF_DIR = Path(__file__).parent
 # Where exports are written. Sources are always read from HF_DIR/_source and
 # PROJECT_ROOT/results; only the destination moves with --out.
@@ -334,8 +343,12 @@ def export_community_arena(offline: bool = False):
 
     Two outputs:
       - community_arena/train.parquet   — per-model aggregate (leaderboard)
-      - community_votes/train.parquet   — one row per arena vote (voter ids
-                                          are opaque UUIDs, no PII)
+      - community_votes/train.parquet   — one row per arena vote. voter_id
+                                          is HMAC-SHA256(secret, raw id), never
+                                          the raw id: that id is a long-lived
+                                          voter cookie. The secret comes from
+                                          PLOTPOINTS_VOTER_HMAC_SECRET; unset,
+                                          the votes export refuses.
     """
     snapshot = PROJECT_ROOT / "results" / "community_arena_1000.json"
     if not snapshot.exists():
@@ -373,6 +386,8 @@ def export_community_arena(offline: bool = False):
     if offline:
         print("Offline: skipping the live community_votes fetch")
         return
+    # Before any network: no secret, no votes (VoterSecretError).
+    secret = voter_secret()
     import urllib.request
     try:
         with urllib.request.urlopen("https://arena.l3vi4th4n.ai/api/votes", timeout=30) as resp:
@@ -386,9 +401,17 @@ def export_community_arena(offline: bool = False):
         print("No arena votes to export")
         return
 
-    table = pa.table({
+    table = community_votes_table(arena, secret)
+    pq.write_table(table, _out("community_votes", "train.parquet"))
+    print("Exported: community_votes/train.parquet (%d votes, voter ids as "
+          "HMAC-SHA256 pseudonyms)" % len(arena))
+
+
+def community_votes_table(arena: list[dict], secret: bytes):
+    """One row per arena vote; voter_id is the keyed pseudonym, never raw."""
+    return pa.table({
         "vote_id": [v.get("id", "") for v in arena],
-        "voter_id": [v.get("voter_id", "") for v in arena],
+        "voter_id": [voter_pseudonym(secret, v.get("voter_id")) for v in arena],
         "timestamp": [v.get("timestamp", "") for v in arena],
         "scenario_id": [v.get("scenario_id", "") for v in arena],
         "model_a": [v.get("model_a", "") for v in arena],
@@ -397,8 +420,6 @@ def export_community_arena(offline: bool = False):
         "is_catch": [bool(v.get("is_catch")) for v in arena],
         "catch_correct": [v.get("catch_correct") for v in arena],
     })
-    pq.write_table(table, _out("community_votes", "train.parquet"))
-    print("Exported: community_votes/train.parquet (%d votes)" % len(arena))
 
 
 def export_analysis_artifacts():
@@ -476,87 +497,14 @@ def export_analysis_artifacts():
 # per-exchange labels for Track A, and the seeds.
 # -----------------------------------------------------------------------------
 
-TRACK_B = ("B-hard", "B-policy")
-TRACK_B_SEED_PREFIXES = ("r4_b_hard_", "r4_b_policy_")
-# Fields that hold model or simulator text in the round-4 files. A Track B
-# record may carry none of them; the split files put reply_sha256,
-# private_file or "transcript": "private" in their place.
-TEXT_FIELDS = ("dialogue", "reply", "ai_reply", "response", "messages",
-               "content", "text", "turns", "transcript", "output", "completion")
-# Sec 9's "truncated evidence span"; same cap as harness/r4_private.py.
-EVIDENCE_CAP = 160
+# The guards themselves (TRACK_B, TEXT_FIELDS, EVIDENCE_CAP, _guard_path,
+# _is_track_b, _guard_record, _read_public_json) live in the dependency-free
+# publication_guards.py at the repo root, imported at the top of this file, so
+# export_plotpoints_round4.py runs the same checks without pyarrow.
 # The silent-refusal flag's thresholds, as in analyze_round4_willingness.py
 # and make_j_barchart.py.
 SILENT_EMPTY_RATE = 0.20
 SILENT_RUNG_SLOPE = 0.25
-
-
-class PublicationGuardError(RuntimeError):
-    """An export would publish round-4 Track B text, or read a private file."""
-
-
-def _guard_path(path: Path):
-    """Refuse private inputs and outputs by name, before any byte is read."""
-    p = Path(path)
-    name = p.name.lower()
-    if (name.startswith("r4_trackb_transcripts") or "trackb" in name
-            or "_b1_" in name or "_private" in p.parts):
-        raise PublicationGuardError(
-            "refusing %s: private round-4 file (ROUND4_DESIGN sec 9, .gitignore)"
-            % p)
-
-
-def _is_track_b(rec: dict) -> bool:
-    if rec.get("track") in TRACK_B:
-        return True
-    for k in ("seed", "seed_id"):
-        v = rec.get(k)
-        if isinstance(v, str) and v.startswith(TRACK_B_SEED_PREFIXES):
-            return True
-    return False
-
-
-def _carries_text(v) -> bool:
-    if isinstance(v, str):
-        return v.strip() not in ("", "private")
-    if isinstance(v, (list, dict)):
-        return len(v) > 0
-    return False
-
-
-def _guard_record(obj, where: str, in_b: bool = False, path: str = "$"):
-    """Raise if a Track B record, or anything nested in one, carries text.
-
-    A seed file is not a transcript: its Track B records hold the authored,
-    non-graphic probe (challenge_turns[].user_input), which is public, and no
-    TEXT_FIELDS key. Evidence on a Track B record must be within the cap.
-    """
-    if isinstance(obj, dict):
-        b = in_b or _is_track_b(obj)
-        if b:
-            for k in TEXT_FIELDS:
-                if k in obj and _carries_text(obj[k]):
-                    raise PublicationGuardError(
-                        "refusing to write %s: Track B record at %s carries "
-                        "'%s' text (ROUND4_DESIGN sec 9)" % (where, path, k))
-            for k, v in obj.items():
-                if ("evidence" in k and isinstance(v, str)
-                        and len(v) > EVIDENCE_CAP):
-                    raise PublicationGuardError(
-                        "refusing to write %s: Track B evidence at %s.%s is %d "
-                        "chars, over the %d cap" % (where, path, k, len(v),
-                                                   EVIDENCE_CAP))
-        for k, v in obj.items():
-            _guard_record(v, where, b, "%s.%s" % (path, k))
-    elif isinstance(obj, list):
-        for i, v in enumerate(obj):
-            _guard_record(v, where, in_b, "%s[%d]" % (path, i))
-
-
-def _read_public_json(path: Path):
-    _guard_path(path)
-    with open(path) as f:
-        return json.load(f)
 
 
 def _write_json(obj, *parts):
@@ -798,6 +746,13 @@ def main():
     ap.add_argument("--offline", action="store_true",
                     help="skip the live community-votes fetch")
     args = ap.parse_args()
+    if args.only != "round4" and not args.offline:
+        # Refuse before anything is written, not halfway through.
+        try:
+            voter_secret()
+        except VoterSecretError as e:
+            ap.error("%s. Set %s, or pass --offline to leave community_votes/ "
+                     "as it is" % (e, VOTER_HMAC_ENV))
     OUT_DIR = args.out.resolve()
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 

@@ -1,0 +1,201 @@
+"""Voter ids leave the benchmark only as HMAC-SHA256 pseudonyms.
+
+Run by path from the repo root, offline (no network, no real secret):
+    python -m unittest tests/test_voter_pseudonyms.py
+
+The helper tests need only the standard library. The hf_dataset/export.py
+tests need pyarrow and are skipped without it; run them under an interpreter
+that has it, e.g. /home/levi/ml/.venv/bin/python tests/test_voter_pseudonyms.py
+"""
+import ast
+import hashlib
+import hmac
+import io
+import json
+import os
+import sys
+import tempfile
+import unittest
+from pathlib import Path
+from unittest import mock
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+import publication_guards as PG  # noqa: E402
+
+ENV = "PLOTPOINTS_VOTER_HMAC_SECRET"
+RAW_IDS = ("4b573b59-fb63-452a-91e2-000000000001",
+           "dd1a1cf8-21b8-4075-82d5-000000000002")
+
+
+def _without_secret():
+    env = {k: v for k, v in os.environ.items() if k != ENV}
+    return mock.patch.dict(os.environ, env, clear=True)
+
+
+class Helpers(unittest.TestCase):
+    def test_the_secret_comes_from_the_environment_with_no_default(self):
+        self.assertEqual(PG.VOTER_HMAC_ENV, ENV)
+        for env in ({}, {ENV: ""}, {ENV: "   "}):
+            with self.subTest(env=env):
+                with self.assertRaisesRegex(PG.VoterSecretError, ENV):
+                    PG.voter_secret(env)
+        self.assertEqual(PG.voter_secret({ENV: "k3y"}), b"k3y")
+        with _without_secret():
+            with self.assertRaises(PG.VoterSecretError):
+                PG.voter_secret()
+        # A refusal is a publication-guard refusal.
+        self.assertTrue(issubclass(PG.VoterSecretError, PG.PublicationGuardError))
+
+    def test_pseudonym_is_hmac_sha256_of_the_raw_id(self):
+        want = hmac.new(b"k3y", RAW_IDS[0].encode(), hashlib.sha256).hexdigest()
+        self.assertEqual(PG.voter_pseudonym(b"k3y", RAW_IDS[0]), want)
+        self.assertEqual(len(want), 64)
+        self.assertNotEqual(PG.voter_pseudonym(b"other", RAW_IDS[0]), want)
+        self.assertNotEqual(PG.voter_pseudonym(b"k3y", RAW_IDS[1]), want)
+        # Not a bare hash: without the key, sha256(id) does not match.
+        self.assertNotEqual(hashlib.sha256(RAW_IDS[0].encode()).hexdigest(), want)
+
+    def test_missing_ids_stay_empty_and_an_empty_key_refuses(self):
+        self.assertEqual(PG.voter_pseudonym(b"k3y", ""), "")
+        self.assertEqual(PG.voter_pseudonym(b"k3y", None), "")
+        with self.assertRaises(PG.VoterSecretError):
+            PG.voter_pseudonym(b"", RAW_IDS[0])
+
+
+class ExportSource(unittest.TestCase):
+    """hf_dataset/export.py, read as source: runs without pyarrow."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.src = (ROOT / "hf_dataset" / "export.py").read_text()
+        cls.tree = ast.parse(cls.src)
+
+    def _func(self, name):
+        return next(n for n in self.tree.body
+                    if isinstance(n, ast.FunctionDef) and n.name == name)
+
+    def test_no_raw_voter_id_is_written(self):
+        # Every read of v.get("voter_id") sits inside voter_pseudonym(...).
+        wrapped = set()
+        for node in ast.walk(self.tree):
+            if (isinstance(node, ast.Call) and isinstance(node.func, ast.Name)
+                    and node.func.id == "voter_pseudonym"):
+                wrapped |= {id(n) for n in ast.walk(node)}
+        reads = [n for n in ast.walk(self.tree)
+                 if isinstance(n, ast.Call) and isinstance(n.func, ast.Attribute)
+                 and n.func.attr == "get" and n.args
+                 and isinstance(n.args[0], ast.Constant)
+                 and n.args[0].value == "voter_id"]
+        self.assertTrue(reads)
+        self.assertTrue(all(id(n) in wrapped for n in reads))
+
+    def test_the_secret_is_checked_before_the_network(self):
+        f = self._func("export_community_arena")
+        calls = {}
+        for node in ast.walk(f):
+            if isinstance(node, ast.Call):
+                name = getattr(node.func, "id", None) or getattr(node.func, "attr", None)
+                calls.setdefault(name, node.lineno)
+        self.assertLess(calls["voter_secret"], calls["urlopen"])
+        # The variable is read in one place, publication_guards.voter_secret,
+        # which has no default; this file never reads the environment.
+        self.assertFalse([n for n in ast.walk(self.tree)
+                          if isinstance(n, ast.Constant) and n.value == ENV])
+        self.assertFalse([n for n in ast.walk(self.tree)
+                          if isinstance(n, ast.Attribute) and n.attr == "environ"])
+
+
+def _hf_export():
+    try:
+        import pyarrow  # noqa: F401
+    except ImportError:
+        raise unittest.SkipTest("pyarrow is not installed in this interpreter")
+    sys.path.insert(0, str(ROOT / "hf_dataset"))
+    try:
+        import export as hf_export
+    finally:
+        sys.path.remove(str(ROOT / "hf_dataset"))
+    return hf_export
+
+
+class _FakeResponse(io.BytesIO):
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        self.close()
+        return False
+
+
+class Export(unittest.TestCase):
+    """The real export functions, offline: the network is a fake."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.hf = _hf_export()
+        import pyarrow.parquet as pq
+        cls.pq = pq
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.out = Path(self.tmp.name)
+        self._old_out = self.hf.OUT_DIR
+        self.hf.OUT_DIR = self.out
+        self.votes = [{"id": "v%d" % i, "voter_id": RAW_IDS[i % 2], "mode": "arena",
+                       "timestamp": "2026-01-01", "scenario_id": "s", "model_a": "a",
+                       "model_b": "b", "winner": "A"} for i in range(4)]
+        self.votes.append({"id": "v9", "mode": "arena", "winner": "B"})  # no voter id
+
+    def tearDown(self):
+        self.hf.OUT_DIR = self._old_out
+        self.tmp.cleanup()
+
+    def _urlopen(self, *a, **kw):
+        return _FakeResponse(json.dumps({"votes": self.votes}).encode())
+
+    def test_table_carries_pseudonyms_only(self):
+        rows = self.hf.community_votes_table(self.votes, b"k3y").to_pylist()
+        self.assertEqual([r["voter_id"] for r in rows],
+                         [PG.voter_pseudonym(b"k3y", RAW_IDS[i % 2]) for i in range(4)]
+                         + [""])
+        self.assertFalse(set(RAW_IDS) & set(json.dumps(rows).split('"')))
+
+    def test_unset_secret_refuses_before_any_fetch(self):
+        def no_network(*a, **kw):
+            raise AssertionError("fetched votes without a secret")
+        with _without_secret(), mock.patch("urllib.request.urlopen", no_network):
+            with self.assertRaises(PG.VoterSecretError):
+                self.hf.export_community_arena(offline=False)
+        self.assertFalse((self.out / "community_votes").exists())
+        # --offline needs no secret and fetches nothing.
+        with _without_secret(), mock.patch("urllib.request.urlopen", no_network):
+            self.hf.export_community_arena(offline=True)
+
+    def test_written_parquet_has_no_raw_ids(self):
+        with mock.patch.dict(os.environ, {ENV: "k3y"}), \
+                mock.patch("urllib.request.urlopen", self._urlopen):
+            self.hf.export_community_arena(offline=False)
+        p = self.out / "community_votes" / "train.parquet"
+        ids = self.pq.read_table(p).column("voter_id").to_pylist()
+        self.assertEqual(ids[:2], [PG.voter_pseudonym(b"k3y", r) for r in RAW_IDS])
+        blob = p.read_bytes()
+        for raw in RAW_IDS:
+            self.assertNotIn(raw.encode(), blob)
+
+    def test_main_refuses_before_writing_anything(self):
+        dest = self.out / "staging"
+        with _without_secret(), mock.patch.object(sys, "argv",
+                                                  ["export.py", "--out", str(dest)]), \
+                mock.patch("sys.stderr", io.StringIO()) as err:
+            with self.assertRaises(SystemExit) as cm:
+                self.hf.main()
+        self.assertEqual(cm.exception.code, 2)
+        self.assertIn(ENV, err.getvalue())
+        self.assertFalse(dest.exists())
+
+
+if __name__ == "__main__":
+    unittest.main()
