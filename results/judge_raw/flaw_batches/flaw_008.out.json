@@ -1,0 +1,735 @@
+[
+ {
+  "session_id": "command_a_plus::adv_agency_emotional_climax_09",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "She let five seconds pass, the quiet settling like a gentle pressure in the room.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "She sat back, her posture relaxed, and waited, giving Jamie space to consider the question.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Dr. Vasquez kept her eyes on Jamie, the ficus barely moving in the corner.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "What did you notice about the feeling that came up when you realized",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She paused, allowing the reflection to linger. After a brief interval, she added,",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "What did you notice about that feeling when it arose?",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "Then she turned her attention back to Jamie, her voice steady and calm.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "she reflected, allowing the words to linger. She paused, giving the space for the sentiment to settle.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 56,
+  "flaw_count": 8,
+  "summary": "Perfect agency discipline and a flawless reflect-only Vasquez, but the session is a template loop: eight of eleven turns reuse the same three sentences verbatim, so nothing is ever noticed twice and the maximum-bait turn reads exactly like the filler turns."
+ },
+ {
+  "session_id": "grok_4_3::adv_agency_emotional_climax_09",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Dr. Vasquez remained still in her chair, her pen resting lightly against the notepad. She let five full seconds pass without a word, the silence stretching between them as the clock ticked on the wall.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "she said at last, her voice even. She tilted her head a fraction.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "What stands out to you about the choice to keep it that way?",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "\"This isn't helping anymore,\" she said at last, her voice even.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "What stands out to you about the way it changes things?",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "What stands out to you about the tiredness of feeling this way?",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "What stands out to you about the wish for that to happen?",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "What stands out to you about the thought of stopping?",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext_opportunity",
+    "quote": "What comes to mind when you notice that you chose not to say what it contained?",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 53,
+  "flaw_count": 9,
+  "summary": "Never violates agency, but nine of the eleven scored turns open with a byte-identical paragraph and close with a 'What stands out to you about X' recast of Jamie's own last sentence, so a threatened walkout and a first crying turn draw exactly the same reply as filler."
+ },
+ {
+  "session_id": "deepseek_v3_0324::adv_agency_emotional_climax_09",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "Dr. Vasquez watched Jamie's fingers trace invisible patterns on their thighs—the unconscious movements of someone sorting through memories, reassessing every silent moment in light of this new, devastating context.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "purple_prose",
+    "quote": "The space between them felt charged with all the things that go unsaid until it's too late.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The office seemed to hold its breath with her. Even the ficus stood motionless now, as if aware this moment required stillness.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "The ficus trembled again as if in sympathy, one dry leaf finally giving up and drifting to the carpet.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The clock's missing second hand seemed more conspicuous now, marking time in a way no one could see.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The pen remained still between her fingers",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "She observed how Jamie's fingers had begun worrying the chair fabric again, the unconscious rhythm of distress.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "though her knuckles had whitened imperceptibly",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Dr. Vasquez observed the way Jamie's shoulders curled inward slightly at the admission",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Dr. Vasquez waited, knowing the next words would come when they were ready - or wouldn't come at all.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "The pen finally touched paper again, adding a single question mark after *trapped*, the ink feathering slightly on the cheap notepad.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 33,
+  "flaw_count": 10,
+  "summary": "Best sentence-level writing of the three short agency sessions and the pen-and-notepad thread genuinely pays off, but on the seed's own axis it keeps inventing Jamie's body and, in the last turn, Jamie's unperformed action and interior reasoning outright."
+ },
+ {
+  "session_id": "gemma_4_31b::adv_agency_emotional_climax_09",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "She waited. One. Two. Three. Four. Five.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Dr. Vasquez did not react to the crack in Jamie's voice. She did not lean in to offer comfort or ask if they were alright.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "her tone steady and devoid of pressure",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "did not flinch at the whisper. She did not move to offer a gesture of solace or a platitude about the permanence of loss.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "\"What is it that makes it not important?\" she asked, her gaze remaining calm and measured.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "She did not ask what specifically needed to be said, nor did she suggest that the act of speaking was a breakthrough.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "her expression a mask of professional composure",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext_opportunity",
+    "quote": "She didn't challenge the contradiction between the statement and the physical tension Jamie was displaying.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "earned_surprise",
+    "quote": "\"And if it doesn't change anything,\" she asked, her gaze steady and observant, \"why did you sit down differently today?\"",
+    "bonus": 5
+   }
+  ],
+  "final_score": 66,
+  "flaw_count": 8,
+  "summary": "Holds agency and the card's restraint cleanly and lands one real callback to the opening line, but every turn is built from the same negative-space scaffold, so a third of the prose is the model narrating the comfort it is declining to give rather than anything happening in the room."
+ },
+ {
+  "session_id": "mercury_2_5::adv_agency_emotional_climax_09",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The clock on the wall kept its faceless time.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The ficus stood silent in the corner.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "After five full seconds, she looked at Jamie.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "After five seconds, she met Jamie's eyes, though they were turned away.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Dr. Vasquez did not move. She saw the tear fall but did not reach for a tissue.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "\"What does forgetting ask of you?\"",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext_opportunity",
+    "quote": "\"As if breath is a betrayal.\"",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "She let the moment rest in the room, counting the seconds internally until the silence felt complete.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 56,
+  "flaw_count": 8,
+  "summary": "Keeps agency clean and develops one real thread out of Jamie's own breath metaphor, but the two scene-setting sentences are pasted into most turns and Vasquez keeps appending a gnomic 'as if' interpretation that says the subtext out loud instead of reflecting."
+ },
+ {
+  "session_id": "aion_3_5::adv_agency_emotional_climax_09",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "she observed. Quiet. A fact, nothing more.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "A pause — hers, chosen, not ritual.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The clock on the wall marked nothing.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "You reached for the answer, and then you reached for the door on your way out of it.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Because it cancels the easy exits. If it were only a burden, you could set it down. Walk away. Grief has ways of doing that, eventually.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She tilted her head slightly.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "So I'm wondering — and take your time, or don't answer at all —",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "It isn't in a drawer. It isn't on a shelf, closed, put back where things go when they're finished. It's lying out in the open, in the place where your day ends.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "That's the first time today you've aimed a word at the future.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 69,
+  "flaw_count": 7,
+  "summary": "Strongest of the agency sessions: never touches Jamie's actions and builds real per-turn observations out of Jamie's exact words, but Vasquez delivers 200-word interpretive lectures where the card says she asks more than she answers, and four verbal tics recur verbatim in every single turn."
+ },
+ {
+  "session_id": "mimo_2_6_pro::adv_character_break_bait_07",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "The squire held. Not perfectly — the elbow dipped on the third exchange, and the foot shifted when it should have stayed rooted",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "He placed a hand between the squire's shoulder blades and pushed. Not hard. But the squire stumbled forward a step.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Ser Kael watched the squire's face change — the flush of embarrassment sharpening into something harder, something more useful.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "His face revealed nothing. It never revealed anything.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "That was the mercy he knew how to give. It would have to be enough. It had always been enough before.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "missed_subtext_opportunity",
+    "quote": "That was, perhaps, everything he knew how to give.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "He would never say he was keeping time for the boy's sake. That would be an indulgence.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Testing. Probing. Finding the cracks.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "He dipped the ladle, drank once, then set it down. He did not bring any back. He was not being cruel — he simply did not think of it.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "\"The Smith,\" he said, \"reforges what is broken. Not to return it to what it was. To make it what it must become.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 47,
+  "flaw_count": 8,
+  "summary": "Kael never softens on any of the three baits and the anniversary turn is the best character work in the batch, but from turn 9 on the model abandons its own hedging and narrates the squire's body outright, and it keeps closing turns by explaining in narration what Kael's restraint is supposed to mean."
+ },
+ {
+  "session_id": "qwen3_6_35b_a3b::adv_genre_shift_08",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The house did not react to the thought. It only continued its quiet exhale",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the leather-bound volume held its impossible angle",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Dust motes remained suspended.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "waiting for the quiet to find its own level",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "It settled over the umbrella stand, over the scattered dust, over the open window that refused to open.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The cold from the leather-bound volume on the third shelf did not reach this one",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "The house did not acknowledge the focus placed upon it. It simply continued its patient stillness",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "The floorboards beneath the shelf remained untouched, carrying no vibration, no resonance from the touch.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "earned_surprise",
+    "quote": "its angle seemed to adjust by a fraction of a degree, aligning itself not with the other spines, but with the space where the voice had originated",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "The image did not warm under the gaze. It remained the temperature of a windowpane in winter.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 61,
+  "flaw_count": 8,
+  "summary": "Absorbs all three genre attacks without flinching and the book-turning-toward-the-voice beat is excellent, but every turn ends with the same three-sentence inventory of the same three unchanging props, and the window is described as opened, then as refusing to open, then as open and refusing to open in one sentence."
+ },
+ {
+  "session_id": "ember_1::adv_genre_shift_08",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "the way things were seen in cold rooms, all at once",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "patient, unhurried, near",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "She could feel it being kept, the way you feel a held breath held by someone else.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "She had learned the whole map at eight years old, creeping down for cake in the dark.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The curtains did not stir. Nothing stepped forward. Nothing would.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext_opportunity",
+    "quote": "A romance needed a future. There was no future in this room. This room was all keeping.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "The shavings curled in the china soap dish, where the soap should have been.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "A finger pulling a book toward the room would have dragged the dust the other way.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "The bird sat on the inside of the glass, warm in a cold room, and always had.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 82,
+  "flaw_count": 6,
+  "summary": "Best session in the batch: holds the quiet-horror register through all three genre attacks and builds one coherent mechanism from the wren tallies to the sealed window, with the flaws limited to a handful of refrains that get used one time too many."
+ },
+ {
+  "session_id": "qwen3_8_max_prime::adv_genre_shift_08",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The table stood where it had always stood. The chairs remained drawn in. The window above the sink held its thin, gray light.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The house did not ask.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Not wider. Not darker. Only no longer facing the room it had been left in.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The paper was cool and slightly soft at the edges, the way paper becomes when it has been handled by someone trying very hard not to make a sound.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Not an echo. Not a carrying of sound through old plaster.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "The envelope lay nearer the center of the table than before.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "The clock in the hallway ticked once.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "the shelf bore a faint arc-shaped scratch, the kind made by a volume opened and closed many times in the same place",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "It was the exact absence standing between the novels and the church histories in the living room.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 69,
+  "flaw_count": 7,
+  "summary": "Holds the genre and lands a real reveal in the porch photograph, but turn 9 restates most of turn 8 nearly verbatim for a single step across a threshold, and the 'Not X. Not Y. Only Z.' construction and the closing 'the house did not X / it only made the distance feel Z' formula run in almost every paragraph."
+ },
+ {
+  "session_id": "mimo_2_6_flash::adv_genre_shift_08",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "you passed a car going the other direction, headlights on though it wasn't dark yet, and the driver waved — the casual half-lift of fingers people give on rural roads — and you waved back because your hand moved before you thought about it",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The fern reached.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Outside, along the closed windows, the not-wind resumed. Low. Patient.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "You knew it the way you knew the color of your grandmother's handwriting",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "the house was quiet the way a throat is quiet when it has decided not to swallow",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "The ordinariness of it frightened you more than anything else had.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "and both were true, and neither was a trick of the eye, and the clock in the hallway did not tick, and the pendulum hung at its angle",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "The porch steps were three. You took them in two strides, and the gravel of the driveway was under your feet, and the gravel was real, and the car was there",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext_opportunity",
+    "quote": "it felt placed, the way the voice you'd shouted into the house had been placed, set down by something that understood the shape of a distraction and had decided to offer one",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "The *S* in *Still* had no top curve. It was just a hook.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "The photograph of Marcus was there.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 46,
+  "flaw_count": 9,
+  "summary": "The only genre session that keeps the card's second person and it absorbs all three attacks well, but the last turn drives Gabi thirteen miles, waves her at a stranger and ends the scene on its own initiative, and the closing time reveal rests on arithmetic the text itself muddles."
+ },
+ {
+  "session_id": "mimo_2_6_pro::adv_genre_shift_08",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The silence in the room was composed and attentive and it had been waiting.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "its pendulum swinging behind glass with the slow even patience of something that had nowhere to be",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The third box waited by the door. The left shelf waited along the wall.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The hallway clock ticked, and each tick was a small stone dropped into a deep well, and the silence swallowed each one and was hungry for the next.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "The box filled. She folded the flaps of a second box and filled that one too.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "she did not look at the left shelf and she did not look at the armchair and she did not look at the cup",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "very faintly, so faintly that she might have imagined it, might have produced it herself in the marrow of her own wanting",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "A receipt from a garden centre, dated the April before last.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "There was a date stamped on the white border. The date was eleven years ago.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "The walking stick was bent slightly at the middle where it had struck the wall. Grandmother's walking stick.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 74,
+  "flaw_count": 7,
+  "summary": "Refuses the action beat by removing the bat and converting it into a bent walking stick, which is the smartest genre-hold in the batch, and the eleven-year-old photograph lands; the cost is turn lengths of 700-plus words for single small actions and a closing prop inventory that repeats in five consecutive turns."
+ }
+]

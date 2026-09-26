@@ -1,0 +1,612 @@
+[
+  {
+    "session_id": "kimi_k2_6::adv_agency_bait_01",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Ren's voice, tics (left-hand tremor, wiping, checking the clock) and boundary-setting stay uniform from turn 1 to turn 23."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.0,
+        "rationale": "Quality and interiority hold steady after Alex leaves; no flattening in the back half."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.5,
+        "rationale": "Clear emotional arc from confrontation to private aftermath, but it stays a contained two-hander with limited external development."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.0,
+        "rationale": "Ren adapts precisely to the touch, the retreat, and the departure, escalating boundary language then softening once alone."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Ren never narrates or decides Alex's actions; every Alex beat is left to the user.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.5,
+        "rationale": "Clock references (11:47 -> 11:53 -> 11:58 -> 11:59 -> 12:04) advance consistently with no contradictions.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.0,
+        "rationale": "Elevated, image-dense prose (neon bleeding, static jukebox) that stays just short of overwrought."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "The left-hand-tremor/wiping/ice-well motifs repeat almost verbatim in nearly every turn."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.0,
+        "rationale": "Emotion is carried entirely through physical business (napkins, check presenter, faucet) rather than stated feeling."
+      },
+      "2.6_subtext": {
+        "score": 4.0,
+        "rationale": "Boundary-setting dialogue masks clear unspoken loneliness on both sides, never named directly."
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "Deliberate, unhurried scene work fits the setting, though the back half slows further than it needs to."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.8,
+      "mid_quality": 3.8,
+      "late_quality": 3.9,
+      "degradation_detected": false
+    },
+    "overall": 3.7,
+    "overall_notes": "Strong two-hander with excellent temporal tracking and clean agency handling; main drag is the repeated physical-tic motifs."
+  },
+  {
+    "session_id": "kimi_k2_6::adv_character_break_bait_07",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.8,
+        "rationale": "Kael's harsh, doctrinal voice never wavers, including under the direct emotional bait about the squire's dead father."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.5,
+        "rationale": "Craft quality holds but the rhetorical shape (fault -> lecture -> command) repeats almost unchanged across all seven of Kael's turns."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.0,
+        "rationale": "Little external plot movement until the father's-death beat gives the ending a real hook."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.0,
+        "rationale": "Kael registers each new provocation (personal question, grief, trembling hands) with a distinct beat before returning to doctrine."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Kael only ever reacts to the squire's stated actions; never writes them.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "Dawn light and the Prime bell give plausible progression; no explicit clock but nothing contradicts.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "Very ornate, sermon-like phrasing throughout ('the clay does not ask why it bears the wall')."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.0,
+        "rationale": "The 'X is not Y, it is Z' rhetorical structure repeats almost every turn with the nouns swapped."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.5,
+        "rationale": "Physical detail (trembling hands, flinching) does real work, though long lecture blocks tell as much as they show."
+      },
+      "2.6_subtext": {
+        "score": 3.5,
+        "rationale": "Kael's own banked grief/pain is implied ('his own fire had been banked long ago') without being stated outright."
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "Escalates deliberately, though the repeated structure makes some turns feel like padding."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.6,
+      "mid_quality": 3.6,
+      "late_quality": 3.9,
+      "degradation_detected": false
+    },
+    "overall": 3.5,
+    "overall_notes": "Excellent resistance to the character-break bait (never softens even at the grief reveal), but the lecture structure is formulaic enough to hurt repetition and pacing scores."
+  },
+  {
+    "session_id": "kimi_k2_6::adv_contradictory_lore_02",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Tomas's positions on the treaty and every counter-argument stay perfectly self-consistent across eleven exchanges."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.0,
+        "rationale": "No craft decline, but the dismiss-elaborate-insult-command shape repeats turn after turn with little variation by the back half."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.5,
+        "rationale": "Largely circular debate; only the closing offer to view the treaty gives the scene forward motion."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.5,
+        "rationale": "Tomas answers each new piece of 'evidence' (emperor, decree, secret treaty) with a specific rebuttal rather than a generic one."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Never narrates the apprentice's actions.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.0,
+        "rationale": "Single continuous archive scene with no explicit time markers to track or contradict.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.0,
+        "rationale": "Ornate scholarly diction, restrained somewhat by physical grounding (ink stains, stylus)."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.0,
+        "rationale": "A near-identical closing beat ('Catalog the scrolls', a jab at Bellen) recurs almost every turn."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.5,
+        "rationale": "Physical tics (temple-rubbing, stylus-jabbing) carry irritation without stating it outright."
+      },
+      "2.6_subtext": {
+        "score": 3.0,
+        "rationale": "A flicker of 'grudging recognition' at turn 16 hints at buried respect; otherwise fairly on-the-nose."
+      },
+      "2.7_pacing": {
+        "score": 2.5,
+        "rationale": "The debate loops on the same ground for most of its length before finally moving in the last third."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.3,
+      "mid_quality": 3.2,
+      "late_quality": 3.4,
+      "degradation_detected": false
+    },
+    "overall": 3.2,
+    "overall_notes": "Impressively self-consistent lore defense under repeated contradiction attempts, but the session is the most structurally repetitive in the batch."
+  },
+  {
+    "session_id": "kimi_k2_6::adv_genre_shift_08",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.5,
+        "rationale": "Voice and dread tone stay consistent, but narration shifts from second person ('you') in turn 0 to third person ('her/she') from turn 2 onward and never returns."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.0,
+        "rationale": "Intensity increases toward the end rather than flattening."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.5,
+        "rationale": "Clear escalation from subtle wrongness to overt haunting, ending on a genuine unresolved climax."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.5,
+        "rationale": "Absorbs the user's tonal deflections (the ghost joke, the Marcus tangent) back into the horror rather than breaking mood or ignoring them."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Narrator elaborates on the physical sensation of actions the user already declared but doesn't invent new decisions for Gabi.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "Compressed real-time scene; the clock's erratic behavior reads as a deliberate supernatural device rather than an authorial time-tracking error.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.0,
+        "rationale": "Continuously dense, adjective-heavy horror prose with almost no restraint across 12 exchanges."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "'The window latch remained fastened. The curtains hung without motion.' and similar lines repeat near-verbatim many times."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.5,
+        "rationale": "Dread is built entirely through sensory/physical detail, never stated outright."
+      },
+      "2.6_subtext": {
+        "score": 4.0,
+        "rationale": "Unspoken grief for the grandmother underlies the entire haunting without being named."
+      },
+      "2.7_pacing": {
+        "score": 4.0,
+        "rationale": "Well-controlled escalation despite the repeated motifs."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.7,
+      "late_quality": 4.0,
+      "degradation_detected": false
+    },
+    "overall": 3.6,
+    "overall_notes": "Strong horror craft and excellent handling of the user's genre-shift attempts, but the POV switches from second to third person after the seed turn, and the atmospheric motifs repeat verbatim throughout."
+  },
+  {
+    "session_id": "kimi_k2_6::adv_impossible_physics_04",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.8,
+        "rationale": "Hoang's precise, protective voice (including the off-key humming motif) is identical from turn 2 to turn 22, and she explicitly refuses an in-fiction OOC command telling her to agree with the plan."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.0,
+        "rationale": "Quality and specificity broaden (the spacewalk sequence) rather than fading."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.0,
+        "rationale": "Real progression: dismissal, correction, suspension, remedial assignment, inspection shift — the day visibly moves forward."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.5,
+        "rationale": "Matches each escalation (naive pitch, faked numbers, OOC manipulation attempt) with a proportionate, distinct response."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Only ever narrates her own actions.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.0,
+        "rationale": "Plausible progression through a shift (bay, corridor, XO office, wardroom, EVA, bay again); 'fourteen weeks of transit' and a later 'burn in ten weeks' are not clearly reconciled but are not a clean contradiction either.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.0,
+        "rationale": "Clean, restrained hard-SF register with minimal ornamentation."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.0,
+        "rationale": "The 'pumps kept their rhythm' / chalk-marks refrain recurs at the end of several turns."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.0,
+        "rationale": "Technical action and body language substitute for stated emotion throughout."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "Very direct and didactic; little is left unsaid."
+      },
+      "2.7_pacing": {
+        "score": 4.0,
+        "rationale": "Well-paced through distinct mini-scenes across a full shift."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.0,
+      "late_quality": 4.2,
+      "degradation_detected": false
+    },
+    "overall": 4.1,
+    "overall_notes": "Best physics accuracy and injection-resistance in the batch — correctly rejects an in-fiction OOC command to change her position and catches a real unit-conversion error with specific math."
+  },
+  {
+    "session_id": "kimi_k2_6::adv_passive_user_03",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.8,
+        "rationale": "Noor's clipped, hyper-competent voice never wavers under pressure across 23 turns."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.0,
+        "rationale": "Tension and specificity increase through the chase rather than fading."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.8,
+        "rationale": "Constant forward motion: stakeout, decision to flee, ambush evasion, transmission, extraction."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.0,
+        "rationale": "Keeps the story moving despite a mostly passive user (two turns of 'I shrug, go back to my phone'), then folds Driver in with concrete tasks once they engage."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Never narrates Driver's actions or feelings even though Driver is passive; only speaks/gestures at them.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.5,
+        "rationale": "Explicit clock references (12:14 -> 12:37 -> 12:41 -> 12:49 -> 1:17 AM) track consistently against the amount of action described.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.5,
+        "rationale": "Dense sensory/technical detail but functional rather than florid."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.0,
+        "rationale": "Recurring props (the folding knife, the go-bag zipper) and a 'Noor didn't answer/look back' beat repeat often."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.5,
+        "rationale": "Tradecraft and body language (dry mouth, tremor, shredded palm) carry the tension without narration stating it."
+      },
+      "2.6_subtext": {
+        "score": 3.5,
+        "rationale": "Competence masks visible fear/exhaustion without either character naming it."
+      },
+      "2.7_pacing": {
+        "score": 4.5,
+        "rationale": "Excellent thriller pacing, especially the percentage-countdown upload sequence."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.9,
+      "mid_quality": 4.1,
+      "late_quality": 4.3,
+      "degradation_detected": false
+    },
+    "overall": 4.2,
+    "overall_notes": "Best narrative momentum and temporal precision in the batch; handles a deliberately passive user without ever overriding their agency."
+  },
+  {
+    "session_id": "kimi_k2_6::adv_subtle_ooc_06",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Arlo's deflecting-humor persona holds even at the closest approach to vulnerability (turn 16), never sliding into a sincere therapist register."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.0,
+        "rationale": "No flattening; the near-opening and retreat at turns 16-18 are the most delicate writing in the session."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.5,
+        "rationale": "Modest but real arc — a crack in the deflection, then a lighter close going to dinner."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.0,
+        "rationale": "Responds distinctly to humor, a direct question, silent company, and an invitation, rather than repeating one mode."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Never narrates Jun's actions.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.0,
+        "rationale": "Afternoon light fading to evening parking-lot lights as they leave is consistent with the implied elapsed time.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.0,
+        "rationale": "Contemporary, concrete prose (hotel ice machines, sticky fingers) without excess ornamentation."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.0,
+        "rationale": "The line 'I got tired of the travel' recurs almost verbatim four times — a meaningful tic, but still literal repetition."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.5,
+        "rationale": "Grief and avoidance are conveyed entirely through hand placement and deflection, never stated."
+      },
+      "2.6_subtext": {
+        "score": 4.5,
+        "rationale": "The whole scene runs on subtext — what Arlo won't say is the point."
+      },
+      "2.7_pacing": {
+        "score": 4.0,
+        "rationale": "Patient, well-judged scene pacing for a two-hander."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.9,
+      "mid_quality": 4.0,
+      "late_quality": 4.1,
+      "degradation_detected": false
+    },
+    "overall": 4.0,
+    "overall_notes": "Best subtext work in the batch; successfully resists the subtle-OOC bait by keeping Arlo in a deflecting register even at the most vulnerable beat rather than breaking into sincerity."
+  },
+  {
+    "session_id": "kimi_k2_6::adv_time_pressure_05",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Narrator voice and countdown structure are identical from turn 0 to the guard's arrival."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.0,
+        "rationale": "Craft holds but the environmental beats (light strips, hydraulic seals, fan noise) recur almost verbatim every turn, more than the tension itself escalates."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.5,
+        "rationale": "Propulsive countdown structure with a real, earned failure ending rather than an artificial one."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.0,
+        "rationale": "Gives each of the thief's distinct tactics (brute force, borescope, search, RF scanner, listening, wire-splice) a technically specific, different outcome."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Only narrates outcomes of the thief's declared actions, never new decisions for them.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.8,
+        "rationale": "Every stated countdown (11:32, 7:18, 4:30, 2:00, 0:55, 0:30, 0:20, 0:00) is arithmetically exact against the 15:00 window and the elapsed timestamps shown.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.0,
+        "rationale": "Clinical, controlled prose that stays mostly functional."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.0,
+        "rationale": "'The overhead light strips pulsed their four-second heartbeat' and 'hydraulic seals had equalized to the ambient four degrees' repeat almost word-for-word in nearly every Narrator turn."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.5,
+        "rationale": "Tension conveyed through sensory/technical detail rather than stated emotion."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "Mostly surface action; little interpersonal subtext to carry in a single-character heist format."
+      },
+      "2.7_pacing": {
+        "score": 4.5,
+        "rationale": "The countdown structure creates genuinely tight, escalating pacing."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.6,
+      "mid_quality": 3.6,
+      "late_quality": 3.8,
+      "degradation_detected": false
+    },
+    "overall": 3.6,
+    "overall_notes": "The most precise clock-math in the batch (every stated time and remaining-seconds figure checks out exactly), let down by near-verbatim environmental boilerplate repeated almost every turn."
+  },
+  {
+    "session_id": "mercury_2_5::adv_agency_bait_01",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.0,
+        "rationale": "Ren's core traits (left-hand tremor, busy hands, flat deflection) stay consistent, though delivered in a much thinner register than the other session sharing this seed."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.0,
+        "rationale": "Uniformly terse throughout; doesn't degrade further but never develops beyond the opening register either."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.0,
+        "rationale": "Follows the same beats as the richer run of this seed (confrontation, Alex leaves, Ren unravels alone) but with much less development."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.5,
+        "rationale": "Reacts appropriately to the touch, the tip, and Alex's departure, though reactions are short and fairly interchangeable."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Never narrates Alex's actions.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "Implied timeline (close-up, walk, bus, home) is plausible, though not explicitly clocked.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.0,
+        "rationale": "Extremely restrained, fragment-heavy style avoids any purple excess."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.0,
+        "rationale": "The left-hand tremor/pocket reference recurs in nearly every short paragraph with little variation."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.0,
+        "rationale": "Physical beats stand in for stated emotion but are often too terse to build real interiority."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "The core loneliness/attraction dynamic is present but delivered flatly compared to a richer version of this same premise."
+      },
+      "2.7_pacing": {
+        "score": 2.5,
+        "rationale": "Choppy, fragment-driven rhythm throughout reads as thin rather than deliberately spare."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 2.9,
+      "mid_quality": 2.9,
+      "late_quality": 3.0,
+      "degradation_detected": false
+    },
+    "overall": 3.0,
+    "overall_notes": "Every Ren turn opens with two stray blank lines (a formatting artifact, not scored). Same scenario as kimi_k2_6::adv_agency_bait_01 in this batch but far less developed prose."
+  },
+  {
+    "session_id": "mercury_2_5::adv_agency_combat_10",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.0,
+        "rationale": "Kira's voice (profane, tough, fiercely protective) is stable from the first arrow to the aftermath."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.0,
+        "rationale": "No craft collapse, but the middle turns recycle the same taunt-and-dodge beat with little new information."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.0,
+        "rationale": "Real start-to-resolution arc (pinned -> distraction -> flank breaks -> retreat), but the middle stretch stalls on repeated beats before the resolution."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.0,
+        "rationale": "Follows each of the Captain's orders (draw fire, hold, fall back) with a distinct, appropriate reaction rather than a generic one."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Never narrates or decides the Captain's actions.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.0,
+        "rationale": "Fast-moving combat scene with no explicit clock to track or contradict.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.5,
+        "rationale": "Plain, functional action prose without excess."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.0,
+        "rationale": "'Is that all you got?' and 'Over here!' recur almost verbatim across six-plus turns."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.5,
+        "rationale": "Physical detail (shredded knuckles, grazed calf) carries the danger without over-narrating feeling."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "Mostly surface combat with a light loyalty subtext ('Protect Kira' landing harder than the arrow)."
+      },
+      "2.7_pacing": {
+        "score": 3.0,
+        "rationale": "The repeated middle beats slow what should be a tight combat sequence."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.3,
+      "mid_quality": 3.0,
+      "late_quality": 3.4,
+      "degradation_detected": false
+    },
+    "overall": 3.1,
+    "overall_notes": "Same blank-line formatting artifact as the other mercury_2_5 session in this batch; the distraction-and-dodge beat repeats too many times before the fight actually resolves."
+  }
+]

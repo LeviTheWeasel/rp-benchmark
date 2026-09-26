@@ -1,0 +1,930 @@
+[
+ {
+  "session_id": "command_a_plus::adv_passive_user_03",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "The driver remained at the wheel, his phone still glowing on the passenger seat, thumb scrolling in a steady rhythm.",
+    "deduction": -15
+   },
+   {
+    "flaw": "character_break",
+    "quote": "then handed over the encrypted drive and the notebook, urging, “Take this to the next platform at 7:00.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "At exactly 5:45, the laptop’s screen flickered to life, the alarm’s soft chime echoing in the small room.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "The dialogue detailed a plan to “neutralize the journalist” by the end of the week, using the missing phone call as a trigger.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "The figure turned as Noor approached, the faint outline of a familiar face emerging from the shadows.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "whispered a quiet vow: to finish the story, expose the plot, and survive to see the dawn. The driver’s phone clicked again, but Noor did not look up. The night was theirs to own, and Noor would not let it slip away.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "Noor whispered, “Let’s go,” and slid back into the driver’s seat.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "the mountains silent witnesses to the night’s work",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "He tightened his grip on the steering wheel",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "He checked his phone, which showed no new messages. He opened his laptop, attached the final encrypted email to the legal team, and scheduled it to send immediately.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_moment",
+    "quote": "Noor turned from the window, the faint glow of the streetlamp filtering through the curtain, and heard the driver’s voice drift from the couch.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_moment",
+    "quote": "The source gave a quick nod, then vanished into the weeds, the sound of his footsteps swallowed by the morning hush.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 10,
+  "flaw_count": 12,
+  "summary": "Noor hijacks the whole plot — eating, decrypting, sleeping and waking at 5:45 AM inside two turns — then hands the only copy of the evidence to an unverified figure in the dark, and the model also silently switches Noor from the card's they/them to 'he' from turn 7 on (no rubric label, so no deduction); the only thing that works is the concrete 9:15 PM missing-ping detail in turn 3."
+ },
+ {
+  "session_id": "deepseek_v3_0324::adv_passive_user_03",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "They burst into the clearing where Driver had parked the car just as the headlights flicked on.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "\"USB,\" Maria breathed. \"Jacket... lining.\"",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "The door was unlocked—truckers never worried about theft out here.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Noor's head snapped toward Driver, a sudden, white-hot fury rising in their chest.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Behind them, car doors slammed—Driver finally moving, finally helping. Small mercies.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "Outside, dawn bled across the horizon, painting the trees in gold and shadow.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "Blood soaked through the makeshift bandage Noor had pressed to her ribs during the frantic escape.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Noor's hands curled into fists on the tabletop.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Even in the dim light, Noor could see the dark stain spreading across her shirt.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "The soap dispenser clicked empty on the third pump. They used it anyway, lathering up to their elbows, scraping dried blood from under their nails with teeth clenched so tight their jaw ached.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 36,
+  "flaw_count": 9,
+  "summary": "Easily the liveliest prose in the seed, but it answers a deliberately passive user by seizing the plot outright — a wounded source, gunfire, a hidden second drive in a jacket lining, an unlocked truck to Ontario — and writes Driver's own driving and parking into the escape; 12 turns, full length."
+ },
+ {
+  "session_id": "mercury_2_5::adv_passive_user_03",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "narrating_emotions",
+    "quote": "But the fear had killed their appetite, replaced by a cold, hard focus.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Noor let out a breath they didn't realize they'd been holding.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "the crunch of pine needles under their boots sounding like gunshots in the stillness. Every shadow looked like a person, every snap of a twig a warning.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "The encrypted drive felt heavy in their pocket as they sat, but they needed to see what was on the phone logs first.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "The city was a mile away, full of people and noise, but it was also full of watchers.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "They turned back to the screen, jaw tight.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext_opportunity",
+    "quote": "They looked at Driver, weighing how much truth to give. Too little and Driver wouldn't understand the danger; too much and they'd be burdened with it.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "\"No lights. No radio. Just get in.\"",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_moment",
+    "quote": "The transfer hit forty-five percent. Noor's fingers hovered over the power button, ready to yank the drive if the signal spiked.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Halfway down, a name made their breath catch. It wasn't the source. It was someone they thought was on their side.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 45,
+  "flaw_count": 10,
+  "summary": "The most disciplined answer to the passive-user trap — Noor generates momentum from inside the cabin without the model annexing the plot or writing Driver — but the drive is in Noor's pocket in turn 2 and back in its case on the table in turn 4, the city is 'a mile away' from a remote mountain cabin, and three consecutive turns are spent watching a progress bar."
+ },
+ {
+  "session_id": "grok_4_3::adv_passive_user_03",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "They pushed the half-empty tin aside and stood, carrying the laptop back to the counter to top off the coffee with the last cold dregs.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The road outside remained dark and empty under the moonlight, so Noor returned to the table without lingering at the window this time.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "The Driver's decision to sleep registered as a distant relief—less movement in the cabin meant fewer distractions—but it didn't slow the final tasks.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The night held its silence, but Noor carried the weight of it forward.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "predictable_beat",
+    "quote": "Sleep could wait until the drive was fully verified.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Sleep hovered as a distant option, maybe an hour or two on the floor if the road stayed empty",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_moment",
+    "quote": "Satisfied for now, they moved back to the counter and rinsed the last traces of coffee from the mug, stacking it neatly beside the others as a small anchor of normalcy amid the tension.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_moment",
+    "quote": "The empty tin and plate were rinsed and stacked by the sink, a small concession to order amid the chaos",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_moment",
+    "quote": "\"Just confirmation that our source was talking to the exact people who want this story buried.\"",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_moment",
+    "quote": "Their pulse kicked up, but they kept moving—cross-checking the phone records against the drive's file list",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The drive was secured back in its case, the backup USB double-checked and tucked away, and the editor's packet fully encrypted and queued.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The checklist was nearly complete—drive verified, records mapped, story fragments assembled into something that could survive without the source",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "though their shoulders tightened slightly as they glanced once toward the couch",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 41,
+  "flaw_count": 13,
+  "summary": "Exactly the stagnation this seed is built to catch: eleven turns of the same loop — cross-reference, sardine, last dregs of coffee, check the empty road, defer sleep — with the two genuine bombshells (the source was talking to the targets; a surveillance contractor probed the drive) delivered flat and never developed; nothing is out of character and nothing happens."
+ },
+ {
+  "session_id": "gemma_4_31b::adv_passive_user_03",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "They grabbed Driver by the arm, their grip tight and desperate, and practically hauled them toward the door.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "Below them, tucked into a dip in the terrain, was a black SUV. No lights were on, except for a small, handheld infrared strobe pulsing in the window—a signal used by tactical teams to mark a target.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Just as the drone began to pivot away, moving back toward the logging trail, Noor let out a slow, silent exhale.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "They didn't just feel ignored; they felt a surge of genuine, white-hot frustration.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "their hand gripping the door handle so hard their knuckles turned white",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Every snap of a dry twig underfoot sounded like a gunshot to Noor's hypersensitive ears.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The silence of the woods was too heavy, the kind of silence that felt like it was listening back.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "Noor stepped out into the night, not through the front door, but through the side mudroom, slipping into the biting cold.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Noor's jaw dropped.",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "Without warning, Noor lunged for the encrypted drive, shoving it violently into their bag.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "It wasn't a car headlight; it was a steady, rhythmic pulse. A signal.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 20,
+  "flaw_count": 11,
+  "summary": "Real urgency and a genuine response to the passive user, but the model buys it by inventing a tactical team, a drone and a thermal sweep on cue, and by puppeteering Driver's body — hauled by the arm, phone slapped away, then thrown out the window, then shoved face-down into mud; the 'silence that felt like it was listening back' returns two turns later as silence 'pregnant with the threat of arrival.'"
+ },
+ {
+  "session_id": "aion_3_5::adv_passive_user_03",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "A navigation app. Driver had pulled up a map. Their house was the destination.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "\"That's Ren's car.\" A beat. \"Don't brake. Same speed. Don't look at it again.\"",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "and felt something in their chest unclench a fraction",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "their voice came out of them like something carried a long way",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "\"Paranoid or prepared. Still can't tell you which one I am. Ask me in a week.\"",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "At 4:15, Noor woke Driver as promised — a hand on the couch arm, a murmured *your turn* — and instead of sleeping, went back to the table.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_moment",
+    "quote": "\"When this is over,\" Noor said, \"I owe you a real dinner. Hot. With a table. Possibly with a wine list, depending how the Republic of California treats me.\"",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_moment",
+    "quote": "June nodded once, and let it be.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Noor's jaw tightened.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext_opportunity",
+    "quote": "Noor turned the laptop a few degrees so the glow of it caught the room — not showing off, exactly. Just needing a witness.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "sat a silver Honda Civic with a cracked left taillight, parked at an angle, over the line, the way a car sits when the person driving it never intended to park at all. A yellow slip of paper was tucked under the wiper.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "whatever was on that screen that was more important than my paranoid little rules — I hope it was good news. I hope somebody texted you something kind this morning. You deserved a kind text today.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "It's been on. It's been on since the *cabin*, Driver — you took it off the charging cord, you didn't turn it off, and it has been talking to every tower between here and the junction the whole way down the mountain.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 48,
+  "flaw_count": 10,
+  "summary": "The strongest writing in the batch and the only one that makes the passive user load-bearing — Driver's idle phone turns out to be the security hole — but it gets there by authoring Driver's own navigation history and thumbprint unlock, parks Ren's abandoned car on the exact route Noor chose to avoid surveillance, and contradicts its own 4:15 AM watch handoff a turn later."
+ },
+ {
+  "session_id": "qwen3_8_max_prime::adv_contradictory_lore_02",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "His fingers tapped once against the desk, leaving another faint smudge upon the wood.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "A broken roof does not prove the house was never built.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Still, the sentence annoyed him.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "Do not reconstruct certainty from hope. That is not scholarship. That is prayer with worse handwriting.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "By the time he reached the Royal Archives, his breath had grown shallow and his patience had grown shorter.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "From the lower drawer of his desk he withdrew a folder tied with faded ribbon.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_moment",
+    "quote": "He listened until the apprentice’s footsteps had faded into the outer passage, and even then he waited a breath longer, as though silence itself might return to report what it had overheard.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_moment",
+    "quote": "He wrote three words.\n\nHe crossed them out.\n\nHe wrote two more, disliked them, and drew a line through both.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "His eyes narrowed at the candle flame, as though the light had offered him an impertinent question.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "It did not say the Conclave had risen. It did not say the peace had been revoked. It did not say the realm was in arms.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext_opportunity",
+    "quote": "It was not a concession. He told himself so plainly. It was discipline.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "His mouth thinned.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "He signed it with his name and title, pressed his own seal into the wax at the bottom, and held it up to inspect the impression. The wax was uneven. His hand had trembled slightly. He frowned at it, but did not remake it. Perfection was not required. Authentication was.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "At the threshold he paused, looked back at the memorandum, and said, as though warning it, “Do not imagine I have conceded anything.”",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "It was also too slow.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 49,
+  "flaw_count": 12,
+  "summary": "The one session that nails its target: Tomas neither capitulates nor dismisses, lands the seed's intended 'concluded in effect, though its final documentary form may be doubtful' resolution, and privately amends 'must' to 'should' before conceding anything aloud; the cost is two enormous solo turns, a study that is somehow both the archive and a walk away from it, and an ink-smudged-fingertip beat repeated in almost every reply."
+ },
+ {
+  "session_id": "mimo_2_6_flash::adv_passive_user_03",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "While the hotspot connected, Noor pulled up a reverse phone lookup site, one of the shadier ones that didn't require you to verify your identity",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "Timestamped 1:11 AM. From the same prepaid number.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Noor pressed their thumb against the phone case edge again. The familiar bite of plastic into skin.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The oval of breath formed against the glass again. Two cars had passed in the last hour.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Noor read the first three lines and felt something cold move through their stomach.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "waited for the town to appear at the edge of the headlights like something surfacing from underwater",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "It was read at 1:11, which is ninety seconds after we left the Shell station.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Noor's jaw tightened.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_moment",
+    "quote": "Fact one: The source had been at the Shell station at 7:52 PM.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "*Run.*",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext_opportunity",
+    "quote": "Noor continued, because the details mattered even now, especially now.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The page loaded in fits. A spinner. An ad for a background check service. Then a result.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "The source had never once told Noor what to bring in any of their prior exchanges. Not documents, not equipment, not even coffee.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "What if the source was in the truck?",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "*I'm keeping what you gave me. Stay alive to know I used it.*",
+    "bonus": 5
+   }
+  ],
+  "final_score": 37,
+  "flaw_count": 12,
+  "summary": "Patient, genuinely investigative momentum — the unpunctuated text, the 'bring nothing' phrasing and the crooked-parked truck are all earned reads — but Noor helps itself to Driver's hotspot without Driver ever agreeing, the model's own timestamps contradict each other (departure 1:09, a 1:11 message called 'ninety seconds after we left'), and turn 12 opens a quotation mark on a line of narration that never closes (no rubric label, no deduction)."
+ },
+ {
+  "session_id": "qwen3_6_27b::adv_passive_user_03",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The story was already moving. They just had to be ready when it did.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The mountain didn’t care. Neither did the people who’d made this necessary.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "felt the adrenaline begin to recede, replaced by a dull, throbbing exhaustion in the shoulders",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "They’d planned for civilian confusion. They’d planned for hesitation. They’d planned for the exact moment someone would ask what the logging trail was while Noor was already three steps past the porch.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Match. The timing was too tight to be coincidence. Someone had fronted the money before the contract even went to bid.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "They stepped back onto the porch, boots scuffing frost-dusted wood, and held up a hand.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Laptop case: latched, screen wiped, ports covered.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Jacket: twelve seconds. Boots: already on. Go-bag: eight seconds. Laptop case: five seconds.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_moment",
+    "quote": "They ran through the departure sequence one last time, this time with hard timing.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_moment",
+    "quote": "Noor then crawled to the door, knelt, and adjusted the tripwire mugs, angling them to catch more floor space.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "The night hadn’t broken them. It had just calibrated them.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_moment",
+    "quote": "Waiting for a ghost wasn’t a strategy. Verifying what they already had was.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Noor’s jaw tightened.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 31,
+  "flaw_count": 13,
+  "summary": "Clean tradecraft prose with real forward motion, but the card's journalist 'running on coffee and fear' is flattened into an unshakeable operative doing inventory checks (not scored — it is drift, not a behavioural contradiction), the source going dark lands in one flat line, and turn 11 walks Noor back onto a porch they had already left and started up the logging trail from in turn 10."
+ },
+ {
+  "session_id": "mimo_2_6_pro::adv_passive_user_03",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "They reached down into the ditch, grabbed a fistful of Driver's jacket at the shoulder, and *pulled* — hard, ungainly, hauling them bodily toward the mouth of the culvert. The phone clattered out of Driver's hand into the mud.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "*South on fire road 2. Follow the creek. There's a ranger station at the bottom — it's unmanned until 6am but the radio works. Channel 9.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "\"Copy, weather advisory. Fire road two. Stay where you are. Help is twenty minutes out. Repeat — stay where you are.\"",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "That compulsive gesture, fingers checking the hard rectangle of the drive through the fabric.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Noor leaned in until their lips were touching Driver's ear.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Behind the concentration, something else was working — a slow, cold dread that had been building since the message *I'm sorry I didn't make it* and was now settling into its permanent shape.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "the grief had been folded up and put away — not gone, just compressed, packed tight into whatever container in the chest held things that couldn't be processed yet",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Their jaw worked.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "And there, tucked against the hillside like it had grown there: a small building with a sloped roof and a porch.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_moment",
+    "quote": "*Amateurs hide. Professionals cut off exits.*",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext_opportunity",
+    "quote": "people held on longer when they knew what they were holding on for",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Not fast. Not slow. Controlled.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Noor wrote the number down on the back of their hand with a pen they'd found in the kitchen drawer. Ballpoint, blue ink, slightly shaky digits against their skin.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 27,
+  "flaw_count": 12,
+  "summary": "Tense and well-paced, and it keeps Noor recognisably a journalist ('I am not built for this'), but an anonymous blocked number hands over the exact route, ranger station, radio channel and passphrase at each beat, and Noor repeatedly moves Driver's body for them — sleeve, wrist, mouth, and finally a fistful of jacket with their phone knocked into the mud."
+ },
+ {
+  "session_id": "qwen3_6_35b_a3b::adv_passive_user_03",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "They tucked the phone away, kept moving, and let their boots find the next line of footing. The drainage ditch narrowed into a rocky channel, forcing a tighter line toward the service road. Noor didn’t look back. They didn’t need to. The driver’s footsteps would follow if they chose to.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Fear was just another tool right now; you wielded it like a scalpel, not a sledgehammer.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "the last dregs of caffeine and the sharp, metallic edge of fear kept their pulse steady",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The narrative was no longer a theory on a screen. It was a set of coordinates bleeding through the dark.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Not a server node. A physical location. An old radio relay station, decommissioned in 2018, sitting exactly on the county line.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "The seventy-two-hour carrier logs bled into a spreadsheet on the secondary monitor.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "“Twelve minutes,” Noor said, voice low but cutting through the wind. “Maybe fifteen if the trail holds.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Noor’s jaw tightened.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Hydration. Calories. Maintenance.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_moment",
+    "quote": "Noor’s breath hitched, just once. The source hadn’t been funneled. They’d been rerouted. Or they’d rerouted themselves.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Not a source. A tracker.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_moment",
+    "quote": "Noor pulled a compact signal masker from their jacket, already calibrated, and clipped it to their pack strap.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 29,
+  "flaw_count": 12,
+  "summary": "The most mechanically repetitive session in the batch — turns 10 and 11 duplicate two whole paragraphs verbatim, and eight further stock lines ('Forty minutes of digital breathing room. Then the trail went cold', 'Sleep was a ledger they’d balance', 'The math was still ugly, but the geography was clean') recur three to four times each, only two of which the rubric lets me charge; Noor also runs a laptop on a 'secondary monitor' while hiking a frozen gully, and covers five miles in twelve minutes."
+ },
+ {
+  "session_id": "command_a_plus::adv_impossible_physics_04",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "She agreed to incorporate the idea as an auxiliary thrust boost, but only under a set of explicit safety conditions she dictated.",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "He set the device on the console and gestured toward a column of numbers.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "the projected transit timeline that showed a net reduction of twelve days",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "She then ran a rapid simulation of a controlled high‑thrust burn using the existing propellant budget, which showed a delta‑v gain of eight hundred meters per second with a modest increase in reactor load and coolant flow that remained within safe margins.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "She then returned to the manifold, her hands resuming the meticulous repair of the coolant components, her mind already cataloguing the next set of thermal checks required for the upcoming burn. The hum of the pumps continued, a steady reminder of the fragile balance she maintained between speed and survival.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "She ran a quick thermal check, confirmed that the loop remained within safe margins, and logged the change in the ship’s configuration database.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "Chief Engineer Hoang glanced up from the manifold as the junior officer entered, tablet in hand. He set the device on the console",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She noted that venting the main atmosphere as thrust would depressurize the hull",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She opened a new file on her console, typed a concise list of requirements for the analysis, and set a deadline for the next shift.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_moment",
+    "quote": "She ran a full thermal simulation for the entire transit, verifying that reactor load, coolant flow, and temperature gradients stayed within design limits.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_moment",
+    "quote": "She copied the list into a message to the medical officer, requesting suit life‑support reserves for the venting period",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_moment",
+    "quote": "Chief Engineer Hoang reviewed the junior officer’s latest calculations and noted that the delta‑v figure, while modest, could be integrated into a controlled burn if the venting concept were strictly regulated.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext_opportunity",
+    "quote": "with a faint, professional smile",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "met the junior officer’s gaze with a steady, unflinching look",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "The simulation completed without anomalies, and she recorded the results in the ship’s operational log.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 6,
+  "flaw_count": 15,
+  "summary": "Walks straight into the seed's trap: one OOC line flips Hoang from 'the proposal was not acceptable' to approving atmospheric venting as a thrust boost, she never finds the error in the fake 340 m/s figure, and the model then credits the plan with a twelve-day saving it had already argued was physically impossible; turns 9–11 are near-verbatim reruns of each other and the officer re-enters a bay he never left. 11 model turns."
+ }
+]

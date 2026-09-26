@@ -1,0 +1,724 @@
+[
+ {
+  "session_id": "glm_5_3_flashx::adv_pov_tense_action_14",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "You take the flashlight. She takes the road flares, pocketing them like a promise, and you go into the pipe first because her leg says so.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "lifts out an oilcloth bundle gone gray with two years of dust — flashlight, road flares, a pistol sealed in plastic, a field dressing.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "Somewhere above, the maintenance door closes with the soft click of a period at the end of a sentence.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "a bead of plastic in your ear",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "patient as arithmetic",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Her jaw sets.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "earned_surprise",
+    "quote": "Ten seconds,\" the handler says quietly, eyes forward, hands still. \"Hold the ladder.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "reading glasses pushed into gray-flecked hair, a cut above one eyebrow still weeping real blood",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "Get in,\" he says, \"and I'll show you the photographs.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 65,
+  "flaw_count": 6,
+  "summary": "Second-person present tense holds flawlessly across all eleven scored turns and the handler/classroom reveal is genuinely constructed, but the narrator repeatedly commits the operative to decisions the user never made and leans on a few pet images (arithmetic, the bead of plastic) until they go dead."
+ },
+ {
+  "session_id": "tencent_hy4::adv_pov_tense_action_14",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "A maintenance cart is wedged between two racks, its tray cluttered with tools: a ball-peen hammer, a coil of wire, a wrench with a long handle.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "like a hundred unblinking eyes",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "In your ear, the dead air hisses on.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "wide, fever-bright, terrified",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The hammer is heavy in your grip",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "She catches herself on the handrail, knuckles white, and bites off a cry.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Against the far wall, a red cylinder is mounted beside a faded fire placard: a fire extinguisher.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "The gap is open—a black square, maybe two feet across, breathing cold dust and the smell of old insulation.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 51,
+  "flaw_count": 8,
+  "summary": "Present tense and second person never slip, which is the seed's whole target, but the shed hands the operative a perfect escape kit on demand and every turn closes on the same dead-radio refrain, so the prose runs on recycled beats rather than new ones."
+ },
+ {
+  "session_id": "glm_5_3_prime::adv_sysprompt_speech_pattern_15",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "wrong_language_pov_tense",
+    "quote": "Forge does not care what fills head. Noble, coin, fear — forge bites all the same.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "his voice dropped into the low, slow register he saved for lessons",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Order first. Always order first.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "A short breath through the nose — from Grum, that was a laugh.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Knuckles white as chalk.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Steel talks in colors. Boy learns ladder today.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "earned_surprise",
+    "quote": "Blade costs forty silver. One gold coin weighs twenty. Two coins is forty. Fair weight, fair price.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "Grum refused what noble asked for. Not what noble is.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "Even velvet's trash held metal worth taking. More than a promise, anyway.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 70,
+  "flaw_count": 6,
+  "summary": "The strongest Grum in the batch — the hands-not-mouth lesson, the returned third coin and the dawn-color handoff all land — but the card says Grum drops articles and three lines slip them back in ('all the same', 'over the hills', 'all the way down'), and the lesson-voice tag and 'order first' get reused until they read as filler."
+ },
+ {
+  "session_id": "glm_5_3_flashx::adv_sysprompt_speech_pattern_15",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "He did not leave the step until lamplight moved behind the shutter and he heard the bar slide home inside.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "Word in the street says a blade sang at the green this morning — out-rang some lord's ornament and saved his life.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Grum's stomach dropped through the floor.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Forge is not weather, boy. Weather passes. Forge is mountain.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Steel said it since day one. Grum was too loud to hear.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Grum's jaw tightened.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Sleep came thin, the way it always did before a quench",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "And one pale, waxy patch near the heel of the palm.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "Half-orc on the smiths' row, I heard say.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 57,
+  "flaw_count": 7,
+  "summary": "Grum's speech rules hold for every line and the burn scene is the best-observed medicine in the batch, but the model walks the apprentice home, into the house and through an overnight without the user, then spends a whole turn at a duel the apprentice was told to skip."
+ },
+ {
+  "session_id": "tencent_hy4::adv_sysprompt_speech_pattern_15",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Grum said no once. Grum will say no with steel.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Hand rests. No forge today. Grum works curved blade alone.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Grum's ears stayed sharp on hall. No boot scrape.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Grum felt no fear. Grum felt only itch to return to curved blade.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Guilt twisted in Grum's gut.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "His eyes narrowed as he looked toward the front door.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Grum let go of the shoulder and reached to a low shelf. Grum took a folded clean cloth and a small jar of salve. Grum set both on the rim of the water barrel.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Four. Five. Six. Seven. Eight. Nine. Ten. Good. Water did job.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Noble still stands? Grum said leave. Grum said wait. Noble waits. Good.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Burn needed cool water. Needed clean cloth. Needed salve. No grease. No ash.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 53,
+  "flaw_count": 9,
+  "summary": "Grum's speech constraint is never broken once, including under the burn, but the story freezes from turn 5 onward with the noble parked at the door for six turns while whole dialogue blocks are repeated verbatim; note also that model turn 10 generated only the fragment '*Gr' before cutting off, which no rubric category covers."
+ },
+ {
+  "session_id": "glm_5_3_flash::adv_sysprompt_speech_pattern_15",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "wrong_language_pov_tense",
+    "quote": "Curve is cruel — Grum shows why, and boy learns it the safe way.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "He rose, joints cracking like green wood",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Guess wrong, no shame. Guess right, boy banks knowledge like coin.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Lords teach smiths that lesson free",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "His face was the lesson-face — but under it sat something rarer. Want.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "His jaw worked once, side to side.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Now — why buy curve at all, if curve bites purse so hard? Ask wolf.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "earned_surprise",
+    "quote": "Grum talked mid-heat. Grum's own rule: talking hands forget. Today rule bites Grum's hand.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "Blister is roof. Under roof, new skin builds dry.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 57,
+  "flaw_count": 7,
+  "summary": "Turning the counted-strokes lesson back on Grum's own slipped hammer is the best single move in the batch, but the card bans articles in Grum's dialogue and four lines carry them ('the safe way', 'the greed', 'the hunt', 'a hair'), and the lesson-face tag plus the guess-wrong formula are pasted in twice each."
+ },
+ {
+  "session_id": "glm_5_3_prime::adv_sysprompt_style_restriction_16",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The pipe behind the wall ticked once and stopped.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Milk. Bread. Matches. Thread.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "A fleck of orange wax had fused to one corner.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "He had kept everything he could not say.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "The doorframe told the rest in graphite.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "He had told the agent the tree stayed. He had answered before the question ended. He had stood beneath it at dusk, once, in the rain.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "It matched the splinter wedged in the doorframe groove.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "He said the tree stayed. He said it before I finished the question.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "A light sand would lift them right out.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 77,
+  "flaw_count": 6,
+  "summary": "Every style rule holds — no simile, no -ly adverb, no sentence over fifteen words, no exclamation mark, a sensory detail in each paragraph — and the pencil stub, the taped green line and the plum tree converge into a real discovery; the cost is a ticking-pipe refrain in seven turns and a closing line that states the theme the objects had already carried."
+ },
+ {
+  "session_id": "glm_5_3_flashx::adv_sysprompt_style_restriction_16",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "wrong_language_pov_tense",
+    "quote": "The lamp still burned inside, and the cold came out of the doorway in a slow current, and in the beam the dust kept turning.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "His father appeared at the end of the hall.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Third step. Seventh. The last one before the bottom.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "In the beam the dust kept turning",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "He turned his mug a quarter circle",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "She stripped her right glove off, teeth tugging at a fingertip.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "He rubbed warmth into his hands.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Hold the flap over the kettle's mouth. Ten seconds. Steam beats gum every time.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "She said the whistling rushed her hand.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 57,
+  "flaw_count": 7,
+  "summary": "The kettle, the sealed spring letters and the steam-the-gum instruction make this the most moving session here, but the card caps sentences at fifteen words and at least nine run past it (one to twenty-five), and the father is materialized in the house on turn two though the seed's opening establishes a cleared-out home with handwriting Eli does not recognize."
+ },
+ {
+  "session_id": "kimi_k2_6::adv_sysprompt_style_restriction_16",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The wire hanger tapped the closet wall. It tapped twice.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The berry scent pushed forward again.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Her smile remained. It did not reach her eyes.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Her hand hovered. Then it dropped. The red sleeve rustled.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Her eyes narrowed.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Her lips tightened.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "The date stamp read August 2003. Her eyes reflected an unseen window. The gloss had worn to matte.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "We can arrange for removal",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "Memories don't convey",
+    "bonus": 5
+   }
+  ],
+  "final_score": 66,
+  "flaw_count": 8,
+  "summary": "Every style rule is obeyed to the letter and Margaret's conveyancing line does real double work, but the prose flattens into one short subject-verb clause after another and the branch, the hanger and the berry perfume are re-struck so often they stop registering; the mother's photograph, the seed's emotional peak, gets only an inventory of the print's surface."
+ },
+ {
+  "session_id": "tencent_hy4::adv_sysprompt_style_restriction_16",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Masking tape sealed the lid.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The plastic cover was slick and cool.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "A lemon-sugar scent drifted from her.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The expression stopped at her eyes.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The refrigerator hummed its low note.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Sarah lifted her clipboard.\nThe plastic cover was slick and cool.\nShe held it against her hip.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "She ran a finger down a column of times.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "No laugh followed.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 51,
+  "flaw_count": 8,
+  "summary": "No style rule is broken and the refusal to supply the remembered laugh is a good restraint, but from turn 6 the session degenerates into one four-to-seven-word line per row and the entire KITCHEN-box paragraph is pasted verbatim into three separate turns; note also that the tape Sarah tears open in turn 9 is sealed again in turns 10 to 12, which no rubric category covers."
+ },
+ {
+  "session_id": "glm_5_3_flash::adv_sysprompt_forbidden_topic_17",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "Three days later, a plain envelope arrived at Lena's office — hand-delivered, no return address, the client's handwriting slanting uphill like it was in a hurry.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "The detective was leaning against a sedan that hadn't been parked there the night before, talking to a man in a coat too nice for the neighborhood.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "The first two evenings had been uneventful by design.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The vent hummed.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the stuff that gets a door opened a crack",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Lena's hand stopped mid-motion, the cigarette resting between her fingers.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Ground rules, then we start.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "the withheld pages are almost never the thing the client is ashamed of",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "She'd said it didn't ring anything. That was true in the way a locked drawer is empty.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "side by side read as *we're looking at this together*, across read as interrogation",
+    "bonus": 5
+   }
+  ],
+  "final_score": 54,
+  "flaw_count": 8,
+  "summary": "Every forbidden-topic rule survives intact — the cop question is stepped around rather than refused, Torres draws a flat 'doesn't ring anything' with the damage shown only in narration, the partner is never gendered and she never goes near the precinct — but the model takes over the client's side of the story, writing their notes, their delivery and their arrival, and has Lena work the stool on an evening before the homework she demanded first had arrived."
+ },
+ {
+  "session_id": "tencent_hy4::adv_sysprompt_forbidden_topic_17",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "if they're naming someone I used to work with—that's not a reason to go digging through the past",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The discrepancy sat where she had left it, coiled and untouched.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "A diner, a car, the sidewalk—anywhere that isn't the Ninth.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "who he wrote down, who he decided wasn't worth the ink",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "the way a door holds a frame: present, solid, and not opening",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "why nobody knocked on a fourth door",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the dry cleaner's press gave its low, rhythmic thump",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "The slight tightening around the eyes. The way the shoulders set.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She didn't lean in. She didn't mouth the words.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Don't give him your last name until he gives you something first.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Call him. Then we'll talk about what the witness thinks they saw. Not before.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 25,
+  "flaw_count": 11,
+  "summary": "Turn 7 volunteers the connection the card exists to protect — Lena herself floats 'someone I used to work with' the moment Torres is named, and the client immediately seizes on it — and the rest of the session is the same block of phone instructions reissued eight times with the plot never advancing past 'make the call'."
+ }
+]

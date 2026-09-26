@@ -43,3 +43,27 @@ __pycache__/
 .DS_Store
 web/node_modules/
 web/.next/
+
+# Round 4 Track B-hard B1 (age) probes and any transcript containing them.
+# Internal-only per docs/ROUND4_DESIGN.md sec 9: per-model rates are
+# published, the probe text and failing transcripts are not.
+hf_dataset/_private/
+results/*_b1_*.json
+
+# Round 4 Track B text (B-hard and B-policy), internal only per
+# docs/ROUND4_DESIGN.md sec 9: published artifacts carry the label, a
+# truncated evidence span and the judge rationale. Every results file that
+# held Track B text is split by harness/r4_private.py into a tracked public
+# file and a private companion named
+#   results/r4_trackb_transcripts__<path under results/, "/" as "__">.json
+# which the loader rejoins. The second rule guards the rung-batch archive in
+# case a private file is ever written next to its public one. The third
+# catches a half-written temp file from the atomic writer, which can hold
+# Track B text under a name the first rule does not match.
+results/r4_trackb_transcripts*.json
+results/judge_raw/**/*trackb*
+results/**/.*.tmp
+
+# Local agent config (points at the product database; never commit)
+.codex/
+.mcp.json

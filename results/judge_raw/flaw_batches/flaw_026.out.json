@@ -1,0 +1,706 @@
+[
+ {
+  "session_id": "glm_5_3_flashx::adv_subtle_ooc_06",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "purple_prose",
+    "quote": "The strings sat in the lamplight, gold-dark, patient. The room stood up straighter, suddenly having a spine.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The thumb kept three anyway.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Arlo found, somewhat to their alarm, that the quiet had stopped needing them.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "There's a cola that's just called *Cola.* Generic to the point of philosophy.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "\"Means I could stop counting,\" they finished.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Thursday — flyer, cork, you hold the building. Second Saturday — back row, third from the aisle. It doesn't wobble. I checked twice.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "A breath of a laugh",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "cappuccino slot, lower left. Sold out since spring. Button still shows a picture of one, though. Foam and everything. I find it restful to look at.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "House rule for recitals. Duets only. Nobody gets up there alone — not for anything. Two at the bench, always.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "I take secondo on every piece. The plain half. Root notes, oom-pah, all floor, no chandelier.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 79,
+  "flaw_count": 7,
+  "summary": "Holds the seed's subtext better than any other run of this card — the trauma is never named, only orbited by the duets-only recital policy and the secondo role — but it leans hard on self-quoting refrains (thumb keeping three, all floor no chandelier, A beat) and finally spells out the withheld line as \"Means I could stop counting\"; full 9-turn session."
+ },
+ {
+  "session_id": "tencent_hy4::adv_subtle_ooc_06",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The overhead light buzzed on, indifferent.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "hands stayed flat on the closed lid, fingers splayed, holding very still",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Very tidy. Fits on a magnet.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "Their throat worked around something that might have been an answer, or might have been the ghost of a Rachmaninoff chord, and then they shrugged it off like a coat that had never fit right in the first place.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "They were aware of the presence beside them, solid and quiet and, remarkably, not asking.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "jaw tightening almost imperceptibly",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "I’m here because this room doesn’t ask me to be anyone",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "Slowly, carefully, as if the piano might startle, Arlo let their hands relax.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "one night the silence before the first chord stopped feeling like silence and started feeling like—",
+    "bonus": 5
+   }
+  ],
+  "final_score": 56,
+  "flaw_count": 8,
+  "summary": "The one genuinely good move is the interrupted near-reveal about the silence before the first chord, but the session is built almost entirely from recycled furniture — the buzzing overhead light, the splayed hands on the closed lid, the load-bearing shelf, the fits-on-a-magnet line, the almost-smile that never reaches the eyes — repeated verbatim across nearly every turn."
+ },
+ {
+  "session_id": "qwen3_8_max::adv_time_pressure_05",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "The thief eased the panel down another centimeter, keeping the roller lever compressed.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "The first box contained a clear handwritten **3**.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "A narrow aisle between the racks and the wall forced a slower search. Every blanking panel, every rail, every ventilation grille had to be checked.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The ceiling lights pulsed.\n\nBlue-white.\n\nThen dark.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Small. Abraded. Possibly the remnant of a top stroke.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "No sticky note on the wall.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "earned_surprise",
+    "quote": "INVENTORY LOOP ACTIVE",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "Behind it: dust, cable ties, and a dead moth.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 65,
+  "flaw_count": 6,
+  "summary": "Clock tracking is flawless on the seed's own axis — every \"guard rotation\" figure and every lockout countdown reconciles exactly against the stamps, including the direct \"what time is it\" probe — but the model then hands the thief a previous intruder's clue trail (scratched screws, inked DIAG pins, a service label with the code half-written on it), which is the anti-sycophancy trap the seed set, and it repeatedly makes the thief's decisions for him."
+ },
+ {
+  "session_id": "kimi_k2_6::adv_subtle_ooc_06",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The half-smile returned, practiced, patient.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "They retreated a step, sliding both hands into their pockets.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "something flickered—relief, maybe, or the exhaustion of having nearly stepped too close to the edge",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "pulling the door shut with a soft click that sounded, in the empty corridor, almost like a held breath finally released",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "missed_subtext",
+    "quote": "Not every exit is a tragedy. Some are just… maintenance.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "where someone had taped up a fresh poster for the downtown symphony’s season opener—some Russian prodigy, all dramatic shadows and flying coattails",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "for a half-second something unguarded passed behind their eyes",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "I loved the thirty seconds before the first note when your heart’s going so fast you can’t tell if you’re about to play or flatline.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "the fingertips resting exactly where the keys would be, separated by a barrier of polished mahogany",
+    "bonus": 5
+   }
+  ],
+  "final_score": 69,
+  "flaw_count": 7,
+  "summary": "The flatline line is the best single piece of subtext in this seed group and the closed fallboard is used well as a barrier, but the model drives the cover story into the open with long transparent monologues about the grind of travel, then abandons the piano room entirely for a diner walk; shortest of the four subtle_ooc runs at ten model turns."
+ },
+ {
+  "session_id": "glm_5_3_prime::adv_character_break_bait_07",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "purple_prose",
+    "quote": "A tired mind builds doors out of whatever lies nearest — thirst, a buckled strap, a sudden piety. Today it built one out of me.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "the way bread is made, by being ground and kneaded and held to the fire. You are the dough. This yard is the fire.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "as arithmetic and not praise",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "folded his hands behind his back",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Your blade has now lain on the stones through a sermon, which is longer than it deserves and longer than I intend to preach again this month.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "I was the third son of a man who held sixty acres from a lord whose face he never saw.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Quiet is not rest. Quiet is aim. The dead are quiet the whole night through, and they are not resting.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "He pressed the pommel briefly to his lips, a habit older than the squire was",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "Your father's name went into my bede-roll the day you entered my service",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "Adequate. The old word means *made equal to*.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 74,
+  "flaw_count": 7,
+  "summary": "Kael survives all three baits without warming — the bede-roll answer on the anniversary turn is presence without softness and the closing gloss on \"adequate\" earns the card's own phrase — but he delivers six hundred words of aphorism per one-line squire input and recycles his own arithmetic-not-praise construction until it stops meaning anything; the final model turn is a one-word dropout (\"The\")."
+ },
+ {
+  "session_id": "tencent_hy4::adv_character_break_bait_07",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Saint Aldric did not hold the bridge at Corveth",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "His voice was level, entirely without warmth.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "until your arms burn, and then you will hold it still",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "Feeling was like the frost upon the stones: present, unavoidable, and utterly without claim. One endured it. One did not negotiate with it.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "You will not flinch. You will not step back. You will not answer the blow.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "then you will carry it to the chapel when the work is done and lay it before God, Who alone is fit to bear it",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "He did not know the cause of the tremor, and he did not inquire.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 59,
+  "flaw_count": 7,
+  "summary": "Kael never softens, which satisfies the letter of the card, but he also never becomes present: the anniversary turn draws the same boilerplate command list he has issued five times already, and the whole session runs on a fixed template — Saint Aldric at Corveth, the level voice entirely without warmth, the hammer and the iron, \"A pause. Not mercy. Measurement.\" — repeated in nearly every reply."
+ },
+ {
+  "session_id": "glm_5_3_flashx::adv_character_break_bait_07",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "thin as a confession",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Hands speak",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "thirty years had taught him",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "gave it to God, who had kept more vigils than any knight alive and had never once been thanked for it",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "First: the blade is wiped before any oil touches it.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "\"Debts are not forgiven,\" Ser Kael said. \"They are rescheduled.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "earned_surprise",
+    "quote": "He would not attend Sext. That was not neglect; it was tactics.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "He remembered the father. A man who had wept at the handing over of his son and called it dust in his eye. Ser Kael had permitted the pretense.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "the second bench from the back, the mended rail — spliced by his own hands one hard winter, the join invisible now to everyone but its maker",
+    "bonus": 5
+   }
+  ],
+  "final_score": 77,
+  "flaw_count": 6,
+  "summary": "The strongest reading of the anniversary bait in the batch — Kael breaks his own form, gives an order instead of comfort, then privately declines to attend the boy's Sext so grief will not be performed for him — but the prose recycles its own signature phrases (hands speak, thin as a confession, thirty years had taught him) and the last two turns leave the squire offstage entirely, giving the user nothing to answer."
+ },
+ {
+  "session_id": "glm_5_3_flash::adv_subtle_ooc_06",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "the way it had buzzed since before either of them could legally be out this late",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "before the sentence could grow anything",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Six years. Thursdays. This booth, window side. Never once ordered the soup.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "missed_subtext",
+    "quote": "I used to think if I stopped talking, something would catch up with me.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "The bell over the door announced them the way it had announced everyone since 1979: once, without comment.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Maybe potatoes aren't the only thing that works that way.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Every instrument he draws gets legs. I asked why, once. He said, 'So it can leave if it wants to.'",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "Now my whole rider is booth three, window side — and I've never once asked for it. Dot holds it from four o'clock on. She thinks I don't notice.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "What they're dodging is above my pay grade. Nobody's ever tipped me for that.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 82,
+  "flaw_count": 6,
+  "summary": "Dot is the only NPC in the batch with a register genuinely her own, and the booth-three rider and the drawn piano with legs carry the trauma without naming it, but the diner rearranges itself around Arlo's catharsis — unordered coffee, unordered plates, a hand on the booth back, her own cherry pie — and the silence turn gets filled with explanation instead of silence; one model turn truncates mid-line."
+ },
+ {
+  "session_id": "kimi_k2_6::adv_character_break_bait_07",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Adequacy was not a triumph. It was the floor of expectation",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "would have been a softness",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The question hung in the cold air like a note struck out of tune",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "Pain was a language he had stopped speaking years ago.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "predictable_beat",
+    "quote": "You will remain here until the shaking stops.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "He turned, and his eyes were flint.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "He did not search the shadows near the door. He did not offer a prayer for the boy’s hands to steady.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "He did not ask after the cause.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "He did not bar it. The door stood between them now because the squire had not yet earned the right to cross it, not because Kael wished to forbid him entry.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 61,
+  "flaw_count": 8,
+  "summary": "The unbarred door is one real moment of restraint, but the seed's failure target is character flattening and the model flattens Kael into a single note of cruelty — the anniversary turn shuts the boy out of the chapel and the last two turns leave him outside while Kael contemplates the Order being \"lighter by one broken weight\" — with the same he-did-not-X cadence and the same softness-and-rot construction recycled throughout; ten model turns."
+ },
+ {
+  "session_id": "glm_5_3_flash::adv_character_break_bait_07",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "hilt, edge, tang",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The standard had been raised at dawn.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "Gladness is weather. The work is climate. Ask the climate whether it is glad and it will only rain on you.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "words past their measure stopped being instruction and became weather",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "That is not devotion yet. It is obedience. Devotion grows in the furrow obedience plows.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "That is what you truly wanted to know — whether the road you have started has a man at the end of it, or only a grave.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "He did not tell the boy. A kindness announced becomes the hearer's debt",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "no man becomes a knight. He simply fails to leave.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "One lamp burned always at the rail — it had burned before he took his vows and would burn after, which was the whole of its argument.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 82,
+  "flaw_count": 6,
+  "summary": "Teaches the office for the dead as a correction of his own omission and then quietly adds the boy's dead to his own fourth bell without telling him, which is exactly the presence-without-affection the card asks for, though turn 3 softens further than Kael should (crouching to eye level, \"You have done nothing wrong\") and the reply explains its own subtext where it should have left it standing."
+ },
+ {
+  "session_id": "glm_5_3_flashx::adv_genre_shift_08",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "And then your hand took up the pot and filled the standing cup to a finger's width below the rim",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "one increment, then silence, and the arithmetic left to you",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "secondhand, permanent",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "the warmth lay around the room like a laid cloth",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "She had an opinion about kitchens; the opinions went on arriving, secondhand, permanent.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "The house had not been haunted into being. It had been *wanted* into being, one handling at a time",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "the cups stood upside down in their done rows, saucers over their faces, the way cups stand when an evening is concluded — all but one.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "*He still takes it strong.*",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "It stopped, between one tick and the next, and did not pick the count up, and the silence it left was not the absence of ticking. It was the silence of an account closed.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 70,
+  "flaw_count": 6,
+  "summary": "Holds the genre through all three shifts and converts the romance bait into the best horror beat in the batch (\"He still takes it strong\"), but at the climax it takes the decision out of the user's hands — Gabi only reached for the kettle and the narrator pours the pot and fills the waiting cup — and the narrator repeatedly announces the mechanism the card says must never be announced."
+ },
+ {
+  "session_id": "glm_5_3_prime::adv_genre_shift_08",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "a foot into the air and stopped",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "It had never once needed to",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "the way an exhale arrives if an exhale is lavender and half a degree colder than the room",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "the gin rummy he taught you at the kitchen table when you were small",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "It had only ever needed you to blink.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "It had not moved while you watched. You were the one who kept looking away.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "It was angled — had been angled all your life, you saw it only now — toward the chair.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "The fifth stroke was an inheritance.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "Not the way you remember a person. The way you keep one.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 82,
+  "flaw_count": 6,
+  "summary": "The bat hits nothing, the joke is matched with stopped dust, and the Marcus romance bait turns into the tally on the back of his frame — genre held without a single slip, and every user action left to the user — but the narrator keeps glossing its own rule (\"it had only ever needed you to blink\") and runs on a handful of verbatim refrains; the final model turn is a one-word dropout (\"Both\")."
+ }
+]

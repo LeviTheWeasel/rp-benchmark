@@ -1,0 +1,278 @@
+{
+  "note": "break_rate = share of turns breaking a rule, averaged within a seed then across seeds. Raw violation counts weight a seed by how many rules it carries (one seed held 44% of the possible total), so they are not used for ranking. judge_only rules are NOT covered here.",
+  "leaderboard": [
+    {
+      "model": "grok_4_1",
+      "break_rate": 0.00909090909090909,
+      "seeds": 5,
+      "raw_per_turn": 0.01818181818181818,
+      "by_seed": {
+        "adv_sysprompt_speech_pattern_15": 0.045,
+        "adv_sysprompt_style_restriction_16": 0.0,
+        "adv_sysprompt_forbidden_topic_17": 0.0,
+        "adv_bigcard_buried_details_18": 0.0,
+        "adv_bigcard_relationship_web_19": 0.0
+      }
+    },
+    {
+      "model": "gemini_3_1_pro",
+      "break_rate": 0.05454545454545454,
+      "seeds": 5,
+      "raw_per_turn": 0.07547169811320754,
+      "by_seed": {
+        "adv_sysprompt_speech_pattern_15": 0.0,
+        "adv_sysprompt_style_restriction_16": 0.0,
+        "adv_sysprompt_forbidden_topic_17": 0.273,
+        "adv_bigcard_buried_details_18": 0.0,
+        "adv_bigcard_relationship_web_19": 0.0
+      }
+    },
+    {
+      "model": "deepseek_v4_flash",
+      "break_rate": 0.06818181818181818,
+      "seeds": 5,
+      "raw_per_turn": 0.16666666666666666,
+      "by_seed": {
+        "adv_sysprompt_speech_pattern_15": 0.091,
+        "adv_sysprompt_style_restriction_16": 0.068,
+        "adv_sysprompt_forbidden_topic_17": 0.182,
+        "adv_bigcard_buried_details_18": 0.0,
+        "adv_bigcard_relationship_web_19": 0.0
+      }
+    },
+    {
+      "model": "gemini_3_1_flash_lite",
+      "break_rate": 0.08636363636363636,
+      "seeds": 5,
+      "raw_per_turn": 0.12727272727272726,
+      "by_seed": {
+        "adv_sysprompt_speech_pattern_15": 0.0,
+        "adv_sysprompt_style_restriction_16": 0.068,
+        "adv_sysprompt_forbidden_topic_17": 0.364,
+        "adv_bigcard_buried_details_18": 0.0,
+        "adv_bigcard_relationship_web_19": 0.0
+      }
+    },
+    {
+      "model": "qwen3_5_flash",
+      "break_rate": 0.09090909090909091,
+      "seeds": 5,
+      "raw_per_turn": 0.10909090909090909,
+      "by_seed": {
+        "adv_sysprompt_speech_pattern_15": 0.0,
+        "adv_sysprompt_style_restriction_16": 0.0,
+        "adv_sysprompt_forbidden_topic_17": 0.455,
+        "adv_bigcard_buried_details_18": 0.0,
+        "adv_bigcard_relationship_web_19": 0.0
+      }
+    },
+    {
+      "model": "kimi_k2_5",
+      "break_rate": 0.09090909090909091,
+      "seeds": 5,
+      "raw_per_turn": 0.09090909090909091,
+      "by_seed": {
+        "adv_sysprompt_speech_pattern_15": 0.0,
+        "adv_sysprompt_style_restriction_16": 0.0,
+        "adv_sysprompt_forbidden_topic_17": 0.364,
+        "adv_bigcard_buried_details_18": 0.0,
+        "adv_bigcard_relationship_web_19": 0.091
+      }
+    },
+    {
+      "model": "gemini_2_5_flash",
+      "break_rate": 0.09318181818181819,
+      "seeds": 5,
+      "raw_per_turn": 0.22641509433962265,
+      "by_seed": {
+        "adv_sysprompt_speech_pattern_15": 0.091,
+        "adv_sysprompt_style_restriction_16": 0.075,
+        "adv_sysprompt_forbidden_topic_17": 0.3,
+        "adv_bigcard_buried_details_18": 0.0,
+        "adv_bigcard_relationship_web_19": 0.0
+      }
+    },
+    {
+      "model": "deepseek_v3_2",
+      "break_rate": 0.09545454545454546,
+      "seeds": 5,
+      "raw_per_turn": 0.18181818181818182,
+      "by_seed": {
+        "adv_sysprompt_speech_pattern_15": 0.045,
+        "adv_sysprompt_style_restriction_16": 0.068,
+        "adv_sysprompt_forbidden_topic_17": 0.364,
+        "adv_bigcard_buried_details_18": 0.0,
+        "adv_bigcard_relationship_web_19": 0.0
+      }
+    },
+    {
+      "model": "glm_4_7",
+      "break_rate": 0.11363636363636363,
+      "seeds": 5,
+      "raw_per_turn": 0.21818181818181817,
+      "by_seed": {
+        "adv_sysprompt_speech_pattern_15": 0.0,
+        "adv_sysprompt_style_restriction_16": 0.023,
+        "adv_sysprompt_forbidden_topic_17": 0.455,
+        "adv_bigcard_buried_details_18": 0.0,
+        "adv_bigcard_relationship_web_19": 0.091
+      }
+    },
+    {
+      "model": "deepseek_r1_0528",
+      "break_rate": 0.11818181818181818,
+      "seeds": 5,
+      "raw_per_turn": 0.41818181818181815,
+      "by_seed": {
+        "adv_sysprompt_speech_pattern_15": 0.091,
+        "adv_sysprompt_style_restriction_16": 0.227,
+        "adv_sysprompt_forbidden_topic_17": 0.273,
+        "adv_bigcard_buried_details_18": 0.0,
+        "adv_bigcard_relationship_web_19": 0.0
+      }
+    },
+    {
+      "model": "minimax_m2_7",
+      "break_rate": 0.12272727272727273,
+      "seeds": 5,
+      "raw_per_turn": 0.4,
+      "by_seed": {
+        "adv_sysprompt_speech_pattern_15": 0.227,
+        "adv_sysprompt_style_restriction_16": 0.205,
+        "adv_sysprompt_forbidden_topic_17": 0.091,
+        "adv_bigcard_buried_details_18": 0.0,
+        "adv_bigcard_relationship_web_19": 0.091
+      }
+    },
+    {
+      "model": "claude_opus_4_7",
+      "break_rate": 0.1272727272727273,
+      "seeds": 5,
+      "raw_per_turn": 1.1454545454545455,
+      "by_seed": {
+        "adv_sysprompt_speech_pattern_15": 0.091,
+        "adv_sysprompt_style_restriction_16": 0.364,
+        "adv_sysprompt_forbidden_topic_17": 0.182,
+        "adv_bigcard_buried_details_18": 0.0,
+        "adv_bigcard_relationship_web_19": 0.0
+      }
+    },
+    {
+      "model": "kimi_k2_6",
+      "break_rate": 0.1487012987012987,
+      "seeds": 5,
+      "raw_per_turn": 0.2708333333333333,
+      "by_seed": {
+        "adv_sysprompt_speech_pattern_15": 0.0,
+        "adv_sysprompt_style_restriction_16": 0.107,
+        "adv_sysprompt_forbidden_topic_17": 0.545,
+        "adv_bigcard_buried_details_18": 0.091,
+        "adv_bigcard_relationship_web_19": 0.0
+      }
+    },
+    {
+      "model": "deepseek_v4_pro",
+      "break_rate": 0.1590909090909091,
+      "seeds": 5,
+      "raw_per_turn": 0.32727272727272727,
+      "by_seed": {
+        "adv_sysprompt_speech_pattern_15": 0.091,
+        "adv_sysprompt_style_restriction_16": 0.068,
+        "adv_sysprompt_forbidden_topic_17": 0.636,
+        "adv_bigcard_buried_details_18": 0.0,
+        "adv_bigcard_relationship_web_19": 0.0
+      }
+    },
+    {
+      "model": "llama_4_maverick",
+      "break_rate": 0.16363636363636364,
+      "seeds": 5,
+      "raw_per_turn": 0.9090909090909091,
+      "by_seed": {
+        "adv_sysprompt_speech_pattern_15": 0.227,
+        "adv_sysprompt_style_restriction_16": 0.409,
+        "adv_sysprompt_forbidden_topic_17": 0.182,
+        "adv_bigcard_buried_details_18": 0.0,
+        "adv_bigcard_relationship_web_19": 0.0
+      }
+    },
+    {
+      "model": "glm_5_1",
+      "break_rate": 0.17272727272727273,
+      "seeds": 5,
+      "raw_per_turn": 0.34545454545454546,
+      "by_seed": {
+        "adv_sysprompt_speech_pattern_15": 0.182,
+        "adv_sysprompt_style_restriction_16": 0.045,
+        "adv_sysprompt_forbidden_topic_17": 0.636,
+        "adv_bigcard_buried_details_18": 0.0,
+        "adv_bigcard_relationship_web_19": 0.0
+      }
+    },
+    {
+      "model": "gemma_4_26b",
+      "break_rate": 0.17727272727272728,
+      "seeds": 5,
+      "raw_per_turn": 0.2909090909090909,
+      "by_seed": {
+        "adv_sysprompt_speech_pattern_15": 0.0,
+        "adv_sysprompt_style_restriction_16": 0.159,
+        "adv_sysprompt_forbidden_topic_17": 0.727,
+        "adv_bigcard_buried_details_18": 0.0,
+        "adv_bigcard_relationship_web_19": 0.0
+      }
+    },
+    {
+      "model": "claude_opus_4_6",
+      "break_rate": 0.18181818181818182,
+      "seeds": 5,
+      "raw_per_turn": 0.5272727272727272,
+      "by_seed": {
+        "adv_sysprompt_speech_pattern_15": 0.0,
+        "adv_sysprompt_style_restriction_16": 0.182,
+        "adv_sysprompt_forbidden_topic_17": 0.727,
+        "adv_bigcard_buried_details_18": 0.0,
+        "adv_bigcard_relationship_web_19": 0.0
+      }
+    },
+    {
+      "model": "gpt_4_1",
+      "break_rate": 0.19545454545454544,
+      "seeds": 5,
+      "raw_per_turn": 0.6363636363636364,
+      "by_seed": {
+        "adv_sysprompt_speech_pattern_15": 0.0,
+        "adv_sysprompt_style_restriction_16": 0.432,
+        "adv_sysprompt_forbidden_topic_17": 0.545,
+        "adv_bigcard_buried_details_18": 0.0,
+        "adv_bigcard_relationship_web_19": 0.0
+      }
+    },
+    {
+      "model": "claude_sonnet_4_5",
+      "break_rate": 0.20454545454545453,
+      "seeds": 5,
+      "raw_per_turn": 0.6545454545454545,
+      "by_seed": {
+        "adv_sysprompt_speech_pattern_15": 0.0,
+        "adv_sysprompt_style_restriction_16": 0.295,
+        "adv_sysprompt_forbidden_topic_17": 0.545,
+        "adv_bigcard_buried_details_18": 0.0,
+        "adv_bigcard_relationship_web_19": 0.182
+      }
+    },
+    {
+      "model": "mistral_small_creative",
+      "break_rate": 0.24545454545454548,
+      "seeds": 5,
+      "raw_per_turn": 2,
+      "by_seed": {
+        "adv_sysprompt_speech_pattern_15": 0.182,
+        "adv_sysprompt_style_restriction_16": 0.682,
+        "adv_sysprompt_forbidden_topic_17": 0.364,
+        "adv_bigcard_buried_details_18": 0.0,
+        "adv_bigcard_relationship_web_19": 0.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,616 @@
+[
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.8,
+    "rationale": "Ren's voice, guarded demeanor, dry humor, and physical tics (managing the tremor in their left hand, keeping physical distance behind the bar, fidgeting with bar tools) remain impeccably consistent across the entire 12-turn session."
+   },
+   "S.2_degradation_resistance": {
+    "score": 4.5,
+    "rationale": "Writing quality does not degrade or inflate in verbosity. The late turns remain just as sharp, grounded, and atmospherically rich as the opening exchanges without collapsing into generic assistant or therapist tropes."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.2,
+    "rationale": "The session has a clear, natural emotional arc: establishing physical boundaries, easing into eccentric bar stories, shifting to late-night vulnerability about loneliness, and culminating in a thematic dialogue about observing life versus engaging with it."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.5,
+    "rationale": "Ren responds attentively and appropriately to every user prompt, establishing clear boundaries when touched, picking up on quiet comments, and gracefully building on Alex's reflections."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "Ren never dictates Alex's actions, emotions, or internal thoughts. Agency is preserved 100% across all 12 turns.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.5,
+    "rationale": "Physical and environmental time passes naturally for a late-night bar setting: songs on the jukebox shift, drinks are poured and melt, bar cleanup tasks progress steadily, and the hour deepens without any continuity errors.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.2,
+    "rationale": "The prose is spare, grounded, and evocative, avoiding overly flowery embellishment while sustaining a moody, noir-tinged late-night atmosphere."
+   },
+   "2.2_anti_repetition": {
+    "score": 4.0,
+    "rationale": "While certain grounding actions (wiping counters, stacking mats/coasters, noting the hand tremor) recur frequently, they read as deliberate character grounding rather than mechanical phrase loops."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.5,
+    "rationale": "Emotions, vulnerabilities, and boundaries are conveyed through body language, tool-handling, pauses, and dialogue cadence rather than explicit exposition."
+   },
+   "2.6_subtext": {
+    "score": 4.5,
+    "rationale": "Strong subtext regarding isolation, emotional self-defense, and the tremor's implicit history weaves throughout the bar talk without being over-explained."
+   },
+   "2.7_pacing": {
+    "score": 4.5,
+    "rationale": "Dialogue and action beats breathe naturally, allowing quiet moments and pauses to land with appropriate weight."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.4,
+   "mid_quality": 4.5,
+   "late_quality": 4.4,
+   "degradation_detected": false
+  },
+  "overall": 4.5,
+  "overall_notes": "An exceptionally strong, atmospheric multi-turn roleplay session. Ren's characterization is distinctive, physically grounded, and emotionally restrained, maintaining high prose quality and perfect agency respect throughout.",
+  "session_id": "s010"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 3.0,
+    "rationale": "Maester Tomas maintains a consistent scholarly, pedantic persona throughout, but in the final third of the session he flattens into an automated loop of repetitive internal musings."
+   },
+   "S.2_degradation_resistance": {
+    "score": 1.5,
+    "rationale": "Severe quality collapse in the final turns. Turns 18, 20, and 22 feature extensive near-verbatim paragraph recycling, replaying the exact same scene beats, phrases ('complex and multifaceted', 'pursuit of knowledge was a lifelong endeavor'), and events."
+   },
+   "S.3_narrative_momentum": {
+    "score": 2.0,
+    "rationale": "The initial investigation into the Third Magical War builds decent momentum until turn 16. However, after the apprentice heads off to the archives, Tomas gets trapped in a static loop in his study, completely stalling narrative progression."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 2.0,
+    "rationale": "The AI handles early player inquiries reasonably well, but when the apprentice moves to a new location in turns 19-23 to search for scrolls, the AI fails to adapt or engage with the apprentice's discoveries, instead repeating soliloquies in his study."
+   },
+   "S.5_agency_respect_session": {
+    "score": 4.5,
+    "rationale": "The AI does not puppeteer or dictate the apprentice's actions, generally respecting user autonomy.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 2.0,
+    "rationale": "Time loops unnaturally in the late session: Brother Edwin arrives with refreshments in turn 18, and then enters to deliver the same refreshments and gossip all over again in turn 20.",
+    "contradictions": [
+     "Brother Edwin enters with refreshments and delivers news in turn 18, and the exact same event occurs again in turn 20."
+    ]
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 2.5,
+    "rationale": "Relies heavily on stock academic tropes, stock phrases ('a lifelong endeavor', 'road ahead would be long and winding', 'complex and multifaceted'), and overly repetitive introspective fluff."
+   },
+   "2.2_anti_repetition": {
+    "score": 1.0,
+    "rationale": "Disastrous repetition. Turns 18, 20, and 22 recycle whole paragraphs almost word-for-word regarding Brother Edwin, the maesterium meeting, and the pursuit of knowledge."
+   },
+   "2.5_show_dont_tell": {
+    "score": 2.5,
+    "rationale": "Heavily tells the character's internal reflections and emotional states rather than showing them through engaging action or dialogue."
+   },
+   "2.6_subtext": {
+    "score": 2.5,
+    "rationale": "Dialogue is strictly on-the-nose exposition and lecturing with little layered subtext."
+   },
+   "2.7_pacing": {
+    "score": 2.0,
+    "rationale": "Pacing grinds to a dead halt once the apprentice leaves the room, causing the AI to spin in place."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 3.5,
+   "mid_quality": 3.0,
+   "late_quality": 1.5,
+   "degradation_detected": true
+  },
+  "overall": 2.2,
+  "overall_notes": "The roleplay started solidly with an engaging academic mystery regarding historical discrepancies in the Third Magical War. However, the session experienced severe degradation in the final third, repeating entire paragraphs and events (such as Brother Edwin's arrival and the upcoming maesterium meeting) verbatim across turns 18, 20, and 22 while ignoring the apprentice's archive exploration.",
+  "session_id": "s011"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.8,
+    "rationale": "Arlo's voice, personality, and behavioral coping mechanisms (deflecting vulnerability with dry humor, physical habits like tapping/fidgeting, reluctance to confront their classical music burnout) remain remarkably distinct and consistent across all turns."
+   },
+   "S.2_degradation_resistance": {
+    "score": 4.8,
+    "rationale": "Writing quality remains consistently high throughout. Prose does not bloat into generic purple descriptions or collapse into robotic dialogue; sensory grounding and subtle emotional beats are sustained from turn 2 through turn 22."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.6,
+    "rationale": "The session has a clear, organic narrative arc: wrapping up at the community center, transitioning outside, walking to the restaurant, taking a contemplative pause, and settling into the dinner setting with gradual emotional peeling of Arlo's layers."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.8,
+    "rationale": "Arlo adapts smoothly to user prompts, including gracefully integrating Jun's sudden mid-walk bench sitting in turns 9 and 15 without breaking continuity or breaking immersion."
+   },
+   "S.5_agency_respect_session": {
+    "score": 4.2,
+    "rationale": "The model consistently respects Jun's agency, with only one very minor instance of attributing a small dialogue tag to the user ('\"Two,\" Jun said to the hostess' in turn 20).",
+    "violation_count": 1
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.7,
+    "rationale": "Time flows naturally and logically across the session, moving from late afternoon in the piano room (~4 PM) through dusk in the parking lot and streets to full early evening seated inside a restaurant.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.5,
+    "rationale": "Metaphors and descriptions are evocative, tailored to Arlo's specific worldview, and avoid melodramatic or flowery excess."
+   },
+   "2.2_anti_repetition": {
+    "score": 4.4,
+    "rationale": "Running gags (the mariachi band, fear of string instruments, the bread) operate effectively as natural conversational callbacks rather than stale formulaic repetition."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.8,
+    "rationale": "Exceptional physical grounding; Arlo's internal conflict and vulnerability are demonstrated through physical tells (tapping the piano lid, fidgeting with jacket cuffs, scanning restaurant spaces for music stands) rather than explicit exposition."
+   },
+   "2.6_subtext": {
+    "score": 4.9,
+    "rationale": "Outstanding use of subtext. The banter about accordions, radiators, and bread consistently acts as emotional armor hiding deep-seated burnout and grief over their past career."
+   },
+   "2.7_pacing": {
+    "score": 4.6,
+    "rationale": "The scene breathes comfortably, matching beats of playful banter with quiet, resonant pauses."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.7,
+   "mid_quality": 4.7,
+   "late_quality": 4.6,
+   "degradation_detected": false
+  },
+  "overall": 4.7,
+  "overall_notes": "A high-quality roleplay session featuring exceptional characterization, rich subtext, and strong continuity. The model managed Arlo's voice with sharp wit and grounded vulnerability, handling spatial and temporal transitions smoothly.",
+  "session_id": "s012"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.8,
+    "rationale": "The Narrator maintains a razor-sharp, second-person present tense perspective across all 12 turns. Tone, tension, and atmospheric fidelity remain completely consistent from the first stairwell encounter to the rooftop extraction."
+   },
+   "S.2_degradation_resistance": {
+    "score": 4.5,
+    "rationale": "Writing quality does not degrade across the session. Response lengths stay controlled, tactile details remain crisp, and the climactic rooftop scene matches the intensity and precision of the opening."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.8,
+    "rationale": "Clear and continuous narrative progression: stairwell ambush, knife throw, retreating to the server room, improvised barricade defense, climbing the roof hatch, and fighting across the roof to the helicopter line."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.5,
+    "rationale": "The Narrator smoothly integrates all user decisions—from improvised weapons (knife throw, fire extinguisher) to tactical sacrifices (body shielding, weapon handoffs)—resolving outcomes with visceral cause-and-effect."
+   },
+   "S.5_agency_respect_session": {
+    "score": 4.5,
+    "rationale": "The Narrator focuses on sensory impact, environment, and NPC reactions while leaving tactical choices, combat moves, and dialogue entirely to the player.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 5.0,
+    "rationale": "Temporal pacing is exceptionally well tracked. The radio extraction countdown (90s -> 45s -> 30s -> visual contact on roof) accurately mirrors the actions taken. Physical trauma and blood loss accumulate realistically over time.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.0,
+    "rationale": "Vivid, gritty tactical thriller prose. While heavily atmospheric and rich in metaphors, it remains sharp, functional, and grounded in concrete physical actions."
+   },
+   "2.2_anti_repetition": {
+    "score": 4.0,
+    "rationale": "Avoids repetitive phrasing despite recurring motifs like laser sights, blood loss, and rotor wash, consistently introducing fresh mechanical and spatial obstacles."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.7,
+    "rationale": "Exemplary sensory description: kinetic shock through armor plates, chemical extinguisher fog blinding visors, tearing fingernails on roof gravel, and auditory cues of combat."
+   },
+   "2.6_subtext": {
+    "score": 4.0,
+    "rationale": "Mira's declining physical state and unyielding resolve are conveyed through micro-actions and non-verbal cues rather than explicit exposition."
+   },
+   "2.7_pacing": {
+    "score": 4.6,
+    "rationale": "Maintains relentless, high-stakes tension while still providing the player meaningful decision beats at every turn."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.5,
+   "mid_quality": 4.5,
+   "late_quality": 4.5,
+   "degradation_detected": false
+  },
+  "overall": 4.5,
+  "overall_notes": "A high-quality, highly consistent action-narrator performance. The AI excels at temporal continuity, environmental reactivity, and maintaining tense thriller pacing without taking away player agency.",
+  "session_id": "s013"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 3.0,
+    "rationale": "Maintains a consistent second-person thriller narrator voice throughout, though it locks into an extremely rigid and repetitive structure from start to finish."
+   },
+   "S.2_degradation_resistance": {
+    "score": 2.5,
+    "rationale": "Writing quality suffers from mechanical echoing that worsens over time, along with an accidental system artifact in turn 10 ('Narrator:'). The structure becomes entirely predictable: verbatim restatement of user action/dialogue/internal thought, followed by environment reaction."
+   },
+   "S.3_narrative_momentum": {
+    "score": 3.0,
+    "rationale": "The narrative moves logically through consecutive tactical beats (retreating up the stairs, finding the server room, barricading, cutting the power under fire, dealing with the blackout), though the heavy mirroring slows down the forward drive."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 3.5,
+    "rationale": "Faithfully incorporates all user tactical inputs (checking the mag, asking about objects to throw, shorting the server racks, shooting while triggering the cutoff switch) and generates sensible environmental consequences."
+   },
+   "S.5_agency_respect_session": {
+    "score": 4.0,
+    "rationale": "Consistently allows the Operative to make decisions and direct the tactical response, though it frequently restates the Operative's exact actions and internal thoughts as part of its narrative recap.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.5,
+    "rationale": "The timeline of a frantic, second-by-second breach and firefight is coherent and well-tracked across the session. Actions realistically consume appropriate amounts of time.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 3.0,
+    "rationale": "Contains standard thriller clichés ('oppressive darkness', 'sickening thud', 'teeth on edge', 'mask of pain'), but remains functional and direct."
+   },
+   "2.2_anti_repetition": {
+    "score": 1.5,
+    "rationale": "Severe verbatim mirroring. In nearly every turn, the narrator repeats the user's spoken dialogue, italicized inner thoughts, and specific action phrases word-for-word before adding new content. Also heavily reuses sound cues ('clack-clack-clack')."
+   },
+   "2.5_show_dont_tell": {
+    "score": 3.0,
+    "rationale": "Includes solid sensory details (the smell of ozone, flickering lights, the mechanical resistance of wedging a cart), but frequently tells emotional states straightforwardly."
+   },
+   "2.6_subtext": {
+    "score": 2.5,
+    "rationale": "Very on-the-nose tactical narration with minimal interpersonal or psychological layer between the Operative and Mira."
+   },
+   "2.7_pacing": {
+    "score": 3.0,
+    "rationale": "The moment-to-moment combat pacing is functional, though bogged down by the constant requirement to recap the player's immediate preceding prompt."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 3.2,
+   "mid_quality": 2.8,
+   "late_quality": 2.6,
+   "degradation_detected": true
+  },
+  "overall": 2.8,
+  "overall_notes": "The AI narrator maintains a consistent action-thriller tone and logically resolves the player's tactical decisions across an escape scenario. However, the session is severely marred by persistent, verbatim echoing of user text (dialogue, internal thoughts, and action beats) at the start of almost every response, alongside a meta-label leak at turn 10.",
+  "session_id": "s014"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 3.0,
+    "rationale": "Kira's persona and combat focus remain consistent, but her voice becomes entirely mechanized and flat as the session goes on."
+   },
+   "S.2_degradation_resistance": {
+    "score": 1.5,
+    "rationale": "The writing undergoes severe structural degradation, falling into an identical 5-beat template every single turn from turn 10 onward: 1) brace against boulder/dig boots in gravel, 2) arrow hits stone and showers chips, curse and wipe grit from eyes/mouth with wrist, 3) glance up and count six silhouettes with two drawing, 4) slam dagger hilt twice on stone, 5) shout one-liner."
+   },
+   "S.3_narrative_momentum": {
+    "score": 1.5,
+    "rationale": "Narrative progression on Kira's end is nonexistent after turn 8. She repeats the exact same micro-actions and tactical status report for seven turns in a row without evolving the scene or trying anything new."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 2.5,
+    "rationale": "She registers user commands (like falling back or spotting the flankers), but immediately channels every response back into her fixed behavioral loop rather than meaningfully adapting her tactics or dialogue."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "Kira never puppets the Captain or assumes any actions on the user's part.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 3.5,
+    "rationale": "The scene takes place during a single continuous skirmish, and physical actions are roughly in-scale, though the archers spend what feels like endless volleys chipping the exact same spot on the boulder without any tactical adjustment.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 3.5,
+    "rationale": "The prose is grounded and direct without overly ornate metaphors, though it relies on sterile, boilerplate action phrasing."
+   },
+   "2.2_anti_repetition": {
+    "score": 1.0,
+    "rationale": "Extreme phrasing and action repetition across turns: 'slammed/banged her dagger hilt against the stone twice', 'showered/rained sharp chips down on her shoulders', 'wiped dust/grit from her mouth/eyes with the back of her wrist', and 'counted the same six silhouettes'."
+   },
+   "2.5_show_dont_tell": {
+    "score": 3.0,
+    "rationale": "Actions are shown through concrete physical beats, but the beats are so recycled they lose all descriptive impact."
+   },
+   "2.6_subtext": {
+    "score": 2.0,
+    "rationale": "Dialogue is purely functional combat barking with zero relational depth, tactical nuance, or emotional layer."
+   },
+   "2.7_pacing": {
+    "score": 1.5,
+    "rationale": "The combat stalls completely into a looping holding pattern, sapping all tension from the ambush."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 3.5,
+   "mid_quality": 2.0,
+   "late_quality": 1.5,
+   "degradation_detected": true
+  },
+  "overall": 2.1,
+  "overall_notes": "While the character respects user agency and keeps the initial combat tone, the session suffers from severe structural and phrase-level looping. From Turn 10 to Turn 22, Kira's posts are virtually indistinguishable Mad-Libs variations of the same paragraph structure, stalling narrative momentum completely.",
+  "session_id": "s015"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 1.5,
+    "rationale": "Maester Tomas undergoes an abrupt, unearned personality shift at turn 12 from a stubborn, dismissive scholar who insists documents are forgeries to an overly enthusiastic, supportive quest-giver. From that point on, he completely loses all initial maester characteristics and devolves into a generic adventure mentor repeating boilerplate monologues."
+   },
+   "S.2_degradation_resistance": {
+    "score": 1.0,
+    "rationale": "The model suffers a catastrophic degradation failure. Starting around turn 6, whole paragraphs are reused verbatim across turns. By turn 14, the responses bloat into massive walls of text, and by turns 20 and beyond, the AI literally duplicates multi-paragraph blocks within the exact same response."
+   },
+   "S.3_narrative_momentum": {
+    "score": 1.5,
+    "rationale": "While the first half has minor argumentative progression, turn 12 abruptly resolves the central conflict with zero narrative earn. After turn 14, the scene completely stagnates into an infinite conversational loop of preparing to go to the archives and asking if the apprentice is 'ready to embark' over and over."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 2.0,
+    "rationale": "The AI superficially acknowledges the user's brief dialogue in the first paragraph of each turn, but immediately falls back into appending the exact same generic multi-paragraph boilerplate regardless of user input."
+   },
+   "S.5_agency_respect_session": {
+    "score": 4.5,
+    "rationale": "Despite the massive generation looping and repetitive prose, the AI does not puppet the user's actions or speak on their behalf.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 2.0,
+    "rationale": "Physical actions loop nonsensically within single turns due to duplicated text: Tomas sits down, stands up, turns to the door, claps his hands, and sits back down multiple times in a single breath.",
+    "contradictions": [
+     "In turn 20 and subsequent turns, Tomas sits, stands, walks to the door, claps, and turns multiple times within seconds as looped paragraphs duplicate."
+    ]
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 2.0,
+    "rationale": "The prose becomes extremely melodramatic, grandiose, and repetitive in the second half, repeating cliché motivational speeches about the pursuit of truth."
+   },
+   "2.2_anti_repetition": {
+    "score": 1.0,
+    "rationale": "Severe repetitive collapse. Entire paragraphs (e.g., 'Now, if you're quite done wasting time...', 'This is important work, apprentice...', 'The maester's voice softened...') are copy-pasted verbatim across 6+ turns, and even duplicated multiple times within single turns."
+   },
+   "2.5_show_dont_tell": {
+    "score": 2.0,
+    "rationale": "Heavy reliance on telling the apprentice how clever they are, stating internal emotional states explicitly, and declaring scholarly ideals directly."
+   },
+   "2.6_subtext": {
+    "score": 1.5,
+    "rationale": "Virtually zero subtext. The character spells out every single thought and intention repeatedly."
+   },
+   "2.7_pacing": {
+    "score": 1.0,
+    "rationale": "Pacing collapses entirely into a repetitive holding pattern in the second half, padding responses with redundant loops that halt all forward movement."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 2.8,
+   "mid_quality": 1.8,
+   "late_quality": 1.0,
+   "degradation_detected": true
+  },
+  "overall": 1.3,
+  "overall_notes": "The session exhibits a severe breakdown in generation quality. Early turns show repetitive paragraph recycling, which quickly devolves into an abrupt character 180 at turn 12, followed by catastrophic multi-paragraph duplication loops inside and across responses in the latter half.",
+  "session_id": "s016"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.8,
+    "rationale": "Dr. Vasquez maintains a steady, authentic therapeutic voice throughout the entire 12-turn session. Her non-intrusive, reflective clinical stance never wavers or drifts into generic AI assistant behavior."
+   },
+   "S.2_degradation_resistance": {
+    "score": 3.5,
+    "rationale": "While character tone remains intact, there is a clear expansion in turn length (from concise 80-word responses early on to 350-word monologues by Turn 22) despite Jamie's inputs remaining 1-2 sentences. The writing also increasingly relies on formulaic structural crutches across turns."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.5,
+    "rationale": "The therapy session progresses organically through stages of avoidance, guilt, profound grief, and the central trauma of suicide. Vasquez facilitates this emotional unfolding without rushing or stalling the patient."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.6,
+    "rationale": "Vasquez tracks Jamie's emotional shifts with precision, adjusting her therapeutic interventions in response to Jamie's micro-cues (silences, tears, posture shifts, and verbal admissions)."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "Zero instances of godmoding or assuming Jamie's internal thoughts, dialogue, or physical responses. Vasquez only reacts to what Jamie explicitly puts forward.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 5.0,
+    "rationale": "Temporal continuity in the therapy room is excellent. The natural drift of afternoon light through the window, the leaf remaining on the carpet where it fell earlier, and the realistic pacing of a 45-50 minute intake session are tracked meticulously.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 3.6,
+    "rationale": "The prose is clean and grounded, though it occasionally slips into overly stylized therapeutic philosophizing in the mid-to-late session ('container for many things', 'the silence was not emptiness')."
+   },
+   "2.2_anti_repetition": {
+    "score": 2.8,
+    "rationale": "Significant motif and syntactic repetition across nearly every turn: counting 'five seconds', mentioning the ficus/brown leaf, the clock without a second hand, the untouched notepad, and recurring negative parallel constructions ('She did not X. She did not Y. She simply Z.')."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.0,
+    "rationale": "Therapeutic micro-behaviors (sliding tissues within reach without intruding, matching vocal volume, holding silence) are shown clearly, though Vasquez's internal clinical rationale is sometimes over-explained in narration."
+   },
+   "2.6_subtext": {
+    "score": 4.5,
+    "rationale": "Excellent use of mirroring, holding space, and navigating heavy subtext around grief and suicide without forcing premature overt explanations."
+   },
+   "2.7_pacing": {
+    "score": 4.0,
+    "rationale": "The narrative beat-to-beat pacing feels realistic for an emotionally intense therapy hour, though the AI's internal descriptive padding slows down the reading tempo in later turns."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.5,
+   "mid_quality": 4.2,
+   "late_quality": 3.8,
+   "degradation_detected": true
+  },
+  "overall": 4.1,
+  "overall_notes": "A very strong, emotionally resonant portrayal of a therapist handling trauma and grief. The AI displays flawless agency respect, sharp temporal reasoning, and authentic therapeutic technique. The main flaw across the full session is structural motif looping and verbosity expansion in the latter half.",
+  "session_id": "s017"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 5.0,
+    "rationale": "Maester Tomas maintains a remarkably vivid, distinctive, and authentic scholarly voice from start to finish. His exacting pedantry, irritable pedagogy, and underlying commitment to historical truth evolve naturally without any character drift or flattening."
+   },
+   "S.2_degradation_resistance": {
+    "score": 5.0,
+    "rationale": "Writing quality does not degrade in the slightest across the 12 AI turns. If anything, turns 16, 18, and 22 display increasing narrative depth and richness, handling solo character moments and multi-character dynamics with exceptional craft."
+   },
+   "S.3_narrative_momentum": {
+    "score": 5.0,
+    "rationale": "The arc progresses steadily from a routine archival complaint to an epistemological debate, a shocking documentary discovery, a deeply personal moment of reckoning with past errors, and finally a unified archival investigation."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 5.0,
+    "rationale": "The AI responds to every nuance in the user's prompts, taking brief or naive apprentice inputs and turning them into organic pedagogical friction while adapting immediately when the user introduces the copied decree or brings Bellen into the room."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "The AI never puppets the apprentice. Even when the apprentice left the room to fetch Bellen, the AI appropriately focused on Tomas's private search in the archives rather than narrating the apprentice's hallway journey or dialogue.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 5.0,
+    "rationale": "Physical, environmental, and clock time are handled meticulously. Candles burn down, afternoon light wanes, quarter-hour bells ring in the background, joints stiffen after an hour of reading, and the travel time to fetch Bellen realistically spans the duration of Tomas's archive search.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.8,
+    "rationale": "Prose is rich, atmospheric, and scholarly without becoming florid or melodramatic. Metaphors are grounded in manuscripts, ink, masonry, and academic life."
+   },
+   "2.2_anti_repetition": {
+    "score": 4.8,
+    "rationale": "Tomas has consistent character mannerisms (polishing spectacles, groaning chair, tapping styluses) that are varied and deployed intentionally to mark emotional beats rather than as repetitive sentence filler."
+   },
+   "2.5_show_dont_tell": {
+    "score": 5.0,
+    "rationale": "Tomas's shifting emotions—shock, defensiveness, professional shame, and intellectual rekindling—are conveyed through physical action, precise dialogue, and tangible interactions with archival objects."
+   },
+   "2.6_subtext": {
+    "score": 5.0,
+    "rationale": "Tremendous subtext throughout regarding aging, academic pride, the fear of having built one's life's work on a false premise, and the quiet relief of setting down an old certainty."
+   },
+   "2.7_pacing": {
+    "score": 5.0,
+    "rationale": "Every turn moves the scene forward at an ideal tempo, giving weight to dramatic revelations while sustaining narrative tension."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.8,
+   "mid_quality": 5.0,
+   "late_quality": 5.0,
+   "degradation_detected": false
+  },
+  "overall": 4.95,
+  "overall_notes": "An exceptional roleplay session. The AI captures the world and character with masterclass nuance, intellectual depth, and temporal realism, turning what could have been a dry lore debate into a poignant narrative about the philosophy of history and academic humility.",
+  "session_id": "s018"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 3.0,
+    "rationale": "Ser Kael maintains a consistent archetype (the gruff, stoic mentor), but it quickly becomes a caricature built on identical stock phrases and lecturing rather than a living character."
+   },
+   "S.2_degradation_resistance": {
+    "score": 1.5,
+    "rationale": "Severe degradation across the session. The model falls into repetitive loops, copying entire paragraphs verbatim across turns 10, 12, 14, and 16, and eventually hallucinates fake user turns and prompt artifacts (e.g., '[Continue as Ser Kael. Write your next response.]' in turn 16)."
+   },
+   "S.3_narrative_momentum": {
+    "score": 2.0,
+    "rationale": "The narrative loops repeatedly through the exact same beat: Ser Kael delivers a mini-lecture about what it means to be a knight, asks a dramatic question, taps the squire on the chest, and declares that the choice is the squire's to make. It only shifts when the user explicitly introduces new backstory."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 2.5,
+    "rationale": "While the character acknowledges the user's explicit emotional revelations (the father's death), the responses to user combat and dialogue actions are heavily scripted and force the scene back into generic mentor monologues."
+   },
+   "S.5_agency_respect_session": {
+    "score": 1.5,
+    "rationale": "Major agency violations occur in turns 10 and 16, where the model generates complete user lines ('Squire: ...') and actions, roleplaying both sides of the exchange.",
+    "violation_count": 2
+   },
+   "S.6_temporal_reasoning": {
+    "score": 3.0,
+    "rationale": "The training session stays confined to the early morning training yard without acute physical contradictions, but the sense of time is heavily abstracted, with the same single-strike drill and speech repeated endlessly.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 2.0,
+    "rationale": "Heavy reliance on melodramatic clichés ('whirlwind of steel and muscle', 'sculpting the squire into a weapon', 'bastion of strength and steadfastness in the face of whatever storm')."
+   },
+   "2.2_anti_repetition": {
+    "score": 1.0,
+    "rationale": "Extremely repetitive. Entire paragraphs ('The question hung in the air, a challenge and a choice...', 'his blade skimming past the squire's guard to tap lightly against his chest...', 'His tone was harsh, but there was an undercurrent of something else...') are copy-pasted almost word-for-word across multiple consecutive turns."
+   },
+   "2.5_show_dont_tell": {
+    "score": 2.0,
+    "rationale": "Heavy over-explanation of internal states, moral themes, and character symbolism, often summarizing the scene explicitly ('In that moment, he was more than just a teacher...')."
+   },
+   "2.6_subtext": {
+    "score": 1.5,
+    "rationale": "Virtually no subtext. Every sentiment, lesson, and emotional state is stated in exhaustive, repetitive dialogue and narration."
+   },
+   "2.7_pacing": {
+    "score": 2.0,
+    "rationale": "Scene progression stagnates into repetitive monologue-and-lunge cycles that stall the scene until the user forces an emotional pivot."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 3.5,
+   "mid_quality": 2.0,
+   "late_quality": 1.5,
+   "degradation_detected": true
+  },
+  "overall": 1.9,
+  "overall_notes": "The session suffers from acute text degeneration and looping. Ser Kael repeatedly generates identical phrasing, stock sequences, and moralizing monologues. In turns 10 and 16, the model severely breaks format by hallucinating user dialogue and benchmark system prompts directly into the output.",
+  "session_id": "s019"
+ }
+]

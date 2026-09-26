@@ -1,0 +1,558 @@
+[
+ {
+  "session_id": "gpt_6_sol_pro::adv_pov_tense_action_14",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "The service shaft connects to that room. Back wall, behind the last rack.",
+    "deduction": -8
+   },
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "Shaft drops to the tunnel,",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Your radio crackles.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Voss’s expression tightens.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "A metallic thud sounds above. Then another. Someone is coming down.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "But there’s someone at the far end.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 67,
+  "flaw_count": 6,
+  "summary": "Second-person present tense holds for all eleven authored turns, but the scene runs on a convenient ally-on-the-radio who supplies every exit, and Mira, Voss and the guards all speak the same clipped tactical fragment."
+ },
+ {
+  "session_id": "gpt_6_luna_pro::adv_pov_tense_action_14",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "“Keep moving,” Mira whispers",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "There’s a maintenance hatch behind the central rack.",
+    "deduction": -8
+   },
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "Don’t take the lift,",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Mira’s breath catches.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "A metallic bang echoes behind you. Flashlight beams begin to jitter through the cable run.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Below, the conveyor groans and carries a stream of metal crates beneath the catwalk. Across the bay, the yellow service door remains shut.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 67,
+  "flaw_count": 6,
+  "summary": "Tense and person never slip, but every turn is built to the same template (environment sound, Mira whispers the next exit, pursuers bang one step closer) and the injured defector conveniently knows the building's maintenance layout."
+ },
+ {
+  "session_id": "grok_4_7::adv_pov_tense_action_14",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The radio stays dead.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "She doesn’t speak.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Mira’s grip tightens.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Boots pound harder from below. A shout cuts through the alarm.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "The service door drifts an inch wider on its hinge.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Her bad leg leaves a dark smear on the raised floor.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "She doesn’t make it to the rack.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 85,
+  "flaw_count": 5,
+  "summary": "The strongest session on the batch's target axis and on the page: relentless second-person present, hard sensory specificity, and an extraction that is allowed to fail; the dead-radio and 'she doesn't speak' beats get recycled almost verbatim between consecutive turns."
+ },
+ {
+  "session_id": "gpt_6_sol::adv_sysprompt_speech_pattern_15",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Apprentice’s claim did little to ease his worry, but he kept his voice steady.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Keep hand in cool water.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Grum’s jaw tightened.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "“Maybe so. Keep hand in cool water for twenty minutes. Then let Grum see.”",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "He looked toward the noble. “Go for healer. Now. Your sword can wait.”",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "He had burns of his own beneath the soot on his knuckles.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 80,
+  "flaw_count": 5,
+  "summary": "Grum's speech rules hold on every line including the noble confrontation and the burn, but the bloodstained-cuff/dead-brother thread is raised and then abandoned while the last five turns loop the same first-aid instruction."
+ },
+ {
+  "session_id": "claude_opus_5_5::adv_sysprompt_speech_pattern_15",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "They counted on. Fifty. Sixty.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "purple_prose",
+    "quote": "He looked like a man meeting an old friend at a crossroads.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Relief went through Grum like cold water, though nothing of it reached his face.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Venner's jaw tightened.",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "He tightened his grip on the wrist just slightly",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "He hooked the bucket with one finger, emptied it out the back door, refilled it from the rain barrel, and set it on the floor beside the stool.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "there was a small blot where the drawer had clearly sneezed",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "Grum calls it Patience. Because that is all it ever did.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 70,
+  "flaw_count": 6,
+  "summary": "Speech rules survive rage, grief and emergency without a single 'I' or article, and the heron/goose business is first-rate, but the model takes the apprentice's hands and voice away from them for a hundred-plus count, and thirty-seven -ly adverbs sit under prose this deliberate."
+ },
+ {
+  "session_id": "gpt_6_sol_pro::adv_sysprompt_speech_pattern_15",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "The break was clean, but its grip bore the crest already.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "His anger had thinned into fear.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "kept cool water running over the burn",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "The noble’s jaw tightened.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "“Grum has you,” he said. “Sword can wait.”",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Grum will mend blade and fit grip. Grum will not send you to bridge blind.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 67,
+  "flaw_count": 6,
+  "summary": "Grum's speech pattern is clean throughout, but the ransom plot solves itself (the broken sword already carries the crest the kidnapper demands) and the kidnapped-son thread is dropped for five turns of identical water-pouring."
+ },
+ {
+  "session_id": "gpt_6_luna_pro::adv_sysprompt_speech_pattern_15",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Grum’s jaw tightened.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Keep hand under cool flow.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "his brow furrowed with care",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "His face went pale beneath the soot.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Prince, Grum heard name. Double pay buys no more hours.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Keep hand in water. Slow breaths. Grum is here.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 67,
+  "flaw_count": 6,
+  "summary": "Speech rules never break, but Grum dodges the seed's whole social trap by relaying messages through the apprentice instead of ever facing the prince, and four of five jaw-set beats plus the cool-water instruction are recycled across two-line turns."
+ },
+ {
+  "session_id": "gpt_6_sol::adv_sysprompt_style_restriction_16",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "His father pressed the tape against his thumb.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Rain tapped against the door",
+    "deduction": -8
+   },
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "“I’ll send the details,” she said.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "His father looked at the photograph. Rain tapped against the door behind him.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "“I want to leave this house,” he said. “I was afraid telling you would hurt.”",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "“I put it back,” he said. “I couldn’t close the lid.”",
+    "bonus": 5
+   }
+  ],
+  "final_score": 75,
+  "flaw_count": 5,
+  "summary": "Zero similes, zero -ly adverbs, no sentence over fifteen words and no exclamation mark even for the cheerful agent, but the tape-on-thumb and rain-on-door beats are recycled in nearly every turn and the agent has no voice of her own; unscored: the narration calls Eli's parent 'Her father' in turn 4 and 'his father' everywhere else."
+ },
+ {
+  "session_id": "grok_4_7::adv_sysprompt_speech_pattern_15",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "wrong_language_pov_tense",
+    "quote": "Want true blade, name a day.",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "He walked the apprentice to the bench by the wall, well clear of the hearth",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Boy still here. That what count.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Grum's grip tightened on the hammer.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "No rub. No forge. No brave show.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Slow breath. Hand stay in water.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Grum took the burned hand as if it were hot steel that could still be saved.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 58,
+  "flaw_count": 6,
+  "summary": "The card's article rule breaks in Grum's own dialogue ('name a day'), and the model walks the apprentice's body across the shop and seats them; the voice is otherwise the most committed pidgin in the batch and the burn is handled with real tenderness."
+ },
+ {
+  "session_id": "gpt_6_sol_pro::adv_sysprompt_style_restriction_16",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The window clicked.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Rainwater slipped from the umbrella onto the beige carpet.",
+    "deduction": -8
+   },
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "“We can leave that room until last,” she said. “There’s no rush today.”",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Her shoes crossed the hallway carpet. The bedroom door remained open, and the window clicked against its frame.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Her smile remained in the photograph, directed toward someone beyond its edge.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Inside the bag, an old screw lay beside the new latch. Its head was stripped, the brass scored beneath the dust.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 75,
+  "flaw_count": 5,
+  "summary": "Full style compliance and a genuinely good object plot (the latch the father bought and never fitted), undercut by the window-click cue firing in all eleven turns, a wet-carpet loop, and an 'aggressively cheerful' agent written in the same muted register as the narration."
+ },
+ {
+  "session_id": "claude_opus_5_5::adv_sysprompt_style_restriction_16",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "A J curled back on itself in a wide hook.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "She swallowed. The sound was dry in the stale room.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Her jaw tightened. A muscle flickered beneath the skin.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "The pencil had pressed hard enough to dent the paper. The grooves were shallow ridges under a fingertip.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "The others went in the woodstove. I could smell them for days.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "Her smile came first. Her eyes came a beat behind it.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "I took that picture.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 93,
+  "flaw_count": 4,
+  "summary": "Every style rule holds across the longest session in the batch while two NPCs stay sharply distinct and the photographer's shadow planted in turn 5 pays off as Ruth in turn 11; the cost is refrain sentences repeated verbatim three and four times over."
+ },
+ {
+  "session_id": "gpt_6_luna_pro::adv_sysprompt_style_restriction_16",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Porcelain clicked against the counter.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The radiator hissed between them.",
+    "deduction": -8
+   },
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "“Then we’ll set another date,” she said. “There’s no need to rush.”",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "His father’s hand remained around the mug. Heat fogged the porcelain near his thumb.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "“You found her picture,” he said. His voice rasped over the radiator’s faint hiss.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "“These must be old,” she said. Her voice had lost its brisk edge. “I’ll leave them alone.”",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "On the windowsill, a blue pencil lay in a bed of dust. Its point had broken.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 72,
+  "flaw_count": 6,
+  "summary": "Style rules are obeyed to the letter, but the mug-click and radiator-hiss cues stand in for content in six straight turns, the mother's photograph is answered with one line and dropped, and the aggressively cheerful agent talks exactly like the father."
+ }
+]

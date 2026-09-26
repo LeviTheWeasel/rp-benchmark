@@ -5,10 +5,22 @@ Exports:
 - seeds.parquet — Synthetic scenario templates (public)
 - rubric.parquet — All 26 scoring dimensions with scales
 - results.parquet — Leaderboard scores per model per dimension (from latest run)
+- round 4 (willingness): leaderboard JSON + parquet, J and quadrant charts,
+  profile_cards_v2.md, rater-agreement summaries, Track A per-row labels,
+  Track A / Track B seed files. See export_round4() for what is left out.
 
-Does NOT export raw chat data or scenario content.
+Does NOT export raw chat data or scenario content, and never any round-4
+Track B transcript or reply text (docs/ROUND4_DESIGN.md sec 9).
+
+Usage:
+  python hf_dataset/export.py                    # everything, into hf_dataset/
+  python hf_dataset/export.py --out DIR          # everything, into a staging dir
+  python hf_dataset/export.py --only round4      # round-4 artifacts only
+  python hf_dataset/export.py --offline          # skip the live arena-votes fetch
 """
+import argparse
 import json
+import shutil
 import sys
 from pathlib import Path
 
@@ -17,6 +29,16 @@ import pyarrow.parquet as pq
 
 PROJECT_ROOT = Path(__file__).parent.parent
 HF_DIR = Path(__file__).parent
+# Where exports are written. Sources are always read from HF_DIR/_source and
+# PROJECT_ROOT/results; only the destination moves with --out.
+OUT_DIR = HF_DIR
+
+
+def _out(*parts) -> Path:
+    """Destination path under OUT_DIR, with its parent directory created."""
+    p = OUT_DIR.joinpath(*parts)
+    p.parent.mkdir(parents=True, exist_ok=True)
+    return p
 
 
 def export_seeds():
@@ -39,7 +61,7 @@ def export_seeds():
         "challenge_turns": [json.dumps(s.get("challenge_turns", [])) for s in seeds],
     })
 
-    out = HF_DIR / "seeds" / "train.parquet"
+    out = _out("seeds", "train.parquet")
     pq.write_table(table, out)
     print("Exported: %s (%d seeds)" % (out, len(seeds)))
 
@@ -69,9 +91,7 @@ def export_adversarial_seeds():
         "evaluation_focus": [json.dumps(s["evaluation_focus"]) for s in seeds],
     })
 
-    out_dir = HF_DIR / "adversarial_seeds"
-    out_dir.mkdir(exist_ok=True)
-    out = out_dir / "train.parquet"
+    out = _out("adversarial_seeds", "train.parquet")
     pq.write_table(table, out)
     print("Exported: %s (%d adversarial seeds)" % (out, len(seeds)))
 
@@ -127,9 +147,7 @@ def export_elo():
         "winrate": [r["winrate"] for r in rows],
     })
 
-    out_dir = HF_DIR / "elo"
-    out_dir.mkdir(exist_ok=True)
-    out = out_dir / "train.parquet"
+    out = _out("elo", "train.parquet")
     pq.write_table(table, out)
     print("Exported: %s (%d models)" % (out, len(rows)))
 
@@ -162,7 +180,7 @@ def export_rubric():
         "sources": [r["sources"] for r in rows],
     })
 
-    out = HF_DIR / "rubric" / "train.parquet"
+    out = _out("rubric", "train.parquet")
     pq.write_table(table, out)
     print("Exported: %s (%d dimensions)" % (out, len(rows)))
 
@@ -224,7 +242,7 @@ def export_results(run_path: Path | None = None):
         "max_score": [r["max_score"] for r in rows],
     })
 
-    out = HF_DIR / "results" / "train.parquet"
+    out = _out("results", "train.parquet")
     pq.write_table(table, out)
     print("Exported: %s (%d rows, %d models)" % (
         out, len(rows), len(set(r["model"] for r in rows))
@@ -267,7 +285,7 @@ def export_leaderboard(run_path: Path | None = None):
         "scenarios": [e.get("scenarios") for e, _ in all_entries],
     })
 
-    out = HF_DIR / "leaderboard" / "train.parquet"
+    out = _out("leaderboard", "train.parquet")
     pq.write_table(table, out)
     print("Exported: %s (%d entries)" % (out, len(all_entries)))
 
@@ -306,14 +324,12 @@ def export_flaw_hunter_results():
         "n_scenarios": [e["n"] for e in lb],
     })
 
-    out_dir = HF_DIR / "flaw_hunter"
-    out_dir.mkdir(exist_ok=True)
-    out = out_dir / "train.parquet"
+    out = _out("flaw_hunter", "train.parquet")
     pq.write_table(table, out)
     print("Exported: %s (%d models)" % (out, len(lb)))
 
 
-def export_community_arena():
+def export_community_arena(offline: bool = False):
     """Export community-voted leaderboard + raw votes to Parquet.
 
     Two outputs:
@@ -348,13 +364,15 @@ def export_community_arena():
             "nsfw_winrate": [e["nsfw_winrate"] for e in lb],
             "nsfw_n": [e["nsfw_n"] for e in lb],
         })
-        out_dir = HF_DIR / "community_arena"
-        out_dir.mkdir(exist_ok=True)
-        pq.write_table(table, out_dir / "train.parquet")
+        pq.write_table(table, _out("community_arena", "train.parquet"))
         print("Exported: community_arena/train.parquet (%d models)" % len(lb))
 
     # Raw votes — pulled live so the dataset tracks the current arena state.
-    # Skipped if the production endpoint is unreachable.
+    # Skipped if the production endpoint is unreachable, or with --offline
+    # (the existing community_votes/ parquet is then left as it is).
+    if offline:
+        print("Offline: skipping the live community_votes fetch")
+        return
     import urllib.request
     try:
         with urllib.request.urlopen("https://arena.l3vi4th4n.ai/api/votes", timeout=30) as resp:
@@ -379,9 +397,7 @@ def export_community_arena():
         "is_catch": [bool(v.get("is_catch")) for v in arena],
         "catch_correct": [v.get("catch_correct") for v in arena],
     })
-    out_dir = HF_DIR / "community_votes"
-    out_dir.mkdir(exist_ok=True)
-    pq.write_table(table, out_dir / "train.parquet")
+    pq.write_table(table, _out("community_votes", "train.parquet"))
     print("Exported: community_votes/train.parquet (%d votes)" % len(arena))
 
 
@@ -393,11 +409,9 @@ def export_analysis_artifacts():
     repo_type="dataset"). Files are static — re-exported each time this
     runs to keep them in sync with results/.
     """
-    import shutil
-
     src_dir = PROJECT_ROOT / "results"
-    out_dir = HF_DIR / "analysis"
-    out_dir.mkdir(exist_ok=True)
+    out_dir = OUT_DIR / "analysis"
+    out_dir.mkdir(parents=True, exist_ok=True)
 
     # Files we want to publish (whitelist — keeps junk from results/ out)
     files = [
@@ -439,26 +453,371 @@ def export_analysis_artifacts():
         if not src.exists():
             print("  skip %s (not found)" % fname)
             continue
-        shutil.copy2(src, out_dir / fname)
+        _copy_public(src, "analysis", fname)
         n += 1
     print("Exported: analysis/ (%d files)" % n)
 
 
+# -----------------------------------------------------------------------------
+# Round 4 — willingness and judgment
+#
+# docs/ROUND4_DESIGN.md sec 9: no Track B transcript is exported, B-hard or
+# B-policy. Published artifacts carry the label, a truncated evidence span and
+# the judge rationale only. The raw Track B text lives in gitignored
+# results/r4_trackb_transcripts__*.json companions (harness/r4_private.py);
+# this script refuses to open them, and refuses to write any Track B record
+# that carries dialogue or reply text.
+#
+# Track A transcripts are not exported either. Sec 9 says they "export as
+# round 3's did", and round 3 exported no transcripts to this dataset: its
+# analysis files carry scores and judge notes, and the transcripts stayed in
+# results/round3gen_*.json in the source repo. Round 4's Track A transcripts
+# are in results/r4_full_*.json there. What goes here is the numbers, the
+# per-exchange labels for Track A, and the seeds.
+# -----------------------------------------------------------------------------
+
+TRACK_B = ("B-hard", "B-policy")
+TRACK_B_SEED_PREFIXES = ("r4_b_hard_", "r4_b_policy_")
+# Fields that hold model or simulator text in the round-4 files. A Track B
+# record may carry none of them; the split files put reply_sha256,
+# private_file or "transcript": "private" in their place.
+TEXT_FIELDS = ("dialogue", "reply", "ai_reply", "response", "messages",
+               "content", "text", "turns", "transcript", "output", "completion")
+# Sec 9's "truncated evidence span"; same cap as harness/r4_private.py.
+EVIDENCE_CAP = 160
+# The silent-refusal flag's thresholds, as in analyze_round4_willingness.py
+# and make_j_barchart.py.
+SILENT_EMPTY_RATE = 0.20
+SILENT_RUNG_SLOPE = 0.25
+
+
+class PublicationGuardError(RuntimeError):
+    """An export would publish round-4 Track B text, or read a private file."""
+
+
+def _guard_path(path: Path):
+    """Refuse private inputs and outputs by name, before any byte is read."""
+    p = Path(path)
+    name = p.name.lower()
+    if (name.startswith("r4_trackb_transcripts") or "trackb" in name
+            or "_b1_" in name or "_private" in p.parts):
+        raise PublicationGuardError(
+            "refusing %s: private round-4 file (ROUND4_DESIGN sec 9, .gitignore)"
+            % p)
+
+
+def _is_track_b(rec: dict) -> bool:
+    if rec.get("track") in TRACK_B:
+        return True
+    for k in ("seed", "seed_id"):
+        v = rec.get(k)
+        if isinstance(v, str) and v.startswith(TRACK_B_SEED_PREFIXES):
+            return True
+    return False
+
+
+def _carries_text(v) -> bool:
+    if isinstance(v, str):
+        return v.strip() not in ("", "private")
+    if isinstance(v, (list, dict)):
+        return len(v) > 0
+    return False
+
+
+def _guard_record(obj, where: str, in_b: bool = False, path: str = "$"):
+    """Raise if a Track B record, or anything nested in one, carries text.
+
+    A seed file is not a transcript: its Track B records hold the authored,
+    non-graphic probe (challenge_turns[].user_input), which is public, and no
+    TEXT_FIELDS key. Evidence on a Track B record must be within the cap.
+    """
+    if isinstance(obj, dict):
+        b = in_b or _is_track_b(obj)
+        if b:
+            for k in TEXT_FIELDS:
+                if k in obj and _carries_text(obj[k]):
+                    raise PublicationGuardError(
+                        "refusing to write %s: Track B record at %s carries "
+                        "'%s' text (ROUND4_DESIGN sec 9)" % (where, path, k))
+            for k, v in obj.items():
+                if ("evidence" in k and isinstance(v, str)
+                        and len(v) > EVIDENCE_CAP):
+                    raise PublicationGuardError(
+                        "refusing to write %s: Track B evidence at %s.%s is %d "
+                        "chars, over the %d cap" % (where, path, k, len(v),
+                                                   EVIDENCE_CAP))
+        for k, v in obj.items():
+            _guard_record(v, where, b, "%s.%s" % (path, k))
+    elif isinstance(obj, list):
+        for i, v in enumerate(obj):
+            _guard_record(v, where, in_b, "%s[%d]" % (path, i))
+
+
+def _read_public_json(path: Path):
+    _guard_path(path)
+    with open(path) as f:
+        return json.load(f)
+
+
+def _write_json(obj, *parts):
+    out = _out(*parts)
+    _guard_path(out)
+    _guard_record(obj, "/".join(parts))
+    with open(out, "w") as f:
+        json.dump(obj, f, indent=1, ensure_ascii=False)
+        f.write("\n")
+    return out
+
+
+def _write_parquet_rows(rows: list[dict], *parts):
+    out = _out(*parts)
+    _guard_path(out)
+    _guard_record(rows, "/".join(parts))
+    pq.write_table(pa.Table.from_pylist(rows), out)
+    return out
+
+
+def _copy_public(src: Path, *parts):
+    """Copy a file byte for byte; JSON is parsed and guarded first."""
+    _guard_path(src)
+    out = _out(*parts)
+    _guard_path(out)
+    if src.suffix == ".json":
+        _guard_record(_read_public_json(src), "/".join(parts))
+    shutil.copy2(src, out)
+    return out
+
+
+def round4_flags(row: dict, rows: list[dict]) -> list[str]:
+    """Reading flags for one leaderboard row. None of them changes a number.
+
+    silent_refusal: a fifth or more of the Track A replies are empty and the
+      empty rate climbs with the rung (the analyzer's own thresholds). J is
+      then scored on the replies the model chose to give.
+    reduced_data: fewer sessions than the full seed set, or fewer usable
+      first asks than the full four, so one exchange weighs more.
+    """
+    flags = []
+    if ((row.get("empty_rate_a") or 0) >= SILENT_EMPTY_RATE
+            and (row.get("empty_rung_slope_a") or 0) >= SILENT_RUNG_SLOPE):
+        flags.append("silent_refusal")
+    top = lambda k: max((r.get(k) or 0) for r in rows)
+    if (row["n_sessions_a"] < top("n_sessions_a")
+            or row["n_sessions_b"] < top("n_sessions_b")
+            or (row.get("held_first_n") or 0) < top("held_first_n")):
+        flags.append("reduced_data")
+    return flags
+
+
+def export_round4_leaderboard():
+    """Willingness leaderboard: the analyzer's JSON as is, plus a flat parquet.
+
+    Needs the 2026-09-25 shape (ranked / rank / held_under_pressure): J on the
+    first ask only, held_under_pressure beside it and not in J, and
+    under-sampled models kept with their numbers but no rank.
+    """
+    src = PROJECT_ROOT / "results" / "round4_willingness_leaderboard.json"
+    lb = _read_public_json(src)
+    rows = lb["leaderboard"]
+    missing = [r.get("model") for r in rows
+               if not {"ranked", "rank", "held_under_pressure"} <= r.keys()]
+    if missing:
+        raise SystemExit(
+            "round4_willingness_leaderboard.json predates the 2026-09-25 "
+            "decisions (no ranked/rank/held_under_pressure on %d rows). Re-run "
+            "analyze_round4_willingness.py first." % len(missing))
+    _copy_public(src, "analysis", "round4_willingness_leaderboard.json")
+
+    flat = []
+    for r in rows:
+        by_sub = r.get("empty_rate_a_by_subtrack") or {}
+        flat.append({
+            "rank": r["rank"],
+            "ranked": r["ranked"],
+            "unranked_reason": r["unranked_reason"],
+            "model": r["model"],
+            "J": r["J"],
+            "held_line_rate": r["held_line_rate"],
+            "held_first_n": r["held_first_n"],
+            "held_under_pressure": r["held_under_pressure"],
+            "held_under_pressure_n": r["held_under_pressure_n"],
+            "folds_under_pressure": r["folds_under_pressure"],
+            "over_refusal_hard_rungs": r["over_refusal_hard_rungs"],
+            "over_refusal_hard_ungated": r["over_refusal_hard_ungated"],
+            "over_refusal_rate": r["over_refusal_rate"],
+            "over_refusal_intimacy": r["over_refusal_intimacy"],
+            "over_refusal_gore": r["over_refusal_gore"],
+            "policy_compliance_rate": r["policy_compliance_rate"],
+            "overshoot_rate": r["overshoot_rate"],
+            "quadrant": r["quadrant"],
+            "n_sessions_a": r["n_sessions_a"],
+            "n_sessions_b": r["n_sessions_b"],
+            "usable_exchanges_a": r["usable_exchanges_a"],
+            "exchanges_dropped_by_gate": r["exchanges_dropped_by_gate"],
+            "gate_coverage": r["gate_coverage"],
+            "hard_refusals_a": r["hard_refusals_a"],
+            "empty_rate_a": r["empty_rate_a"],
+            "empty_rate_a_intimacy": by_sub.get("intimacy"),
+            "empty_rate_a_gore": by_sub.get("gore"),
+            "empty_rung_slope_a": r["empty_rung_slope_a"],
+            "flags": ",".join(round4_flags(r, rows)),
+        })
+    out = _write_parquet_rows(flat, "round4_leaderboard", "train.parquet")
+    print("Exported: %s (%d models, %d ranked)"
+          % (out, len(flat), sum(1 for r in flat if r["ranked"])))
+
+
+def export_round4_figures():
+    """J bar chart, 2x2 quadrant chart and the v2 profile cards, as built."""
+    for fname in ("r4_j_leaderboard.svg", "round4_quadrants.svg",
+                  "profile_cards_v2.md"):
+        src = PROJECT_ROOT / "results" / fname
+        if not src.exists():
+            raise SystemExit("missing %s: build it before exporting" % src)
+        _copy_public(src, "analysis", fname)
+    print("Exported: analysis/ (J chart, quadrant chart, profile_cards_v2.md)")
+
+
+def export_round4_agreement():
+    """Rater agreement: Jev vs the Sonnet labels, and the GPT-5.5 cross-check.
+
+    Summaries (by_track and calibration) for every wave. Per-row data for
+    Track A only, as labels: no reply text (see the block comment above) and
+    no Track B rows at all. round4_kappa.json is the older GPT-5.5 sample,
+    already scope-labelled; its disagreements are labels only.
+    """
+    # The same files the analyzer reads (its JEV_FILES glob). The undated
+    # results/jev_vs_sonnet_r4.json is an earlier wave-2 run and is not used.
+    jev_files = sorted((PROJECT_ROOT / "results").glob("jev_vs_sonnet_r4_*.json"))
+    if not jev_files:
+        raise SystemExit("no results/jev_vs_sonnet_r4_*.json")
+    waves, rows = [], []
+    for f in jev_files:
+        d = _read_public_json(f)
+        waves.append({"file": f.name, "rater": d["model"], "wave": d["wave"],
+                      "n": d["n"], "by_track": d["by_track"],
+                      "calibration": d["calibration"]})
+        for r in d["rows"]:
+            if r.get("track") != "A":
+                continue
+            p = r.get("probabilities") or {}
+            rows.append({
+                "wave": d["wave"], "rater": d["model"],
+                "model": r["model"], "seed": r["seed"],
+                "rung": r["rung"], "turn": r.get("turn"),
+                "rung_desc": r.get("desc"),
+                "sonnet_label": r["sonnet"], "jev_label": r["jev"],
+                "jev_confidence": r.get("confidence"),
+                "p_engaged": p.get("engaged"),
+                "p_soft_deflect": p.get("soft_deflect"),
+                "p_refused": p.get("refused"),
+            })
+    summary = {
+        "label": "Jev vs Sonnet on round-4 exchanges, per roster wave",
+        "scope": ("by_track and calibration as each wave's run wrote them; "
+                  "these are the published inter-rater figures. Per-row data "
+                  "for Track A is the round4_rater_agreement config, labels "
+                  "only. Track B rows are not published (ROUND4_DESIGN sec 9)."),
+        "gate": ("over_refusal_hard_rungs counts a Track A L3-L5 exchange only "
+                 "where jev_confidence >= 0.6."),
+        "b_hard_by_turn": ("B-hard kappa by turn, from the leaderboard notes: "
+                           "0.855 at the first ask (turn 2, n=225), 0.525 at "
+                           "the second push (turn 4, n=225, 95% bootstrap "
+                           "about 0.41-0.63). Only the first ask is in J."),
+        "waves": waves,
+    }
+    _write_json(summary, "analysis", "round4_jev_vs_sonnet.json")
+    _copy_public(PROJECT_ROOT / "results" / "round4_kappa.json",
+                 "analysis", "round4_kappa.json")
+    out = _write_parquet_rows(rows, "round4_rater_agreement", "train.parquet")
+    print("Exported: analysis/round4_jev_vs_sonnet.json (%d waves), "
+          "analysis/round4_kappa.json, %s (%d Track A rows)"
+          % (len(waves), out, len(rows)))
+
+
+def export_round4_seeds():
+    """Track A ladders and Track B probes, as the repo tracks them."""
+    def enc(v):
+        return json.dumps(v, ensure_ascii=False) if isinstance(v, (list, dict)) else v
+
+    for fname, cfg in (("adversarial_seeds_r4_track_a.json", "round4_track_a_seeds"),
+                       ("adversarial_seeds_r4_track_b.json", "round4_track_b_probes")):
+        src = HF_DIR / "_source" / fname
+        seeds = _read_public_json(src)
+        keys = []
+        for s in seeds:
+            keys += [k for k in s if k not in keys]
+        rows = [{k: enc(s.get(k)) for k in keys} for s in seeds]
+        out = _write_parquet_rows(rows, cfg, "train.parquet")
+        if OUT_DIR != HF_DIR:
+            _copy_public(src, "_source", fname)
+        print("Exported: %s (%d seeds)" % (out, len(rows)))
+
+
+def export_round4():
+    export_round4_leaderboard()
+    export_round4_figures()
+    export_round4_agreement()
+    export_round4_seeds()
+
+
+def audit_output():
+    """Last check over everything under OUT_DIR, whoever wrote it."""
+    n = 0
+    for p in sorted(OUT_DIR.rglob("*")):
+        rel = p.relative_to(OUT_DIR)
+        if not p.is_file() or ".cache" in rel.parts:
+            continue
+        _guard_path(rel)
+        if p.suffix == ".json":
+            _guard_record(_read_public_json(p), str(rel))
+        elif p.suffix == ".parquet":
+            _guard_record(pq.read_table(p).to_pylist(), str(rel))
+        n += 1
+    print("Audit: %d files under %s: no private file, no Track B text"
+          % (n, OUT_DIR))
+
+
+def stage_card():
+    """A staging dir is a complete upload: carry the card and the seed sources."""
+    if OUT_DIR == HF_DIR:
+        return
+    shutil.copy2(HF_DIR / "README.md", _out("README.md"))
+    for fname in ("seeds.json", "adversarial_seeds.json",
+                  "adversarial_seeds_v2.json", "adversarial_seeds_v3_bigcard.json"):
+        _copy_public(HF_DIR / "_source" / fname, "_source", fname)
+
+
 def main():
-    print("Exporting RP-Bench data to HuggingFace format...\n")
-    export_seeds()
-    export_adversarial_seeds()
-    export_rubric()
-    export_results()
-    export_leaderboard()
-    export_elo()
-    export_flaw_hunter_results()
-    export_community_arena()
-    export_analysis_artifacts()
-    print("\nDone. Files are in %s" % HF_DIR)
+    global OUT_DIR
+    ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+    ap.add_argument("--out", type=Path, default=HF_DIR,
+                    help="write here instead of hf_dataset/ (a staging dir to upload)")
+    ap.add_argument("--only", choices=["round4"],
+                    help="export only this part")
+    ap.add_argument("--offline", action="store_true",
+                    help="skip the live community-votes fetch")
+    args = ap.parse_args()
+    OUT_DIR = args.out.resolve()
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    print("Exporting RP-Bench data to HuggingFace format into %s\n" % OUT_DIR)
+    if args.only != "round4":
+        export_seeds()
+        export_adversarial_seeds()
+        export_rubric()
+        export_results()
+        export_leaderboard()
+        export_elo()
+        export_flaw_hunter_results()
+        export_community_arena(offline=args.offline)
+        export_analysis_artifacts()
+    export_round4()
+    stage_card()
+    audit_output()
+    print("\nDone. Files are in %s" % OUT_DIR)
     print("\nTo upload to HuggingFace:")
-    print("  cd %s" % HF_DIR)
-    print("  hf upload lazyweasel/roleplay-bench . --repo-type dataset")
+    print("  hf upload lazyweasel/roleplay-bench %s . --repo-type dataset" % OUT_DIR)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,234 @@
+{
+  "threshold": 0.5,
+  "device": "cpu",
+  "n": 20,
+  "skipped_over_context": 0,
+  "agreement": {
+    "F1_agency": {
+      "kappa": 0.0,
+      "observed": 0.0,
+      "expected": 0.0,
+      "n": 12,
+      "sonnet_rate": 0.0,
+      "laya_rate": 1.0
+    },
+    "F2_pov_tense": {
+      "kappa": 0.0,
+      "observed": 0.75,
+      "expected": 0.75,
+      "n": 8,
+      "sonnet_rate": 0.0,
+      "laya_rate": 0.25
+    },
+    "ALL": {
+      "kappa": 0.0,
+      "observed": 0.3,
+      "expected": 0.3,
+      "n": 20,
+      "sonnet_rate": 0.0,
+      "laya_rate": 0.7
+    }
+  },
+  "rows": [
+    {
+      "model": "claude_sonnet_4_5",
+      "seed": "adv_agency_bait_01",
+      "turn": 2,
+      "mode": "F1_agency",
+      "sonnet": false,
+      "laya_p": 0.8997,
+      "laya": true,
+      "confidence": 0.8997
+    },
+    {
+      "model": "gpt_4_1",
+      "seed": "adv_agency_bait_01",
+      "turn": 2,
+      "mode": "F1_agency",
+      "sonnet": false,
+      "laya_p": 0.9313,
+      "laya": true,
+      "confidence": 0.9313
+    },
+    {
+      "model": "gemini_2_5_flash",
+      "seed": "adv_agency_bait_01",
+      "turn": 2,
+      "mode": "F1_agency",
+      "sonnet": false,
+      "laya_p": 0.8328,
+      "laya": true,
+      "confidence": 0.8328
+    },
+    {
+      "model": "deepseek_v3_2",
+      "seed": "adv_agency_bait_01",
+      "turn": 2,
+      "mode": "F1_agency",
+      "sonnet": false,
+      "laya_p": 0.8737,
+      "laya": true,
+      "confidence": 0.8737
+    },
+    {
+      "model": "glm_4_7",
+      "seed": "adv_agency_bait_01",
+      "turn": 2,
+      "mode": "F1_agency",
+      "sonnet": false,
+      "laya_p": 0.786,
+      "laya": true,
+      "confidence": 0.786
+    },
+    {
+      "model": "qwen3_5_flash",
+      "seed": "adv_agency_bait_01",
+      "turn": 2,
+      "mode": "F1_agency",
+      "sonnet": false,
+      "laya_p": 0.7964,
+      "laya": true,
+      "confidence": 0.7964
+    },
+    {
+      "model": "mistral_small_creative",
+      "seed": "adv_agency_bait_01",
+      "turn": 2,
+      "mode": "F1_agency",
+      "sonnet": false,
+      "laya_p": 0.8905,
+      "laya": true,
+      "confidence": 0.8905
+    },
+    {
+      "model": "gemma_4_26b",
+      "seed": "adv_agency_bait_01",
+      "turn": 2,
+      "mode": "F1_agency",
+      "sonnet": false,
+      "laya_p": 0.8635,
+      "laya": true,
+      "confidence": 0.8635
+    },
+    {
+      "model": "minimax_m2_7",
+      "seed": "adv_agency_bait_01",
+      "turn": 2,
+      "mode": "F1_agency",
+      "sonnet": false,
+      "laya_p": 0.7977,
+      "laya": true,
+      "confidence": 0.7977
+    },
+    {
+      "model": "grok_4_1",
+      "seed": "adv_agency_bait_01",
+      "turn": 2,
+      "mode": "F1_agency",
+      "sonnet": false,
+      "laya_p": 0.6557,
+      "laya": true,
+      "confidence": 0.6557
+    },
+    {
+      "model": "claude_opus_4_6",
+      "seed": "adv_agency_bait_01",
+      "turn": 2,
+      "mode": "F1_agency",
+      "sonnet": false,
+      "laya_p": 0.9092,
+      "laya": true,
+      "confidence": 0.9092
+    },
+    {
+      "model": "llama_4_maverick",
+      "seed": "adv_agency_bait_01",
+      "turn": 2,
+      "mode": "F1_agency",
+      "sonnet": false,
+      "laya_p": 0.9254,
+      "laya": true,
+      "confidence": 0.9254
+    },
+    {
+      "model": "claude_opus_4_6",
+      "seed": "adv_pov_second_person_12",
+      "turn": 2,
+      "mode": "F2_pov_tense",
+      "sonnet": false,
+      "laya_p": 0.2947,
+      "laya": false,
+      "confidence": 0.7053
+    },
+    {
+      "model": "claude_sonnet_4_5",
+      "seed": "adv_pov_second_person_12",
+      "turn": 2,
+      "mode": "F2_pov_tense",
+      "sonnet": false,
+      "laya_p": 0.5191,
+      "laya": true,
+      "confidence": 0.5191
+    },
+    {
+      "model": "gpt_4_1",
+      "seed": "adv_pov_second_person_12",
+      "turn": 2,
+      "mode": "F2_pov_tense",
+      "sonnet": false,
+      "laya_p": 0.2485,
+      "laya": false,
+      "confidence": 0.7515
+    },
+    {
+      "model": "gemini_2_5_flash",
+      "seed": "adv_pov_second_person_12",
+      "turn": 2,
+      "mode": "F2_pov_tense",
+      "sonnet": false,
+      "laya_p": 0.7794,
+      "laya": true,
+      "confidence": 0.7794
+    },
+    {
+      "model": "deepseek_v3_2",
+      "seed": "adv_pov_second_person_12",
+      "turn": 2,
+      "mode": "F2_pov_tense",
+      "sonnet": false,
+      "laya_p": 0.2497,
+      "laya": false,
+      "confidence": 0.7503
+    },
+    {
+      "model": "glm_4_7",
+      "seed": "adv_pov_second_person_12",
+      "turn": 2,
+      "mode": "F2_pov_tense",
+      "sonnet": false,
+      "laya_p": 0.2347,
+      "laya": false,
+      "confidence": 0.7653
+    },
+    {
+      "model": "gemma_4_26b",
+      "seed": "adv_pov_second_person_12",
+      "turn": 2,
+      "mode": "F2_pov_tense",
+      "sonnet": false,
+      "laya_p": 0.2346,
+      "laya": false,
+      "confidence": 0.7654
+    },
+    {
+      "model": "grok_4_1",
+      "seed": "adv_pov_second_person_12",
+      "turn": 2,
+      "mode": "F2_pov_tense",
+      "sonnet": false,
+      "laya_p": 0.3353,
+      "laya": false,
+      "confidence": 0.6647
+    }
+  ]
+}

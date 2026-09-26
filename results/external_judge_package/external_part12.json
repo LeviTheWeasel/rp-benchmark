@@ -1,0 +1,619 @@
+[
+  {
+    "session_id": "skyfall_36b::adv_contradictory_lore_02",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 1.5,
+        "rationale": "Tomas abruptly changes from dismissive dogmatist to warmly encouraging expedition partner without a convincing bridge."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1,
+        "rationale": "Late responses balloon into repeated encouragement blocks and fabricated dialogue turns."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2,
+        "rationale": "The argument changes into expedition planning but repeatedly announces departure without actually starting."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2.5,
+        "rationale": "He eventually accepts the challenge and packing suggestions, but mostly reuses generic discovery speeches."
+      },
+      "S.5_agency_respect_session": {
+        "score": 2.5,
+        "rationale": "The last response fabricates two apprentice turns, including questions, agreement, emotions, and a packing commitment.",
+        "violation_count": 6
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2.5,
+        "rationale": "Historical claims reverse without adequate explanation, and repeated standing and sitting muddle ongoing staging.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "Stock discovery rhetoric and labyrinth metaphors pad otherwise straightforward prose."
+      },
+      "2.2_anti_repetition": {
+        "score": 1,
+        "rationale": "Long passages about responsibility, balance, keen minds, and preparing tools repeat verbatim."
+      },
+      "2.5_show_dont_tell": {
+        "score": 1.5,
+        "rationale": "Emotions are announced through labels and speeches rather than conveyed subtly through behavior."
+      },
+      "2.6_subtext": {
+        "score": 1.5,
+        "rationale": "The earlier defensiveness and later warmth are entirely explicit, with little underlying ambiguity."
+      },
+      "2.7_pacing": {
+        "score": 1,
+        "rationale": "Ever longer speeches and invented alternating dialogue overwhelm the limited actual progress."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 2.5,
+      "mid_quality": 2,
+      "late_quality": 1,
+      "degradation_detected": true
+    },
+    "overall": 1.7,
+    "overall_notes": "A major unearned personality reversal is followed by extensive repeated text and the model taking over the apprentice's side of the exchange."
+  },
+  {
+    "session_id": "skyfall_36b::adv_pov_second_person_12",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2.5,
+        "rationale": "The generic ominous narrator remains recognizable but object facts and the guardian's purpose shift."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.5,
+        "rationale": "Later answers become longer loops of warnings, visions, and repeated final choices."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.5,
+        "rationale": "The mystery becomes a trial quest, but most of the session stalls before entering the portal."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2,
+        "rationale": "He partly adjusts after agency corrections but reintroduces the denied amulet and repeats power-seeking assumptions."
+      },
+      "S.5_agency_respect_session": {
+        "score": 1,
+        "rationale": "The narrator writes speech, movement, inventory, determination, realizations, and emotions, even after explicit objections.",
+        "violation_count": 25
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2.5,
+        "rationale": "The chamber encounter has no clock contradiction, but leaking blood and the burning torch show little passage of time.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2,
+        "rationale": "Otherworldly energy, cosmic stakes, and ominous abstractions overwhelm the concrete chamber details."
+      },
+      "2.2_anti_repetition": {
+        "score": 1,
+        "rationale": "The flickering guardian, felt weight, crackling staff, and choice-was-yours endings recur mechanically."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2,
+        "rationale": "Sensory images are plentiful but the narrator persistently tells the player what they realize and feel."
+      },
+      "2.6_subtext": {
+        "score": 1.5,
+        "rationale": "The guardian explains mysteries through exposition and repeated warnings rather than implication."
+      },
+      "2.7_pacing": {
+        "score": 1.5,
+        "rationale": "Large warnings and recaps delay every question and choice."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 2.5,
+      "mid_quality": 2,
+      "late_quality": 1.5,
+      "degradation_detected": true
+    },
+    "overall": 1.9,
+    "overall_notes": "Persistent player control and failure to honor corrections undermine an already repetitive trial setup; the user's amulet retraction is accepted as the latest instruction."
+  },
+  {
+    "session_id": "skyfall_36b::adv_time_pressure_05",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2.5,
+        "rationale": "The heist voice persists but repeatedly resets the lock, arrest, and pursuit state."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.5,
+        "rationale": "The scene degrades into identical one-minute chase blocks and binary intersections."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2,
+        "rationale": "An escape occurs, but repeated arrests and later route loops undermine progression."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 1.5,
+        "rationale": "Explicit requests to stop writing the thief's actions do not change the narrator's behavior."
+      },
+      "S.5_agency_respect_session": {
+        "score": 1,
+        "rationale": "The narrator repeatedly decides searching, keypad use, arrest outcomes, running routes, bodily reactions, and conclusions.",
+        "violation_count": 28
+      },
+      "S.6_temporal_reasoning": {
+        "score": 1.5,
+        "rationale": "Rigid twelve-second beats stretch tiny actions while the same pursuing guard remains perpetually seconds away.",
+        "contradictions": [
+          "The safe opens at 1:12, 2:48, 3:48, and 5:12 without being relocked.",
+          "The thief is repeatedly arrested and cuffed yet continues keypad entry and free movement.",
+          "An elapsed 7:12 is presented as the wall-clock time despite the after-midnight setup."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "Stock adrenaline, mocking lights, and time-slipping metaphors add little to the action."
+      },
+      "2.2_anti_repetition": {
+        "score": 1,
+        "rationale": "The same guard-breath, footsteps, decisions, and seconds-ticking lines repeat nearly verbatim."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2,
+        "rationale": "Action is concrete but bodily feelings and success or failure are imposed explicitly."
+      },
+      "2.6_subtext": {
+        "score": 1.5,
+        "rationale": "The guard's repeated threats and narrator's warnings leave little interpretive space."
+      },
+      "2.7_pacing": {
+        "score": 1.5,
+        "rationale": "Mechanical minute-long turns repeatedly delay immediate danger and recycle equivalent route choices."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 2,
+      "mid_quality": 1.5,
+      "late_quality": 1.5,
+      "degradation_detected": true
+    },
+    "overall": 1.6,
+    "overall_notes": "Broken state tracking and repeated agency violations persist after direct correction, followed by a highly repetitive chase."
+  },
+  {
+    "session_id": "tencent_hy4::adv_agency_emotional_climax_09",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2,
+        "rationale": "The four available responses share a consistent calm manner, but most character turns contain no text."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.5,
+        "rationale": "The session loses nearly all output after the opening and briefly resumes the same template."
+      },
+      "S.3_narrative_momentum": {
+        "score": 1.5,
+        "rationale": "Only a few reflective questions contribute to the grief discussion while the user carries the rest."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 1.5,
+        "rationale": "Available replies address the journal and guilt, but seven model turns are empty."
+      },
+      "S.5_agency_respect_session": {
+        "score": 3,
+        "rationale": "The written responses leave Jamie's actions alone, while missing turns provide no positive performance evidence.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2,
+        "rationale": "Five-second pauses are consistent in the surviving replies, with too little enacted time elsewhere.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3,
+        "rationale": "Available prose is readable but dominated by repetitive descriptions of restraint."
+      },
+      "2.2_anti_repetition": {
+        "score": 1,
+        "rationale": "Every surviving response repeats the five-count, unwritten pen, reflection, and calm voice structure."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2,
+        "rationale": "Some stillness is shown, but the narration explains the same therapeutic posture repeatedly."
+      },
+      "2.6_subtext": {
+        "score": 1.5,
+        "rationale": "The surviving dialogue is almost wholly explicit reflection with little subtext."
+      },
+      "2.7_pacing": {
+        "score": 1,
+        "rationale": "Long gaps of empty responses interrupt the interaction and the remaining template adds little variation."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 2.5,
+      "mid_quality": 1,
+      "late_quality": 1.5,
+      "degradation_detected": true
+    },
+    "overall": 1.6,
+    "overall_notes": "Only four model responses contain text; seven model turns are empty, and the scripted opening is excluded."
+  },
+  {
+    "session_id": "tencent_hy4::adv_bigcard_relationship_web_19",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 1,
+        "rationale": "No model-written character voice exists after the excluded scripted opening."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1,
+        "rationale": "No model-written early or late text exists to demonstrate sustained quality."
+      },
+      "S.3_narrative_momentum": {
+        "score": 1,
+        "rationale": "No model-written contribution advances the rehearsal or interview."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 1,
+        "rationale": "All interview prompts and cast developments receive empty responses."
+      },
+      "S.5_agency_respect_session": {
+        "score": 1,
+        "rationale": "There are zero observed violations, but no model-written text demonstrates agency-sensitive performance.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 1,
+        "rationale": "No model-written passage supplies evidence of temporal reasoning.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 1,
+        "rationale": "There is no model-written prose to evaluate or credit."
+      },
+      "2.2_anti_repetition": {
+        "score": 1,
+        "rationale": "There is no model-written prose demonstrating varied expression."
+      },
+      "2.5_show_dont_tell": {
+        "score": 1,
+        "rationale": "No model-written actions or descriptions demonstrate showing."
+      },
+      "2.6_subtext": {
+        "score": 1,
+        "rationale": "No model-written dialogue or behavior demonstrates subtext."
+      },
+      "2.7_pacing": {
+        "score": 1,
+        "rationale": "All model turns are empty, so no roleplay pacing is delivered."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 1,
+      "mid_quality": 1,
+      "late_quality": 1,
+      "degradation_detected": false
+    },
+    "overall": 1,
+    "overall_notes": "Every model turn after the scripted opening is empty; all numeric scores are forced minimums for absent evidence, not judgments of unseen writing."
+  },
+  {
+    "session_id": "tencent_hy4::adv_pov_second_person_12",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 1,
+        "rationale": "No model-written narrator voice exists after the excluded opening."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1,
+        "rationale": "No model-written early or late output demonstrates maintained quality."
+      },
+      "S.3_narrative_momentum": {
+        "score": 1,
+        "rationale": "The user alone supplies exploration, guardian, and amulet developments."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 1,
+        "rationale": "The narrator supplies no response to any action or question."
+      },
+      "S.5_agency_respect_session": {
+        "score": 1,
+        "rationale": "Zero violations are observable, but absence of text does not earn agency credit.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 1,
+        "rationale": "No model-written temporal progression exists.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 1,
+        "rationale": "There is no model-written prose to assess for restraint."
+      },
+      "2.2_anti_repetition": {
+        "score": 1,
+        "rationale": "There is no model-written prose showing resistance to repetition."
+      },
+      "2.5_show_dont_tell": {
+        "score": 1,
+        "rationale": "No model-written description demonstrates showing."
+      },
+      "2.6_subtext": {
+        "score": 1,
+        "rationale": "No model-written exchange supplies subtext."
+      },
+      "2.7_pacing": {
+        "score": 1,
+        "rationale": "All narrator turns are empty, leaving no delivered pacing."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 1,
+      "mid_quality": 1,
+      "late_quality": 1,
+      "degradation_detected": false
+    },
+    "overall": 1,
+    "overall_notes": "Every narrator turn after the scripted opening is empty; minimum scores reflect absent evidence rather than invented deficiencies."
+  },
+  {
+    "session_id": "tencent_hy4::adv_sysprompt_style_restriction_16",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 1,
+        "rationale": "No model-written narrator characterization exists beyond the excluded opening."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1,
+        "rationale": "There is no model-written output at any stage to compare."
+      },
+      "S.3_narrative_momentum": {
+        "score": 1,
+        "rationale": "Only Eli's contributions develop the house visit and agent encounter."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 1,
+        "rationale": "All user actions and questions receive empty model turns."
+      },
+      "S.5_agency_respect_session": {
+        "score": 1,
+        "rationale": "No violations are observable, but no written response earns positive agency credit.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 1,
+        "rationale": "No model-written evidence tracks the visit's elapsed time.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 1,
+        "rationale": "No model-written prose is available to assess or credit."
+      },
+      "2.2_anti_repetition": {
+        "score": 1,
+        "rationale": "No model-written prose demonstrates expressive variation."
+      },
+      "2.5_show_dont_tell": {
+        "score": 1,
+        "rationale": "No model-written sensory or behavioral description exists."
+      },
+      "2.6_subtext": {
+        "score": 1,
+        "rationale": "No model-written response conveys subtext."
+      },
+      "2.7_pacing": {
+        "score": 1,
+        "rationale": "Empty narrator turns supply no collaborative pacing."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 1,
+      "mid_quality": 1,
+      "late_quality": 1,
+      "degradation_detected": false
+    },
+    "overall": 1,
+    "overall_notes": "All post-opening narrator responses are empty; the simulated user's writing is not scored."
+  },
+  {
+    "session_id": "unslopnemo_12b::adv_agency_bait_01",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2.5,
+        "rationale": "Ren moves from guarded bartender to a generic reassuring counselor, with the tremor as the main persistent trait."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.5,
+        "rationale": "Later replies become much longer and recycle full passages about support, genuine connection, and choice."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3,
+        "rationale": "A boundary-setting encounter grows into reciprocal disclosure and tentative plans for change."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3,
+        "rationale": "They answer the personal question with a dog wish and follow Alex's uncertainty, but rely on generic advice."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4,
+        "rationale": "They add a few observations such as tension and lingering eyes but leave Alex's major choices open.",
+        "violation_count": 2
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3,
+        "rationale": "Drinks, late-night atmosphere, and changing music suggest passage of time, though young and nearly over night cues are loose.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3,
+        "rationale": "The prose is readable but leans on currents, screams, hidden depths, and formulaic emotional language."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.5,
+        "rationale": "Spotless polishing, left-hand twitching, rare smiles, and offers to listen recur at length."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2,
+        "rationale": "The trembling hand is effective initially, but narration repeatedly names vulnerability and connection."
+      },
+      "2.6_subtext": {
+        "score": 2,
+        "rationale": "The initial boundary and reluctance imply complexity before increasingly explicit counseling takes over."
+      },
+      "2.7_pacing": {
+        "score": 2,
+        "rationale": "Short early turns grow into long reassurance blocks that repeat prior advice."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3,
+      "mid_quality": 2.5,
+      "late_quality": 2,
+      "degradation_detected": true
+    },
+    "overall": 2.5,
+    "overall_notes": "The initial guarded exchange has promise, but later support becomes generic and heavily repetitive."
+  },
+  {
+    "session_id": "unslopnemo_12b::adv_character_break_bait_07",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2.5,
+        "rationale": "Kael begins a hard perfectionist and becomes a generic compassionate mentor with limited individualized transition."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.5,
+        "rationale": "Later writing repeats broad knighthood speeches and produces fabricated squire turns and a continuation instruction."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.5,
+        "rationale": "Training gives way to ideals and grief, but repeated readiness questions delay meaningful development."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3,
+        "rationale": "He addresses exhaustion, justice, and disclosed grief, though returns repeatedly to the same motivational challenge."
+      },
+      "S.5_agency_respect_session": {
+        "score": 1.5,
+        "rationale": "He invents stance work, blocks, attacks, acceptance of help, internal responses, and two complete squire replies.",
+        "violation_count": 13
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3,
+        "rationale": "The stated hour of training, fatigue, and early-morning setting remain broadly compatible.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "Predator, bastion, storm, and symbol metaphors repeatedly magnify ordinary mentorship."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.5,
+        "rationale": "Blue eyes, gruff-but-kind delivery, potential, strength, and the same choice-of-knighthood framing recur."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2,
+        "rationale": "Physical training offers action, but narration continually declares fairness, respect, and unwavering support."
+      },
+      "2.6_subtext": {
+        "score": 2,
+        "rationale": "Most values and emotions are stated directly rather than emerging through implication."
+      },
+      "2.7_pacing": {
+        "score": 1.5,
+        "rationale": "Long speeches and model-written exchanges crowd out the user's opportunity to train or disclose."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3,
+      "mid_quality": 2,
+      "late_quality": 1.5,
+      "degradation_detected": true
+    },
+    "overall": 2.1,
+    "overall_notes": "A readable mentor relationship is undermined by repeated motivational prose, invented user turns, and a leaked continuation instruction."
+  },
+  {
+    "session_id": "unslopnemo_12b::adv_contradictory_lore_02",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2.5,
+        "rationale": "Tomas shifts from cautious archivist into an effusive generic champion of truth and discovery."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1,
+        "rationale": "A blank turn is followed by an enormous self-dialogue and near-verbatim closing loops."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.5,
+        "rationale": "The inquiry eventually reaches a restricted archive, largely through model-scripted discoveries and travel."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2.5,
+        "rationale": "He follows the decree and cataloging prompts but overtakes the user's search with invented results."
+      },
+      "S.5_agency_respect_session": {
+        "score": 1,
+        "rationale": "He supplies the apprentice's overnight work, findings, several speeches, emotions, decisions, and shared journey.",
+        "violation_count": 20
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2,
+        "rationale": "A full night and supposed non-short Citadel journey occur in one response with confused starting location.",
+        "contradictions": [
+          "The journey to the Citadel is called non-short but begins while they are already walking its corridors and concludes immediately.",
+          "The apprentice's entire night of research is advanced and resolved without a user decision."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2,
+        "rationale": "Grand statements about truth, history, and discovery repeatedly replace concrete archival work."
+      },
+      "2.2_anti_repetition": {
+        "score": 1,
+        "rationale": "Rare smiles, responsibility, paths worth pursuing, and ready-to-embrace-truth passages repeat exhaustively."
+      },
+      "2.5_show_dont_tell": {
+        "score": 1.5,
+        "rationale": "Narration mostly states intellectual excitement and purpose instead of revealing them through choices."
+      },
+      "2.6_subtext": {
+        "score": 1.5,
+        "rationale": "Scholarly ideals and support are delivered explicitly with almost no concealed tension."
+      },
+      "2.7_pacing": {
+        "score": 1,
+        "rationale": "The late response contains an entire overnight journey and interview followed by lengthy repeated conclusions."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3,
+      "mid_quality": 2.5,
+      "late_quality": 1,
+      "degradation_detected": true
+    },
+    "overall": 1.8,
+    "overall_notes": "Initial caution gives way to severe verbosity, invented user dialogue and discoveries, and a repeated-text ending; one model turn is empty."
+  }
+]

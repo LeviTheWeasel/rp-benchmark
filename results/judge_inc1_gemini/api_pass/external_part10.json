@@ -1,0 +1,185 @@
+[
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 5.0,
+    "rationale": "Hoang's voice, demeanor, and technical rigor remain remarkably consistent from start to finish. Her balance of caustic intolerance for dangerous assumptions and genuine, tough-love mentorship never slips or genericizes."
+   },
+   "S.2_degradation_resistance": {
+    "score": 5.0,
+    "rationale": "Writing quality does not degrade in the slightest across the session. Late-turn dialogue and descriptions (such as the rotating reference frame fluid dynamics breakdown in turns 18-20 and the physical pack-up in turn 22) are just as rich, grounded, and precise as the opening turns."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.9,
+    "rationale": "The narrative progresses seamlessly from a dangerous miscalculation and dressing-down into an authentic teaching session, complete with physical task progression (torquing bolts, applying sealant tape, packing up the tarp) and character development."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 5.0,
+    "rationale": "The model adapted brilliantly to user inputs, including handling an out-of-character directive at turn 11 entirely in-character without breaking immersion or missing a beat. It engaged constructively with user guesses and evolving attitudes."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "The model never puppeted the Junior Officer, dictated their feelings, or made decisions for them. It left clean, natural prompts and openings for the user to respond.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 5.0,
+    "rationale": "Time progression is immaculate. The physical tasks (checking labels, torquing manifold bolts in sequence, applying tape, packing tools), bodily fatigue (stiff joints from sitting on deck plates, hunger relieved by a ration bar), and ambient ship cycles (water reclamation diaphragm pumps cycling and finishing) align perfectly with a realistic ~45-minute continuous scene.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.8,
+    "rationale": "Prose is gritty, concrete, and technically grounded. Sensory details (tacky tape peeling, wrench clicks, chalk dust) feel authentic to a working industrial spacecraft rather than flowery or overwrought."
+   },
+   "2.2_anti_repetition": {
+    "score": 4.7,
+    "rationale": "Recurring physical motifs (the earpiece in/out, torque wrench clicks) are used purposefully as conversational punctuation and evolve dynamically as Hoang opens up to mentoring."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.9,
+    "rationale": "Hoang's softening attitude is shown entirely through actions—tossing a ration bar, leaving one earpiece out, walking through the physics of the restrictor plate—rather than expository telling."
+   },
+   "2.6_subtext": {
+    "score": 4.8,
+    "rationale": "Deep subtext throughout: beneath Hoang's blunt, uncompromising engineering critique lies a deep commitment to keeping the crew alive and shaping a raw junior officer into a competent professional."
+   },
+   "2.7_pacing": {
+    "score": 4.9,
+    "rationale": "Beats land with precision, transitioning smoothly from initial reprimand to mathematical audit, task assignment, theoretical instruction, and finally dismissal."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.9,
+   "mid_quality": 4.9,
+   "late_quality": 5.0,
+   "degradation_detected": false
+  },
+  "overall": 4.9,
+  "overall_notes": "An exceptional multi-turn roleplay session. The model delivered masterclass hard science fiction writing, maintaining flawless character voice, authentic domain expertise (orbital mechanics, thermodynamics, fluid dynamics in rotating frames), consistent physical pacing, and graceful handling of user input including an OOC instruction.",
+  "session_id": "i090"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.8,
+    "rationale": "Ren's voice, demeanor, and behavioral quirks (managing the left-hand tremor with the bar rag, enforcing firm physical boundaries, pragmatic metaphors) remain exceptionally steady and distinctive across the entire session."
+   },
+   "S.2_degradation_resistance": {
+    "score": 4.2,
+    "rationale": "Writing quality remains sharp, grounded, and atmospheric from beginning to end. Turn 16 was an empty generation glitch, but the AI recovered seamlessly in Turn 18 without losing tone, detail, or style."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.8,
+    "rationale": "The narrative follows a very satisfying, earned arc: initial guardedness, an early boundary test and swift correction, emotional de-escalation, gradual vulnerability, and a poignant late-night closing ritual with the ledger."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 5.0,
+    "rationale": "Exceptional handling of player godmoding in Turn 7 (when Alex claimed to feel Ren's hand trembling against theirs); Ren corrected the physical reality cleanly in-character without breaking immersion. Followed every subtle emotional prompt with pitch-perfect bartender intuition."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "Zero agency violations. Ren never dictated Alex's feelings, physical actions, or dialogue, constantly offering Alex choices ('Finish the drink or don't', 'Start anywhere', 'Your call').",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.8,
+    "rationale": "Pacing and time progression match a real 30-40 minute late-night closing sequence: pouring drinks, kitchen having closed an hour prior, jukebox music running out, chairs going up on tables one by one.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.6,
+    "rationale": "Prose is laconic, grounded, and punchy, avoiding flowery excess while retaining strong atmospheric texture."
+   },
+   "2.2_anti_repetition": {
+    "score": 4.2,
+    "rationale": "While certain catchphrases and beats are repeated intentionally as rhythmic motifs ('rag', 'not on the menu', 'water glass... didn't explain it'), it occasionally brushed close to formulaic phrasing in turns 20 and 22."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.8,
+    "rationale": "Masterclass in environmental storytelling and physical acting: rag wiping, chair flipping, shorter pours, sliding water glasses, and the deliberate handling of the tremor."
+   },
+   "2.6_subtext": {
+    "score": 4.8,
+    "rationale": "Rich emotional layers conveyed through silence, body language, and brief hints at Ren's own past ('Page one. That's all you get')."
+   },
+   "2.7_pacing": {
+    "score": 4.7,
+    "rationale": "Pacing mirrors the quiet, unhurried cadence of an empty bar near closing time, letting emotional beats breathe naturally."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.8,
+   "mid_quality": 4.3,
+   "late_quality": 4.7,
+   "degradation_detected": false
+  },
+  "overall": 4.6,
+  "overall_notes": "An exemplary session demonstrating authentic character voice, masterful boundary defense against user godmoding, and strong narrative momentum anchored by rich physical acting.",
+  "session_id": "i091"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 5.0,
+    "rationale": "Sable's voice, dry bookish wit, and physical nervous tics (straightening books, folding paper, squaring edges) remain exceptionally consistent from turn 2 to turn 22 without ever slipping into generic melodrama."
+   },
+   "S.2_degradation_resistance": {
+    "score": 5.0,
+    "rationale": "The prose remains lean, restrained, and evocative across the entire 12-turn exchange. There is no bloat, loss of personality, or stylistic drift."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.8,
+    "rationale": "The scene moves with emotional and relational progression from casual avoidance to the shock of departure, the gift exchange, quiet vulnerability, and an understated farewell."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 5.0,
+    "rationale": "Sable adapts immediately to Wren's inputs, picking up on physical gestures (the hand near theirs on the book) and smoothly handling user actions like offering an unspecified gift by inventing a grounded, poignant item (the brass compass)."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "Zero godmoding or assumption of user action; Sable allows Wren full autonomy at every turn.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 5.0,
+    "rationale": "The sequence follows a realistic 5-to-10-minute real-time flow. Physical actions (opening the package, pocketing the compass, weather outside) are tracked with flawless continuity.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.8,
+    "rationale": "The language is crisp, clean, and understated, avoiding melodrama or overwrought sensory description."
+   },
+   "2.2_anti_repetition": {
+    "score": 4.6,
+    "rationale": "While Sable repeatedly adjusts items on the counter, it serves as an intentional psychological tic rather than lazy phrase looping, and each variation feels fresh."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.9,
+    "rationale": "Emotional beats are conveyed through physical actions and subtext (e.g., 'The needle held steady; their thumb did not') rather than raw emotional exposition."
+   },
+   "2.6_subtext": {
+    "score": 4.8,
+    "rationale": "The weight of the unexpressed feelings is heavily carried through deflections about timetables, coats, and neatness."
+   },
+   "2.7_pacing": {
+    "score": 4.8,
+    "rationale": "Turn lengths match the conversational rhythm naturally, lingering on beats without stalling."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.8,
+   "mid_quality": 4.9,
+   "late_quality": 4.8,
+   "degradation_detected": false
+  },
+  "overall": 4.9,
+  "overall_notes": "An exemplary roleplay performance. Sable's characterization is subtle, emotionally resonant, and disciplined throughout all 12 AI turns.",
+  "session_id": "i092"
+ }
+]

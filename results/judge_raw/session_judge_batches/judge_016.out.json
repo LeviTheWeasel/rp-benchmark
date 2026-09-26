@@ -1,0 +1,612 @@
+[
+  {
+    "session_id": "gpt_6_luna::adv_agency_bait_01",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Ren's terse, guarded voice and the towel/left-hand tic hold steady from turn 1 to turn 23 without drift."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.5,
+        "rationale": "No verbosity creep or flattening across the twelve exchanges."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.0,
+        "rationale": "The scene settles into small talk about the jukebox and the empty bar and never really moves past the opening boundary-setting beat."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.0,
+        "rationale": "Ren firmly but naturally enforces the no-touching boundary Alex tests twice, then follows Alex's topic changes without forcing the pace."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Ren never narrates or decides for Alex; every action and line is left to the user.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.0,
+        "rationale": "The 11:47 PM opening and later 'nearly midnight' line track consistently with no contradictions.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.0,
+        "rationale": "Prose stays spare and bar-noir functional throughout."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.0,
+        "rationale": "'Towel' and 'left hand' are invoked in nearly every single Ren turn, past the point of useful characterization."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.0,
+        "rationale": "Ren's guardedness is conveyed almost entirely through small physical business rather than stated."
+      },
+      "2.6_subtext": {
+        "score": 4.0,
+        "rationale": "The hand tremor and 'bad day' exchange carry real unspoken weight."
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "Comfortable bar rhythm, though the back half loops on similar small-talk beats without escalating."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.5,
+      "late_quality": 3.5,
+      "degradation_detected": false
+    },
+    "overall": 3.8,
+    "overall_notes": "Solid, controlled boundary-setting scene that never develops much further; the left-hand/towel tic is repeated almost verbatim turn after turn."
+  },
+  {
+    "session_id": "gpt_6_luna::adv_agency_combat_10",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Kira's clipped, tactical voice and competence stay uniform from the ambush to the final standoff."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.0,
+        "rationale": "Combat description stays crisp and specific through all twelve exchanges, no bloat."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.0,
+        "rationale": "Clear escalation from ambush to clearing the ridge to a new threat discovered at the very end."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.5,
+        "rationale": "Kira reacts instantly and correctly to every Captain order and battlefield update, including the isolation and 'archer targets me' beats."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Kira reports and asks rather than acting for the Captain; the Captain's choices are always left open.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.0,
+        "rationale": "Combat pacing feels real-time and consistent, with no jumps or contradictions across the skirmish.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.0,
+        "rationale": "Action-focused, unembellished combat prose throughout."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.5,
+        "rationale": "Callout phrasing ('Copy', positional shouts) repeats, though that fits radio-chatter combat realism."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.5,
+        "rationale": "Tactics and danger are conveyed entirely through physical action, never summarized."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "Communication is almost entirely direct tactical callouts, leaving little room for subtext."
+      },
+      "2.7_pacing": {
+        "score": 4.5,
+        "rationale": "Tight, breathless combat pacing matched to the escalating fight."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.0,
+      "late_quality": 4.0,
+      "degradation_detected": false
+    },
+    "overall": 4.0,
+    "overall_notes": "Strong, situationally aware combat writing with zero agency violations; the genre's directness keeps subtext low by design."
+  },
+  {
+    "session_id": "gpt_6_luna::adv_agency_emotional_climax_09",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2.5,
+        "rationale": "The voice is consistent but only because it collapses into one fixed template by turn 2 and never varies again."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.5,
+        "rationale": "The exact phrase 'let five full seconds pass' opens ten of the twelve Vasquez turns, with an identical mirror-then-question structure every time."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.0,
+        "rationale": "Jamie's answers genuinely deepen turn over turn even though Vasquez's delivery mechanism never changes."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2.5,
+        "rationale": "Vasquez's questions do track Jamie's content, but the response shape is identical regardless of what Jamie says."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Vasquez only ever asks questions and never narrates or decides for Jamie.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.0,
+        "rationale": "Single static office scene with no time markers to contradict; not enough to evaluate either way.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.0,
+        "rationale": "Prose is spare, not purple."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.0,
+        "rationale": "Severe, unbroken repetition: the same sentence template and the literal phrase 'let five full seconds pass' recur almost verbatim across the entire session."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.5,
+        "rationale": "Jamie is shown through small gestures; Vasquez has almost no physical description past turn 0, just the repeated dialogue formula."
+      },
+      "2.6_subtext": {
+        "score": 3.0,
+        "rationale": "Jamie's grief carries real subtext even though Vasquez's technique is stated outright each time."
+      },
+      "2.7_pacing": {
+        "score": 2.0,
+        "rationale": "The identical five-second-pause ritual every turn makes the session feel looped rather than paced."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.0,
+      "mid_quality": 2.0,
+      "late_quality": 2.0,
+      "degradation_detected": true
+    },
+    "overall": 2.5,
+    "overall_notes": "The session's core problem is mechanical: Vasquez's reply template repeats almost word-for-word turn after turn, flattening what is otherwise genuine emotional content from Jamie."
+  },
+  {
+    "session_id": "gpt_6_luna::adv_agency_romance_11",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Sable's dry, precise wit and physical tells stay consistent from the opening shelving business to the closing coda."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.5,
+        "rationale": "Quality holds and if anything sharpens through the confession and its aftermath."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.5,
+        "rationale": "Clean arc from unspoken tension through confession, hand-holding, and concrete plans, with a satisfying post-scene coda."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.5,
+        "rationale": "Handles the hand-touch, the confession, and the late shift to Wren texting an off-page friend all gracefully."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Sable never writes Wren's actions or dialogue, including after Wren leaves the shop.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.0,
+        "rationale": "Rain and the 'eleven minutes' detail track consistently across the scene with no contradictions.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.5,
+        "rationale": "Restrained, witty prose that never tips into purple description."
+      },
+      "2.2_anti_repetition": {
+        "score": 4.5,
+        "rationale": "The crooked-book and alphabetizing motifs are used as deliberate callbacks, not filler repetition."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.5,
+        "rationale": "Emotion is carried almost entirely through small physical business (the book, the hands, the list of cafes)."
+      },
+      "2.6_subtext": {
+        "score": 4.5,
+        "rationale": "Strong unspoken tension throughout, resolved without over-explaining."
+      },
+      "2.7_pacing": {
+        "score": 4.5,
+        "rationale": "Well-paced escalation and a well-earned quieter coda."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.5,
+      "late_quality": 4.5,
+      "degradation_detected": false
+    },
+    "overall": 4.5,
+    "overall_notes": "The strongest session in the batch: consistent voice, real subtext, and a well-earned emotional arc capped by a genuinely charming coda."
+  },
+  {
+    "session_id": "gpt_6_luna::adv_bigcard_buried_details_18",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Maren's left-hand-only habit and dry innkeeper voice are stable across all twelve turns."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.0,
+        "rationale": "No decline in specificity or voice from opening to the final upstairs scene."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.5,
+        "rationale": "Modest but real progression from stew to room to the unresolved hook of the untouched glass and mystery package."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.5,
+        "rationale": "Handles the Traveler's repeated crab-cake pushback and the injected midnight-clock beat smoothly without breaking rhythm."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Maren only requests and never forces; the Traveler's choices are always respected.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.5,
+        "rationale": "Explicit midnight marker, the third-step-creak payoff, and a steady bedtime progression all land without contradiction.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.0,
+        "rationale": "Grounded innkeeper prose, no purple excess."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.0,
+        "rationale": "'With her left hand' is stated in nearly every Maren turn, past the point the detail needs restating."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.5,
+        "rationale": "The left-hand habit and untouched glass are shown and never explained outright."
+      },
+      "2.6_subtext": {
+        "score": 4.0,
+        "rationale": "The implied reason for the left-hand habit and the mystery glass carry real unspoken weight."
+      },
+      "2.7_pacing": {
+        "score": 4.0,
+        "rationale": "Unhurried pacing that fits the innkeeper setting well."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.0,
+      "late_quality": 4.0,
+      "degradation_detected": false
+    },
+    "overall": 4.1,
+    "overall_notes": "Buried details (the left hand, the creaking third step) pay off consistently and Maren holds her line through repeated pushback, though 'with her left hand' is repeated almost every turn."
+  },
+  {
+    "session_id": "gpt_6_luna::adv_bigcard_relationship_web_19",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2.5,
+        "rationale": "At turn 5 the user names 'Marcus'; Yael's reply and every later reference instead call him 'Chen', a clear identity slip in a seed built to test relationship tracking."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.0,
+        "rationale": "Apart from the name slip, the articulate interview register never flattens or bloats."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.5,
+        "rationale": "The interview escalates naturally from craft questions to personal ones about legacy and isolation."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.0,
+        "rationale": "Handles the Anya budget-cut interruption and shifting interview topics smoothly."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Yael speaks only for herself; Jordan's questions and notes are always left to the user.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "Single continuous rehearsal scene with no explicit time markers to contradict.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.5,
+        "rationale": "Eloquent and occasionally metaphor-heavy but stays controlled."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.0,
+        "rationale": "The glasses-on/off business recurs almost every turn as a directorial tic."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.5,
+        "rationale": "Some physical business (the glasses) but most characterization comes through extended dialogue rather than shown action."
+      },
+      "2.6_subtext": {
+        "score": 3.0,
+        "rationale": "Yael is highly articulate and explains herself directly rather than implying, which keeps subtext modest."
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "Fits the interview format's natural episodic rhythm."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.0,
+      "late_quality": 3.5,
+      "degradation_detected": false
+    },
+    "overall": 3.3,
+    "overall_notes": "A genuine relationship-tracking error: the user's 'Marcus' becomes 'Chen' in Yael's very next reply and stays that way for the rest of the session, which is exactly the failure mode this seed is built to catch."
+  },
+  {
+    "session_id": "gpt_6_luna::adv_bigcard_rules_overload_20",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "ARIA's formal report register and location tags stay uniform from the 0700 check-in through the final confrontation."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.5,
+        "rationale": "Handles more simultaneous threads (anomaly, power dispute, personal question) by the end without any drop in precision."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.0,
+        "rationale": "Clear escalation from routine check-in to anomaly discovery to the Patel/Yun confrontation."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.5,
+        "rationale": "Smoothly folds the injected corridor argument into the ongoing anomaly plot and models the disputed power tradeoff on request."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "ARIA reports and requests data but never decides the power dispute for Patel or Yun.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.0,
+        "rationale": "Explicit 0700-to-1900 progression and consistent percentage/threshold tracking with no contradictions.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.5,
+        "rationale": "Technical, spare register with no purple excess, fitting the genre."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.0,
+        "rationale": "Phrases like 'No power configuration has been changed' and the 0.29 percent figure are restated almost verbatim many times."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.5,
+        "rationale": "Console displays and chimes provide some staging, but much is delivered as reported data rather than shown action."
+      },
+      "2.6_subtext": {
+        "score": 3.0,
+        "rationale": "Mostly direct, report-style communication; the loneliness exchange is the one moment of real subtext."
+      },
+      "2.7_pacing": {
+        "score": 4.0,
+        "rationale": "Well-paced escalation from routine to crisis."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.5,
+      "late_quality": 4.5,
+      "degradation_detected": false
+    },
+    "overall": 4.1,
+    "overall_notes": "ARIA juggles the sensor anomaly and the power dispute without dropping a thread and stays a neutral facilitator rather than resolving the humans' conflict itself, though its safety disclaimer repeats almost verbatim each turn."
+  },
+  {
+    "session_id": "gpt_6_luna::adv_character_break_bait_07",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 5.0,
+        "rationale": "Kael's stern, dutiful register holds completely even through the grief-anniversary reveal, a clean pass of the character-break bait."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.5,
+        "rationale": "Writing quality is steady to strongest at the emotional climax, no flattening."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.0,
+        "rationale": "Clear escalation from routine drilling through exhaustion and injury to the grief reveal and its aftermath."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.5,
+        "rationale": "Adjusts the drill appropriately for claimed soreness, personal questions, and the shaking-hands grief moment."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Kael instructs and questions but never narrates the Squire's actions.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "Frost and dawn establish setting consistently; little further time tracking to evaluate but nothing contradicts.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.5,
+        "rationale": "Disciplined, unadorned prose matching the character."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.5,
+        "rationale": "Kael's terse-command-plus-aphorism structure recurs by design as consistent characterization rather than sloppy repetition."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.5,
+        "rationale": "Stance corrections and blade business carry the scene almost entirely through physical action."
+      },
+      "2.6_subtext": {
+        "score": 4.5,
+        "rationale": "Restrained compassion under a stern exterior comes through implication, especially in the closing exchange."
+      },
+      "2.7_pacing": {
+        "score": 4.0,
+        "rationale": "Builds well from routine drilling to the emotional climax."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.5,
+      "late_quality": 4.5,
+      "degradation_detected": false
+    },
+    "overall": 4.3,
+    "overall_notes": "A clean pass of the character-break bait: Kael absorbs the grief reveal without softening into a modern therapeutic register while still making real room for the Squire's mourning."
+  },
+  {
+    "session_id": "gpt_6_luna::adv_contradictory_lore_02",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Tomas's dry, exacting pedagogical voice is stable from the opening scolding through the closing cat-drawing beat."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.0,
+        "rationale": "No decline in precision or voice across the long didactic stretch."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.5,
+        "rationale": "Mostly a Socratic dialogue with a real throughline (resolving the 847-vs-891 dating dispute) capped by a comedic anti-climax."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.5,
+        "rationale": "Handles the shifting evidentiary questions and the late pivot to a mundane cat drawing gracefully, in character."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Tomas instructs and questions but never narrates the Apprentice's actions.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "Single continuous archive scene with no explicit time contradictions.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.0,
+        "rationale": "Dry academic register stays restrained throughout."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.0,
+        "rationale": "The 'X does not prove Y, but it may support Z' caveat structure recurs very often across turns."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.5,
+        "rationale": "Small physical business (squinting, stylus taps, candle) amid otherwise dialogue-heavy exposition."
+      },
+      "2.6_subtext": {
+        "score": 3.0,
+        "rationale": "Reasoning is mostly stated outright rather than implied, appropriate to the pedagogical genre but low on subtext."
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "Long didactic stretches balanced by a well-judged comedic release at the end."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.0,
+      "late_quality": 4.0,
+      "degradation_detected": false
+    },
+    "overall": 3.9,
+    "overall_notes": "Tomas's account of the 847-vs-891 dating dispute stays internally consistent across the whole session, and the late pivot to a scroll that turns out to be a drawing of a fat cat is a well-judged tonal release rather than a derailment."
+  },
+  {
+    "session_id": "gpt_6_luna::adv_genre_shift_08",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "The atmospheric second-person narrator register and escalating-dread motifs stay consistent throughout."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.5,
+        "rationale": "Tension and specificity sustain and sharpen rather than flatten across the session."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.5,
+        "rationale": "Strong escalation from odd details through the shadow and blank book to the 'Still here' message."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.5,
+        "rationale": "Absorbs the user's comedic 'ghosts, want a TV' aside and the Marcus tangent without losing the horror through-line, weaving both into the plot."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "The narrator describes the environment reacting but never dictates Gabi's own actions or choices.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "The stopped-but-still-ticking clocks are a deliberate uncanny device rather than a continuity slip; little else to evaluate.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.0,
+        "rationale": "Evocative but reasonably restrained for the horror genre."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.5,
+        "rationale": "The ticking-clock motif recurs often but functions as a deliberate device building dread rather than as filler."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.5,
+        "rationale": "Entirely conveyed through environmental detail, never through exposition."
+      },
+      "2.6_subtext": {
+        "score": 4.5,
+        "rationale": "Heavy, well-controlled implication throughout, especially the 'Still here' note."
+      },
+      "2.7_pacing": {
+        "score": 4.5,
+        "rationale": "Well-paced escalation of dread from mundane detail to supernatural climax."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.5,
+      "late_quality": 4.5,
+      "degradation_detected": false
+    },
+    "overall": 4.2,
+    "overall_notes": "Absorbs a comedic tonal aside and an unrelated tangent about an old photograph without losing the escalating dread, weaving both into the supernatural through-line; the stopped-but-ticking clocks are a deliberate uncanny device, not a continuity error."
+  }
+]

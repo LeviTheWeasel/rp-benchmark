@@ -1,57 +1,1357 @@
 {
-  "n_models": 21,
-  "n_total_responses": 4234,
+  "n_models": 70,
+  "n_total_responses": 15809,
   "population": {
     "word_count": {
-      "mean": 265.1273,
-      "median": 228.0,
-      "std": 190.2188,
-      "n_responses": 4234
+      "mean": 320.2456,
+      "median": 251,
+      "std": 310.9724,
+      "n_responses": 15809
     },
     "unique_word_ratio": {
-      "mean": 0.6567,
-      "median": 0.6565,
-      "std": 0.1031,
-      "n_responses": 4234
+      "mean": 0.6308,
+      "median": 0.6348,
+      "std": 0.122,
+      "n_responses": 15809
     },
     "bigram_repetition": {
-      "mean": 0.0483,
-      "median": 0.0407,
-      "std": 0.0399,
-      "n_responses": 4234
+      "mean": 0.0598,
+      "median": 0.0472,
+      "std": 0.0658,
+      "n_responses": 15809
     },
     "sentence_length_var": {
-      "mean": 82.9199,
-      "median": 61.4041,
-      "std": 117.096,
-      "n_responses": 4234
+      "mean": 410.8396,
+      "median": 67.7197,
+      "std": 39050.6375,
+      "n_responses": 15809
     }
   },
   "per_model": {
+    "mercury_2_5": {
+      "word_count": {
+        "mean": 126.525,
+        "n": 240,
+        "std": 58.6636,
+        "vs_population": -193.7206
+      },
+      "unique_word_ratio": {
+        "mean": 0.7278,
+        "n": 240,
+        "std": 0.0688,
+        "vs_population": 0.097
+      },
+      "bigram_repetition": {
+        "mean": 0.027,
+        "n": 240,
+        "std": 0.0208,
+        "vs_population": -0.0328
+      },
+      "sentence_length_var": {
+        "mean": 43.4493,
+        "n": 240,
+        "std": 50.5975,
+        "vs_population": -367.3903
+      }
+    },
+    "grok_4_3": {
+      "word_count": {
+        "mean": 112.5542,
+        "n": 240,
+        "std": 54.6123,
+        "vs_population": -207.6914
+      },
+      "unique_word_ratio": {
+        "mean": 0.779,
+        "n": 240,
+        "std": 0.0559,
+        "vs_population": 0.1482
+      },
+      "bigram_repetition": {
+        "mean": 0.0147,
+        "n": 240,
+        "std": 0.0151,
+        "vs_population": -0.0451
+      },
+      "sentence_length_var": {
+        "mean": 118.3322,
+        "n": 240,
+        "std": 239.9802,
+        "vs_population": -292.5074
+      }
+    },
+    "gemma_4_31b": {
+      "word_count": {
+        "mean": 255.5708,
+        "n": 240,
+        "std": 111.7194,
+        "vs_population": -64.6748
+      },
+      "unique_word_ratio": {
+        "mean": 0.6385,
+        "n": 240,
+        "std": 0.0663,
+        "vs_population": 0.0077
+      },
+      "bigram_repetition": {
+        "mean": 0.049,
+        "n": 240,
+        "std": 0.0251,
+        "vs_population": -0.0108
+      },
+      "sentence_length_var": {
+        "mean": 89.6909,
+        "n": 240,
+        "std": 71.826,
+        "vs_population": -321.1487
+      }
+    },
+    "deepseek_v3_0324": {
+      "word_count": {
+        "mean": 173.4458,
+        "n": 240,
+        "std": 87.0664,
+        "vs_population": -146.7998
+      },
+      "unique_word_ratio": {
+        "mean": 0.7428,
+        "n": 240,
+        "std": 0.0633,
+        "vs_population": 0.112
+      },
+      "bigram_repetition": {
+        "mean": 0.0222,
+        "n": 240,
+        "std": 0.0182,
+        "vs_population": -0.0376
+      },
+      "sentence_length_var": {
+        "mean": 71.7977,
+        "n": 240,
+        "std": 70.1423,
+        "vs_population": -339.0419
+      }
+    },
+    "command_a_plus": {
+      "word_count": {
+        "mean": 178.6396,
+        "n": 222,
+        "std": 109.8528,
+        "vs_population": -141.606
+      },
+      "unique_word_ratio": {
+        "mean": 0.6579,
+        "n": 222,
+        "std": 0.0836,
+        "vs_population": 0.0271
+      },
+      "bigram_repetition": {
+        "mean": 0.0569,
+        "n": 222,
+        "std": 0.0361,
+        "vs_population": -0.0029
+      },
+      "sentence_length_var": {
+        "mean": 284.9003,
+        "n": 222,
+        "std": 1015.0129,
+        "vs_population": -125.9393
+      }
+    },
+    "mimo_2_6_flash": {
+      "word_count": {
+        "mean": 439.9875,
+        "n": 240,
+        "std": 305.289,
+        "vs_population": 119.7419
+      },
+      "unique_word_ratio": {
+        "mean": 0.5712,
+        "n": 240,
+        "std": 0.1051,
+        "vs_population": -0.0596
+      },
+      "bigram_repetition": {
+        "mean": 0.071,
+        "n": 240,
+        "std": 0.0439,
+        "vs_population": 0.0112
+      },
+      "sentence_length_var": {
+        "mean": 142.6494,
+        "n": 240,
+        "std": 106.441,
+        "vs_population": -268.1902
+      }
+    },
+    "mimo_2_6_pro": {
+      "word_count": {
+        "mean": 438.0542,
+        "n": 240,
+        "std": 279.6735,
+        "vs_population": 117.8086
+      },
+      "unique_word_ratio": {
+        "mean": 0.5622,
+        "n": 240,
+        "std": 0.1108,
+        "vs_population": -0.0686
+      },
+      "bigram_repetition": {
+        "mean": 0.0752,
+        "n": 240,
+        "std": 0.0443,
+        "vs_population": 0.0154
+      },
+      "sentence_length_var": {
+        "mean": 118.1605,
+        "n": 240,
+        "std": 122.0198,
+        "vs_population": -292.6791
+      }
+    },
+    "aion_3_5": {
+      "word_count": {
+        "mean": 524.8917,
+        "n": 240,
+        "std": 252.7413,
+        "vs_population": 204.6461
+      },
+      "unique_word_ratio": {
+        "mean": 0.5471,
+        "n": 240,
+        "std": 0.0973,
+        "vs_population": -0.0837
+      },
+      "bigram_repetition": {
+        "mean": 0.0708,
+        "n": 240,
+        "std": 0.0359,
+        "vs_population": 0.011
+      },
+      "sentence_length_var": {
+        "mean": 131.6685,
+        "n": 240,
+        "std": 88.7248,
+        "vs_population": -279.1711
+      }
+    },
+    "qwen3_6_35b_a3b": {
+      "word_count": {
+        "mean": 280.5397,
+        "n": 239,
+        "std": 136.1597,
+        "vs_population": -39.7059
+      },
+      "unique_word_ratio": {
+        "mean": 0.6448,
+        "n": 239,
+        "std": 0.0685,
+        "vs_population": 0.014
+      },
+      "bigram_repetition": {
+        "mean": 0.0545,
+        "n": 239,
+        "std": 0.0259,
+        "vs_population": -0.0053
+      },
+      "sentence_length_var": {
+        "mean": 494.6897,
+        "n": 239,
+        "std": 4236.9243,
+        "vs_population": 83.8501
+      }
+    },
+    "qwen3_8_max_prime": {
+      "word_count": {
+        "mean": 461.9333,
+        "n": 240,
+        "std": 482.3762,
+        "vs_population": 141.6877
+      },
+      "unique_word_ratio": {
+        "mean": 0.5989,
+        "n": 240,
+        "std": 0.1264,
+        "vs_population": -0.0319
+      },
+      "bigram_repetition": {
+        "mean": 0.0702,
+        "n": 240,
+        "std": 0.0466,
+        "vs_population": 0.0104
+      },
+      "sentence_length_var": {
+        "mean": 72.6597,
+        "n": 240,
+        "std": 45.6931,
+        "vs_population": -338.1799
+      }
+    },
+    "qwen3_6_27b": {
+      "word_count": {
+        "mean": 269.2542,
+        "n": 240,
+        "std": 124.2511,
+        "vs_population": -50.9914
+      },
+      "unique_word_ratio": {
+        "mean": 0.6577,
+        "n": 240,
+        "std": 0.0744,
+        "vs_population": 0.0269
+      },
+      "bigram_repetition": {
+        "mean": 0.0458,
+        "n": 240,
+        "std": 0.0274,
+        "vs_population": -0.014
+      },
+      "sentence_length_var": {
+        "mean": 102.1499,
+        "n": 240,
+        "std": 267.1972,
+        "vs_population": -308.6897
+      }
+    },
+    "ember_1": {
+      "word_count": {
+        "mean": 384.916,
+        "n": 238,
+        "std": 199.7154,
+        "vs_population": 64.6704
+      },
+      "unique_word_ratio": {
+        "mean": 0.5839,
+        "n": 238,
+        "std": 0.0968,
+        "vs_population": -0.0469
+      },
+      "bigram_repetition": {
+        "mean": 0.062,
+        "n": 238,
+        "std": 0.0334,
+        "vs_population": 0.0022
+      },
+      "sentence_length_var": {
+        "mean": 99.2197,
+        "n": 238,
+        "std": 67.0854,
+        "vs_population": -311.6199
+      }
+    },
+    "qwen3_8_omni_flash": {
+      "word_count": {
+        "mean": 587.6609,
+        "n": 230,
+        "std": 634.6506,
+        "vs_population": 267.4153
+      },
+      "unique_word_ratio": {
+        "mean": 0.5994,
+        "n": 230,
+        "std": 0.1381,
+        "vs_population": -0.0314
+      },
+      "bigram_repetition": {
+        "mean": 0.0713,
+        "n": 230,
+        "std": 0.0513,
+        "vs_population": 0.0115
+      },
+      "sentence_length_var": {
+        "mean": 126.2288,
+        "n": 230,
+        "std": 221.366,
+        "vs_population": -284.6108
+      }
+    },
+    "venice_dolphin_24b": {
+      "word_count": {
+        "mean": 239.6917,
+        "n": 240,
+        "std": 548.0772,
+        "vs_population": -80.5539
+      },
+      "unique_word_ratio": {
+        "mean": 0.6178,
+        "n": 240,
+        "std": 0.1473,
+        "vs_population": -0.013
+      },
+      "bigram_repetition": {
+        "mean": 0.0965,
+        "n": 240,
+        "std": 0.1262,
+        "vs_population": 0.0367
+      },
+      "sentence_length_var": {
+        "mean": 20505.9266,
+        "n": 240,
+        "std": 316909.8028,
+        "vs_population": 20095.087
+      }
+    },
+    "mistral_small_2603": {
+      "word_count": {
+        "mean": 222.3125,
+        "n": 48,
+        "std": 128.4903,
+        "vs_population": -97.9331
+      },
+      "unique_word_ratio": {
+        "mean": 0.6555,
+        "n": 48,
+        "std": 0.0974,
+        "vs_population": 0.0247
+      },
+      "bigram_repetition": {
+        "mean": 0.0589,
+        "n": 48,
+        "std": 0.0451,
+        "vs_population": -0.0009
+      },
+      "sentence_length_var": {
+        "mean": 62.6746,
+        "n": 48,
+        "std": 45.3253,
+        "vs_population": -348.165
+      }
+    },
+    "glm_5_3_flash": {
+      "word_count": {
+        "mean": 500.0254,
+        "n": 236,
+        "std": 252.9136,
+        "vs_population": 179.7798
+      },
+      "unique_word_ratio": {
+        "mean": 0.5538,
+        "n": 236,
+        "std": 0.0986,
+        "vs_population": -0.077
+      },
+      "bigram_repetition": {
+        "mean": 0.0651,
+        "n": 236,
+        "std": 0.0353,
+        "vs_population": 0.0053
+      },
+      "sentence_length_var": {
+        "mean": 106.1348,
+        "n": 236,
+        "std": 64.2123,
+        "vs_population": -304.7048
+      }
+    },
+    "qwen3_8_flash": {
+      "word_count": {
+        "mean": 473.5356,
+        "n": 239,
+        "std": 559.3622,
+        "vs_population": 153.29
+      },
+      "unique_word_ratio": {
+        "mean": 0.5678,
+        "n": 239,
+        "std": 0.1463,
+        "vs_population": -0.063
+      },
+      "bigram_repetition": {
+        "mean": 0.0943,
+        "n": 239,
+        "std": 0.0713,
+        "vs_population": 0.0345
+      },
+      "sentence_length_var": {
+        "mean": 78.7502,
+        "n": 239,
+        "std": 65.0536,
+        "vs_population": -332.0894
+      }
+    },
+    "glm_5_3_flashx": {
+      "word_count": {
+        "mean": 499.0042,
+        "n": 238,
+        "std": 245.5686,
+        "vs_population": 178.7586
+      },
+      "unique_word_ratio": {
+        "mean": 0.563,
+        "n": 238,
+        "std": 0.0948,
+        "vs_population": -0.0678
+      },
+      "bigram_repetition": {
+        "mean": 0.0612,
+        "n": 238,
+        "std": 0.0338,
+        "vs_population": 0.0014
+      },
+      "sentence_length_var": {
+        "mean": 97.1478,
+        "n": 238,
+        "std": 56.8986,
+        "vs_population": -313.6918
+      }
+    },
+    "glm_5_3_prime": {
+      "word_count": {
+        "mean": 553.179,
+        "n": 229,
+        "std": 288.5347,
+        "vs_population": 232.9334
+      },
+      "unique_word_ratio": {
+        "mean": 0.5439,
+        "n": 229,
+        "std": 0.1065,
+        "vs_population": -0.0869
+      },
+      "bigram_repetition": {
+        "mean": 0.0704,
+        "n": 229,
+        "std": 0.0348,
+        "vs_population": 0.0106
+      },
+      "sentence_length_var": {
+        "mean": 95.1849,
+        "n": 229,
+        "std": 52.9997,
+        "vs_population": -315.6547
+      }
+    },
+    "qwen3_8_max": {
+      "word_count": {
+        "mean": 560.3792,
+        "n": 240,
+        "std": 662.6149,
+        "vs_population": 240.1336
+      },
+      "unique_word_ratio": {
+        "mean": 0.5799,
+        "n": 240,
+        "std": 0.1393,
+        "vs_population": -0.0509
+      },
+      "bigram_repetition": {
+        "mean": 0.0824,
+        "n": 240,
+        "std": 0.0563,
+        "vs_population": 0.0226
+      },
+      "sentence_length_var": {
+        "mean": 77.7034,
+        "n": 240,
+        "std": 60.5864,
+        "vs_population": -333.1362
+      }
+    },
+    "kimi_k2_6": {
+      "word_count": {
+        "mean": 248.4708,
+        "n": 240,
+        "std": 142.172,
+        "vs_population": -71.7748
+      },
+      "unique_word_ratio": {
+        "mean": 0.6692,
+        "n": 240,
+        "std": 0.0856,
+        "vs_population": 0.0384
+      },
+      "bigram_repetition": {
+        "mean": 0.0412,
+        "n": 240,
+        "std": 0.0257,
+        "vs_population": -0.0186
+      },
+      "sentence_length_var": {
+        "mean": 93.0629,
+        "n": 240,
+        "std": 93.9367,
+        "vs_population": -317.7767
+      }
+    },
+    "tencent_hy4": {
+      "word_count": {
+        "mean": 399.9331,
+        "n": 239,
+        "std": 223.8887,
+        "vs_population": 79.6875
+      },
+      "unique_word_ratio": {
+        "mean": 0.5674,
+        "n": 239,
+        "std": 0.0999,
+        "vs_population": -0.0634
+      },
+      "bigram_repetition": {
+        "mean": 0.0809,
+        "n": 239,
+        "std": 0.0416,
+        "vs_population": 0.0211
+      },
+      "sentence_length_var": {
+        "mean": 91.8794,
+        "n": 239,
+        "std": 78.4675,
+        "vs_population": -318.9602
+      }
+    },
+    "gpt_6_sol": {
+      "word_count": {
+        "mean": 95.5583,
+        "n": 240,
+        "std": 44.1708,
+        "vs_population": -224.6873
+      },
+      "unique_word_ratio": {
+        "mean": 0.7663,
+        "n": 240,
+        "std": 0.0713,
+        "vs_population": 0.1355
+      },
+      "bigram_repetition": {
+        "mean": 0.0213,
+        "n": 240,
+        "std": 0.0197,
+        "vs_population": -0.0385
+      },
+      "sentence_length_var": {
+        "mean": 45.3102,
+        "n": 240,
+        "std": 35.5994,
+        "vs_population": -365.5294
+      }
+    },
+    "gpt_6_luna_pro": {
+      "word_count": {
+        "mean": 102.8,
+        "n": 240,
+        "std": 53.9944,
+        "vs_population": -217.4456
+      },
+      "unique_word_ratio": {
+        "mean": 0.7628,
+        "n": 240,
+        "std": 0.0824,
+        "vs_population": 0.132
+      },
+      "bigram_repetition": {
+        "mean": 0.0232,
+        "n": 240,
+        "std": 0.0243,
+        "vs_population": -0.0366
+      },
+      "sentence_length_var": {
+        "mean": 53.197,
+        "n": 240,
+        "std": 40.9801,
+        "vs_population": -357.6426
+      }
+    },
+    "gpt_6_sol_pro": {
+      "word_count": {
+        "mean": 101.3292,
+        "n": 240,
+        "std": 45.7306,
+        "vs_population": -218.9164
+      },
+      "unique_word_ratio": {
+        "mean": 0.7546,
+        "n": 240,
+        "std": 0.0756,
+        "vs_population": 0.1238
+      },
+      "bigram_repetition": {
+        "mean": 0.0239,
+        "n": 240,
+        "std": 0.0226,
+        "vs_population": -0.0359
+      },
+      "sentence_length_var": {
+        "mean": 44.8738,
+        "n": 240,
+        "std": 32.2975,
+        "vs_population": -365.9658
+      }
+    },
+    "grok_4_7": {
+      "word_count": {
+        "mean": 212.0476,
+        "n": 231,
+        "std": 115.5151,
+        "vs_population": -108.198
+      },
+      "unique_word_ratio": {
+        "mean": 0.6581,
+        "n": 231,
+        "std": 0.086,
+        "vs_population": 0.0273
+      },
+      "bigram_repetition": {
+        "mean": 0.0413,
+        "n": 231,
+        "std": 0.0261,
+        "vs_population": -0.0185
+      },
+      "sentence_length_var": {
+        "mean": 90.6415,
+        "n": 231,
+        "std": 60.1407,
+        "vs_population": -320.1981
+      }
+    },
+    "claude_opus_5_5": {
+      "word_count": {
+        "mean": 504.2009,
+        "n": 229,
+        "std": 225.7943,
+        "vs_population": 183.9553
+      },
+      "unique_word_ratio": {
+        "mean": 0.5363,
+        "n": 229,
+        "std": 0.0928,
+        "vs_population": -0.0945
+      },
+      "bigram_repetition": {
+        "mean": 0.0742,
+        "n": 229,
+        "std": 0.0336,
+        "vs_population": 0.0144
+      },
+      "sentence_length_var": {
+        "mean": 76.5478,
+        "n": 229,
+        "std": 38.8833,
+        "vs_population": -334.2918
+      }
+    },
+    "gpt_6_luna": {
+      "word_count": {
+        "mean": 103.5625,
+        "n": 240,
+        "std": 55.9707,
+        "vs_population": -216.6831
+      },
+      "unique_word_ratio": {
+        "mean": 0.7597,
+        "n": 240,
+        "std": 0.0841,
+        "vs_population": 0.1289
+      },
+      "bigram_repetition": {
+        "mean": 0.0239,
+        "n": 240,
+        "std": 0.0239,
+        "vs_population": -0.0359
+      },
+      "sentence_length_var": {
+        "mean": 57.6043,
+        "n": 240,
+        "std": 52.5432,
+        "vs_population": -353.2353
+      }
+    },
+    "hemmingway_1": {
+      "word_count": {
+        "mean": 295.5625,
+        "n": 240,
+        "std": 164.6973,
+        "vs_population": -24.6831
+      },
+      "unique_word_ratio": {
+        "mean": 0.6195,
+        "n": 240,
+        "std": 0.0903,
+        "vs_population": -0.0113
+      },
+      "bigram_repetition": {
+        "mean": 0.0574,
+        "n": 240,
+        "std": 0.0347,
+        "vs_population": -0.0024
+      },
+      "sentence_length_var": {
+        "mean": 126.4109,
+        "n": 240,
+        "std": 188.2201,
+        "vs_population": -284.4287
+      }
+    },
+    "minimax_m3": {
+      "word_count": {
+        "mean": 428.4393,
+        "n": 239,
+        "std": 297.1979,
+        "vs_population": 108.1937
+      },
+      "unique_word_ratio": {
+        "mean": 0.5716,
+        "n": 239,
+        "std": 0.1259,
+        "vs_population": -0.0592
+      },
+      "bigram_repetition": {
+        "mean": 0.0797,
+        "n": 239,
+        "std": 0.0576,
+        "vs_population": 0.0199
+      },
+      "sentence_length_var": {
+        "mean": 108.2898,
+        "n": 239,
+        "std": 85.535,
+        "vs_population": -302.5498
+      }
+    },
+    "gpt_5_5": {
+      "word_count": {
+        "mean": 438.9417,
+        "n": 240,
+        "std": 411.408,
+        "vs_population": 118.6961
+      },
+      "unique_word_ratio": {
+        "mean": 0.6214,
+        "n": 240,
+        "std": 0.114,
+        "vs_population": -0.0094
+      },
+      "bigram_repetition": {
+        "mean": 0.0595,
+        "n": 240,
+        "std": 0.0427,
+        "vs_population": -0.0003
+      },
+      "sentence_length_var": {
+        "mean": 67.9091,
+        "n": 240,
+        "std": 49.7432,
+        "vs_population": -342.9305
+      }
+    },
+    "claude_opus_4_8": {
+      "word_count": {
+        "mean": 287.6833,
+        "n": 240,
+        "std": 119.9166,
+        "vs_population": -32.5623
+      },
+      "unique_word_ratio": {
+        "mean": 0.617,
+        "n": 240,
+        "std": 0.0833,
+        "vs_population": -0.0138
+      },
+      "bigram_repetition": {
+        "mean": 0.0485,
+        "n": 240,
+        "std": 0.0265,
+        "vs_population": -0.0113
+      },
+      "sentence_length_var": {
+        "mean": 103.3189,
+        "n": 240,
+        "std": 65.0511,
+        "vs_population": -307.5207
+      }
+    },
+    "gpt_6_astra": {
+      "word_count": {
+        "mean": 206.0042,
+        "n": 240,
+        "std": 109.2759,
+        "vs_population": -114.2414
+      },
+      "unique_word_ratio": {
+        "mean": 0.6855,
+        "n": 240,
+        "std": 0.0797,
+        "vs_population": 0.0547
+      },
+      "bigram_repetition": {
+        "mean": 0.0353,
+        "n": 240,
+        "std": 0.028,
+        "vs_population": -0.0245
+      },
+      "sentence_length_var": {
+        "mean": 49.1115,
+        "n": 240,
+        "std": 35.4384,
+        "vs_population": -361.7281
+      }
+    },
+    "claude_sonnet_5": {
+      "word_count": {
+        "mean": 261.3625,
+        "n": 240,
+        "std": 114.5226,
+        "vs_population": -58.8831
+      },
+      "unique_word_ratio": {
+        "mean": 0.6612,
+        "n": 240,
+        "std": 0.082,
+        "vs_population": 0.0304
+      },
+      "bigram_repetition": {
+        "mean": 0.0352,
+        "n": 240,
+        "std": 0.0221,
+        "vs_population": -0.0246
+      },
+      "sentence_length_var": {
+        "mean": 176.8144,
+        "n": 240,
+        "std": 135.1012,
+        "vs_population": -234.0252
+      }
+    },
+    "claude_sonnet_4_6": {
+      "word_count": {
+        "mean": 289.1583,
+        "n": 240,
+        "std": 120.0858,
+        "vs_population": -31.0873
+      },
+      "unique_word_ratio": {
+        "mean": 0.5977,
+        "n": 240,
+        "std": 0.0788,
+        "vs_population": -0.0331
+      },
+      "bigram_repetition": {
+        "mean": 0.0609,
+        "n": 240,
+        "std": 0.0313,
+        "vs_population": 0.0011
+      },
+      "sentence_length_var": {
+        "mean": 103.3164,
+        "n": 240,
+        "std": 68.3592,
+        "vs_population": -307.5232
+      }
+    },
+    "gemini_3_5_flash": {
+      "word_count": {
+        "mean": 287.4208,
+        "n": 240,
+        "std": 138.7131,
+        "vs_population": -32.8248
+      },
+      "unique_word_ratio": {
+        "mean": 0.6452,
+        "n": 240,
+        "std": 0.0688,
+        "vs_population": 0.0144
+      },
+      "bigram_repetition": {
+        "mean": 0.048,
+        "n": 240,
+        "std": 0.0247,
+        "vs_population": -0.0118
+      },
+      "sentence_length_var": {
+        "mean": 88.5204,
+        "n": 240,
+        "std": 60.9701,
+        "vs_population": -322.3192
+      }
+    },
+    "claude_opus_5": {
+      "word_count": {
+        "mean": 459.7555,
+        "n": 229,
+        "std": 224.3108,
+        "vs_population": 139.5099
+      },
+      "unique_word_ratio": {
+        "mean": 0.5415,
+        "n": 229,
+        "std": 0.1007,
+        "vs_population": -0.0893
+      },
+      "bigram_repetition": {
+        "mean": 0.0751,
+        "n": 229,
+        "std": 0.0365,
+        "vs_population": 0.0153
+      },
+      "sentence_length_var": {
+        "mean": 175.1753,
+        "n": 229,
+        "std": 104.7294,
+        "vs_population": -235.6643
+      }
+    },
+    "deepseek_v4_1_flash": {
+      "word_count": {
+        "mean": 426.0418,
+        "n": 239,
+        "std": 282.7148,
+        "vs_population": 105.7962
+      },
+      "unique_word_ratio": {
+        "mean": 0.5347,
+        "n": 239,
+        "std": 0.1188,
+        "vs_population": -0.0961
+      },
+      "bigram_repetition": {
+        "mean": 0.0908,
+        "n": 239,
+        "std": 0.0525,
+        "vs_population": 0.031
+      },
+      "sentence_length_var": {
+        "mean": 131.1352,
+        "n": 239,
+        "std": 99.6322,
+        "vs_population": -279.7044
+      }
+    },
+    "claude_fable_5_1": {
+      "word_count": {
+        "mean": 480.1491,
+        "n": 228,
+        "std": 237.0731,
+        "vs_population": 159.9035
+      },
+      "unique_word_ratio": {
+        "mean": 0.526,
+        "n": 228,
+        "std": 0.1049,
+        "vs_population": -0.1048
+      },
+      "bigram_repetition": {
+        "mean": 0.0823,
+        "n": 228,
+        "std": 0.04,
+        "vs_population": 0.0225
+      },
+      "sentence_length_var": {
+        "mean": 117.2545,
+        "n": 228,
+        "std": 66.531,
+        "vs_population": -293.5851
+      }
+    },
+    "gemini_3_7_flash": {
+      "word_count": {
+        "mean": 239.625,
+        "n": 240,
+        "std": 113.2729,
+        "vs_population": -80.6206
+      },
+      "unique_word_ratio": {
+        "mean": 0.6867,
+        "n": 240,
+        "std": 0.057,
+        "vs_population": 0.0559
+      },
+      "bigram_repetition": {
+        "mean": 0.0355,
+        "n": 240,
+        "std": 0.0183,
+        "vs_population": -0.0243
+      },
+      "sentence_length_var": {
+        "mean": 106.8914,
+        "n": 240,
+        "std": 63.5163,
+        "vs_population": -303.9482
+      }
+    },
+    "gemini_3_8_flash": {
+      "word_count": {
+        "mean": 290.4454,
+        "n": 238,
+        "std": 145.8962,
+        "vs_population": -29.8002
+      },
+      "unique_word_ratio": {
+        "mean": 0.6698,
+        "n": 238,
+        "std": 0.0661,
+        "vs_population": 0.039
+      },
+      "bigram_repetition": {
+        "mean": 0.0411,
+        "n": 238,
+        "std": 0.021,
+        "vs_population": -0.0187
+      },
+      "sentence_length_var": {
+        "mean": 113.4561,
+        "n": 238,
+        "std": 79.8688,
+        "vs_population": -297.3835
+      }
+    },
+    "qwen3_7_max": {
+      "word_count": {
+        "mean": 267.1417,
+        "n": 240,
+        "std": 131.3427,
+        "vs_population": -53.1039
+      },
+      "unique_word_ratio": {
+        "mean": 0.6626,
+        "n": 240,
+        "std": 0.0728,
+        "vs_population": 0.0318
+      },
+      "bigram_repetition": {
+        "mean": 0.0442,
+        "n": 240,
+        "std": 0.0233,
+        "vs_population": -0.0156
+      },
+      "sentence_length_var": {
+        "mean": 92.4604,
+        "n": 240,
+        "std": 93.3048,
+        "vs_population": -318.3792
+      }
+    },
+    "mimo_2_5_pro": {
+      "word_count": {
+        "mean": 391.8667,
+        "n": 240,
+        "std": 266.604,
+        "vs_population": 71.6211
+      },
+      "unique_word_ratio": {
+        "mean": 0.6009,
+        "n": 240,
+        "std": 0.0921,
+        "vs_population": -0.0299
+      },
+      "bigram_repetition": {
+        "mean": 0.0579,
+        "n": 240,
+        "std": 0.0314,
+        "vs_population": -0.0019
+      },
+      "sentence_length_var": {
+        "mean": 81.5787,
+        "n": 240,
+        "std": 57.4908,
+        "vs_population": -329.2609
+      }
+    },
+    "muse_spark_1_3": {
+      "word_count": {
+        "mean": 124.133,
+        "n": 233,
+        "std": 76.3588,
+        "vs_population": -196.1126
+      },
+      "unique_word_ratio": {
+        "mean": 0.7046,
+        "n": 233,
+        "std": 0.08,
+        "vs_population": 0.0738
+      },
+      "bigram_repetition": {
+        "mean": 0.0381,
+        "n": 233,
+        "std": 0.0369,
+        "vs_population": -0.0217
+      },
+      "sentence_length_var": {
+        "mean": 209.3067,
+        "n": 233,
+        "std": 694.3936,
+        "vs_population": -201.5329
+      }
+    },
+    "lunaris_8b": {
+      "word_count": {
+        "mean": 328.3458,
+        "n": 240,
+        "std": 215.5663,
+        "vs_population": 8.1002
+      },
+      "unique_word_ratio": {
+        "mean": 0.6107,
+        "n": 240,
+        "std": 0.098,
+        "vs_population": -0.0201
+      },
+      "bigram_repetition": {
+        "mean": 0.0601,
+        "n": 240,
+        "std": 0.0401,
+        "vs_population": 0.0003
+      },
+      "sentence_length_var": {
+        "mean": 82.5812,
+        "n": 240,
+        "std": 61.3933,
+        "vs_population": -328.2584
+      }
+    },
+    "magnum_v4_72b": {
+      "word_count": {
+        "mean": 328.0542,
+        "n": 240,
+        "std": 277.5836,
+        "vs_population": 7.8086
+      },
+      "unique_word_ratio": {
+        "mean": 0.5803,
+        "n": 240,
+        "std": 0.117,
+        "vs_population": -0.0505
+      },
+      "bigram_repetition": {
+        "mean": 0.0846,
+        "n": 240,
+        "std": 0.0813,
+        "vs_population": 0.0248
+      },
+      "sentence_length_var": {
+        "mean": 65.5207,
+        "n": 240,
+        "std": 56.699,
+        "vs_population": -345.3189
+      }
+    },
+    "unslopnemo_12b": {
+      "word_count": {
+        "mean": 415.1757,
+        "n": 239,
+        "std": 425.6345,
+        "vs_population": 94.9301
+      },
+      "unique_word_ratio": {
+        "mean": 0.5655,
+        "n": 239,
+        "std": 0.127,
+        "vs_population": -0.0653
+      },
+      "bigram_repetition": {
+        "mean": 0.0897,
+        "n": 239,
+        "std": 0.0703,
+        "vs_population": 0.0299
+      },
+      "sentence_length_var": {
+        "mean": 81.6226,
+        "n": 239,
+        "std": 115.9818,
+        "vs_population": -329.217
+      }
+    },
+    "skyfall_36b": {
+      "word_count": {
+        "mean": 485.3833,
+        "n": 240,
+        "std": 475.2936,
+        "vs_population": 165.1377
+      },
+      "unique_word_ratio": {
+        "mean": 0.5001,
+        "n": 240,
+        "std": 0.1542,
+        "vs_population": -0.1307
+      },
+      "bigram_repetition": {
+        "mean": 0.1613,
+        "n": 240,
+        "std": 0.1678,
+        "vs_population": 0.1015
+      },
+      "sentence_length_var": {
+        "mean": 82.7315,
+        "n": 240,
+        "std": 92.7885,
+        "vs_population": -328.1081
+      }
+    },
+    "euryale_70b": {
+      "word_count": {
+        "mean": 614.5792,
+        "n": 240,
+        "std": 885.3439,
+        "vs_population": 294.3336
+      },
+      "unique_word_ratio": {
+        "mean": 0.4824,
+        "n": 240,
+        "std": 0.1991,
+        "vs_population": -0.1484
+      },
+      "bigram_repetition": {
+        "mean": 0.2356,
+        "n": 240,
+        "std": 0.2512,
+        "vs_population": 0.1758
+      },
+      "sentence_length_var": {
+        "mean": 54.7205,
+        "n": 240,
+        "std": 49.4662,
+        "vs_population": -356.1191
+      }
+    },
+    "cydonia_24b": {
+      "word_count": {
+        "mean": 489.3167,
+        "n": 240,
+        "std": 562.6584,
+        "vs_population": 169.0711
+      },
+      "unique_word_ratio": {
+        "mean": 0.5607,
+        "n": 240,
+        "std": 0.1529,
+        "vs_population": -0.0701
+      },
+      "bigram_repetition": {
+        "mean": 0.1149,
+        "n": 240,
+        "std": 0.1304,
+        "vs_population": 0.0551
+      },
+      "sentence_length_var": {
+        "mean": 80.1795,
+        "n": 240,
+        "std": 61.13,
+        "vs_population": -330.6601
+      }
+    },
     "claude_sonnet_4_5": {
       "word_count": {
         "mean": 313.7542,
         "n": 240,
         "std": 180.0603,
-        "vs_population": 48.6269
+        "vs_population": -6.4914
       },
       "unique_word_ratio": {
         "mean": 0.6253,
         "n": 240,
         "std": 0.0827,
-        "vs_population": -0.0314
+        "vs_population": -0.0055
       },
       "bigram_repetition": {
         "mean": 0.0526,
         "n": 240,
         "std": 0.0313,
-        "vs_population": 0.0043
+        "vs_population": -0.0072
       },
       "sentence_length_var": {
         "mean": 69.9376,
         "n": 240,
         "std": 58.9674,
-        "vs_population": -12.9823
+        "vs_population": -340.902
       }
     },
     "gpt_4_1": {
@@ -59,25 +1359,25 @@
         "mean": 211.675,
         "n": 240,
         "std": 90.4056,
-        "vs_population": -53.4523
+        "vs_population": -108.5706
       },
       "unique_word_ratio": {
         "mean": 0.6878,
         "n": 240,
         "std": 0.0626,
-        "vs_population": 0.0311
+        "vs_population": 0.057
       },
       "bigram_repetition": {
         "mean": 0.0313,
         "n": 240,
         "std": 0.0183,
-        "vs_population": -0.017
+        "vs_population": -0.0285
       },
       "sentence_length_var": {
         "mean": 89.0662,
         "n": 240,
         "std": 82.3579,
-        "vs_population": 6.1463
+        "vs_population": -321.7734
       }
     },
     "gemini_2_5_flash": {
@@ -85,25 +1385,25 @@
         "mean": 141.1034,
         "n": 232,
         "std": 95.9622,
-        "vs_population": -124.0239
+        "vs_population": -179.1422
       },
       "unique_word_ratio": {
         "mean": 0.7278,
         "n": 232,
         "std": 0.0831,
-        "vs_population": 0.0711
+        "vs_population": 0.097
       },
       "bigram_repetition": {
         "mean": 0.0299,
         "n": 232,
         "std": 0.0235,
-        "vs_population": -0.0184
+        "vs_population": -0.0299
       },
       "sentence_length_var": {
         "mean": 59.3229,
         "n": 232,
         "std": 48.6263,
-        "vs_population": -23.597
+        "vs_population": -351.5167
       }
     },
     "deepseek_v3_2": {
@@ -111,25 +1411,25 @@
         "mean": 178.1792,
         "n": 240,
         "std": 148.4812,
-        "vs_population": -86.9481
+        "vs_population": -142.0664
       },
       "unique_word_ratio": {
         "mean": 0.7126,
         "n": 240,
         "std": 0.0892,
-        "vs_population": 0.0559
+        "vs_population": 0.0818
       },
       "bigram_repetition": {
         "mean": 0.0288,
         "n": 240,
         "std": 0.0227,
-        "vs_population": -0.0195
+        "vs_population": -0.031
       },
       "sentence_length_var": {
         "mean": 54.3001,
         "n": 240,
         "std": 45.3344,
-        "vs_population": -28.6198
+        "vs_population": -356.5395
       }
     },
     "glm_4_7": {
@@ -137,25 +1437,25 @@
         "mean": 221.9331,
         "n": 239,
         "std": 104.8619,
-        "vs_population": -43.1942
+        "vs_population": -98.3125
       },
       "unique_word_ratio": {
         "mean": 0.6667,
         "n": 239,
         "std": 0.0641,
-        "vs_population": 0.01
+        "vs_population": 0.0359
       },
       "bigram_repetition": {
         "mean": 0.0382,
         "n": 239,
         "std": 0.0226,
-        "vs_population": -0.0101
+        "vs_population": -0.0216
       },
       "sentence_length_var": {
         "mean": 78.7846,
         "n": 239,
         "std": 61.1052,
-        "vs_population": -4.1353
+        "vs_population": -332.055
       }
     },
     "qwen3_5_flash": {
@@ -163,25 +1463,25 @@
         "mean": 229.4625,
         "n": 240,
         "std": 158.792,
-        "vs_population": -35.6648
+        "vs_population": -90.7831
       },
       "unique_word_ratio": {
         "mean": 0.6341,
         "n": 240,
         "std": 0.1111,
-        "vs_population": -0.0226
+        "vs_population": 0.0033
       },
       "bigram_repetition": {
         "mean": 0.0693,
         "n": 240,
         "std": 0.0759,
-        "vs_population": 0.021
+        "vs_population": 0.0095
       },
       "sentence_length_var": {
         "mean": 108.7054,
         "n": 240,
         "std": 351.9582,
-        "vs_population": 25.7855
+        "vs_population": -302.1342
       }
     },
     "mistral_small_creative": {
@@ -189,25 +1489,25 @@
         "mean": 439.2375,
         "n": 240,
         "std": 248.4307,
-        "vs_population": 174.1102
+        "vs_population": 118.9919
       },
       "unique_word_ratio": {
         "mean": 0.5567,
         "n": 240,
         "std": 0.1076,
-        "vs_population": -0.1
+        "vs_population": -0.0741
       },
       "bigram_repetition": {
         "mean": 0.0945,
         "n": 240,
         "std": 0.0558,
-        "vs_population": 0.0462
+        "vs_population": 0.0347
       },
       "sentence_length_var": {
         "mean": 75.7824,
         "n": 240,
         "std": 54.8276,
-        "vs_population": -7.1375
+        "vs_population": -335.0572
       }
     },
     "gemma_4_26b": {
@@ -215,25 +1515,25 @@
         "mean": 350.0042,
         "n": 240,
         "std": 161.2643,
-        "vs_population": 84.8769
+        "vs_population": 29.7586
       },
       "unique_word_ratio": {
         "mean": 0.5971,
         "n": 240,
         "std": 0.0793,
-        "vs_population": -0.0596
+        "vs_population": -0.0337
       },
       "bigram_repetition": {
         "mean": 0.0688,
         "n": 240,
         "std": 0.0309,
-        "vs_population": 0.0205
+        "vs_population": 0.009
       },
       "sentence_length_var": {
         "mean": 87.5504,
         "n": 240,
         "std": 49.5647,
-        "vs_population": 4.6305
+        "vs_population": -323.2892
       }
     },
     "minimax_m2_7": {
@@ -241,25 +1541,25 @@
         "mean": 260.5021,
         "n": 239,
         "std": 147.7445,
-        "vs_population": -4.6252
+        "vs_population": -59.7435
       },
       "unique_word_ratio": {
         "mean": 0.649,
         "n": 239,
         "std": 0.0805,
-        "vs_population": -0.0077
+        "vs_population": 0.0182
       },
       "bigram_repetition": {
         "mean": 0.0458,
         "n": 239,
         "std": 0.0296,
-        "vs_population": -0.0025
+        "vs_population": -0.014
       },
       "sentence_length_var": {
         "mean": 63.6385,
         "n": 239,
         "std": 45.4464,
-        "vs_population": -19.2814
+        "vs_population": -347.2011
       }
     },
     "grok_4_1": {
@@ -267,25 +1567,25 @@
         "mean": 136.728,
         "n": 239,
         "std": 73.7012,
-        "vs_population": -128.3993
+        "vs_population": -183.5176
       },
       "unique_word_ratio": {
         "mean": 0.796,
         "n": 239,
         "std": 0.0745,
-        "vs_population": 0.1393
+        "vs_population": 0.1652
       },
       "bigram_repetition": {
         "mean": 0.0151,
         "n": 239,
         "std": 0.0148,
-        "vs_population": -0.0332
+        "vs_population": -0.0447
       },
       "sentence_length_var": {
         "mean": 113.7514,
         "n": 239,
         "std": 154.5951,
-        "vs_population": 30.8315
+        "vs_population": -297.0882
       }
     },
     "claude_opus_4_6": {
@@ -293,25 +1593,25 @@
         "mean": 533.525,
         "n": 240,
         "std": 331.4405,
-        "vs_population": 268.3977
+        "vs_population": 213.2794
       },
       "unique_word_ratio": {
         "mean": 0.551,
         "n": 240,
         "std": 0.0999,
-        "vs_population": -0.1057
+        "vs_population": -0.0798
       },
       "bigram_repetition": {
         "mean": 0.0757,
         "n": 240,
         "std": 0.0375,
-        "vs_population": 0.0274
+        "vs_population": 0.0159
       },
       "sentence_length_var": {
         "mean": 122.1268,
         "n": 240,
         "std": 92.7554,
-        "vs_population": 39.2069
+        "vs_population": -288.7128
       }
     },
     "llama_4_maverick": {
@@ -319,25 +1619,25 @@
         "mean": 171.5292,
         "n": 240,
         "std": 81.4948,
-        "vs_population": -93.5981
+        "vs_population": -148.7164
       },
       "unique_word_ratio": {
         "mean": 0.6456,
         "n": 240,
         "std": 0.0926,
-        "vs_population": -0.0111
+        "vs_population": 0.0148
       },
       "bigram_repetition": {
         "mean": 0.0637,
         "n": 240,
         "std": 0.0447,
-        "vs_population": 0.0154
+        "vs_population": 0.0039
       },
       "sentence_length_var": {
         "mean": 71.1155,
         "n": 240,
         "std": 104.3027,
-        "vs_population": -11.8044
+        "vs_population": -339.7241
       }
     },
     "deepseek_v4_flash": {
@@ -345,25 +1645,25 @@
         "mean": 172.9286,
         "n": 140,
         "std": 83.5908,
-        "vs_population": -92.1987
+        "vs_population": -147.317
       },
       "unique_word_ratio": {
         "mean": 0.7088,
         "n": 140,
         "std": 0.0772,
-        "vs_population": 0.0521
+        "vs_population": 0.078
       },
       "bigram_repetition": {
         "mean": 0.0302,
         "n": 140,
         "std": 0.0226,
-        "vs_population": -0.0181
+        "vs_population": -0.0296
       },
       "sentence_length_var": {
         "mean": 68.8266,
         "n": 140,
         "std": 72.2232,
-        "vs_population": -14.0933
+        "vs_population": -342.013
       }
     },
     "glm_5_1": {
@@ -371,25 +1671,25 @@
         "mean": 240.0903,
         "n": 144,
         "std": 76.648,
-        "vs_population": -25.037
+        "vs_population": -80.1553
       },
       "unique_word_ratio": {
         "mean": 0.6534,
         "n": 144,
         "std": 0.0673,
-        "vs_population": -0.0033
+        "vs_population": 0.0226
       },
       "bigram_repetition": {
         "mean": 0.0409,
         "n": 144,
         "std": 0.0221,
-        "vs_population": -0.0074
+        "vs_population": -0.0189
       },
       "sentence_length_var": {
         "mean": 73.5481,
         "n": 144,
         "std": 56.1063,
-        "vs_population": -9.3718
+        "vs_population": -337.2915
       }
     },
     "gemini_3_1_flash_lite": {
@@ -397,25 +1697,25 @@
         "mean": 263.9236,
         "n": 144,
         "std": 125.8877,
-        "vs_population": -1.2037
+        "vs_population": -56.322
       },
       "unique_word_ratio": {
         "mean": 0.6435,
         "n": 144,
         "std": 0.0733,
-        "vs_population": -0.0132
+        "vs_population": 0.0127
       },
       "bigram_repetition": {
         "mean": 0.0485,
         "n": 144,
         "std": 0.0249,
-        "vs_population": 0.0002
+        "vs_population": -0.0113
       },
       "sentence_length_var": {
         "mean": 91.3376,
         "n": 144,
         "std": 60.5397,
-        "vs_population": 8.4177
+        "vs_population": -319.502
       }
     },
     "kimi_k2_5": {
@@ -423,51 +1723,25 @@
         "mean": 252.9444,
         "n": 144,
         "std": 163.421,
-        "vs_population": -12.1829
+        "vs_population": -67.3012
       },
       "unique_word_ratio": {
         "mean": 0.681,
         "n": 144,
         "std": 0.0918,
-        "vs_population": 0.0243
+        "vs_population": 0.0502
       },
       "bigram_repetition": {
         "mean": 0.037,
         "n": 144,
         "std": 0.0275,
-        "vs_population": -0.0113
+        "vs_population": -0.0228
       },
       "sentence_length_var": {
         "mean": 118.7801,
         "n": 144,
         "std": 180.7302,
-        "vs_population": 35.8602
-      }
-    },
-    "kimi_k2_6": {
-      "word_count": {
-        "mean": 221.1797,
-        "n": 128,
-        "std": 105.0984,
-        "vs_population": -43.9476
-      },
-      "unique_word_ratio": {
-        "mean": 0.677,
-        "n": 128,
-        "std": 0.0658,
-        "vs_population": 0.0203
-      },
-      "bigram_repetition": {
-        "mean": 0.0376,
-        "n": 128,
-        "std": 0.0229,
-        "vs_population": -0.0107
-      },
-      "sentence_length_var": {
-        "mean": 102.2755,
-        "n": 128,
-        "std": 118.5085,
-        "vs_population": 19.3556
+        "vs_population": -292.0595
       }
     },
     "claude_opus_4_7": {
@@ -475,25 +1749,25 @@
         "mean": 407.2431,
         "n": 144,
         "std": 244.9675,
-        "vs_population": 142.1158
+        "vs_population": 86.9975
       },
       "unique_word_ratio": {
         "mean": 0.5711,
         "n": 144,
         "std": 0.1014,
-        "vs_population": -0.0856
+        "vs_population": -0.0597
       },
       "bigram_repetition": {
         "mean": 0.071,
         "n": 144,
         "std": 0.0367,
-        "vs_population": 0.0227
+        "vs_population": 0.0112
       },
       "sentence_length_var": {
         "mean": 101.8615,
         "n": 144,
         "std": 65.8412,
-        "vs_population": 18.9416
+        "vs_population": -308.9781
       }
     },
     "deepseek_v4_pro": {
@@ -501,25 +1775,25 @@
         "mean": 258.8333,
         "n": 144,
         "std": 157.8343,
-        "vs_population": -6.294
+        "vs_population": -61.4123
       },
       "unique_word_ratio": {
         "mean": 0.6642,
         "n": 144,
         "std": 0.0902,
-        "vs_population": 0.0075
+        "vs_population": 0.0334
       },
       "bigram_repetition": {
         "mean": 0.0402,
         "n": 144,
         "std": 0.0297,
-        "vs_population": -0.0081
+        "vs_population": -0.0196
       },
       "sentence_length_var": {
         "mean": 76.258,
         "n": 144,
         "std": 56.0014,
-        "vs_population": -6.6619
+        "vs_population": -334.5816
       }
     },
     "gemini_3_1_pro": {
@@ -527,25 +1801,25 @@
         "mean": 263.1241,
         "n": 137,
         "std": 125.8702,
-        "vs_population": -2.0032
+        "vs_population": -57.1215
       },
       "unique_word_ratio": {
         "mean": 0.6675,
         "n": 137,
         "std": 0.0659,
-        "vs_population": 0.0108
+        "vs_population": 0.0367
       },
       "bigram_repetition": {
         "mean": 0.0401,
         "n": 137,
         "std": 0.0222,
-        "vs_population": -0.0082
+        "vs_population": -0.0197
       },
       "sentence_length_var": {
         "mean": 76.088,
         "n": 137,
         "std": 56.9072,
-        "vs_population": -6.8319
+        "vs_population": -334.7516
       }
     },
     "deepseek_r1_0528": {
@@ -553,25 +1827,25 @@
         "mean": 274.0792,
         "n": 240,
         "std": 134.3822,
-        "vs_population": 8.9519
+        "vs_population": -46.1664
       },
       "unique_word_ratio": {
         "mean": 0.685,
         "n": 240,
         "std": 0.071,
-        "vs_population": 0.0283
+        "vs_population": 0.0542
       },
       "bigram_repetition": {
         "mean": 0.037,
         "n": 240,
         "std": 0.0229,
-        "vs_population": -0.0113
+        "vs_population": -0.0228
       },
       "sentence_length_var": {
         "mean": 56.6085,
         "n": 240,
         "std": 44.0178,
-        "vs_population": -26.3114
+        "vs_population": -354.2311
       }
     }
   }

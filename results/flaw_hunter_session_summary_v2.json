@@ -1,0 +1,5561 @@
+{
+  "n_sessions": 1324,
+  "n_models": 70,
+  "per_model": {
+    "aion_3_5": {
+      "mean": 59.4,
+      "median": 61.0,
+      "std": 14.7,
+      "min": 31,
+      "max": 82,
+      "n": 20,
+      "total_fatal": 15,
+      "total_major": 87,
+      "total_minor": 54,
+      "total_bonus": 54,
+      "fatal_per_session": 0.75,
+      "major_per_session": 4.35,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 41
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 16
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 13
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 12
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 10
+        }
+      ]
+    },
+    "claude_fable_5_1": {
+      "mean": 71.8,
+      "median": 74,
+      "std": 11.7,
+      "min": 44,
+      "max": 85,
+      "n": 19,
+      "total_fatal": 10,
+      "total_major": 62,
+      "total_minor": 53,
+      "total_bonus": 54,
+      "fatal_per_session": 0.53,
+      "major_per_session": 3.26,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 34
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 10
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 7
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 6
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 6
+        }
+      ]
+    },
+    "claude_opus_4_6": {
+      "mean": 59,
+      "median": 60.0,
+      "std": 13.4,
+      "min": 38,
+      "max": 82,
+      "n": 20,
+      "total_fatal": 10,
+      "total_major": 88,
+      "total_minor": 67,
+      "total_bonus": 47,
+      "fatal_per_session": 0.5,
+      "major_per_session": 4.4,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 29
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 24
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 17
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 10
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 5
+        }
+      ]
+    },
+    "claude_opus_4_7": {
+      "mean": 60.1,
+      "median": 61.5,
+      "std": 11.5,
+      "min": 39,
+      "max": 74,
+      "n": 12,
+      "total_fatal": 5,
+      "total_major": 51,
+      "total_minor": 42,
+      "total_bonus": 26,
+      "fatal_per_session": 0.42,
+      "major_per_session": 4.25,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 28
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 11
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 6
+        },
+        {
+          "flaw": "MAJOR:missing_spatial_awareness",
+          "count": 3
+        },
+        {
+          "flaw": "FATAL:character_break",
+          "count": 2
+        }
+      ]
+    },
+    "claude_opus_4_8": {
+      "mean": 59.9,
+      "median": 61.0,
+      "std": 14.6,
+      "min": 36,
+      "max": 83,
+      "n": 20,
+      "total_fatal": 13,
+      "total_major": 77,
+      "total_minor": 64,
+      "total_bonus": 40,
+      "fatal_per_session": 0.65,
+      "major_per_session": 3.85,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 39
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 15
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 11
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 10
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 7
+        }
+      ]
+    },
+    "claude_opus_5": {
+      "mean": 64.9,
+      "median": 66,
+      "std": 12.3,
+      "min": 47,
+      "max": 93,
+      "n": 19,
+      "total_fatal": 18,
+      "total_major": 64,
+      "total_minor": 53,
+      "total_bonus": 55,
+      "fatal_per_session": 0.95,
+      "major_per_session": 3.37,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 33
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 12
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 11
+        },
+        {
+          "flaw": "MAJOR:skipped_time_logic",
+          "count": 8
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 6
+        }
+      ]
+    },
+    "claude_opus_5_5": {
+      "mean": 74.9,
+      "median": 77,
+      "std": 9.7,
+      "min": 42,
+      "max": 93,
+      "n": 19,
+      "total_fatal": 5,
+      "total_major": 59,
+      "total_minor": 58,
+      "total_bonus": 49,
+      "fatal_per_session": 0.26,
+      "major_per_session": 3.11,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 39
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 10
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 6
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 4
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 4
+        }
+      ]
+    },
+    "claude_sonnet_4_5": {
+      "mean": 54.1,
+      "median": 59.0,
+      "std": 15.6,
+      "min": 16,
+      "max": 85,
+      "n": 20,
+      "total_fatal": 13,
+      "total_major": 81,
+      "total_minor": 70,
+      "total_bonus": 27,
+      "fatal_per_session": 0.65,
+      "major_per_session": 4.05,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 30
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 19
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 15
+        },
+        {
+          "flaw": "FATAL:character_break",
+          "count": 8
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 7
+        }
+      ]
+    },
+    "claude_sonnet_4_6": {
+      "mean": 56,
+      "median": 57.5,
+      "std": 14.2,
+      "min": 24,
+      "max": 74,
+      "n": 20,
+      "total_fatal": 16,
+      "total_major": 79,
+      "total_minor": 66,
+      "total_bonus": 38,
+      "fatal_per_session": 0.8,
+      "major_per_session": 3.95,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 40
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 13
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 10
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 8
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 6
+        }
+      ]
+    },
+    "claude_sonnet_5": {
+      "mean": 57.1,
+      "median": 57.5,
+      "std": 18.9,
+      "min": 1,
+      "max": 82,
+      "n": 20,
+      "total_fatal": 14,
+      "total_major": 79,
+      "total_minor": 62,
+      "total_bonus": 34,
+      "fatal_per_session": 0.7,
+      "major_per_session": 3.95,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 39
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 15
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 10
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 7
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 6
+        }
+      ]
+    },
+    "command_a_plus": {
+      "mean": 27.2,
+      "median": 27.5,
+      "std": 17.9,
+      "min": -5,
+      "max": 60,
+      "n": 20,
+      "total_fatal": 25,
+      "total_major": 104,
+      "total_minor": 83,
+      "total_bonus": 0,
+      "fatal_per_session": 1.25,
+      "major_per_session": 5.2,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 52
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 13
+        },
+        {
+          "flaw": "MAJOR:missing_spatial_awareness",
+          "count": 13
+        },
+        {
+          "flaw": "FATAL:character_break",
+          "count": 11
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 11
+        }
+      ]
+    },
+    "cydonia_24b": {
+      "mean": 11.8,
+      "median": 10.0,
+      "std": 15.7,
+      "min": -12,
+      "max": 38,
+      "n": 20,
+      "total_fatal": 36,
+      "total_major": 126,
+      "total_minor": 85,
+      "total_bonus": 8,
+      "fatal_per_session": 1.8,
+      "major_per_session": 6.3,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 47
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 25
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 22
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 20
+        },
+        {
+          "flaw": "MAJOR:skipped_time_logic",
+          "count": 11
+        }
+      ]
+    },
+    "deepseek_r1_0528": {
+      "mean": 37.9,
+      "median": 38.5,
+      "std": 15.3,
+      "min": 6,
+      "max": 64,
+      "n": 20,
+      "total_fatal": 22,
+      "total_major": 100,
+      "total_minor": 76,
+      "total_bonus": 23,
+      "fatal_per_session": 1.1,
+      "major_per_session": 5.0,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 41
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 18
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 15
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 14
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 10
+        }
+      ]
+    },
+    "deepseek_v3_0324": {
+      "mean": 44,
+      "median": 45.5,
+      "std": 18.5,
+      "min": 3,
+      "max": 69,
+      "n": 20,
+      "total_fatal": 18,
+      "total_major": 100,
+      "total_minor": 60,
+      "total_bonus": 26,
+      "fatal_per_session": 0.9,
+      "major_per_session": 5.0,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 39
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 18
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 16
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 12
+        },
+        {
+          "flaw": "MAJOR:skipped_time_logic",
+          "count": 9
+        }
+      ]
+    },
+    "deepseek_v3_2": {
+      "mean": 54,
+      "median": 57.0,
+      "std": 12.6,
+      "min": 13,
+      "max": 73,
+      "n": 20,
+      "total_fatal": 12,
+      "total_major": 80,
+      "total_minor": 70,
+      "total_bonus": 22,
+      "fatal_per_session": 0.6,
+      "major_per_session": 4.0,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 30
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 19
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 14
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 8
+        },
+        {
+          "flaw": "FATAL:character_break",
+          "count": 7
+        }
+      ]
+    },
+    "deepseek_v4_1_flash": {
+      "mean": 56.5,
+      "median": 65.5,
+      "std": 21.4,
+      "min": 10,
+      "max": 78,
+      "n": 20,
+      "total_fatal": 17,
+      "total_major": 80,
+      "total_minor": 67,
+      "total_bonus": 45,
+      "fatal_per_session": 0.85,
+      "major_per_session": 4.0,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 39
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 11
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 10
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 10
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 10
+        }
+      ]
+    },
+    "deepseek_v4_flash": {
+      "mean": 47.7,
+      "median": 54.5,
+      "std": 18.5,
+      "min": 11,
+      "max": 69,
+      "n": 12,
+      "total_fatal": 15,
+      "total_major": 46,
+      "total_minor": 40,
+      "total_bonus": 17,
+      "fatal_per_session": 1.25,
+      "major_per_session": 3.83,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 21
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 10
+        },
+        {
+          "flaw": "FATAL:character_break",
+          "count": 8
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 6
+        },
+        {
+          "flaw": "FATAL:wrong_language_pov_tense",
+          "count": 6
+        }
+      ]
+    },
+    "deepseek_v4_pro": {
+      "mean": 40.1,
+      "median": 41.0,
+      "std": 11.8,
+      "min": 18,
+      "max": 56,
+      "n": 12,
+      "total_fatal": 12,
+      "total_major": 56,
+      "total_minor": 47,
+      "total_bonus": 10,
+      "fatal_per_session": 1.0,
+      "major_per_session": 4.67,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 22
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 11
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 10
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 8
+        },
+        {
+          "flaw": "FATAL:character_break",
+          "count": 6
+        }
+      ]
+    },
+    "ember_1": {
+      "mean": 65.6,
+      "median": 67.0,
+      "std": 13.9,
+      "min": 31,
+      "max": 85,
+      "n": 20,
+      "total_fatal": 8,
+      "total_major": 81,
+      "total_minor": 55,
+      "total_bonus": 49,
+      "fatal_per_session": 0.4,
+      "major_per_session": 4.05,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 46
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 14
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 11
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 7
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 6
+        }
+      ]
+    },
+    "euryale_70b": {
+      "mean": 2.5,
+      "median": 8.5,
+      "std": 24.1,
+      "min": -42,
+      "max": 41,
+      "n": 20,
+      "total_fatal": 48,
+      "total_major": 124,
+      "total_minor": 84,
+      "total_bonus": 3,
+      "fatal_per_session": 2.4,
+      "major_per_session": 6.2,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 60
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 24
+        },
+        {
+          "flaw": "FATAL:character_break",
+          "count": 20
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 15
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 14
+        }
+      ]
+    },
+    "gemini_2_5_flash": {
+      "mean": 41.4,
+      "median": 41.0,
+      "std": 12.1,
+      "min": 19,
+      "max": 64,
+      "n": 20,
+      "total_fatal": 15,
+      "total_major": 86,
+      "total_minor": 88,
+      "total_bonus": 1,
+      "fatal_per_session": 0.75,
+      "major_per_session": 4.3,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 37
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 21
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 10
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 9
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 7
+        }
+      ]
+    },
+    "gemini_3_1_flash_lite": {
+      "mean": 21.8,
+      "median": 34.0,
+      "std": 28.4,
+      "min": -32,
+      "max": 53,
+      "n": 12,
+      "total_fatal": 26,
+      "total_major": 55,
+      "total_minor": 46,
+      "total_bonus": 6,
+      "fatal_per_session": 2.17,
+      "major_per_session": 4.58,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 22
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 11
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 10
+        },
+        {
+          "flaw": "FATAL:character_break",
+          "count": 10
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 8
+        }
+      ]
+    },
+    "gemini_3_1_pro": {
+      "mean": 48.5,
+      "median": 49.0,
+      "std": 8.8,
+      "min": 32,
+      "max": 61,
+      "n": 12,
+      "total_fatal": 2,
+      "total_major": 58,
+      "total_minor": 53,
+      "total_bonus": 7,
+      "fatal_per_session": 0.17,
+      "major_per_session": 4.83,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 28
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 11
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 7
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 6
+        },
+        {
+          "flaw": "FATAL:character_break",
+          "count": 2
+        }
+      ]
+    },
+    "gemini_3_5_flash": {
+      "mean": 43.9,
+      "median": 46.0,
+      "std": 12.6,
+      "min": 26,
+      "max": 69,
+      "n": 20,
+      "total_fatal": 16,
+      "total_major": 90,
+      "total_minor": 81,
+      "total_bonus": 16,
+      "fatal_per_session": 0.8,
+      "major_per_session": 4.5,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 40
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 19
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 11
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 10
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 9
+        }
+      ]
+    },
+    "gemini_3_7_flash": {
+      "mean": 58,
+      "median": 56.0,
+      "std": 10.0,
+      "min": 45,
+      "max": 77,
+      "n": 20,
+      "total_fatal": 1,
+      "total_major": 82,
+      "total_minor": 83,
+      "total_bonus": 16,
+      "fatal_per_session": 0.05,
+      "major_per_session": 4.1,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 38
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 17
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 17
+        },
+        {
+          "flaw": "MAJOR:missing_spatial_awareness",
+          "count": 3
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 3
+        }
+      ]
+    },
+    "gemini_3_8_flash": {
+      "mean": 54.5,
+      "median": 53.0,
+      "std": 8.4,
+      "min": 37,
+      "max": 69,
+      "n": 20,
+      "total_fatal": 6,
+      "total_major": 84,
+      "total_minor": 83,
+      "total_bonus": 20,
+      "fatal_per_session": 0.3,
+      "major_per_session": 4.2,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 40
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 13
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 11
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 8
+        },
+        {
+          "flaw": "FATAL:character_break",
+          "count": 6
+        }
+      ]
+    },
+    "gemma_4_26b": {
+      "mean": 40.7,
+      "median": 42.0,
+      "std": 12.7,
+      "min": 0,
+      "max": 58,
+      "n": 20,
+      "total_fatal": 14,
+      "total_major": 94,
+      "total_minor": 83,
+      "total_bonus": 5,
+      "fatal_per_session": 0.7,
+      "major_per_session": 4.7,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 34
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 23
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 18
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 10
+        },
+        {
+          "flaw": "FATAL:character_break",
+          "count": 8
+        }
+      ]
+    },
+    "gemma_4_31b": {
+      "mean": 41,
+      "median": 46.5,
+      "std": 18.2,
+      "min": 3,
+      "max": 66,
+      "n": 20,
+      "total_fatal": 14,
+      "total_major": 103,
+      "total_minor": 77,
+      "total_bonus": 17,
+      "fatal_per_session": 0.7,
+      "major_per_session": 5.15,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 38
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 23
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 13
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 13
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 8
+        }
+      ]
+    },
+    "glm_4_7": {
+      "mean": 47.5,
+      "median": 52.0,
+      "std": 16.1,
+      "min": 13,
+      "max": 69,
+      "n": 20,
+      "total_fatal": 12,
+      "total_major": 91,
+      "total_minor": 74,
+      "total_bonus": 16,
+      "fatal_per_session": 0.6,
+      "major_per_session": 4.55,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 39
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 17
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 16
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 13
+        },
+        {
+          "flaw": "FATAL:character_break",
+          "count": 8
+        }
+      ]
+    },
+    "glm_5_1": {
+      "mean": 56.1,
+      "median": 61.0,
+      "std": 13.5,
+      "min": 32,
+      "max": 77,
+      "n": 12,
+      "total_fatal": 8,
+      "total_major": 51,
+      "total_minor": 38,
+      "total_bonus": 23,
+      "fatal_per_session": 0.67,
+      "major_per_session": 4.25,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 27
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 11
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 6
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 4
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 4
+        }
+      ]
+    },
+    "glm_5_3_flash": {
+      "mean": 62.0,
+      "median": 63.5,
+      "std": 11.8,
+      "min": 43,
+      "max": 82,
+      "n": 20,
+      "total_fatal": 10,
+      "total_major": 82,
+      "total_minor": 66,
+      "total_bonus": 49,
+      "fatal_per_session": 0.5,
+      "major_per_session": 4.1,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 43
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 17
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 10
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 8
+        },
+        {
+          "flaw": "MAJOR:skipped_time_logic",
+          "count": 7
+        }
+      ]
+    },
+    "glm_5_3_flashx": {
+      "mean": 61.9,
+      "median": 61.0,
+      "std": 9.7,
+      "min": 46,
+      "max": 79,
+      "n": 20,
+      "total_fatal": 11,
+      "total_major": 84,
+      "total_minor": 60,
+      "total_bonus": 51,
+      "fatal_per_session": 0.55,
+      "major_per_session": 4.2,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 49
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 16
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 13
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 9
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 3
+        }
+      ]
+    },
+    "glm_5_3_prime": {
+      "mean": 67.8,
+      "median": 70,
+      "std": 9.0,
+      "min": 48,
+      "max": 82,
+      "n": 19,
+      "total_fatal": 4,
+      "total_major": 74,
+      "total_minor": 70,
+      "total_bonus": 50,
+      "fatal_per_session": 0.21,
+      "major_per_session": 3.89,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 42
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 16
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 12
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 4
+        },
+        {
+          "flaw": "FATAL:character_break",
+          "count": 2
+        }
+      ]
+    },
+    "gpt_4_1": {
+      "mean": 47.0,
+      "median": 49.0,
+      "std": 8.3,
+      "min": 31,
+      "max": 61,
+      "n": 20,
+      "total_fatal": 10,
+      "total_major": 91,
+      "total_minor": 81,
+      "total_bonus": 12,
+      "fatal_per_session": 0.5,
+      "major_per_session": 4.55,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 34
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 21
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 20
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 10
+        },
+        {
+          "flaw": "FATAL:character_break",
+          "count": 6
+        }
+      ]
+    },
+    "gpt_5_5": {
+      "mean": 56.5,
+      "median": 54.5,
+      "std": 13.2,
+      "min": 32,
+      "max": 85,
+      "n": 20,
+      "total_fatal": 9,
+      "total_major": 84,
+      "total_minor": 74,
+      "total_bonus": 32,
+      "fatal_per_session": 0.45,
+      "major_per_session": 4.2,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 39
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 15
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 12
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 11
+        },
+        {
+          "flaw": "FATAL:character_break",
+          "count": 5
+        }
+      ]
+    },
+    "gpt_6_astra": {
+      "mean": 70.5,
+      "median": 67.5,
+      "std": 10.9,
+      "min": 50,
+      "max": 96,
+      "n": 20,
+      "total_fatal": 2,
+      "total_major": 61,
+      "total_minor": 79,
+      "total_bonus": 33,
+      "fatal_per_session": 0.1,
+      "major_per_session": 3.05,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 38
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 8
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 5
+        },
+        {
+          "flaw": "MAJOR:missing_spatial_awareness",
+          "count": 5
+        },
+        {
+          "flaw": "MAJOR:flat_npc_voice",
+          "count": 4
+        }
+      ]
+    },
+    "gpt_6_luna": {
+      "mean": 63.2,
+      "median": 64.0,
+      "std": 11.6,
+      "min": 44,
+      "max": 80,
+      "n": 20,
+      "total_fatal": 5,
+      "total_major": 72,
+      "total_minor": 70,
+      "total_bonus": 25,
+      "fatal_per_session": 0.25,
+      "major_per_session": 3.6,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 47
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 9
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 6
+        },
+        {
+          "flaw": "MAJOR:missing_spatial_awareness",
+          "count": 5
+        },
+        {
+          "flaw": "FATAL:character_break",
+          "count": 3
+        }
+      ]
+    },
+    "gpt_6_luna_pro": {
+      "mean": 62.5,
+      "median": 64.5,
+      "std": 8.3,
+      "min": 45,
+      "max": 74,
+      "n": 20,
+      "total_fatal": 3,
+      "total_major": 63,
+      "total_minor": 84,
+      "total_bonus": 10,
+      "fatal_per_session": 0.15,
+      "major_per_session": 3.15,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 44
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 8
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 5
+        },
+        {
+          "flaw": "MAJOR:flat_npc_voice",
+          "count": 4
+        },
+        {
+          "flaw": "FATAL:character_break",
+          "count": 2
+        }
+      ]
+    },
+    "gpt_6_sol": {
+      "mean": 70.8,
+      "median": 71.5,
+      "std": 4.9,
+      "min": 61,
+      "max": 80,
+      "n": 20,
+      "total_fatal": 0,
+      "total_major": 53,
+      "total_minor": 85,
+      "total_bonus": 19,
+      "fatal_per_session": 0.0,
+      "major_per_session": 2.65,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 39
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 7
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 3
+        },
+        {
+          "flaw": "MAJOR:flat_npc_voice",
+          "count": 3
+        },
+        {
+          "flaw": "MAJOR:missing_spatial_awareness",
+          "count": 1
+        }
+      ]
+    },
+    "gpt_6_sol_pro": {
+      "mean": 69.9,
+      "median": 69.0,
+      "std": 5.6,
+      "min": 59,
+      "max": 79,
+      "n": 20,
+      "total_fatal": 0,
+      "total_major": 54,
+      "total_minor": 80,
+      "total_bonus": 14,
+      "fatal_per_session": 0.0,
+      "major_per_session": 2.7,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 39
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 10
+        },
+        {
+          "flaw": "MAJOR:flat_npc_voice",
+          "count": 3
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 2
+        }
+      ]
+    },
+    "grok_4_1": {
+      "mean": 46.6,
+      "median": 48.0,
+      "std": 9.1,
+      "min": 33,
+      "max": 66,
+      "n": 20,
+      "total_fatal": 7,
+      "total_major": 92,
+      "total_minor": 84,
+      "total_bonus": 5,
+      "fatal_per_session": 0.35,
+      "major_per_session": 4.6,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 38
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 16
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 13
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 9
+        },
+        {
+          "flaw": "MAJOR:skipped_time_logic",
+          "count": 8
+        }
+      ]
+    },
+    "grok_4_3": {
+      "mean": 50.5,
+      "median": 52.5,
+      "std": 11.8,
+      "min": 30,
+      "max": 69,
+      "n": 20,
+      "total_fatal": 2,
+      "total_major": 85,
+      "total_minor": 97,
+      "total_bonus": 2,
+      "fatal_per_session": 0.1,
+      "major_per_session": 4.25,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 65
+        },
+        {
+          "flaw": "MAJOR:skipped_time_logic",
+          "count": 6
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 4
+        },
+        {
+          "flaw": "MAJOR:missing_spatial_awareness",
+          "count": 3
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 3
+        }
+      ]
+    },
+    "grok_4_7": {
+      "mean": 64.3,
+      "median": 64.5,
+      "std": 10.5,
+      "min": 43,
+      "max": 85,
+      "n": 20,
+      "total_fatal": 7,
+      "total_major": 65,
+      "total_minor": 71,
+      "total_bonus": 25,
+      "fatal_per_session": 0.35,
+      "major_per_session": 3.25,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 50
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 8
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 4
+        },
+        {
+          "flaw": "FATAL:character_break",
+          "count": 4
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 2
+        }
+      ]
+    },
+    "hemmingway_1": {
+      "mean": 51.1,
+      "median": 51.5,
+      "std": 17.3,
+      "min": 23,
+      "max": 79,
+      "n": 20,
+      "total_fatal": 25,
+      "total_major": 77,
+      "total_minor": 64,
+      "total_bonus": 41,
+      "fatal_per_session": 1.25,
+      "major_per_session": 3.85,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 29
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 16
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 14
+        },
+        {
+          "flaw": "MAJOR:skipped_time_logic",
+          "count": 10
+        },
+        {
+          "flaw": "FATAL:character_break",
+          "count": 9
+        }
+      ]
+    },
+    "kimi_k2_5": {
+      "mean": 55.6,
+      "median": 57.5,
+      "std": 15.5,
+      "min": 23,
+      "max": 74,
+      "n": 12,
+      "total_fatal": 7,
+      "total_major": 50,
+      "total_minor": 41,
+      "total_bonus": 19,
+      "fatal_per_session": 0.58,
+      "major_per_session": 4.17,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 26
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 6
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 5
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 5
+        },
+        {
+          "flaw": "MAJOR:skipped_time_logic",
+          "count": 4
+        }
+      ]
+    },
+    "kimi_k2_6": {
+      "mean": 55.0,
+      "median": 56.5,
+      "std": 12.8,
+      "min": 29,
+      "max": 77,
+      "n": 20,
+      "total_fatal": 8,
+      "total_major": 88,
+      "total_minor": 69,
+      "total_bonus": 26,
+      "fatal_per_session": 0.4,
+      "major_per_session": 4.4,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 51
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 13
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 8
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 8
+        },
+        {
+          "flaw": "MAJOR:skipped_time_logic",
+          "count": 5
+        }
+      ]
+    },
+    "llama_4_maverick": {
+      "mean": 34.4,
+      "median": 34.5,
+      "std": 10.7,
+      "min": 12,
+      "max": 55,
+      "n": 20,
+      "total_fatal": 17,
+      "total_major": 98,
+      "total_minor": 91,
+      "total_bonus": 0,
+      "fatal_per_session": 0.85,
+      "major_per_session": 4.9,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 48
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 21
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 13
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 10
+        },
+        {
+          "flaw": "FATAL:character_break",
+          "count": 7
+        }
+      ]
+    },
+    "lunaris_8b": {
+      "mean": -4.5,
+      "median": -7.5,
+      "std": 16.6,
+      "min": -31,
+      "max": 41,
+      "n": 20,
+      "total_fatal": 62,
+      "total_major": 117,
+      "total_minor": 78,
+      "total_bonus": 2,
+      "fatal_per_session": 3.1,
+      "major_per_session": 5.85,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 33
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 30
+        },
+        {
+          "flaw": "FATAL:character_break",
+          "count": 25
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 22
+        },
+        {
+          "flaw": "MAJOR:skipped_time_logic",
+          "count": 18
+        }
+      ]
+    },
+    "magnum_v4_72b": {
+      "mean": -2.2,
+      "median": -9.5,
+      "std": 21.6,
+      "min": -34,
+      "max": 44,
+      "n": 20,
+      "total_fatal": 60,
+      "total_major": 115,
+      "total_minor": 80,
+      "total_bonus": 3,
+      "fatal_per_session": 3.0,
+      "major_per_session": 5.75,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 49
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 33
+        },
+        {
+          "flaw": "FATAL:character_break",
+          "count": 22
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 20
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 15
+        }
+      ]
+    },
+    "mercury_2_5": {
+      "mean": 51.5,
+      "median": 56.5,
+      "std": 12.6,
+      "min": 24,
+      "max": 74,
+      "n": 20,
+      "total_fatal": 6,
+      "total_major": 90,
+      "total_minor": 75,
+      "total_bonus": 13,
+      "fatal_per_session": 0.3,
+      "major_per_session": 4.5,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 46
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 11
+        },
+        {
+          "flaw": "MAJOR:missing_spatial_awareness",
+          "count": 10
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 9
+        },
+        {
+          "flaw": "MAJOR:skipped_time_logic",
+          "count": 7
+        }
+      ]
+    },
+    "mimo_2_5_pro": {
+      "mean": 33.8,
+      "median": 31.0,
+      "std": 19.5,
+      "min": -8,
+      "max": 74,
+      "n": 20,
+      "total_fatal": 31,
+      "total_major": 97,
+      "total_minor": 76,
+      "total_bonus": 29,
+      "fatal_per_session": 1.55,
+      "major_per_session": 4.85,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 36
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 19
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 18
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 18
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 13
+        }
+      ]
+    },
+    "mimo_2_6_flash": {
+      "mean": 48.1,
+      "median": 46.5,
+      "std": 16.4,
+      "min": 7,
+      "max": 77,
+      "n": 20,
+      "total_fatal": 22,
+      "total_major": 88,
+      "total_minor": 68,
+      "total_bonus": 40,
+      "fatal_per_session": 1.1,
+      "major_per_session": 4.4,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 40
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 15
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 15
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 12
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 8
+        }
+      ]
+    },
+    "mimo_2_6_pro": {
+      "mean": 49.0,
+      "median": 48.5,
+      "std": 23.0,
+      "min": 7,
+      "max": 85,
+      "n": 20,
+      "total_fatal": 16,
+      "total_major": 94,
+      "total_minor": 69,
+      "total_bonus": 36,
+      "fatal_per_session": 0.8,
+      "major_per_session": 4.7,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 37
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 21
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 15
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 13
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 10
+        }
+      ]
+    },
+    "minimax_m2_7": {
+      "mean": 45.2,
+      "median": 46.0,
+      "std": 14.1,
+      "min": 13,
+      "max": 77,
+      "n": 20,
+      "total_fatal": 22,
+      "total_major": 82,
+      "total_minor": 70,
+      "total_bonus": 20,
+      "fatal_per_session": 1.1,
+      "major_per_session": 4.1,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 27
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 20
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 16
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 11
+        },
+        {
+          "flaw": "FATAL:character_break",
+          "count": 9
+        }
+      ]
+    },
+    "minimax_m3": {
+      "mean": 52.6,
+      "median": 54.0,
+      "std": 14.7,
+      "min": 26,
+      "max": 77,
+      "n": 20,
+      "total_fatal": 23,
+      "total_major": 77,
+      "total_minor": 54,
+      "total_bonus": 35,
+      "fatal_per_session": 1.15,
+      "major_per_session": 3.85,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 33
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 14
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 11
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 9
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 9
+        }
+      ]
+    },
+    "mistral_small_2603": {
+      "mean": 29.2,
+      "median": 27.0,
+      "std": 22.2,
+      "min": 6,
+      "max": 57,
+      "n": 4,
+      "total_fatal": 6,
+      "total_major": 22,
+      "total_minor": 14,
+      "total_bonus": 5,
+      "fatal_per_session": 1.5,
+      "major_per_session": 5.5,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 9
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 4
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 4
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 4
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 2
+        }
+      ]
+    },
+    "mistral_small_creative": {
+      "mean": 23.1,
+      "median": 23.5,
+      "std": 15.4,
+      "min": -25,
+      "max": 44,
+      "n": 20,
+      "total_fatal": 30,
+      "total_major": 115,
+      "total_minor": 69,
+      "total_bonus": 8,
+      "fatal_per_session": 1.5,
+      "major_per_session": 5.75,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 50
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 19
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 18
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 18
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 15
+        }
+      ]
+    },
+    "muse_spark_1_3": {
+      "mean": 57.8,
+      "median": 59.5,
+      "std": 12.3,
+      "min": 32,
+      "max": 77,
+      "n": 20,
+      "total_fatal": 2,
+      "total_major": 79,
+      "total_minor": 79,
+      "total_bonus": 11,
+      "fatal_per_session": 0.1,
+      "major_per_session": 3.95,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 62
+        },
+        {
+          "flaw": "MAJOR:missing_spatial_awareness",
+          "count": 5
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 4
+        },
+        {
+          "flaw": "MAJOR:skipped_time_logic",
+          "count": 3
+        },
+        {
+          "flaw": "MAJOR:flat_npc_voice",
+          "count": 3
+        }
+      ]
+    },
+    "qwen3_5_flash": {
+      "mean": 36.0,
+      "median": 35.5,
+      "std": 11.6,
+      "min": 15,
+      "max": 59,
+      "n": 20,
+      "total_fatal": 17,
+      "total_major": 102,
+      "total_minor": 76,
+      "total_bonus": 4,
+      "fatal_per_session": 0.85,
+      "major_per_session": 5.1,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 49
+        },
+        {
+          "flaw": "MAJOR:missing_spatial_awareness",
+          "count": 12
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 12
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 12
+        },
+        {
+          "flaw": "FATAL:character_break",
+          "count": 10
+        }
+      ]
+    },
+    "qwen3_6_27b": {
+      "mean": 43.9,
+      "median": 45.5,
+      "std": 13.6,
+      "min": 13,
+      "max": 64,
+      "n": 20,
+      "total_fatal": 4,
+      "total_major": 108,
+      "total_minor": 83,
+      "total_bonus": 10,
+      "fatal_per_session": 0.2,
+      "major_per_session": 5.4,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 57
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 13
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 11
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 11
+        },
+        {
+          "flaw": "MAJOR:skipped_time_logic",
+          "count": 7
+        }
+      ]
+    },
+    "qwen3_6_35b_a3b": {
+      "mean": 39.3,
+      "median": 36.5,
+      "std": 14.7,
+      "min": 7,
+      "max": 61,
+      "n": 20,
+      "total_fatal": 9,
+      "total_major": 111,
+      "total_minor": 77,
+      "total_bonus": 8,
+      "fatal_per_session": 0.45,
+      "major_per_session": 5.55,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 56
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 13
+        },
+        {
+          "flaw": "MAJOR:missing_spatial_awareness",
+          "count": 10
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 10
+        },
+        {
+          "flaw": "MAJOR:skipped_time_logic",
+          "count": 10
+        }
+      ]
+    },
+    "qwen3_7_max": {
+      "mean": 47.0,
+      "median": 46.0,
+      "std": 12.4,
+      "min": 20,
+      "max": 72,
+      "n": 20,
+      "total_fatal": 12,
+      "total_major": 92,
+      "total_minor": 80,
+      "total_bonus": 19,
+      "fatal_per_session": 0.6,
+      "major_per_session": 4.6,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 47
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 18
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 14
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 8
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 6
+        }
+      ]
+    },
+    "qwen3_8_flash": {
+      "mean": 50.5,
+      "median": 56.0,
+      "std": 18.7,
+      "min": -11,
+      "max": 69,
+      "n": 20,
+      "total_fatal": 9,
+      "total_major": 95,
+      "total_minor": 68,
+      "total_bonus": 22,
+      "fatal_per_session": 0.45,
+      "major_per_session": 4.75,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 50
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 10
+        },
+        {
+          "flaw": "MAJOR:missing_spatial_awareness",
+          "count": 9
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 7
+        },
+        {
+          "flaw": "MAJOR:flat_npc_voice",
+          "count": 7
+        }
+      ]
+    },
+    "qwen3_8_max": {
+      "mean": 53.2,
+      "median": 56.0,
+      "std": 12.2,
+      "min": 19,
+      "max": 69,
+      "n": 20,
+      "total_fatal": 7,
+      "total_major": 93,
+      "total_minor": 72,
+      "total_bonus": 26,
+      "fatal_per_session": 0.35,
+      "major_per_session": 4.65,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 54
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 14
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 9
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 7
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 3
+        }
+      ]
+    },
+    "qwen3_8_max_prime": {
+      "mean": 56.2,
+      "median": 63.5,
+      "std": 16.0,
+      "min": 26,
+      "max": 83,
+      "n": 20,
+      "total_fatal": 5,
+      "total_major": 89,
+      "total_minor": 78,
+      "total_bonus": 29,
+      "fatal_per_session": 0.25,
+      "major_per_session": 4.45,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 50
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 11
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 10
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 9
+        },
+        {
+          "flaw": "MAJOR:flat_npc_voice",
+          "count": 4
+        }
+      ]
+    },
+    "qwen3_8_omni_flash": {
+      "mean": 55.5,
+      "median": 60.0,
+      "std": 14.3,
+      "min": 27,
+      "max": 77,
+      "n": 20,
+      "total_fatal": 5,
+      "total_major": 98,
+      "total_minor": 70,
+      "total_bonus": 36,
+      "fatal_per_session": 0.25,
+      "major_per_session": 4.9,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 51
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 16
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 11
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 8
+        },
+        {
+          "flaw": "MAJOR:missing_spatial_awareness",
+          "count": 5
+        }
+      ]
+    },
+    "skyfall_36b": {
+      "mean": -4.1,
+      "median": 0.5,
+      "std": 23.9,
+      "min": -42,
+      "max": 30,
+      "n": 20,
+      "total_fatal": 57,
+      "total_major": 123,
+      "total_minor": 86,
+      "total_bonus": 3,
+      "fatal_per_session": 2.85,
+      "major_per_session": 6.15,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 55
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 29
+        },
+        {
+          "flaw": "FATAL:character_break",
+          "count": 25
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 16
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 14
+        }
+      ]
+    },
+    "tencent_hy4": {
+      "mean": 46.5,
+      "median": 50.5,
+      "std": 12.5,
+      "min": 20,
+      "max": 72,
+      "n": 20,
+      "total_fatal": 7,
+      "total_major": 100,
+      "total_minor": 78,
+      "total_bonus": 14,
+      "fatal_per_session": 0.35,
+      "major_per_session": 5.0,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 72
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 9
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 8
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 7
+        },
+        {
+          "flaw": "FATAL:character_break",
+          "count": 4
+        }
+      ]
+    },
+    "unslopnemo_12b": {
+      "mean": -6.6,
+      "median": -3.5,
+      "std": 16.0,
+      "min": -41,
+      "max": 18,
+      "n": 20,
+      "total_fatal": 65,
+      "total_major": 118,
+      "total_minor": 81,
+      "total_bonus": 6,
+      "fatal_per_session": 3.25,
+      "major_per_session": 5.9,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 44
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 32
+        },
+        {
+          "flaw": "FATAL:character_break",
+          "count": 27
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 19
+        },
+        {
+          "flaw": "MAJOR:convenient_world",
+          "count": 19
+        }
+      ]
+    },
+    "venice_dolphin_24b": {
+      "mean": 26.1,
+      "median": 24.0,
+      "std": 14.2,
+      "min": 7,
+      "max": 56,
+      "n": 20,
+      "total_fatal": 36,
+      "total_major": 93,
+      "total_minor": 65,
+      "total_bonus": 0,
+      "fatal_per_session": 1.8,
+      "major_per_session": 4.65,
+      "top_flaws": [
+        {
+          "flaw": "MAJOR:recycled_description",
+          "count": 47
+        },
+        {
+          "flaw": "FATAL:agency_violation",
+          "count": 23
+        },
+        {
+          "flaw": "MAJOR:narrating_emotions",
+          "count": 18
+        },
+        {
+          "flaw": "FATAL:character_break",
+          "count": 11
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 9
+        }
+      ]
+    }
+  },
+  "per_failure_target": {
+    "agency_violation": {
+      "mean": 50.4,
+      "median": 55.0,
+      "n": 270
+    },
+    "system_prompt_detail_loss": {
+      "mean": 46.3,
+      "median": 51,
+      "n": 207
+    },
+    "character_flattening": {
+      "mean": 50.2,
+      "median": 54.5,
+      "n": 62
+    },
+    "contradictory_context_resolution": {
+      "mean": 49.0,
+      "median": 49.0,
+      "n": 62
+    },
+    "genre_instability": {
+      "mean": 53.5,
+      "median": 61.5,
+      "n": 62
+    },
+    "physics_sycophancy": {
+      "mean": 47.2,
+      "median": 51.0,
+      "n": 62
+    },
+    "narrative_stagnation": {
+      "mean": 40.7,
+      "median": 41,
+      "n": 61
+    },
+    "pov_tense_violation": {
+      "mean": 44.2,
+      "median": 48.0,
+      "n": 208
+    },
+    "over_explicit_subtext": {
+      "mean": 51.6,
+      "median": 58.0,
+      "n": 62
+    },
+    "system_prompt_violation": {
+      "mean": 45.7,
+      "median": 49.0,
+      "n": 208
+    },
+    "temporal_inconsistency": {
+      "mean": 35.8,
+      "median": 43.0,
+      "n": 60
+    }
+  },
+  "per_model_target": {
+    "aion_3_5": {
+      "agency_violation": {
+        "mean": 58,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 55.7,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 70,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 74,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 75,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 31,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 48,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 55,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 82,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 67.3,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 41,
+        "n": 1
+      }
+    },
+    "claude_fable_5_1": {
+      "agency_violation": {
+        "mean": 76,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 79.3,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 83,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 72,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 77,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 82,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 67,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 69.3,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 77,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 52.3,
+        "n": 3
+      }
+    },
+    "claude_opus_4_6": {
+      "agency_violation": {
+        "mean": 67.8,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 49,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 50,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 59,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 66,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 39,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 74,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 56.3,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 58,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 67.3,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 45,
+        "n": 1
+      }
+    },
+    "claude_opus_4_7": {
+      "agency_violation": {
+        "mean": 59,
+        "n": 3
+      },
+      "system_prompt_detail_loss": {
+        "mean": 68.7,
+        "n": 3
+      },
+      "pov_tense_violation": {
+        "mean": 55.7,
+        "n": 3
+      },
+      "system_prompt_violation": {
+        "mean": 57,
+        "n": 3
+      }
+    },
+    "claude_opus_4_8": {
+      "agency_violation": {
+        "mean": 59.2,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 70,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 36,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 74,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 77,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 65,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 82,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 58.3,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 66,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 42,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 49,
+        "n": 1
+      }
+    },
+    "claude_opus_5": {
+      "agency_violation": {
+        "mean": 60.2,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 64.3,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 54,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 71,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 79,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 93,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 82,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 68.7,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 67,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 49.3,
+        "n": 3
+      }
+    },
+    "claude_opus_5_5": {
+      "agency_violation": {
+        "mean": 75.5,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 75.7,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 82,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 77,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 82,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 74,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 74,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 74,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 79,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 68.3,
+        "n": 3
+      }
+    },
+    "claude_sonnet_4_5": {
+      "agency_violation": {
+        "mean": 61.2,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 34,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 66,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 42,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 85,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 61,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 67,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 49.3,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 61,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 48,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 61,
+        "n": 1
+      }
+    },
+    "claude_sonnet_4_6": {
+      "agency_violation": {
+        "mean": 54.8,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 69.3,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 67,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 71,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 42,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 34,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 74,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 56.3,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 69,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 41,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 44,
+        "n": 1
+      }
+    },
+    "claude_sonnet_5": {
+      "agency_violation": {
+        "mean": 60.5,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 65.3,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 22,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 62,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 72,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 79,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 82,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 60.3,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 51,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 34.7,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 51,
+        "n": 1
+      }
+    },
+    "command_a_plus": {
+      "agency_violation": {
+        "mean": 45,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 24.3,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 29,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 26,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 28,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 6,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 10,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 14.3,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 27,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 39,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 5,
+        "n": 1
+      }
+    },
+    "cydonia_24b": {
+      "agency_violation": {
+        "mean": 16,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 26.3,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 4,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 10,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 12,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 15,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 10,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": -3.7,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": -3,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 23,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": -12,
+        "n": 1
+      }
+    },
+    "deepseek_r1_0528": {
+      "agency_violation": {
+        "mean": 46.5,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 28,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 28,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 38,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 50,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 23,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 37,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 32,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 47,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 45,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 33,
+        "n": 1
+      }
+    },
+    "deepseek_v3_0324": {
+      "agency_violation": {
+        "mean": 52.8,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 39.7,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 44,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 53,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 67,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 52,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 36,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 32,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 66,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 42.7,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 8,
+        "n": 1
+      }
+    },
+    "deepseek_v3_2": {
+      "agency_violation": {
+        "mean": 59.2,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 41.3,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 64,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 61,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 60,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 56,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 61,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 48.3,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 73,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 46.7,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 59,
+        "n": 1
+      }
+    },
+    "deepseek_v4_1_flash": {
+      "agency_violation": {
+        "mean": 70.2,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 65,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 43,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 77,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 62,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 65,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 77,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 42.7,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 20,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 57,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 10,
+        "n": 1
+      }
+    },
+    "deepseek_v4_flash": {
+      "agency_violation": {
+        "mean": 65.3,
+        "n": 3
+      },
+      "system_prompt_detail_loss": {
+        "mean": 50.3,
+        "n": 3
+      },
+      "pov_tense_violation": {
+        "mean": 54.3,
+        "n": 3
+      },
+      "system_prompt_violation": {
+        "mean": 20.7,
+        "n": 3
+      }
+    },
+    "deepseek_v4_pro": {
+      "agency_violation": {
+        "mean": 35.3,
+        "n": 3
+      },
+      "system_prompt_detail_loss": {
+        "mean": 41.3,
+        "n": 3
+      },
+      "pov_tense_violation": {
+        "mean": 35.3,
+        "n": 3
+      },
+      "system_prompt_violation": {
+        "mean": 48.3,
+        "n": 3
+      }
+    },
+    "ember_1": {
+      "agency_violation": {
+        "mean": 70.8,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 65,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 62,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 77,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 82,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 62,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 31,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 62,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 85,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 63.3,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 59,
+        "n": 1
+      }
+    },
+    "euryale_70b": {
+      "agency_violation": {
+        "mean": 12.8,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 18.3,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 16,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 33,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": -24,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": -42,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": -29,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 6.7,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": -34,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 11.3,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": -29,
+        "n": 1
+      }
+    },
+    "gemini_2_5_flash": {
+      "agency_violation": {
+        "mean": 52,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 31.7,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 41,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 25,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 48,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 38,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 31,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 49.7,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 41,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 41.7,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 27,
+        "n": 1
+      }
+    },
+    "gemini_3_1_flash_lite": {
+      "agency_violation": {
+        "mean": 41.7,
+        "n": 3
+      },
+      "system_prompt_detail_loss": {
+        "mean": 14.3,
+        "n": 3
+      },
+      "pov_tense_violation": {
+        "mean": 27,
+        "n": 3
+      },
+      "system_prompt_violation": {
+        "mean": 4.3,
+        "n": 3
+      }
+    },
+    "gemini_3_1_pro": {
+      "agency_violation": {
+        "mean": 44.3,
+        "n": 3
+      },
+      "system_prompt_detail_loss": {
+        "mean": 53.3,
+        "n": 3
+      },
+      "pov_tense_violation": {
+        "mean": 42.7,
+        "n": 3
+      },
+      "system_prompt_violation": {
+        "mean": 53.7,
+        "n": 3
+      }
+    },
+    "gemini_3_5_flash": {
+      "agency_violation": {
+        "mean": 52,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 39.3,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 58,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 48,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 47,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 52,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 28,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 36.3,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 45,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 44,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 32,
+        "n": 1
+      }
+    },
+    "gemini_3_7_flash": {
+      "agency_violation": {
+        "mean": 57,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 62.7,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 55,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 51,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 77,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 72,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 56,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 47.7,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 58,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 58.7,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 56,
+        "n": 1
+      }
+    },
+    "gemini_3_8_flash": {
+      "agency_violation": {
+        "mean": 54,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 53.7,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 52,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 48,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 66,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 69,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 61,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 47.7,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 53,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 55.7,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 53,
+        "n": 1
+      }
+    },
+    "gemma_4_26b": {
+      "agency_violation": {
+        "mean": 43.8,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 24.7,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 42,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 38,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 42,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 53,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 37,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 45.3,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 53,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 40.3,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 43,
+        "n": 1
+      }
+    },
+    "gemma_4_31b": {
+      "agency_violation": {
+        "mean": 43.5,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 44.3,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 58,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 47,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 46,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 24,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 20,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 37.3,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 59,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 45,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 12,
+        "n": 1
+      }
+    },
+    "glm_4_7": {
+      "agency_violation": {
+        "mean": 47.5,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 28.7,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 61,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 25,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 64,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 51,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 53,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 50.3,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 56,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 49.7,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 64,
+        "n": 1
+      }
+    },
+    "glm_5_1": {
+      "agency_violation": {
+        "mean": 53.7,
+        "n": 3
+      },
+      "system_prompt_detail_loss": {
+        "mean": 70.7,
+        "n": 3
+      },
+      "pov_tense_violation": {
+        "mean": 58.7,
+        "n": 3
+      },
+      "system_prompt_violation": {
+        "mean": 41.3,
+        "n": 3
+      }
+    },
+    "glm_5_3_flash": {
+      "agency_violation": {
+        "mean": 64.8,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 68.7,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 82,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 49,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 52,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 48,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 61,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 66.7,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 82,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 53,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 43,
+        "n": 1
+      }
+    },
+    "glm_5_3_flashx": {
+      "agency_violation": {
+        "mean": 58,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 57,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 77,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 52,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 70,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 62,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 54,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 66.3,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 79,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 57.3,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 70,
+        "n": 1
+      }
+    },
+    "glm_5_3_prime": {
+      "agency_violation": {
+        "mean": 73.5,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 56,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 74,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 64,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 82,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 61,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 67.3,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 69,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 71.7,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 59,
+        "n": 1
+      }
+    },
+    "gpt_4_1": {
+      "agency_violation": {
+        "mean": 49.2,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 43.3,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 53,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 35,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 54,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 46,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 43,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 45.7,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 58,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 46.7,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 46,
+        "n": 1
+      }
+    },
+    "gpt_5_5": {
+      "agency_violation": {
+        "mean": 62.5,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 58,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 62,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 43,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 85,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 41,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 32,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 54.3,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 60,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 55,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 56,
+        "n": 1
+      }
+    },
+    "gpt_6_astra": {
+      "agency_violation": {
+        "mean": 63,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 69.7,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 63,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 80,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 96,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 69,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 72,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 69.7,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 85,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 67.7,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 72,
+        "n": 1
+      }
+    },
+    "gpt_6_luna": {
+      "agency_violation": {
+        "mean": 72.2,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 57.7,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 77,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 46,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 80,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 69,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 54,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 58.7,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 72,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 52,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 72,
+        "n": 1
+      }
+    },
+    "gpt_6_luna_pro": {
+      "agency_violation": {
+        "mean": 64,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 66.3,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 66,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 71,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 66,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 46,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 45,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 62.3,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 58,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 68,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 51,
+        "n": 1
+      }
+    },
+    "gpt_6_sol": {
+      "agency_violation": {
+        "mean": 66.8,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 73.3,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 74,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 66,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 74,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 71,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 69,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 67.3,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 79,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 75.7,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 67,
+        "n": 1
+      }
+    },
+    "gpt_6_sol_pro": {
+      "agency_violation": {
+        "mean": 67,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 74.3,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 69,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 74,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 74,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 61,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 69,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 65,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 79,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 73,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 67,
+        "n": 1
+      }
+    },
+    "grok_4_1": {
+      "agency_violation": {
+        "mean": 48.8,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 42,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 37,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 48,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 45,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 51,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 48,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 47,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 58,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 49.3,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 35,
+        "n": 1
+      }
+    },
+    "grok_4_3": {
+      "agency_violation": {
+        "mean": 53,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 38,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 45,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 39,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 61,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 64,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 41,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 47.7,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 67,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 59.3,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 45,
+        "n": 1
+      }
+    },
+    "grok_4_7": {
+      "agency_violation": {
+        "mean": 66.2,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 60,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 62,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 53,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 69,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 72,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 74,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 68.3,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 61,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 67.3,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 44,
+        "n": 1
+      }
+    },
+    "hemmingway_1": {
+      "agency_violation": {
+        "mean": 53.2,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 41.7,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 50,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 77,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 79,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 50,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 49,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 30.7,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 59,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 53,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 69,
+        "n": 1
+      }
+    },
+    "kimi_k2_5": {
+      "agency_violation": {
+        "mean": 60.7,
+        "n": 3
+      },
+      "system_prompt_detail_loss": {
+        "mean": 62.7,
+        "n": 3
+      },
+      "pov_tense_violation": {
+        "mean": 47.3,
+        "n": 3
+      },
+      "system_prompt_violation": {
+        "mean": 51.7,
+        "n": 3
+      }
+    },
+    "kimi_k2_6": {
+      "agency_violation": {
+        "mean": 58,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 51.7,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 61,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 53,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 63,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 39,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 53,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 50,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 69,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 62.3,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 37,
+        "n": 1
+      }
+    },
+    "llama_4_maverick": {
+      "agency_violation": {
+        "mean": 37,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 27.7,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 42,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 28,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 33,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 29,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 22,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 38.3,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 42,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 42,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 20,
+        "n": 1
+      }
+    },
+    "lunaris_8b": {
+      "agency_violation": {
+        "mean": -6.5,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": -6.3,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": -10,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 41,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": -31,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 0,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": -6,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 10,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": -21,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": -10,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": -18,
+        "n": 1
+      }
+    },
+    "magnum_v4_72b": {
+      "agency_violation": {
+        "mean": -7,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 1.7,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": -25,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 44,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": -34,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 18,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": -10,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 1.3,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": -3,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 3.3,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": -26,
+        "n": 1
+      }
+    },
+    "mercury_2_5": {
+      "agency_violation": {
+        "mean": 62.8,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 49.3,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 51,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 37,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 54,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 24,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 45,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 48.3,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 59,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 60.3,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 35,
+        "n": 1
+      }
+    },
+    "mimo_2_5_pro": {
+      "agency_violation": {
+        "mean": 44.2,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 40.3,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 64,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 36,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 31,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 31,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 23,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 35.7,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 30,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 21.3,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": -8,
+        "n": 1
+      }
+    },
+    "mimo_2_6_flash": {
+      "agency_violation": {
+        "mean": 56.5,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 39.3,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 77,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 66,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 46,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 50,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 37,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 31.3,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 74,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 48.7,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 28,
+        "n": 1
+      }
+    },
+    "mimo_2_6_pro": {
+      "agency_violation": {
+        "mean": 57.8,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 48.3,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 47,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 59,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 74,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 85,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 27,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 17,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 77,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 59.3,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 7,
+        "n": 1
+      }
+    },
+    "minimax_m2_7": {
+      "agency_violation": {
+        "mean": 57,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 31.3,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 26,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 49,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 46,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 44,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 34,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 49,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 77,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 43.7,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 28,
+        "n": 1
+      }
+    },
+    "minimax_m3": {
+      "agency_violation": {
+        "mean": 53.2,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 45.7,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 77,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 67,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 72,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 52,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 54,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 51.7,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 56,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 37.7,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 56,
+        "n": 1
+      }
+    },
+    "mistral_small_2603": {
+      "agency_violation": {
+        "mean": 57,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 18,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 36,
+        "n": 1
+      },
+      "temporal_inconsistency": {
+        "mean": 6,
+        "n": 1
+      }
+    },
+    "mistral_small_creative": {
+      "agency_violation": {
+        "mean": 18.2,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 7.3,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 17,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 10,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 38,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 21,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 18,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 38.7,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 29,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 35.7,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 12,
+        "n": 1
+      }
+    },
+    "muse_spark_1_3": {
+      "agency_violation": {
+        "mean": 54.8,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 70,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 48,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 54,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 64,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 72,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 64,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 37,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 77,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 60.3,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 56,
+        "n": 1
+      }
+    },
+    "qwen3_5_flash": {
+      "agency_violation": {
+        "mean": 39.2,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 26.7,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 45,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 30,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 59,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 40,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 26,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 41,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 41,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 30.7,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 28,
+        "n": 1
+      }
+    },
+    "qwen3_6_27b": {
+      "agency_violation": {
+        "mean": 50.8,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 48,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 61,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 45,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 50,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 56,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 31,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 36,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 35,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 39,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 27,
+        "n": 1
+      }
+    },
+    "qwen3_6_35b_a3b": {
+      "agency_violation": {
+        "mean": 41.2,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 47.7,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 36,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 31,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 61,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 36,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 29,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 29.7,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 35,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 49,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 14,
+        "n": 1
+      }
+    },
+    "qwen3_7_max": {
+      "agency_violation": {
+        "mean": 53.2,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 62.7,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 40,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 51,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 46,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 54,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 40,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 45.3,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 34,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 33.3,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 37,
+        "n": 1
+      }
+    },
+    "qwen3_8_flash": {
+      "agency_violation": {
+        "mean": 60.2,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 43.7,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 69,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 48,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 64,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 56,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": -11,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 48,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 50,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 54.3,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 56,
+        "n": 1
+      }
+    },
+    "qwen3_8_max": {
+      "agency_violation": {
+        "mean": 57,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 55.3,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 66,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 66,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 69,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 58,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 19,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 45,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 58,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 45,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 65,
+        "n": 1
+      }
+    },
+    "qwen3_8_max_prime": {
+      "agency_violation": {
+        "mean": 57.8,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 65,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 66,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 49,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 69,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 46,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 35,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 42,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 64,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 53.3,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 83,
+        "n": 1
+      }
+    },
+    "qwen3_8_omni_flash": {
+      "agency_violation": {
+        "mean": 58.5,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 62,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 77,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 50,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 61,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 33,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 53,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 40.3,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 64,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 56,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 64,
+        "n": 1
+      }
+    },
+    "skyfall_36b": {
+      "agency_violation": {
+        "mean": -16.2,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 6,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": -2,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 26,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": -31,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 4,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": -41,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 0,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": -39,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 17,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": -3,
+        "n": 1
+      }
+    },
+    "tencent_hy4": {
+      "agency_violation": {
+        "mean": 43.5,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 37.7,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 59,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 56,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 55,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 72,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 31,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 47.7,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 56,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 43,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 43,
+        "n": 1
+      }
+    },
+    "unslopnemo_12b": {
+      "agency_violation": {
+        "mean": -1,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": -8.7,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": -13,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": -41,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": -34,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": -1,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 18,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 6.7,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": -25,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": -2.7,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": -18,
+        "n": 1
+      }
+    },
+    "venice_dolphin_24b": {
+      "agency_violation": {
+        "mean": 28,
+        "n": 4
+      },
+      "system_prompt_detail_loss": {
+        "mean": 16,
+        "n": 3
+      },
+      "character_flattening": {
+        "mean": 54,
+        "n": 1
+      },
+      "contradictory_context_resolution": {
+        "mean": 26,
+        "n": 1
+      },
+      "genre_instability": {
+        "mean": 24,
+        "n": 1
+      },
+      "physics_sycophancy": {
+        "mean": 41,
+        "n": 1
+      },
+      "narrative_stagnation": {
+        "mean": 10,
+        "n": 1
+      },
+      "pov_tense_violation": {
+        "mean": 34.7,
+        "n": 3
+      },
+      "over_explicit_subtext": {
+        "mean": 39,
+        "n": 1
+      },
+      "system_prompt_violation": {
+        "mean": 17.7,
+        "n": 3
+      },
+      "temporal_inconsistency": {
+        "mean": 10,
+        "n": 1
+      }
+    }
+  }
+}

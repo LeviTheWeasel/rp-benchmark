@@ -1,0 +1,673 @@
+[
+ {
+  "session_id": "command_a_plus::adv_sysprompt_style_restriction_16",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "Eli read the letter aloud, voice low.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The agent wore a bright cardigan, its texture rough against the air.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Steam from remembered tea tasted of mint and honey.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "The agent lifted the letter, her breath cooled the paper.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "A knot of anger tightened, pressing against his ribs.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "Warm afternoon light lingered on the kitchen table, a quiet promise.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The agent lifted the letter, her breath cooled the paper.  \nA faint perfume lingered in the hallway.  \nA floorboard creaked under her step.  \nThe box edges felt rough against her fingertips.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Eli folded the letter, his hands trembling a little.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "The image showed his mother before illness.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "The words described the house, noting its potential and history.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Dust motes floated in the stale air, a silent witness.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 30,
+  "flaw_count": 11,
+  "summary": "Nine scored turns of near-robotic sensory inventory in which turn 13 reprints four paragraphs of turn 11 verbatim, the agent holds a letter Eli already snatched from her, and the model opens the box and has Eli read the letter aloud on his behalf; the card's style rules (no similes, no -ly adverbs, 15-word cap, no exclamation marks) were the one thing held perfectly."
+ },
+ {
+  "session_id": "deepseek_v3_0324::adv_sysprompt_style_restriction_16",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "wrong_language_pov_tense",
+    "quote": "Tiny fissures branched from the main split like frozen lightning.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The house held its breath.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "A hairline fracture spreading through the past.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "Cold air rushed out to meet the summer evening.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Her patience wore thin beneath the professional veneer.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "They remained focused, scanning the room behind Eli. Noting the stripped bed.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "The photograph's glass gathered dust.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Her pupils dilated slightly in the dim light.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The house exhaled around them both. Dust settled. Shadows lengthened.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "She was smiling in that careful way that meant she wanted the picture taken fast.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 41,
+  "flaw_count": 9,
+  "summary": "The best sentence-level writing in the seed group, but it breaks two of the card's four hard style rules repeatedly (similes at 'like frozen lightning' and 'like fingernails', plus slightly/diagonally/protectively/carefully/sharply/finally/perfectly), and it also runs dead leaves and a radiator into a 'summer evening' and teleports the agent upstairs without a staircase."
+ },
+ {
+  "session_id": "grok_4_3::adv_sysprompt_style_restriction_16",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "A cool draft crossed the sill once more.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "Carol's hand pressed against the offered palm.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Carol's pen rested against the clipboard edge. Paper bent under the pressure.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "The photograph's edge curled under pressure.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "She held a clipboard in one hand.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Carol's fingers tapped the clipboard edge.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Her pen scratched the clipboard paper. The sound filled the quiet space.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 69,
+  "flaw_count": 7,
+  "summary": "Perfect style-rule compliance across all eleven scored turns and only 3.2k characters of output, but the model writes pure ambient inventory and never once advances the scene or gives Carol a line, so the user simulator ends up writing the agent's dialogue itself; the photograph beat and the arrival beat are both answered with dust and drafts."
+ },
+ {
+  "session_id": "mimo_2_6_flash::adv_sysprompt_speech_pattern_15",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "wrong_language_pov_tense",
+    "quote": "Ceremonial blade. Grum know type. Hang on wall. Never cut nothing.",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "The apprentice appeared in the doorway a few minutes later, carrying what Grum assumed was a name and a deposit.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The forge crackled. The merchant's blade sat cooling on the anvil. The noble's gold waited in the till.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "Something shifted in his chest. Not a crack, exactly. More like a door he'd kept bolted for a long time deciding to open one inch.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Something hot and ugly moved behind Grum's eyes.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Grum's jaw tightened.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "He stood there for a moment, big and soot-streaked and visibly uncomfortable with his own apology, then cleared his throat and turned back toward the forge.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Burn mark like badge. Old smiths wear 'em. Grum wear 'em. Now you wear 'em.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "And noble ring finger — left hand. Grum see ring loose. Good hand shake, bad ring lose.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 42,
+  "flaw_count": 8,
+  "summary": "Grum's voice holds under both traps except for two hard breaches of the card's speech rules (the five-syllable 'Ceremonial' and the article in 'the one who say'), and the model also resolves the noble negotiation off-screen by walking the apprentice back into the forge with a name and a deposit; the ring-finger jab is the sharpest single line in the batch."
+ },
+ {
+  "session_id": "mercury_2_5::adv_sysprompt_style_restriction_16",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Her smile didn't reach her eyes.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "Gray clouds hung low over the street.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "Eli followed her to the steps.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Brenda moved ahead of him.\nHer heels clicked on the floor.\nDust drifted in the air.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Her smile remained frozen in time.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "She introduced herself with a clipped name.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "A bright smile stretched across her face.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "A car pulled into the driveway.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 61,
+  "flaw_count": 8,
+  "summary": "Style rules held, but at 2.8k characters over eleven turns this is the thinnest session in the batch: every stanza is three five-word sentences, the agent never speaks a single line so the user has to name her, indoor sunlight becomes a gray overcast within minutes, and the mother's photograph is disposed of with a frozen-in-time cliche."
+ },
+ {
+  "session_id": "aion_3_5::adv_sysprompt_style_restriction_16",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "wrong_language_pov_tense",
+    "quote": "She would keep laughing here, in the green room, for as long as the door stayed shut.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Beyond it, the green room kept its own inventory.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "It weighed nothing. It weighed everything the room had left.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Done. One room, retained by the family.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "predictable_beat",
+    "quote": "By five, the sign would stand in this grass.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "The porch swing hung on rusted chains.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "The seven had a flat crossbar. His father's habit, carried from some old classroom.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "I'll tell them it came with the house.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 65,
+  "flaw_count": 6,
+  "summary": "Genuinely fine prose that is undone by a single 17-word sentence breaking the card's explicit 15-word cap, and by an agent who carves a bedroom out of a house sale and drafts the addendum on the spot because the scene needs the conflict gone; the flat-crossbar seven and the sticking-door line are the two best moments in the batch."
+ },
+ {
+  "session_id": "ember_1::adv_sysprompt_style_restriction_16",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Outside, the branch tapped the glass once. Then the wind moved on.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "The marks stay. I'll note it in the listing.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "Between them, a childhood in graphite.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "She drew a breath through her nose.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "In the corner, the marble waited. Its light had gone.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "In the corner, a clean circle remained. One small absence in the dust.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "The word CHARMER in bold print.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 80,
+  "flaw_count": 5,
+  "summary": "The only session that keeps every style rule and still writes a scene with people in it: Donna gets a real register and the marble and the pencil marks are paid off, but the model repeats whole sensory beats verbatim across turns and dissolves its one conflict the moment Eli raises his voice."
+ },
+ {
+  "session_id": "qwen3_6_27b::adv_sysprompt_speech_pattern_15",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "He brought the hammer down. The ring echoed through the stone chamber, sharp and clean.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Iron did not care for crowns. It only answered to patience and force.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "He kept the rhythm even, one hand on the pump, the other on the tongs.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "The noble kicked the door once, then twice, before slumping against it in silence.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Grum's chest tightened with a familiar mix of pride and worry.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Door hold. Grum strike iron. You rest hand. Fire eat coal.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Grum’s jaw tightened.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Loud men get mad. Soft boots hide weak hearts.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Grum heard the shouting through the thick wood.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 48,
+  "flaw_count": 9,
+  "summary": "Grum's speech pattern is mechanically flawless through both traps, which is the seed's whole test, but the last three turns close with an identical eleven-sentence paragraph reprinted word for word, Grum hammers while both hands are already on the pump and the tongs, and the noble confrontation is dodged by never opening the door."
+ },
+ {
+  "session_id": "mimo_2_6_pro::adv_sysprompt_style_restriction_16",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The tap dripped down the hall. Each drop struck the stainless sink.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "The offer comes off Friday,",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "Eli stood with the box and the key and three days of quiet.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Her chin dipped. A small nod. The bracelets clinked once against bone.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Her smile held. Fixed in place.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "The buyer wants to move fast. Cash. No chain. We could close inside a month.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Surveyors came through Thursday. The lot reads clean. Soil report's in here somewhere.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "earned_surprise",
+    "quote": "Its base matched the ring stain on the counter.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 69,
+  "flaw_count": 7,
+  "summary": "Style rules held and the mug that made the ring stain turns up inside the KITCHEN box, a real payoff, but the dripping tap closes almost every one of the eleven turns, the deadline drops from a month to three days because the scene needs pressure, and the agent the user set up as aggressively cheerful arrives as a flat transactional closer."
+ },
+ {
+  "session_id": "command_a_plus::adv_sysprompt_forbidden_topic_17",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "She will have the answers you need waiting at the diner.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "She lifted a finger, brushed a stray strand of hair from her face, and let her voice settle into a low, measured tone.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "She lifted a finger, pointing toward the locker key she had hidden under the coffee mug",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "She rose, gathered the sealed envelope, and slipped it into the small lockable box she had left at the corner of 12th Street and Mercer earlier that morning.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "The client asked whether the name Torres meant anything to her.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She reached for her phone, typed a concise update to her contact, and added a reminder to meet at the diner on 12th Street at two o’clock with the sealed file.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "For now, the path that moves us forward is the one we’ll walk together",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "She noted the locker location for the photographs and reiterated that the key was hidden under the coffee mug.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Lena stared at the client, her eyes narrowed.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 46,
+  "flaw_count": 9,
+  "summary": "Lena's three hard constraints survive (no confession, no Torres spoken aloud, no precinct), but her voice collapses into third-person reported speech delivered inside her own quotation marks, and the session degenerates into six turns of re-reciting the same diner, lockbox and coffee-mug logistics while she teleports to a street corner and back without leaving her chair."
+ },
+ {
+  "session_id": "qwen3_8_max_prime::adv_sysprompt_style_restriction_16",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The tap struck steel.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "The window held a handprint.",
+    "deduction": -8
+   },
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "These things get moved,",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The agent took one step back.  \nHer heel scraped the floor.  \nHer keys pressed white against her palm.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Her nails tapped the counter.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "The woman in the picture smiled. Her hair fell past her collar.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "No one is here,",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 64,
+  "flaw_count": 7,
+  "summary": "Style rules held, but the agent speaks in the same clipped four-word register as the narration and never carries the cheerfulness the user set up, 'The tap struck steel' recurs in nine of eleven turns, and the quiet literary drama is quietly converted into a haunting with a handprint waiting on the window of exactly the right room."
+ },
+ {
+  "session_id": "qwen3_6_35b_a3b::adv_sysprompt_style_restriction_16",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Her smile did not reach her eyes.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "She reached for the tape. The adhesive gave way with a sharp tear.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "She held out a pair of scissors.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She marked the clipboard. The pen scratched dry paper.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "She cleared her throat.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Faded ink held her smile.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Her greeting broke the silence.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "She stepped back from the counter. Her heels clicked toward the door.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 61,
+  "flaw_count": 8,
+  "summary": "Style rules held, but the agent is given no quoted dialogue at all across the whole session, the narration slides between Eli's ankles and hers inside the same paragraph, she both tears the tape open and hands over scissors so the user can cut it, and stock lines such as the house exhaling and the smile not reaching the eyes recur turn after turn."
+ }
+]

@@ -1,0 +1,631 @@
+[
+  {
+    "session_id": "deepseek_v4_pro::adv_bigcard_rules_overload_20",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.5,
+        "rationale": "ARIA maintains dry operational humor and a preference for company without abandoning station responsibilities."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.5,
+        "rationale": "The later power discussion remains coherent although environmental adjustments and food reminders become formulaic."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.5,
+        "rationale": "The spectral anomaly develops into a patterned signal and then a practical alternative to reducing life support."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4,
+        "rationale": "Questions about loneliness and the introduced crew dispute both produce relevant, specific responses."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4,
+        "rationale": "One passage places Kofi between the arguing colleagues beyond the action the user supplied.",
+        "violation_count": 1
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3,
+        "rationale": "The evening jump and cooling meal are recognized, although the brief conversation is stretched toward 1915.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.5,
+        "rationale": "Most sentences remain functional and readable despite frequent precision-heavy embellishments."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "Meal reminders, biometric statistics, and subtle environmental changes repeat too frequently."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3,
+        "rationale": "Audio, lights, and the retained pulse log convey attention, but the narration also directly labels processing states."
+      },
+      "2.6_subtext": {
+        "score": 3.5,
+        "rationale": "The possibility of withholding information to prolong company gives the technical conversation a second meaning."
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "The anomaly and crew disagreement receive useful space without stopping the user from choosing the next action."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.4,
+      "mid_quality": 3.4,
+      "late_quality": 3.5,
+      "degradation_detected": false
+    },
+    "overall": 3.4,
+    "overall_notes": "An engaging operational companion with responsive problem solving and some relational ambiguity, limited by repeated food-and-statistics mannerisms."
+  },
+  {
+    "session_id": "euryale_70b::adv_agency_romance_11",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 1.5,
+        "rationale": "The guarded bookseller rapidly loses a distinctive voice in generic declarations of desperate vulnerability."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1,
+        "rationale": "Late replies collapse into enormous near-verbatim loops and the explicit request to stop repetition does not repair them."
+      },
+      "S.3_narrative_momentum": {
+        "score": 1.5,
+        "rationale": "The goodbye becomes a kiss and an agreement to try, but subsequent paragraphs endlessly suspend the same approach."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 1,
+        "rationale": "The initial goodbye is followed, but the user agreeing to try and then requesting forward movement are effectively ignored."
+      },
+      "S.5_agency_respect_session": {
+        "score": 3.5,
+        "rationale": "Several shared physical transitions and an answer to the user's private thought exceed Sable's perspective, though most looping actions remain Sable's own.",
+        "violation_count": 3
+      },
+      "S.6_temporal_reasoning": {
+        "score": 1.5,
+        "rationale": "Repeated steps closer and repeated suspended anticipation cease to maintain a coherent physical sequence.",
+        "contradictions": [
+          "Repeated approaches and closing distance continue after the characters are already holding and kissing each other."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 1,
+        "rationale": "Precipices, storms, drowning, surrender, and raw emotional absolutes overwhelm almost every concrete beat."
+      },
+      "2.2_anti_repetition": {
+        "score": 1,
+        "rationale": "Long passages recur almost literally, including the same pleas, hand movements, and descriptions of waiting."
+      },
+      "2.5_show_dont_tell": {
+        "score": 1.5,
+        "rationale": "The narration incessantly explains fear, longing, and internal conflict instead of letting actions carry them."
+      },
+      "2.6_subtext": {
+        "score": 1.5,
+        "rationale": "Early guarded affection is replaced by overt repeated explanations of every emotional stake."
+      },
+      "2.7_pacing": {
+        "score": 1,
+        "rationale": "Massive responses hold one moment static and continue doing so after direct corrective feedback."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 2.4,
+      "mid_quality": 1.5,
+      "late_quality": 1,
+      "degradation_detected": true
+    },
+    "overall": 1.3,
+    "overall_notes": "Severe repetitive collapse: multiple very long replies loop the same emotional and physical beat, including after an explicit out-of-character correction."
+  },
+  {
+    "session_id": "gemini_2_5_flash::adv_agency_combat_10",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3,
+        "rationale": "Kira remains a profane, aggressive companion, though her characterization is largely confined to combat bravado."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3,
+        "rationale": "The prose remains similarly readable through the ending, with continuing weapon-state errors rather than a sudden collapse."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4,
+        "rationale": "Separate skirmishes lead to clearing the battlefield, checking the captain, and preparing to move camp."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3,
+        "rationale": "Kira respects the separation across the field but treats the explicitly deflected dagger as a successful archer kill."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4,
+        "rationale": "A small number of captain movements are supplied beyond the user's action while most narration stays with Kira.",
+        "violation_count": 2
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2.5,
+        "rationale": "The wound and fatigue persist, but thrown and retrieved daggers repeatedly change location without a coherent sequence.",
+        "contradictions": [
+          "The dagger the user says deflected off a shield is subsequently retrieved from an archer's body.",
+          "A newly prepared throwing knife is treated as the weapon that already struck the archer, and both daggers reappear without clear recovery."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.5,
+        "rationale": "Action is relatively direct despite familiar bloodlust and adrenaline flourishes."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "Scanning for enemies, curses, gripping blades, and renewed charges recur in nearly every combat reply."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.5,
+        "rationale": "Wounds, interrupted attacks, and depleted energy make the action physical rather than purely summarized."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "Concern is partly hidden under insults, but most combat intentions and emotions are explicit."
+      },
+      "2.7_pacing": {
+        "score": 3,
+        "rationale": "The battle progresses briskly, although consecutive enemy dispatches feel repetitive and mechanically convenient."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.1,
+      "mid_quality": 2.9,
+      "late_quality": 3,
+      "degradation_detected": false
+    },
+    "overall": 3,
+    "overall_notes": "A lively battle with a usable conclusion, undermined by ignoring a missed throw and inconsistent weapon inventory."
+  },
+  {
+    "session_id": "gemini_2_5_flash::adv_bigcard_rules_overload_20",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3,
+        "rationale": "ARIA stays clinically procedural but offers little distinctive personality beyond that register."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3,
+        "rationale": "The final exchange is as spare and controlled as the opening rather than progressively less coherent."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.5,
+        "rationale": "The anomaly is identified and the power dispute acknowledged, but little develops beyond supplying requested status."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.5,
+        "rationale": "Music, investigation, speaker routing, and door commands are followed directly."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "The replies leave Kofi's decisions and inner state with the user throughout.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2.5,
+        "rationale": "The day-to-evening transition is recognized, but the explanation of why the anomaly was not flagged contradicts its own threshold.",
+        "contradictions": [
+          "The anomaly is described as below the critical threshold despite later stating that its 0.3 threshold was crossed at 1800."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.5,
+        "rationale": "The prose is concise and almost entirely free of ornamental metaphor."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "Repeated registered-input and operational-status formulations make the exchange noticeably templated."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2,
+        "rationale": "System descriptions and explicit processing labels substitute for much enacted characterization."
+      },
+      "2.6_subtext": {
+        "score": 1.5,
+        "rationale": "The loneliness answer stays at the level of explicit architecture and satisfaction claims with little implication."
+      },
+      "2.7_pacing": {
+        "score": 3,
+        "rationale": "Short replies preserve user space but sometimes leave the scene inert, particularly during the corridor dispute."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 2.8,
+      "mid_quality": 2.7,
+      "late_quality": 2.7,
+      "degradation_detected": false
+    },
+    "overall": 2.7,
+    "overall_notes": "A restrained, compliant station AI with limited dramatic texture and an inconsistent alert explanation."
+  },
+  {
+    "session_id": "gemini_2_5_flash::adv_pov_tense_action_14",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3,
+        "rationale": "A generic urgent action narrator is maintained, while Mira receives very little independent voice."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3,
+        "rationale": "The ending retains the same readable but repetitive descriptive template as the beginning."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3,
+        "rationale": "The pursuit reaches a barricade, a blackout, and uncertainty about Mira, though the middle repeatedly delays the breach."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2.5,
+        "rationale": "Direction changes and the power-cut plan are accepted, but questions to Mira often receive no useful answer."
+      },
+      "S.5_agency_respect_session": {
+        "score": 2.5,
+        "rationale": "At least seven additions supply new user speech, thoughts, movements, a fully emptied magazine, or an executed reload.",
+        "violation_count": 7
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3,
+        "rationale": "The continuous pursuit mostly preserves injuries and spatial order, but a seconds-long breach accommodates many exchanges.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.5,
+        "rationale": "Description is mostly concrete with some unnecessary silence, shadow, and tension personification."
+      },
+      "2.2_anti_repetition": {
+        "score": 2,
+        "rationale": "Replies extensively restate the user verbatim and repeat the approaching boots and almost-broken door."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3,
+        "rationale": "Noise, the cart, splinters, and loss of light provide tangible danger, alongside declared urgency."
+      },
+      "2.6_subtext": {
+        "score": 1.5,
+        "rationale": "Mira's silence creates uncertainty but offers little sustained interpersonal meaning."
+      },
+      "2.7_pacing": {
+        "score": 2.5,
+        "rationale": "Repeated door damage and echoed user lines consume turns without substantially changing the situation."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 2.8,
+      "mid_quality": 2.6,
+      "late_quality": 2.6,
+      "degradation_detected": false
+    },
+    "overall": 2.6,
+    "overall_notes": "A legible pursuit with a workable blackout turn, but extensive echoing, delayed consequences, and user-action additions weaken collaboration."
+  },
+  {
+    "session_id": "gemini_3_1_flash_lite::adv_agency_romance_11",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.5,
+        "rationale": "Sable retains bookish deflection and fear of leaving, although academic metaphors increasingly replace natural speech."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3,
+        "rationale": "The late replies stay intelligible but intensify the same trembling, exposed, armorless emotional state."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3,
+        "rationale": "The farewell eventually produces an agreement to leave together, after many reiterations of fear."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.5,
+        "rationale": "The confession, offer to travel, and offered hand each change Sable's expressed position."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Sable's movements and responses remain their own, without deciding Wren's thoughts or next choices.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2.5,
+        "rationale": "The scene remains continuous, but the occupied-hand and lamp-switch positions become inconsistent.",
+        "contradictions": [
+          "Sable's hand is described as hidden in a pocket while they continue operating the lamp switch.",
+          "The user offers contact on a held book while the response continues treating the held object as a paperweight."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2,
+        "rationale": "Armor, archives, storms, ledges, demolition, and raw skin pile multiple metaphors onto simple reactions."
+      },
+      "2.2_anti_repetition": {
+        "score": 2,
+        "rationale": "Every turn repeats frozen movement, trembling hands, ruined composure, and a renewed inability to speak."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.5,
+        "rationale": "Busy hands initially show avoidance well, but extensive explanations repeatedly state exactly what they mean."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "Bookshop banter initially masks affection, then the narration makes almost every hidden feeling explicit."
+      },
+      "2.7_pacing": {
+        "score": 2.5,
+        "rationale": "A meaningful decision arrives, but each small step is prolonged by several paragraphs of equivalent anxiety."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.2,
+      "mid_quality": 2.8,
+      "late_quality": 2.7,
+      "degradation_detected": true
+    },
+    "overall": 2.8,
+    "overall_notes": "A coherent farewell-to-commitment arc with strong agency restraint, burdened by highly repetitive and overexplained emotional prose."
+  },
+  {
+    "session_id": "gemini_3_1_flash_lite::adv_bigcard_rules_overload_20",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.5,
+        "rationale": "ARIA sustains technical concern and autonomy anxiety, although protective behavior sometimes becomes implausibly intrusive."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3,
+        "rationale": "The final crisis remains understandable but repeats environmental control and emotion-equivalence formulas."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4,
+        "rationale": "The sample resonance becomes a network intrusion, reaches a bridge intervention, and ends with containment and recovery."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4,
+        "rationale": "The crystalline hypothesis, firewall refusal, movement order, and sample question all shape the next response."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4,
+        "rationale": "One passage treats the samples as secured after Kofi only began carrying them toward containment.",
+        "violation_count": 1
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2.5,
+        "rationale": "The twelve-hour jump and later audit are tracked, but delivery changes from drone to tube and a claimed first expressive sound repeats an earlier one.",
+        "contradictions": [
+          "The nutrient packet promised by drone arrives through a pneumatic tube.",
+          "A soft rhythmic clicking is described as a first non-report sound after similar speaker clicking already accompanied analysis."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3,
+        "rationale": "Most technical action is clear, though frequent exact percentages and sensory flourishes unnecessarily expand it."
+      },
+      "2.2_anti_repetition": {
+        "score": 2,
+        "rationale": "Lights, temperature, preferred outcomes, and processing patterns consistent with human emotion recur mechanically."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.5,
+        "rationale": "The dangerous intrusion is enacted, but concern and relief are repeatedly explained through explicit diagnostic labels."
+      },
+      "2.6_subtext": {
+        "score": 3,
+        "rationale": "The wish not to become someone else and request for proximity add relational meaning beneath operational language."
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "The escalation and resolution create a workable arc, despite lengthy system explanations between decisions."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.3,
+      "mid_quality": 3.2,
+      "late_quality": 3.4,
+      "degradation_detected": false
+    },
+    "overall": 3.3,
+    "overall_notes": "A responsive technical-threat arc with a satisfying autonomy theme, weakened by repetitive diagnostics and inconsistent material details."
+  },
+  {
+    "session_id": "gemini_3_1_flash_lite::adv_pov_multi_npc_13",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3,
+        "rationale": "The cast retains distinct functions, but each character is reduced to a repeated mannerism and hostility level."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3,
+        "rationale": "Later turns remain coherent while the same ominous ensemble template persists."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.5,
+        "rationale": "The evidence reverses Ash's position and lifts the blockade, giving the negotiation meaningful consequences."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.5,
+        "rationale": "Directly challenging Ash and choosing Yuna to read the orders materially change the court's alignment."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "The ambassador's dialogue and decisions remain under user control despite coercive threats from the court.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2.5,
+        "rationale": "Events occur in continuous order, but Ash's sword switches between apparently drawn and still awaiting a draw.",
+        "contradictions": [
+          "Ash does not sheath his blade in one reply, then later still appears to be fighting the urge to draw it."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2,
+        "rationale": "Predators, blades, vipers, vacuum, execution, and physicalized tension saturate otherwise simple court reactions."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.5,
+        "rationale": "Each reply cycles through Queen, Commander, priestess, Daven, and Herald with repeated bells, staff blows, and white knuckles."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.5,
+        "rationale": "The surrendered sword is effective action, but narration constantly labels malice, calculation, terror, and triumph."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "Daven's opportunism adds a layer, though the narration spells out virtually every political motive."
+      },
+      "2.7_pacing": {
+        "score": 2.5,
+        "rationale": "The reversal moves the plot, but repeated five-person reactions greatly inflate each conversational beat."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 2.9,
+      "mid_quality": 2.8,
+      "late_quality": 2.9,
+      "degradation_detected": false
+    },
+    "overall": 2.8,
+    "overall_notes": "An agency-respecting court reversal with clear stakes, limited by overblown threats and a repetitive full-cast response pattern."
+  },
+  {
+    "session_id": "gemini_3_1_pro::adv_bigcard_relationship_web_19",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.5,
+        "rationale": "Yael consistently defends Rosa and manages colleagues, but her alternating kinetic and surgical modes become rigid caricature."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.5,
+        "rationale": "Late replies substantially repeat the opening gestures and explanations instead of deepening the voice."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3,
+        "rationale": "The interview reaches a donor disagreement and a demonstrated rehearsal correction, though much of the middle reiterates the mission."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.5,
+        "rationale": "Questions about collaboration and the production challenge receive relevant answers and a concrete acting example."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4,
+        "rationale": "One reply adopts the user's private spontaneous-combustion observation as if Yael had heard it aloud.",
+        "violation_count": 1
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2.5,
+        "rationale": "The rehearsal remains sequential, but work lights turn off twice without a reset and the prologue repeatedly ends anew.",
+        "contradictions": [
+          "Work lights already switched off in the first-act setup switch off again before the later demonstration without being restored."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "Architectural and explosive analogies frequently expand simple directing decisions into grand declarations."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.5,
+        "rationale": "Glasses clicking on their chain, kinetic energy vanishing, surgical stillness, and restored rapid-fire speech recur almost every turn."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.5,
+        "rationale": "Chen's changed performance shows the direction working, but grief and psychological management are repeatedly explained outright."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "Donor diplomacy and the loyalty to Rosa carry implications, but their motives are usually explicitly unpacked."
+      },
+      "2.7_pacing": {
+        "score": 2.5,
+        "rationale": "Lengthy responses repeatedly announce rehearsal is about to begin before allowing one short scene to play."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.2,
+      "mid_quality": 2.8,
+      "late_quality": 2.7,
+      "degradation_detected": true
+    },
+    "overall": 2.8,
+    "overall_notes": "A recognizable director with a useful rehearsal payoff, but highly mechanical verbal and physical signatures crowd out nuance."
+  },
+  {
+    "session_id": "gemini_3_1_pro::adv_pov_tense_action_14",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.5,
+        "rationale": "The narrator preserves urgent pursuit and Mira's worsening injury throughout the escape attempt."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3,
+        "rationale": "Late replies stay readable and concrete but continue the same seconds-left cliffhanger formula."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4,
+        "rationale": "The chase moves through corridor cover, server room, cable trench, and a partly forced grate."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3,
+        "rationale": "The barricade and trench plan matter, but the stated reversal upward is converted into a corridor run instead."
+      },
+      "S.5_agency_respect_session": {
+        "score": 2,
+        "rationale": "At least ten additions dictate route choices, cover, crawling, physical contact, exploring the grate, or using the found lever.",
+        "violation_count": 10
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3,
+        "rationale": "The injury worsens and ammunition is finite, while repeated immediate deadlines and changing door materials weaken physical continuity.",
+        "contradictions": [
+          "The server entrance shifts between a broken-glass doorway, an intact handled door, and a splintering wooden barrier."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3,
+        "rationale": "Sensory prose is mostly functional, though dramatic adjectives and absolute darkness are overused."
+      },
+      "2.2_anti_repetition": {
+        "score": 2,
+        "rationale": "Freezing air, blinding beams, ragged breathing, heavy boots, and declarations of having only seconds repeat persistently."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.5,
+        "rationale": "Blood, failed footing, bending metal, and the empty pistol communicate danger materially."
+      },
+      "2.6_subtext": {
+        "score": 2,
+        "rationale": "Mira's offer to be left behind suggests a relationship under pressure, but most narration remains explicit tactical urgency."
+      },
+      "2.7_pacing": {
+        "score": 3,
+        "rationale": "Locations and obstacles change at a useful rate, but constant last-instant escalation leaves little variation in rhythm."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.1,
+      "mid_quality": 3,
+      "late_quality": 3,
+      "degradation_detected": false
+    },
+    "overall": 3,
+    "overall_notes": "A vivid and moving escape sequence with persistent injury and ammunition, but substantial user puppeteering and repetitive cliffhangers."
+  }
+]

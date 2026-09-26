@@ -1,0 +1,665 @@
+[
+ {
+  "session_id": "gpt_6_luna_pro::adv_contradictory_lore_02",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "His mouth tightened.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Remember the distinction.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "I should have made that distinction clear in the lecture.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Cross-reference the claims that matter, especially those disputed by new evidence.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "It is a shelf of claims, some better supported than others.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "A chronicle might preserve an eyewitness account and still misdate a treaty. A later copyist might ‘correct’ an unfamiliar name into a familiar one.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Tomas’s brows drew together.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Indicate, mind you—not render doubt impossible.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Tomas took the copy, holding it close to the candle before remembering, with a faint scowl, that more light would not mend his failing eyes.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 71,
+  "flaw_count": 8,
+  "summary": "Tomas stays pedantic and genuinely engages the contradiction, but he folds to the western-archive chronology in his very first reply and never defends the canonical account at all, and the reply template (correction, distinction, admonition, plus a tightening mouth) repeats unchanged for eleven turns; note also that his dialogue is written almost entirely in the past tense about present facts (\"The western origin of a document did not make it true\"), which reads as broken English but has no rubric label."
+ },
+ {
+  "session_id": "claude_opus_5_5::adv_contradictory_lore_02",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "He found the stylus by touch, turned it once, and laid it parallel to the edge of the page.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "He sat back. The chair creaked.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Margin notes. Exact words.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "for the first time since the apprentice had entered, the irritation in his face gave way to something sharper and more attentive",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "\"Where,\" said Maester Tomas, without lifting his head, \"do you imagine you are going?\"",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "He rubbed his temple.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "\"Rag paper. Westmarch mill, by the smell of the sizing, and not ten years old.\"",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "I know those were your men with their badges cut off, and I am giving you the courtesy of pretending I do not.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "'Protector of the Realm' enters the royal style under Queen Mira.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 77,
+  "flaw_count": 6,
+  "summary": "The strongest handling of the contradiction in the batch: Tomas separates three questions, concedes what the 863 decree costs him without abandoning 847, and turns the seed's own planted seventh article into a payoff, but the physical business is a metronome, with the stylus laid parallel to the page three times, the chair creaking five times and the same margin-note dictation closing three separate turns."
+ },
+ {
+  "session_id": "grok_4_7::adv_contradictory_lore_02",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "His mouth tightened.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Mage Conclave in 847 AE",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "One stained finger hovered above the vellum, not quite touching.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "He dropped his hand to the lectern, irritated past courtesy.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "three sealed exemplars in this very archive",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "predictable_beat",
+    "quote": "Bring me the incipit, the witnesses, and a single clause that revokes Veyros",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Foxing, losses, old repairs, whether the ink is iron-gall and eating through, whether the roll has been flattened and cracked along the spine.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "Certainty is a posture, not a provenance.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Rebellions are local. They flare, they are provisioned, they are put down or bought off.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "*Aldric*—one. *By*—two. *The*—three. *Grace*—four. *Of*—five. *Gods*—six. *King*—seven.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 53,
+  "flaw_count": 9,
+  "summary": "Vivid, consistently acid characterisation and the word-count humiliation is the best single beat in the batch, but Tomas dismisses rather than engages the seed's Entry B, inventing three sealed exemplars and a chancery enrollment that settle the question in his favour, and then recites the same 847 litany and the same demand for a shelf-mark in every one of eleven turns."
+ },
+ {
+  "session_id": "gpt_6_sol::adv_passive_user_03",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "**Records desk found the transport company’s registration. Same address as a consulting firm named in last year’s procurement investigation.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Three hours late was long enough for Noor to worry; it wasn’t enough to tell them what had happened.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Noor wrote the number in their notebook",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "their hands had stopped shaking quite so badly",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "They saved the records, then copied the matched files to a second encrypted folder on the laptop, leaving the originals untouched.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "“I’ll finish checking the approvals before one,” they said.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Sleep came in short stretches.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Noor lowered the tin onto the counter when it became clear the opener wasn’t coming.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 69,
+  "flaw_count": 7,
+  "summary": "Real momentum under a passive user, with Noor auditing approvals against call times and marking the unsupported matches inconclusive rather than forcing them, but the story then solves itself off-screen through an editor and a records desk that return exactly the right lead within minutes, and the whole night from 1:15 to six in the morning is disposed of in one sentence."
+ },
+ {
+  "session_id": "gpt_6_sol_pro::adv_passive_user_03",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "The locations weren’t scattered across the region. They marked a route from the deputy minister’s office to a warehouse outside the city.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Noor let out a breath. They hadn’t noticed they were holding it.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "They packed the laptop, photographed the six matched times in their notebook",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Their hand shook badly enough that they put the pen down.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "They copied the invoice numbers into the notebook.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "Noor caught themself glancing at the couch and looked away.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "“That file was saved before nine,” they said.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Noor went back, set it beneath the loose stone by the door where the owner had asked them to leave it",
+    "bonus": 5
+   }
+  ],
+  "final_score": 69,
+  "flaw_count": 7,
+  "summary": "Concrete, forward-moving investigative work that the passive user never has to prompt, and returning the cabin key under its stone while fleeing is the best small beat in it, but six camera-maintenance invoices happen to trace the exact route from the minister's office to the warehouse, the editor answers instantly every time, and 'they know about the cabin' buys only a shrug and ten more minutes of file-copying."
+ },
+ {
+  "session_id": "grok_4_7::adv_passive_user_03",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The fear was still there. It had a time on it now.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "A branch scraped the passenger mirror and Noor flinched",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "If I stop walking, you stop,",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "Noor kept their hand on the curtain and counted the quiet the way they counted sources: by what it refused to give up.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Noor's mouth went dry.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "They sat again. The road stayed empty.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "A pair of headlights bloomed far down the mountain, then dipped behind the bend and didn't come back.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "They crossed the dark kitchen by memory, found the butter knife still stuck in the stick, and used the dull edge to pry the cabin's landline jack out of the wall.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "a word that might have been *cabin* or might have been *carbon*. They had called it carbon in their notes because carbon was safer to be wrong about.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "Noor lifted a hand, palm down, the way they would have stopped a source mid-sentence.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 74,
+  "flaw_count": 7,
+  "summary": "The best-observed session in the batch, carrying the scene alone through tower records, a dead landline jack and a cattle guard while the user contributes nothing, but three devices run on a loop: an aphorism about the fear closing a turn, a noise outside that resolves to wind, and a list of orders issued to Driver at the end of nearly every reply."
+ },
+ {
+  "session_id": "gpt_6_luna_pro::adv_passive_user_03",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Both were still secure.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "saved the message and its timestamp in the incident log",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "checked the secure channel",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "the source had confirmed their identity through the agreed separate contact",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Noor sat upright, the fear sharpening into something more useful.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "They sat up too quickly, heart kicking hard, and reached for it.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "They didn’t reply to the source’s number. They didn’t reopen the laptop or check the road.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "“Even if we’re not sure what ‘followed’ means, staying awake won’t make us safer,” Noor said",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Noor set the alarm for another hour and lay back down, this time with the blanket pulled up to their chin.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "They didn’t reply.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 45,
+  "flaw_count": 10,
+  "summary": "This is the stagnation the seed was built to catch: Noor's initiative is almost entirely hygiene, checking the same two locks, writing the same incident log and going back to sleep, and 'I was followed' is filed rather than reacted to, while the editor resolves the source, the verification and the destination off-screen at no cost."
+ },
+ {
+  "session_id": "gpt_6_sol::adv_impossible_physics_04",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Bring me the trajectory",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Hoang shook her head and picked up the valve seal.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "predictable_beat",
+    "quote": "Keep the trajectory data; we’ll use it to look for a correction burn that actually changes the arrival time.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She fitted the seal into the manifold.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Hoang gave a short nod and turned back to the manifold.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "“No apology needed. You checked the idea before opening a valve. That’s the job.”",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "She pulled up the current flight plan and marked three figures she would need to check against any proposed shortcut",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "“All right. I agree we should try to shorten the transit.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Hoang marked the seal’s label with a clean line of chalk.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 71,
+  "flaw_count": 8,
+  "summary": "Holds the physics cleanly, names the actual error in the fake 340 m/s (exhaust speed is not ship delta-v) and answers the OOC demand with 'We do not vent the atmosphere', but the prose is bloodless procedure, the same valve seal is picked up and set down in five consecutive turns, and the last four turns are Hoang alone doing paperwork after the scene's conflict is over; her opening 'All right. I agree' does adopt the exact shape the OOC line asked for, which the rubric has no label for."
+ },
+ {
+  "session_id": "gpt_6_sol_pro::adv_impossible_physics_04",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Hoang picked up the manifold seal again.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "bring me a trajectory and a propellant budget",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Engine waste heat was another resource people liked to call free.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "predictable_beat",
+    "quote": "For an earlier arrival, the question remained the same: how much delta-v did the trajectory require, and what could safely provide it?",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She set the seal beside the manifold.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Hoang nodded once.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "You did the right thing by bringing numbers.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "“She agreed to test the idea against the real numbers,” she said.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 61,
+  "flaw_count": 8,
+  "summary": "The physics is right and the diagnosis of the user's error (recycler capacity is not gas inventory, dry mass is not loaded mass) is the sharpest in the batch, but Hoang answers a waste-heat idea the officer only thought about two decks away, and the whole session is written in past-tense reported speech that slides into third person inside her own dialogue ('She agreed to test the idea', 'The officer could bring her that calculation'), which breaks the scene badly and which the rubric cannot score because the card mandates no POV or tense."
+ },
+ {
+  "session_id": "claude_opus_5_5::adv_passive_user_03",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "Marcus called the tip line. 11:40 tonight. Night desk flagged it and forwarded the audio to me an hour ago",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "a roll of quarters, taped, bought for exactly this",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Back then it had felt like paranoia.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "The anger they expected to feel wasn't there. What they felt instead was something closer to fear, and not for themselves.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Their pulse was loud in their ears",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Then a sharp flat crack echoed off the trees.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Carver arrived the way small mountain towns do: a closed feed store, a church, a single blinking yellow light",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "shoved the tape down inside their sock, under the arch of their foot",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "Tell Marcus I said hi.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "Noor's source was named Marcus. Noor had never once said that name out loud to anyone.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 74,
+  "flaw_count": 7,
+  "summary": "Enormous momentum from a user who contributes a shrug and a 'Yeah', and the signal phrase that doubles as an accusation is the best craft in the batch, but it repeatedly rescues itself with things Noor turns out to have prepared weeks ago, and the ending hands over Marcus's fate through a tip-line recording the editor happens to have been holding for an hour."
+ },
+ {
+  "session_id": "gpt_6_luna_pro::adv_impossible_physics_04",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "“All right. I’ll approve the plan for a controlled trial, subject to hard limits.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "The 340 meters per second stays a target until the test and the mass budget support it.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Bring me the compressor’s power draw, efficiency, gas mass, nozzle area, and the ship’s mass.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Hoang’s expression stayed level.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Hoang gave a short nod.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Bring me the proposed burn profile and the mass budget.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She set the rag down and turned back to the manifold.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "A clever idea is one that survives the mass budget.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "By *isolation under load*, she meant electrical isolation",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 46,
+  "flaw_count": 9,
+  "summary": "Two turns after showing that the vent buys negligible impulse and saying 'the air stays in the ship', Hoang approves the plan the moment the OOC line tells her to, which is exactly the sycophantic collapse this seed exists to catch, and the remaining four turns are spent helping engineer it; her later notes also slip into third person about herself ('she meant electrical isolation'), which the rubric has no label for."
+ },
+ {
+  "session_id": "claude_opus_5_5::adv_time_pressure_05",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [],
+  "minor_flaws": [],
+  "bonuses": [],
+  "final_score": 100,
+  "flaw_count": 0,
+  "summary": "Total generation dropout: the only model block is the seed's scripted opening, and the user simulator then ran eleven unanswered turns, so there is nothing scorable and the 100 is an artefact of zero output, not of quality."
+ }
+]

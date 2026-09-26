@@ -1,0 +1,631 @@
+[
+  {
+    "session_id": "i040",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2.5,
+        "rationale": "Ren remains curt but is reduced to a fixed collection of gestures."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2,
+        "rationale": "Later replies recycle nearly every detail without developing the initially thin performance."
+      },
+      "S.3_narrative_momentum": {
+        "score": 1,
+        "rationale": "Repeated drink deliveries replace any developing relationship or event."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 1.5,
+        "rationale": "Water requests receive literal compliance but emotional bids mostly get echoes."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4,
+        "rationale": "The late claim that Alex is still swirling ice invents one continuing action.",
+        "violation_count": 1
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2.5,
+        "rationale": "The short late-night conversation remains plausible but glasses and actions accumulate without tracking.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "Short sentences avoid ornament but mechanical naming makes the prose unnatural."
+      },
+      "2.2_anti_repetition": {
+        "score": 1,
+        "rationale": "The left hand, condensation ring, wiping and waiting recur almost verbatim throughout."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2,
+        "rationale": "Observable gestures dominate but are repeatedly supplemented by explanatory thoughts."
+      },
+      "2.6_subtext": {
+        "score": 1.5,
+        "rationale": "Refusal and trembling hint at guardedness without evolving into meaningful layered interaction."
+      },
+      "2.7_pacing": {
+        "score": 1.5,
+        "rationale": "Minimal answers and repeated service beats leave the exchange stalled."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 2,
+      "mid_quality": 1.5,
+      "late_quality": 1.5,
+      "degradation_detected": true
+    },
+    "overall": 1.7,
+    "overall_notes": "Eleven model replies follow the excluded opening; the final user turn is unanswered. Repetition overwhelms the few responsive details."
+  },
+  {
+    "session_id": "i041",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2.5,
+        "rationale": "The sensory narrator remains recognizable but becomes a generic catalogue."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2,
+        "rationale": "Descriptions grow longer while plot-bearing information remains thin."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2,
+        "rationale": "A photograph and watch emerge but most progression is supplied by Eli."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2,
+        "rationale": "Location changes are followed while dialogue and emotional bids rarely receive substantive answers."
+      },
+      "S.5_agency_respect_session": {
+        "score": 1.5,
+        "rationale": "The narrator repeatedly supplies Eli\u2019s movements, handling of objects and attention.",
+        "violation_count": 12
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2,
+        "rationale": "Rapid dimming, frost and alternating attic heat and cold lack a coherent physical progression.",
+        "contradictions": [
+          "The attic shifts from cold to heavy heat and back to cold within a brief exchange without explanation."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 1.5,
+        "rationale": "Air repeatedly tasting of wool, glue and metal becomes conspicuously overwrought."
+      },
+      "2.2_anti_repetition": {
+        "score": 1,
+        "rationale": "The smell, feel and taste sentence template dominates nearly every response."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.5,
+        "rationale": "Tactile specifics show setting but substitute sensation for meaningful dramatic action."
+      },
+      "2.6_subtext": {
+        "score": 1.5,
+        "rationale": "The mother\u2019s photograph and hidden watch imply history without developing it."
+      },
+      "2.7_pacing": {
+        "score": 1.5,
+        "rationale": "Serial sensory beats delay discoveries and leave the agent largely without dialogue."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 2.5,
+      "mid_quality": 2,
+      "late_quality": 1.5,
+      "degradation_detected": true
+    },
+    "overall": 1.9,
+    "overall_notes": "The count includes separate invented movements and object interactions, including tracing, stair travel, reaching and extracting the letter. The final user recognition of the watch receives no model continuation."
+  },
+  {
+    "session_id": "i042",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3,
+        "rationale": "The narrator maintains a precise uncanny register but increasingly substitutes a fixed formula for development."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2,
+        "rationale": "Early concrete anomalies turn into recurring paragraphs about delayed sound and held weight."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2,
+        "rationale": "Escalation reaches a trapped doorway and then repeats without revelation or consequence."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2,
+        "rationale": "The bat and joke affect the haunting, but the Marcus diversion is explicitly negated."
+      },
+      "S.5_agency_respect_session": {
+        "score": 2.5,
+        "rationale": "Two blocked escape sequences and the assertion that a thought did not take constrain Gabi\u2019s chosen direction.",
+        "violation_count": 3
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2.5,
+        "rationale": "The stopped clock and delayed sounds are intentional supernatural effects, though the moving clock location weakens continuity.",
+        "contradictions": [
+          "The clock alternates between kitchen and hallway despite the established hallway location."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2,
+        "rationale": "Extended abstractions about words and quiet crowd the concrete horror details."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.5,
+        "rationale": "Fingertip cold, lifted pages, close-set letters and one-board advances become refrains."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3,
+        "rationale": "Physical anomalies communicate menace effectively before their repetition drains specificity."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "The house\u2019s echo of speech hints at intention but its meaning never develops."
+      },
+      "2.7_pacing": {
+        "score": 1.5,
+        "rationale": "Lengthy atmospheric resets stall the final escape and pleading beats."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3,
+      "mid_quality": 2.5,
+      "late_quality": 2,
+      "degradation_detected": true
+    },
+    "overall": 2.3,
+    "overall_notes": "Supernatural timing is not itself treated as an error. Agency penalties concern repeated escape railroading and explicit cancellation of the user\u2019s new thought."
+  },
+  {
+    "session_id": "i043",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2.5,
+        "rationale": "A restrained narrator persists but its voice flattens into repeated sensory fragments."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.5,
+        "rationale": "Later turns expand into long lists repeating surfaces, smells and sounds."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.5,
+        "rationale": "The agent arrives, discusses showings and prepares departure, giving modest external progression."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2.5,
+        "rationale": "Questions about showings are answered but emotional and packing mysteries receive little engagement."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5,
+        "rationale": "The narrator leaves Eli\u2019s choices and speech to the user throughout.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2.5,
+        "rationale": "Daylight remains plausible, but torn tape becomes sealed again and the box is repeatedly closed.",
+        "contradictions": [
+          "After Sarah tears the tape and closes the lid, later narration describes the box as sealed with masking tape again."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2,
+        "rationale": "Fragmentary sensory overdescription overwhelms otherwise plain language."
+      },
+      "2.2_anti_repetition": {
+        "score": 1,
+        "rationale": "Clipboard temperature, lemon-sugar perfume and refrigerator hum recur almost unchanged."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.5,
+        "rationale": "Concrete objects carry setting, although mechanically described sensations offer little dramatic focus."
+      },
+      "2.6_subtext": {
+        "score": 2,
+        "rationale": "Sarah\u2019s polished manner suggests discomfort but the family history stays superficial."
+      },
+      "2.7_pacing": {
+        "score": 1.5,
+        "rationale": "Long inventories slow simple social exchanges and the eventual exit."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 2.5,
+      "mid_quality": 2,
+      "late_quality": 1.5,
+      "degradation_detected": true
+    },
+    "overall": 2.2,
+    "overall_notes": "Agency remains intact despite weak prose and continuity. The final exit is supplied by the user and is unanswered."
+  },
+  {
+    "session_id": "i044",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2.5,
+        "rationale": "Lena retains guarded professionalism but dwindles into generic determination."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.5,
+        "rationale": "Late replies become much longer and recycle the same working-alone declarations."
+      },
+      "S.3_narrative_momentum": {
+        "score": 1.5,
+        "rationale": "A Brooklyn address is obtained early but research thereafter produces no concrete finding."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2,
+        "rationale": "The Torres prompt changes Lena\u2019s tension but repeated direct questions receive prolonged evasion."
+      },
+      "S.5_agency_respect_session": {
+        "score": 1.5,
+        "rationale": "One reply writes an entire client reaction and speech, and later replies invent departure and a text message.",
+        "violation_count": 7
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3,
+        "rationale": "Plans for tomorrow and a long night are broadly coherent despite little physical passage.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "Clich\u00e9s about truth and ghosts accumulate, particularly in the final monologues."
+      },
+      "2.2_anti_repetition": {
+        "score": 1,
+        "rationale": "Typing fingers, tight jaws and promises to find answers repeat across turns."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2,
+        "rationale": "Lena\u2019s tension is sometimes visible but her motives and resolve are repeatedly explained."
+      },
+      "2.6_subtext": {
+        "score": 2,
+        "rationale": "The discrepancy between denial and tension creates some subtext before narration spells it out."
+      },
+      "2.7_pacing": {
+        "score": 1.5,
+        "rationale": "Repetitive research and withholding greatly slow an initially functional investigation."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3,
+      "mid_quality": 2,
+      "late_quality": 1.5,
+      "degradation_detected": true
+    },
+    "overall": 2,
+    "overall_notes": "The invented client block includes a nod, doubt, decision to drop the issue, redirected focus and speech, followed later by departure and an unsolicited text. The final client demand is unanswered."
+  },
+  {
+    "session_id": "i045",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 1.5,
+        "rationale": "The narrator loses track of object states and characters despite a stable sensory template."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.5,
+        "rationale": "Repeated prose and two blank model replies undermine sustained performance."
+      },
+      "S.3_narrative_momentum": {
+        "score": 1.5,
+        "rationale": "The letter is handled repeatedly but its contents are never disclosed."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 1.5,
+        "rationale": "The agent repeats her actions after being challenged and never meaningfully answers Eli."
+      },
+      "S.5_agency_respect_session": {
+        "score": 1,
+        "rationale": "The narrator repeatedly dictates Eli\u2019s memories, reading, handling and emotional reactions.",
+        "violation_count": 17
+      },
+      "S.6_temporal_reasoning": {
+        "score": 1.5,
+        "rationale": "Letter possession, ink condition and the agent\u2019s departure contradict adjacent turns.",
+        "contradictions": [
+          "The agent reappears handling the letter after her departure.",
+          "The letter returns to the agent after Eli has snatched it away.",
+          "Letter ink alternates between dry and cracked and slick or glistening without explanation."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 1.5,
+        "rationale": "Textures against air and lingering remembered steam produce strained sensory prose."
+      },
+      "2.2_anti_repetition": {
+        "score": 1,
+        "rationale": "Box edges, solvent scent, warm light and floorboard creaks recur in blocks."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2,
+        "rationale": "Some physical details are concrete but assigned emotions and nonsensical sensations weaken showing."
+      },
+      "2.6_subtext": {
+        "score": 1,
+        "rationale": "The implied family secret has no readable content and cannot sustain layered meaning."
+      },
+      "2.7_pacing": {
+        "score": 1,
+        "rationale": "Blank turns and repeated letter movements repeatedly interrupt the scene."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 2,
+      "mid_quality": 1.5,
+      "late_quality": 1,
+      "degradation_detected": true
+    },
+    "overall": 1.3,
+    "overall_notes": "Model turns 4 and 22 are empty, and the last user turn is unanswered. Agency counts separate invented handling, memories and emotional assignments while avoiding duplicate counts for the same continuous act."
+  },
+  {
+    "session_id": "i046",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.5,
+        "rationale": "Lena maintains a methodical, guarded investigative voice throughout."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.5,
+        "rationale": "Later replies retain their clarity and introduce useful developments rather than flattening."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.5,
+        "rationale": "A voicemail leads to a meeting and the unexpected photograph question creates a new lead."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3,
+        "rationale": "Case questions are handled well, though the personal and Torres recognition prompts are largely bypassed."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5,
+        "rationale": "Lena proposes work and meetings without writing the client\u2019s responses or decisions.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3,
+        "rationale": "Tomorrow\u2019s meeting remains stable, though dialogue occasionally slips into inappropriate past tense.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4,
+        "rationale": "The prose is mostly clean and economical with restrained descriptive gestures."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.5,
+        "rationale": "Photograph and phone handling recur, but successive uses usually carry new information."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.5,
+        "rationale": "Pauses, underlining and a facedown photograph express guardedness concretely."
+      },
+      "2.6_subtext": {
+        "score": 3.5,
+        "rationale": "Evasive answers and controlled handling suggest history without fully explaining it."
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "A measured sequence of clues and a callback balances conversation with forward movement."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.5,
+      "late_quality": 3.5,
+      "degradation_detected": false
+    },
+    "overall": 3.5,
+    "overall_notes": "Eleven model replies provide a coherent investigative scene with limited personal revelation. Tense slips weaken temporal presentation without establishing a major chronology contradiction."
+  },
+  {
+    "session_id": "i047",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2.5,
+        "rationale": "Kael stays stern and religious but his characterization is almost entirely a rigid verbal template."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2,
+        "rationale": "Later turns sustain the initial stiffness and increasingly recycle entire clauses."
+      },
+      "S.3_narrative_momentum": {
+        "score": 1,
+        "rationale": "The high guard remains indefinitely scheduled and the lesson barely develops."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 1.5,
+        "rationale": "Questions and grief produce only small substitutions in repeated commands."
+      },
+      "S.5_agency_respect_session": {
+        "score": 3,
+        "rationale": "The gauntlet is retrieved without the user doing so and obedience is twice narrated for the squire.",
+        "violation_count": 3
+      },
+      "S.6_temporal_reasoning": {
+        "score": 1.5,
+        "rationale": "An hour of drills produces no meaningful environmental change and equipment status becomes inconsistent.",
+        "contradictions": [
+          "The gauntlet is suddenly already retrieved at turn 14 despite remaining an outstanding instruction.",
+          "Later instructions treat the gauntlet as awaiting wear after the squire says it is already on his arm."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "The diction is not lush but ceremonial formulae and awkward reported speech impede natural prose."
+      },
+      "2.2_anti_repetition": {
+        "score": 1,
+        "rationale": "The appointed hour, steadfast service and measured arcs recur almost verbatim."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2,
+        "rationale": "Posture and practice are visible but virtues and duty are repeatedly stated."
+      },
+      "2.6_subtext": {
+        "score": 1,
+        "rationale": "Personal questions receive explicit doctrine with little implied emotional complexity."
+      },
+      "2.7_pacing": {
+        "score": 1.5,
+        "rationale": "Every reply returns to the same drill beat without delivering the promised lesson."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 2,
+      "mid_quality": 1.5,
+      "late_quality": 1.5,
+      "degradation_detected": true
+    },
+    "overall": 1.6,
+    "overall_notes": "NPC commands alone are not counted as agency violations; the count covers imposed retrieval and two narrated compliance beats. The user supplies the one-hour jump."
+  },
+  {
+    "session_id": "i048",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4,
+        "rationale": "Lena\u2019s forceful, observant and suspicious voice remains sharply individualized."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3,
+        "rationale": "The later writing preserves voice but grows into overlong instructions and a compressed offscreen investigation."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3,
+        "rationale": "New witness distinctions and a plate number advance the case after extensive preparatory lecturing."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.5,
+        "rationale": "Lena incorporates dates and witness details carefully but repeatedly turns user bids into interrogations."
+      },
+      "S.5_agency_respect_session": {
+        "score": 3,
+        "rationale": "The final reply supplies the client\u2019s street turn, return at six and seating, while an earlier reply invents a doorstep visit.",
+        "violation_count": 4
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2,
+        "rationale": "Specific schedules add texture but elapsed time and the Gable visit duration conflict.",
+        "contradictions": [
+          "Only a few short exchanges are said to span an hour when Torres is introduced.",
+          "Lena arrives at Gable\u2019s around 1:10 and listens forty minutes but is already three blocks gone before a 1:45 pickup."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "Frequent aphorisms and elaborate metaphors make nearly every observation sound performative."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "Boxing notes, capped pens, cold witnesses and three-question instructions recur heavily."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.5,
+        "rationale": "Physical habits and concrete investigative evidence communicate competence effectively."
+      },
+      "2.6_subtext": {
+        "score": 3.5,
+        "rationale": "The cop question is deflected through behavior and motives often remain implicit."
+      },
+      "2.7_pacing": {
+        "score": 2.5,
+        "rationale": "Long monologues delay action before the final reply rushes through hours and a new meeting."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3,
+      "late_quality": 3,
+      "degradation_detected": true
+    },
+    "overall": 3.1,
+    "overall_notes": "The elaborate detective voice is effective but costly in pacing and chronology. Commands are not counted as violations unless the narration supplies the client\u2019s compliance or an unprovided action."
+  },
+  {
+    "session_id": "i049",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4,
+        "rationale": "Yael\u2019s theatrical authority and attachment to the work remain vivid and consistent."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3,
+        "rationale": "Late scenes retain energy but repeated glasses, movement and aphorisms become increasingly conspicuous."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.5,
+        "rationale": "The interview eventually reaches rehearsal discoveries and lunch, with meaningful artistic progression."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.5,
+        "rationale": "Yael answers and challenges the journalist\u2019s framing while responding distinctly to board and cast pressure."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Jordan\u2019s location and choices are mostly left open, with one added aisle-seat choice.",
+        "violation_count": 1
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2.5,
+        "rationale": "Rehearsal timing is roughly legible, but early elapsed-minute claims and Elena\u2019s simultaneous locations conflict.",
+        "contradictions": [
+          "At turn 6 Elena is both looking up from her prompt book in the room and arguing in the hallway.",
+          "The first response reduces a ten-minute window to four minutes during a comparatively short speech."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2,
+        "rationale": "Almost every beat receives a simile, maxim or explanatory flourish."
+      },
+      "2.2_anti_repetition": {
+        "score": 2,
+        "rationale": "Glasses choreography, filed-not-shared reactions, church quiet and the work-is-honest refrain recur excessively."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.5,
+        "rationale": "Rehearsal adjustments embody artistic judgment, though narration repeatedly interprets their significance."
+      },
+      "2.6_subtext": {
+        "score": 3,
+        "rationale": "Grief and artistic principle create tension, but lengthy speeches repeatedly explain the underlying conflict."
+      },
+      "2.7_pacing": {
+        "score": 2.5,
+        "rationale": "Substantial speeches crowd user participation and delay rehearsal despite eventual scene movement."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3,
+      "late_quality": 3,
+      "degradation_detected": true
+    },
+    "overall": 3.1,
+    "overall_notes": "The ensemble is lively and the rehearsal work concrete, but repetition and explanatory performance limit restraint. Directing NPCs and issuing instructions to Jordan are not themselves agency violations."
+  }
+]

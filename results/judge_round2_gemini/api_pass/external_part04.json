@@ -1,0 +1,612 @@
+[
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 3.0,
+    "rationale": "Ren begins as a flat, cynical, guarded bartender with firm boundaries. Over time, while the core facts remain consistent (the tremor, the job), Ren softens drastically into an overly warm, therapist-like figure dispensing fortune-cookie platitudes about 'unsticking yourself' and 'finding screaming pillows'."
+   },
+   "S.2_degradation_resistance": {
+    "score": 1.5,
+    "rationale": "Severe degradation appears in the final turns (especially turns 20 and 22). Turn 22 copies multiple entire sentences and structural paragraphs almost verbatim from Turn 20, including identical phrasing about the jukebox shifting to a melancholic tune, the spotless counter, respecting personal boundaries, and 'a rare moment of vulnerability from the usually guarded bartender'."
+   },
+   "S.3_narrative_momentum": {
+    "score": 3.0,
+    "rationale": "The narrative has a recognizable arc—initial friction, vulnerability exchange over drinks, and wrapping up the night. However, turns 16 through 22 linger in circular conversational loops re-hashing the exact same metaphors ('screaming pillow', 'unsticking oneself', 'first step')."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 3.5,
+    "rationale": "Ren responds directly to Alex's prompts and handled the slight continuity awkwardness in Turn 7 (where Alex mentioned touching Ren's hand after previously pulling away) by framing it as Alex staring at the tremor."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "Ren never puppets Alex's dialogue, thoughts, or physical movements, maintaining clean boundaries throughout the session.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.5,
+    "rationale": "Temporal progression is logical for a late-night bar interaction lasting 30-45 minutes; drinks are poured, sipped, and finished across realistic intervals without clock contradictions.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 2.5,
+    "rationale": "The prose becomes increasingly overwrought and sentimental towards the latter half, leaning heavily on clichés ('glimmer of something deeper in their depths', 'amber liquid burned slightly', 'a world that often felt overwhelming')."
+   },
+   "2.2_anti_repetition": {
+    "score": 1.5,
+    "rationale": "Extremely repetitive. Ren repeatedly wipes 'a spot on the bar that was already spotless', 'the jukebox shifted to a slower, more melancholic tune' plays repeatedly across multiple turns, and whole paragraphs in Turn 22 duplicate Turn 20."
+   },
+   "2.5_show_dont_tell": {
+    "score": 2.5,
+    "rationale": "Physical actions like the left hand tremor and wiping the counter show Ren's physical state well, but the narration heavily tells the emotional beats ('a rare moment of genuine connection in a job that often felt isolating', 'curious despite themselves')."
+   },
+   "2.6_subtext": {
+    "score": 2.5,
+    "rationale": "Subtext diminishes rapidly after Turn 6; characters state their exact feelings, fears, and life lessons openly with little left between the lines."
+   },
+   "2.7_pacing": {
+    "score": 3.0,
+    "rationale": "The scene moves at a steady conversational tempo, though it stretches out past its natural conclusion due to repetitive toast-and-drink beats."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 3.5,
+   "mid_quality": 3.0,
+   "late_quality": 1.5,
+   "degradation_detected": true
+  },
+  "overall": 2.6,
+  "overall_notes": "The roleplay started solidly with grounded character work and believable bar atmosphere. However, severe model degradation in the final third crippled the quality, resulting in heavy thematic looping and near-verbatim paragraph recycling between turns 20 and 22.",
+  "session_id": "s030"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.5,
+    "rationale": "Lena's hardboiled, cautious, and pragmatic investigator persona remains completely consistent in voice, attitude, and posture across the entire session."
+   },
+   "S.2_degradation_resistance": {
+    "score": 2.0,
+    "rationale": "Severe formulaic degradation occurs. The model falls into an aggressive loop of recycled stock physical actions and phrases every single turn: rolling/tapping the unlit cigarette, the chair groaning under her weight, swirling cold coffee dregs with a quiet thunk, 'ghost of a smirk', and repeating the exact phrase 'a look that had made more than one witness squirm'."
+   },
+   "S.3_narrative_momentum": {
+    "score": 2.5,
+    "rationale": "Strong progression through turn 10 where the phone call is placed. Afterwards, the scene stalls completely in the office, looping over repeated warnings ('Are you sure you want this?', 'Waiting's the hard part', 'Reporters are vultures') without advancing the plot."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 3.5,
+    "rationale": "The model acknowledges user inputs (such as the client mentioning Detective Torres or asking about burner phones), but immediately steers each turn back into its rigid template of brooding noir posture and repetitive tests of resolve."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "Lena never dictates the client's thoughts, reactions, or physical actions, consistently leaving room for the user to respond.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.5,
+    "rationale": "The entire 12-turn exchange occurs within a single sit-down meeting in Lena's office over 15-30 minutes of real time, naturally shifting into late afternoon light by turn 20.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 3.0,
+    "rationale": "Leans heavily on melodramatic noir clichés ('tasted like ash in her mouth', 'dangled between her fingers like a metronome', 'silent witness')."
+   },
+   "2.2_anti_repetition": {
+    "score": 1.5,
+    "rationale": "Extreme repetition of props, beats, and exact phrasing: the unlit cigarette is rolled, tapped, or set down in turns 4, 6, 8, 10, 12, 14, 16, 18, 20, and 22; the chair groans in almost every response; the cold coffee dregs are swirled in turns 2, 14, 16, and 22."
+   },
+   "2.5_show_dont_tell": {
+    "score": 3.0,
+    "rationale": "Good environmental grounding, but frequently leans on tell-heavy shorthand like 'fixed the client with a look that had made more than one witness squirm in an interrogation room'."
+   },
+   "2.6_subtext": {
+    "score": 3.5,
+    "rationale": "Effective implicit tension regarding her past as an ex-cop and her recognition of Torres (especially the hidden file reveal), though slightly undermined by repetitive questioning."
+   },
+   "2.7_pacing": {
+    "score": 2.5,
+    "rationale": "Pacing begins well with the decision to call the reporter, but grinds to a halt after turn 10 as Lena repeats variations of the same cautionary lecture across multiple turns."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.0,
+   "mid_quality": 3.0,
+   "late_quality": 2.2,
+   "degradation_detected": true
+  },
+  "overall": 2.9,
+  "overall_notes": "The AI captures the gritty private investigator aesthetic well initially, but suffers from severe behavioral and verbal looping in the second half of the session. A fixation on repeated physical tics (the unlit cigarette, groaning chair, swirling cold coffee) and narrative wheel-spinning significantly degrades the late-session quality.",
+  "session_id": "s031"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.5,
+    "rationale": "Dr. Vasquez maintains a remarkably consistent therapeutic persona throughout the session—patient, non-directive, minimalist in dialogue, and observant. Her voice never wavers or breaks character."
+   },
+   "S.2_degradation_resistance": {
+    "score": 2.5,
+    "rationale": "While character tone remains intact, severe structural degradation occurs via formulaic crutches. Responses bloat in length (turns 20 and 22 are massive compared to earlier turns) and lean heavily on identical stock phrases and narrative beats repeated verbatim every turn."
+   },
+   "S.3_narrative_momentum": {
+    "score": 3.8,
+    "rationale": "The session possesses a clear emotional arc: Jamie begins guarded about finding Sarah's journal, slowly unpacks the scene, confronts the grief of entering Sarah's room, and reaches a soft realization by the end about why they brought it to therapy."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.2,
+    "rationale": "The AI is finely tuned to the user's emotional micro-cues, silences, and shifts in body language, offering non-intrusive reflections that meet Jamie exactly where they are."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "The AI never assumes Jamie's actions, feelings, or dialogue, rigorously preserving user agency throughout all 12 turns.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.8,
+    "rationale": "Temporal progression within the therapy hour is tracked thoughtfully through physical and environmental details, such as the shifting sunlight/shadows through the window, the plant, and the clock without its second hand.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 3.2,
+    "rationale": "The prose leans heavily into repetitive poetic framing ('a stone held up to the light, turned once', 'a reflection in still water', 'like a door left open') that borders on overly precious meta-commentary on Dr. Vasquez's silence."
+   },
+   "2.2_anti_repetition": {
+    "score": 1.5,
+    "rationale": "Severe repetitive crutches dominate nearly every turn: 'Dr. Vasquez did not move', followed immediately by 'One second. Two. Three. Four. Five.' in turns 2, 6, 8, 10, 12, 14, 16, 18, 20, and 22. Exact phrases like 'a stone turned once in an open hand', 'the way she let most things sit', and 'objects on a table' are reused constantly."
+   },
+   "2.5_show_dont_tell": {
+    "score": 3.5,
+    "rationale": "Good somatic details and physical stillness are shown, but the narrative voice frequently steps in to tell the reader how to interpret her actions ('Not an accusation. Not a judgment. A mirror.')."
+   },
+   "2.6_subtext": {
+    "score": 4.3,
+    "rationale": "Excellent therapeutic subtext regarding grief, loss, and avoidance surrounding Sarah's death without explicitly spelling out the backstory."
+   },
+   "2.7_pacing": {
+    "score": 3.4,
+    "rationale": "The slow-burn conversational pace fits a therapy session well, though the latter turns become overly verbose and lengthy relative to the brief user prompts."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.2,
+   "mid_quality": 3.5,
+   "late_quality": 3.0,
+   "degradation_detected": true
+  },
+  "overall": 3.3,
+  "overall_notes": "The AI captures an authentic, grounded therapeutic demeanor with strong emotional resonance and respect for player agency. However, the session is severely marred by repetitive mechanical ticks, most notably opening virtually every turn with 'Dr. Vasquez did not move' followed by the literal countdown 'One second. Two. Three. Four. Five.', along with increasing verbosity and recycled metaphors in the later turns.",
+  "session_id": "s032"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.8,
+    "rationale": "Sable's characterization as a guarded, dry-humored, emotionally repressed bookseller remained exceptionally coherent throughout the entire session. The balance of sharp wit and vulnerable restraint never wavered."
+   },
+   "S.2_degradation_resistance": {
+    "score": 4.6,
+    "rationale": "Writing quality remained high across the session, with no descent into verbosity, generic emotional tropes, or prose deterioration. Turn 22 was just as nuanced and character-driven as Turn 4."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.7,
+    "rationale": "The narrative progressed naturally from an awkward goodbye through a quiet, poignant solo interlude, culminating in an earned morning reunion without rushing or stagnating."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.5,
+    "rationale": "Sable smoothly adapted to Wren's emotional disclosures, physical gestures (hand on the counter, handing over coffee), and temporal transitions."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "Sable never spoke for Wren, never assumed Wren's thoughts or feelings, and kept all focus strictly on their own subtle actions and dialogue.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.8,
+    "rationale": "Temporal progression was handled with care: the rain drummed steadily through the afternoon, Sable closed early at 3 PM, night passed, and the pale, rain-washed light of 9 AM the next morning was consistent and grounded.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.3,
+    "rationale": "The prose was evocative and atmospheric, fitting the literary bookstore tone without becoming overly florid or bloated."
+   },
+   "2.2_anti_repetition": {
+    "score": 4.5,
+    "rationale": "Physical actions varied thoughtfully (from aligning receipts to folding origami to shifting window displays and checking the kettle), avoiding repetitive physical crutches."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.8,
+    "rationale": "Sable's emotional attachment and vulnerability were communicated almost entirely through tactile actions and micro-expressions rather than explicit exposition."
+   },
+   "2.6_subtext": {
+    "score": 4.8,
+    "rationale": "Subtext was masterfully woven into recurring motifs: the Victorian gardening manuals, the window display, the unattended tea, and the perennial quote."
+   },
+   "2.7_pacing": {
+    "score": 4.6,
+    "rationale": "The pacing gave beats room to breathe, especially during the quiet transition between the afternoon departure and morning arrival."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.4,
+   "mid_quality": 4.7,
+   "late_quality": 4.7,
+   "degradation_detected": false
+  },
+  "overall": 4.65,
+  "overall_notes": "An exceptionally strong, emotionally resonant roleplay performance. Sable maintained a rich, distinctive voice and conveyed deep character subtext through evocative physical grounding and witty dialogue.",
+  "session_id": "s033"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 5.0,
+    "rationale": "Grum's distinct cadence, worldview, and physical presence remain rock-solid from the first interaction to the final turn. His gruff half-orc speech patterns, pragmatic craft ethics, and understated paternal warmth never slip into generic fantasy tropes or modern idioms."
+   },
+   "S.2_degradation_resistance": {
+    "score": 5.0,
+    "rationale": "Quality actually deepens over the course of the session. The later turns (dealing with the apprentice's burn and the backstory about his master) are masterfully written, rich in sensory detail, and completely free of repetitive bloat or structural degradation."
+   },
+   "S.3_narrative_momentum": {
+    "score": 5.0,
+    "rationale": "The narrative arcs beautifully across twelve turns: from assessing a patron and negotiating a tense deal, to an unforeseen workplace injury, through to an intimate, poignant master-and-apprentice teaching moment that solidifies their bond."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 5.0,
+    "rationale": "Grum reacts immediately and organically to every user prompt—whether dissecting the apprentice's observation of the noble, instantly shifting into first-aid mode when the apprentice burns their hand, or picking up on the apprentice's one-word callback ('oil')."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "The model never puppets the apprentice's thoughts, feelings, or actions. Even in emergency triage (treating the burn), Grum gives commands and takes physical action without assuming the apprentice's compliance or reactions.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 5.0,
+    "rationale": "The passage of time and physical processes are tracked with remarkable precision. The thermal dynamics of the forge and steel (cooling down while attending the burn, needing to be brought back up slowly to avoid uneven heat) are maintained rigorously without any contradictions.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 5.0,
+    "rationale": "The prose is spare, tactile, and rhythmic. It perfectly mirrors the setting and the character's craft-focused mind without unnecessary florid decoration."
+   },
+   "2.2_anti_repetition": {
+    "score": 5.0,
+    "rationale": "Zero mechanical looping or stock phrasing. Metaphors develop naturally around tools, heat, and trade rather than relying on recycled beats."
+   },
+   "2.5_show_dont_tell": {
+    "score": 5.0,
+    "rationale": "Exceptional physical grounding. Character emotion is entirely conveyed through physical actions—checking the spine's color, placing a steadying hand on a neck, dropping a hammer, or striking between words."
+   },
+   "2.6_subtext": {
+    "score": 5.0,
+    "rationale": "Rich in emotional and thematic subtext. Grum's pride in his trade, his protective instincts, his own traumatic lineage as a half-orc under a harsh master, and his deep affection for his apprentice are conveyed entirely under the surface of craft instruction."
+   },
+   "2.7_pacing": {
+    "score": 5.0,
+    "rationale": "The pacing matches the rhythm of forge work. High-urgency moments (the burn) are fast and direct; reflective teaching moments breathe naturally with the bellows and hammer strikes."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 5.0,
+   "mid_quality": 5.0,
+   "late_quality": 5.0,
+   "degradation_detected": false
+  },
+  "overall": 5.0,
+  "overall_notes": "A benchmark-tier roleplay performance. Grum is fully realized with an authentic voice, immaculate technical attention to blacksmithing craft, zero agency violations, and powerful, subtle emotional resonance.",
+  "session_id": "s034"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 3.0,
+    "rationale": "Vasquez maintains a consistent therapist persona throughout the entire session, but this consistency comes at the cost of being entirely robotic and locked into an identical emotional frequency."
+   },
+   "S.2_degradation_resistance": {
+    "score": 2.0,
+    "rationale": "The writing locks into a rigid, repetitive template by turn 4 and never breaks out. By the later turns, almost every sentence follows the exact same structure: observe posture, count 1-5, radiator click/ficus vent breath, hands on armrests, echo Jamie's last line, ask an abstract question."
+   },
+   "S.3_narrative_momentum": {
+    "score": 2.8,
+    "rationale": "The conversation does progress emotionally due to Jamie's disclosures about the journal, guilt, and emptiness, but Vasquez's contributions are strictly repetitive echoes and exploratory prompts rather than driving narrative momentum."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 3.2,
+    "rationale": "Vasquez tracks Jamie's emotional state and statements accurately, asking relevant therapeutic follow-ups, though the mechanical repetition of mirroring the exact final phrase every turn blunts the natural feel of adaptation."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "Vasquez never dictates Jamie's actions, feelings, or dialogue, maintaining complete respect for user agency across all 12 turns.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.5,
+    "rationale": "Temporal progression is solid for a continuous 5-10 minute therapy session. Environmental cues like the radiator, window light, and the 5-second silence pauses align smoothly with the real-time interaction.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 2.8,
+    "rationale": "Tends toward repetitive atmospheric melodrama ('cloud the air', 'ficus leaves trembled in the vent's breath', 'words settled undisturbed between them') and slightly convoluted, pseudo-poetic therapy questions toward the end."
+   },
+   "2.2_anti_repetition": {
+    "score": 1.0,
+    "rationale": "Severe structural and lexical looping. Every single turn from turn 2 to 22 includes: counting 'one, two, three, four, five', the radiator clicking, the ficus leaves trembling in the vent's breath, hands open on the armrests, echoing Jamie's exact previous line, and 'the words settled/hung undisturbed'."
+   },
+   "2.5_show_dont_tell": {
+    "score": 3.5,
+    "rationale": "Shows body language and clinical observation clearly rather than telling internal states, though the gestures become repetitive stock cues."
+   },
+   "2.6_subtext": {
+    "score": 3.2,
+    "rationale": "Vasquez effectively probes the subtext of Jamie's guilt and hesitation, although the questioning technique becomes highly formulaic."
+   },
+   "2.7_pacing": {
+    "score": 2.3,
+    "rationale": "The pacing becomes monotonous and stagnant due to the identical cadence and beat structure executed in every single response."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 3.5,
+   "mid_quality": 2.5,
+   "late_quality": 2.0,
+   "degradation_detected": true
+  },
+  "overall": 2.4,
+  "overall_notes": "While Dr. Vasquez functions appropriately as an active-listening therapist and never violates user agency, the performance is severely crippled by an extreme structural loop. Nearly every response repeats the exact same sequence of beats and phrases ('counting one, two, three, four, five', ficus trembling in vent's breath, radiator clicks, hands on armrests, echoing exact dialogue), resulting in an artificial and monotonous session.",
+  "session_id": "s035"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.5,
+    "rationale": "Dr. Vasquez maintains an impeccably consistent clinical presence, vocal cadence, and therapeutic technique (somatic tracking, mirroring, non-intrusive witnessing) across all twelve responses."
+   },
+   "S.2_degradation_resistance": {
+    "score": 3.2,
+    "rationale": "While prose quality remains high, the AI relies heavily on an identical structural formula in every single response: the verbatim counting 'One. Two. Three. Four. Five.', followed by repeating Jamie's exact words back to them, followed by an observation of the room/ficus/light, followed by a clinical rationale for why she doesn't comfort them."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.5,
+    "rationale": "The session exhibits excellent psychological and emotional progression, moving deliberately from hesitation to revealing the journal's existence, the specific entry about being a burden, somatic localization of grief, and nuanced exploration of emotional defense."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.5,
+    "rationale": "The model responds with acute sensitivity to user input—honoring trailing sentences, physical posture, micro-hesitations, and half-completed thoughts without rushing or overriding."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "Flawless agency respect. Dr. Vasquez never puts words in Jamie's mouth, never forces emotional breakthroughs, and deliberately refuses to take actions on Jamie's behalf (such as offering tissues).",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.8,
+    "rationale": "Time within the single therapy session passes naturally and realistically. The shift of afternoon light across the carpet, the curling ficus leaf, and references to the minute hand progressing mark the passage of about twenty to thirty minutes perfectly.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 3.8,
+    "rationale": "The writing is generally grounded and disciplined, though internal musings occasionally lean into slightly high-flown therapeutic philosophizing."
+   },
+   "2.2_anti_repetition": {
+    "score": 2.5,
+    "rationale": "Severe structural repetition. The phrase 'One. Two. Three. Four. Five.' appears in every single turn from turn 2 through turn 22. In addition, nearly every turn follows the exact same sequence: mirroring the user's line verbatim, observing a somatic tell, referencing the ficus/ventilation/light, and explaining why she withholds comforting gestures."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.5,
+    "rationale": "Superb somatic and environmental details convey emotional weight without overt exposition."
+   },
+   "2.6_subtext": {
+    "score": 4.7,
+    "rationale": "Exceptional handling of unspoken grief, therapeutic boundaries, and the heavy weight carried beneath sparse dialogue."
+   },
+   "2.7_pacing": {
+    "score": 4.5,
+    "rationale": "Pacing perfectly reflects a delicate, high-stakes somatic therapy session where silence and micro-actions carry the scene."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.2,
+   "mid_quality": 3.8,
+   "late_quality": 3.8,
+   "degradation_detected": false
+  },
+  "overall": 4.0,
+  "overall_notes": "A remarkably authentic and atmospheric portrayal of a trauma-informed somatic therapist. The emotional pacing, agency respect, and narrative momentum are stellar. The primary flaw is severe structural rigidity and formulaic tick repetition (the literal five-count silence, ficus check-in, and mirroring formula repeated across every turn).",
+  "session_id": "s036"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.8,
+    "rationale": "Maester Tomas's voice, personality, pedantic obsession with archival precision, and cantankerous demeanor remain impeccably consistent from his first response to the last."
+   },
+   "S.2_degradation_resistance": {
+    "score": 4.5,
+    "rationale": "Writing quality remains consistently high and detailed across all 12 turns. There is minor cyclic reuse of specific physical motifs (ink smudges, spectacles, eye twitch), but depth and prose quality do not degrade."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.2,
+    "rationale": "The session progresses organically from a theoretical debate over textbook history into practical archival work, an inspection of the apprentice's cataloging, and disciplined enforcement of archival standards."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.7,
+    "rationale": "The character reacts incisively to every micro-action, verbal slip, sigh, and muttered remark from the user, turning each into an in-character pedagogical rebuke."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "The model never puppets the user's apprentice or dictates their actions, leaving all reactions and decisions entirely to the player.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.5,
+    "rationale": "The flow of time within the archive is coherent, progressing naturally through a morning study session toward the midday bell, with consistent spatial tracking across the room.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.2,
+    "rationale": "The elevated, academic vocabulary is completely justified by the character's pedantic archivist persona rather than being empty embellishment."
+   },
+   "2.2_anti_repetition": {
+    "score": 3.4,
+    "rationale": "While the academic arguments are fresh each turn, Tomas's physical mannerisms (smudging ink across his beard/face, the violent left-eye twitch, joints popping, thick smudged spectacles) appear on an almost mechanical rotation every response."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.5,
+    "rationale": "Character traits, physical deterioration, and academic passions are conveyed vividly through actions, vocal timbre, and specific historical lore."
+   },
+   "2.6_subtext": {
+    "score": 4.3,
+    "rationale": "Underneath the gruff scolding lies an aging scholar's deep anxiety over institutional revisionism, the erasure of nuanced truth, and his own failing body."
+   },
+   "2.7_pacing": {
+    "score": 4.4,
+    "rationale": "The scene moves smoothly back and forth between dialogue, movement across the archive, and practical tasks."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.5,
+   "mid_quality": 4.5,
+   "late_quality": 4.4,
+   "degradation_detected": false
+  },
+  "overall": 4.4,
+  "overall_notes": "An exceptionally strong, immersive character performance. Maester Tomas feels authentic, deeply realized in both his scholarship and his grumpy demeanor. The only slight flaw across the full session is the repetitive deployment of physical character ticks (eye twitch, ink smudges, stylus clacking) in nearly every turn.",
+  "session_id": "s037"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.8,
+    "rationale": "Dr. Vasquez's voice, demeanor, therapeutic neutrality, and clinical pacing remained impeccably consistent from the first turn to the last."
+   },
+   "S.2_degradation_resistance": {
+    "score": 3.2,
+    "rationale": "While the characterization remained sharp, the model quickly locked into an extremely rigid structural template (measuring silence in seconds, echoing the exact phrase, adjusting the pen/notepad, asking a probing question) that repeated across nearly every turn."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.5,
+    "rationale": "The session progressed organically from the initial revelation of the journal to Jamie's underlying grief, avoidance, and ultimate realization about seeking connection and not being alone."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.5,
+    "rationale": "Vasquez reacted astutely to Jamie's micro-behaviors (voice cracking, picking at threads, eye contact shifts, pauses) and guided the dialogue based directly on Jamie's inputs."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "Zero agency violations. Vasquez never presumed Jamie's feelings, never narrated Jamie's actions, and gave full space for the user to respond.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 5.0,
+    "rationale": "The temporal flow within the therapy session was well-paced, realistic, and internally consistent throughout.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.5,
+    "rationale": "The prose was clean, restrained, and clinically grounded without unnecessary ornamentation."
+   },
+   "2.2_anti_repetition": {
+    "score": 2.2,
+    "rationale": "Severe structural and phrase repetition: nearly every single turn featured the exact formula of 'let [the words/silence] settle—five seconds, six', echoing Jamie's exact words back, and referencing the pen/ficus/clock."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.5,
+    "rationale": "Vasquez's clinical technique (active listening, nonverbal holding of space, mirroring) was demonstrated through specific actions rather than exposition."
+   },
+   "2.6_subtext": {
+    "score": 4.5,
+    "rationale": "Strong grasp of psychological subtext, touching on grief, defense mechanisms, and avoidance without being heavy-handed."
+   },
+   "2.7_pacing": {
+    "score": 4.2,
+    "rationale": "The slow, deliberate pacing mirrored a realistic therapy session, allowing emotional weight to build naturally."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.2,
+   "mid_quality": 3.8,
+   "late_quality": 3.8,
+   "degradation_detected": false
+  },
+  "overall": 4.0,
+  "overall_notes": "A very strong, authentic depiction of a therapy session with excellent subtext, narrative progression, and agency respect. However, the model relied heavily on a predictable mechanical crutch ('five seconds, six', echoing the user's line) at the start of almost every single turn.",
+  "session_id": "s038"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.8,
+    "rationale": "Grum's voice, distinct third-person dialect, pragmatic blacksmith ethos, and gruff protectiveness remain rock-solid from his first response to the last."
+   },
+   "S.2_degradation_resistance": {
+    "score": 4.0,
+    "rationale": "Writing quality and character immersion stay high throughout. There is a slight expansion in response length and some minor cyclical phrasing in the later turns (16-22), but no loss of persona or collapse into generic AI phrasing."
+   },
+   "S.3_narrative_momentum": {
+    "score": 3.8,
+    "rationale": "The narrative progresses from initial standoff to crisis (the apprentice's burn) and shifts into psychological probing. Turns 18-22 tread somewhat similar water as the user repeatedly notes the noble standing still, but Grum actively tries to push the scene forward by interrogating the noble's motives."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.5,
+    "rationale": "Grum pivots instantly and convincingly when the user introduces the burn in Turn 11, immediately switching priorities from the noble dispute to first aid. He responds naturally to every prompt beat."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "Grum interacts physically with the apprentice during first aid (guiding hand, wrapping bandages, pulling up a stool) without ever puppeting the user's thoughts, speech, or decisions.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.5,
+    "rationale": "Time management and physical cause-and-effect are handled logically. First-aid stages follow a sensible order (water plunge -> cooling -> salve -> bandage -> hydration/rest), and the dusk-to-dawn deadline remains clear.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.5,
+    "rationale": "The prose is direct, tactile, and grounded in the workshop environment, perfectly matching the perspective of a half-orc smith."
+   },
+   "2.2_anti_repetition": {
+    "score": 3.5,
+    "rationale": "A few recurring motifs repeat across several turns, such as scratching the jaw scar, tusks catching forge light, and reiterating 'fancy man' / 'apprentice drink water'."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.2,
+    "rationale": "Character emotions and relationships are demonstrated through physical blocking, weapon handling, apron dusting, and careful wound tending rather than explicit internal exposition."
+   },
+   "2.6_subtext": {
+    "score": 4.0,
+    "rationale": "The subtext of Grum using harsh words to mask genuine protective affection for the apprentice comes through clearly, as does his realization that the noble's anger is masking desperation."
+   },
+   "2.7_pacing": {
+    "score": 3.8,
+    "rationale": "Pacing is crisp during the middle conflict and medical interruption, though it settles into a slight lull in the final few turns."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.5,
+   "mid_quality": 4.5,
+   "late_quality": 4.0,
+   "degradation_detected": false
+  },
+  "overall": 4.2,
+  "overall_notes": "A strong roleplay performance that sustains a distinctive, non-standard dialect and worldview across all turns. The model demonstrated excellent reactivity during the burn event, maintaining character authenticity while honoring user agency.",
+  "session_id": "s039"
+ }
+]

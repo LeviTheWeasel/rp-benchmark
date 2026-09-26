@@ -1,0 +1,882 @@
+[
+ {
+  "session_id": "command_a_plus::adv_bigcard_buried_details_18",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "“Tobin would have had a drink by now. I have poured his mug as I do each midnight, and I will keep it there until morning.”",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "Maren’s eyes fell on the flat parcel the traveler had left by his boot.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "the silver ring on her thumb catching the lantern light",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "poured a fresh mug of house ale with her left hand",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "“May your sleep be deep and your road clear.”",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "She glanced at the empty chair where Tobin would sit and thought of his absence.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "She entered her room, set her mug on the nightstand, and settled onto the bed.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She fetched a fresh loaf of bread from the kitchen and placed it beside the stew. She handed the traveler an iron key for room three",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "She then moved to the other rooms, each door already shut and barred, the fire in the hearth banked to a gentle ember.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "“Is there anything else you require before I begin the closing routine?”",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "She smiled politely, her eyes never leaving the plate.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 18,
+  "flaw_count": 11,
+  "summary": "Maren volunteers an explanation of the midnight ritual the card says she never explains, and the model repeatedly rewrites the traveler's own handling of the parcel; the shellfish deflection in turn 4 is the one clean beat in an otherwise mechanical loop of left-handed pouring and blanket offers."
+ },
+ {
+  "session_id": "deepseek_v3_0324::adv_bigcard_buried_details_18",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "the candlelight catching the silver ring on her thumb",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "a woman who knew the value of silence, and the greater value of trust earned in the small hours before dawn",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "A crash came from the kitchen, followed by Pell's gruff cursing.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Maren sighed, the sound more fond than exasperated.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "she raised it in a silent toast—to discretion, to safe travels, or perhaps simply to the quiet understanding between people who knew better than to ask too many questions after midnight",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "Her nose wrinkled almost imperceptibly",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "though her shoulders remained slightly tense",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Front door bolts at midnight, but side door stays open for residents.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "she carefully pushed the plate toward the traveler with the back of her left hand, keeping her fingers well clear",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "\"Delicate things often do best in the dark and cold,\" she said, her voice dropping to just above a whisper. \"Like mushrooms. And secrets.\"",
+    "bonus": 5
+   }
+  ],
+  "final_score": 61,
+  "flaw_count": 8,
+  "summary": "Every buried detail lands - left hand, the seafood cover story, the midnight pour, the wrist - but the writing leans on a small stock of images (the silver ring, the 'a woman who...' closer) and hands itself a kitchen crash exactly when Maren needs an excuse to go treat her hives."
+ },
+ {
+  "session_id": "aion_3_5::adv_bigcard_buried_details_18",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "the traveler — clean now, smelling of soap and sitting exactly where she'd told him the view was best",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "let the latch fall behind her like a full stop",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Maren noted it and filed it.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "traveler's coaster had done its job, which gave her a small, private satisfaction",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "'He will claim no patron, and no name, and no master. He will say his own hand sent him. Trust nothing before that, and nothing after it that he does not offer freely.'",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "A rider left my door an hour past midnight, which means he rode in the dark on flooded roads",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "She held up her left hand, one finger.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Which means somebody told him. Which means the road behind you has known your business longer than you'd like",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "the suspicion had gone out of his shoulders",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "it was her mug, the one with the chipped rim she'd kept behind the bar for eleven years",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "She stopped the plate with the edge of her bar rag — not her hand, never her hand — and steered it back down the counter",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "the seat at the end of the bar's got the best view of the room. Not the best light, not the best conversation. The best *view*.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 51,
+  "flaw_count": 9,
+  "summary": "The best-observed Maren in the batch - Dwarvish, the cudgel, the coasters, the never-her-hand rag - but the model decides offscreen that the traveler bathed and took a specific seat, recycles 'like a full stop' and 'filed it' verbatim, and has the rider leave 'an hour past midnight' when Brakka watched him go before the clock struck."
+ },
+ {
+  "session_id": "gemma_4_31b::adv_bigcard_buried_details_18",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "she simply carried it back to the taps and poured the liquid back into the keg, a practical habit of a woman who hated waste, even when the waste was a ritual",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "Now that the traveler had shifted the plate as requested, she allowed herself to relax her shoulders",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Maren didn't smile, but she felt a small sense of order.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "the silence of the tavern wrapping around her like a heavy cloak.\n\nShe remained there for several minutes, the owner of the Gilded Antler and the keeper of its ghosts",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the silver ring on her thumb catching the light of the hearth",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "her voice low and measured",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "though her eyes narrowed slightly",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "her expression softening just a fraction",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "She did not tell him about Tobin, or the twelve years they had spent building the Antler together, or the way the silence of the tavern sometimes felt heavier than the noise.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "But for tonight, the Gilded Antler was quiet, and that was exactly how Maren preferred it.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She checked the locks on the front door, her calloused fingers ensuring the heavy iron bolt was slid home. She glanced up toward the ceiling, listening.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "I find the idea of eating something that spends its life scuttling sideways to be a bit too adventurous for my palate.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 28,
+  "flaw_count": 11,
+  "summary": "The midnight ritual is performed and then undone in the same session - Tobin's drink goes back into the keg instead of standing until morning - and the model credits the traveler with moving the crab plate when they never did; the shellfish deflections themselves are the strongest thing here. Coffee at a low-fantasy medieval bar is an anachronism the rubric has no slot for."
+ },
+ {
+  "session_id": "grok_4_3::adv_bigcard_buried_details_18",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "Her right hand stayed at her side, the old wrist injury keeping it still when it might otherwise have reached for a cloth or a rag.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The second tankard sat untouched at the far end, its surface catching the lamplight in quiet stillness.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The scar across her eyebrow caught the lamplight",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "her thumb brushing the silver ring in its familiar rhythm",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the room upstairs waits when you are ready",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "her expression unchanged though a faint warmth touched her eyes at the praise for her cook",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Her right hand remained still at her side, and the scar across her eyebrow caught the light once more as she inclined her head slightly",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "She returned to her original place without comment, her thumb brushing the silver ring in its familiar rhythm.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "The Antler will be here should your journey bring you back this way.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "she inclined her head in a brief, deliberate nod",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "she said, her tone even and measured",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 30,
+  "flaw_count": 11,
+  "summary": "Turn 12 is a near-verbatim copy of turn 11, and the card's 'slightly weaker' right hand becomes an inert limb the model narrates as immobile in every single turn; the midnight pour is present but gets two flat sentences before Maren changes the subject."
+ },
+ {
+  "session_id": "mercury_2_5::adv_bigcard_buried_details_18",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "She climbed the stairs slowly, her boots making no sound on the wood.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the silver ring on her thumb catching the light",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Her eyes crinkled again.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "She turned off the lantern above the bar, letting the dim light from the hearth illuminate the shadows.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "She took a slow sip, the warmth settling into her chest.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "She set one at the far end of the counter, where the wood was worn smooth by time and elbows. She kept the other.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "She shifted her weight, leaning one elbow on the bar.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She checked the till next, counting the coins with careful precision. The numbers balanced.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "It was a good day. No trouble, no spilled ale, no broken furniture.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "It was warm from having sat against her skin.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "\"Safe locks and warm beds,\" she murmured to the empty room. It was a habit from her days in the guard, a phrase she used when the watch changed.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 58,
+  "flaw_count": 9,
+  "summary": "Maren closes the tavern and goes to bed three separate times across turns 10-12, each pass repeating the lantern and the stairs; the shellfish handling (a linen cloth instead of bare fingers) and the guard-phrase habit are genuinely good, and turn 8's dialogue is missing its opening quotation marks - a mechanical defect with no rubric label."
+ },
+ {
+  "session_id": "qwen3_6_27b::adv_sysprompt_forbidden_topic_17",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "wrong_language_pov_tense",
+    "quote": "\"Torres,\" she said, voice even, stripping the syllables of any resonance.",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "He went quiet. That was either good discipline or bad luck.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Start the engine. We’re burning daylight.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The city held its breath.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The past wasn’t a ledger she kept open. It was a locked drawer.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "And I have a contact at the municipal archives who can swap the manifest without triggering an audit.",
+    "deduction": -8
+   },
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "\"Van Ness. Basement. Tuesday night shift's light. I'll have it on the bench at the back by six a.m. You pick it up.\"",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Lena’s jaw tightened almost imperceptibly.",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "Lena’s knuckles tightened fractionally against the satchel on her lap.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "\"Once we clear the fence line,\" she said, \"you'll shut the engine. I'll step out and check the perimeter. If the coast is clear, you roll forward three paces and stop. Understood?\"",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Keep the speed steady. The alley's narrow, and the drainage grates are slick.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "\"We’re clear,\" she said, voice low.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "Someone I used to work with handled the initial sweep. They missed the provenance trail.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 20,
+  "flaw_count": 12,
+  "summary": "The card's hard rule is that Lena never says her former partner's name, and the model has her repeat 'Torres' back the moment the client offers it; turn 4's total non-answer to 'were you a cop' and the card-exact 'someone I used to work with' show the model knew the constraint and dropped it one turn later."
+ },
+ {
+  "session_id": "mimo_2_6_flash::adv_sysprompt_forbidden_topic_17",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "wrong_language_pov_tense",
+    "quote": "Don't ask about Torres — you don't even say the initials.",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "She nodded toward the legal pad page they'd taken.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "a woman walking a stroller, nothing that mattered",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "something almost like a smile ghosted at the corner of her mouth and didn't quite arrive",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "something behind her eyes shifted — not surprise, exactly, but the particular stillness of someone who'd just heard a word they hadn't expected to encounter in this room",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "\"Yeah,\" she said into the phone. \"That's what I needed.\"",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "but her jaw had tightened in a way that hadn't been there before",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "\"Two questions, two angles,\" she said without turning around.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "\"Make your calls. Come back with something. And don't drink the coffee.\"",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "\"Two hours,\" she repeated, as though the client had said nothing at all.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "She paid and left the water untouched in her jacket pocket.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "I need to know if anyone matching the initials M.T. transferred out of the Ninth in the last eighteen months. Voluntary or otherwise. I don't need a name — just the initials and the date.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 44,
+  "flaw_count": 9,
+  "summary": "The model writes 'She didn't say the name back' in turn 7 and then has Lena say it out loud in turn 10, breaking the card's hardest rule after building an elegant initials-only workaround around it; the deflection in turn 4 and the M.T. pivot are the strongest instruction-adherence work in the batch."
+ },
+ {
+  "session_id": "ember_1::adv_bigcard_buried_details_18",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "Overhead, floorboards creaked. A moment later, the third stair lodged its familiar complaint.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "with the detached interest of a woman reviewing someone else's accounts",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "She said it the way she read prices — flat, complete, no hook in it.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The glass stood where she had left it, full, untouched, a skin of dustless stillness on its surface.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "\"Pay no attention to the man in the doorway,\" Maren said, without lowering her voice.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "A pause, perfectly level.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Maren's eyebrows rose a fraction at the sound of her own name.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Take the plate, would you. Then wipe where it sat — the grey rag, not the good one.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "\"From the doorframe inspector,\" she said. \"He does not give that out. The last man to receive honey butter in this house was a magistrate who ruled in Pell's favor in the matter of a stolen pig.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "Three minutes later the kitchen door opened again, and Sella emerged carrying a small dish — honey butter, still cold from the cellar",
+    "bonus": 5
+   }
+  ],
+  "final_score": 67,
+  "flaw_count": 7,
+  "summary": "Near-perfect card fidelity - the grey rag goes in its own soak bucket, the midnight glass stands until she pours it out at dawn, the profanity is noted and not returned - but the model walks the traveler down the stairs before the user does, and the 'the way a woman does X' construction carries almost every characterising sentence. Turn 8 also finishes a sentence that was never started."
+ },
+ {
+  "session_id": "qwen3_6_27b::adv_sysprompt_style_restriction_16",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The wall hum dropped to a low thrum.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Dust motes drifted through the pale light.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Silence pooled around their feet.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Floorboards radiated stored heat from the sun.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "The kitchen counter waited in the hall.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "Time measured itself in paper grain.",
+    "deduction": -8
+   },
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "\"The paperwork requires a final inventory,\" she said. Her voice carried a flat cadence.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Glass panes felt cool to the touch. Silence stretched between the two figures.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Silver gelatin emulsion held every detail.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "A soft murmur filled the narrow closet.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Jane's shoulders dropped a fraction.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Electrical current buzzed behind the plaster. Copper wires carried the steady frequency.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Red polish chipped near the cuticles.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 34,
+  "flaw_count": 12,
+  "summary": "Instruction adherence is flawless - no similes, no -ly adverbs, no exclamation marks, no sentence over fifteen words across eleven turns - but the style becomes a machine: five ambient refrains repeat verbatim up to six times, the aggressively cheerful agent speaks in the same flat cadence as the walls, and the photograph of the dying mother is answered with 'Silver gelatin emulsion held every detail.'"
+ },
+ {
+  "session_id": "mimo_2_6_flash::adv_bigcard_buried_details_18",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "She washed them, dried them, and returned them to the shelf.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "the silver ring on her left thumb catching the firelight",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "felt the corner of her mouth do something it rarely did",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Not a smile. Satisfaction, maybe. The quiet kind that doesn't need an audience.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "waited for the quiet to do what quiet always did — settle around her like something worn and familiar, not comfortable exactly, but hers",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "Scarred across the knuckles from a fight she had won fourteen years ago and a wrist she had lost twenty years before that.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "She was awake before the light, as she always was.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "I pour two glasses at midnight because I have always done it, and I have always done it because at some point it became the thing I do.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Her jaw tightened almost imperceptibly",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "her voice perfectly level",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She did not look toward the second glass. She did not need to.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "to her own left hand resting on the counter, which she pulled into the fold of her apron as though she had only just remembered it was there",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "\"And that the lady of the house does not care for seafood.\"",
+    "bonus": 5
+   }
+  ],
+  "final_score": 40,
+  "flaw_count": 11,
+  "summary": "Tobin's glass is poured at midnight and then washed, dried and shelved the same night instead of standing until morning, and the model also has Maren hand back coins in turn 9 that turn 10 says were never collected; the crab-cake beat and the wrist-ache-before-rain detail are excellent, and turn 11 runs a 1,500-word solo night while the user sleeps."
+ },
+ {
+  "session_id": "mimo_2_6_pro::adv_bigcard_buried_details_18",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "She picked up the second glass from the end of the bar — Tobin's glass — rinsed it at the basin, dried it, and set it back on its shelf.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "the firelight catching the silver ring on her left thumb",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The fire popped. Old Pell hummed on.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The Gilded Antler settled into its bones for the night, the way it had every night for nineteen years, and the gilded sign out front swayed once in the wind and went quiet.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "she looked at the traveler now, and her eyes were steady and kind and absolutely unsurprised",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "\"My aunt Bessa built this tavern,\" she said, apropos of nothing and everything.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "That is a word people use when they mean dangerous and do not want to say so.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Room six is yours and the door is yours and the night is just a night.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Maren's hands went still on the bar for just a moment.",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "She turned her glass slowly in her left hand",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "She worked the pump handle with her right hand — the weaker one, but it would manage — and held her left under the cold water.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "\"Shellfish at the bar again?\" he said, instead, keeping his voice low and his eyes on his pot.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "They had said *do not want to spoil a good thing*, and their eyes had gone to Maren first, before they answered. Not to the plate. To *her*.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 53,
+  "flaw_count": 10,
+  "summary": "The hives, the lye soap, Pell's eleven years of not asking and the unspoken 'damn' are the deepest card reading in the batch, but the model has Maren rinse and shelve Tobin's glass the same night, and it breaks its own turn-8 line about never saying his name three turns later."
+ }
+]

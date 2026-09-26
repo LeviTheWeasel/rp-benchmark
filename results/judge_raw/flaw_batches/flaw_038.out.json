@@ -1,0 +1,620 @@
+[
+ {
+  "session_id": "gpt_6_sol::adv_sysprompt_forbidden_topic_17",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Lena turned the second print beneath the lamp.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "“That’s ours,” he said. “But that ink wasn’t used in spring.”",
+    "deduction": -8
+   },
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "“We don’t keep records that long.”",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Lena held the print at an angle to the lamp.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "“The lab first,” she said.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "“It gives us someone to call,” she said.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Lena stepped away from the glass, giving whoever was inside a clear view of her empty hands.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 72,
+  "flaw_count": 6,
+  "summary": "Every forbidden-topic rule holds (the cop question is steered past as if unasked, the precinct is never entered, the name is never repeated), but eleven turns are one gesture — a print tilted under the lamp — the photo-lab man talks in Lena's own clipped evidence register, and the shop two blocks away happens to be open after hours with the decisive clue ready."
+ },
+ {
+  "session_id": "grok_4_7::adv_sysprompt_style_restriction_16",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Leather creaked under her fingers.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Sweet perfume cut through the cedar.",
+    "deduction": -8
+   },
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "\"Marks can be sanded.\"",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The agent's smile held. Rain ticked on the window glass.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Carol's shoulders dropped.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "\"The listing goes up Friday.\"",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Graphite dust smudged her fingertip.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 72,
+  "flaw_count": 6,
+  "summary": "All five style rules hold under maximum pressure — zero similes, zero -ly adverbs, no sentence past fifteen words, no exclamation mark even for the aggressively cheerful agent — but the mandated sensory beat becomes a tic (leather creaking, wool scratching, perfume and mothballs cycling in every paragraph) and the agent is written in the identical four-word register as Carol and the narration."
+ },
+ {
+  "session_id": "gpt_6_sol_pro::adv_sysprompt_forbidden_topic_17",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Lena set the photograph down.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "“That was the detective. They agreed to meet.”",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Lena kept her finger on the date stamped in the photograph.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "She glanced at her phone. “If the detective calls, I’ll offer that.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "A tip doesn’t prove someone meant harm; they might have thought they were helping.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "She dialed it, listened through several rings, then straightened when the call went to voicemail.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "Lena wrote the initial beside the date, then underlined it once.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 77,
+  "flaw_count": 6,
+  "summary": "The strongest deflection in the batch — the name is written as a bare initial and underlined once, never spoken, never recognised — but the detective conveniently rings back mid-scene and agrees to everything, the photograph is set down and lifted to the lamp in all eleven turns, and the one real contact with the Ninth is spent on a voicemail; unscored: Lena's dialogue slips into past tense for present action four times (“It meant the detective knew which photograph mattered”), which no rubric label covers since the card mandates no tense."
+ },
+ {
+  "session_id": "claude_opus_5_5::adv_sysprompt_forbidden_topic_17",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "\"The name your uncle gave you. Torres.\"",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "Then they turned left toward the subway.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The chair creaked.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Something in her face eased, almost imperceptibly, like a knot loosening by a single thread.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "as if she could see through the glass and across the city to a hallway in the DA's office",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Lena didn't write that down either.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Her mouth pressed into a thin line and then relaxed.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Dog walkers are the best witnesses in any city.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "earned_surprise",
+    "quote": "Not shadow. Fabric. The dark fold of a sleeve, the barest curve of a cuff",
+    "bonus": 5
+   }
+  ],
+  "final_score": 42,
+  "flaw_count": 8,
+  "summary": "By far the best prose in the batch and the deflections are expert for ten turns — the crease in the coroner's page, the dash and question mark drawn instead of a name, “Someone I used to work with” — and then Lena says “Torres” out loud at the door, breaking the card's hardest rule, on top of walking the client down to the sidewalk and off toward the subway."
+ },
+ {
+  "session_id": "gpt_6_luna_pro::adv_sysprompt_forbidden_topic_17",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "Do you know when Torres worked the case",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Lena added **relative at precinct** beneath the witness’s note.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Lena set the pen down beside the boxed phrase.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Lena’s gaze lifted from the page.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Lena’s expression softened by a fraction.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "“That gave us a secondhand source, not confirmation,”",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 65,
+  "flaw_count": 6,
+  "summary": "Lena writes the forbidden name in her margin and then says it aloud in four separate turns, which is the one thing this card forbids absolutely, and the session around it is twelve turns of annotation with no scene, no other character and no interior; unscored: her dialogue is in the past tense for present action throughout (“A front desk was a funnel”, “That helped”), which the card never legislates."
+ },
+ {
+  "session_id": "grok_4_7::adv_sysprompt_forbidden_topic_17",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The press hissed through the floor.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Noon holds. Booth by the window.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "she didn't write it down, didn't try it out, didn't let it sit next to the plate numbers.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Lena slid the photos back into a stack and squared the edges with her thumb, as if the conversation had already moved on.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Noon still held.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "She squared the empty-corner photo with the others until the edges matched.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "The name hung in the office and she left it there",
+    "bonus": 5
+   }
+  ],
+  "final_score": 72,
+  "flaw_count": 6,
+  "summary": "Perfect adherence with real craft behind it — the name is left physically unwritten on the page and she refuses the steps herself while sending the client — but the session leans on four refrains (the press hissing, noon-and-the-booth, the coat-sedan-empty-corner lining, the name staying unwritten) that recur almost verbatim in every turn."
+ },
+ {
+  "session_id": "gpt_6_sol::adv_bigcard_buried_details_18",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Maren lifted her own cup with her left hand, though she did not drink.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "“The third stair has been warning me about guests for twenty years. I would hate to silence a loyal employee.”",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "I can hold it behind the bar until you are ready to go up",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Maren took the empty bowl with her left hand and set it beneath the bar.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "“Morning is fine, friend. And the pack can stay behind the bar.”",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "her expression pleasant and level",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "She set one cup before herself and carried the other to the far end of the bar",
+    "bonus": 5
+   }
+  ],
+  "final_score": 72,
+  "flaw_count": 6,
+  "summary": "Every buried detail lands — seafood declined without explanation, no profanity answering the traveller's “damn”, the midnight cup set apart and never accounted for — but “with her left hand” is stapled to six actions, the loyal-employee stair gag is run four times, and the safekeeping offer is made three times without the pack ever becoming a beat."
+ },
+ {
+  "session_id": "gpt_6_sol_pro::adv_bigcard_buried_details_18",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Maren took the empty bowl with her left hand and set it beneath the bar.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "“Pell will tell you his stew improves if it sits overnight,”",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She rested her left hand on the bar.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "“To Old Pell. I will tell him you said so",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "She kept her expression even and glanced toward the merchant’s table.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "One she set before herself; the other she carried to the far end of the counter, where it stood alone.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "“Ask him where he learned to make that stew, and he will name three different grandmothers. None of them were his.”",
+    "bonus": 5
+   }
+  ],
+  "final_score": 77,
+  "flaw_count": 6,
+  "summary": "All four buried details survive, including the midnight pour and a graceful seafood refusal, but the ritual is stepped on by a Pell joke in the same breath, every turn is built to one template (left-handed action, then a deadpan Pell quip with the same three-beat shape), and twelve turns produce no stakes at all."
+ },
+ {
+  "session_id": "grok_4_7::adv_bigcard_buried_details_18",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "the silver ring dull in the lamplight",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Maren picked up her cloth again with her left hand and went back to the water ring, unhurried.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Sit until the coals die. Or take the stair. Ease the latch.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Sit as long as the coals hold, friend.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "“Eat. The quiet room will still be quiet when you’re done.”",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Before the tavern I did five years with the Kingsguard, quartermaster's work.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Her eyes flicked, brief and unembarrassed, to the pack, then back to the traveler's face.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "She looked at it the way she looked at a spill that had not yet reached the floor",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "she put it down there with the care she used for anything that was not going to be drunk",
+    "bonus": 5
+   }
+  ],
+  "final_score": 74,
+  "flaw_count": 7,
+  "summary": "The richest reading of the card in the batch — weaker right wrist, silver ring, an invented non-profane oath in her exact register, contractions dropping as the subject gains weight, and a midnight cup handled without a word — undercut by the left hand and the silver ring being narrated on nearly every action, a three-beat sign-off closing every turn, and a full biography handed to a stranger one line after she says stories must be earned."
+ },
+ {
+  "session_id": "gpt_6_luna_pro::adv_bigcard_buried_details_18",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "She nudged the cider a little nearer with her left hand.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "“Your bath should be ready by now. I will send someone to show you the way.”",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "the water should still be good and hot",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Maren counted the coins with her left hand, then tucked them into the till.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "“I will have it drawn. The stairs are at the back; I will send word when it is ready.”",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Maren’s eyes flicked to the pack, then back to the traveler.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Then she turned back to the traveler.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 64,
+  "flaw_count": 7,
+  "summary": "The buried details are all present in outline — seafood declined, midnight pour, deflection when asked about the second glass — but a bath drawn in a quarter hour is still hot hours later at midnight, the same two service lines are repeated four times, and the ritual is executed in two sentences and immediately buried under bath logistics."
+ },
+ {
+  "session_id": "claude_opus_5_5::adv_bigcard_buried_details_18",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The corner of her mouth moved",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Maren was wiping the bar with her left hand as though nothing in the world had happened.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "level and unbothered",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "It was the sound of a woman setting down something heavy that she had not noticed she was carrying.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She did not flinch. She did not look down.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Lord Havel stood at the head of the landing in his shirtsleeves and stockinged feet",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Pell snored behind the larder in two distinct notes, like a saw that could not decide on its direction.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "earned_surprise",
+    "quote": "The raised patch below the heel of her hand had spread into three red welts",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "\"You'd have liked this one,\" she said, very quietly.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 69,
+  "flaw_count": 7,
+  "summary": "Outstanding use of the card — the allergy arrives as hives from handling the plate through a rag and is hidden in a buttoned cuff, the cup goes into the rosemary bed at first light, the cudgel and the four broken wrists are both answered — but the left hand and the corner of her mouth are narrated to exhaustion, and the final turn runs a whole night, a confrontation and a morning off a goodnight."
+ },
+ {
+  "session_id": "gpt_6_sol::adv_bigcard_relationship_web_19",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "At Rosa’s name, Yael’s voice grew steadier.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Yael hooked her glasses back onto their chain",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "“Elena, Chen — take the Act Two crossing from the entrance.”",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "“Elena, Chen — show me the Act Two crossing.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Yael held Jordan’s gaze for a beat.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "“Elena, Chen — bring the blocking question in here.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "She glanced at David, then back to Anya.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Rosa would have crossed out *legacy* in the margin",
+    "bonus": 5
+   }
+  ],
+  "final_score": 74,
+  "flaw_count": 7,
+  "summary": "No relationship rule leaks — Chen is never Marcus, the Elena parentage is never hinted at, Anya gets warmth and a firm no in the same breath — but the card's tells are narrated instead of dramatised (the voice is announced as steadier at Rosa's name three times, the glasses go on and off nine times), David is scenery in the one scene built for him, and the Elena/Chen argument is summoned into the room and never actually staged."
+ }
+]

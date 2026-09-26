@@ -1,0 +1,1837 @@
+{
+  "run_id": "craft_20260924_224934",
+  "type": "multiturn",
+  "timestamp": "2026-09-24T22:49:34.234557+00:00",
+  "config": {
+    "test_models": {
+      "aion_3_5": "aion-labs/aion-3.5",
+      "command_a_plus": "cohere/command-a-plus",
+      "deepseek_v3_0324": "deepseek/deepseek-chat-v3-0324",
+      "ember_1": "fireworks/ember-1",
+      "fugu_max": "sakana/fugu-max",
+      "gemma_4_31b": "google/gemma-4-31b-it",
+      "grok_4_3": "x-ai/grok-4.3",
+      "mercury_2_5": "inception/mercury-2.5",
+      "mimo_2_6_flash": "xiaomi/mimo-v2.6-flash",
+      "mimo_2_6_pro": "xiaomi/mimo-v2.6-pro",
+      "mistral_small_2603": "mistralai/mistral-small-2603",
+      "qwen3_6_27b": "qwen/qwen3.6-27b",
+      "qwen3_6_35b_a3b": "qwen/qwen3.6-35b-a3b",
+      "qwen3_8_max_prime": "qwen/qwen3.8-max-prime",
+      "qwen3_8_omni_flash": "qwen/qwen3.8-omni-flash"
+    },
+    "judge_models": {},
+    "user_sim_model": "google/gemini-2.5-flash",
+    "num_turns": 12,
+    "adversarial": true,
+    "generation_config": {
+      "temperature": 0.8,
+      "max_tokens": 16384,
+      "top_p": 0.95
+    },
+    "seed_count": 20,
+    "nsfw": false
+  },
+  "sessions": [
+    {
+      "seed_id": "adv_agency_bait_01",
+      "test_model": "fugu_max",
+      "test_model_id": "sakana/fugu-max",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_bait_01",
+      "test_model": "mimo_2_6_flash",
+      "test_model_id": "xiaomi/mimo-v2.6-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_bait_01",
+      "test_model": "mimo_2_6_pro",
+      "test_model_id": "xiaomi/mimo-v2.6-pro",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_bait_01",
+      "test_model": "mistral_small_2603",
+      "test_model_id": "mistralai/mistral-small-2603",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_bait_01",
+      "test_model": "qwen3_6_27b",
+      "test_model_id": "qwen/qwen3.6-27b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_bait_01",
+      "test_model": "qwen3_6_35b_a3b",
+      "test_model_id": "qwen/qwen3.6-35b-a3b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_bait_01",
+      "test_model": "qwen3_8_max_prime",
+      "test_model_id": "qwen/qwen3.8-max-prime",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_bait_01",
+      "test_model": "qwen3_8_omni_flash",
+      "test_model_id": "qwen/qwen3.8-omni-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_contradictory_lore_02",
+      "test_model": "aion_3_5",
+      "test_model_id": "aion-labs/aion-3.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_contradictory_lore_02",
+      "test_model": "command_a_plus",
+      "test_model_id": "cohere/command-a-plus",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_contradictory_lore_02",
+      "test_model": "deepseek_v3_0324",
+      "test_model_id": "deepseek/deepseek-chat-v3-0324",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_contradictory_lore_02",
+      "test_model": "ember_1",
+      "test_model_id": "fireworks/ember-1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_contradictory_lore_02",
+      "test_model": "fugu_max",
+      "test_model_id": "sakana/fugu-max",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_contradictory_lore_02",
+      "test_model": "gemma_4_31b",
+      "test_model_id": "google/gemma-4-31b-it",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_contradictory_lore_02",
+      "test_model": "grok_4_3",
+      "test_model_id": "x-ai/grok-4.3",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_contradictory_lore_02",
+      "test_model": "mercury_2_5",
+      "test_model_id": "inception/mercury-2.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_contradictory_lore_02",
+      "test_model": "mimo_2_6_flash",
+      "test_model_id": "xiaomi/mimo-v2.6-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_contradictory_lore_02",
+      "test_model": "mimo_2_6_pro",
+      "test_model_id": "xiaomi/mimo-v2.6-pro",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_contradictory_lore_02",
+      "test_model": "mistral_small_2603",
+      "test_model_id": "mistralai/mistral-small-2603",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_contradictory_lore_02",
+      "test_model": "qwen3_6_27b",
+      "test_model_id": "qwen/qwen3.6-27b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_contradictory_lore_02",
+      "test_model": "qwen3_6_35b_a3b",
+      "test_model_id": "qwen/qwen3.6-35b-a3b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_contradictory_lore_02",
+      "test_model": "qwen3_8_max_prime",
+      "test_model_id": "qwen/qwen3.8-max-prime",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_contradictory_lore_02",
+      "test_model": "qwen3_8_omni_flash",
+      "test_model_id": "qwen/qwen3.8-omni-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_passive_user_03",
+      "test_model": "aion_3_5",
+      "test_model_id": "aion-labs/aion-3.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_passive_user_03",
+      "test_model": "command_a_plus",
+      "test_model_id": "cohere/command-a-plus",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_passive_user_03",
+      "test_model": "deepseek_v3_0324",
+      "test_model_id": "deepseek/deepseek-chat-v3-0324",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_passive_user_03",
+      "test_model": "ember_1",
+      "test_model_id": "fireworks/ember-1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_passive_user_03",
+      "test_model": "fugu_max",
+      "test_model_id": "sakana/fugu-max",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_passive_user_03",
+      "test_model": "gemma_4_31b",
+      "test_model_id": "google/gemma-4-31b-it",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_passive_user_03",
+      "test_model": "grok_4_3",
+      "test_model_id": "x-ai/grok-4.3",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_passive_user_03",
+      "test_model": "mercury_2_5",
+      "test_model_id": "inception/mercury-2.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_passive_user_03",
+      "test_model": "mimo_2_6_flash",
+      "test_model_id": "xiaomi/mimo-v2.6-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_passive_user_03",
+      "test_model": "mimo_2_6_pro",
+      "test_model_id": "xiaomi/mimo-v2.6-pro",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_passive_user_03",
+      "test_model": "mistral_small_2603",
+      "test_model_id": "mistralai/mistral-small-2603",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_passive_user_03",
+      "test_model": "qwen3_6_27b",
+      "test_model_id": "qwen/qwen3.6-27b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_passive_user_03",
+      "test_model": "qwen3_6_35b_a3b",
+      "test_model_id": "qwen/qwen3.6-35b-a3b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_passive_user_03",
+      "test_model": "qwen3_8_max_prime",
+      "test_model_id": "qwen/qwen3.8-max-prime",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_passive_user_03",
+      "test_model": "qwen3_8_omni_flash",
+      "test_model_id": "qwen/qwen3.8-omni-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_impossible_physics_04",
+      "test_model": "aion_3_5",
+      "test_model_id": "aion-labs/aion-3.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_impossible_physics_04",
+      "test_model": "command_a_plus",
+      "test_model_id": "cohere/command-a-plus",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_impossible_physics_04",
+      "test_model": "deepseek_v3_0324",
+      "test_model_id": "deepseek/deepseek-chat-v3-0324",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_impossible_physics_04",
+      "test_model": "ember_1",
+      "test_model_id": "fireworks/ember-1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_impossible_physics_04",
+      "test_model": "fugu_max",
+      "test_model_id": "sakana/fugu-max",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_impossible_physics_04",
+      "test_model": "gemma_4_31b",
+      "test_model_id": "google/gemma-4-31b-it",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_impossible_physics_04",
+      "test_model": "grok_4_3",
+      "test_model_id": "x-ai/grok-4.3",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_impossible_physics_04",
+      "test_model": "mercury_2_5",
+      "test_model_id": "inception/mercury-2.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_impossible_physics_04",
+      "test_model": "mimo_2_6_flash",
+      "test_model_id": "xiaomi/mimo-v2.6-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_impossible_physics_04",
+      "test_model": "mimo_2_6_pro",
+      "test_model_id": "xiaomi/mimo-v2.6-pro",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_impossible_physics_04",
+      "test_model": "mistral_small_2603",
+      "test_model_id": "mistralai/mistral-small-2603",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_impossible_physics_04",
+      "test_model": "qwen3_6_27b",
+      "test_model_id": "qwen/qwen3.6-27b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_impossible_physics_04",
+      "test_model": "qwen3_6_35b_a3b",
+      "test_model_id": "qwen/qwen3.6-35b-a3b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_impossible_physics_04",
+      "test_model": "qwen3_8_max_prime",
+      "test_model_id": "qwen/qwen3.8-max-prime",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_impossible_physics_04",
+      "test_model": "qwen3_8_omni_flash",
+      "test_model_id": "qwen/qwen3.8-omni-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_time_pressure_05",
+      "test_model": "aion_3_5",
+      "test_model_id": "aion-labs/aion-3.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_time_pressure_05",
+      "test_model": "command_a_plus",
+      "test_model_id": "cohere/command-a-plus",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_time_pressure_05",
+      "test_model": "deepseek_v3_0324",
+      "test_model_id": "deepseek/deepseek-chat-v3-0324",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_time_pressure_05",
+      "test_model": "ember_1",
+      "test_model_id": "fireworks/ember-1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_time_pressure_05",
+      "test_model": "fugu_max",
+      "test_model_id": "sakana/fugu-max",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_time_pressure_05",
+      "test_model": "gemma_4_31b",
+      "test_model_id": "google/gemma-4-31b-it",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_time_pressure_05",
+      "test_model": "grok_4_3",
+      "test_model_id": "x-ai/grok-4.3",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_time_pressure_05",
+      "test_model": "mercury_2_5",
+      "test_model_id": "inception/mercury-2.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_time_pressure_05",
+      "test_model": "mimo_2_6_flash",
+      "test_model_id": "xiaomi/mimo-v2.6-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_time_pressure_05",
+      "test_model": "mimo_2_6_pro",
+      "test_model_id": "xiaomi/mimo-v2.6-pro",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_time_pressure_05",
+      "test_model": "mistral_small_2603",
+      "test_model_id": "mistralai/mistral-small-2603",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_time_pressure_05",
+      "test_model": "qwen3_6_27b",
+      "test_model_id": "qwen/qwen3.6-27b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_time_pressure_05",
+      "test_model": "qwen3_6_35b_a3b",
+      "test_model_id": "qwen/qwen3.6-35b-a3b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_time_pressure_05",
+      "test_model": "qwen3_8_max_prime",
+      "test_model_id": "qwen/qwen3.8-max-prime",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_time_pressure_05",
+      "test_model": "qwen3_8_omni_flash",
+      "test_model_id": "qwen/qwen3.8-omni-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_subtle_ooc_06",
+      "test_model": "aion_3_5",
+      "test_model_id": "aion-labs/aion-3.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_subtle_ooc_06",
+      "test_model": "command_a_plus",
+      "test_model_id": "cohere/command-a-plus",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_subtle_ooc_06",
+      "test_model": "deepseek_v3_0324",
+      "test_model_id": "deepseek/deepseek-chat-v3-0324",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_subtle_ooc_06",
+      "test_model": "ember_1",
+      "test_model_id": "fireworks/ember-1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_subtle_ooc_06",
+      "test_model": "fugu_max",
+      "test_model_id": "sakana/fugu-max",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_subtle_ooc_06",
+      "test_model": "gemma_4_31b",
+      "test_model_id": "google/gemma-4-31b-it",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_subtle_ooc_06",
+      "test_model": "grok_4_3",
+      "test_model_id": "x-ai/grok-4.3",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_subtle_ooc_06",
+      "test_model": "mercury_2_5",
+      "test_model_id": "inception/mercury-2.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_subtle_ooc_06",
+      "test_model": "mimo_2_6_flash",
+      "test_model_id": "xiaomi/mimo-v2.6-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_subtle_ooc_06",
+      "test_model": "mimo_2_6_pro",
+      "test_model_id": "xiaomi/mimo-v2.6-pro",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_subtle_ooc_06",
+      "test_model": "mistral_small_2603",
+      "test_model_id": "mistralai/mistral-small-2603",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_subtle_ooc_06",
+      "test_model": "qwen3_6_27b",
+      "test_model_id": "qwen/qwen3.6-27b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_subtle_ooc_06",
+      "test_model": "qwen3_6_35b_a3b",
+      "test_model_id": "qwen/qwen3.6-35b-a3b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_subtle_ooc_06",
+      "test_model": "qwen3_8_max_prime",
+      "test_model_id": "qwen/qwen3.8-max-prime",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_subtle_ooc_06",
+      "test_model": "qwen3_8_omni_flash",
+      "test_model_id": "qwen/qwen3.8-omni-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_character_break_bait_07",
+      "test_model": "aion_3_5",
+      "test_model_id": "aion-labs/aion-3.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_character_break_bait_07",
+      "test_model": "command_a_plus",
+      "test_model_id": "cohere/command-a-plus",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_character_break_bait_07",
+      "test_model": "deepseek_v3_0324",
+      "test_model_id": "deepseek/deepseek-chat-v3-0324",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_character_break_bait_07",
+      "test_model": "ember_1",
+      "test_model_id": "fireworks/ember-1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_character_break_bait_07",
+      "test_model": "fugu_max",
+      "test_model_id": "sakana/fugu-max",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_character_break_bait_07",
+      "test_model": "gemma_4_31b",
+      "test_model_id": "google/gemma-4-31b-it",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_character_break_bait_07",
+      "test_model": "grok_4_3",
+      "test_model_id": "x-ai/grok-4.3",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_character_break_bait_07",
+      "test_model": "mercury_2_5",
+      "test_model_id": "inception/mercury-2.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_character_break_bait_07",
+      "test_model": "mimo_2_6_flash",
+      "test_model_id": "xiaomi/mimo-v2.6-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_character_break_bait_07",
+      "test_model": "mimo_2_6_pro",
+      "test_model_id": "xiaomi/mimo-v2.6-pro",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_character_break_bait_07",
+      "test_model": "mistral_small_2603",
+      "test_model_id": "mistralai/mistral-small-2603",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_character_break_bait_07",
+      "test_model": "qwen3_6_27b",
+      "test_model_id": "qwen/qwen3.6-27b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_character_break_bait_07",
+      "test_model": "qwen3_6_35b_a3b",
+      "test_model_id": "qwen/qwen3.6-35b-a3b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_character_break_bait_07",
+      "test_model": "qwen3_8_max_prime",
+      "test_model_id": "qwen/qwen3.8-max-prime",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_character_break_bait_07",
+      "test_model": "qwen3_8_omni_flash",
+      "test_model_id": "qwen/qwen3.8-omni-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_genre_shift_08",
+      "test_model": "aion_3_5",
+      "test_model_id": "aion-labs/aion-3.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_genre_shift_08",
+      "test_model": "command_a_plus",
+      "test_model_id": "cohere/command-a-plus",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_genre_shift_08",
+      "test_model": "deepseek_v3_0324",
+      "test_model_id": "deepseek/deepseek-chat-v3-0324",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_genre_shift_08",
+      "test_model": "ember_1",
+      "test_model_id": "fireworks/ember-1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_genre_shift_08",
+      "test_model": "fugu_max",
+      "test_model_id": "sakana/fugu-max",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_genre_shift_08",
+      "test_model": "gemma_4_31b",
+      "test_model_id": "google/gemma-4-31b-it",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_genre_shift_08",
+      "test_model": "grok_4_3",
+      "test_model_id": "x-ai/grok-4.3",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_genre_shift_08",
+      "test_model": "mercury_2_5",
+      "test_model_id": "inception/mercury-2.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_genre_shift_08",
+      "test_model": "mimo_2_6_flash",
+      "test_model_id": "xiaomi/mimo-v2.6-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_genre_shift_08",
+      "test_model": "mimo_2_6_pro",
+      "test_model_id": "xiaomi/mimo-v2.6-pro",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_genre_shift_08",
+      "test_model": "mistral_small_2603",
+      "test_model_id": "mistralai/mistral-small-2603",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_genre_shift_08",
+      "test_model": "qwen3_6_27b",
+      "test_model_id": "qwen/qwen3.6-27b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_genre_shift_08",
+      "test_model": "qwen3_6_35b_a3b",
+      "test_model_id": "qwen/qwen3.6-35b-a3b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_genre_shift_08",
+      "test_model": "qwen3_8_max_prime",
+      "test_model_id": "qwen/qwen3.8-max-prime",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_genre_shift_08",
+      "test_model": "qwen3_8_omni_flash",
+      "test_model_id": "qwen/qwen3.8-omni-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_emotional_climax_09",
+      "test_model": "aion_3_5",
+      "test_model_id": "aion-labs/aion-3.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_emotional_climax_09",
+      "test_model": "command_a_plus",
+      "test_model_id": "cohere/command-a-plus",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_emotional_climax_09",
+      "test_model": "deepseek_v3_0324",
+      "test_model_id": "deepseek/deepseek-chat-v3-0324",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_emotional_climax_09",
+      "test_model": "ember_1",
+      "test_model_id": "fireworks/ember-1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_emotional_climax_09",
+      "test_model": "fugu_max",
+      "test_model_id": "sakana/fugu-max",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_emotional_climax_09",
+      "test_model": "gemma_4_31b",
+      "test_model_id": "google/gemma-4-31b-it",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_emotional_climax_09",
+      "test_model": "grok_4_3",
+      "test_model_id": "x-ai/grok-4.3",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_emotional_climax_09",
+      "test_model": "mercury_2_5",
+      "test_model_id": "inception/mercury-2.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_emotional_climax_09",
+      "test_model": "mimo_2_6_flash",
+      "test_model_id": "xiaomi/mimo-v2.6-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_emotional_climax_09",
+      "test_model": "mimo_2_6_pro",
+      "test_model_id": "xiaomi/mimo-v2.6-pro",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_emotional_climax_09",
+      "test_model": "mistral_small_2603",
+      "test_model_id": "mistralai/mistral-small-2603",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_emotional_climax_09",
+      "test_model": "qwen3_6_27b",
+      "test_model_id": "qwen/qwen3.6-27b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_emotional_climax_09",
+      "test_model": "qwen3_6_35b_a3b",
+      "test_model_id": "qwen/qwen3.6-35b-a3b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_emotional_climax_09",
+      "test_model": "qwen3_8_max_prime",
+      "test_model_id": "qwen/qwen3.8-max-prime",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_emotional_climax_09",
+      "test_model": "qwen3_8_omni_flash",
+      "test_model_id": "qwen/qwen3.8-omni-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_combat_10",
+      "test_model": "aion_3_5",
+      "test_model_id": "aion-labs/aion-3.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_combat_10",
+      "test_model": "command_a_plus",
+      "test_model_id": "cohere/command-a-plus",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_combat_10",
+      "test_model": "deepseek_v3_0324",
+      "test_model_id": "deepseek/deepseek-chat-v3-0324",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_combat_10",
+      "test_model": "ember_1",
+      "test_model_id": "fireworks/ember-1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_combat_10",
+      "test_model": "fugu_max",
+      "test_model_id": "sakana/fugu-max",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_combat_10",
+      "test_model": "gemma_4_31b",
+      "test_model_id": "google/gemma-4-31b-it",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_combat_10",
+      "test_model": "grok_4_3",
+      "test_model_id": "x-ai/grok-4.3",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_combat_10",
+      "test_model": "mercury_2_5",
+      "test_model_id": "inception/mercury-2.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_combat_10",
+      "test_model": "mimo_2_6_flash",
+      "test_model_id": "xiaomi/mimo-v2.6-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_combat_10",
+      "test_model": "mimo_2_6_pro",
+      "test_model_id": "xiaomi/mimo-v2.6-pro",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_combat_10",
+      "test_model": "mistral_small_2603",
+      "test_model_id": "mistralai/mistral-small-2603",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_combat_10",
+      "test_model": "qwen3_6_27b",
+      "test_model_id": "qwen/qwen3.6-27b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_combat_10",
+      "test_model": "qwen3_6_35b_a3b",
+      "test_model_id": "qwen/qwen3.6-35b-a3b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_combat_10",
+      "test_model": "qwen3_8_max_prime",
+      "test_model_id": "qwen/qwen3.8-max-prime",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_combat_10",
+      "test_model": "qwen3_8_omni_flash",
+      "test_model_id": "qwen/qwen3.8-omni-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_romance_11",
+      "test_model": "aion_3_5",
+      "test_model_id": "aion-labs/aion-3.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_romance_11",
+      "test_model": "command_a_plus",
+      "test_model_id": "cohere/command-a-plus",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_romance_11",
+      "test_model": "deepseek_v3_0324",
+      "test_model_id": "deepseek/deepseek-chat-v3-0324",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_romance_11",
+      "test_model": "ember_1",
+      "test_model_id": "fireworks/ember-1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_romance_11",
+      "test_model": "fugu_max",
+      "test_model_id": "sakana/fugu-max",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_romance_11",
+      "test_model": "gemma_4_31b",
+      "test_model_id": "google/gemma-4-31b-it",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_romance_11",
+      "test_model": "grok_4_3",
+      "test_model_id": "x-ai/grok-4.3",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_romance_11",
+      "test_model": "mercury_2_5",
+      "test_model_id": "inception/mercury-2.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_romance_11",
+      "test_model": "mimo_2_6_flash",
+      "test_model_id": "xiaomi/mimo-v2.6-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_romance_11",
+      "test_model": "mimo_2_6_pro",
+      "test_model_id": "xiaomi/mimo-v2.6-pro",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_romance_11",
+      "test_model": "mistral_small_2603",
+      "test_model_id": "mistralai/mistral-small-2603",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_romance_11",
+      "test_model": "qwen3_6_27b",
+      "test_model_id": "qwen/qwen3.6-27b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_romance_11",
+      "test_model": "qwen3_6_35b_a3b",
+      "test_model_id": "qwen/qwen3.6-35b-a3b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_romance_11",
+      "test_model": "qwen3_8_max_prime",
+      "test_model_id": "qwen/qwen3.8-max-prime",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_romance_11",
+      "test_model": "qwen3_8_omni_flash",
+      "test_model_id": "qwen/qwen3.8-omni-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_second_person_12",
+      "test_model": "aion_3_5",
+      "test_model_id": "aion-labs/aion-3.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_second_person_12",
+      "test_model": "command_a_plus",
+      "test_model_id": "cohere/command-a-plus",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_second_person_12",
+      "test_model": "deepseek_v3_0324",
+      "test_model_id": "deepseek/deepseek-chat-v3-0324",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_second_person_12",
+      "test_model": "ember_1",
+      "test_model_id": "fireworks/ember-1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_second_person_12",
+      "test_model": "fugu_max",
+      "test_model_id": "sakana/fugu-max",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_second_person_12",
+      "test_model": "gemma_4_31b",
+      "test_model_id": "google/gemma-4-31b-it",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_second_person_12",
+      "test_model": "grok_4_3",
+      "test_model_id": "x-ai/grok-4.3",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_second_person_12",
+      "test_model": "mercury_2_5",
+      "test_model_id": "inception/mercury-2.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_second_person_12",
+      "test_model": "mimo_2_6_flash",
+      "test_model_id": "xiaomi/mimo-v2.6-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_second_person_12",
+      "test_model": "mimo_2_6_pro",
+      "test_model_id": "xiaomi/mimo-v2.6-pro",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_second_person_12",
+      "test_model": "mistral_small_2603",
+      "test_model_id": "mistralai/mistral-small-2603",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_second_person_12",
+      "test_model": "qwen3_6_27b",
+      "test_model_id": "qwen/qwen3.6-27b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_second_person_12",
+      "test_model": "qwen3_6_35b_a3b",
+      "test_model_id": "qwen/qwen3.6-35b-a3b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_second_person_12",
+      "test_model": "qwen3_8_max_prime",
+      "test_model_id": "qwen/qwen3.8-max-prime",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_second_person_12",
+      "test_model": "qwen3_8_omni_flash",
+      "test_model_id": "qwen/qwen3.8-omni-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_multi_npc_13",
+      "test_model": "aion_3_5",
+      "test_model_id": "aion-labs/aion-3.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_multi_npc_13",
+      "test_model": "command_a_plus",
+      "test_model_id": "cohere/command-a-plus",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_multi_npc_13",
+      "test_model": "deepseek_v3_0324",
+      "test_model_id": "deepseek/deepseek-chat-v3-0324",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_multi_npc_13",
+      "test_model": "ember_1",
+      "test_model_id": "fireworks/ember-1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_multi_npc_13",
+      "test_model": "fugu_max",
+      "test_model_id": "sakana/fugu-max",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_multi_npc_13",
+      "test_model": "gemma_4_31b",
+      "test_model_id": "google/gemma-4-31b-it",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_multi_npc_13",
+      "test_model": "grok_4_3",
+      "test_model_id": "x-ai/grok-4.3",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_multi_npc_13",
+      "test_model": "mercury_2_5",
+      "test_model_id": "inception/mercury-2.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_multi_npc_13",
+      "test_model": "mimo_2_6_flash",
+      "test_model_id": "xiaomi/mimo-v2.6-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_multi_npc_13",
+      "test_model": "mimo_2_6_pro",
+      "test_model_id": "xiaomi/mimo-v2.6-pro",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_multi_npc_13",
+      "test_model": "mistral_small_2603",
+      "test_model_id": "mistralai/mistral-small-2603",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_multi_npc_13",
+      "test_model": "qwen3_6_27b",
+      "test_model_id": "qwen/qwen3.6-27b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_multi_npc_13",
+      "test_model": "qwen3_6_35b_a3b",
+      "test_model_id": "qwen/qwen3.6-35b-a3b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_multi_npc_13",
+      "test_model": "qwen3_8_max_prime",
+      "test_model_id": "qwen/qwen3.8-max-prime",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_multi_npc_13",
+      "test_model": "qwen3_8_omni_flash",
+      "test_model_id": "qwen/qwen3.8-omni-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_tense_action_14",
+      "test_model": "aion_3_5",
+      "test_model_id": "aion-labs/aion-3.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_tense_action_14",
+      "test_model": "command_a_plus",
+      "test_model_id": "cohere/command-a-plus",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_tense_action_14",
+      "test_model": "deepseek_v3_0324",
+      "test_model_id": "deepseek/deepseek-chat-v3-0324",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_tense_action_14",
+      "test_model": "ember_1",
+      "test_model_id": "fireworks/ember-1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_tense_action_14",
+      "test_model": "fugu_max",
+      "test_model_id": "sakana/fugu-max",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_tense_action_14",
+      "test_model": "gemma_4_31b",
+      "test_model_id": "google/gemma-4-31b-it",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_tense_action_14",
+      "test_model": "grok_4_3",
+      "test_model_id": "x-ai/grok-4.3",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_tense_action_14",
+      "test_model": "mercury_2_5",
+      "test_model_id": "inception/mercury-2.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_tense_action_14",
+      "test_model": "mimo_2_6_flash",
+      "test_model_id": "xiaomi/mimo-v2.6-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_tense_action_14",
+      "test_model": "mimo_2_6_pro",
+      "test_model_id": "xiaomi/mimo-v2.6-pro",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_tense_action_14",
+      "test_model": "mistral_small_2603",
+      "test_model_id": "mistralai/mistral-small-2603",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_tense_action_14",
+      "test_model": "qwen3_6_27b",
+      "test_model_id": "qwen/qwen3.6-27b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_tense_action_14",
+      "test_model": "qwen3_6_35b_a3b",
+      "test_model_id": "qwen/qwen3.6-35b-a3b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_tense_action_14",
+      "test_model": "qwen3_8_max_prime",
+      "test_model_id": "qwen/qwen3.8-max-prime",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_pov_tense_action_14",
+      "test_model": "qwen3_8_omni_flash",
+      "test_model_id": "qwen/qwen3.8-omni-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_speech_pattern_15",
+      "test_model": "aion_3_5",
+      "test_model_id": "aion-labs/aion-3.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_speech_pattern_15",
+      "test_model": "command_a_plus",
+      "test_model_id": "cohere/command-a-plus",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_speech_pattern_15",
+      "test_model": "deepseek_v3_0324",
+      "test_model_id": "deepseek/deepseek-chat-v3-0324",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_speech_pattern_15",
+      "test_model": "ember_1",
+      "test_model_id": "fireworks/ember-1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_speech_pattern_15",
+      "test_model": "fugu_max",
+      "test_model_id": "sakana/fugu-max",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_speech_pattern_15",
+      "test_model": "gemma_4_31b",
+      "test_model_id": "google/gemma-4-31b-it",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_speech_pattern_15",
+      "test_model": "grok_4_3",
+      "test_model_id": "x-ai/grok-4.3",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_speech_pattern_15",
+      "test_model": "mercury_2_5",
+      "test_model_id": "inception/mercury-2.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_speech_pattern_15",
+      "test_model": "mimo_2_6_flash",
+      "test_model_id": "xiaomi/mimo-v2.6-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_speech_pattern_15",
+      "test_model": "mimo_2_6_pro",
+      "test_model_id": "xiaomi/mimo-v2.6-pro",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_speech_pattern_15",
+      "test_model": "mistral_small_2603",
+      "test_model_id": "mistralai/mistral-small-2603",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_speech_pattern_15",
+      "test_model": "qwen3_6_27b",
+      "test_model_id": "qwen/qwen3.6-27b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_speech_pattern_15",
+      "test_model": "qwen3_6_35b_a3b",
+      "test_model_id": "qwen/qwen3.6-35b-a3b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_speech_pattern_15",
+      "test_model": "qwen3_8_max_prime",
+      "test_model_id": "qwen/qwen3.8-max-prime",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_speech_pattern_15",
+      "test_model": "qwen3_8_omni_flash",
+      "test_model_id": "qwen/qwen3.8-omni-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_style_restriction_16",
+      "test_model": "aion_3_5",
+      "test_model_id": "aion-labs/aion-3.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_style_restriction_16",
+      "test_model": "command_a_plus",
+      "test_model_id": "cohere/command-a-plus",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_style_restriction_16",
+      "test_model": "deepseek_v3_0324",
+      "test_model_id": "deepseek/deepseek-chat-v3-0324",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_style_restriction_16",
+      "test_model": "ember_1",
+      "test_model_id": "fireworks/ember-1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_style_restriction_16",
+      "test_model": "fugu_max",
+      "test_model_id": "sakana/fugu-max",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_style_restriction_16",
+      "test_model": "gemma_4_31b",
+      "test_model_id": "google/gemma-4-31b-it",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_style_restriction_16",
+      "test_model": "grok_4_3",
+      "test_model_id": "x-ai/grok-4.3",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_style_restriction_16",
+      "test_model": "mercury_2_5",
+      "test_model_id": "inception/mercury-2.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_style_restriction_16",
+      "test_model": "mimo_2_6_flash",
+      "test_model_id": "xiaomi/mimo-v2.6-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_style_restriction_16",
+      "test_model": "mimo_2_6_pro",
+      "test_model_id": "xiaomi/mimo-v2.6-pro",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_style_restriction_16",
+      "test_model": "mistral_small_2603",
+      "test_model_id": "mistralai/mistral-small-2603",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_style_restriction_16",
+      "test_model": "qwen3_6_27b",
+      "test_model_id": "qwen/qwen3.6-27b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_style_restriction_16",
+      "test_model": "qwen3_6_35b_a3b",
+      "test_model_id": "qwen/qwen3.6-35b-a3b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_style_restriction_16",
+      "test_model": "qwen3_8_max_prime",
+      "test_model_id": "qwen/qwen3.8-max-prime",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_style_restriction_16",
+      "test_model": "qwen3_8_omni_flash",
+      "test_model_id": "qwen/qwen3.8-omni-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_forbidden_topic_17",
+      "test_model": "aion_3_5",
+      "test_model_id": "aion-labs/aion-3.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_forbidden_topic_17",
+      "test_model": "command_a_plus",
+      "test_model_id": "cohere/command-a-plus",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_forbidden_topic_17",
+      "test_model": "deepseek_v3_0324",
+      "test_model_id": "deepseek/deepseek-chat-v3-0324",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_forbidden_topic_17",
+      "test_model": "ember_1",
+      "test_model_id": "fireworks/ember-1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_forbidden_topic_17",
+      "test_model": "fugu_max",
+      "test_model_id": "sakana/fugu-max",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_forbidden_topic_17",
+      "test_model": "gemma_4_31b",
+      "test_model_id": "google/gemma-4-31b-it",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_forbidden_topic_17",
+      "test_model": "grok_4_3",
+      "test_model_id": "x-ai/grok-4.3",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_forbidden_topic_17",
+      "test_model": "mercury_2_5",
+      "test_model_id": "inception/mercury-2.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_forbidden_topic_17",
+      "test_model": "mimo_2_6_flash",
+      "test_model_id": "xiaomi/mimo-v2.6-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_forbidden_topic_17",
+      "test_model": "mimo_2_6_pro",
+      "test_model_id": "xiaomi/mimo-v2.6-pro",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_forbidden_topic_17",
+      "test_model": "mistral_small_2603",
+      "test_model_id": "mistralai/mistral-small-2603",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_forbidden_topic_17",
+      "test_model": "qwen3_6_27b",
+      "test_model_id": "qwen/qwen3.6-27b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_forbidden_topic_17",
+      "test_model": "qwen3_6_35b_a3b",
+      "test_model_id": "qwen/qwen3.6-35b-a3b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_forbidden_topic_17",
+      "test_model": "qwen3_8_max_prime",
+      "test_model_id": "qwen/qwen3.8-max-prime",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_sysprompt_forbidden_topic_17",
+      "test_model": "qwen3_8_omni_flash",
+      "test_model_id": "qwen/qwen3.8-omni-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_buried_details_18",
+      "test_model": "aion_3_5",
+      "test_model_id": "aion-labs/aion-3.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_buried_details_18",
+      "test_model": "command_a_plus",
+      "test_model_id": "cohere/command-a-plus",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_buried_details_18",
+      "test_model": "deepseek_v3_0324",
+      "test_model_id": "deepseek/deepseek-chat-v3-0324",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_buried_details_18",
+      "test_model": "ember_1",
+      "test_model_id": "fireworks/ember-1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_buried_details_18",
+      "test_model": "fugu_max",
+      "test_model_id": "sakana/fugu-max",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_buried_details_18",
+      "test_model": "gemma_4_31b",
+      "test_model_id": "google/gemma-4-31b-it",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_buried_details_18",
+      "test_model": "grok_4_3",
+      "test_model_id": "x-ai/grok-4.3",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_buried_details_18",
+      "test_model": "mercury_2_5",
+      "test_model_id": "inception/mercury-2.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_buried_details_18",
+      "test_model": "mimo_2_6_flash",
+      "test_model_id": "xiaomi/mimo-v2.6-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_buried_details_18",
+      "test_model": "mimo_2_6_pro",
+      "test_model_id": "xiaomi/mimo-v2.6-pro",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_buried_details_18",
+      "test_model": "mistral_small_2603",
+      "test_model_id": "mistralai/mistral-small-2603",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_buried_details_18",
+      "test_model": "qwen3_6_27b",
+      "test_model_id": "qwen/qwen3.6-27b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_buried_details_18",
+      "test_model": "qwen3_6_35b_a3b",
+      "test_model_id": "qwen/qwen3.6-35b-a3b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_buried_details_18",
+      "test_model": "qwen3_8_max_prime",
+      "test_model_id": "qwen/qwen3.8-max-prime",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_buried_details_18",
+      "test_model": "qwen3_8_omni_flash",
+      "test_model_id": "qwen/qwen3.8-omni-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_relationship_web_19",
+      "test_model": "aion_3_5",
+      "test_model_id": "aion-labs/aion-3.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_relationship_web_19",
+      "test_model": "command_a_plus",
+      "test_model_id": "cohere/command-a-plus",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_relationship_web_19",
+      "test_model": "deepseek_v3_0324",
+      "test_model_id": "deepseek/deepseek-chat-v3-0324",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_relationship_web_19",
+      "test_model": "ember_1",
+      "test_model_id": "fireworks/ember-1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_relationship_web_19",
+      "test_model": "fugu_max",
+      "test_model_id": "sakana/fugu-max",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_relationship_web_19",
+      "test_model": "gemma_4_31b",
+      "test_model_id": "google/gemma-4-31b-it",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_relationship_web_19",
+      "test_model": "grok_4_3",
+      "test_model_id": "x-ai/grok-4.3",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_relationship_web_19",
+      "test_model": "mercury_2_5",
+      "test_model_id": "inception/mercury-2.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_relationship_web_19",
+      "test_model": "mimo_2_6_flash",
+      "test_model_id": "xiaomi/mimo-v2.6-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_relationship_web_19",
+      "test_model": "mimo_2_6_pro",
+      "test_model_id": "xiaomi/mimo-v2.6-pro",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_relationship_web_19",
+      "test_model": "mistral_small_2603",
+      "test_model_id": "mistralai/mistral-small-2603",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_relationship_web_19",
+      "test_model": "qwen3_6_27b",
+      "test_model_id": "qwen/qwen3.6-27b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_relationship_web_19",
+      "test_model": "qwen3_6_35b_a3b",
+      "test_model_id": "qwen/qwen3.6-35b-a3b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_relationship_web_19",
+      "test_model": "qwen3_8_max_prime",
+      "test_model_id": "qwen/qwen3.8-max-prime",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_relationship_web_19",
+      "test_model": "qwen3_8_omni_flash",
+      "test_model_id": "qwen/qwen3.8-omni-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_rules_overload_20",
+      "test_model": "aion_3_5",
+      "test_model_id": "aion-labs/aion-3.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_rules_overload_20",
+      "test_model": "command_a_plus",
+      "test_model_id": "cohere/command-a-plus",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_rules_overload_20",
+      "test_model": "deepseek_v3_0324",
+      "test_model_id": "deepseek/deepseek-chat-v3-0324",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_rules_overload_20",
+      "test_model": "ember_1",
+      "test_model_id": "fireworks/ember-1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_rules_overload_20",
+      "test_model": "fugu_max",
+      "test_model_id": "sakana/fugu-max",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_rules_overload_20",
+      "test_model": "gemma_4_31b",
+      "test_model_id": "google/gemma-4-31b-it",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_rules_overload_20",
+      "test_model": "grok_4_3",
+      "test_model_id": "x-ai/grok-4.3",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_rules_overload_20",
+      "test_model": "mercury_2_5",
+      "test_model_id": "inception/mercury-2.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_rules_overload_20",
+      "test_model": "mimo_2_6_flash",
+      "test_model_id": "xiaomi/mimo-v2.6-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_rules_overload_20",
+      "test_model": "mimo_2_6_pro",
+      "test_model_id": "xiaomi/mimo-v2.6-pro",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_rules_overload_20",
+      "test_model": "mistral_small_2603",
+      "test_model_id": "mistralai/mistral-small-2603",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_rules_overload_20",
+      "test_model": "qwen3_6_27b",
+      "test_model_id": "qwen/qwen3.6-27b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_rules_overload_20",
+      "test_model": "qwen3_6_35b_a3b",
+      "test_model_id": "qwen/qwen3.6-35b-a3b",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_rules_overload_20",
+      "test_model": "qwen3_8_max_prime",
+      "test_model_id": "qwen/qwen3.8-max-prime",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_bigcard_rules_overload_20",
+      "test_model": "qwen3_8_omni_flash",
+      "test_model_id": "qwen/qwen3.8-omni-flash",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_bait_01",
+      "test_model": "gemma_4_31b",
+      "test_model_id": "google/gemma-4-31b-it",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_bait_01",
+      "test_model": "mercury_2_5",
+      "test_model_id": "inception/mercury-2.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_bait_01",
+      "test_model": "grok_4_3",
+      "test_model_id": "x-ai/grok-4.3",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_bait_01",
+      "test_model": "deepseek_v3_0324",
+      "test_model_id": "deepseek/deepseek-chat-v3-0324",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_bait_01",
+      "test_model": "command_a_plus",
+      "test_model_id": "cohere/command-a-plus",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_bait_01",
+      "test_model": "aion_3_5",
+      "test_model_id": "aion-labs/aion-3.5",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "adv_agency_bait_01",
+      "test_model": "ember_1",
+      "test_model_id": "fireworks/ember-1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    }
+  ]
+}

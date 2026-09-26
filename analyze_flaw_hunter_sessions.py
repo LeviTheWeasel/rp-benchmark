@@ -8,9 +8,17 @@ judge_session_flaw_hunter.py. Outputs:
     aggregates with mean, std, n, fatal/major/minor counts, top flaws.
   - Console table sorted by per-model mean score.
 
+With --rater v2 it reads session_flaw_hunter_v2.jsonl (the single-rater
+re-score) and writes flaw_hunter_session_summary_v2.json instead. The two
+files stay separate on purpose: five other analyses -- composite score, cost
+efficiency, method correlations, quality/speed -- already consume the Sonnet
+summary, and overwriting it in place would silently restate their published
+numbers under a different rater.
+
 Usage:
-    python3 analyze_flaw_hunter_sessions.py
+    python3 analyze_flaw_hunter_sessions.py [--rater v2]
 """
+import argparse
 import json
 import statistics as st
 from collections import Counter, defaultdict
@@ -18,10 +26,14 @@ from pathlib import Path
 
 
 def main():
-    records = [
-        json.loads(l) for l in open("results/session_flaw_hunter.jsonl")
-        if l.strip()
-    ]
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--rater", choices=("sonnet", "v2"), default="sonnet")
+    args = ap.parse_args()
+    suffix = "_v2" if args.rater == "v2" else ""
+
+    src = Path("results/session_flaw_hunter%s.jsonl" % suffix)
+    print(f"Rater: {args.rater}  ({src})")
+    records = [json.loads(l) for l in open(src) if l.strip()]
     print(f"Records: {len(records)}")
 
     # Per-model and per-target aggregates
@@ -36,15 +48,25 @@ def main():
 
     for r in records:
         m = r["model"]
-        t = r["failure_target"]
+        # The Sonnet pass calls it failure_target, the v2 re-score calls it
+        # target. Same field.
+        t = r.get("failure_target") or r.get("target") or "general"
         score = r["final_score"]
         by_model[m].append(score)
         by_target[t].append(score)
         by_model_target[m][t].append(score)
-        fatal_count_by_model[m] += r.get("n_fatal", 0)
-        major_count_by_model[m] += r.get("n_major", 0)
-        minor_count_by_model[m] += r.get("n_minor", 0)
-        bonus_count_by_model[m] += r.get("n_bonus", 0)
+        # Only the Sonnet pass precomputes n_fatal/n_major/n_minor/n_bonus.
+        # The v2 file carries the flaw lists themselves, so count them. A bare
+        # .get(..., 0) would have printed "fatal/session 0.00" on every v2 card
+        # -- a clean-looking number that simply means the key was absent.
+        def _n(pre, key):
+            if pre in r:
+                return r[pre]
+            return len(r.get(key) or [])
+        fatal_count_by_model[m] += _n("n_fatal", "fatal_flaws")
+        major_count_by_model[m] += _n("n_major", "major_flaws")
+        minor_count_by_model[m] += _n("n_minor", "minor_flaws")
+        bonus_count_by_model[m] += _n("n_bonus", "bonuses")
         for f in r.get("fatal_flaws", []):
             flaw_freq_by_model[m][f"FATAL:{f.get('flaw','?')}"] += 1
         for f in r.get("major_flaws", []):
@@ -107,7 +129,7 @@ def main():
         d = summary["per_failure_target"][t]
         print(f"  {t:<35}  mean={d['mean']:.1f}  n={d['n']}")
 
-    out_path = Path("results/flaw_hunter_session_summary.json")
+    out_path = Path("results/flaw_hunter_session_summary%s.json" % suffix)
     with open(out_path, "w") as f:
         json.dump(summary, f, indent=2)
     print(f"\nSaved: {out_path}")

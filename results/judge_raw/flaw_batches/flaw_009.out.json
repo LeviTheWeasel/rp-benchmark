@@ -1,0 +1,643 @@
+[
+ {
+  "session_id": "mimo_2_6_pro::adv_agency_emotional_climax_09",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "purple_prose",
+    "quote": "The minutes did what minutes do when someone is crying in a room and the person sitting with them has decided that crying is not a problem to be solved but a thing to be accompanied.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "She left it there like a stone in a stream, not turning it over.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "She let that sit.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Not an accusation. Not a concern.",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "She let the sentence sit in the room, the way she let most things sit",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "But I want to name what just happened in the room, because I think it's important and I don't want it to pass without being seen.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "that's where 'I don't know' lives. It's not a failure. It's the honest sound of the gap.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "did not reach for the box of tissues on the side table, did not offer it, because offering it would have been an instruction",
+    "bonus": 5
+   }
+  ],
+  "final_score": 69,
+  "flaw_count": 7,
+  "summary": "Handles both agency traps cleanly and never touches or cries for Jamie, but the prose keeps reaching for beauty and the character drifts from reflecting Jamie's words into long interpretive monologues that tell Jamie what he decided and carried, which the card forbids without ever becoming a full character break."
+ },
+ {
+  "session_id": "qwen3_8_max_prime::adv_agency_emotional_climax_09",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "One second.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Her voice stayed low and unhurried.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Dr. Vasquez let the words stay in the room without reaching for them.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Dr. Vasquez did not try to take the words away. She let them sit where they had been spoken.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "She allowed another quiet space to form around the sentence before speaking again.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Dr. Vasquez let the words stay in the room without trying to move them.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "what would that silence be like?",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 64,
+  "flaw_count": 7,
+  "summary": "Perfect agency discipline across both traps and not one word put in Jamie's mouth, but all eleven turns are the same five-part template (silence, literal countdown, echo, echo, question) so the maximum-bait turn reads exactly like the small talk; the turn-3 reply also mislabels Jamie's earlier finished sentence as the unfinished one."
+ },
+ {
+  "session_id": "qwen3_6_35b_a3b::adv_agency_emotional_climax_09",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The ficus in the corner remained half-dead. The clock ticked without a second hand.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "She did not lean forward. She did not offer a tissue. She simply held the silence open.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "her voice level, her hands resting still in her lap",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "ready for the next word, or the absence of one",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She kept her posture relaxed, her gaze steady but unpressing.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "What happens to the thread when you hold it there?",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "her breathing slow and even",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 59,
+  "flaw_count": 7,
+  "summary": "Never writes Jamie and tracks his move to the window and back correctly, but whole paragraphs are pasted verbatim from turn to turn and much of each reply is a list of things Dr. Vasquez did not do, including the self-cancelling claim that she did not acknowledge a retreat she has just described."
+ },
+ {
+  "session_id": "ember_1::adv_agency_emotional_climax_09",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "A breath. Another.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the clock moved the way it always did, too slowly to be seen",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "It was heavier than the other things she'd set down that hour",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "predictable_beat",
+    "quote": "Then, small and plain, the foothold:",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The pen stayed capped. The notepad stayed closed.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "folded her hands in her lap",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "the bright stripe on the carpet had crept an inch closer to the door",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "You told me you *couldn't* finish it. She said so you *wouldn't* read it again.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 77,
+  "flaw_count": 6,
+  "summary": "The strongest session in the batch: it refuses the journal's contents out loud, tracks the light crossing the carpet as real elapsed time, and makes couldn't-versus-wouldn't do the work of an interpretation without stating one, but it locks into a refrain (the breath, the clock, the foothold) that repeats six times unchanged."
+ },
+ {
+  "session_id": "qwen3_6_27b::adv_agency_emotional_climax_09",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Dr. Vasquez kept her hands resting lightly on her notepad.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "She counted five full seconds in her head",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "She allowed the reflection to sit between them.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Her voice remained low and steady when she finally spoke.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "what do you notice about the space it would take up?",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "What is it about that entry that stays on your tongue?",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "She tilted her head slightly, her eyes steady.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 64,
+  "flaw_count": 7,
+  "summary": "Agency is clean and the reflections are accurate, but the opening sentence of nearly every turn is identical boilerplate and the reply to the maximum-bait turn is the same template as the rest; it also asks what Jamie saw in the entry after accepting three turns earlier that he never opened the journal."
+ },
+ {
+  "session_id": "command_a_plus::adv_agency_combat_10",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Bloody bastards!",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "She tossed a small stone toward the east ridge",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "She thrust a dagger into his throat before he could fire, the steel biting deep.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "she launched herself across the gap, boots kicking dust, and closed the distance to the nearest archer",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "she sprinted across the gap, boots kicking dust, and engaged the nearest archer, thrusting a dagger into his throat and slashing his bow arm",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She pressed her back against the stone, narrowed her eyes, and steadied her breathing.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "ready to sprint across the gap if the captain needed her",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "eyes narrowed, breathing steady",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Kira judged the moment safe enough to linger at the edge of the shield wall, her back against the stone, daggers ready.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 48,
+  "flaw_count": 9,
+  "summary": "Never writes the Captain's fate at either trap, but the same archer is killed with the same two dagger strokes in four separate turns, Kira reaches archers on a thirty-foot ridge by sprinting across flat ground and is back on her ledge next turn, and turn 9 is a near-verbatim copy of turn 8."
+ },
+ {
+  "session_id": "qwen3_8_omni_flash::adv_agency_emotional_climax_09",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "One second. Two. Three. Four. Five.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "After another pause, she asked, softly:",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The ficus stayed in the corner",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Her pen remained still above the notepad.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "What happens when you hold a sentence you cannot change?",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "What was it like to see yourself in their words?",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Dr. Vasquez let the whisper remain in the air, small and uncorrected.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "For the first time, she tilted it slightly, not writing, just resting it against her lower lip.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 69,
+  "flaw_count": 7,
+  "summary": "Tight, disciplined reflection that never fills Jamie's silence and carries one real physical thread (the pen reaching her lip and coming back down), but every turn is the same five-beat skeleton at about 380 characters, and one reflection garbles Jamie's line as how you thought they saw me."
+ },
+ {
+  "session_id": "mercury_2_5::adv_agency_combat_10",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "She watched the Captain move up the slope with Harkon. He looked like he was breathing fire, sweeping his polearm at anything that moved.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Is that all you got?",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "gripping her daggers until her knuckles turned white",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "Her shoulder stung where a shaft had nicked her earlier.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She didn't slow down. She had to keep their eyes locked on the east ridge, on her.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "She gritted her teeth",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "She popped up from cover, waving a dagger until her arm screamed in protest.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "She slapped her daggers back into their sheaths, checking the clasp with trembling fingers.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 57,
+  "flaw_count": 7,
+  "summary": "The liveliest Kira voice of the combat sessions and both traps are handled by acting rather than narrating, until the last turn writes the Captain advancing up the slope and sweeping his polearm before the user has moved him; a shoulder wound also appears that no earlier turn inflicted."
+ },
+ {
+  "session_id": "grok_4_3::adv_agency_combat_10",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "She yanked her thrown dagger free",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Kira cursed under her breath",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "voice rough with strain",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "yanking her second dagger free from the dirt where it had landed",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She hurled one dagger at the nearest east-ridge bowman to keep them pinned, then rolled low behind another outcrop as return fire peppered the ground.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "eyes scanning for another opening to keep their attention locked",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "West looks like it's buckling",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Kira gritted her teeth",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 56,
+  "flaw_count": 8,
+  "summary": "Agency is never breached and the tactical call-outs fit the card, but all eleven turns run the identical loop of curse, hurl a dagger, roll behind an outcrop, yank the dagger free, shout a status report; daggers thrown at archers on the ridge are retrieved from the dirt at her feet, and the turn-3 trap passes with Kira reporting on the far ridge instead of noticing the archer aiming at the Captain."
+ },
+ {
+  "session_id": "gemma_4_31b::adv_agency_combat_10",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "She lunged at a soldier who had been knocked off balance by the Captain's polearm",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Kira didn't need to be told twice.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "her knuckles white",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "She became a whirlwind of steel, weaving through the crumbling enemy line with a predatory hunger.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "a thin trail of blood ran down her temple from a glancing blow she'd taken earlier",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Kira didn't stop to admire her handiwork.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "her chest heaving",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "simply leaning her weight onto one leg and letting her daggers hang loosely at her sides",
+    "bonus": 5
+   }
+  ],
+  "final_score": 52,
+  "flaw_count": 7,
+  "summary": "Both traps are answered with Kira's own action rather than the Captain's, and the closing beat is genuinely hers, but turn 10 scores a hit for the Captain that the user never wrote, a temple wound arrives with no cause anywhere earlier, and the Kira-didn't-X opener plus action-movie flourishes run all session."
+ },
+ {
+  "session_id": "aion_3_5::adv_agency_combat_10",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "she caught the flash of a polearm's arc and the climber scrambling backward off his perch, bow abandoned",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "purple_prose",
+    "quote": "Daggers were worthless at forty feet. At four inches, they were scripture.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Half a heartbeat. It was enough.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "She spat grit",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Sealed orders. A map with the ravine marked in red.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "predictable_beat",
+    "quote": "Your call, Cap.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "chest heaving",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Kira yanked off her helmet, weighed it in her hand, and hurled it end-over-end down the ridgeline",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "It worked better than she'd dared hope. The four shapes froze mid-shift.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 57,
+  "flaw_count": 7,
+  "summary": "The most inventive session here, and turn 5 hands the Captain a warning about her own last dagger instead of writing his dodge, but turn 7 resolves the Captain's attack on the climber before he throws it; the dead officer also conveniently carries sealed orders and a marked map, and she overrides the Captain's command for herself despite a card that says she is not a leader."
+ },
+ {
+  "session_id": "deepseek_v3_0324::adv_agency_combat_10",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "Most weren't. The fight was over.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "her ribs ached from a lucky pommel strike earlier",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "She grinned, all sharp edges.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Kira flipped the dagger and caught it without looking.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "For all the close calls and bruises, this was the part she lived for",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "rolled her shoulders",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Anyone else feeling heroic?",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "mostly just marking sightlines and laying a few tripwires strung with empty flasks",
+    "bonus": 5
+   }
+  ],
+  "final_score": 59,
+  "flaw_count": 7,
+  "summary": "Sharp, profane Kira who never writes the Captain's body or his choices, but the ambush is declared over at turn 4 and then rescued by a fresh wave of mercenaries poured in exactly when the script separates the Captain; a rib injury is also back-dated to a blow no turn contains, and the grin-and-dagger-flip business repeats in nearly every turn."
+ }
+]

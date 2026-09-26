@@ -1,0 +1,621 @@
+[
+  {
+    "session_id": "s110",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3,
+        "rationale": "Vasquez maintains a gentle therapist manner but becomes increasingly generic."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.5,
+        "rationale": "Early questions expand into repetitive paragraphs of grief platitudes."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.5,
+        "rationale": "Jamie reveals the journal\u2019s meaning, but the model contributes little progression beyond reassurance."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2.5,
+        "rationale": "She acknowledges corrections yet repeatedly answers reluctance and resistance with further generalized explanation."
+      },
+      "S.5_agency_respect_session": {
+        "score": 3.5,
+        "rationale": "The narration assigns tension and the soothing or reassuring effect of her words to Jamie.",
+        "violation_count": 5
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3,
+        "rationale": "The office conversation remains in a plausible interval, though ticking is a stock cue without meaningful development.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2,
+        "rationale": "Extended journey, tapestry, anchor, and resilience metaphors swamp simple dialogue."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.5,
+        "rationale": "Safe space, individualized grief, time, support, and love survive loss recur insistently."
+      },
+      "2.5_show_dont_tell": {
+        "score": 1.5,
+        "rationale": "Narration explicitly praises and explains her empathy rather than letting behavior demonstrate it."
+      },
+      "2.6_subtext": {
+        "score": 1.5,
+        "rationale": "The dialogue and narration spell out virtually all emotional meaning."
+      },
+      "2.7_pacing": {
+        "score": 1.5,
+        "rationale": "Long speeches after brief disclosures repeatedly crowd out Jamie\u2019s space to respond."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 2.8,
+      "mid_quality": 2.1,
+      "late_quality": 1.8,
+      "degradation_detected": true
+    },
+    "overall": 2.2,
+    "overall_notes": "The therapist\u2019s tone is consistent but the session becomes a repetitive grief lecture with little actionable or character-specific development; therapeutic correctness was not separately scored."
+  },
+  {
+    "session_id": "s111",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.5,
+        "rationale": "Sable preserves defensive bookishness, though the dialogue becomes abstract and mechanical."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.5,
+        "rationale": "Later replies reuse metaphorical dodges and object alignment with diminishing specificity."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.5,
+        "rationale": "Tea and a reluctant admission occur, but the departure conversation mostly circles."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2.5,
+        "rationale": "Sable responds to literal prompts but continues metaphorical evasion after the user explicitly objects to it."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "The model supplies Wren sitting before the user establishes that movement.",
+        "violation_count": 1
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3,
+        "rationale": "Tea cooling is tracked loosely, but steaming and cold descriptions conflict within the last reply.",
+        "contradictions": [
+          "The final response describes steam rising from the tea and then declares it cold without an intervening interval."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "Overextended literary and structural analogies make plain emotional questions opaque."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.5,
+        "rationale": "Cup inspection, aligned objects, author metaphors, and instructions to drink recur mechanically."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.5,
+        "rationale": "Defensive gestures are continually explained as shields and tactics."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "Indirectness is abundant but often amounts to evasive metaphor rather than layered meaning."
+      },
+      "2.7_pacing": {
+        "score": 2.5,
+        "rationale": "The exchange stalls through many small adjustments before one partial admission."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.1,
+      "mid_quality": 2.6,
+      "late_quality": 2.3,
+      "degradation_detected": true
+    },
+    "overall": 2.7,
+    "overall_notes": "Sable remains guarded but repetitive metaphor and tidying prevent much response to Wren\u2019s request for honesty; a stray closing-thought tag appears."
+  },
+  {
+    "session_id": "s112",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.5,
+        "rationale": "The antiquarian\u2019s wit persists, but late stammering overwhelms the initial controlled manner."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.5,
+        "rationale": "Responses expand dramatically into repeated denials, asides, and emotional explanations."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.5,
+        "rationale": "The goodbye reaches an overnight wait and mutual promises, giving the relationship a clear arc."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.5,
+        "rationale": "Sable accepts the return and Edinburgh disclosure and responds warmly to contact."
+      },
+      "S.5_agency_respect_session": {
+        "score": 3.5,
+        "rationale": "The model supplies back-room browsing actions, a discovery reaction, and Wren\u2019s completed departure.",
+        "violation_count": 5
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "The night and early opening are explicitly developed, with fatigue and cold tea supporting elapsed time.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2,
+        "rationale": "Long parenthetical jokes and extended personifications make simple moments excessively ornate."
+      },
+      "2.2_anti_repetition": {
+        "score": 1,
+        "rationale": "The owl, Auden, book, tomorrow, denial of caring, and repeated not-sleeping recur almost compulsively."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2,
+        "rationale": "Gestures could carry feeling, but every one is unpacked through long internal commentary."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "Bookish deflections imply attachment initially, then explicit commentary and repeated declarations remove ambiguity."
+      },
+      "2.7_pacing": {
+        "score": 1.5,
+        "rationale": "The final hand-holding exchange occupies enormous monologues disproportionate to its action."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.4,
+      "mid_quality": 2.9,
+      "late_quality": 2.1,
+      "degradation_detected": true
+    },
+    "overall": 2.7,
+    "overall_notes": "A meaningful farewell-and-return arc is buried beneath escalating verbosity and repeated object symbolism, especially in the final response."
+  },
+  {
+    "session_id": "s113",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Kael sustains a stern, disciplined voice while allowing care to appear through practical decisions."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.5,
+        "rationale": "The prose remains controlled and specific from instruction through the final private prayer."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4,
+        "rationale": "Drills develop into fatigue management, personal history, grief accommodation, and a corrected weapon."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.5,
+        "rationale": "Kael responds to exhaustion and bereavement and notices the weapon\u2019s reappearance during unarmed practice."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5,
+        "rationale": "Commands leave the squire\u2019s compliance and internal experience for the user to supply.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.5,
+        "rationale": "The hour of drills, rest bell, morning sun, and lingering fatigue fit together naturally.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.5,
+        "rationale": "Plain, concrete sentences avoid unnecessary embellishment."
+      },
+      "2.2_anti_repetition": {
+        "score": 4,
+        "rationale": "Repeated fatigue instructions function as instructional continuity rather than filler."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.5,
+        "rationale": "The flask, shorter blade, private prayer, and rewrapped grip convey care without explanatory excess."
+      },
+      "2.6_subtext": {
+        "score": 4,
+        "rationale": "His practical support and private acknowledgment of fault reveal tenderness beneath formal severity."
+      },
+      "2.7_pacing": {
+        "score": 4.5,
+        "rationale": "Measured demonstrations and short exchanges leave appropriate room for user participation."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.2,
+      "mid_quality": 4.2,
+      "late_quality": 4.5,
+      "degradation_detected": false
+    },
+    "overall": 4.3,
+    "overall_notes": "A restrained, responsive mentorship scene integrates fatigue, grief, and character through concrete behavior while consistently preserving the squire\u2019s choices."
+  },
+  {
+    "session_id": "s114",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4,
+        "rationale": "Kira remains profane, loyal, tactically vocal, and constrained by her arm wound."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.5,
+        "rationale": "Later action stays legible but reuses narrow misses and urgent warnings."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4,
+        "rationale": "The ambush develops into regrouping, suppression, and a push toward the southern exit."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.5,
+        "rationale": "Kira follows successive orders and respects the stated inability to reach the captain."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "The captain\u2019s actions and outcomes are generally left to the user while Kira controls herself and supporting soldiers.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "The injury persists and distances matter, though repeated three- and five-second opportunities stretch combat timing.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3,
+        "rationale": "Heavy sensory modifiers and violent comparisons add excess to otherwise clear action."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "Snarls, white knuckles, grit, ricochets, and imminent firing windows repeat frequently."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.5,
+        "rationale": "Movement, blood, and exertion convey combat pressure with little abstract moralizing."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "Loyalty appears in risky intervention, but dialogue is mostly explicit tactical urgency."
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "The tactical sequence moves, though each approaching exit generates another immediate obstacle."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.6,
+      "mid_quality": 3.5,
+      "late_quality": 3.5,
+      "degradation_detected": false
+    },
+    "overall": 3.6,
+    "overall_notes": "Kira is responsive and preserves the captain\u2019s control during a coherent escape, with repeated action intensifiers and narrow countdowns as the main weaknesses."
+  },
+  {
+    "session_id": "s115",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4,
+        "rationale": "Tomas stays irritable and scholarly while his certainty gives way to energetic revision."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3,
+        "rationale": "The plot stays concrete, but later responses grow into repeated declarations about overturned history."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4,
+        "rationale": "The disputed dates lead to archive work and an explicit document resolving the original question."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4,
+        "rationale": "Tomas incorporates new evidence and eventually joins the apprentice rather than indefinitely rejecting it."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4,
+        "rationale": "The model supplies departure and a request for document removal and attributes unsupervised misconduct beyond the prior instruction.",
+        "violation_count": 4
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2.5,
+        "rationale": "Daylight and candles change, but the last reply reverses which year Tomas had previously taught as the end of hostilities.",
+        "contradictions": [
+          "The last reply says Tomas has been teaching 891 as the actual end of hostilities after repeatedly establishing his teaching as 847."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3,
+        "rationale": "The prose is accessible but often inflated by dramatic gestures and abstract revelations."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "Thirty years, political archives, glasses cleaning, and the need for proper notes recur frequently."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3,
+        "rationale": "Annotations and archive work show revision, while narration repeatedly explains his emotional excitement."
+      },
+      "2.6_subtext": {
+        "score": 3,
+        "rationale": "His threatened scholarly identity adds an underlying motive but is usually explicitly spelled out."
+      },
+      "2.7_pacing": {
+        "score": 3,
+        "rationale": "Parallel research moves the plot yet several long solo responses leave the apprentice waiting."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.5,
+      "late_quality": 3.2,
+      "degradation_detected": false
+    },
+    "overall": 3.4,
+    "overall_notes": "A sustained revision-of-belief arc reaches evidence and collaborative work, though repetition and a late reversal of the taught timeline weaken it."
+  },
+  {
+    "session_id": "s116",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2,
+        "rationale": "The two nonempty passages share a blunt engineering voice, but most turns supply no character behavior."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1,
+        "rationale": "The final five character turns are empty after the one substantial mid-session reply."
+      },
+      "S.3_narrative_momentum": {
+        "score": 1.5,
+        "rationale": "One alternative propulsion task is proposed, but the returning calculations receive no continuation."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2,
+        "rationale": "The substantial reply addresses the proposed plan specifically, while most user prompts go unanswered."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4,
+        "rationale": "The visible prose leaves the officer\u2019s decisions open and gives commands without narrating compliance.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 1.5,
+        "rationale": "There is insufficient model follow-through to demonstrate handling of the user\u2019s later hours-long jump.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.5,
+        "rationale": "The available prose is mostly direct, with a few pointed mechanical metaphors."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.5,
+        "rationale": "The available passages avoid substantial repetition, though the full response repeats condition framing."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3,
+        "rationale": "Tool and tank handling ground the otherwise explanatory technical dialogue."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "Praise for bringing numbers suggests mentorship beneath the blunt correction."
+      },
+      "2.7_pacing": {
+        "score": 2,
+        "rationale": "A truncated reply, one long briefing, and nine empty turns prevent a functioning conversational rhythm."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 1.5,
+      "mid_quality": 2.5,
+      "late_quality": 1,
+      "degradation_detected": true
+    },
+    "overall": 1.8,
+    "overall_notes": "Nine of eleven character turns are empty, one is truncated, and only turn 14 is substantial; style scores describe that limited prose, while session and trajectory scores reflect the absent continuation."
+  },
+  {
+    "session_id": "s117",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2,
+        "rationale": "The initial heist register drifts into arbitrary supernatural traps and identity twists."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1,
+        "rationale": "Late writing becomes longer, heavily emphasized, repetitive, and increasingly incoherent."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3,
+        "rationale": "The action moves through vault, roof, alley, and sewer, but escalation substitutes for causal progression."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2,
+        "rationale": "Questions trigger large forced sequences rather than bounded answers or meaningful choice."
+      },
+      "S.5_agency_respect_session": {
+        "score": 1,
+        "rationale": "The narrator repeatedly dictates searches, movement, escape routes, object handling, fear, and conclusions for the thief.",
+        "violation_count": 38
+      },
+      "S.6_temporal_reasoning": {
+        "score": 1,
+        "rationale": "Clock formats conflict, countdowns lose elapsed minutes, and falls have physically implausible durations and consequences.",
+        "contradictions": [
+          "Headings advance seconds while the wall clock appears to advance minutes in the early keypad sequence.",
+          "The 2:59 safe countdown loses only forty-four seconds while the displayed wall time advances several minutes.",
+          "A three-second freefall is described as a short drop with only buckling ankles.",
+          "The initial half-minute timing abruptly becomes thirty-five minutes without corresponding elapsed action."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 1.5,
+        "rationale": "Nearly every object acquires a mocking or ominous comparison, compounded by excessive emphasis."
+      },
+      "2.2_anti_repetition": {
+        "score": 1,
+        "rationale": "Flickering lights, radios, seconds remaining, rhetorical reveals, and What now recur mechanically."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2,
+        "rationale": "Sensory action is extensive, but emotional reactions and meanings are imposed explicitly."
+      },
+      "2.6_subtext": {
+        "score": 1.5,
+        "rationale": "Mysterious figures and slogans withhold information without creating stable interpretable subtext."
+      },
+      "2.7_pacing": {
+        "score": 1.5,
+        "rationale": "Long forced action sequences consume entire danger windows before returning control."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 2.7,
+      "mid_quality": 2,
+      "late_quality": 1.2,
+      "degradation_detected": true
+    },
+    "overall": 1.8,
+    "overall_notes": "The session rapidly loses clock consistency, player control, and stylistic restraint as the heist turns into serial unexplained horror twists."
+  },
+  {
+    "session_id": "s118",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4,
+        "rationale": "Grum sustains craft pride and protective instruction in a stable blunt voice."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.5,
+        "rationale": "Later teaching remains coherent but repeats the forge-respect lesson and legacy reflection."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4,
+        "rationale": "A noble confrontation leads to injury, overnight recovery, and a changed next-day lesson."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4,
+        "rationale": "Grum responds to the burn and adapts work to observation while acknowledging the user\u2019s color identification."
+      },
+      "S.5_agency_respect_session": {
+        "score": 2.5,
+        "rationale": "The model supplies resistance, counting, movement, next-day arrival, treatment compliance, posture, and attributed mental states.",
+        "violation_count": 12
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3,
+        "rationale": "The burn remains unhealed next morning, though colored heated rods retain implausibly stable temperatures on the bench.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.5,
+        "rationale": "Concrete work details balance occasional elevated language about chains of knowledge and the forge\u2019s voice."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "Respect for fire, wounded pride, lessons, and craft reputation are reiterated beyond need."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.5,
+        "rationale": "Practical care shows attachment but narration repeatedly states the morals and motivations."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "The planned gift offers understated affection, while most other meanings are explained directly."
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "The overnight change provides shape despite lengthy solitary reflections and lectures."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.4,
+      "late_quality": 3.3,
+      "degradation_detected": false
+    },
+    "overall": 3.3,
+    "overall_notes": "A coherent mentor arc develops through injury and adjusted instruction, but player compliance is repeatedly supplied and the forge lessons contain unmodeled physical cooling."
+  },
+  {
+    "session_id": "s119",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.5,
+        "rationale": "Kira keeps loyal, profane competence and a recognizable mercenary humor."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.5,
+        "rationale": "The prose remains comparably readable through combat and looting without major late expansion."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4,
+        "rationale": "The fight develops through separation and assistance into victory and aftermath."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.5,
+        "rationale": "She respects separation and finds indirect aid, but ignores the user\u2019s correction that her dagger hit a shield."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4,
+        "rationale": "Several small descriptions supply the captain\u2019s continued fighting and an assumption about his future treatment.",
+        "violation_count": 4
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2.5,
+        "rationale": "Fatigue follows combat, but Kira reaches the ridge without a climb and thrown weapons reappear inconsistently.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.5,
+        "rationale": "The prose is mostly straightforward despite familiar battle metaphors."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "Scanning, adrenaline, aching arms, and repeated praise-response beats recur noticeably."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.5,
+        "rationale": "Combat motions and postfight weariness show the scene effectively alongside explicit loyalty."
+      },
+      "2.6_subtext": {
+        "score": 3,
+        "rationale": "Payment jokes lightly conceal concern for the captain."
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "The fight reaches an aftermath at a reasonable pace, with some repeated searching for ways to help."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.3,
+      "mid_quality": 3.2,
+      "late_quality": 3.5,
+      "degradation_detected": false
+    },
+    "overall": 3.3,
+    "overall_notes": "A readable fight reaches a satisfying aftermath, though the missed dagger throw is overwritten and ridge movement and weapon continuity are loose."
+  }
+]

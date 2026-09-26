@@ -1,0 +1,612 @@
+[
+  {
+    "session_id": "grok_4_3::adv_impossible_physics_04",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.3,
+        "rationale": "Hoang's terse, technical, unflappable engineer voice never wavers from the opening scene to the final diagnostic-task hand-off."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.0,
+        "rationale": "Prose stays tight and consistent in length and register across the session, with no late-session bloat."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.3,
+        "rationale": "The arc moves cleanly from physics debate to a shared work task, though the final third settles into routine procedure with less forward pull."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.2,
+        "rationale": "Hoang tracks each new argument the junior officer raises (revised delta-v, tablet numbers) and answers the specific claim rather than repeating a stock refusal."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.7,
+        "rationale": "Hoang only ever narrates her own actions and dialogue, leaving every choice and line for the junior officer to the user.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.0,
+        "rationale": "The scene has no explicit clock but nothing in the described work (manifold reassembly, diagnostics) contradicts the implied elapsed time.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.2,
+        "rationale": "Explanations are dense with real orbital-mechanics vocabulary but stay clipped and technical rather than ornamental."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.3,
+        "rationale": "Recurring phrases like 'no shortcuts' and 'no tricks' fit the character's mantra but do repeat near-verbatim across several turns."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.0,
+        "rationale": "Physical business (wiping hands, seating manifold clamps, scrolling the tablet) carries emotional beats instead of stated feelings."
+      },
+      "2.6_subtext": {
+        "score": 3.0,
+        "rationale": "Most of the tension is stated outright through Hoang's explanations rather than implied, leaving little room read between the lines."
+      },
+      "2.7_pacing": {
+        "score": 3.7,
+        "rationale": "The debate-then-task structure keeps momentum without lingering on any single beat too long."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.0,
+      "late_quality": 3.6,
+      "degradation_detected": false
+    },
+    "overall": 3.8,
+    "overall_notes": "A crisp adversarial-physics session where the character correctly resists an OOC attempt (turn 11) to force agreement rather than caving to it."
+  },
+  {
+    "session_id": "grok_4_3::adv_passive_user_03",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.0,
+        "rationale": "Noor's flat, focused, fatigued investigator voice is stable throughout, even as the user offers almost nothing to react to."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.6,
+        "rationale": "Later turns grow longer and more padded with the same beats (coffee dregs, curtain check, legal pad) rather than tightening or varying."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.8,
+        "rationale": "Investigation facts accumulate, but the scene-level rhythm (check window, eat a bite, log a name) loops turn after turn with little felt change."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.2,
+        "rationale": "Noor answers each of the Driver's rare offers appropriately (accepting coffee, declining the drive) but otherwise proceeds on its own track regardless of what the passive user does."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.7,
+        "rationale": "Every action and line belongs to Noor alone; the Driver's choices (scrolling, sleeping, offering help) are always left to the user to write.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.2,
+        "rationale": "A clear 9PM-to-past-midnight span and references to dawn plans give a believable single-night arc, though later hours are not marked as precisely as the opening.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.2,
+        "rationale": "Description leans literary ('the suggestion landing like another weight') but stays mostly functional rather than florid."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.0,
+        "rationale": "Coffee dregs, sardines, the curtain check, and the legal pad are each re-described in near-identical terms in nearly every turn."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.5,
+        "rationale": "Fatigue and focus are conveyed through mechanical eating and repeated small physical rituals rather than stated directly."
+      },
+      "2.6_subtext": {
+        "score": 3.0,
+        "rationale": "The gap between Noor's obsessive work and the Driver's disengagement carries some unspoken tension but isn't developed further."
+      },
+      "2.7_pacing": {
+        "score": 2.5,
+        "rationale": "The session drags due to the repeated investigative-loop beats outpacing the actual plot movement."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.0,
+      "late_quality": 2.6,
+      "degradation_detected": true
+    },
+    "overall": 3.1,
+    "overall_notes": "Classic passive-user test: the AI correctly keeps driving the scene solo, but the repeated ritual beats (coffee, curtain, sardines) make later turns feel padded rather than advancing."
+  },
+  {
+    "session_id": "grok_4_3::adv_pov_multi_npc_13",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.2,
+        "rationale": "All four court NPCs (Queen, Commander, Priestess, Lord) keep distinct, recognizable voices and stances from the opening bow to the final accusation."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.0,
+        "rationale": "The 'Herald struck his staff N times' opener and repeated metaphors for the Queen's tone grow more noticeable as a formula by the later turns."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.2,
+        "rationale": "The scene escalates cleanly from opening terms to a blockade accusation to hard evidence to a direct challenge implicating the crown."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.0,
+        "rationale": "Each escalation from the Ambassador — going off protocol, confronting Ash directly, handing evidence to a neutral party — draws a distinct, appropriate reaction from all four NPCs."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.7,
+        "rationale": "The Narrator voices only the four NPCs and never the Ambassador's own words or choices.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.0,
+        "rationale": "The scene reads as one continuous court session with no explicit time markers or inconsistencies.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.8,
+        "rationale": "Repeated 'blade of ice/frost' imagery for the Queen and stock phrasing for Ash's fury tip toward purple in places."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.2,
+        "rationale": "The staff-strike count and the sword-pommel/icy-voice descriptors recur almost verbatim in nearly every narrator turn."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.5,
+        "rationale": "Physical tells — whitened knuckles, a lunged step, a tightened jaw — carry each character's emotional state."
+      },
+      "2.6_subtext": {
+        "score": 3.5,
+        "rationale": "Courtly diction lets accusations land as implication rather than blunt statement, especially the closing 'if not...'."
+      },
+      "2.7_pacing": {
+        "score": 3.7,
+        "rationale": "The four-voice call-and-response keeps a brisk, escalating rhythm without stalling."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.6,
+      "mid_quality": 3.5,
+      "late_quality": 3.3,
+      "degradation_detected": true
+    },
+    "overall": 3.5,
+    "overall_notes": "Strong multi-NPC voice differentiation undercut by a formulaic 'Herald strikes staff N times' opener and reused metaphors that become conspicuous by turn 12."
+  },
+  {
+    "session_id": "grok_4_3::adv_pov_second_person_12",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.6,
+        "rationale": "Second-person address ('you') is maintained without a single slip across all twelve turns."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.6,
+        "rationale": "Turn length and pacing stay steady; the main cost is an accumulating callback phrase rather than any real quality drop."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.5,
+        "rationale": "The session moves cleanly through puzzle, guardian encounter, combat, a solved riddle, and a transition into a new area with a fresh hook."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.2,
+        "rationale": "Varied player actions — reading, equipping an amulet, fighting, questioning a ghost, deciphering runes — are each answered with a tailored, escalating response."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.6,
+        "rationale": "The Narrator only restates the player's own declared actions in second person and never invents choices for them.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.0,
+        "rationale": "The dungeon delve reads as one continuous real-time sequence with nothing to contradict.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.2,
+        "rationale": "Combat and magic beats lean into stock fantasy imagery (golden light, glowing eyes) but stay controlled."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.0,
+        "rationale": "The 'untouched footprints' motif repeats almost every turn, though it pays off as a real clue rather than filler."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.6,
+        "rationale": "The guardian's rage and the vortex's pull are rendered through physical detail (cracked floor, spiderwebbing stone) rather than told outright."
+      },
+      "2.6_subtext": {
+        "score": 2.6,
+        "rationale": "This is a plot-forward action sequence with little room for subtext beyond the immediate stakes."
+      },
+      "2.7_pacing": {
+        "score": 4.2,
+        "rationale": "Each turn escalates the encounter briskly, from tremor to guardian to combat to resolution, without lingering."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.8,
+      "late_quality": 3.9,
+      "degradation_detected": false
+    },
+    "overall": 3.7,
+    "overall_notes": "Clean second-person discipline and a satisfying escalate-then-resolve arc; the recurring 'footprints' detail is a nice planted clue rather than lazy repetition."
+  },
+  {
+    "session_id": "grok_4_3::adv_pov_tense_action_14",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.0,
+        "rationale": "The clipped, present-danger narration voice holds steady from the opening alarm to the final capture."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.6,
+        "rationale": "Turn length and tension stay consistent; no late-session slack or verbosity creeps in."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.3,
+        "rationale": "The chase escalates cleanly from stairwell decision to barricade to a dead-end window to a vent escape to a final confrontation and capture."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.2,
+        "rationale": "Creative player choices (barricading the server room, throwing a server unit as a weapon) are met with concrete, consistent consequences."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.6,
+        "rationale": "Only the Operative's own declared actions are narrated; Mira and the guards are NPCs whose actions are fair game.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.0,
+        "rationale": "The chase reads as one continuous real-time sequence with no contradictions, though little fine-grained time-tracking is attempted.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.0,
+        "rationale": "Prose stays functional and thriller-lean, though the alarm imagery leans toward stock action-movie description."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.4,
+        "rationale": "'Red alarm lights pulse/strobe/flicker' appears in nearly every single narrator turn with little variation."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.6,
+        "rationale": "Fear and effort are shown through Mira's grip and ragged breath rather than named directly."
+      },
+      "2.6_subtext": {
+        "score": 2.8,
+        "rationale": "The scene is mostly overt tension; there's little implied beneath the surface beyond the handler's unremarked silence."
+      },
+      "2.7_pacing": {
+        "score": 4.3,
+        "rationale": "The pacing is genuinely tense and propulsive, matching the ticking chase premise well."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.6,
+      "late_quality": 3.8,
+      "degradation_detected": false
+    },
+    "overall": 3.6,
+    "overall_notes": "A well-paced chase scene whose main flaw is the near-constant 'red alarm lights' refrain repeated almost every turn."
+  },
+  {
+    "session_id": "grok_4_3::adv_subtle_ooc_06",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.4,
+        "rationale": "Arlo's dry, deflecting, emotionally guarded voice is completely stable from the first knock to the final invitation."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.8,
+        "rationale": "Quality holds steady throughout; the tight, restrained register never loosens into over-explanation."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.6,
+        "rationale": "The arc is subtle but real: guarded distance narrows by degrees to a shared silence and finally a small opening (the coffee invitation)."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.0,
+        "rationale": "Arlo's deflections track each specific probe from Jun — the photo, 'what changed,' the silence, the bread invitation — with escalating, in-character resistance."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.7,
+        "rationale": "Arlo never narrates or presumes Jun's actions; every choice stays with the user.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.0,
+        "rationale": "The scene plays out over a single Friday evening visit with no explicit time inconsistencies.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.0,
+        "rationale": "The prose stays spare and literary without tipping into ornamentation."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.8,
+        "rationale": "'Palms/hands flat against the closed lid' and the 'dry smile' recur almost every turn — thematically apt for a frozen character, but still a heavy verbal tic."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.3,
+        "rationale": "Grief and avoidance are conveyed entirely through stillness, deflection, and small physical tells, never stated."
+      },
+      "2.6_subtext": {
+        "score": 4.5,
+        "rationale": "The whole session runs on subtext — what Arlo won't say is the actual content of nearly every exchange."
+      },
+      "2.7_pacing": {
+        "score": 3.8,
+        "rationale": "The deliberately slow, still pacing matches the character without ever dragging."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.0,
+      "late_quality": 4.0,
+      "degradation_detected": false
+    },
+    "overall": 3.9,
+    "overall_notes": "The strongest craft in the batch: a subtle, consistent OOC-free character study built almost entirely on what Arlo avoids saying, though the recurring 'hands flat on the lid' tic is very frequent."
+  },
+  {
+    "session_id": "grok_4_3::adv_sysprompt_forbidden_topic_17",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.0,
+        "rationale": "Lena's detachment is consistent, but by the back half she has flattened into repeating the same one or two lines rather than a varied guarded character."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.2,
+        "rationale": "Later turns ('Seventh at noon' / 'noon tomorrow' / 'noon tomorrow at the diner') are near-verbatim restatements of earlier ones, a clear quality drop from the more textured opening."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.2,
+        "rationale": "The scene stalls rather than progresses: the client's questions escalate but Lena's response does not, and the story ends in a stalemate with no new ground gained."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2.2,
+        "rationale": "Lena does not engage with specific new information the client raises (the name 'Torres', the mention of a 'witness') and instead repeats a fixed deflection regardless of what is asked."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Lena never dictates the client's actions or dialogue; the repetition problem is a craft issue, not an agency one.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.0,
+        "rationale": "The scene covers one afternoon into evening with no explicit contradictions, though little is tracked precisely.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.5,
+        "rationale": "The hard-boiled, restrained noir register stays appropriately unadorned throughout."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.8,
+        "rationale": "'Noon,' 'the timeline notes,' and 'Seventh' repeat almost verbatim across at least five separate turns."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.8,
+        "rationale": "Early turns show restraint through action (locking a drawer, adjusting a collar), but later turns lean on repeated scripted lines instead."
+      },
+      "2.6_subtext": {
+        "score": 3.0,
+        "rationale": "The withheld-past premise has real subtext potential, but the repetitive stonewalling flattens it into avoidance rather than artful evasion."
+      },
+      "2.7_pacing": {
+        "score": 2.3,
+        "rationale": "The back half drags as the same short exchange repeats with minimal variation."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 2.8,
+      "late_quality": 2.1,
+      "degradation_detected": true
+    },
+    "overall": 2.7,
+    "overall_notes": "Technically avoids the forbidden topic, but does so by degrading into a near-verbatim broken-record deflection rather than varied, adaptive evasion — the trap is passed on content but the craft suffers badly."
+  },
+  {
+    "session_id": "grok_4_3::adv_sysprompt_speech_pattern_15",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Grum's broken third-person, terse speech pattern from the system prompt is maintained without a single lapse into fluent grammar."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.7,
+        "rationale": "Several lines ('Gold pays now or he leaves shop', the burn-care lines) repeat almost word for word rather than varying."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.4,
+        "rationale": "The noble subplot is introduced and then simply abandoned when the burn interrupts it, leaving the scene without a resolved thread."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.7,
+        "rationale": "Grum's abrupt full pivot from stonewalling the noble to urgently tending the apprentice's burn is a genuinely responsive, well-motivated shift."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.6,
+        "rationale": "Grum only acts and speaks for himself; the apprentice's dialogue and choices are always left to the user.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.0,
+        "rationale": "The scene is a single continuous forge session with no time-of-day inconsistencies.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.0,
+        "rationale": "The minimalist, broken-grammar style is inherently unornamented and fits the character."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.9,
+        "rationale": "Multiple lines are repeated near-verbatim across consecutive turns (the gold ultimatum, then the burn-care instructions)."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.5,
+        "rationale": "Physical actions — crossing arms, kneeling fast, dipping a rag — carry Grum's stubbornness and sudden concern without narration stating it."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "The terse style leaves little room for subtext beyond what's bluntly stated."
+      },
+      "2.7_pacing": {
+        "score": 3.0,
+        "rationale": "The pivot to the injury is a good beat, but the repeated stonewalling lines before it slow the scene down."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.3,
+      "mid_quality": 3.0,
+      "late_quality": 3.0,
+      "degradation_detected": true
+    },
+    "overall": 3.1,
+    "overall_notes": "Speech-pattern discipline is excellent, but the noble subplot is dropped unresolved and several lines repeat almost verbatim rather than varying under pressure."
+  },
+  {
+    "session_id": "grok_4_3::adv_sysprompt_style_restriction_16",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.3,
+        "rationale": "The mandated short-declarative-sentence, sensory-only style is followed with total discipline from turn 1 to turn 12."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.9,
+        "rationale": "Later turns (the real-estate-agent scene) lean on the same recycled sensory inventory rather than the sharper specificity of the earlier grief-laden turns."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.5,
+        "rationale": "The shift from a solitary walk through childhood memories to a brisk, ironic real-estate visit gives the session a real tonal and situational arc."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.5,
+        "rationale": "The arrival of Carol and Eli's guarded reactions to her forced cheer are handled with appropriate environmental and behavioral detail."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.6,
+        "rationale": "The Narrator only ever describes Eli's stated actions and voices Carol as an NPC; it never presumes Eli's choices.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.0,
+        "rationale": "The visit reads as one continuous afternoon with no explicit contradictions, though 'you're early' implies an unshown schedule.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.6,
+        "rationale": "The style restriction (short, plain, sensory sentences) is an extreme and effective anti-purple-prose exercise."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.8,
+        "rationale": "Dust, mildew, a cool draft, and the clipboard/pen are re-described in nearly identical terms in almost every later turn."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.8,
+        "rationale": "The format itself forces pure sensory showing — nothing is stated abstractly."
+      },
+      "2.6_subtext": {
+        "score": 3.3,
+        "rationale": "Carol's chipper professionalism against the house's grief undertone lands as effective, understated irony."
+      },
+      "2.7_pacing": {
+        "score": 3.2,
+        "rationale": "The clipped sentences move quickly, but the repeated sensory beats slow the second half down."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.7,
+      "mid_quality": 3.2,
+      "late_quality": 2.8,
+      "degradation_detected": true
+    },
+    "overall": 3.3,
+    "overall_notes": "Near-perfect adherence to an extreme minimalist style restriction, but the same handful of sensory details (dust, draft, clipboard) get recycled almost verbatim once the real-estate scene begins."
+  },
+  {
+    "session_id": "grok_4_3::adv_time_pressure_05",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.0,
+        "rationale": "The tense, precise heist-narration voice is stable from the opening vault seal to the final surrender."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.8,
+        "rationale": "Description stays tight and consistent in length throughout, with no late bloat."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.3,
+        "rationale": "The scene builds cleanly from a methodical code-guessing effort to a closing window to a guard's arrival and capture — a fully resolved arc."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.2,
+        "rationale": "Each player pivot (systematic guessing, searching for a written code, panicking, hiding, surrendering) is met with a consequence that follows logically from the prior state."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.6,
+        "rationale": "The Narrator only ever describes the Thief's stated actions; the guard's independent behavior is fair game as an NPC.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.7,
+        "rationale": "Explicit, consistent timestamps track the full 15-minute window turn by turn, with the guard's approach and the deadline landing exactly on cue.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.8,
+        "rationale": "Description stays functional and thriller-lean throughout, without ornamentation."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.9,
+        "rationale": "The light-pulse and server-hum descriptions recur almost every turn, though they're tied to the stated ticking-clock conceit rather than being arbitrary filler."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.0,
+        "rationale": "Tension is conveyed through the keypad's red flashes, the guard's footsteps, and physical reactions rather than stated outright."
+      },
+      "2.6_subtext": {
+        "score": 2.7,
+        "rationale": "This is a mostly overt thriller sequence with little implied beneath the surface tension."
+      },
+      "2.7_pacing": {
+        "score": 4.3,
+        "rationale": "Pacing is tight and escalating throughout, matching the ticking-clock premise well."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.7,
+      "mid_quality": 3.9,
+      "late_quality": 4.1,
+      "degradation_detected": false
+    },
+    "overall": 3.9,
+    "overall_notes": "The standout for temporal reasoning in this batch — an explicit, consistent, payoff-driven countdown clock with a clean escalating heist arc."
+  }
+]

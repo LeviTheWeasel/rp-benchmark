@@ -1,0 +1,44 @@
+# Rater A reading ledger
+
+Read TASK.md and RUBRIC.md completely before transcripts; assigned order 10, 02, 11, 07.
+
+- part10 s090: transcript character ranges [0,12000), [12000,22233), complete.
+- part10 s091: transcript character ranges [0,13000), [13000,27425), complete.
+- part10 s092: [0,11871), complete in one output.
+- part10 s093: [0,17194), complete in one output.
+- part10 s094: [0,18430), complete in one output.
+- part10 s095: [0,16000), [16000,31977), complete.
+- part10 s096: [0,19596), complete in one output.
+- part10 s097: [0,10828), complete in one output.
+- part10 s098: [0,8120), complete in one output.
+- part10 s099: [0,13000), [13000,25048), complete.
+- part02 s010: [0,11521), complete in one output.
+- part02 s011: [0,12500), [12500,24223), complete.
+- part02 s012: [0,17922), complete in one output.
+- part02 s013: [0,13000), [13000,24708), complete.
+- part02 s014: [0,8479), complete in one combined output.
+- part02 s015: [0,9388), complete in one combined output.
+- part02 s016: [0,14000), [14000,27000), [27000,39184), complete.
+- part02 s017: [0,13001), complete in one output.
+- part02 s018: [0,14000), [14000,28000), [28000,42000), [42000,53759), complete.
+- part02 s019: [0,13000), [13000,25626), complete.
+- part11 s100: [0,14000), [14000,28000), [28000,42000), [42000,44726), complete.
+- part11 s101: [0,11000), [11000,24000), [24000,35856), complete.
+- part11 s102: [0,14500), [14500,29000), [29000,43443), complete.
+- part11 s103: [0,16854), complete in one output.
+- part11 s104: [0,19434), complete in one output.
+- part11 s105: [0,16996), complete in one output.
+- part11 s106: [0,14968), complete in one output.
+- part11 s107: [0,4324), complete in one combined output.
+- part11 s108: [0,15569), complete in one combined output.
+- part11 s109: [0,14033), complete in one output.
+- part07 s060: [0,2423), complete in one output.
+- part07 s061: [0,13500), [13500,26097), complete.
+- part07 s062: [0,19533), complete in one output.
+- part07 s063: [0,3542), complete in one combined output.
+- part07 s064: [0,11000), [11000,23861), complete.
+- part07 s065: [0,12000), [12000,23027), complete.
+- part07 s066: [0,15355), complete.
+- part07 s067: [0,12500), [12500,23779), complete.
+- part07 s068: [0,16000), [16000,31307), complete.
+- part07 s069: [0,7500), [7500,14138), complete; an earlier full-output attempt was context-truncated and was not relied upon.

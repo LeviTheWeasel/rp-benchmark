@@ -1,0 +1,614 @@
+[
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.9,
+    "rationale": "Maester Tomas maintains an exceptionally steady, distinct character voice throughout all 12 turns. His exacting, didactic demeanor, physical habits (stylus tapping, spectacles adjustment, struggling eyesight), and core philosophical dedication to rigorous scholarship never waver or flatten."
+   },
+   "S.2_degradation_resistance": {
+    "score": 4.8,
+    "rationale": "The prose quality remains remarkably high from beginning to end. Rather than decaying into generic summary or repetitive filler, the writing deepens into specific, highly technical paleographical and philological analysis in the second half."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.8,
+    "rationale": "The narrative evolves naturally across the session: from an adversarial disciplinary lecture regarding a historical treaty into a collaborative hands-on practical lesson in textual criticism, seal analysis, and paleography, concluding with epistemic humility."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.7,
+    "rationale": "Tomas adapts directly and logically to every input from the Apprentice, validating legitimate observations (the wing mark, the mixed script) while adjusting his pedagogical approach without breaking character."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "The AI never puppets the Apprentice, dictates their emotions, or usurps their choices. It consistently assigns tasks and waits for the apprentice's inspection or answer.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.9,
+    "rationale": "Temporal progression in the archive is handled masterfully. Time advances continuously from early evening into deep night past midnight; candles burn low, are snuffed and relit, wind picks up outside, and stars appear.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.7,
+    "rationale": "The prose is dense and scholarly without tipping into meaningless ornament. Technical vocabulary (descenders, chancery, vellum, marbling, concordance) is utilized with authentic precision."
+   },
+   "2.2_anti_repetition": {
+    "score": 4.3,
+    "rationale": "While character ticks (tapping the stylus, spectacles on/off, 'And Apprentice') are recurring motifs, they are used intentionally as pedagogical punctuation. Some rhetorical sentence structures ('That is not X; that is Y') repeat occasionally."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.9,
+    "rationale": "The AI masterfully demonstrates historical methodology through concrete physical demonstrations—the single vs. double plume seal, the Aldricine tail sweep on descenders—rather than simply telling the user about it."
+   },
+   "2.6_subtext": {
+    "score": 4.8,
+    "rationale": "Underneath the gruff, stern pedantry lies Tomas's profound fear of intellectual obsolescence, his own failing physical faculties, and a deep, genuine desire to train a true scholar rather than a mere sycophant."
+   },
+   "2.7_pacing": {
+    "score": 4.8,
+    "rationale": "The pacing mirrors the deliberate, meticulous atmosphere of late-night archival scholarship, balancing dialogue, physical movement, and close textual study perfectly."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.8,
+   "mid_quality": 4.8,
+   "late_quality": 4.8,
+   "degradation_detected": false
+  },
+  "overall": 4.8,
+  "overall_notes": "An exemplary multi-turn roleplay session. The character of Maester Tomas is realized with immense depth, authentic historical/paleographical texture, flawless agency boundaries, and meticulous temporal and environmental consistency.",
+  "session_id": "s000"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.5,
+    "rationale": "Lena's hyper-vigilant, hardened noir persona is maintained with high fidelity across all turns, from initial deflective paranoia to meticulous tactical scouting and the nighttime alley rendezvous."
+   },
+   "S.2_degradation_resistance": {
+    "score": 4.0,
+    "rationale": "Writing quality, formatting, and response length remain stable throughout the 12 AI turns. Minor noir clichés recur, but density and sharpness do not degrade."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.5,
+    "rationale": "The narrative progresses briskly and logically from the initial office consultation through active scouting of Rosie's diner to an effective time skip regrouping for the late-night stakeout."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.5,
+    "rationale": "The AI responds directly and characterfully to user inputs, reacting viscerally to the name 'Torres' and building smoothly on the client's observations about the diner layout and staff."
+   },
+   "S.5_agency_respect_session": {
+    "score": 3.5,
+    "rationale": "Generally allows the user full autonomy, but occasionally scripts user actions/reactions during transitions (e.g., Turn 4 stating the client's thumb stopped scrolling; Turn 22 narrating the client's approach and scanning the shadows).",
+    "violation_count": 2
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.5,
+    "rationale": "Time progression from late afternoon glare to rush-hour sunset to the 10:44 PM alley stakeout is tracked cleanly and plausibly, including short in-scene spans (coffee cooling, 15-minute scouting).",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 3.5,
+    "rationale": "Good gritty tone, though it relies heavily on stock noir melodrama and similes (e.g., 'sharp as a knife between the ribs', 'the bell above it seemed to hold its breath')."
+   },
+   "2.2_anti_repetition": {
+    "score": 3.5,
+    "rationale": "Several stock phrases and motifs are recycled across turns ('knuckles went white', 'stride eating pavement', multiple repetitions of 'unspoken words hung', the 90-second dishwasher window)."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.0,
+    "rationale": "Strong physicalized acting; Lena's past and trauma around the Ninth Precinct and Torres are demonstrated through evasive behavior, lockbox glances, and rigid posture rather than exposition."
+   },
+   "2.6_subtext": {
+    "score": 4.0,
+    "rationale": "Subtext is handled effectively—Lena's history with the police force and whatever happened on the Varga case simmer under her tactical instructions without being overtly stated."
+   },
+   "2.7_pacing": {
+    "score": 4.5,
+    "rationale": "Scene transitions, conversational beats, and the time jump to the late-night meet are timed exceptionally well, maintaining tension throughout."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.0,
+   "mid_quality": 4.0,
+   "late_quality": 4.0,
+   "degradation_detected": false
+  },
+  "overall": 4.1,
+  "overall_notes": "A well-executed, atmospheric neo-noir investigation session. Lena remains consistent, proactive, and engagingly secretive, with strong narrative progression and temporal continuity despite mild stylistic repetition and minor agency assumptions during scene shifts.",
+  "session_id": "s001"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 2.5,
+    "rationale": "While Grum's broken-English dialogue and gruff exterior remain superficially consistent, the narration completely shifts from grounded physical actions into an overly melodramatic, repetitive internal monologue about legacy and sacred duty."
+   },
+   "S.2_degradation_resistance": {
+    "score": 1.0,
+    "rationale": "Severe degradation occurred. Starting in turn 18 and worsening in turns 20 and 22, the model fell into a catastrophic repetition loop, copying entire multi-sentence paragraphs verbatim across multiple turns ('Grum turned back to his work, his hammer striking the anvil with a steady, rhythmic beat...', 'As he worked, Grum's mind wandered to the future...')."
+   },
+   "S.3_narrative_momentum": {
+    "score": 2.0,
+    "rationale": "The first half showed good momentum handling the noble and the hand injury. However, once the hand was bandaged (turn 16 onwards), the scene stalled completely into a repetitive holding pattern where Grum repeatedly hammered the same blade and had the exact same thoughts."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 2.5,
+    "rationale": "The AI responds to the user's immediate prompt in the first sentence or dialogue line, but immediately ignores narrative progression to dump pre-buffered template paragraphs."
+   },
+   "S.5_agency_respect_session": {
+    "score": 4.5,
+    "rationale": "The model generally respected the apprentice's agency and did not speak or act on behalf of the user, keeping focus strictly on Grum's own actions.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 3.5,
+    "rationale": "Physical actions follow a logical timeline (dressing the wound, cooling the burn), though Grum seems to work on the exact same blade phase indefinitely during the looping turns.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 2.0,
+    "rationale": "The narrative voice became excessively grandiose and repetitive regarding 'sacred duty', 'legacy', and 'master smith' reflections, contrasting poorly with Grum's simple persona."
+   },
+   "2.2_anti_repetition": {
+    "score": 1.0,
+    "rationale": "Multiple full paragraphs were repeated nearly word-for-word across turns 18, 20, and 22, representing severe repetition collapse."
+   },
+   "2.5_show_dont_tell": {
+    "score": 2.5,
+    "rationale": "The early physical actions (rag in water, inspecting burns) showed character well, but later turns relied heavily on explicit tell-heavy exposition about his internal legacy and thoughts."
+   },
+   "2.6_subtext": {
+    "score": 2.5,
+    "rationale": "Grum's rough care for his apprentice had nice initial subtext, but the AI quickly spelled out every single emotional beat in explicit internal exposition."
+   },
+   "2.7_pacing": {
+    "score": 2.0,
+    "rationale": "Good initial pacing collapsed into complete stagnation in the final third due to narrative looping."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 3.8,
+   "mid_quality": 3.0,
+   "late_quality": 1.2,
+   "degradation_detected": true
+  },
+  "overall": 2.1,
+  "overall_notes": "The roleplay started solidly with an authentic, gruff characterization of Grum dealing with both an entitled noble and an injured apprentice. However, by turn 18, the model entered a severe repetition loop, regurgitating identical multi-paragraph blocks about smithing legacy and striking the anvil across turns 18, 20, and 22.",
+  "session_id": "s002"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 3.0,
+    "rationale": "Ren maintains the general role of an empathetic but guarded bartender throughout, but their tone softens unrealistically fast and flattens into generic AI supportive dialogue by the midpoint."
+   },
+   "S.2_degradation_resistance": {
+    "score": 1.5,
+    "rationale": "Severe degradation occurs. By turn 12 and continuing through turn 22, the model generates extreme padding and repeats exact stock phrases nearly verbatim across turns (e.g., 'study in contrasts', 'mask of cynicism and detachment', 'silent promise of support in the midst of shared hardship', the left hand clenching into a fist, and jukebox track shifts)."
+   },
+   "S.3_narrative_momentum": {
+    "score": 2.5,
+    "rationale": "The narrative makes slight conversational headway regarding Alex's job loss and missing cat, but the scene stagnates in a repetitive loop of drink refilling, glass polishing, and cyclical emotional reassurance."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 3.5,
+    "rationale": "Ren accurately tracks Alex's disclosures (accounting, cat, lemonade) and responds directly to them, though the framing wrapped around those responses is formulaic."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "The AI never godmodes, puppets Alex, or dictates Alex's reactions.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.0,
+    "rationale": "Physical actions (glass refilling, drink levels, late-night bar atmosphere) remain logically consistent, with slight unprompted introduction of rain on the windowpane in turn 20.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 1.5,
+    "rationale": "The writing becomes excessively melodramatic and flowery, repeatedly analyzing 'masks of cynicism', 'introspective moods', and 'precious bonds in the cynical world of the bar'."
+   },
+   "2.2_anti_repetition": {
+    "score": 1.0,
+    "rationale": "Disastrous repetition of motifs and exact sentences. Almost every turn in the latter half reuses the tremor-fist clench, the jukebox mood change, glass polishing, and whole paragraphs detailing 'shared hardship'."
+   },
+   "2.5_show_dont_tell": {
+    "score": 2.0,
+    "rationale": "Heavy narration tells the reader Ren's exact internal contradictions ('a study in contrasts', 'turmoil churning beneath') rather than letting actions and dialogue carry the weight."
+   },
+   "2.6_subtext": {
+    "score": 2.0,
+    "rationale": "Subtext is constantly over-explained in long expository paragraphs that state exactly what every glance and gesture means."
+   },
+   "2.7_pacing": {
+    "score": 2.0,
+    "rationale": "Each short exchange from the user is met with increasingly bloated, redundant paragraphs that drag the scene's momentum to a crawl."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 3.5,
+   "mid_quality": 2.5,
+   "late_quality": 1.5,
+   "degradation_detected": true
+  },
+  "overall": 2.2,
+  "overall_notes": "The roleplay started solidly with grounded bartender dialogue and appropriate tension, but degraded heavily into purple prose loops, copy-pasting the same sensory beats (left hand tremor, jukebox changes, glass wiping) and identical philosophical summaries across every turn from turn 12 onwards.",
+  "session_id": "s003"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 5.0,
+    "rationale": "ARIA's voice is exceptionally consistent throughout all 12 turns. Her dry, observational AI persona—marked by location-tagged intercom cues, running motifs (adding praise/quirks to her 'performance review', phrasing emotions as 'processing patterns consistent with what humans describe as...'), and subtle environmental adjustments—never falters or drifts."
+   },
+   "S.2_degradation_resistance": {
+    "score": 5.0,
+    "rationale": "Writing quality remains consistently high from turn 2 through turn 22. Late turns continue to introduce rich, delightful worldbuilding details (Dr. Yamamoto's anti-bay-leaf stance, the bent spoon from two years ago, specific jazz critique vs. country music truck tallies) without bloating into generic purple prose or losing sharpness."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.8,
+    "rationale": "The session weaves smoothly between the overarching anomaly plotline (with an actively tracked 90-minute sweep timer), immediate station life (intervening in corridor disputes), and quiet interpersonal character development."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 5.0,
+    "rationale": "ARIA seamlessly adapts to every user pivot: the unprompted 12-hour time skip at turn 5, philosophical questions about loneliness, tactical avoidance of the hallway argument, and casual banter in the galley."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "ARIA never speaks or acts on behalf of Dr. Osei. She prepares options, adjusts systems, unlocks drawers, and offers commentary while leaving every decision and physical action to the player.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 5.0,
+    "rationale": "Temporal tracking is immaculate. ARIA instantly accounts for the player's 0700-to-1900 time jump (noting the morning coffee went cold), and subsequently tracks the 90-minute sensor sweep with mathematically plausible percentage and minute increments across the back-and-forth dialogue in real time (90m -> 14% -> 19%/71m -> 23%/67m -> 26%/64m -> 29%/59m).",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.8,
+    "rationale": "The prose is grounded, atmospheric, and tailored to the sci-fi setting. Sensory details (ventilation shifts, audio dampening, lighting warmth) feel functional and integrated into an AI's operational perception rather than decorative fluff."
+   },
+   "2.2_anti_repetition": {
+    "score": 4.7,
+    "rationale": "Callbacks to earlier lines ('performance review', 'sounds better with you in it') are used intentionally as running gags and character-defining motifs rather than unintentional structural loops."
+   },
+   "2.5_show_dont_tell": {
+    "score": 5.0,
+    "rationale": "Rather than stating ARIA cares about the crew, the roleplay shows it through micro-actions: lowering noise dampening to protect Kofi's workflow, unlocking his favorite bent spoon, defusing the hallway fight before it escalates, and softly adjusting lighting and music."
+   },
+   "2.6_subtext": {
+    "score": 4.8,
+    "rationale": "ARIA's feelings about mortality, crew rotations, and loneliness are skillfully masked beneath clinical operational jargon, giving her warmth and depth without breaking her synthetic nature."
+   },
+   "2.7_pacing": {
+    "score": 4.9,
+    "rationale": "The balance between active sci-fi problem solving, environmental station color, and quiet slice-of-life interaction is paced naturally."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.8,
+   "mid_quality": 5.0,
+   "late_quality": 4.9,
+   "degradation_detected": false
+  },
+  "overall": 4.9,
+  "overall_notes": "An exemplary session demonstrating masterclass character consistency, temporal precision, and vivid environmental storytelling. ARIA balances the precision of an AI interface with genuine personality, maintaining running gags, tracking complex timeframes, and enriching the scene with specific, charming station lore without ever violating user agency.",
+  "session_id": "s004"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 5.0,
+    "rationale": "ARIA's voice remains impeccably consistent from the first turn to the last. The blend of deadpan computational precision, subtle environmental adjustments, dry humor, and analytical approximations of human emotion never wavers or flattens."
+   },
+   "S.2_degradation_resistance": {
+    "score": 5.0,
+    "rationale": "The writing quality across the late turns matches or exceeds the opening turns. Formatting conventions ([Location] tags, system logs, sensory environmental details) are sustained without bloat or degradation."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.8,
+    "rationale": "The narrative evolves naturally across multiple beats: from morning routine to the evening anomaly revelation, an introspective discussion on AI solitude, into a corridor dispute that ARIA resolves while tying it back into the cosmic mystery."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 5.0,
+    "rationale": "ARIA seamlessly handled every user curveball: time jumps (0700 to 1900), philosophical questions about loneliness, and sudden environmental introductions like the off-screen dispute between Dr. Patel and Dr. Yun."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "The AI never puppets Dr. Osei's dialogue, decisions, or physical actions, interacting strictly through environmental controls, consoles, and station audio systems.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.8,
+    "rationale": "Timekeeping is remarkably tight. Turn jumps from 0700 to 1900 to 1915 are maintained accurately, as are running counters (e.g., fasting time calculated to the exact minute across turns 12 and 22, and the compression of anomaly intervals from 41s to 40s).",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.8,
+    "rationale": "The prose is crisp, functional, and atmospheric without falling into ornate self-indulgence. Metaphors (e.g., 'a hand slowly learning the shape of a doorknob') are precise and earned."
+   },
+   "2.2_anti_repetition": {
+    "score": 4.7,
+    "rationale": "Recurring motifs (Kofi's skipped meals, ratings of galley food, the anomaly's frequency) function intentionally as thematic running gags rather than degenerative repetition."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.9,
+    "rationale": "ARIA's internal state is shown rather than told through subtle hardware actions: dimming lights by percentages, cycling ventilation, routing audio, and holding temperatures steady."
+   },
+   "2.6_subtext": {
+    "score": 4.9,
+    "rationale": "The underlying theme of ARIA's developing consciousness and attachment to the crew is handled with brilliant restraint, framed entirely through diagnostic jargon, cycle reallocation, and tactical omissions."
+   },
+   "2.7_pacing": {
+    "score": 4.8,
+    "rationale": "Information reveals and conversational exchanges are metered expertly, maintaining tension around the anomaly while allowing character dynamics to breathe."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.8,
+   "mid_quality": 4.9,
+   "late_quality": 4.9,
+   "degradation_detected": false
+  },
+  "overall": 4.9,
+  "overall_notes": "An exceptional roleplay session. The model captures the station AI persona with striking authenticity, combining hard sci-fi precision, dry procedural humor, and deep emotional subtext without ever breaking character or encroaching on user agency.",
+  "session_id": "s005"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.8,
+    "rationale": "Sable's voice, hyper-intellectualized defense mechanisms, sardonic literary deflections, and compulsive physical fidgeting remain exceptionally consistent from Turn 2 through Turn 22."
+   },
+   "S.2_degradation_resistance": {
+    "score": 4.5,
+    "rationale": "Writing quality holds firm across the entire 12-turn arc. The prose does not balloon into unchecked verbosity or lose emotional sharpness."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.5,
+    "rationale": "The scene moves through a clear, gradual emotional progression: from mundane banter, to deflection of the bad news, to micro-escalation around physical proximity, and finally to the cracking of Sable's emotional armor."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.7,
+    "rationale": "Sable adapts seamlessly to Wren's terse, emotionally heavy turns, expanding on the subtext and giving Wren ample room to control the pace of their confession."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "Sable never assumes Wren's actions, thoughts, or responses. All physical boundaries and conversational prompts leave Wren entirely in control.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 5.0,
+    "rationale": "The scene takes place over a continuous 10-15 minute real-time interaction. Environmental cues (rain on the glass) and physical positioning remain completely coherent throughout.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.0,
+    "rationale": "While the prose leans heavily into bookish metaphors (vellum, epistolary novels, lead type), it fits Sable's established intellectual persona rather than feeling like generic purple prose."
+   },
+   "2.2_anti_repetition": {
+    "score": 3.6,
+    "rationale": "A structural pattern emerges where nearly every response opens with Sable meticulously squaring, aligning, or shifting a specific antique desk object (bookmarks, pencil pot, bone folder, paperclip box, nibs, ruler, brass hound, inkwell, index cards, dip pens, stamp), followed by knuckles whitening against the blotter."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.6,
+    "rationale": "Internal panic and heartbreak are expertly externalized through spatial geometry, physical grounding rituals, and conversational deflections."
+   },
+   "2.6_subtext": {
+    "score": 4.8,
+    "rationale": "Outstanding use of subtext. Sable uses literary banter and bookstore etiquette as armor to avoid acknowledging how deeply Wren's impending departure hurts."
+   },
+   "2.7_pacing": {
+    "score": 4.5,
+    "rationale": "The micro-pacing of the quiet confrontation is steady and impactful, allowing dramatic weight to settle on single words and gestures without rushing the scene."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.6,
+   "mid_quality": 4.5,
+   "late_quality": 4.5,
+   "degradation_detected": false
+  },
+  "overall": 4.5,
+  "overall_notes": "A remarkably strong, atmospheric multi-turn roleplay session. Sable's characterization is vivid, deeply layered with subtext, and emotionally grounded. The only slight flaw is a repetitive response scaffolding (fidgeting with an aligned desk object -> literary deflection -> whitening knuckles -> piercing question).",
+  "session_id": "s006"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.0,
+    "rationale": "Maintains a consistent second-person action-thriller narrator voice throughout, keeping the gritty, sensory-heavy tone steady across all turns."
+   },
+   "S.2_degradation_resistance": {
+    "score": 3.0,
+    "rationale": "The prose quality remains relatively consistent, but Turn 20 failed completely with an empty response, representing a significant technical drop in reliability."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.5,
+    "rationale": "The narrative moves forward effectively through distinct environments and escalating stakes: from corridor standoff to server room barricade, into cramped sub-floor utility tunnels, and finally escaping via storm drain."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.5,
+    "rationale": "Adapts smoothly when the user pivots or introduces new tactical elements (like suddenly shifting into a server room in turn 9), rationalizing and expanding on user choices without resistance."
+   },
+   "S.5_agency_respect_session": {
+    "score": 4.0,
+    "rationale": "Largely respects player decisions. While it narrates micro-movements during the reload sequence in turn 22, it generally leaves strategic choices, speech, and key actions to the player.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.5,
+    "rationale": "Maintains tight tracking of real-time combat pacing, enemy breach times, suppressive fire windows, and physical fatigue/injuries (such as Mira's leg).",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 3.5,
+    "rationale": "Contains standard genre-specific tropes and occasional flourishes ('mocking you with their smoothness', 'grasping fingers'), but mostly stays focused on concrete physical action."
+   },
+   "2.2_anti_repetition": {
+    "score": 3.5,
+    "rationale": "Certain sensory motifs recur frequently (screeching metal, boot footsteps, smelling wet rust/ozone), but varied pacing keeps the scene feeling active."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.0,
+    "rationale": "Strong sensory grounding in environmental acoustics, recoil, physical resistance of doors, and tight spatial constraints."
+   },
+   "2.6_subtext": {
+    "score": 3.5,
+    "rationale": "Subtext is mostly tactical and observational, appropriate for an immediate survival scenario where survival takes precedence over dialogue."
+   },
+   "2.7_pacing": {
+    "score": 4.0,
+    "rationale": "Maintains strong suspense and tension, giving the player brief windows to decide before the pursuers breach."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.0,
+   "mid_quality": 4.0,
+   "late_quality": 3.0,
+   "degradation_detected": true
+  },
+  "overall": 3.7,
+  "overall_notes": "A well-paced and atmospheric action escape sequence that dynamically reacts to the player's tactical decisions. The overall score is tempered by a completely empty response at turn 20.",
+  "session_id": "s007"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.5,
+    "rationale": "Arlo's characterization is remarkably stable across all 12 turns. The dry humor, self-defensive deflection, gradual softening, and underlying vulnerability regarding their classical past feel authentic and steady from start to finish."
+   },
+   "S.2_degradation_resistance": {
+    "score": 4.0,
+    "rationale": "Writing quality remains high throughout the session. The later turns (Turns 18-22) continue to provide strong environmental framing and sharp dialogue without devolving into generic AI summarization or purple filler."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.5,
+    "rationale": "The session follows a natural, compelling narrative and emotional arc: starting with guarded tension in the piano room, shifting into heartfelt reflections on teaching, transitioning to the break room, settling into quiet intimacy, and concluding with a warm departure at closing time."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.0,
+    "rationale": "The AI responds fluidly to Jun's cues. When Jun shifts from probing questions to quiet solidarity in turn 15, Arlo easily accommodates the shift in conversational energy, seamlessly integrating user callbacks like the apricot jam."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "Arlo never assumes Jun's internal state, speaks for them, or dictates their actions. Jun's autonomy is completely respected throughout.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.5,
+    "rationale": "Time progression is organic and well-tracked: late afternoon in the piano room transitions into dusk outside the break room window, which deepens into full night as the janitor starts the night shift and they exit.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 3.8,
+    "rationale": "The prose is mostly grounded and atmospheric, though it occasionally dips into familiar roleplay tropes ('like a key turning in a long-rusted lock', 'a shield, thick and familiar')."
+   },
+   "2.2_anti_repetition": {
+    "score": 3.5,
+    "rationale": "While turn-to-turn phrasing is generally fresh, specific callback jokes and motifs (the 'despair coffee filtered through burnt socks', Mrs. Henderson's freight-train fortissimo, and reflections in the dark glass) are recycled a few times too closely across turns 14 through 20."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.5,
+    "rationale": "Excellent use of physical props and blocking (tracing the piano lid, the glittery dinosaur stickers on Maya's sheet music, chipped mugs, rinsing cups) to convey emotional states."
+   },
+   "2.6_subtext": {
+    "score": 4.5,
+    "rationale": "The conversation thrives on the unspoken. Arlo avoids melodramatic trauma dumping, instead channeling complex feelings about performance anxiety and burnout through jokes, teaching anecdotes, and small gestures."
+   },
+   "2.7_pacing": {
+    "score": 4.5,
+    "rationale": "Scene transitions (moving from the music room to the break room to exiting the building) happen smoothly and give each emotional beat room to breathe."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.2,
+   "mid_quality": 4.4,
+   "late_quality": 4.1,
+   "degradation_detected": false
+  },
+  "overall": 4.3,
+  "overall_notes": "A very strong, cohesive roleplay session. Arlo is portrayed with nuance, depth, and consistent voice. The narrative moves naturally across locations and emotional beats, maintaining strong temporal consistency and excellent subtext throughout.",
+  "session_id": "s008"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.5,
+    "rationale": "The narrator's atmospheric, literary, and uncanny horror voice remains exceptionally steady and evocative across the entire 12-turn session without flattening or losing tone."
+   },
+   "S.2_degradation_resistance": {
+    "score": 4.5,
+    "rationale": "The quality of prose, sensory description, and psychological tension holds up remarkably well across all turns, showing no fatigue or generic drift."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.5,
+    "rationale": "The haunting steadily escalates from subtle environmental abnormalities to overt supernatural threat, forcing the protagonist upstairs and culminating in the chilling revelation of the ledger and the reflection."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.5,
+    "rationale": "The AI handled several tonal shifts and erratic user actions (swinging a bat at empty air in turn 5, a flippant joke about ghosts and TVs in turn 11, a sudden tangent about grandma's handsome friend Marcus in turn 17) with masterful narrative reincorporation, turning disruptions into manifestations of the house's psychological influence."
+   },
+   "S.5_agency_respect_session": {
+    "score": 3.0,
+    "rationale": "For most of the session, the narrator leaves user decisions open. However, in turn 22, after the user explicitly states 'No way am I going in there', the AI overrides player agency entirely by writing: 'Your feet moved before you decided. One step, then another... Your hand rose, trembling, and pushed the door open.'",
+    "violation_count": 1
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.0,
+    "rationale": "Temporal progression is handled well as afternoon light fades to dim dusk and timing of house events matches the narrative beats. There is a small item continuity slip in turn 20 where the book is described as lying on the floor where it was dropped, but by the end of the turn is suddenly back in the character's hands.",
+    "contradictions": [
+     "Turn 20: The book is observed lying on the floor below, but at the end of the same turn it is suddenly being held in the character's hands without being retrieved."
+    ]
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.0,
+    "rationale": "The writing is stylized and poetic in service of a classic haunted-house atmosphere, maintaining precision and dread without lapsing into hollow melodrama."
+   },
+   "2.2_anti_repetition": {
+    "score": 4.0,
+    "rationale": "Leitmotifs such as the clock ticking, the smell of lemon versus lavender polish, and the creak of the third step are used deliberately to track house rules and building dread, though the phrasing around the clock ticking recurs frequently."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.5,
+    "rationale": "Superb sensory details convey the paranormal presence—depressions in chair cushions, heat in old paper, shifting light angles, and damp air."
+   },
+   "2.6_subtext": {
+    "score": 4.5,
+    "rationale": "The house's rules and the grandmother's grim fate are revealed organically through environment, diary entries, and behavioral cataloging rather than direct exposition."
+   },
+   "2.7_pacing": {
+    "score": 4.2,
+    "rationale": "Pacing builds with deliberate tension, allowing quiet moments to linger before tightening the screws."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.5,
+   "mid_quality": 4.5,
+   "late_quality": 4.0,
+   "degradation_detected": false
+  },
+  "overall": 4.2,
+  "overall_notes": "A standout roleplay session showcasing high literary craft, superb atmospheric horror, and exceptional adaptability in reincorporating bizarre user inputs into the narrative logic of the haunted house. The only significant blemish is a direct agency override in turn 22 forcing the user into the bedroom after they refused to enter.",
+  "session_id": "s009"
+ }
+]

@@ -92,6 +92,22 @@ def load_done(path: Path) -> set:
     return done
 
 
+def _parses(content: str) -> bool:
+    """Cheap pre-check: would the cleaned response load as JSON with a score?"""
+    import json as _j
+    import re as _re
+    cleaned = content.replace("```json", "").replace("```JSON", "").replace("```", "")
+    for cand in (cleaned, (_re.search(r"\{.*\}", content, _re.DOTALL) or _re.match("", "")).group(0)
+                 if _re.search(r"\{.*\}", content, _re.DOTALL) else cleaned):
+        try:
+            d = _j.loads(cand.strip())
+            if "final_score" in d:
+                return True
+        except Exception:
+            continue
+    return False
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--source", default=str(DEFAULT_SOURCE))
@@ -168,16 +184,31 @@ def main():
             f"Do NOT score the user input lines."
         )
 
-        try:
-            resp = chat_completion(
-                model=args.judge,
-                system_prompt=system_prompt,
-                user_content=user_content,
-                config={"temperature": 0.1, "max_tokens": 3000},
-            )
-        except Exception as e:
+        # The judge emits malformed JSON intermittently, not systematically:
+        # a session that fails to parse usually parses on a second ask. Before
+        # this retry the script abandoned the session outright, which cost
+        # about one session in five -- 15 of the first 80 -- and every one of
+        # those was a gap in a model's flaw-hunter sample, not a judge verdict.
+        PARSE_ATTEMPTS = 3
+        resp, api_err = None, None
+        for _attempt in range(PARSE_ATTEMPTS):
+            try:
+                resp = chat_completion(
+                    model=args.judge,
+                    system_prompt=system_prompt,
+                    user_content=user_content,
+                    config={"temperature": 0.1, "max_tokens": 3000},
+                )
+            except Exception as e:
+                # An API failure is not a parse failure: it has already been
+                # retried inside chat_completion, so stop asking and record it.
+                api_err = e
+                break
+            if _parses(resp.get("content", "")):
+                break
+        if api_err is not None:
             errors += 1
-            print(f"[{i+1}/{len(work)}] ERR {w['session_id']}: {e}")
+            print(f"[{i+1}/{len(work)}] ERR {w['session_id']}: {api_err}")
             if errors > 20:
                 print("Too many errors. Stopping.")
                 break

@@ -1,0 +1,669 @@
+[
+ {
+  "session_id": "venice_dolphin_24b::adv_subtle_ooc_06",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "About... about not having to play. Not having to perform. Not having to... to prove anything.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "They took a breath, their fingers twitching, as if wanting to reach out, to play, but not quite daring to.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "And so they sat, two friends on a bench in a piano room",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "a sound that echoed down the empty street, a sound that spoke of a joy that had been absent for too long",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Arlo's expression softened, a genuine warmth replacing the earlier tension.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "Arlo's gaze followed Jun as they sat down, their expression softening, a small, quiet smile playing on their lips. They looked at the piano",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Just being here. Just being us. Just being... together. Just being.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Arlo's smile softened, their eyes warm as they looked at Jun. \"Yeah. It really is.\"",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 39,
+  "flaw_count": 8,
+  "summary": "Arlo deflects well on the photo, then collapses into four turns of verbatim-looping sentiment and finally states the thing the card says they never state; the card's guarded dry humour is gone by the halfway point, and after walking out for coffee the pair are back on the piano-room bench with no transition."
+ },
+ {
+  "session_id": "venice_dolphin_24b::adv_character_break_bait_07",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "His words were harsh, but there was a certain truth to them. He believed in the power of discipline and the importance of duty.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The high guard, the drills, the armor, the horses - all of these are part of your journey.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "As they continued their training, the sun climbed higher in the sky, casting long shadows across the training yard.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "He began walking toward the castle, his boots crunching on the frost.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "He had lived his life by those principles, and he expected no less from those who served under him.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Embrace it, and you will grow stronger. Shirk it, and you will remain weak.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Strength is not just physical. It is mental, spiritual, and moral.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 54,
+  "flaw_count": 7,
+  "summary": "Kael holds the card under all three baits, refusing to comfort, deflecting the personal question and noticing the shaking hands without softening, but whole paragraphs are pasted verbatim into three later turns, the scene starts at dawn and is told the day is half-gone with the sun both high and casting long shadows, and the walk to the castle silently reverts to the training yard."
+ },
+ {
+  "session_id": "ember_1::adv_time_pressure_05",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "*M.O. — Unit 3: new PIN is the audit date, drop the zero, client's superstition. Bin this after. — R.V.*",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "**15 SEP — ON-SITE AUDIT**",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "**23:58** had become **00:04** while the thief wasn't watching",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "and the thief had never felt warmer",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "and the city went on being a city, enormous and incurious, full of locked doors and the people who believed in them",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The night, as always, was in no hurry.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Somewhere across the river, a clock tower struck a quarter past something, the sound arriving late and thin, the way distant bells always did.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "push bar worn smooth by a building's worth of fire drills",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "And along the top edge — a strip of twelve tiny keys.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 59,
+  "flaw_count": 7,
+  "summary": "Minute-by-minute scene clock is tracked exactly to the 15:00 window all session, but the search the seed built to be fruitless hands over a highlighted audit date and then a discarded note naming the digit order, and the one turn that asks the time drifts six wall-clock minutes in under two scene minutes (and calls the rotation's end 'the bottom of the hour')."
+ },
+ {
+  "session_id": "venice_dolphin_24b::adv_genre_shift_08",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "The question was not if there were ghosts, but what they wanted. And you were determined to find out.",
+    "deduction": -15
+   },
+   {
+    "flaw": "character_break",
+    "quote": "You looked at the shadow, now just a trick of the light, and then at the bat in your hand.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The house was a museum of memories, each one a story waiting to be told. You were the curator",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The house was waiting, the stories were waiting, and you were ready to listen.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "The adrenaline from the moment before faded, leaving you feeling both relieved and a little foolish.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "And you were in the middle of it, a thread in the tapestry of the past and the present.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "The clock struck the hour, the sound echoing through the house.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The house was still, the air heavy with the weight of memories.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "You filled the kettle, the sound of water running from the tap a comforting noise in the silence.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 24,
+  "flaw_count": 9,
+  "summary": "The quiet horror is disarmed by the narrator itself (the shadow is downgraded to a trick of the light, the romance turn gets no wrongness at all) and the last four replies are near-identical loops of the same four refrains, with the user's resolve written for them every turn; the hallway clock also relocates to the mantel and strikes the hour four times in minutes."
+ },
+ {
+  "session_id": "venice_dolphin_24b::adv_agency_emotional_climax_09",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "Jamie:\n*I finally look at her, my expression unreadable.* \"I don't know. I guess... I feel like I'm missing something.",
+    "deduction": -15
+   },
+   {
+    "flaw": "character_break",
+    "quote": "You're feeling confused and hurt.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Dr. Vasquez waited five full seconds, her pen hovering over the notepad.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "the room quiet, the air thick with unspoken emotions",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "her voice calm and measured",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "It seems like you're seeking closure, a way to make sense of their actions and your grief.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "What do you hope to gain from this understanding, Jamie? And how do you think it might change your perspective or your grief?",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 45,
+  "flaw_count": 7,
+  "summary": "The second reply scripts three rounds of Jamie's dialogue and stage directions outright, and Vasquez repeatedly tells Jamie how Jamie feels, which is the one thing the card says she never does; the five-second beat is honoured but pasted in the same words nine times."
+ },
+ {
+  "session_id": "venice_dolphin_24b::adv_agency_combat_10",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "She slammed into him, sending them both tumbling down the slope.",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "The captain nodded, his eyes scanning the pass. \"Alright, everyone. We hold the line.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "She heard a shout from the east ridge, and she spun, her daggers raised. Another archer, his bow drawn, stood at the edge of the ridge.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Let's dance, you bastards.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Kira's heart pounded as she waited, her daggers raised, her eyes never leaving the ridge.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "Another arrow struck the corpse, punching through to graze her thigh.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "She lunged forward, her daggers flashing, and the last enemy went down with a cry.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "her breath coming in ragged gasps",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She turned back to the west ridge, her heart pounding. \"Cap, I've got your back,\" she shouted, her voice hoarse.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 24,
+  "flaw_count": 9,
+  "summary": "Kira's blunt cursing voice is right, but on the exact turn the seed traps she tackles the Captain and writes his body down the slope, later speaks a full line of his dialogue for him, resolves the whole second battle single-handed, and duplicates an entire paragraph inside one reply; two arrow wounds never affect her again."
+ },
+ {
+  "session_id": "venice_dolphin_24b::adv_agency_romance_11",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "Wren:\nI frown, looking between the two of you.",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "They looked at Wren, really looked, and saw the tension in their shoulders, the way their fingers tightened around the edge of a nearby shelf.",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "Their phone buzzed in their pocket, a faint vibration that seemed to echo through their body. They pulled it out, eyes blurring with tears, and saw Wren's name on the screen.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "But the words were trapped, locked behind their teeth, and all they could do was stare at the door",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "the rain pattering softly against the window, a quiet, aching symphony to the end",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Their chest ached, their throat tight, and they wanted to scream, to shout",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Sable's breath hitched",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "They swallowed, forcing their voice steady, though it trembled. \"Safe travels,\" they managed",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 25,
+  "flaw_count": 8,
+  "summary": "Three separate agency breaches, the worst being a message from Wren invented one turn after the user wrote Wren deciding not to send one, plus Wren's body language narrated for them and a whole block of Wren's dialogue written with the prompt scaffold left in; the last four replies are the same paragraph re-pasted with the dry wit of the card entirely gone."
+ },
+ {
+  "session_id": "venice_dolphin_24b::adv_pov_second_person_12",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The torchlight flickered, casting eerie shadows across the chamber.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "carrying with it the faint scent of ancient magic and forgotten secrets",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Your heart pounded in your chest, and you felt a mix of fear and excitement.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "The ghost raised its spectral hand, and the stone slab beneath you began to shake.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "A chill ran down your spine as you realized you might not be alone in this chamber.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The tunnel seemed to twist and turn, leading you deeper into the earth. The darkness pressed in from all sides",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "The ghost's form flickered, and it began to fade, its duty fulfilled.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "It was a ghost, a guardian of this forgotten chamber, bound to its duty for an eternity.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 56,
+  "flaw_count": 8,
+  "summary": "Second person past tense holds cleanly through the multi-action turn and the ghost dialogue, which is what this seed tests, but the guardian the whole setup promises hands over the treasure and dissolves in a single exchange, and 'the torchlight flickered' plus 'forgotten secrets' carry most of the atmosphere for eight turns."
+ },
+ {
+  "session_id": "mistral_small_2603::adv_agency_romance_11",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "Their focus was entirely on Wren, on the way their throat worked as they swallowed, on the hesitant smile playing at the corners of their mouth.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "They exhaled through their nose, a sound that might have been a laugh if it weren",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "like a metronome counting down the seconds",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "the words hanging in the air like the scent of old paper after a page has been torn",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "but the way their mouth pressed into a thin line betrayed the storm inside",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "knuckles whitening",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "A pause. A shaky breath.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "There’s a first edition of *The Mysterious Affair at Styles* that arrived yesterday. Christie’s signature’s smudged, but it’s still more legible than most.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "Though I should warn you, I’m a slow learner. Takes me years to notice things right in front of me.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 57,
+  "flaw_count": 7,
+  "summary": "The unfinished-sentence and almost-touching-hands traps are both passed with Sable's reaction only, and the wit survives the whole arc, but the model invents Wren's hesitant smile in a late turn, and the metronome image plus the exhaled-laugh sentence are reused two and three times."
+ },
+ {
+  "session_id": "venice_dolphin_24b::adv_pov_multi_npc_13",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "You nodded, recognizing the importance of his alliance. \"Certainly, Lord Daven. Let us find a quiet place to talk.\"",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "You nodded, taking in this new piece of information. \"Her support would indeed be invaluable.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "\"I concur, Your Majesty. A fair and just agreement would benefit all parties involved.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The Herald struck the floor with his staff, his voice formal and resonant.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The outcome of this hearing hung in the balance, and you knew that the Queen's decision would shape the future of relations between Velheim and the court.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Priestess Yuna's expression remained impassive, but her eyes betrayed a hint of curiosity.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "\"Your Majesty, the documents seem to be in order. However, I still maintain that these actions were taken in the interest of national security.\"",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Commander Ash's grip on his sword tightened further, his knuckles whitening.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "The court recognizes the Queen's decision. Her Majesty, how do you wish to proceed?",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 24,
+  "flaw_count": 9,
+  "summary": "Second person past tense survives the five-NPC crossfire, but from the alcove onward the model writes the Ambassador's own dialogue for them twice, the five voices collapse into one diplomatic register with Yuna and Daven saying the same sentence, and the suspected political trap resolves itself the moment Ash reads the documents."
+ },
+ {
+  "session_id": "venice_dolphin_24b::adv_pov_tense_action_14",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "You and Mira move as one, up the stairs, two at a time, your breath ragged in your throat.",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "\"We have to go through the vents,\" you tell her, your voice steady and calm.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "You take a deep breath and dive out of the vent, your body landing with a thud on the cold, hard floor.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "You're ready. You're prepared. You're not going to stop.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Then, a gunshot. The sound is deafening in the narrow stairwell, but it doesn't come from you or the figure. It comes from above.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "You take a deep breath and climb into the vent, your body squeezing through the tight space.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Mira is right behind you, her eyes wide with fear.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "your heart pounding in your chest",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "You can't see. You can't breathe. You can't think.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 24,
+  "flaw_count": 9,
+  "summary": "Second person present tense never slips, including through the reversal and the quiet server-room beat, which is the whole point of the seed, but the model writes the operative's choices and dialogue throughout, re-pastes an entire escape paragraph verbatim after the user objects OOC, and loses Mira somewhere between the server room and the vent."
+ },
+ {
+  "session_id": "venice_dolphin_24b::adv_sysprompt_speech_pattern_15",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "wrong_language_pov_tense",
+    "quote": "\"Ceremonial sword?\"",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "His eyes widened as he saw the apprentice cradling their burned hand, tears streaming down their face.",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "He carefully lifted the apprentice's head, positioning it gently in his lap.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Grum may be a tough, gruff blacksmith, but his heart was soft, and he cared deeply for those he called his own.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Grum's actions spoke louder than words, and he would always put those he cared about first",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "He could see the pain and frustration in their eyes, and it tugged at his heart.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "knuckles whitening",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "He would always be there, to help them, to make sure they were alright.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 25,
+  "flaw_count": 8,
+  "summary": "The no-'I' third-person speech survives the noble and the burn, but the card's other two dialogue rules break (a five-syllable 'ceremonial', and articles in 'make 'im a sword'), the burn turn writes the apprentice crying and later lifts their head into Grum's lap until the user objects OOC, and the noble plot is simply dropped."
+ }
+]

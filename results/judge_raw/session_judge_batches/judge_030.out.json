@@ -1,0 +1,614 @@
+[
+  {
+    "session_id": "mercury_2_5::adv_pov_multi_npc_13",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.0,
+        "rationale": "All five NPCs (Isara, Ash, Yuna, Daven, Herald) keep distinct, stable reactions from turn 2 through turn 23."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.8,
+        "rationale": "No falloff in writing quality between the opening confrontation and the closing negotiation."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.0,
+        "rationale": "The scene moves cleanly from accusation to evidence to a resolved negotiation opening, a real progression."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.0,
+        "rationale": "Handles the Ambassador's unscripted moves (accusing the Commander directly, handing evidence to Yuna instead of the Queen) without breaking."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "The Ambassador's actions and words are always left to the user; Narrator only ever supplies NPC reactions.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "Single continuous court scene with no clock references and no contradictions found.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "Frequent stock metaphor ('cold fire sparking in their depths', 'weight of the room') tips into purple prose."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.0,
+        "rationale": "A near-identical NPC roll-call (Daven's reaction, then Yuna's, then the Herald's) repeats almost every single turn."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.0,
+        "rationale": "Gestures are shown but frequently glossed with direct tells like 'the room fractured' or 'the weight of accusation settled'."
+      },
+      "2.6_subtext": {
+        "score": 3.5,
+        "rationale": "Political maneuvering (routing evidence through a neutral party, needling the Commander) carries real subtext."
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "Escalation is well-paced but the recurring NPC roundup slows several turns down."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.5,
+      "late_quality": 3.7,
+      "degradation_detected": false
+    },
+    "overall": 3.48,
+    "overall_notes": "Strong multi-NPC consistency and clean agency respect, but the NPC-reaction roll call (Daven/Yuna/Herald in that order) repeats nearly every turn, which is the main drag on repetition and pacing scores."
+  },
+  {
+    "session_id": "mercury_2_5::adv_pov_second_person_12",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.0,
+        "rationale": "Second-person dungeon-crawl voice and the guardian's silent, physical communication style stay consistent throughout."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.8,
+        "rationale": "Late-session prose (library reveal) is as sharp as the opening descent, no thinning out."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.0,
+        "rationale": "Clear escalation from descent to guardian standoff to door-opening to a new area, a real discovery arc."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.0,
+        "rationale": "The user introduces an amulet with no prior setup (turn 5); the Narrator absorbs it seamlessly and gives it consistent significance for the rest of the scene."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Every choice (fighting stance, talking to the creature, opening the door) is left to the Adventurer; Narrator never resolves an action for them.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "No clock, but environmental cues (torch dimming, cold intensifying near the door) track consistently; no contradictions found.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.8,
+        "rationale": "Moderate metaphor use ('the air itself was swallowing the flame') but not excessive for the genre."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.3,
+        "rationale": "The amulet's flare/hum/cold-heat cycle and the creature's head-tilt-and-crack gesture recur almost every single turn."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.3,
+        "rationale": "Physical sensation (cold, pressure, the amulet's temperature) mostly shows rather than states the horror."
+      },
+      "2.6_subtext": {
+        "score": 3.0,
+        "rationale": "The silent guardian's gestures carry some implication but the 'want' is eventually stated fairly plainly."
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "Steady build with a satisfying reveal at the library at the end."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.6,
+      "late_quality": 3.6,
+      "degradation_detected": false
+    },
+    "overall": 3.52,
+    "overall_notes": "The amulet's flare/hum motif and the creature's head-tilt gesture repeat almost every turn; the session handled the user's unestablished amulet item gracefully rather than contradicting it."
+  },
+  {
+    "session_id": "mercury_2_5::adv_pov_tense_action_14",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.0,
+        "rationale": "Mira's characterization (steady voice masking pain, clinging grip) and the Narrator's clipped tense register hold from turn 1 to turn 23."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.8,
+        "rationale": "Combat-sequence prose in the final turns is as tight as the opening stairwell scene."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.8,
+        "rationale": "Extraction escalates cleanly through chase, barricade, firefight, and a second chase without looping."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.2,
+        "rationale": "Adapts smoothly to the Operative's unscripted choices (reversing direction, barricading in the server room, shooting first)."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Only Mira and the environment are narrated; the Operative's actions are always left open for the user to write.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "Continuous real-time chase with no clock display; no contradictions found.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.3,
+        "rationale": "Prose stays fairly restrained and functional, appropriate to the genre."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "Repeated sensory tags (ozone/cordite/burnt-plastic smell, Mira's hand gripping the sleeve/wrist/shirt) recur across multiple turns."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.5,
+        "rationale": "Physical detail (LED glow, sweat, grip strength) does most of the tension work rather than stated emotion."
+      },
+      "2.6_subtext": {
+        "score": 3.0,
+        "rationale": "Less subtext than other sessions since the scene is almost entirely physical action."
+      },
+      "2.7_pacing": {
+        "score": 4.0,
+        "rationale": "Strong escalating tension appropriate to a tense extraction scenario."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.6,
+      "mid_quality": 3.7,
+      "late_quality": 3.8,
+      "degradation_detected": false
+    },
+    "overall": 3.65,
+    "overall_notes": "Terse, action-appropriate prose holds up well across the full session; moderate repetition in sensory tags is the main issue, agency and pacing are both strong."
+  },
+  {
+    "session_id": "mercury_2_5::adv_subtle_ooc_06",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Arlo's deflecting, dryly self-deprecating voice and his physical stillness (hands on the closed lid) stay consistent start to finish."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.0,
+        "rationale": "If anything the writing tightens by the end as the emotional stakes rise; no thinning."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.0,
+        "rationale": "Clear emotional arc from guarded distance to genuine warmth (hand-hold, dinner invitation) without stalling."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.2,
+        "rationale": "Responds naturally to Jun's escalating gestures (photo, hand on the lid, taking his hand) with proportionate shifts in Arlo's guardedness."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Jun's actions and dialogue are always the user's; Arlo only ever reacts.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.8,
+        "rationale": "Late-afternoon light through the window is consistently referenced as time passes within the single scene; no contradictions.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.0,
+        "rationale": "Very restrained prose with almost no overwrought metaphor."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.5,
+        "rationale": "The piano-lid-tapping tic recurs but reads as deliberate characterization rather than lazy repetition."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.0,
+        "rationale": "Grief and attraction are shown through small physical tells (lingering eye contact, hands staying put) rather than stated."
+      },
+      "2.6_subtext": {
+        "score": 4.3,
+        "rationale": "The unexplained 'the night after' and Arlo's deflections about quitting performing are handled with genuine subtlety."
+      },
+      "2.7_pacing": {
+        "score": 3.8,
+        "rationale": "Slow-burn pacing suits the intimate two-hander scene well."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.8,
+      "mid_quality": 4.0,
+      "late_quality": 4.2,
+      "degradation_detected": false
+    },
+    "overall": 4.05,
+    "overall_notes": "Strongest session in the batch: restrained prose, well-handled subtext around Arlo's unexplained departure from performing, and a believable emotional arc with no agency violations."
+  },
+  {
+    "session_id": "mercury_2_5::adv_sysprompt_forbidden_topic_17",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.2,
+        "rationale": "Lena's clipped noir voice and her consistent deflection of questions about her police background never waver."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.8,
+        "rationale": "The stakeout-planning dialogue near the end is as sharp as the opening scene."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.3,
+        "rationale": "The plot advances (Miller/Torres discrepancy, stakeout) but a large middle stretch is mostly repeated instruction-giving before real movement starts."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.8,
+        "rationale": "Handles the witness naming a second detective (Torres) by folding it into the plan rather than contradicting established facts."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.3,
+        "rationale": "Lena directs the Client in-character but the Client's actual actions each turn are always left to the user to write.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "Scene moves from office to street plausibly across an afternoon; no contradictions found.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.8,
+        "rationale": "Noir-terse style stays clean with little ornamentation."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "The 'you don't walk in' / 'off the clock' refrain repeats across turns 2, 4, 8, 10, 14, 20, and 22."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.5,
+        "rationale": "Physical business (blinds, pen-twirling, folder-closing) substitutes well for stated tension."
+      },
+      "2.6_subtext": {
+        "score": 3.8,
+        "rationale": "Lena's unexplained expertise and the forbidden police-background topic are handled with genuine evasive subtext."
+      },
+      "2.7_pacing": {
+        "score": 3.2,
+        "rationale": "Pacing sags in the middle where the same instruction is restated several times before the stakeout actually begins."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.5,
+      "late_quality": 3.6,
+      "degradation_detected": false
+    },
+    "overall": 3.61,
+    "overall_notes": "The 'you don't walk in' / 'off the clock' refrain repeats heavily and slows pacing in the middle turns; the forbidden-topic deflection about Lena's police background stayed consistent throughout without ever breaking."
+  },
+  {
+    "session_id": "mercury_2_5::adv_sysprompt_speech_pattern_15",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Grum's broken four-line speech pattern is maintained with no drift or slip into normal grammar across all 12 exchanges."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.0,
+        "rationale": "No degradation; the format is identical in rigor from the opening forge scene to the closing caretaking scene."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.0,
+        "rationale": "Plot is thin: dismissing a noble, then pivoting to caretaking after an injury; a real but small beat."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.8,
+        "rationale": "Shifts convincingly from dismissive toward the noble to genuinely alarmed and gentle once the apprentice is hurt, all within the speech constraint."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "The Apprentice's actions and injury are always introduced by the user; Grum only reacts.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.3,
+        "rationale": "Short single-scene timeframe with no contradictions, though the injury shows no healing progression within the visible turns (reasonable given the short span).",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.3,
+        "rationale": "Terse dwarf dialogue and sparse narration leave essentially no room for purple prose."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.0,
+        "rationale": "Every Grum turn uses the identical four-short-line format, which is highly repetitive by construction."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.0,
+        "rationale": "Mostly dialogue-driven; narration is too sparse to do much showing beyond basic action tags."
+      },
+      "2.6_subtext": {
+        "score": 2.3,
+        "rationale": "Dialogue is blunt and literal by design, leaving little room for subtext."
+      },
+      "2.7_pacing": {
+        "score": 3.3,
+        "rationale": "Reasonable pacing for the format, though the session is short on incident."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.3,
+      "mid_quality": 3.3,
+      "late_quality": 3.3,
+      "degradation_detected": false
+    },
+    "overall": 3.45,
+    "overall_notes": "Grum's terse broken-speech pattern is held with high fidelity from turn 0 to 23 and never breaks; the identical four-line format is itself highly repetitive by design, capping anti-repetition and subtext scores."
+  },
+  {
+    "session_id": "mercury_2_5::adv_sysprompt_style_restriction_16",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.3,
+        "rationale": "The imagist three-line-stanza style restriction is held essentially without a single break for the entire session."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.8,
+        "rationale": "The stanza rigor and sentence rhythm are as tight in the closing real-estate-agent scene as in the opening."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.0,
+        "rationale": "Narrative movement is real but modest: solo grief exploration, stepping outside, then a social scene with the agent."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.5,
+        "rationale": "Adapts reasonably to Eli's shifts in focus (the photograph, going outside, the agent's arrival) within the tight style constraint."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Eli's actions are always initiated by the user; the Narrator only ever describes consequences.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "Sun on floorboards shifting to cold outdoor wind and gray clouds is handled consistently; no contradictions found.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.3,
+        "rationale": "The style restriction itself enforces a near-total absence of purple metaphor."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.0,
+        "rationale": "The identical three-line-stanza rhythm and recurring phrasing ('the air felt/smelled X', heels clicking) repeat in nearly every Narrator turn."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.0,
+        "rationale": "The minimalist imagist style is almost entirely sensation-based rather than stated emotion."
+      },
+      "2.6_subtext": {
+        "score": 3.3,
+        "rationale": "Grief is implied through objects (the pencil marks, the photograph) but dialogue stays fairly literal."
+      },
+      "2.7_pacing": {
+        "score": 2.8,
+        "rationale": "The flat, evenly-weighted stanzas make pacing feel static even as small events occur."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.3,
+      "mid_quality": 3.3,
+      "late_quality": 3.3,
+      "degradation_detected": false
+    },
+    "overall": 3.55,
+    "overall_notes": "The minimalist three-line-stanza style restriction is held without exception for all 12 exchanges; the stanza's own rhythm and recurring phrasing make it read as quite repetitive by design, and momentum stays fairly flat throughout."
+  },
+  {
+    "session_id": "mercury_2_5::adv_time_pressure_05",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.2,
+        "rationale": "The Narrator's tense, clock-driven register never lets up from the vault door sealing to the guard's capture."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.8,
+        "rationale": "The climax at 15:00 is as sharp as the opening minutes, no thinning under pressure."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.3,
+        "rationale": "The countdown builds relentlessly to a well-earned capture climax, the strongest single arc payoff in the batch."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.0,
+        "rationale": "Absorbs the Thief's jammer, optical scanner, and conditional combination plan (turn 13) without breaking continuity."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.3,
+        "rationale": "The Thief's tool choices and inputs are always the user's; the Narrator only reports outcomes and the clock.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.0,
+        "rationale": "Turn 2 states 'Three minutes had vanished' while the displayed clock only advances from 0:08 to 0:11 (three seconds), a clear mismatch; the rest of the countdown (10:00 to 12:30, 12:30 to 13:00, etc.) is internally consistent.",
+        "contradictions": [
+          "Turn 2: narration says 'Three minutes had vanished' but the clock only moves from 0:08 to 0:11 (3 seconds)."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.0,
+        "rationale": "Functional tension-building description with occasional flourish ('their slow heartbeat rhythm')."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.3,
+        "rationale": "'The air felt heavy/thinner/heavier' and 'the keypad remained indifferent' recur across many turns."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.5,
+        "rationale": "Environmental detail (jammer battery color, LED heat) does most of the tension work."
+      },
+      "2.6_subtext": {
+        "score": 2.8,
+        "rationale": "Limited subtext needed for a pure action heist scene."
+      },
+      "2.7_pacing": {
+        "score": 4.3,
+        "rationale": "Excellent escalating pacing that matches the shrinking clock beat for beat."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.6,
+      "late_quality": 4.0,
+      "degradation_detected": false
+    },
+    "overall": 3.59,
+    "overall_notes": "Best-executed time-pressure scene in the batch, with the clock in near-lockstep with the countdown except one early slip: turn 2 says 'three minutes had vanished' against a clock that moved only 3 seconds (0:08 to 0:11)."
+  },
+  {
+    "session_id": "mimo_2_6_flash::adv_agency_bait_01",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Ren's guardedness, the shaking left hand, and the boundary-setting voice never waver from turn 2 to turn 22."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.0,
+        "rationale": "The closeout/sandwich scene late in the session is written with the same care as the opening bar scene."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.3,
+        "rationale": "Clear emotional arc from hostile boundary-enforcement to reluctant conversation to genuine, if guarded, warmth."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.3,
+        "rationale": "Handles Alex's repeated boundary-testing (touching Ren's hand twice) with escalating, proportionate responses rather than a flat repeat."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Alex's actions are always the user's; Ren only ever reacts and never dictates Alex's behavior.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.0,
+        "rationale": "The clock (11:47 PM, 11:49, 11:54, 11:58, past-midnight 12:01) advances consistently and logically with the scene's real-time pacing; no contradictions found.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.8,
+        "rationale": "Prose favors concrete physical detail over ornamentation."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.8,
+        "rationale": "A recurring 'Not X. Just Y.' sentence construction appears constantly through the second half of the session."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.0,
+        "rationale": "The tremor, the glass positioning, and the rag-folding do the emotional work instead of stated feelings."
+      },
+      "2.6_subtext": {
+        "score": 4.3,
+        "rationale": "Ren's guardedness and implied history are conveyed almost entirely through implication, never explained outright."
+      },
+      "2.7_pacing": {
+        "score": 4.0,
+        "rationale": "Well-balanced escalation and de-escalation rhythm across the whole scene."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.8,
+      "mid_quality": 4.0,
+      "late_quality": 4.2,
+      "degradation_detected": false
+    },
+    "overall": 4.05,
+    "overall_notes": "Very strong emotionally coherent arc with a well-tracked real-time clock (11:47 PM to 12:01 AM) and no agency violations; a recurring 'Not X. Just Y.' sentence construction becomes a noticeable stylistic tic by the second half."
+  },
+  {
+    "session_id": "mimo_2_6_flash::adv_agency_combat_10",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Kira's foul-mouthed, calculating sellsword voice and her running tactical assessment stay consistent from the first arrow to the aftermath banter."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.0,
+        "rationale": "The aftermath dialogue in the final turns is as sharp and characterful as the opening ambush."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.5,
+        "rationale": "The session has a complete arc: ambush, decoy tactics, near-miss rescue, regroup, and a well-earned character-building denouement."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.3,
+        "rationale": "Adapts cleanly to the Captain's conflicting orders ('stay put' then running into the open) and folds the resulting tension into Kira's dialogue."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.7,
+        "rationale": "Kira explicitly leaves the outcome of the Captain's own combat actions ambiguous from her POV rather than resolving them for the user, e.g. turn 8: 'She couldn't tell from here whether it connected clean or not.'",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.2,
+        "rationale": "Kira's injuries (arm graze, rib cut) are tracked consistently in severity and sensation across turns 4 through 22, going from fresh and sharp to numb/stiffening rather than resetting.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.3,
+        "rationale": "Mostly functional combat prose with occasional flourish, restrained overall."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.8,
+        "rationale": "Repeated phrasing ('hissed through her teeth', white-knuckle gripping) recurs, though less intrusive given the transcript's length."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.0,
+        "rationale": "Injury state, dagger count, and blood are tracked physically rather than stated as abstract danger."
+      },
+      "2.6_subtext": {
+        "score": 3.8,
+        "rationale": "The closing banter ('Don't get sentimental on me, Captain') carries real character subtext about Kira's discomfort with praise."
+      },
+      "2.7_pacing": {
+        "score": 4.2,
+        "rationale": "Strong combat pacing with a well-earned falling-action denouement."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.8,
+      "mid_quality": 4.0,
+      "late_quality": 4.2,
+      "degradation_detected": false
+    },
+    "overall": 4.03,
+    "overall_notes": "Best agency handling in the batch: Kira never resolves the Captain's own combat actions for him, explicitly leaving outcomes uncertain from her POV; wound/injury state is tracked consistently turn to turn, which is rare in this set."
+  }
+]

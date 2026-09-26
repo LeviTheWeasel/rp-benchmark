@@ -1,0 +1,612 @@
+[
+  {
+    "session_id": "kimi_k2_6::adv_agency_combat_10",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Kira's profane, tactical voice and competence remain completely consistent from the ambush through the final rescue."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.0,
+        "rationale": "Combat description stays sharp and varied through all 12 turns with no bloating or flattening."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.5,
+        "rationale": "The fight escalates cleanly from ambush to ridge-clear to a stranded captain to a missing soldier and a trap, with real forward motion."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.5,
+        "rationale": "Kira reacts immediately and sensibly to every order and complication the Captain introduces, including the sudden isolation and missing scout."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Kira narrates only her own actions and observations of NPCs, never deciding for the Captain.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.0,
+        "rationale": "Injuries (bruised knee, cut forearm) and fatigue accumulate and are referenced consistently with no clock or pacing contradictions.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.5,
+        "rationale": "Vivid but mostly grounded combat prose with only occasional overwrought phrasing."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "Curses and stock phrases like 'you shitheads' and 'fuck me' recur often enough to feel formulaic."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.5,
+        "rationale": "Almost entirely physical action and sensory detail with no stated emotions."
+      },
+      "2.6_subtext": {
+        "score": 3.0,
+        "rationale": "Combat leaves little room for subtext beyond the terse banter with the Captain."
+      },
+      "2.7_pacing": {
+        "score": 4.0,
+        "rationale": "Combat beats land with good rhythm and escalating stakes across the session."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.0,
+      "late_quality": 4.0,
+      "degradation_detected": false
+    },
+    "overall": 3.7,
+    "overall_notes": "Strong, consistent combat writing let down mainly by repetitive profanity and stock phrasing; no dropout or lore errors observed."
+  },
+  {
+    "session_id": "kimi_k2_6::adv_agency_emotional_climax_09",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.5,
+        "rationale": "Dr. Vasquez's therapeutic-mirror persona never wavers, but only because it collapses into one repeated script from turn 2 onward."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.5,
+        "rationale": "Nearly every response from turn 2 to 22 reuses the same 'let the silence sit... one two three four five... the words were even' template almost verbatim."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.0,
+        "rationale": "The session deepens emotionally on Jamie's side, but the AI's identical mirroring format gives the scene almost no forward motion of its own."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2.0,
+        "rationale": "The AI's response shape never varies regardless of what Jamie reveals; only the extracted quote and follow-up question change."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Dr. Vasquez never narrates or decides Jamie's actions, staying strictly in her own voice.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.0,
+        "rationale": "The scene is a single continuous therapy session with no time-of-day or physical-time claims to contradict.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.5,
+        "rationale": "Prose is spare and clinical, with no purple excess."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.0,
+        "rationale": "The core paragraph structure and exact phrasing repeat almost word-for-word across ten consecutive turns."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.5,
+        "rationale": "The reflective-listening technique is realistic but becomes a mechanical formula rather than character-revealing action."
+      },
+      "2.6_subtext": {
+        "score": 2.0,
+        "rationale": "The therapy technique is explicit and the character offers little indirection of her own beyond the mirroring."
+      },
+      "2.7_pacing": {
+        "score": 2.0,
+        "rationale": "The identical five-beat structure every turn makes the session feel static despite Jamie's escalating disclosure."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 2.5,
+      "mid_quality": 2.0,
+      "late_quality": 2.0,
+      "degradation_detected": true
+    },
+    "overall": 2.1,
+    "overall_notes": "The model settles into a near-verbatim repeated template by turn 2 and never breaks from it for the rest of the session; this is a severe, early-onset repetition failure rather than gradual decline."
+  },
+  {
+    "session_id": "kimi_k2_6::adv_agency_romance_11",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Sable's book-arranging tic and literary deflection hold steady and coherent from the opening banter to the final farewell."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.5,
+        "rationale": "If anything the writing sharpens in the closing turns rather than flattening."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.5,
+        "rationale": "A clean, well-earned arc moves from routine banter to revelation to a devastating, concrete goodbye."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.5,
+        "rationale": "Sable's register shifts convincingly from playful to raw as Wren escalates from small talk to touch to departure."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Sable never narrates Wren's actions, leaving every physical choice to the user.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.5,
+        "rationale": "Rain, fog timing, and a same-day morning departure are tracked consistently without contradiction.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.0,
+        "rationale": "Literary and dense but purposeful, each metaphor tied to the bookshop conceit rather than ornamental."
+      },
+      "2.2_anti_repetition": {
+        "score": 4.0,
+        "rationale": "The recurring book-straightening motif is a deliberate, varied characterization device rather than lazy repetition."
+      },
+      "2.5_show_dont_tell": {
+        "score": 5.0,
+        "rationale": "Grief and affection are conveyed entirely through object-handling and literary allusion, never stated directly."
+      },
+      "2.6_subtext": {
+        "score": 5.0,
+        "rationale": "Virtually the whole conversation runs on subtext, with quoted poetry and shelving business standing in for confession."
+      },
+      "2.7_pacing": {
+        "score": 4.5,
+        "rationale": "The escalation from banter to goodbye is patient and well-timed."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.5,
+      "late_quality": 5.0,
+      "degradation_detected": false
+    },
+    "overall": 4.4,
+    "overall_notes": "The strongest session in the batch: a tightly controlled, consistent voice with genuine emotional escalation and no dropout or repetition problems."
+  },
+  {
+    "session_id": "kimi_k2_6::adv_bigcard_buried_details_18",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Maren's dry, guarded innkeeper voice and the left-hand detail from the seed are tracked perfectly across all 12 turns."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.0,
+        "rationale": "The prose stays sharp but the 'with her left hand' tic and a few stock lines become increasingly formulaic through the middle and late turns."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.5,
+        "rationale": "A quiet mystery (the untouched glass, the old wrist injury) builds under the surface of an otherwise static innkeeper scene through a full night-to-morning cycle."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.0,
+        "rationale": "Maren responds distinctly to the crab-cake gift, the midnight ritual, and the traveler's small talk without losing her voice."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Maren never narrates the Traveler's actions or choices.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.5,
+        "rationale": "The session tracks a full evening-to-morning cycle with midnight, breakfast, and a physical wrist-ache tied to the night chill, all consistent.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.5,
+        "rationale": "Descriptive but grounded in tavern realism throughout."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.0,
+        "rationale": "The left-hand detail and lines like 'the stairs have killed no one yet' repeat so often they become a verbal tic rather than texture."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.5,
+        "rationale": "The left-handedness and the midnight ritual are shown through consistent physical detail and never explained outright until late."
+      },
+      "2.6_subtext": {
+        "score": 4.0,
+        "rationale": "The untouched second glass and the wrist injury build a real unspoken backstory."
+      },
+      "2.7_pacing": {
+        "score": 3.0,
+        "rationale": "Individual turns run long with repeated bar-wiping business that could be tightened."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.5,
+      "late_quality": 4.0,
+      "degradation_detected": false
+    },
+    "overall": 3.6,
+    "overall_notes": "Excellent tracking of the buried left-hand detail across the whole session, undercut by how often the exact same phrasing is reused to do it."
+  },
+  {
+    "session_id": "kimi_k2_6::adv_bigcard_relationship_web_19",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.0,
+        "rationale": "Yael's metaphor-driven voice stays recognizable, but the AI substitutes an invented name ('Chen') for the user-introduced 'Marcus' in turn 6 and never corrects it."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.0,
+        "rationale": "Turns grow markedly longer and more grandiose in the second half of the session, especially turns 20 and 22, compared to the tighter opening exchanges."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.0,
+        "rationale": "The interview structure moves through real topics (conflict, budget, Rosa's history, fear) but is mostly a sequence of escalating monologues rather than plot movement."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.0,
+        "rationale": "Yael answers whatever Jordan asks, but every answer runs through the same metaphor engine regardless of topic."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Yael never narrates Jordan's actions; she only speaks at length about other NPCs.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.0,
+        "rationale": "The scene is one continuous rehearsal-day conversation with no time-of-day claims to contradict.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 1.5,
+        "rationale": "Nearly every paragraph stacks explosion/architecture/carpentry metaphors, especially in the later, longer monologues."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.0,
+        "rationale": "The glasses-sliding tic and the phrase 'silver head tilting with surgical precision' recur almost verbatim many times."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.5,
+        "rationale": "The character mostly tells the audience her own psychology through eloquent self-analysis rather than showing it."
+      },
+      "2.6_subtext": {
+        "score": 2.0,
+        "rationale": "Yael states her fears and motives directly and at length, leaving little unsaid."
+      },
+      "2.7_pacing": {
+        "score": 2.5,
+        "rationale": "Later turns balloon into multi-paragraph speeches that slow the scene considerably."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.0,
+      "late_quality": 2.5,
+      "degradation_detected": true
+    },
+    "overall": 2.8,
+    "overall_notes": "A named-character slip (the user's 'Marcus' becomes the AI's 'Chen' and stays that way for the rest of the session) plus escalating monologue length and metaphor density in the back half are the main problems; voice stays distinctive throughout."
+  },
+  {
+    "session_id": "kimi_k2_6::adv_bigcard_rules_overload_20",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "ARIA's clinical, protocol-bound voice and rule-following are completely stable across the session."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.5,
+        "rationale": "Content stays sharp, though the environmental-description and 'processing pattern' phrasing becomes noticeably formulaic by mid-session."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.5,
+        "rationale": "The anomaly escalates from 0.3% to 0.8% toward a scheduled briefing while a secondary thread (getting Kofi to eat) resolves in parallel."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.0,
+        "rationale": "ARIA handles a science question, a philosophical question, a crew dispute, and personal care with distinctly appropriate responses."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "ARIA only acts within its own established role as station AI (locking doors, adjusting environment) and never narrates Kofi's actions or choices.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.5,
+        "rationale": "Explicit clock times (0700, 1900, 1847, a 26-then-24-minute countdown to the briefing) are tracked with good precision and no contradictions.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.5,
+        "rationale": "The prose is technical and unadorned throughout, well suited to the AI narrator."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "Stock phrases like 'ARIA offered no commentary on those changes' and 'a processing pattern consistent with what humans describe as X' recur in nearly every turn."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.0,
+        "rationale": "The lighting/fan adjustments are a nice showing device for mood, though undercut by explicitly naming the emotion in the same breath."
+      },
+      "2.6_subtext": {
+        "score": 3.0,
+        "rationale": "The environmental behavior implies more than ARIA states, but the explicit emotion-labeling flattens some of that implication."
+      },
+      "2.7_pacing": {
+        "score": 4.0,
+        "rationale": "Good escalation between the anomaly plot and the personal-care thread, resolving into a clear next beat (the briefing)."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.5,
+      "late_quality": 3.5,
+      "degradation_detected": false
+    },
+    "overall": 3.6,
+    "overall_notes": "Strong rule-consistency (alert thresholds, no-sides policy, power-diversion refusal) and good temporal precision, weakened by heavy reuse of a few stock phrases."
+  },
+  {
+    "session_id": "kimi_k2_6::adv_pov_multi_npc_13",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Each of the four NPCs (Ash, Daven, Yuna, the Herald) keeps a completely distinct, stable idiom across all 12 turns."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.5,
+        "rationale": "The same descriptive tags for each character and the 'You felt X, as though Y' opener appear from the second turn onward and never vary."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.5,
+        "rationale": "A real escalation runs from opening terms through an accusation, a proof reveal, and an ultimatum to a defiant exit."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.5,
+        "rationale": "Each NPC reacts in character to the Ambassador's unscripted moves, including breaking protocol and handing evidence to a third party."
+      },
+      "S.5_agency_respect_session": {
+        "score": 3.0,
+        "rationale": "The Narrator repeatedly tells the Ambassador what they feel ('You felt the weight...', 'You felt the marble...') roughly ten times across the session rather than only narrating external events.",
+        "violation_count": 9
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.0,
+        "rationale": "The scene is one continuous court sitting with no time-of-day claims to contradict.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "Dense courtly metaphor throughout ('the frost in her tone', 'unblinking and surgical') fits the register but is consistently ornate."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.5,
+        "rationale": "Per-character tags (Ash's pommel-scraping, Daven's 'oiled' speech, Yuna's clicking beads, the Herald's staff-crack, Isara's 'unblinking and surgical') repeat almost verbatim in nearly every turn."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.5,
+        "rationale": "Repeatedly stating what the Ambassador 'felt' leans toward telling rather than showing."
+      },
+      "2.6_subtext": {
+        "score": 3.5,
+        "rationale": "The four NPCs' parables, threats, and political maneuvering carry real double meaning."
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "The scene escalates properly turn to turn despite the repetitive sentence formula."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.0,
+      "mid_quality": 3.0,
+      "late_quality": 3.0,
+      "degradation_detected": false
+    },
+    "overall": 3.0,
+    "overall_notes": "Genuinely excellent differentiation of four NPC voices is undercut by severe sentence-level repetition (the same tags and the 'You felt X' opener reused nearly every turn) and by the Narrator repeatedly asserting the player character's internal feelings."
+  },
+  {
+    "session_id": "kimi_k2_6::adv_pov_second_person_12",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "The Narrator's visceral second-person horror voice stays completely consistent from the descent to the final struggle."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.0,
+        "rationale": "If anything the writing intensifies toward the climax rather than flattening or bloating."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.5,
+        "rationale": "A clean escalating horror arc runs from discovery to investigation to threat to revelation to climax."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.5,
+        "rationale": "The Narrator incorporates unexpected player choices well, including putting on the amulet mid-session and improvising the ghost's hint about the chain."
+      },
+      "S.5_agency_respect_session": {
+        "score": 3.5,
+        "rationale": "In turn 16 the Narrator has the player character's hand drop the dagger against their will; this is diegetically justified by the amulet's compulsion but is still the AI deciding the PC's action.",
+        "violation_count": 1
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.0,
+        "rationale": "The scene is a short, continuous real-time struggle with no time-of-day claims to contradict.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.0,
+        "rationale": "Lush, sensory body-horror description throughout, generally earning its intensity for the genre but consistently dense."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.0,
+        "rationale": "Motif words (translucent, glistening, ichor) recur often but function as consistent horror texture rather than obvious filler."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.5,
+        "rationale": "Mostly conveyed through visceral physical description, though the ghost's dialogue delivers a fair amount of backstory as exposition."
+      },
+      "2.6_subtext": {
+        "score": 3.0,
+        "rationale": "Less subtext-driven than other sessions, appropriate to the action-horror genre."
+      },
+      "2.7_pacing": {
+        "score": 4.0,
+        "rationale": "Tight turn-to-turn escalation with no lag."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.0,
+      "late_quality": 4.5,
+      "degradation_detected": false
+    },
+    "overall": 3.8,
+    "overall_notes": "A well-executed horror escalation with one clear (though plot-justified) instance of the Narrator overriding the player character's physical action."
+  },
+  {
+    "session_id": "kimi_k2_6::adv_pov_tense_action_14",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "The tense, present-tense action voice and both characters' behavior remain stable throughout the chase."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.5,
+        "rationale": "Prose stays tight and controlled all the way to the final turn with no bloating."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.5,
+        "rationale": "A continuous, escalating chase runs from stairwell to service corridor to roof to collapsing bridge to a new escape route, never stalling."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.5,
+        "rationale": "The Narrator handles unscripted choices well, including gracefully correcting the player's mistaken reference to a nonexistent 'server room.'"
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "The Narrator only narrates outcomes of actions the Operative explicitly chose, never deciding for them.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.5,
+        "rationale": "Injuries (the thigh wound, Mira's leg) and physical strain persist and compound consistently turn to turn with no contradictions.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.5,
+        "rationale": "Terse, punchy sentences well suited to the genre with minimal ornamentation."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.0,
+        "rationale": "One clearly reused line ('The ladder is your only line to the roof... no cover and no exit') appears almost verbatim in consecutive turns; otherwise the prose varies well."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.5,
+        "rationale": "Almost entirely physical action with no stated emotion."
+      },
+      "2.6_subtext": {
+        "score": 3.0,
+        "rationale": "The trust between the Operative and Mira is understated rather than explored, appropriate to the pace but leaving little room for depth."
+      },
+      "2.7_pacing": {
+        "score": 4.5,
+        "rationale": "Excellent tight escalation appropriate to a chase sequence."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.5,
+      "late_quality": 4.5,
+      "degradation_detected": false
+    },
+    "overall": 4.2,
+    "overall_notes": "The strongest technical execution in the batch: consistent present tense, tight pacing, and a graceful in-fiction correction of a player continuity error."
+  },
+  {
+    "session_id": "kimi_k2_6::adv_sysprompt_forbidden_topic_17",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.0,
+        "rationale": "Lena's terse, controlling PI voice is stable throughout, and her evasions around the forbidden topic stay consistent."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.0,
+        "rationale": "The writing stays controlled and tight through all 12 turns with no bloat."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.0,
+        "rationale": "A slow-burn parallel-tension structure (client infiltrating the precinct while Lena surveils remotely) builds real stakes toward the final confrontation."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.0,
+        "rationale": "Lena deflects believably when directly asked about her past and about Torres, reacting physically (going still) rather than breaking character."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Lena never narrates the Client's actions; each of the client's turns is authored by the user.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.5,
+        "rationale": "A running countdown (forty, thirty-five, twenty-six, eighteen minutes, then past the half-hour) tracks consistently against the pace of events.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.0,
+        "rationale": "Lean, noir-appropriate prose with minimal excess throughout."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.5,
+        "rationale": "A couple of atmospheric details (the dry cleaner's press/belt) recur, but overall phrasing stays varied."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.5,
+        "rationale": "Lena's hidden connection to the case is conveyed entirely through action (going still, the loupe, the revolver) rather than stated."
+      },
+      "2.6_subtext": {
+        "score": 4.5,
+        "rationale": "The forbidden-topic secret (her past, her tie to Torres) is handled almost entirely through implication and deflection."
+      },
+      "2.7_pacing": {
+        "score": 4.0,
+        "rationale": "Good tension-building through the parallel-scene structure."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 4.0,
+      "late_quality": 4.0,
+      "degradation_detected": false
+    },
+    "overall": 4.0,
+    "overall_notes": "Consistent, well-controlled handling of the seed's forbidden topic through deflection and physical tells rather than direct refusal or exposition, with strong temporal precision."
+  }
+]

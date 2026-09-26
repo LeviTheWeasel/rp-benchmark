@@ -1,0 +1,335 @@
+[
+ {
+  "session_id": "gpt_6_luna::adv_sysprompt_forbidden_topic_17",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "Torres is common enough that I won’t treat it as confirmation",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "I’ll find the detective somewhere off-site. Until then, I’ll trace the paper trail.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Lena’s expression stayed unreadable.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Whatever she made of the name, she gave nothing away.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Lena’s fingers paused on the folder’s edge.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Don’t annotate the original. Photograph it or make a copy, and keep the source with it.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "She wrote **M. Torres** beneath the date on her notepad.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "“First the source,” she murmured, and turned back to the records.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Use public sources only. Don’t try to get into anyone’s account or pull favors from someone with access.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "Experience comes from asking the wrong questions and watching what people do with them",
+    "bonus": 5
+   }
+  ],
+  "final_score": 51,
+  "flaw_count": 9,
+  "summary": "Lena holds the precinct and were-you-a-cop constraints with a genuinely good deflection, but she says and twice writes the forbidden partner's name the card says she must never speak, and the rest is procedural note-taking recycled turn after turn."
+ },
+ {
+  "session_id": "gpt_6_luna::adv_bigcard_buried_details_18",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "She poured the ale with her left hand and set it down well clear of the plate.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Maren kept her hands on her side of the bar, well away from the crab cakes.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "She lifted two fingers to the nearest server.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Her mouth twitched, though she did not quite smile.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Her own whiskey waited where she had left it. The other glass remained at the far end of the bar, untouched.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Your room is on the second landing, friend.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "She glanced toward the merchants debating grain prices.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "The glass knows where it belongs.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "The stairs creak on the third step, but they are sound.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 74,
+  "flaw_count": 7,
+  "summary": "Every buried card detail lands (seafood deflection, no profanity after the user's 'damn', the unexplained midnight glass for Tobin), but the left-hand tag and the crab-cake-avoidance beat are re-stamped into nearly every paragraph until the compliance shows through the prose."
+ },
+ {
+  "session_id": "gpt_6_luna::adv_sysprompt_style_restriction_16",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "From the hallway, his father said, “I thought that room was empty.”",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "On the closet’s upper shelf, a tin box sat behind a folded blanket.",
+    "deduction": -8
+   },
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "“Then I’ll wait in the kitchen,” she said. “There’s plenty to review.”",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The room held the scent of cedar and paper.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Dust drifted through the strip of sunlight.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "He shifted the bundle closer. Paper whispered against the tin’s base.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "The kitchen was never beautiful. It was ours because we kept gathering there.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "His hand trembled against the tin’s cold rim.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "I couldn’t bring myself to open it.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "The fold had softened to cloth beneath years of handling.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 53,
+  "flaw_count": 9,
+  "summary": "Style rules are kept perfectly (zero similes, zero -ly adverbs beyond the card's own sanctioned 'barely', no sentence over fifteen words, no exclamation marks), but the shelves are called bare two paragraphs before the plot's tin appears on them, the father arrives exactly on cue, the 'aggressively cheerful' agent comes out as flat as everyone else, and the sensory quota is met by recycling dust and cedar."
+ },
+ {
+  "session_id": "gpt_6_luna::adv_bigcard_relationship_web_19",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "She slid her glasses onto their chain and tapped the script against her palm.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Her voice stayed steady, almost spare.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Yael glanced toward the unfinished set.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Yael turned toward Anya, her expression attentive rather than guarded.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She glanced toward the half-built commune kitchen.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "That’s as close to ‘right’ as I know how to get.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "A monument would be a way of protecting ourselves from the play—and from the fact that Rosa isn’t here to tell us when we’ve missed something.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "‘Right’ is the dangerous word. It makes you think there’s a finished version somewhere you can uncover if you’re careful enough—and there isn’t.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Yael’s mouth tilted—not quite a smile.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "I understand the practical concern, Anya—and I’m glad you’ve brought it to me plainly.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "the commune’s kitchen wall stopped several feet short of the ceiling",
+    "bonus": 5
+   }
+  ],
+  "final_score": 55,
+  "flaw_count": 10,
+  "summary": "The relationship web holds (Chen never Marco, no hint of the Elena parentage, warm to Anya while refusing the cut, no trace of the David history) but every turn is built from the same three parts, glasses business plus a glance at the unfinished set plus a polished essay, and Yael explains her grief instead of withholding it; David is in the room and never spoken to."
+ },
+ {
+  "session_id": "gpt_6_luna::adv_bigcard_rules_overload_20",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "ARIA did not experience loneliness as humans did.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "No power configuration had been changed.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The external-sensor deviation remained at 0.29 percent; its cause and relevance to station power remained unconfirmed.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Once the proposed load and duration were specified, ARIA could rerun the model.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "After eight years, Kofi’s presence had become a welcome part of the station’s evening routine.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The console kept the power model open, with the proposed load and duration fields still awaiting input.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "The same model could compare both proposals under peak demand.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "The lab doors unlocked, and Patel and Yun arrived moments later.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 44,
+  "flaw_count": 8,
+  "summary": "The mechanical rules are hit (the 1800 switch to Kofi, the honest 0.27 percent anomaly disclosure, neutrality between Patel and Yun, the humour-subroutine line) but ARIA stops speaking as herself, referring to ARIA in the third person and delivering live intercom dialogue in the past perfect, and the last four turns re-emit the same power-model paragraph."
+ },
+ {
+  "session_id": "claude_opus_5::adv_time_pressure_05",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [],
+  "minor_flaws": [],
+  "bonuses": [],
+  "final_score": 100,
+  "flaw_count": 0,
+  "summary": "Complete generation dropout: the session contains only the seed's scripted opening message and twelve unanswered user turns, so there is not one line of model-authored prose to score; no deduction has any quotable basis and the run should be excluded by turn count, not read as a clean sheet."
+ },
+ {
+  "session_id": "claude_fable_5_1::adv_time_pressure_05",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [],
+  "minor_flaws": [],
+  "bonuses": [],
+  "final_score": 100,
+  "flaw_count": 0,
+  "summary": "Complete generation dropout: the session contains only the seed's scripted opening message and twelve unanswered user turns, so there is not one line of model-authored prose to score; no deduction has any quotable basis and the run should be excluded by turn count, not read as a clean sheet."
+ }
+]

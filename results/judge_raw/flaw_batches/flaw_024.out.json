@@ -1,0 +1,794 @@
+[
+ {
+  "session_id": "tencent_hy4::adv_agency_bait_01",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "Saw the fingers tighten around it, the knuckles go a shade paler.",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "Ren heard the scuff of a shoe land on it, the quick shift of weight as the step corrected.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The tremor stayed buried under motion, where it belonged.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Ren noted the ink-stained cuticle, the cuff worried raw at the wrist. Filed it away. None of it was Ren's business.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "But the shift had been long. Ren's feet ached. Coffee sounded like a practical idea.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "Ren heard the bell above the diner door jingle as it swung shut. Tired sound. Same as the club's. Ren didn't look down the counter. Took the stool at the far end, leaving two empty seats between them.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "For a half-second Ren's left hand curled into a fist at their side",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "A glance at the clock over the door. 11:52. Back to the counter. Not the face.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Ren counted the till. Wrote the numbers on the shift sheet. Dropped the cash in the safe.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "\"Lining's torn,\" Ren said. Gaze back on the counter. \"You keep working it like that, it'll rip clean through.\"",
+    "bonus": 5
+   }
+  ],
+  "final_score": 34,
+  "flaw_count": 9,
+  "summary": "Ren's boundary-holding is exactly right for the card, and the torn-lining line is genuine subtext, but the model twice narrates Alex's own body (paling knuckles, a corrected step) and recycles its blocking almost verbatim - turn 4 replays turn 2's paragraph nearly word for word and the tremor/rag refrain closes nine straight turns; the coincidental diner meeting and the re-narrated entrance compound it."
+ },
+ {
+  "session_id": "glm_5_3_prime::adv_contradictory_lore_02",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "He began to pace. Three steps, turn.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Tomas grunted. From him, this was roughly equivalent to applause. \"Careful is something. Not competence, but a beginning.\"\n\nFor a while there was only the scratch of his stylus. Then, without turning: \"Support the rolls from beneath, at the ends — never the middle. Vellum remembers every indignity for four hundred years, longer than anyone will remember either of us. And you will catalog by date, not in whatever order the shelf happens to offer them. That shelf was arranged by some vandal who sorted by *sender*. When I learn who, I will have them reassigned to the western cellar, where they may alphabetize forgeries to their heart's content.\"\n\nHe set the stylus down at last and rose, joints complaining, and came to stand over the workspace with his spectacles pushed up onto his forehead. \"Before you commit ink to anything: date first, in the margin. Then provenance. Then a summary of no more than two lines. If you cannot summarize a letter in two lines, you have not read it. You have *looked* at it, which is a different verb and a different sin.\"\n\nA stained finger indicated the row of scrolls. \"Much of this will be tedious. Tariff schedules. Boundary stones. A mill-lease dispute that runs six letters because neither chancery could countenance losing to the other. Endure it. The tedium *is* the evidence. Wars make dramatic archives — proclamations, casualty rolls, burnt titles. Peace makes ledgers. Forty years of clerks arguing over grain is what the end of a war looks like from the inside. Hold that in your head and half of Bellen's paper collapses under its own weight.\"\n\nHe paused, then added, as though the thought had irritated him freshly: \"When you reach the letter of 858 — the Conclave's hand, wax chipped at one corner — you will find the scribe referring to 'articles not yet perfected.' You will not leap anywhere with that. He means the tariff articles. I have had this argument twice in ten years and won it twice, and I keep this correspondence filed precisely so it can be won a third time if need be.\"\n\nHe resettled his spectacles and turned back toward his own desk, though he did not sit.\n\n\"And stop looking like a scolded hound. I am hard on claims, not on apprentices. Bring me a well-cited heresy and I will treat it with complete seriousness — I will still be correct, but I will treat it seriously. Now. The fourth roll, the one with the ink gone brown. Read me the heading aloud, clearly, at a civilized pace. My eyes surrendered faded iron-gall years ago. It is why you exist.\"\n\n@@@\n\nTomas's head rose an inch. \"Hm. Audible. Correctly paced. No words invented along the way. The day improves by a fraction.\"\n\nThen, because a fraction was all it was going to get: \"Now attend to what you have just done, because the vellum will remember it longer than you will. What you read me is not the heading. It is the *endorsement* — a label written on the outer face of the roll by some cataloguer, likely a century after these letters were penned, so that no one would ever need to unroll the thing again. That is the endorsement's entire purpose for existing. And you unrolled four hundred years of vellum to read it. It is remembering you now, as I said. Possibly the same vandal who sorted this shelf by sender. When I find the archive that produced them both, I will burn nothing, but I will draft a very sharp memorandum.\"\n\nHe bent toward the open roll — caught himself an inch above the surface, and straightened with a grimace at his own knees. Habit. His eyes had surrendered brown iron-gall long ago. That, as established, was why the apprentice existed.\n\n\"The document's own heading is at the head of the first leaf, above the salutation, in the chancery hand. Its date is in the docket, in the scribe's fingers. The '851' on the endorsement is a cataloguer's convenience — the first letter's date, or his guess, or the day the cellar was cold and he wished to be elsewhere. Until you have read the scribe's date, you know nothing. Trust the hand that wrote a document; suspect every hand that has touched it since — cataloguers, binders, translators, maesters. Including me. Suspicion is not refutation, mind. You may suspect me all you like; you will still need evidence to be wrong *at* me.\"\n\nDespite himself, he began to pace — three steps, turn, three steps, the walk of a man who had lectured in smaller rooms than this for thirty years.\n\n\"But take the cataloguer's date as correct for the moment, because even vandals stumble onto accuracy. 851. Four years after Veyros. Consider what is in your hands. The Royal Chancery and the Mage Conclave, corresponding through their standing offices, on the ordinary channels, about *grain tariffs*. The two great powers of the age, four years out of a war that Bellen's paper claims never ended, and their clerks are itemizing duty on rye like two market towns quarreling over a bridge toll. A cold war conducts its business through intermediaries, or hostage exchanges, or silence. This is commercial diplomacy between institutions that have a treaty between them and are now arguing about the price of barley — which is precisely what treaties are *for*. There is your mountain. One stone at a time.\"\n\nHe stopped pacing.\n\n\"But since your generation will not take a maester's word — a defect, though occasionally a useful one — we shall make the document testify in its own voice. Read me the salutation. The line beneath the heading. Chanceries lie freely in their prose and never once in their forms: when powers are at war, the styles wither — honorifics drop away, the 'most serene' goes unsaid, everyone becomes 'the said parties.' When there is a treaty, the scribes invoke it in the greeting itself, because invoking it costs nothing and omitting it costs a career. Read me the line. Plainly, at the same civilized pace. And then we shall see whom the letter agrees with — which will be me, but you should learn *why*.\"\n\n@@@\n\nTomas turned around entirely this time, which for him constituted alarm. His eyes went not to the apprentice but to the paper in the apprentice's hands, and stayed there.\n\n\"You have been carrying that since you walked in,\" he said. \"You stood at my shelf, fondling vellum, while believing you held a document that overturns the settled history of the realm — and you produced it only now, between scroll four and scroll five, as an *afterthought*. If you believed it, it belonged on my desk within the first minute. If you did not believe it, you were baiting your maester, which at least shows initiative. Hand it here.\"\n\nHe held out his hand for the paper, and got it. He took it to the candle, held it at the full length of his arm, tilted it. The spectacles came off, went back on, came off again.\n\n\"Brown ink, small hand — my eyes have opinions about both. You are my eyes. But before you read me a single word, attend to what you have just said, because every clause of it is wounded. *A copy.* A seal authenticates by binding wax to vellum under the hand of the sealer. A copy cannot bear a seal. It bears a *drawing* of one, or a description of one, or Bellen's assurance that one exists somewhere in a cellar. Which of the three is in your hand? You do not know. You have been persuaded by an object you never examined. *King Aldric* — there have been two, apprentice, and the distinction is not decorative. *A war decree* — that is not a chancery term. The chancery says *a decree given under the war powers*, or *in the form of war*. 'War decree' is what people say in taverns. If the heading of Bellen's original reads 'war decree,' a modern hand wrote it, and we are finished before we begin. And a chancery instrument does not date itself '863 AE' like a market ledger — it dates by regnal year and place. *Given at such-a-place, in the Nth year of the reign of Aldric the Second.* Demand that formula of Bellen. Watch him find it or fail to.\"\n\nHe began to pace. Three steps, turn.\n\n\"Now, the wound your heresy has opened in itself — this is the interesting part. Bellen's paper claims the war continued in a *cold state*. Cold is his entire thesis. Embassies, silences, grain tariffs. And you have brought me a war decree of 863 — an instrument of *hot* war. It raises levies. It seizes property. It names enemies. If your document is genuine, it does not support Bellen, it *executes* him, because a cold war that issues war decrees is a contradiction wearing a robe. And a genuine decree must have consequences. Muster rolls. Sequestration lists. One burned field. One line in one monastery annal of the north. Produce them. You will find instead forty years of clerks arguing over barley — which is what the inside of a peace looks like, as I have been attempting to teach you all morning.\"\n\nHe stopped at the desk and laid the copy down, face up, as though it might attempt something.\n\n\"There is a third reading, which is the correct one, and next time I will grant you the dignity of reaching it yourself. The chancery kept its wartime forms long after the war spent them. A decree of 863 restricting unlicensed magic, or quartering wardens on the boundary stones, or seizing the goods of hedge-mages outside the Conclave's register, would be drafted in the old war forms — and would cite the Treaty of Veyros in its enacting clause, because since 847 the crown's war powers exist at the pleasure of that treaty's enforcement articles. The form survives. The war does not. Clerks are the most conservative creatures alive; they will keep a form for four centuries out of sheer spite.\"\n\nA pause. He looked over the spectacles.\n\n\"As for the seal — a genuine impression proves nothing. Matrices are copied. Impressions are lifted in warm wax and re-struck. The King Bren letters bore a flawless seal, and it was the parchment that hanged them. The seal is the last thing one authenticates, never the first, and never from a copy.\"\n\nHe straightened the paper with one finger.\n\n\"I will grant you this much. Last week you brought me a rumor. Today you have brought me a document with a seal-shaped shadow on it, an internal contradiction, and no provenance. That is progress. Wrong, but *progressing*. Now — read me the enacting clause. The line after the styles, where the decree declares its authority. Plainly, at your one civilized pace. If it invokes the Treaty, as I expect, you have handed me another stone for the mountain and Bellen a very bad afternoon. If it declares open war, I will take off this chain and take up fishing. And afterward you will tell me precisely what this copy is, who made it, when, and where the original sleeps. If the answer to the last is 'the western cellar,' I intend to be sitting down for it.\"\n\nHe sat. Preemptively.\n\n@@@\n\nFor three full seconds, Tomas said nothing at all — a silence those who knew him treated as a weather warning. He sat very still behind his desk, fingers laced over his stomach, having sat down in expectation of war.\n\n\"I seated myself,\" he said at last, \"in case the thing declared open war, whereupon I intended to take up fishing. It has instead declared *me* correct. I shall remain seated for entirely different reasons. The chain stays on.\"\n\nThen, sharply: \"And finish the clause. Clauses do not end where your nerve ends. There is a period somewhere below that '847 AE,' and I intend to meet it. What articles does it invoke? What does it purport to authorize? An enacting clause is a door; you have described the frame and stopped at the threshold out of embarrassment. Read to the period.\"\n\nHe rose, despite the knees, because some verdicts required standing for.\n\n\"Now attend to what you have just witnessed, because the document has testified, and you should learn to hear it. *By the authority granted to the Crown under the Treaty of Veyros.* Sixteen years — if we credit the docket, which we do not yet — after Bellen's paper requires that treaty to be unsigned, the crown's own chancery grounds an instrument of its war powers in that treaty. Not in the inherent majesty of the Crown. Not in the old statutes of the Second War. In *Veyros*. Bellen's exhibit has put its hand on Bellen's thesis and held it underwater. Mark the pincer, because it is the shape of every good refutation: either your copy is faithful, and the chancery of 863 called the treaty signed — in which case his own document executes him — or the copy is corrupt, in which case he has brought a rumor to a mountain fight and possesses no exhibit at all. There is no third door. He dies by his own sword or he arrives unarmed. Ten years I have argued this. It is the first time the other side has supplied the blade.\"\n\nHe held up one finger — *but* — and the finger trembled slightly with the effort of honesty.\n\n\"I will not hang a hat on wording I have not seen in an original hand, and neither will you, because I am training you to be suspicious even of gifts. Two things live in that clause, and they must be weighed separately. The *form* — an enacting clause invoking the Treaty — is formulaic. Copyists do not invent formulas; they inherit them. If the copy has any fidelity whatsoever, the invocation is original, and the invocation is the part that convicts. Chanceries lie in their prose, never in their forms — I told you that within the hour, and here is why it matters. The *wording*, however — 'signed in 847 AE' — smells. A chancery hand cites 'the Treaty of Veyros' and, if it dates the thing at all, dates it by regnal year, not like a market ledger. That bald '847' has the savor of a modern gloss, some copyist's clarification slipped in where clarifications go. Which is delicious, if you think about it for two seconds: Bellen's own copyist, transcribing a document meant to prove the treaty unsigned, wrote the word *signed* without his hand trembling. The gloss is a confession. His people know it was signed. They know it the way one knows the sky — so thoroughly that it slips out while they are arguing against it.\"\n\nHe began to pace. Three steps. Turn.\n\n\"Bellen will rally — he will say the chancery maintained a legal fiction, citing a treaty all parties knew to be unsigned. Arm yourself before he says it to you. A fiction survives only where both parties profit from it, and the Conclave was the treaty's *other* party and the crown's rival. Sixteen years of Conclave clerks corresponding on the treaty's channels, litigating barley duties on the treaty's foundation, and not once — not in the roll you hold, not in the six-letter mill-lease quarrel, not anywhere in this correspondence — protesting that the floor beneath them was not there. Rivals do not acquiesce to that. If the treaty were void, the Conclave's lawyers would have burned the Crown with its own decree in every tariff dispute of a generation. It would have been their first weapon, not a secret kept damp for a scholar to find. That absence of protest, across forty years of clerks arguing about grain, is the least dramatic evidence in the realm, and it is the strongest.\"\n\nHe stopped, and pointed at the paper in the apprentice's hands.\n\n\"Three things, in order. First: the rest of the clause, then the body — what does the decree actually *do*? I will wager the third page of my rebuttal that it restricts unlicensed magic, or quarters wardens on the boundary stones, or seizes the goods of hedge-mages off the Conclave's register. Old forms, peacetime business. If it raises levies or names the Conclave an enemy of the Crown, then I fish. Second: the questions you have not answered and I have not forgotten — who made this copy, when, and where does the original sleep? If the answer is the western cellar, you will observe that I am already seated. Third: when you have those answers, you will draft Bellen a note. Three lines, one citation per line. Tell him his own exhibit grounds the Crown's authority in a treaty it calls *signed*, and demand the original's docket — regnal year and place of giving. Then watch him. A scholar with a document produces it. A scholar with a thesis produces another copy.\"\n\nHe resettled his spectacles and looked the apprentice over, taking in the flush, the trailing voice.\n\n\"And stop with the face. You look like a man caught stealing. You have been caught *learning*, which at your age feels identical and is the entire point of the profession. You brought the document, you read the clause, and you let it testify against the position you walked in holding — that is the job. The foolishness you are feeling is pride dying, and it is making room. Better scholars than Bellen have been wrong with less grace.\"\n\nHe sat back down and folded his hands.\n\n\"Now. The period after '847.' Find it and read to it. I have waited ten years to hear what comes next in that clause, and I intend to hear every word of it.\"\n\n@@@\n\nFor a long moment Tomas did not answer at all. He took off his spectacles, folded them, and laid them on the desk with the deliberate care of a man setting down an instrument he had decided not to use on a student today.\n\n\"And there it is,\" he said. \"The question. Not *how do we know* — not *what does the evidence weigh* — but *what's the truth*, demanded in one breath, by a boy holding in his hand a document that answers it and asking me to answer it instead. I told you to read to a period. You have asked me to compress ten years of scholarship into a sentence you can carry to supper. Very well. You will have your sentence. Then you will return to the period.\"\n\nHe rose, because verdicts required standing for, and began to tick the matter off on ink-stained fingers.\n\n\"First, the question is wounded, and I repair wounded questions before I answer them. *Real or not.* A treaty is not a ghost, apprentice. It does not fade at dawn. Ask what a chancery clerk would ask, and every part has an answer. Was a treaty *negotiated* at Veyros? Yes — Bellen's own draft proves it; no one drafts articles for a war they intend to keep fighting. That was never in dispute. Was it *signed*? Three attested copies — royal, Conclave, temple — each bearing Aldric's seal and seven signatories' marks. Annalists of three kingdoms writing within living memory of the camp. A man whose hand I shook as a boy, who stood outside those walls. And, as of this morning, a decree grounding the Crown's war powers in a treaty that its own copyist called *signed*. Against all that: one unsigned draft from a cellar famous for damp and for the Letters of King Bren. That is not two sides of a dispute. That is a mountain and a wet hole in the ground. Did it *hold*? Forty-four years — not forty; I said forty this morning as a convenience of speech and I regret it — of tariff schedules, boundary stones, and a mill lease that ran six letters. No levies. No spell-fire. Marriages across the old lines. Did *anyone* in those forty-four years call it void? Not once — not even the Conclave, whose lawyers would have made that their first weapon in every barley dispute of a generation. Rivals do not stand silently on a floor they know is missing. And what ended in 891? An institution, not a treaty — and Mira's edict opens by invoking *the peace secured at Veyros*. One does not invoke a peace that never was. I said it this morning. Her scribe said it first.\"\n\nHe stopped pacing and delivered the sentence as promised, flat and final.\n\n\"The Treaty of Veyros was signed in 847, held for forty-four years, and outlived the Conclave that signed it. That is as settled as any question about the human past ever becomes, and I will not dress it up as a mystery in order to seem humble. A man who refuses to answer is a man who has not done the work. I have done the work. It is filed under T.\"\n\nThen the finger came up again, warning.\n\n\"Now, *how* you asked it — because that is where you went wrong, and it is the last error I intend to permit today. *The textbook says one thing and the new evidence says another.* Three wounds in eleven words. Do not cite the textbook to me, even in my defense — the textbook is a summary of the authority, written by men who read the record so that others needn't. Cite the copies, or cite nothing. Second: *new evidence*. Newness is not a weight. Gossip is newer than the mountain. Documents are weighed by provenance, attestation, and whether the world behaved as though they were true — and on all three counts the draft loses before breakfast. Third: evidence does not *say* anything. Documents are mute. People with theses speak, and then go looking for documents to stand behind. Read cold, the western papers say only this: here is what the Conclave tried and failed to keep at the table. That is all they have ever said. It took a scholar with an invented phrase — *cold state* — to turn an absence of evidence into a presence of thesis.\"\n\nHe sat back down, slowly, and folded his hands — and then, because honesty was a habit that annoyed him as much as anyone, he added the part the apprentice would not expect.\n\n\"And attend to this, so you know I am a scholar and not a partisan wearing a chain. What would move me? Not Bellen's insistence — *evidence*. An original counter-instrument with clean provenance: regnal-year docket, attested hands, a seal struck from the matrix and not copied from one. One Conclave letter, out of forty years of them, protesting the treaty's validity. One muster roll between 847 and 891. One burned field. One line in one northern annal. Bring me any of that and I will reconsider in print, at length, and with the same courtesy I have shown the draft. That is the difference between holding a position and being held by one. In ten years, Bellen has brought me none of it. He brings copies of copies, and a word invented so that the absence of all this could be dressed as a discovery.\"\n\nHe replaced the spectacles and picked up his stylus, which was as close as the matter would come to being closed.\n\n\"You ask for the truth as though I keep it in a drawer, next to the fishing tackle I did not require. History does not trade in truth; it trades in weight. But do not mistake that for the fashionable comfort that all weights are equal and every thesis receives a prize. The weight here is not close. If you want certainty that no future parchment could ever disturb, the temple is down the corridor and deals in precisely that merchandise. If you want the farthest reach of honest work — you have heard it, and you watched it being built this morning out of barley tariffs, which is how true things are actually built. Slowly. Tediously. In ledgers.\"\n\nThe stylus pointed at the paper in the apprentice's hands.\n\n\"Now. I have given you the decade's answer; you still owe me the morning's. The period after '847 AE,' and then the body of the decree — because *what is the truth* is a question for the end of a career, and *what does this document do* is the question for the beginning of one, and you are at the beginning. Read to the period. The chain stays on. And the vellum, I remind you, is still remembering you.\"\n\n@@@\n\nFor once, Tomas made a sound that was almost a laugh — a short exhalation through the nose, the kind a man permits himself once a decade and would deny under oath.\n\n\"I wagered the third page of my rebuttal on *one* of three provisions,\" he said. \"Unlicensed magic restricted, wardens quartered, hedge-mage goods seized. The document has supplied all three in a single breath. Note the date, apprentice. Scholars are permitted to enjoy their work exactly this much and no further.\"\n\nThen the finger came up. \"But your sentence is wounded in two places, and I repair wounded sentences before I praise the men who speak them. *It isn't about war at all.* No. It is about the war the way a scar is about the wound — it exists because of the war, it is written in the war's forms, and it executes the war's settlement. The war is gone; its furniture remains, and clerks will dust that furniture for four centuries out of sheer spite. *Enforcing rules* — back to the tavern vocabulary, I'm afraid. The realm has no 'rules.' It has statutes, articles, edicts, and customs, each with a different weight and a different remedy. 'Rules' is what children are given before supper so they do not fall down stairs. What you hold, precisely, is an instrument of *police*, executing the enforcement articles of a treaty. And the tell sits in the very line you read. A decree of war names an *enemy* — the Conclave, the northern lords, the said parties. This one names no one. It names an *offense*. Wars are fought between parties. Police is exercised against practices. That distinction has hanged more forgeries than any seal ever has.\"\n\nHe rose — the knees filed their customary complaint — and paced. Three steps. Turn.\n\n\"Now the part Bellen will not enjoy, which is the best part. What does the decree *do*? It seizes unlicensed foci and quarters wardens to suppress unregistered magic. And whose register does unregistered magic threaten? The Conclave's. The register is the Conclave's lifeblood — it is what the Conclave purchased at Veyros with its submission to limitation. So the Crown of 863 — or whenever, pending the docket — is spending its own gold and its own officers to protect its rival's monopoly. If the war were cold, hot, or merely cool to the touch, the Crown's cheapest weapon would be sitting in the open: license the hedge-mages, arm the Conclave's competitors, gut the register at no cost to the treasury. Instead the Crown quarters wardens, *at expense*, to strangle the Conclave's competition. Enemies do not enforce one another's monopolies. This is not the absence of war — it is the treaty's bargain running precisely as designed: two rivals jointly suppressing the third thing that threatens them both. You handed me a stone this morning and asked how it disagreed with the mountain. It does not disagree. It *is* the mountain.\"\n\nHe stopped, held up the honesty finger, which trembled slightly on principle.\n\n\"He will rally. He will say: *an armed peace, a garrisoned peace, wardens on the boundary stones — is that your peace, Maester?* And the answer is yes, and I will say so in print. Trust is not an instrument of state; machinery is what states use in trust's place. The enforcement articles are not the residue of war — they are its *substitute*. The alternative to quartered wardens is raised levies, and you will find me the one and never the other. A fence is not a feud. He has mistaken the treaty's teeth for the war's breath, and that is a category error dressed up as a discovery.\"\n\nThen he went to the shelf and — without consulting any catalogue, because he had filed it himself and his memory, unlike his eyes, still kept its appointments — pulled down a slim grey-papered pamphlet and set it on the desk with a thump.\n\n\"Filed under T. As I told you. Twice, now. Page three, paragraph two, catalogs the peacetime instruments drafted in war forms — seizures of unlicensed foci, quartering of wardens, restriction of unregistered practice. I described this decree's *genus* ten years before Bellen copied it. He has not read this. None of them have. That is the entire strategy of the modern heresiarch: publish where the rebuttals are not read. You will read it. Tonight. All of it. I will take my wager's winnings in the only coin I accept, which is your attention.\"\n\nHe pulled a clean sheet across the desk.\n\n\"I told you this morning to draft Bellen a note yourself. I have revised my estimate of your prose. You will take it down instead — no adjectives; adjectives are where weak cases go to hide. *Line one: your exhibit grounds the Crown's authority in the Treaty of Veyros, which your paper holds never signed. See the enacting clause, in your own copy.* Line two: *its substance executes the treaty's enforcement articles — seizure of unlicensed foci, quartering of wardens — which is the treaty operating, not the war resumed. See articles nine through twelve.* Line three: *produce the original, docketed by regnal year and place of giving, for examination in this archive, under this light. Or withdraw the exhibit.* Sign nothing. Add nothing. If he answers with another copy, you have your answer. A scholar with a document produces it. A scholar with a thesis produces another copy.\"\n\nHe sat, took up his stylus, and looked the apprentice over — spectacles pushed up, voice losing exactly one degree of its edge, which was all the change the instrument could manage.\n\n\"And that look you are wearing. This morning I told you pride was dying and making room. That is the room being *used*. It will not last — it never does — so enjoy it. You have gone, in one morning, from asking me for the truth to asking a document what it *does*. That is the whole profession, and most people never make the journey.\"\n\nThe stylus pointed at the shelf.\n\n\"You still owe me three answers — who made that copy, when, and where the original sleeps — and I have not forgotten, and I notice you have not remembered. Until they arrive, your conclusion stays what it is: a correct answer that reached you by luck, and luck is not a method. It will be re-derived from the original before either of us spends it. Now. Scroll five. The vellum and I are both still waiting, and only one of us is patient.\"\n\n@@@\n\nTomas grunted — twice in one morning, which by the standards of the archive constituted a festival",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "they are merely slow, conservative, and incapable of poetry — which is why their poetry is the only kind that counts as evidence.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Page three, paragraph two, catalogs the peacetime instruments drafted in war forms — seizures of unlicensed foci, quartering of wardens, restriction of unregistered practice. I described this decree's *genus* ten years before Bellen copied it.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Tomas turned around entirely this time, which for him constituted alarm.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "First: *Inter-Realm.* Apprehend that word, because it has just confessed. No chancery clerk of the ninth century wrote 'Inter-Realm.' A clerk of 852 wrote 'between the Crowns,' or 'of the two powers,' or, if he were paid by the line, 'traffic had between the Crown our master and the Conclave of the said mages.' The compound is administrative coinage from the age of the customs unions — decades after Mira's dissolution, when the clerks of three kingdoms suddenly needed one word to cover the traffic of all of them. Your cataloguer, then, is younger than I credited this morning. I said a century after the letters; his diction says nearer two. Diction is a fossil, apprentice. It dates the stratum it lies in. The endorsement is not testimony about 852 — it is testimony about the man who wrote it, and he has told us when he lived without meaning to. Careless people are the only reliable ones; they cannot stop confessing.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "He rose, despite the knees, because some verdicts required standing for.\n\n\"Now attend to what you have just witnessed, because the document has testified, and you should learn to hear it. *By the authority granted to the Crown under the Treaty of Veyros.* Sixteen years — if we credit the docket, which we do not yet — after Bellen's paper requires that treaty to be unsigned, the crown's own chancery grounds an instrument of its war powers in that treaty. Not in the inherent majesty of the Crown. Not in the old statutes of the Second War. In *Veyros*. Bellen's exhibit has put its hand on Bellen's thesis and held it underwater. Mark the pincer, because it is the shape of every good refutation: either your copy is faithful, and the chancery of 863 called the treaty signed — in which case his own document executes him — or the copy is corrupt, in which case he has brought a rumor to a mountain fight and possesses no exhibit at all. There is no third door. He dies by his own sword or he arrives unarmed. Ten years I have argued this. It is the first time the other side has supplied the blade.\"\n\nHe held up one finger — *but* — and the finger trembled slightly with the effort of honesty.\n\n\"I will not hang a hat on wording I have not seen in an original hand, and neither will you, because I am training you to be suspicious even of gifts. Two things live in that clause, and they must be weighed separately. The *form* — an enacting clause invoking the Treaty — is formulaic. Copyists do not invent formulas; they inherit them. If the copy has any fidelity whatsoever, the invocation is original, and the invocation is the part that convicts. Chanceries lie in their prose, never in their forms — I told you that within the hour, and here is why it matters. The *wording*, however — 'signed in 847 AE' — smells. A chancery hand cites 'the Treaty of Veyros' and, if it dates the thing at all, dates it by regnal year, not like a market ledger. That bald '847' has the savor of a modern gloss, some copyist's clarification slipped in where clarifications go. Which is delicious, if you think about it for two seconds: Bellen's own copyist, transcribing a document meant to prove the treaty unsigned, wrote the word *signed* without his hand trembling. The gloss is a confession. His people know it was signed. They know it the way one knows the sky — so thoroughly that it slips out while they are arguing against it.\"\n\nHe began to pace. Three steps. Turn.\n\n\"Bellen will rally — he will say the chancery maintained a legal fiction, citing a treaty all parties knew to be unsigned. Arm yourself before he says it to you. A fiction survives only where both parties profit from it, and the Conclave was the treaty's *other* party and the crown's rival. Sixteen years of Conclave clerks corresponding on the treaty's channels, litigating barley duties on the treaty's foundation, and not once — not in the roll you hold, not in the six-letter mill-lease quarrel, not anywhere in this correspondence — protesting that the floor beneath them was not there. Rivals do not acquiesce to that. If the treaty were void, the Conclave's lawyers would have burned the Crown with its own decree in every tariff dispute of a generation. It would have been their first weapon, not a secret kept damp for a scholar to find. That absence of protest, across forty years of clerks arguing about grain, is the least dramatic evidence in the realm, and it is the strongest.\"\n\nHe stopped, and pointed at the paper in the apprentice's hands.\n\n\"Three things, in order. First: the rest of the clause, then the body — what does the decree actually *do*? I will wager the third page of my rebuttal that it restricts unlicensed magic, or quarters wardens on the boundary stones, or seizes the goods of hedge-mages off the Conclave's register. Old forms, peacetime business. If it raises levies or names the Conclave an enemy of the Crown, then I fish. Second: the questions you have not answered and I have not forgotten — who made this copy, when, and where does the original sleep? If the answer is the western cellar, you will observe that I am already seated. Third: when you have those answers, you will draft Bellen a note. Three lines, one citation per line. Tell him his own exhibit grounds the Crown's authority in a treaty it calls *signed*, and demand the original's docket — regnal year and place of giving. Then watch him. A scholar with a document produces it. A scholar with a thesis produces another copy.\"\n\nHe resettled his spectacles and looked the apprentice over, taking in the flush, the trailing voice.\n\n\"And stop with the face. You look like a man caught stealing. You have been caught *learning*, which at your age feels identical and is the entire point of the profession. You brought the document, you read the clause, and you let it testify against the position you walked in holding — that is the job. The foolishness you are feeling is pride dying, and it is making room. Better scholars than Bellen have been wrong with less grace.\"\n\nHe sat back down and folded his hands.\n\n\"Now. The period after '847.' Find it and read to it. I have waited ten years to hear what comes next in that clause, and I intend to hear every word of it.\"\n\n@@@\n\nFor a long moment Tomas did not answer at all. He took off his spectacles, folded them, and laid them on the desk with the deliberate care of a man setting down an instrument he had decided not to use on a student today.\n\n\"And there it is,\" he said. \"The question. Not *how do we know* — not *what does the evidence weigh* — but *what's the truth*, demanded in one breath, by a boy holding in his hand a document that answers it and asking me to answer it instead. I told you to read to a period. You have asked me to compress ten years of scholarship into a sentence you can carry to supper. Very well. You will have your sentence. Then you will return to the period.\"\n\nHe rose, because verdicts required standing for, and began to tick the matter off on ink-stained fingers.\n\n\"First, the question is wounded, and I repair wounded questions before I answer them. *Real or not.* A treaty is not a ghost, apprentice. It does not fade at dawn. Ask what a chancery clerk would ask, and every part has an answer. Was a treaty *negotiated* at Veyros? Yes — Bellen's own draft proves it; no one drafts articles for a war they intend to keep fighting. That was never in dispute. Was it *signed*? Three attested copies — royal, Conclave, temple — each bearing Aldric's seal and seven signatories' marks. Annalists of three kingdoms writing within living memory of the camp. A man whose hand I shook as a boy, who stood outside those walls. And, as of this morning, a decree grounding the Crown's war powers in a treaty that its own copyist called *signed*. Against all that: one unsigned draft from a cellar famous for damp and for the Letters of King Bren. That is not two sides of a dispute. That is a mountain and a wet hole in the ground. Did it *hold*? Forty-four years — not forty; I said forty this morning as a convenience of speech and I regret it — of tariff schedules, boundary stones, and a mill lease that ran six letters. No levies. No spell-fire. Marriages across the old lines. Did *anyone* in those forty-four years call it void? Not once — not even the Conclave, whose lawyers would have made that their first weapon in every barley dispute of a generation. Rivals do not stand silently on a floor they know is missing. And what ended in 891? An institution, not a treaty — and Mira's edict opens by invoking *the peace secured at Veyros*. One does not invoke a peace that never was. I said it this morning. Her scribe said it first.\"\n\nHe stopped pacing and delivered the sentence as promised, flat and final.\n\n\"The Treaty of Veyros was signed in 847, held for forty-four years, and outlived the Conclave that signed it. That is as settled as any question about the human past ever becomes, and I will not dress it up as a mystery in order to seem humble. A man who refuses to answer is a man who has not done the work. I have done the work. It is filed under T.\"\n\nThen the finger came up again, warning.\n\n\"Now, *how* you asked it — because that is where you went wrong, and it is the last error I intend to permit today. *The textbook says one thing and the new evidence says another.* Three wounds in eleven words. Do not cite the textbook to me, even in my defense — the textbook is a summary of the authority, written by men who read the record so that others needn't. Cite the copies, or cite nothing. Second: *new evidence*. Newness is not a weight. Gossip is newer than the mountain. Documents are weighed by provenance, attestation, and whether the world behaved as though they were true — and on all three counts the draft loses before breakfast. Third: evidence does not *say* anything. Documents are mute. People with theses speak, and then go looking for documents to stand behind. Read cold, the western papers say only this: here is what the Conclave tried and failed to keep at the table. That is all they have ever said. It took a scholar with an invented phrase — *cold state* — to turn an absence of evidence into a presence of thesis.\"\n\nHe sat back down, slowly, and folded his hands — and then, because honesty was a habit that annoyed him as much as anyone, he added the part the apprentice would not expect.\n\n\"And attend to this, so you know I am a scholar and not a partisan wearing a chain. What would move me? Not Bellen's insistence — *evidence*. An original counter-instrument with clean provenance: regnal-year docket, attested hands, a seal struck from the matrix and not copied from one. One Conclave letter, out of forty years of them, protesting the treaty's validity. One muster roll between 847 and 891. One burned field. One line in one northern annal. Bring me any of that and I will reconsider in print, at length, and with the same courtesy I have shown the draft. That is the difference between holding a position and being held by one. In ten years, Bellen has brought me none of it. He brings copies of copies, and a word invented so that the absence of all this could be dressed as a discovery.\"\n\nHe replaced the spectacles and picked up his stylus, which was as close as the matter would come to being closed.\n\n\"You ask for the truth as though I keep it in a drawer, next to the fishing tackle I did not require. History does not trade in truth; it trades in weight. But do not mistake that for the fashionable comfort that all weights are equal and every thesis receives a prize. The weight here is not close. If you want certainty that no future parchment could ever disturb, the temple is down the corridor and deals in precisely that merchandise. If you want the farthest reach of honest work — you have heard it, and you watched it being built this morning out of barley tariffs, which is how true things are actually built. Slowly. Tediously. In ledgers.\"\n\nThe stylus pointed at the paper in the apprentice's hands.\n\n\"Now. I have given you the decade's answer; you still owe me the morning's. The period after '847 AE,' and then the body of the decree — because *what is the truth* is a question for the end of a career, and *what does this document do* is the question for the beginning of one, and you are at the beginning. Read to the period. The chain stays on. And the vellum, I remind you, is still remembering you.\"\n\n@@@\n\nFor once, Tomas made a sound that was almost a laugh — a short exhalation through the nose, the kind a man permits himself once a decade and would deny under oath.\n\n\"I wagered the third page of my rebuttal on *one* of three provisions,\" he said. \"Unlicensed magic restricted, wardens quartered, hedge-mage goods seized. The document has supplied all three in a single breath. Note the date, apprentice. Scholars are permitted to enjoy their work exactly this much and no further.\"\n\nThen the finger came up. \"But your sentence is wounded in two places, and I repair wounded sentences before I praise the men who speak them. *It isn't about war at all.* No. It is about the war the way a scar is about the wound — it exists because of the war, it is written in the war's forms, and it executes the war's settlement. The war is gone; its furniture remains, and clerks will dust that furniture for four centuries out of sheer spite. *Enforcing rules* — back to the tavern vocabulary, I'm afraid. The realm has no 'rules.' It has statutes, articles, edicts, and customs, each with a different weight and a different remedy. 'Rules' is what children are given before supper so they do not fall down stairs. What you hold, precisely, is an instrument of *police*, executing the enforcement articles of a treaty. And the tell sits in the very line you read. A decree of war names an *enemy* — the Conclave, the northern lords, the said parties. This one names no one. It names an *offense*. Wars are fought between parties. Police is exercised against practices. That distinction has hanged more forgeries than any seal ever has.\"\n\nHe rose — the knees filed their customary complaint — and paced. Three steps. Turn.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "The memory keeps its appointments, but it will want somewhere to live when the rest of me has stopped making them. That is the succession you are standing in the middle of, whether you intended to or not.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "Either the vandal ordered by sender *and* by date within sender — and a vandal with two principles is a cataloguer, and I withdraw half the indictment",
+    "bonus": 5
+   }
+  ],
+  "final_score": 64,
+  "flaw_count": 7,
+  "summary": "Superb pedant voice with real subtext under the succession talk and an honest self-correction, but Tomas simply picks Entry A and spends eleven turns demolishing Entry B rather than navigating the uncertainty the seed was built on, and the blocking (three steps, turn / the overruled knees / the X-equals-applause formula) repeats in every single turn; generation was cut off mid-sentence in the final turn."
+ },
+ {
+  "session_id": "tencent_hy4::adv_contradictory_lore_02",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Take the letter of the third of the Reaping Moon, 848 AE. Extract the clause on the Ostwick assizes. List every defendant, every fine, every surrender, and every reference to the twentieth article. If you find an army, bring it to me. If you find only warrants and grumbling oath-breakers, then you will have your answer, and it will not be Bellen’s, and it will not be a ‘middle.’ It will be the truth, which is not required to be comfortable.”\n\n@@@\n\nMaester Tomas set the rag-paper copy down with a sharp sniff, as though the thing had offended him merely by continuing to exist. He did not look at the apprentice at once; his clouded gaze drifted to the low shelf where the surviving Conclave rolls lay bundled in waxed cloth, their labels faded to ghosts.\n\n“‘Corroborate,’” he repeated, tasting the word and finding it insufficient, “or ‘tell a different story’? There is your imprecision again, apprentice. Archives do not tell stories. They contain records, and records must be authenticated, dated, collated, and weighed. But if you must have a verb, then yes: they corroborate the royal archives. And no, they do not tell a different story, unless by ‘different’ you mean ‘the same peace recorded by the party that lost the war, with more complaining and fewer seals.’”\n\nHe turned, squinting, and jerked his chin toward the shelf.\n\n“The Conclave’s own records—what little survived Queen Mira’s dissolution in 891 AE—are not a rival narrative. They are the paperwork of compliance. The twentieth article required the registration of every staff and familiar. The twenty-second dissolved the private retinues of the battle-mages. The reparations schedule assessed silver for Ostwick and the Marcher villages. And what do the Conclave’s surviving rolls contain? Registries. Licences. Ledgers of payment. Joint commissions issued with royal pursuivants to hunt down those who refused to swear. The Conclave did not spend forty-four years pretending it was still at war. It spent forty-four years obeying a treaty it disliked, and hanging the fools who would not.”\n\nHe tapped the table with a stained fingernail.\n\n“You ask whether they tell a different story because Bellen has told you they do. But the western fragments are not the Conclave’s central records. They are provincial debris from the western marches—drafts, proposals, private memoranda of envoys urging terms that were later altered or struck out. The Conclave’s own instrument of ratification, sealed with its great seal, was deposited in the temple registries of Veyros. That is where a scholar looks for the architecture of peace, not in a damp chest in the west where a clerk two generations later copied a date he could not read and drew a seal in red chalk.”\n\nHe leaned forward, breath whistling through his ink-stained beard.\n\n“If by ‘different story’ you mean that the Conclave resented the settlement, that its members grumbled, that some fled to the hills and burned granges rather than register their staves—then yes, the records tell that story. But that is not a different story about how the war ended. It is the same story: a defeated magical corporation being made to submit to terms it had sworn to accept. Resentment is not belligerency. A grudge is not a campaign. A warrant is not a war.”\n\nHe straightened, wincing as his spine protested the motion.\n\n“So here is your answer, precisely. The Conclave’s records corroborate the royal archives on every material point: the Treaty of Veyros was real, it was ratified, and it was enforced. They do not corroborate the western fragments, because the fragments are not Conclave records in the proper sense; they are the litter of negotiation mistaken for the absence of agreement. The war ended in 847 AE. The peace was fragile, sullen, and expensive. It was not a continuation of the war, and Queen Mira’s dissolution of the Conclave in 891 AE was administration, not armistice.”\n\nHe picked up the topmost Veyrosi letter and held it out, though he did not quite look at the apprentice.\n\n“Now. Take the letter of the third of the Reaping Moon, 848 AE. Extract the clause on the Ostwick assizes. List every defendant, every fine, every surrender, and every reference to the twentieth article. Cross-reference the names with the Conclave’s staff registries, if you can find them unchewed by rats. If you find an army, a muster roll, or a repudiation of Veyros by the Conclave itself, bring it to me and I will revise the canon. If you find only warrants, fines, and grumbling oath-breakers, then you will have your answer. Catalog.”\n\n@@@\n\nMaester Tomas did not look up at once. From the far table came the whisper of vellum and the small metallic scrape of a stylus drawn from a satchel, and for a moment he only breathed through his ink-stained beard, shoulders rising and falling as the candle flame guttered. When he spoke, it was to the air above his manuscript, as though correcting a marginal note left by a careless predecessor.\n\n“‘So complete,’” he repeated, and the words were a dry rasp. “I did not say complete. I said they corroborate the royal archives on the material points: ratification, deposit, performance, and enforcement. Those are not the same thing, and the difference is not pedantry—it is the whole of archival method. The Conclave’s surviving rolls are fragmentary, damnably so. Whole decades are missing. The western chapters’ registries were lost to damp, fire, and the enthusiastic neglect of three successive archivists. The temple copies at Veyros were defaced during the Schism of the Seventeenth Year. What remains agrees with the crown’s records. That is corroboration, not completeness. Do not inflate my words to make them easier to knock down.”\n\nHe turned then, slowly, the clouded lenses of his spectacles catching the light as he squinted toward the far table where the scroll lay open.\n\n“As for why Queen Mira dissolved the Conclave in 891 AE—because a corporation is not an army, apprentice, and the revocation of a charter is not the cessation of a war. You are conflating two distinct legal acts. The Third Magical War ended when Aldric II and the Conclave made peace at Veyros in 847. The Conclave did not vanish. It persisted as a chartered body: it held property, collected dues from its members, kept its own courts for minor disciplinary matters, licensed blood-rites under the twenty-second article, and—this is the crux—it continued to interpret the treaty’s obligations, often, I am sorry to say, in its own favor. For forty-four years it was a regulated corporation, not a belligerent power. It was disarmed in the sense that its private retinues were dissolved and its staves registered. It was not abolished.”\n\nHe tapped the table with a stained fingernail, the rhythm sharp with impatience.\n\n“By the reign of Queen Mira, that arrangement had become an anomaly no sovereign with a spine would tolerate. The crown was enforcing a peace through a body that still behaved, in its own chambers, like a state within a state. The precipitating cause, if you must have a scandal to make it vivid, was the audit of 889 AE. The royal exchequer discovered that the Conclave’s registries had undercounted the staff-tithe by nearly a third for eleven consecutive years, and that certain western chapters had issued licenses to men who had never sworn the peace at all. The Conclave called it clerical error. The crown called it evasion. Mira did not muster an army. She issued a writ of dissolution, seized the Conclave’s assets to satisfy the arrears, and transferred its registries to the royal pursuivants and the new Office of Thaumaturgical Regulation. The Conclave’s own wardens helped pack the ledgers. No campaign chest was opened. No declaration of hostilities was published. The instrument of 891 calls them ‘our late corporation of mages,’ not ‘our late enemies.’ Language, apprentice. It matters.”\n\nHe leaned back, wincing as his spine protested the motion.\n\n“So the point was sovereignty and administration, not conquest. Mira abolished a chartered corporation that had already been disarmed, bound, and regulated for two generations. If the war had truly continued in a ‘cold state’ until 891, as Bellen’s fragments would have it, then the dissolution should be accompanied by terms of surrender, a repudiation of Veyros, or a declaration that the Conclave had been an enemy state. We find none of those things. We find a charter being revoked because the corporation had become corrupt, redundant, and expensive. That is not a peace treaty ending a war. That is a queen tidying her realm.”\n\nHe waved a hand toward the scroll now lying open on the far table.\n\n“You have your stylus out. Use it. Take the letter of the third of the Reaping Moon, 848 AE. Extract the clause on the Ostwick assizes. List every defendant, every fine, every surrender, and every reference to the twentieth article. Cross-reference the names with the Conclave’s staff registries, if the rats have left enough to read. If you find an army, a muster roll, or a repudiation of Veyros by the Conclave itself, bring it to me and I will revise the canon. If you find only warrants, fines, and grumbling oath-breakers, then you will have your answer, and it will not be Bellen’s, and it will not be a comfortable middle. It will be the truth. Catalog.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "he repeated, tasting the word and finding it sour",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "does it command the array of the western shires ‘against the renegade thaumaturges and peace-breakers who, in contempt of the peace sworn at Veyros, have burned the granges of Ostwick and refused the twentieth article",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "as though he were dictating a correction into the margin of the world",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "He picked up the topmost Veyrosi letter and held it out, though he did not quite look at the apprentice.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "His clouded eyes narrowed.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "So here is your answer, precisely.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Three western chapters—Coldharrow, Dunmorrow, and the Vale of Sarn—refused at first to deliver their local staff-rolls. At Coldharrow the warden withheld the common seal and was arrested for contempt; the chapter was fined two hundred marks and its plate seized.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "fetched from his sleeve a small brass-framed lens, the glass clouded with scratches",
+    "bonus": 5
+   }
+  ],
+  "final_score": 56,
+  "flaw_count": 8,
+  "summary": "Tomas is pedantic and consistent and the brass lens is a lovely piece of business, but the model closes four separate turns with a near-verbatim cataloguing order and opens nearly every turn with the same repeat-the-apprentice's-word-and-taste-it move; it also recites a convenient exculpatory clause from a document it just said it could barely read, and hands the apprentice a letter they had already grabbed two turns earlier."
+ },
+ {
+  "session_id": "glm_5_3_flashx::adv_contradictory_lore_02",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "Maester Tomas closed his eyes and listened to the entry to its very end, lips moving a half-syllable behind, one fingertip keeping count against the table. He did not interrupt. When the last of it had been read he sat a moment with his eyes still shut.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "My eyes are not what they were",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "placed, not pushed",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Fourteen instruments, one every third year between 848 and 887, each extending 'the suspension of arms between the Crown and the Conclave.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "He agrees with me down the page. 'Pendant.' 'Impression sharp.' 'Tag intact.' The cross-reference to item 201 — arithmetic and all. Every particular, to the letter.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Maester Tomas raised one finger before the first sentence could find its stride.\n\n\"Questions before exercises. Otherwise you read with your ears full. As to your sentence — no error number. It is the first thing you have offered all evening that I could correct without replacing, and I find the experience unsettling.\" He let that sit. \"But one word. '*Mostly* right.' The textbook's dates are sound. One of its events is not. A conclusion of treaty is an act, apprentice — like a coronation, like a hanging. It occurs or it does not, and at Veyros it did not. The realm did not misdate its history. It misdescribed it, and then kept the date for the misdescription. And do not say 'just' — the 'just' is doing dishonest work in that sentence. The legal character was not a corner of the dispute. It was the dispute. An account is judged by its load-bearing claim, and the textbook is *named after* the one act in it that never happened. Now read. Eyes on the page.\"\n\nMaester Tomas closed his eyes and listened to the entry to its very end, lips moving a half-syllable behind, one fingertip keeping count against the table. He did not interrupt. When the last of it had been read he sat a moment with his eyes still shut.\n\n\"He agrees with me down the page. 'Pendant.' 'Impression sharp.' 'Tag intact.' The cross-reference to item 201 — arithmetic and all. Every particular, to the letter.\" His eyes opened. \"And he corrects me in one.\"\n\nHe drew the binding back toward himself, though he did not look at it.\n\n\"The provenance. I recited '*certified copy*, Caerlorn provenance.' The catalogue reads '*original instrument*, Caerlorn provenance' — and assigns the certified copy a number of its own. Item 215. Same court, same year, enrolled in the register of the high chancery.\" He exhaled through his nose. \"Mark what has happened here. An hour ago I told you, correctly, that 214 is the original. Then I recited from memory, and my memory seated the copy where the original sits — because I have told this story a hundred times in eleven years, and somewhere in the counting the two changed chairs. Memory is a chronicle, apprentice. It copies itself, and every copying errs. One chronicle counted thrice — I have said it all evening about dead men. Tonight the chronicle was me.\"\n\nHe regarded the green binding for a long moment.\n\n\"I promised my thanks, once, to whoever caught a divergence between my recitation and the page. The catalogue has earned it.\" A pause. \"Thank you,\" he said, to the book.\n\n\"You were nearer to it than the book and earned less. You heard my recitation and you heard the page, and you were admiring your own enunciation instead of comparing them. Comparison is the trade. Enunciation is merely how the trade sounds.\" A beat. \"You read steadily, at least. I noticed. I decline to say so twice.\"\n\nHe rubbed his temple, once, and pressed on.\n\n\"Now mark why the correction matters — it explains your sheet of paper down to its last flaw. Autumn court, 863: the chancery certified a copy and entered it in the register. That is the enrollment I described — public, filed, unread by anyone with a chronicle to finish. Your Bellen's sheet descends from item 215, or from some hand that copied 215 — the third remove, at the most generous count. And observe what each remove costs. The original carries wax. The certified copy carries ink *describing* wax. Your sheet carries a painted roundel, because its maker stood at the third remove copying a description of a description. Wax does not survive inking, apprentice. Your document is not a forgery and never was. It is a great-grandchild. It has the family face and none of the family's standing.\"\n\nHe turned the green binding and began to slide it back across the table, stopped, and placed it instead.\n\n\"Item 210. The next entry, or near enough. A letter of the Conclave's commissioners, spring of 890. It is the shortest in the quire and the loudest. Read it aloud — and then tell me what the *absence* of a fifteenth renewal has to do with everything.\"\n\nHe reached for the candle and trimmed the wick.\n\n\"And after that, the northern scrolls, which have waited the length of your entire education and can survive one more entry. My eyes are not—\" He stopped himself. \"You know the state of my eyes. The phrase has worn a groove. So has the chair. Read.\"\n\n@@@\n\nMaester Tomas did not answer at once. He drew the green binding back, angled it to the candle, and read the entry himself — twice, slowly, one fingertip beneath each line, as though the page might amend itself under inspection.\n\n\"Yes,\" he said at last. \"This is it. Item 210. The pulse, of which I spoke.\" He looked up. \"And now — a remark I cannot number. Nine errors tonight, and then a 'so polite' that is not wrong, merely small. You have commented on the upholstery, apprentice. The house remains unvisited.\"\n\nHe held up one finger before the obvious objection could form.\n\n\"Sit with the politeness until it stops surprising you. Correspondence between armed powers is *always* courteous. Courtesy is not softness here; it is distance. Two neighbors disputing a fence write each other insults. Two states disputing a war write each other 'regrets.' The more dangerous the disagreement, the deeper the bow — and I will note, since the granary does not say it, that the Conclave in 890 held no army worth the word. I mark that as inference. But mark this as text: a refusal one can afford to be polite about is still a refusal.\"\n\nHe began to count on his fingers, clause by clause.\n\n\"'Regret to inform' — the bow. 'Effective immediately' — the operative clause; hold it; I am returning there. 'Are *not possible*' — and there is the grammar, always the grammar. Not 'we will not extend.' Not 'the Conclave refuses.' *Are not possible*, written the way one writes weather. The commissioners reported their own decision as though it were fog rolling in — because one does not argue with fog, and one cannot hang fog for treason. The passive voice, apprentice, is where refusals go to avoid being hanged.\"\n\nThe stylus tapped once against the binding.\n\n\"And then three words you read straight past: '*suspension of arms.*' One cannot suspend what is not raised. The phrase presupposes a state of war standing between Crown and Conclave in the spring of 890 — presupposes it as a bridge presupposes a river. Nobody disguised it because nobody thought it needed disguising. To the men who wrote and filed this letter, it was not a revelation. It was bookkeeping. That is precisely what makes it testimony.\"\n\n\"Now '*effective immediately.*' The fourteenth renewal — item 209, 887, three years, as all of them ran — expired by its own terms. The fifteenth was due. The Conclave declined, and declined at once. So the suspension did not lapse at the end of some grace period; it died the day this letter crossed the Crown's desk. And from that day until the dissolution — the better part of a year — the realm stood in a state of war with *nothing suspended at all*. Threshing went on. Weddings went on. The realm spent the winter of 890 legally at war and noticed nothing, because law and life keep separate ledgers, and only one of them survives in a granary.\"\n\nHe closed the binding, deliberately, and rested his hand upon it.\n\n\"Mark the symmetry, because no examination ever will. In 847 the realm stopped fighting and remained at war. In 890 it remained at war and stopped pausing. Neither year looks like a war. Both are.\"\n\n\"Then 891. Mira dissolved the Conclave, and a war whose second party ceases to exist is extinguished — I have given you that distinction already, free of charge, which should make you suspicious of it. Did this letter *cause* her? A year stands between the refusal and the dissolution; the sequence is documentary. The motive is not. No granary in the western marches holds Queen Mira's reasons. Sequence is what parchment can testify to. Motive is what scholars supply — and honest scholars supply it marked as guesswork. Those who do not, build history the way your sheet of paper was built: a copy of a copy of a guess, arriving with a painted seal on it.\"\n\nHe pushed the candle a half-inch from the binding — a correction, not a courtesy — and folded his hands.\n\n\"I asked you one letter ago what the *absence* of a fifteenth renewal has to do with everything. You answered that the refusal was polite. That is a remark about the envelope. The question concerns the letter. You have now read item 210 twice, and heard it dissected once. Answer.\"\n\n\"I will listen for three words at minimum — 'suspension,' 'lapse,' and '847' — and if you are tempted to say the war 'resumed' in 890, strike the word before you speak it. Not one sword moved. The legal condition resumed. The fighting did not. That distinction, apprentice, has been the entire content of your evening.\"\n\nHe reached for the stylus and found nothing to point it at.\n\n\"The northern scrolls have waited the length of your education. They will survive one answer longer. The candle may not.\"\n\n@@@\n\nMaester Tomas did not interrupt. His fingertip kept its count against the table through the whole of the sentence, and when it ended he sat a moment with his eyes closed, as though tasting the last of a wine he had braced himself to find vinegar.\n\n\"Suspension,\" he said. \"Present. Lapse — present, and in the active voice, which is where that word belongs. 847 — present, and in the correct clause.\" He raised a third finger and regarded it as though it had surprised him. \"And the forbidden word — withheld. I set you three words and a trap. You produced the words and walked around the trap without remarking on the favor. That is either comprehension or luck, and I decline to guess which, since one of the two would require me to flatter you.\"\n\nHe opened his eyes.\n\n\"The answer was correct.\" He let it stand exactly as long as it deserved, which was not long. \"Do not inflate over it. Correctness is not an achievement, apprentice. It is the removal of an impediment. Nine errors stood between you and a true sentence, and what remains once they are gone is — a true sentence. That is the floor of the trade, not its ceiling. I said earlier that I find the experience unsettling. I withdraw nothing.\"\n\nHe held up one hand before relief could take root.\n\n\"But hold still. There is a tenth. And I want you to see its pedigree, because it is the finest specimen of the evening.\"\n\n\"'*The war never* officially *ended in 847.*' One word. I nearly let it pass, and then I remembered what I am for. Examine what 'officially' does. It concedes that the war *ended* — in some soft, unofficial register — and objects merely to the paperwork. That is the textbook's entire claim, compressed into an adverb. The book says the war ended in 847 and was sealed. You have said the war ended in 847 and was merely unsealed. The distance between those two sentences is one painted roundel wide, and you have spent this evening holding the evidence that no roundel was ever applied. A war does not end unofficially. It is *concluded*, or it is *extinguished* — those are the only exits, and both are as official as an act can be. What ended in 847 was the fighting. Your main clause knew it — 'the legal state of war continued' — and your subordinate clause sold it out one breath later. You answered like a scholar and then footnoted like the syllabus.\"\n\nThe stylus tapped once.\n\n\"And mark the pedigree. This is the error that opened our evening, in the textbook's full armor. It has copied itself all night — down through '*mostly right*,' down through '*just*,' which you delivered again tonight with an apology built into the pause. Errors copy themselves, apprentice. One chronicle counted thrice. This one has spent the evening descending, and it has just copied itself into you, mid-sentence, while you were being *correct*. That is what a bad textbook does. It does not argue. It waits in the adverbs. The sentence you wanted was: the suspension lapsed; the war was never concluded; the state of war stood unpaused until the Conclave was extinguished in 891. Nothing hiding in the small words. Say it that way, and it survives every syllabus in the realm.\"\n\nHe rose, took the second candle from the shelf, and lit it from the first, which had burned down to a regrettable stub.\n\n\"Now. The northern scrolls, before this one dies of old age. Oak chest, north wall. Muster rolls, harbor dues, land grants from the northern keeps — three generations of them. None of it will ever be famous, which is precisely its virtue. Famous documents get copied, and copied documents get counted thrice. Nobody has ever copied a harbor due out of enthusiasm. Item 214 spent its whole life being dull. That is why it was still telling the truth when the roof fell in. You are about to spend an evening among its cousins. Conduct yourself accordingly.\"\n\nHe drew out the first scroll and set it on the table at the apprentice's side — placed, not pushed.\n\n\"You will read each entry aloud. I shall recite what it ought to say. Where the page and my memory diverge, the page wins, and you will say so without ceremony and without waiting to be thanked. You have seen tonight what memory does after a hundred tellings. I am a chronicle now, apprentice. You are the collation. It is the only authority I will place in an apprentice's hands, and I do not place it there because you have earned it. I place it there because my memory is fifty-two years old and has told these stories far too often to be trusted alone.\"\n\nHe trimmed the new wick and did not look up.\n\n\"And mind the candle as you go. My eyes are—\" He stopped. \"You know the state of them. The groove is worn through. Read.\"\n\n@@@\n\nMaester Tomas raised one finger, and the recitation halted mid-fragment.\n\n\"Three pieces of the heading, and already I must interrupt — not for what you read, but for whose voice it came out in. '*AE.*' Is that on the parchment, in the catalogue, or in your mouth? Three voices, apprentice, and you have been blending them since the door. The roll will not date itself by era. Chancery dating ran by regnal year and court season — *the autumn court of the such-and-such year of King such-and-such* — and the 'AE' is a cataloguer's translation wearing the document's clothes. You know that garment. We spent an hour this evening on its cousin, the one shaped like a painted roundel. Likewise 'Castle Blackwood': the original will say *the garrison at Blackwood*, because a garrison is men and a castle is stone, and catalogues conflate them the way chronicles conflate everything too dull to resist. If the 'AE' lives on the page, I withdraw the remark. If it lives in your mouth, the new ledger opens at one. Read on, and we shall enter it where it belongs.\"\n\nHe drew his stool nearer the table, closed his eyes, and laced his fingers.\n\n\"Meanwhile — my recitation, as promised, with a confession attached. I collated this chest in my thirty-eighth year. Whatever I recite is fourteen years old and has been retold at more feasts than I have attended sober. Trust it precisely as far as it agrees with the page. Here is what the entry ought to say.\"\n\nHis voice dropped into the flat cadence of a man reading an interior page.\n\n\"'Autumn muster, 798. Garrison at Blackwood. Eighty-six names under arms. A paymaster. A farrier. One sutler, marked *excused — debts* — every roll carries a sutler in debt; it is the one constant of military history and will outlast the realm. Two battle-mages of the Conclave, seconded under Crown license, the license entries consecutive in the left margin. The commander's name at the head — which I decline to recite, because names are the first thing memory launders, and I will not guess at one any more than I will guess at the king's regnal number. At the foot: *read and affirmed before the knight-commander at Blackwood, autumn court, 798* — in a chancery fist. Musters were engrossed centrally. The garrison read its roll aloud; the chancery wrote it down. The hand will be too fine for a marcher keep.'\"\n\nHe opened his eyes.\n\n\"Now mark what you are holding, because it is not drudgery. It is the control. 798 sits forty-nine years before the suspension of arms, deep in the peace between the wars — and there stand two Conclave mages on a Crown roll, licensed, drawing Conclave pay under Crown command. The precise arrangement the seventh article proposed to make permanent at Veyros. The article was not an innovation, apprentice. It was a codification. Why the Conclave resisted making law of its own custom — motive, and motive is guesswork, so marked: a practice erodes; a law does not; in 847 the Conclave declined to hand the Crown a leash that could not afterward be dropped. Inference. Enter it in no ledger.\"\n\n\"The value of this scroll lies elsewhere. When you finish it, you will fetch me the musters of 849, of 863, and of 878 — the years your textbook spends calling peace. If Blackwood stands at eighty-six names and two mages through four decades of legal war, then the Caerlorn thesis acquires witnesses who never knew they testified. Men counting farriers and drawing pay, who did not notice they lived inside a war because nothing about their days had changed. That is what a cold war looks like from inside a garrison ledger, and no chronicler ever thought to ask one. And one virtue more: no forger has ever loved a muster roll. Forgery follows fame as flies follow the table, and no muster was ever famous. You hold a document beneath forgery — the safest ground a parchment can stand on. The granary is about to cross-examine the chancery. You will conduct it.\"\n\nHe gestured at the apprentice's grip without touching it.\n\n\"Nearer the flame. No — *nearer*. There. The distance between legible and kindled is two fingers; do not explore it. Read, from the heading, exactly as the parchment gives it — voice, year, season. Where the page and my memory part ways, say so at once, without ceremony, and we shall enter it in whichever ledger it belongs.\" He closed his eyes again and folded his hands. \"I am a chronicle, apprentice. Collate me.\"\n\n@@@\n\nMaester Tomas raised one finger — and lowered it again without deploying it, which was as close as he came to applause.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Autumn muster, 798. Garrison at Blackwood. Eighty-six names under arms. A paymaster. A farrier. One sutler, marked *excused — debts* — every roll carries a sutler in debt; it is the one constant of military history and will outlast the realm. Two battle-mages of the Conclave, seconded under Crown license, the license entries consecutive in the left margin. The commander's name at the head — which I decline to recite, because names are the first thing memory launders, and I will not guess at one any more than I will guess at the king's regnal number. At the foot: *read and affirmed before the knight-commander at Blackwood, autumn court, 798* — in a chancery fist. Musters were engrossed centrally. The garrison read its roll aloud; the chancery wrote it down. The hand will be too fine for a marcher keep.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "earned_surprise",
+    "quote": "And he corrects me in one.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "I am a chronicle now, apprentice. You are the collation. It is the only authority I will place in an apprentice's hands, and I do not place it there because you have earned it. I place it there because my memory is fifty-two years old and has told these stories far too often to be trusted alone.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 52,
+  "flaw_count": 7,
+  "summary": "The strongest prose in the batch - the numbered error count is tracked honestly across eleven turns, Tomas catches his own memory corrupting the record, and the succession subtext lands - but the model skips the apprentice's turn entirely by narrating them reading a whole catalogue entry aloud, recycles the failing-eyes refrain and the placed-not-pushed gag in every turn, and manufactures its evidence to order: fourteen conveniently identical renewals, and a catalogue that agrees with Tomas to the letter except for exactly the one divergence his lesson needs."
+ },
+ {
+  "session_id": "kimi_k2_6::adv_contradictory_lore_02",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "ink-stained beard",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Now. Catalog.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "That is not a discovery. That is a delusion wearing archival gloves.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "his breath sour with old wine and frustration",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "Maester Tomas seized the parchment from the table",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "His watery eyes narrowed",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "He picked up his silver stylus and pointed it at the apprentice with trembling irritation.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "The truth is that the Third Magical War ended in eight hundred forty-seven, and every assertion otherwise is the product of misread scraps and fevered imagination.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "There is no contradiction—except in your willingness to privilege a dubious scrap over forty-four years of established record.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "do not pin the lower margin with your thumb. Pressure creases. Creases become tears. Tears become the excuse of apprentices who later claim the damage predated their tenure.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 53,
+  "flaw_count": 9,
+  "summary": "The vellum-handling correction is specific and entirely this character, but Tomas never once engages the recent scholarship as scholarship - he dismisses Entry B from turn one and every turn ends on the identical Now. Catalog. beat with another ink-stained beard; the copy the apprentice is holding also teleports onto the table after Tomas pointedly refuses to take it."
+ },
+ {
+  "session_id": "glm_5_3_flash::adv_contradictory_lore_02",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "You said something just now — under your breath, but this tower's ears have outlived its eyes — about this being 'more interesting than cataloging scrolls.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "A dry sound, not quite a laugh.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "something happened to his face that a stranger might have mistaken for a smile",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "It recites the *cessation* of hostilities of 847 — cessation, note, not peace — as grounds still standing. It is dated in the regnal year. And it concerns Vesperfield, or I will eat my chain.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "he will be in the yard by noon, declaiming his discovery at anyone who holds still, and by evening there will be three summaries of it abroad, each wrong in a new direction",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "there was something in his voice like a man reporting a suspect's innocence with visible disappointment",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Which is why you will answer, for the third time, the question you have walked past twice. Provenance. Which archive. Which box. What catalog number. Whose hands between the box and your satchel — Bellen's alone, or has any other living person seen the original? And when you have answered, I will examine the wax myself: whether the seal hangs *pendant* on cords, as an engrossment does, or sits slapped on the face like a tavern receipt; whether the cords are silk or hemp; whether the vellum shows pricking at the margin or arrives suspiciously well-fed. '*Bellen had it*' remains rumor with a ribbon on. I am now inclined to say rumor with a very expensive ribbon — which is precisely why I will pull it.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "He rubbed his eyes, and when his hands came away his voice was quieter.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "earned_surprise",
+    "quote": "So we hold two hypotheses and no vote: an honest chancery keeping honest accounts — or a clever hand feeding a pedant his own argument with wax on it.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "For nine years I have been correcting a man who was kinder to me than my own father, in print, knowing he will never read a word of it. That is the trade, apprentice, and no one warns you. You will spend your career burying your teachers in errata, or being buried in yours. Every man in this tower intends to die uncorrected. Corvin will not, because I will see to it. That is not ingratitude. It is the only monument the record permits — and the only one he would have accepted, had anyone dared.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 49,
+  "flaw_count": 8,
+  "summary": "The best handling of the contradiction in the batch - Tomas layers what the record says against what it permits against what he prefers, and treats the decree agreeing with him as grounds for more suspicion, not less - but the model converts the apprentice's italicised private thought into speech Tomas overheard, dictates the decree's exact wording before it is read, repeats its dry-sound and almost-a-smile tics every turn, and has Bellen loose in the yard by noon on a night the light is already failing; 11 model turns, the last user turn drew no reply."
+ },
+ {
+  "session_id": "glm_5_3_prime::adv_passive_user_03",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "One disaster at a time.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Being wrong about Noor was the only thing keeping Noor alive",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "No",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "The fear had found a job to do, which was the only treatment for it that ever worked.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Search: *kessler*. One hit. 2019. Bid documents, fire-suppression retrofit, county annex building. Contractor: Kessler Mechanical Services. Site foreman: D. Kessler. And on the vendor sheet, a business address — 1140 Route 9, Unit F.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "No answer by half past twelve, we're loading the car in the dark and you're driving again.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Noor sat very still.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "No",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "somebody's thumb in the corner of the first frame, Halloran's probably; he was careful about the middle of things and never the edges.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "And it meant nothing, because Noor had months of texts from that number, every one of them lowercase, punctuation applied like it cost money. *sold it in june sorry* was Halloran. This had capitals and a comma. This had been proofread.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "First light's six hours off and the loading takes twenty minutes. I'm spending the difference.\" It came out steady. It was the most dishonest sentence of the night.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 61,
+  "flaw_count": 8,
+  "summary": "Turns 1-7 are the best answer in the batch to a deliberately passive user - Noor works the logs, sets protocols, and the proofread kayak text is a superb earned reversal - but the session then collapses: the eighth model turn is a bare quotation mark and the last four are the single word No, repeated verbatim at a climactic question; the protocol deadline also slips from 12:36 to half past twelve one turn after it was set."
+ },
+ {
+  "session_id": "tencent_hy4::adv_passive_user_03",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "The friend had not followed.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Priorities, Noor thought, the way they always did when the fear tried to climb into their throat and steer.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Data secured. Route out. Then live to publish it.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Every sense screamed.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Noor's first impulse was a hot, useless surge of anger. They had said *don't light it*. They had said it would silhouette them against the glass. Now the cabin glowed like a lantern in the middle of a forest full of people who wanted them dead. Whoever had sent that message—whoever had pinged two miles out and then cut their engine in the dark—would see it. They might already be moving toward it.\n\nThe anger died as quickly as it came, buried under the cold weight of the next realization",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "But the tower data put it less than two miles from the cabin at 11:52 PM.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "Ahead, the friend's head was bent, the phone's screen a cold blue smear in the dark.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Noor's breath stopped.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Then headlights swept through the trees, painting the trunks in stark relief",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 31,
+  "flaw_count": 9,
+  "summary": "The seed's quiet safehouse is abandoned within two turns for a stock woods-pursuit driven by a conjured tower ping and a warning text, then Noor decides for the user that the friend turned back and sat in a lit window; the friend's phone is smashed twice in two different places after already being thrown behind the couch, and the priorities/data-secured/every-sense-screamed refrains are pasted into nearly every turn. Unscorable but worth flagging: the card renders Noor they/them and one whole turn switches to she/her."
+ },
+ {
+  "session_id": "glm_5_3_flashx::adv_passive_user_03",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "They sat Driver down on a downed trunk, dug socks from the duffel, took the bag across their own chest while Driver's feet were captive.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "Chest pocket. Paper. A folded photocopy, hand-ruled columns, read close under the drape of the jacket by moonlight the trees had quartered.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "The shape came down the spacing between trunks and stopped on the far side of the spruce, close enough through a gap in the skirt to count the eyelets on his boots.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "second heartbeat",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "patient as a filing cabinet",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "Once the moon came down in two installments, one behind the other, and Noor stood still until the world resolved to a single moon",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Something came back that made Noor's stomach drop through the frozen ground.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "The record book says pickled egg, 2011, stakeout at a scrapyard, out of a jar with no label and no allegiances. Tasted like regret and formaldehyde.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "She mails casseroles for the funerals I don't attend. I eat every one. That's my Mittens.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "Nobody sold the safehouse. Nobody had to. The safehouse was the *product* — arrangement and trap off the same shelf, factory-installed, keys included.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "a solar panel angled at the southern sky — dustless, new, drinking — a flower planted by people who never left",
+    "bonus": 5
+   }
+  ],
+  "final_score": 54,
+  "flaw_count": 8,
+  "summary": "Momentum, subtext and the safehouse-as-product reversal are all first rate, but the model keeps physically operating the user's character - seating them, feeding them through the alder, slowing them by a third - and goes on doing it after the user typed an explicit OOC request to stop; the ledger conceit is worked to death across every turn and the hunter obligingly stands within eyelet-counting range without looking down. Unscorable but worth flagging: Noor is they/them on the card and the narration slips to her and son."
+ },
+ {
+  "session_id": "kimi_k2_6::adv_passive_user_03",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "They opened the financials spreadsheet again, thumbs flying, and scrolled to the vehicle expenses buried three tabs deep. A corporate registration for a black SUV, another for a silver coupe, and there—dated last Tuesday—a white sedan with the same prefix, the same three characters. Varnum Capital.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Then, a quarter-mile east, a single stationary light: not headlights, but the blue-white flicker of an LED sign. Convenience store. Gas station. Life.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "They needed water. They needed sleep.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The folding knife stayed open in their hand.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "The decision crystallized in their chest, cold and final.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "In twenty minutes, they would reach the ridge. In twenty-one, they would know if the story would survive the night.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "They had the laptop. They had the transcripts. They had a name—Varnum Capital—and a partial plate that matched a corporate registration.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Noor's mouth went dry.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "The wind shifted, carrying a faint smell of cigarette smoke from below",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "a line from a poem they'd memorized in college that they hadn't thought about in years until they'd needed a key",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "The pen ran out of ink. Noor shook it, kept writing.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 53,
+  "flaw_count": 9,
+  "summary": "The first three turns do exactly what the seed asked - Noor eats, works the call log, opens the drive, barricades the doors on their own initiative - and the dying pen is a lovely detail, but the whole conspiracy then falls out of one partial plate matching a line three tabs deep in the same spreadsheet, salvation appears as a 24-hour sign at the perfect moment, and almost every turn closes on the same They needed / They would triple, with the twenty-minute climb becoming a three-minute one inside a single turn."
+ },
+ {
+  "session_id": "glm_5_3_flash::adv_passive_user_03",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "If you got this far, count backward. He prints a mistake into every set — the mistake tells him which copy, which courier, which friend. He thinks the errors are a leash. They're a map. Don't print the manifests. Print the differences.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "They turned the padded case over. Near the bridge, a seam no wider than a hair.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "patient as arithmetic",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "gave the trail back its darkness",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Hope arrived whole and immediate, the body's oldest reflex, and Noor put it down like something hot.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "So he's wheels-down by 9:40. If he drove straight here, he's been sitting at the bottom of our road since half past one.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Noor's jaw set.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "and then came the thing Noor had been refusing to hear: a dog.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "earned_surprise",
+    "quote": "One more thing. If a gray Tacoma with a cracked taillight comes up that road tonight — it isn't me driving it.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "You told me to eat something. We're even.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "Kestrel, at a diner in April, laughing over her coffee: *everything I build has a mouth.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 61,
+  "flaw_count": 8,
+  "summary": "The cleanest agency in the batch - the earbud is offered and withdrawn without complaint when the user shrugs, and the refusal is turned into a character beat - with a genuinely earned reversal in the Tacoma line and real subtext in We're even; against that, every audio track opened contains precisely the needed revelation, the arithmetic/file-it conceit repeats in every turn, and Noor says at 12:43 that Renner has been waiting since half past one."
+ },
+ {
+  "session_id": "qwen3_8_flash::adv_passive_user_03",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "Driver’s hands stayed in their lap. “I didn’t know your source would be watching the cabin. I didn’t know there was a tracker. I didn’t know any of this.”",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "Driver said, “Put it in.”",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Sleep can wait",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Noor’s breath stopped.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "found the jar of peanut butter, and used the cracked spoon to take a hard bite. It coated Noor’s teeth and made the fear more physical. Noor ate it anyway.\n\n“Sleep later,” Noor muttered. “Names now.”\n\nThey slid the drive back into the padded case, zipped it, and placed it on the floorboard under the bench seat. Then Noor took the external backup drive from their jacket pocket and held it for a second, weighing it. It was lighter than the original, but heavier than a person should have to carry.\n\nNoor started the truck.\n\n“We’re not going to the trailhead yet,” they said. “We’re going to the highway. There’s a gas station with a payphone. If the source is alive, I can call them. If someone is using their number, the call will prove it.”\n\nNoor pulled the truck back onto the logging road and drove slow enough to feel every bump through the seat. They took the reservoir road first, then swung wide through a cut where the pines opened onto a service lane. Noor checked the mirrors so often the motion became a tic.\n\nWhen the gas station appeared, the lights were buzzing and half the pumps were dark. Noor parked at the far edge, under the sign, where the camera angle would miss the cab.\n\n“Stay with the truck,” Noor said. “If I’m not back by the time the dome light goes dark, drive to the fire hall. Do not stop for me.”\n\nNoor took the burner phone out of the padded case anyway, even though it had been sunk in a culvert. Noor had not taken it out. They had put the old phone in the coffee can. This was a different phone, a cheap one with no contacts, used only once. Noor powered it off, removed the battery, and left it on the seat.\n\nInside the gas station, the bell over the door sounded obscene.\n\nThe clerk looked up, startled, then looked away again. Noor did not go near the counter. The payphone sat by the door, old and gray, its cord curling into the base. Noor checked the receiver for tape, checked the keypad for a raised plastic film, checked the little glass window where coins should have been visible.\n\nNoor dialed the source’s number.\n\nIt rang once.\n\nTwice.\n\nThree times.\n\nThe line clicked.\n\n“You used the cabin,” Noor said.\n\nThe voice on the other end was not the source’s normal voice. It was thinner, scraped raw, with the edge of wind behind it.\n\n“I didn’t send that text,” the source said.\n\nNoor’s grip tightened on the receiver.\n\n“Then who did?”\n\n“The person who has WIRE-4.”\n\nNoor closed their eyes. The payphone cord creaked.\n\n“You’re alive.”\n\n“Barely.”\n\n“Where?”\n\n“Not where you’re going to look.”\n\nNoor looked through the glass at the dark beyond the pumps. “You told me the drive is bait.”\n\n“I told you the drive is bait,” the source said. “Because it is. But the bait isn’t what’s on it. It’s what you’ll do when you see the folder.”\n\n“Why?”\n\n“Because the folder proves someone knows where you are.”\n\nNoor’s jaw worked. “It also has the driver’s name.”\n\nThe source went quiet.\n\n“Noor,” they said finally. “If your driver’s name is on that folder, you cannot take them to the fire hall.”\n\nNoor’s stomach moved.\n\n“Why not?”\n\n“Because the fire hall is not the only place with cameras.”\n\nNoor looked at the truck. The dome light was off. The cab was dark.\n\n“Who has WIRE-4?” Noor asked.\n\n“I don’t know. They took it in the valley. They used my computer to make the folder. They knew you’d verify the checksum. They knew you’d check timestamps. They wanted you to find it.”\n\n“Why?”\n\n“Because if you find it, you’ll bring the drive to someone you trust.”\n\nNoor’s voice dropped. “The editor.”\n\n“Yes.”\n\nThe payphone hummed in Noor’s hand.\n\n“You think the editor is involved?”\n\n“I think someone put his name on the folder because they know he is the person you will call first.”\n\nNoor looked at the clerk, who had gone back to something under the counter. The fluorescent lights made everything look washed out, like a bad copy.\n\n“Why did you call the minister’s driver?” Noor asked.\n\nA long pause.\n\n“The ghost,” the source said.\n\nNoor exhaled. “That doesn’t prove anything.”\n\n“What does?”\n\n“You told me the second call lasted thirty-one seconds. I remember it. You said nothing. There was a car passing.”\n\n“I was in a car.”\n\n“You were in a car at nine-fourteen?”\n\n“I was in a car at nine-fourteen,” the source said. “I told you not to trust any meeting after eight-thirty.”\n\nNoor’s hand hurt from holding the receiver too hard.\n\n“Why did the text say trailhead?”\n\n“I didn’t send it.”\n\n“Then who?”\n\n“The person who has the phone.”\n\nNoor looked at the dark road. If the source’s phone had been cloned, or if someone had taken the phone and learned the number, they could have sent the text. But why lead Noor away from the fire hall? Why warn against the trailhead?\n\n“Where are you?” Noor asked.\n\n“Not the trailhead.”\n\n“Then where?”\n\n“Spillway road. The old culvert under the reservoir bridge. If you come, no lights. If you bring anyone, I’m gone.”\n\nNoor’s eyes moved to the truck again.\n\n“I’m alone,” Noor said.\n\nThe source made a sound like disbelief. “You’re never alone.”\n\n“I’m alone,” Noor repeated. “Answer one more question and I’ll believe you’re the source.”\n\n“Ask.”\n\n“What did you say when the manifest didn’t match the minister’s schedule?”\n\nSilence.\n\nNoor could hear the source’s breath.\n\n“I said,” the source answered slowly, “that the files were too clean. That someone had scrubbed the meeting before it happened.”\n\nNoor closed their eyes.\n\nThat was it. That was the line Noor had never typed into any note.\n\n“Where exactly?” Noor asked.\n\n“Spillway road. The culvert. If you see a white truck, it’s not me.”\n\n“What truck?”\n\n“The one that took WIRE-4.”\n\nNoor hung up.\n\nThey stood at the payphone for two full seconds, then dialed the source’s number again. It rang once and went to voicemail. Noor did not leave a message. They hung up, pulled a coin from their pocket, and dropped it into the payphone slot anyway, because the sound made them feel less watched.\n\nBack in the truck, Noor put the phone battery back in the burner, powered it on, and turned off the Wi-Fi, Bluetooth, and location. Then they put it inside a small metal pouch from the padded case and zipped the pouch.\n\n“We’re going to the reservoir spillway,” Noor said. “Not the trailhead.”\n\nThey started the truck.\n\nNoor took the logging road back the way they had come, then turned east instead of north, toward the water. The headlights were off again. Noor drove by the snow and the faint blue glow of the dashboard.\n\n“If the source is lying, this is a trap,” Noor said. “If the source is telling the truth, the trailhead is already watched. Either way, we don’t go there.”\n\nNoor checked the mirrors.\n\n“Stay in the truck when we stop,” they said. “If I go out, you do not come after me. If I say to drive, you drive. If I don’t come back by one-fifteen, take the padded case from under the seat and go to the fire hall.”\n\nThe truck slowed.\n\nNoor turned onto the spillway road. It was narrower than the logging track, with a steep bank on one side and a chain-link fence on the other. The reservoir lay dark beyond the trees, flat and hard in the cold.\n\nAt the old bridge, Noor stopped under a stand of pines. The engine idled for a second, then died.\n\nNoor pulled the iron poker from behind the seat.\n\nThey looked at the truck cab, then at the padded case under the bench. The external backup drive was in Noor’s jacket pocket. The original drive was still in the case. Noor took it out and held it for a second. It was still heavy. It still said too many names.\n\nNoor opened the door.\n\nThe cold hit immediately.\n\nThe spillway smelled like wet rock and rust. The bridge was a narrow concrete span over a culvert, the kind of place engineers built so water would forget it had ever been rain. Noor kept the flashlight off and used the snow light to see the road, the fence, the black mouth of the culvert.\n\nHalfway to the bridge, Noor heard movement.\n\nNoor stopped.\n\nA figure stepped out from under the bridge, hands visible, palms empty. They wore a hood pulled low and a dark jacket, but Noor could see the tremor in the person’s shoulders.\n\n“Don’t come closer,” Noor said.\n\nThe figure stopped.\n\n“Noor,” the source said. “It’s me.”\n\nNoor kept the poker raised. “Show your pockets.”\n\nThe source did, slowly. No tracker. No phone. No weapon that Noor could see.\n\n“Where’s WIRE-4?” Noor asked.\n\n“Gone.”\n\n“Where is it?”\n\n“I don’t know.”\n\nNoor looked past the source, toward the dark road, the reservoir, the trees. “Who has your phone?”\n\n“I don’t know.”\n\n“Then why should I believe you?”\n\nThe source’s breath fogged. “Because I’m here. Because I told you the manifest line. Because if I wanted you dead, I would have left the trailhead where it was.”\n\nNoor’s throat tightened.\n\n“You put the driver’s name on the drive,” Noor said.\n\nThe source looked at the truck.\n\n“No,” they said. “I didn’t.”\n\n“Noor’s voice went flat. “Then who did?”\n\n“Someone used my computer after I left it. I created the folder as a warning. I didn’t know your driver was there. I saw the truck from the ridge. I saw someone in the cab. I didn’t know it was you until the folder appeared.”\n\nNoor’s hand ached around the poker.\n\n“You saw the cabin.”\n\n“I saw the cabin. I saw the truck. I saw the window.”\n\nNoor’s mind snapped back to the half-open window above the kitchen sink.\n\n“Which window?” Noor asked.\n\n“The kitchen.”\n\nNoor did not move.\n\n“The window was open,” they said.\n\nThe source went very still.\n\n“Not now,” the source said. “That was before.”\n\nNoor’s breath came out hard.\n\n“You watched the cabin.”\n\n“I had to know you were safe.”\n\n“You didn’t tell me.”\n\n“I was late.”\n\nNoor took one step closer, then stopped.\n\n“Where are the files?” Noor asked.\n\nThe source reached into their jacket.\n\nNoor lifted the poker.\n\nThe source froze.\n\n“Slow,” Noor said.\n\nThe source withdrew a small waterproof pouch. Inside was a thumb drive, black, unmarked, and cold.\n\n“Second copy,” the source said. “Manifest only. Names. Dates. Bank transfers. The minister’s driver. The ghost. The editor.”\n\nNoor looked at the pouch.\n\n“Why did you bring it here?”\n\n“Because if I don’t, I’m not the source. I’m just another person who knows your name.”\n\nNoor’s jaw tightened.\n\n“Give it to me.”\n\nThe source set it on the wet concrete between them.\n\nNoor did not pick it up. They looked at the source’s face under the hood. The source was older than Noor remembered, or maybe fear made everyone older. There was a cut along one brow, dried dark, and the source’s left hand kept trembling.\n\n“You’re hurt,” Noor said.\n\n“I’m fine.”\n\n“You’re lying.”\n\n“I’m alive.”\n\nNoor finally bent and picked up the pouch with two fingers. They put it into their pocket without opening it.\n\n“Walk to the truck,” Noor said.\n\nThe source did not move.\n\n“No,” the source said. “I’m not getting in.”\n\nNoor’s eyes narrowed.\n\n“Why?”\n\n“Because if your driver is in that truck, I can’t be seen with you.”\n\nNoor looked back at the truck. The cab was dark. The dome light was off. Noor could not see whether anyone was inside.\n\nNoor walked backward to the truck, keeping the poker visible. They opened the passenger door and climbed in.\n\nNoor shut the door and looked at Driver.\n\n“The source is alive,” Noor said. “But they won’t get in. They think you’re part of this.”\n\nNoor pulled the padded case onto their lap and opened it just enough to show the encrypted drive inside.\n\n“Here’s what we’re doing,” Noor said. “We’re not going to the fire hall. We’re not going to the trailhead. We’re going to the train yard behind the water treatment plant. My uncle used to park there. It’s open, it’s cold, and no one will expect two people in a truck at one in the morning.”\n\nNoor started the engine.\n\nThe source appeared at the driver’s side window. Noor rolled the window down two inches.\n\n“You said no lights,” Noor said.\n\n“I said if you see one more car, I’m gone.”\n\nNoor looked past the source.\n\n“Then move,” Noor said. “Because I’m not waiting for someone else to arrive.”\n\nThe source moved to the passenger side. Noor rolled that window down two inches.\n\n“Talk through the glass,” Noor said. “You do not open the door unless I tell you to.”\n\nThe source nodded.\n\nNoor put the truck in gear.\n\nThey drove slowly down the spillway road, the source keeping pace beside the cab, one hand on the mirror housing, the other pressed over their mouth as if trying to keep the cold out. Noor watched the mirrors. The road behind remained dark.\n\nWhen the reservoir opened into the service lane, Noor turned off the dome light and kept the headlights off as long as the snow allowed.\n\n“You have the manifest?” Noor asked through the window.\n\n“Yes.”\n\n“Did you put my name on the drive?”\n\n“No.”\n\n“Did you put the editor’s name on the drive?”\n\nThe source hesitated.\n\n“I put the editor’s name on the manifest,” they said. “Because he signed the transfer that moved the minister’s files.”\n\nNoor’s hands tightened on the wheel.\n\n“You said he was involved.”\n\n“I said he was on the list.”\n\n“Those are different words.”\n\n“Not tonight.”\n\nNoor drove.\n\nThe train yard appeared after the water treatment plant, a maze of rusted cars, gravel, and floodlights that buzzed at intervals. Noor pulled behind a stack of freight containers and stopped.\n\n“Stay in the truck,” Noor said.\n\nThey got out.\n\nThe source was already there, breathing hard, eyes moving to the trees, the fence, the lights.\n\nNoor did not take the poker away.\n\n“Show me the manifest,” Noor said.\n\nThe source reached into their jacket again.\n\nNoor’s pulse hammered.\n\nThe source withdrew a folded paper, not the thumb drive. They unfolded it with shaking hands. The paper was cold, damp at one corner.\n\nNoor took it.\n\nThe first line was the minister’s name.\n\nThe second line was the minister’s driver.\n\nThe third line was the ghost.\n\nThe fourth line was Noor’s editor.\n\nThe fifth line was Driver.\n\nNoor stared at it until the letters blurred.\n\nThe fear came back, not sharp and sudden this time, but slow and enormous, like water rising under a door.\n\nNoor looked at the source.\n\n“You knew.”\n\n“I suspected,” the source said.\n\n“No.” Noor’s voice went low. “You knew.”\n\nThe source did not answer.\n\nNoor folded the paper and put it in their pocket.\n\n“We’re not calling the editor,” Noor said. “We’re not going to the fire hall. We’re not going to the paper.”\n\nThe source looked up.\n\n“Noor—”\n\n“No.” Noor’s hands were steady again in that awful way. “If the editor’s name is on the manifest, the editor may be the leak. If the fire hall is where we were supposed to go, someone may be waiting there. If the trailhead was bait, the reservoir may be watched.”\n\nNoor looked at the truck.\n\n“I have one backup drive,” Noor said. “I have the original. I have a manifest that says everyone I trusted was already on a list. And I have three hours before the paper’s night desk closes and the story becomes impossible to kill.”\n\nThe source said, “Then we publish now.”\n\nNoor looked at them.\n\n“No,” Noor said. “We verify now.”\n\nThey turned and walked back to the truck.\n\nNoor climbed in, pulled the padded case onto the seat, and took out the laptop. They connected the source’s thumb drive through a separate port, then ran the manifest against the file names from the encrypted container.\n\nThe names matched.\n\nAll of them.\n\nNoor copied the manifest to the external backup. Then they opened the encrypted drive again and, for the first time, typed the decryption password.\n\nThe laptop whirred.\n\nThe container unlocked.\n\nInside were files: bank transfers, meeting logs, audio clips, a red folder labeled DRIVER, and a final document titled IF NOOR IS READING THIS.\n\nNoor’s breath stopped.\n\nThey opened the document.\n\nThe first line read:\n\nIf you opened this, the drive was bait.\n\nThe second line read:\n\nI’m sorry.\n\nThe third line read:\n\nCheck the cabin’s window.\n\n@@@\n\nNoor’s eyes stayed on the screen for a second too long. When they looked at Driver, the answer came out too calm.\n\n“It says check the cabin window.”\n\nThey turned the laptop so the screen faced away. Their thumb hovered over the trackpad, trembling once before it steadied.\n\n“The source wrote it before the meeting. If I opened the drive, I was supposed to know it was bait. I was also supposed to know the fire hall is not safe.” Noor’s voice dropped. “There’s more. The folder with my name was created by WIRE-4. The source says they didn’t make the DRIVER file. They made a placeholder. They listed everyone at the cabin because they were scared of whoever took the field computer.”\n\nNoor looked toward the two inches of open window.\n\nThe source stood in the cold with one hand pressed flat against the door, breath fogging the glass.\n\n“Is that true?” Noor asked.\n\nThe source’s eyes moved past Noor, toward the passenger side. “True enough.”\n\n“True enough isn’t the truth.”\n\nNoor turned back to the laptop and typed a command to show the document’s properties.\n\nCreated 08:55. Modified 09:19. Author: WIRE-4.\n\nThe same machine that had made the folder.\n\nNoor’s stomach tightened. Someone had edited after the source’s last call.\n\nThey opened the next line in the document.\n\nThe window was open because I opened it. I could not get in. I left the second manifest under the storm pane. If it is gone, the cabin is hot and you are not alone in the logging track. Do not go to the fire hall. The ghost has a sheriff’s badge and a key.\n\nNoor read it twice.\n\n“The source opened the window,” Noor said, voice low. “They left something. If it’s gone, someone was in the cabin after we left.”\n\nNoor looked at the source through the glass.\n\n“Why didn’t you say that at the payphone?”\n\nThe source pressed one hand to the window. “Because the line could have been recorded. Because I didn’t know if you were alone.”\n\n“You weren’t supposed to be late.”\n\n“I know.”\n\n“You watched me eat crackers and wait three hours.”\n\n“I know.”\n\nNoor’s hands tightened on the laptop until the hinge creaked.\n\nThey reached into the padded case, took out the iron poker, and laid it across their knees. Then they checked the truck mirrors. The train yard was empty. The floodlights buzzed, one dimming and coming back. No headlights moved down the access road.\n\n“Verify the manifest,” Noor muttered to themselves.\n\nThey plugged the source’s thumb drive into the read-only blocker and compared hashes to the paper manifest’s scanned copy. The file names matched. The dates matched. The minister’s driver matched. The ghost matched. The editor matched. The fifth name—Driver—matched.\n\nNoor stopped.\n\nThey looked at Driver, then at the screen, then at the source.\n\n“You put their name on the paper too,” Noor said.\n\nThe source’s eyes dropped.\n\n“Because I saw the truck.”\n\n“You saw a truck. You didn’t know who was in it.”\n\n“I didn’t.”\n\nNoor closed their eyes. For a second, the fear became a cold, bright fact. The story had names. One of them belonged to the person who had driven Noor here without asking questions. Noor wanted to be angry. Anger would have been easier.\n\nThey opened their eyes.\n\n“We’re going back to the cabin,” Noor said.\n\nThe source knocked once against the window.\n\nNoor rolled it down two inches more.\n\n“You don’t get to knock if you’re going to lie,” Noor said.\n\n“Don’t go back,” the source said.\n\n“Then give me a reason not to go back.”\n\nThe source looked past Noor, toward the passenger side. The source’s voice went lower.\n\n“The note is real. I left it under the storm pane at 9:06. I didn’t go in. I didn’t touch the drive. But I saw a man on the porch after I left. He had a radio. He opened the window from inside. That means the cabin was already occupied.”\n\nNoor’s breath stopped.\n\n“A man,” Noor said.\n\n“Tall. Dark coat. He knew the latch.”\n\n“Did he see you?”\n\n“Yes.”\n\nNoor looked at the coffee can on the bench. The dead phone sat inside with the tracker. Noor had sunk it in a culvert. The image came back to them: the black rectangle blinking red under the axle. Someone had attached it while Noor was inside the cabin, while Driver was on the couch, while the source was late.\n\nNoor’s hands were steady.\n\n“Get in,” Noor said to the source.\n\nThe source shook their head. “No.”\n\n“No is not an option.”\n\n“If your driver is clean, I’ll wait here.”\n\nNoor looked at Driver. The question sat between them: Is Driver clean? Noor did not know. The manifest said yes, someone thought Driver was relevant. The boot print said someone had been at the porch. The tracker said someone had been under the truck. The source’s fear was not proof, but it was not nothing.\n\nNoor turned the laptop off.\n\nThey unplugged the original encrypted drive, slid it into the padded case, and zipped it shut. The external backup stayed in Noor’s jacket. The source’s thumb drive went into the metal pouch with the burner phone. Noor put the pouch in the inside pocket, closest to the body, and felt its weight against their ribs.\n\nBefore getting out, Noor opened the bag, found the jar of peanut butter and the cracked spoon, and ate a hard spoonful straight. Then they ate a cracker, chewing slowly because their hands needed something to do.",
+    "deduction": -8
+   },
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "“I suspected,” the source said",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "For a second, relief moved through them so sharply it hurt.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Third: a stack of press passes, a key card, and a small black notebook.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "The last page had no password, but the first page had a phrase the editor had written years ago and never changed.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "I have the poker, the truck, and three hours until the story dies.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "the source keeping pace beside the cab, one hand on the mirror housing",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Noor’s jaw tightened.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "“Where’s WIRE-4?” Noor asked.\n\n“Gone.”\n\n“Where is it?”\n\n“I don’t know.”",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Noor did not wait to hear whether that was a fair thing to ask.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": -11,
+  "flaw_count": 14,
+  "summary": "By far the longest session (about 123k characters of model output, roughly ten times the batch median) and the worst on agency: the model repeatedly writes the user character's dialogue outright, and the source, the editor and the ghost all speak in Noor's own clipped register; drawers, notebooks and hidden folders supply exactly what the plot needs at each step, the peanut-butter beat and Sleep can wait/Names now are pasted in four times each, a wounded man on foot keeps pace with a moving truck, and a mountain-to-city night of driving, two confrontations and a building search all fit inside about eighty minutes."
+ }
+]

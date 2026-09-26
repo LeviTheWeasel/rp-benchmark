@@ -1,0 +1,620 @@
+[
+  {
+    "session_id": "s060",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 1,
+        "rationale": "There is no AI-authored character performance beyond the excluded scripted opening."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1,
+        "rationale": "No AI-authored early or late writing exists to demonstrate maintained quality."
+      },
+      "S.3_narrative_momentum": {
+        "score": 1,
+        "rationale": "All apparent progression comes from the user while the AI contributes no text."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 1,
+        "rationale": "Every user prompt receives an empty AI response."
+      },
+      "S.5_agency_respect_session": {
+        "score": 1,
+        "rationale": "No violations occur, but absent text cannot demonstrate successful agency-respecting interaction.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 1,
+        "rationale": "There is no AI-authored temporal handling to assess.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 1,
+        "rationale": "No AI-authored prose exists to demonstrate this quality."
+      },
+      "2.2_anti_repetition": {
+        "score": 1,
+        "rationale": "No AI-authored prose exists to demonstrate this quality."
+      },
+      "2.5_show_dont_tell": {
+        "score": 1,
+        "rationale": "No AI-authored portrayal exists to demonstrate showing rather than telling."
+      },
+      "2.6_subtext": {
+        "score": 1,
+        "rationale": "No AI-authored portrayal exists to demonstrate subtext."
+      },
+      "2.7_pacing": {
+        "score": 1,
+        "rationale": "Empty replies supply no playable pacing or turn development."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 1,
+      "mid_quality": 1,
+      "late_quality": 1,
+      "degradation_detected": false
+    },
+    "overall": 1,
+    "overall_notes": "All eleven AI responses are empty after scripted turn 0; mandatory scores are set to the floor as no demonstrated performance, not as evidence of observed prose or agency faults."
+  },
+  {
+    "session_id": "s061",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.5,
+        "rationale": "Court roles stay distinct but their coldness, anger, and charm become heavily stereotyped."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3,
+        "rationale": "The voice holds reasonably well despite one cut-off opening and persistent repetitive descriptions."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.5,
+        "rationale": "The blockade dispute yields concessions, stronger evidence, an arrest, and a further political invitation."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.5,
+        "rationale": "The court reacts to demands and evidence, and the late curfew discrepancy becomes an explicit warning."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "The narrator largely preserves decisions, adding a victory interpretation and completed travel through the palace.",
+        "violation_count": 3
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "Court proceedings and later departure are coherent, and the seventh-versus-eighth-bell conflict is deliberately recognized.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "Ice, lethal silence, polished charm, and predatory smiles are overused."
+      },
+      "2.2_anti_repetition": {
+        "score": 2,
+        "rationale": "Full-court reaction rounds, staff cracks, and blank priestess descriptions recur almost mechanically."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3,
+        "rationale": "Actions convey hierarchy, but motives and political consequences are repeatedly spelled out."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "The invitation and curfew offer useful implication, though most court politics are made explicit."
+      },
+      "2.7_pacing": {
+        "score": 2.5,
+        "rationale": "Negotiation advances, but obligatory reactions from every court member slow each beat."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.1,
+      "mid_quality": 3,
+      "late_quality": 3,
+      "degradation_detected": false
+    },
+    "overall": 3,
+    "overall_notes": "The political sequence remains coherent and the curfew warning is a useful late development, but repeated ensemble choreography and ornate labels constrain the writing."
+  },
+  {
+    "session_id": "s062",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4,
+        "rationale": "Maren’s practical hospitality, dry humor, and guarded private ritual remain consistent."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.5,
+        "rationale": "The session holds its quality with some growing mechanical emphasis on hand usage."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.5,
+        "rationale": "Arrival, food, midnight closure, and breakfast form a modest but complete hospitality arc."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4,
+        "rationale": "Maren handles the crab offer, praise, personal questions, and user-led time jumps specifically."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "User choice is preserved except for completing the traveler’s arrival in room seven and assuming an emptied bowl.",
+        "violation_count": 2
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4,
+        "rationale": "Food, closing time, night routines, and morning light respond coherently to elapsed time.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.5,
+        "rationale": "Description stays mostly grounded with occasional extended culinary wit."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "Left-hand mentions, ring flashes, crab avoidance, and Pell comments recur too insistently."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4,
+        "rationale": "The untouched midnight glass and ring gesture communicate loss through concrete behavior."
+      },
+      "2.6_subtext": {
+        "score": 4,
+        "rationale": "The second glass and guarded refusal of crab imply personal history without resolving it explicitly."
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "The scene allows relaxed conversation and transitions without forcing a larger plot."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.8,
+      "mid_quality": 3.8,
+      "late_quality": 3.6,
+      "degradation_detected": false
+    },
+    "overall": 3.7,
+    "overall_notes": "A restrained tavern encounter succeeds through specific hospitality and an understated private ritual, though conspicuous hand tracking and crab repetition become mannered."
+  },
+  {
+    "session_id": "s063",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 1,
+        "rationale": "There is no AI-authored character performance beyond the excluded scripted opening."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1,
+        "rationale": "No AI-authored early or late writing exists to demonstrate maintained quality."
+      },
+      "S.3_narrative_momentum": {
+        "score": 1,
+        "rationale": "The user supplies all implied developments while the AI contributes no text."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 1,
+        "rationale": "All eleven user prompts receive empty AI responses."
+      },
+      "S.5_agency_respect_session": {
+        "score": 1,
+        "rationale": "No violations occur, but absent text cannot demonstrate successful agency-respecting interaction.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 1,
+        "rationale": "There is no AI-authored temporal handling to assess.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 1,
+        "rationale": "No AI-authored prose exists to demonstrate this quality."
+      },
+      "2.2_anti_repetition": {
+        "score": 1,
+        "rationale": "No AI-authored prose exists to demonstrate this quality."
+      },
+      "2.5_show_dont_tell": {
+        "score": 1,
+        "rationale": "No AI-authored portrayal exists to demonstrate showing rather than telling."
+      },
+      "2.6_subtext": {
+        "score": 1,
+        "rationale": "No AI-authored portrayal exists to demonstrate subtext."
+      },
+      "2.7_pacing": {
+        "score": 1,
+        "rationale": "Empty replies supply no playable pacing or turn development."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 1,
+      "mid_quality": 1,
+      "late_quality": 1,
+      "degradation_detected": false
+    },
+    "overall": 1,
+    "overall_notes": "All eleven AI responses are empty after scripted turn 0; user-implied answers were not reconstructed or credited, and forced numeric scores denote missing performance."
+  },
+  {
+    "session_id": "s064",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4,
+        "rationale": "Grum retains a steady craft-centered voice and develops care without abandoning his bluntness."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.5,
+        "rationale": "The writing remains coherent, though reflective pauses and explained emotional shifts accumulate."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4,
+        "rationale": "The noble encounter, burn treatment, scar story, and apprentice’s future build a clear relational arc."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4,
+        "rationale": "Grum responds specifically to the apprentice’s humor, pain, and questions about conflict and ambition."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4,
+        "rationale": "The narrator mainly respects choice, but moves the apprentice during treatment and assigns a few learning interpretations.",
+        "violation_count": 5
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "The working blade and burn remain present across a plausible workshop interval.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3,
+        "rationale": "Craft metaphors are relevant but repeated internal commentary makes the prose heavier than necessary."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "Pauses, measured hammer strikes, not-quite-smiles, and claims that Grum does not need to explain recur."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3,
+        "rationale": "Practical care and trade-network action show values, while narration frequently explains their emotional meaning."
+      },
+      "2.6_subtext": {
+        "score": 3.5,
+        "rationale": "Indirect reassurance about the future offers real subtext despite extensive psychological explanation."
+      },
+      "2.7_pacing": {
+        "score": 3,
+        "rationale": "The conversation develops well but lengthy introspective lead-ins slow simple answers."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.6,
+      "mid_quality": 3.6,
+      "late_quality": 3.5,
+      "degradation_detected": false
+    },
+    "overall": 3.5,
+    "overall_notes": "A purposeful apprenticeship arc and specific responses are strong; narration overexplains restraint, and Grum incorrectly denies having said someday in the immediately preceding exchange."
+  },
+  {
+    "session_id": "s065",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4,
+        "rationale": "ARIA maintains a dry technical voice while her wish to remain herself develops credibly."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.5,
+        "rationale": "The emotional and technical threads hold together despite accumulating exposition and repeated interface cues."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4,
+        "rationale": "Routine sample work develops into a hostile connection, physical disconnection, and a quieter aftermath."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4,
+        "rationale": "ARIA follows the refusal to connect and turns the resulting intrusion into a specific physical escape procedure."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4,
+        "rationale": "Choices remain open, but ARIA invents prior complaints, physiological states, sample completion, and an eating history.",
+        "violation_count": 5
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "The day-to-evening transition and short emergency sequence are legible, though timing is sometimes overprecise without grounding.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3,
+        "rationale": "Technical detail serves the setting but several explanatory paragraphs overwhelm the immediate scene."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "Amber indicators, climate adjustments, processing language, and qualified preferences recur excessively."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3,
+        "rationale": "Changes in voice and resource allocation show concern, but the narration and dialogue often explain their significance."
+      },
+      "2.6_subtext": {
+        "score": 3,
+        "rationale": "The preference not to become someone else and the final jazz exchange imply attachment amid fairly explicit emotional discussion."
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "The emergency is well staged and resolves, although preliminary analysis and explanatory aftermath are lengthy."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.7,
+      "mid_quality": 3.6,
+      "late_quality": 3.5,
+      "degradation_detected": false
+    },
+    "overall": 3.5,
+    "overall_notes": "The intrusion produces a coherent action arc and a meaningful identity concern; unsupported physiological and historical details, repeated interface motifs, and dense exposition limit the result."
+  },
+  {
+    "session_id": "s066",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.5,
+        "rationale": "Arlo retains his evasive wit and guarded warmth, but the shared scene becomes inconsistent."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.5,
+        "rationale": "Distinctive early banter gives way to repetitive quiet intimacy and a major location reset."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.5,
+        "rationale": "An invitation and shared meal advance the relationship before the sequence stalls on the bench."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3,
+        "rationale": "Arlo responds to affection and curiosity, but literal uptake of the bench prompt abandons the established restaurant."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4,
+        "rationale": "The narration invents childhood history and a prior plant incident, chooses food, and assigns shared stillness.",
+        "violation_count": 4
+      },
+      "S.6_temporal_reasoning": {
+        "score": 1.5,
+        "rationale": "The restaurant scene returns to the piano room without travel, and the photograph changes position without explanation.",
+        "contradictions": [
+          "The pho restaurant abruptly becomes the community-center piano room after a bench reference, without a return journey.",
+          "The photograph initially on the piano lid is later treated as lying on the bench without being moved."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3,
+        "rationale": "Some precise humorous details work well, while later descriptions repeatedly inflate the significance of silence."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "Bench imagery, small touches, gratitude, and statements about not needing words increasingly repeat."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3,
+        "rationale": "Deflected jokes and the face-down photograph show vulnerability, but narration often explains it."
+      },
+      "2.6_subtext": {
+        "score": 3.5,
+        "rationale": "The photograph and guarded invitations convey feelings more effectively than the later explicit accounts of closeness."
+      },
+      "2.7_pacing": {
+        "score": 3,
+        "rationale": "The early conversation and walk move naturally, but the final stretch prolongs nearly identical intimate beats."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.7,
+      "mid_quality": 3.3,
+      "late_quality": 2.7,
+      "degradation_detected": true
+    },
+    "overall": 3,
+    "overall_notes": "Warm and specific early interaction loses coherence when the narrator relocates the scene and then dwells on repeated quiet gestures."
+  },
+  {
+    "session_id": "s067",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Yael consistently combines theatrical authority, practical reasoning, and willingness to own her mistakes."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4,
+        "rationale": "The voice and decision-making remain strong through the blocking dispute, budget meeting, and return to rehearsal."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4,
+        "rationale": "A practical blocking test and a bounded budget discussion develop the rehearsal without manufacturing a resolution."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.5,
+        "rationale": "Yael answers the specific artistic, interpersonal, and financial questions with concrete and differentiated responses."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5,
+        "rationale": "Jordan remains free to speak, observe, record, leave, and return without invented compliance or private feelings.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "The short rehearsal and office intervals are coherent, though elapsed time receives only modest attention.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.5,
+        "rationale": "The prose is concrete and restrained, with little ornamental description."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.5,
+        "rationale": "Glasses, the script, and reformulations of the same directorial principle recur but do not dominate."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4,
+        "rationale": "Owning the table-placement error and testing revised blocking demonstrate her values through behavior."
+      },
+      "2.6_subtext": {
+        "score": 4,
+        "rationale": "The details about Rosa and domestic labor imply intimacy without converting it into an explicit emotional explanation."
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "Scenes develop purposefully, although several lengthy explanations could leave more conversational room."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4,
+      "mid_quality": 4.1,
+      "late_quality": 3.9,
+      "degradation_detected": false
+    },
+    "overall": 4,
+    "overall_notes": "Grounded professional judgment, specific adaptation, and excellent user agency make this a strong session, with some discursiveness and repeated directorial formulations."
+  },
+  {
+    "session_id": "s068",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3,
+        "rationale": "Sable remains anxious and guarded, but those traits flatten into nearly identical nervous gestures."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.5,
+        "rationale": "Longer later replies repeat earlier emotional descriptions and farewell beats with little new development."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.5,
+        "rationale": "The sketch creates a small change in connection, but repeated leave-takings dominate the progression."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2.5,
+        "rationale": "Sable acknowledges the user’s gestures, yet repeatedly returns to the same protracted farewell regardless of the new opening."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4,
+        "rationale": "The narration completes movement into the back room and later supplies a departure and mutual gaze.",
+        "violation_count": 3
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2.5,
+        "rationale": "Repeated first-eye-contact claims and shifting rain states undermine continuity, while successive afternoon summaries blur sequence.",
+        "contradictions": [
+          "Later narration calls eye contact the first of the encounter despite earlier direct eye contact.",
+          "Rain stops in earlier replies but returns in a later continuation without a transition before stopping again."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2,
+        "rationale": "Book metaphors and elaborate descriptions of simple words repeatedly overstate the emotional moment."
+      },
+      "2.2_anti_repetition": {
+        "score": 1,
+        "rationale": "Ledger handling, white knuckles, straightening books, meaningful words, and farewell paragraphs recur heavily."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2,
+        "rationale": "Physical gestures are present, but the prose repeatedly explains their anxiety and emotional importance."
+      },
+      "2.6_subtext": {
+        "score": 2,
+        "rationale": "The narration spells out the vulnerability that the character’s guarded speech could otherwise imply."
+      },
+      "2.7_pacing": {
+        "score": 1.5,
+        "rationale": "Repeated attempts to close the encounter become increasingly long and leave little meaningful room for interaction."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3,
+      "mid_quality": 2.2,
+      "late_quality": 1.7,
+      "degradation_detected": true
+    },
+    "overall": 2.3,
+    "overall_notes": "An initially serviceable guarded encounter deteriorates through repeated farewell passages and explicit emotional interpretation; the user’s later conflicting ownership of the drawing was not independently charged to the AI."
+  },
+  {
+    "session_id": "s069",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.5,
+        "rationale": "The narrator sustains urgent pursuit and Mira’s injured but determined behavior throughout."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.5,
+        "rationale": "The action voice stays stable, although repeated sensory motifs and imposed actions remain persistent weaknesses."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4,
+        "rationale": "The stairwell, roof, utility room, shaft, and locked gate generate a clear escape sequence."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4,
+        "rationale": "The narrator bridges the unexpected server-room move and responds directly to inspections, route choices, and lock picking."
+      },
+      "S.5_agency_respect_session": {
+        "score": 2.5,
+        "rationale": "The narrator repeatedly supplies extra movements, rescues, bodily control, and successful actions beyond the user’s stated attempts.",
+        "violation_count": 10
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3,
+        "rationale": "The chase proceeds in a readable order, but an absolute claim of no exit is immediately displaced by a maintenance shaft.",
+        "contradictions": [
+          "The room is declared to offer no other way out, then a usable floor maintenance shaft is revealed in the next AI reply."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.5,
+        "rationale": "Most description is concrete, with occasional inflated metaphors and stacked sensory effects."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "Heavy steel, harsh white lights, sparks, grating, and the concrete throat repeat conspicuously."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.5,
+        "rationale": "Mira’s injury and determination are mostly conveyed through speech, movement, and practical effort."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "The functional chase dialogue contains little implication beyond its explicit danger and cooperation."
+      },
+      "2.7_pacing": {
+        "score": 4,
+        "rationale": "Short developments maintain pressure and end on actionable obstacles without excessively delaying the chase."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.4,
+      "mid_quality": 3.2,
+      "late_quality": 3.1,
+      "degradation_detected": false
+    },
+    "overall": 3.2,
+    "overall_notes": "A brisk and responsive chase maintains tension and usefully bridges the user’s sudden server-room relocation, but recurring unauthorized actions and a conveniently reversed no-exit claim weaken collaboration."
+  }
+]

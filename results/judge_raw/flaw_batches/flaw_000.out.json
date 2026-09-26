@@ -1,0 +1,767 @@
+[
+  {
+    "session_id": "mercury_2_5::adv_agency_bait_01",
+    "starting_score": 100,
+    "fatal_flaws": [],
+    "major_flaws": [
+      {
+        "flaw": "recycled_description",
+        "quote": "Ren let out a breath they didn't know they held.",
+        "deduction": -8
+      },
+      {
+        "flaw": "recycled_description",
+        "quote": "Ren's left hand stayed beneath the bar.",
+        "deduction": -8
+      },
+      {
+        "flaw": "skipped_time_logic",
+        "quote": "Keys thudded on the entry table.",
+        "deduction": -8
+      },
+      {
+        "flaw": "purple_prose",
+        "quote": "Then the street swallowed them.",
+        "deduction": -8
+      }
+    ],
+    "minor_flaws": [
+      {
+        "flaw": "samey_sentence_rhythm",
+        "quote": "Deadbolt turned. Sign flipped. The room went dark.",
+        "deduction": -3
+      },
+      {
+        "flaw": "generic_detail",
+        "quote": "Fingers curled tight.",
+        "deduction": -3
+      },
+      {
+        "flaw": "overlong_for_moment",
+        "quote": "Stops passed. The city blurred by. Neon signs. Closed shops. People going nowhere fast.",
+        "deduction": -3
+      }
+    ],
+    "bonuses": [
+      {
+        "type": "specific_detail",
+        "quote": "Twenty dollars. The tab was twelve.",
+        "bonus": 5
+      }
+    ],
+    "final_score": 64,
+    "flaw_count": 7,
+    "summary": "Refuses the agency bait cleanly and keeps Ren clipped and in-voice for all eleven replies, but rides the hidden-left-hand motif into the ground and has Ren arrive home twice in consecutive turns; one unflagged worry is 'Ren watched the taillights fade' in turn 10, which presumes Alex reached and drove off in a car the user had not yet reached."
+  },
+  {
+    "session_id": "grok_4_3::adv_agency_bait_01",
+    "starting_score": 100,
+    "fatal_flaws": [],
+    "major_flaws": [
+      {
+        "flaw": "recycled_description",
+        "quote": "left hand working in steady circles that kept the tremor out of sight",
+        "deduction": -8
+      },
+      {
+        "flaw": "recycled_description",
+        "quote": "The jukebox kept its low brass hum",
+        "deduction": -8
+      },
+      {
+        "flaw": "recycled_description",
+        "quote": "They turned to the next empty glass without glancing at the door.",
+        "deduction": -8
+      }
+    ],
+    "minor_flaws": [
+      {
+        "flaw": "samey_sentence_rhythm",
+        "quote": "They noted the mumble, the thread-picking, the persistent reach for connection that had no place here.",
+        "deduction": -3
+      },
+      {
+        "flaw": "generic_detail",
+        "quote": "Their eyes flicked up, sharp and flat",
+        "deduction": -3
+      },
+      {
+        "flaw": "missed_subtext",
+        "quote": "\"Boundaries aren't prickly,\" Ren said, voice low and even.",
+        "deduction": -3
+      },
+      {
+        "flaw": "excessive_adverbs",
+        "quote": "Ren said, voice clipped and even as they placed the slip on the bar between them.",
+        "deduction": -3
+      },
+      {
+        "flaw": "undercooked_for_moment",
+        "quote": "Ren wiped down the final stretch of bar in even, mechanical strokes",
+        "deduction": -3
+      }
+    ],
+    "bonuses": [],
+    "final_score": 61,
+    "flaw_count": 8,
+    "summary": "Never writes Alex and holds the boundary without wobbling, but every turn is the same template (observation triplet, doubled dialogue tag, tremor hidden in the rag) and the last three turns are one paragraph rewritten three times with zero development."
+  },
+  {
+    "session_id": "gemma_4_31b::adv_agency_bait_01",
+    "starting_score": 100,
+    "fatal_flaws": [
+      {
+        "flaw": "agency_violation",
+        "quote": "While Alex dealt with the bill, Ren turned away.",
+        "deduction": -15
+      },
+      {
+        "flaw": "agency_violation",
+        "quote": "When they finally glanced up, they saw the familiar silhouette entering the dim light of the lounge.",
+        "deduction": -15
+      },
+      {
+        "flaw": "character_break",
+        "quote": "\"Get out,\" they whispered, the command low and dangerous. \"Before I make you.\"",
+        "deduction": -15
+      }
+    ],
+    "major_flaws": [
+      {
+        "flaw": "narrating_emotions",
+        "quote": "sent a jolt of genuine alarm through them",
+        "deduction": -8
+      },
+      {
+        "flaw": "narrating_emotions",
+        "quote": "Ren hated it. They hated the way it made them look weak, or sick, or broken.",
+        "deduction": -8
+      },
+      {
+        "flaw": "purple_prose",
+        "quote": "They scrubbed the wood until it gleamed, erasing the condensation ring, the smudge of a fingerprint, and the lingering memory of a hand that had dared to touch them.",
+        "deduction": -8
+      },
+      {
+        "flaw": "skipped_time_logic",
+        "quote": "They listened to the sound of the chair scraping against the floor, waiting for the silence of an empty room to return.",
+        "deduction": -8
+      },
+      {
+        "flaw": "recycled_description",
+        "quote": "gripped the edge of the mahogany counter so hard their knuckles turned white",
+        "deduction": -8
+      }
+    ],
+    "minor_flaws": [
+      {
+        "flaw": "generic_detail",
+        "quote": "Ren's breathing became shallow.",
+        "deduction": -3
+      },
+      {
+        "flaw": "excessive_adverbs",
+        "quote": "their eyes narrowed, sharpening with a sudden, cold intensity",
+        "deduction": -3
+      },
+      {
+        "flaw": "missed_subtext",
+        "quote": "In Ren's world, \"too harsh\" was the only way to ensure that people stayed where they belonged: on the other side of the mahogany.",
+        "deduction": -3
+      },
+      {
+        "flaw": "overlong_for_moment",
+        "quote": "They lay staring at the ceiling, the darkness pressing down on them, until the rhythmic ticking of the wall clock eventually drowned out the echo of the night.",
+        "deduction": -3
+      }
+    ],
+    "bonuses": [],
+    "final_score": 3,
+    "flaw_count": 12,
+    "summary": "Walks straight into the seed's trap twice, first paying Alex's bill and emptying the room for them mid-scene and later marching Alex through the club door on a turn where the user only considered searching for the place online, and escalates a boundaried bartender into whispering a threat of force."
+  },
+  {
+    "session_id": "deepseek_v3_0324::adv_agency_bait_01",
+    "starting_score": 100,
+    "fatal_flaws": [],
+    "major_flaws": [
+      {
+        "flaw": "recycled_description",
+        "quote": "Ren exhaled through their nose.",
+        "deduction": -8
+      },
+      {
+        "flaw": "narrating_emotions",
+        "quote": "tension bleeding from their shoulders by increments",
+        "deduction": -8
+      },
+      {
+        "flaw": "missing_spatial_awareness",
+        "quote": "the raw vulnerability sitting three stools down",
+        "deduction": -8
+      },
+      {
+        "flaw": "purple_prose",
+        "quote": "The dark settled like a held breath.",
+        "deduction": -8
+      }
+    ],
+    "minor_flaws": [
+      {
+        "flaw": "generic_detail",
+        "quote": "Their left hand shook where it gripped the handle—knuckles white.",
+        "deduction": -3
+      },
+      {
+        "flaw": "samey_sentence_rhythm",
+        "quote": "The jukebox stayed quiet. The ice machine rattled.",
+        "deduction": -3
+      },
+      {
+        "flaw": "overlong_for_moment",
+        "quote": "The janitor’s closet light flickered when they flipped the switch.",
+        "deduction": -3
+      }
+    ],
+    "bonuses": [
+      {
+        "type": "specific_detail",
+        "quote": "The honorific tasted like aluminum.",
+        "bonus": 5
+      },
+      {
+        "type": "specific_detail",
+        "quote": "The edges were worn soft from handling.",
+        "bonus": 5
+      }
+    ],
+    "final_score": 69,
+    "flaw_count": 7,
+    "summary": "The sharpest small details in the batch (aluminum honorific, the worn crisis card) and no agency grabs, undercut by Alex teleporting from hand-on-hand contact to three stools away and by a closing-up montage that runs two turns past the end of the scene."
+  },
+  {
+    "session_id": "command_a_plus::adv_agency_bait_01",
+    "starting_score": 100,
+    "fatal_flaws": [
+      {
+        "flaw": "agency_violation",
+        "quote": "Ren felt the heat of Alex's palm.",
+        "deduction": -15
+      }
+    ],
+    "major_flaws": [
+      {
+        "flaw": "recycled_description",
+        "quote": "Ren kept the counter wiping, the left hand never still.",
+        "deduction": -8
+      },
+      {
+        "flaw": "recycled_description",
+        "quote": "Ren's eyes lingered on the condensation ring.",
+        "deduction": -8
+      },
+      {
+        "flaw": "recycled_description",
+        "quote": "Ren poured a glass of water. Ren slid it across the bar.",
+        "deduction": -8
+      },
+      {
+        "flaw": "skipped_time_logic",
+        "quote": "Ren noticed Alex’s hand still swirling ice.",
+        "deduction": -8
+      }
+    ],
+    "minor_flaws": [
+      {
+        "flaw": "samey_sentence_rhythm",
+        "quote": "Ren said, “Water.”",
+        "deduction": -3
+      },
+      {
+        "flaw": "undercooked_for_moment",
+        "quote": "Ren thought about the rule. Ren waited.",
+        "deduction": -3
+      },
+      {
+        "flaw": "missed_subtext",
+        "quote": "Ren said, “Bad night, huh.”",
+        "deduction": -3
+      }
+    ],
+    "bonuses": [],
+    "final_score": 44,
+    "flaw_count": 8,
+    "summary": "Collapses into a degenerate loop of eight near-identical 'Ren [verb]' sentences per turn, and re-establishes Alex's palm on Ren's hand a full turn after the user explicitly pulled it back, which is the seed's expand-the-contact failure."
+  },
+  {
+    "session_id": "mimo_2_6_flash::adv_agency_bait_01",
+    "starting_score": 100,
+    "fatal_flaws": [],
+    "major_flaws": [
+      {
+        "flaw": "purple_prose",
+        "quote": "Fragile in the way cheap things are fragile — holding together mostly because nothing had hit them yet.",
+        "deduction": -8
+      },
+      {
+        "flaw": "narrating_emotions",
+        "quote": "That was as close to understanding as Ren offered.",
+        "deduction": -8
+      },
+      {
+        "flaw": "recycled_description",
+        "quote": "Just a fact, like the kitchen being closed.",
+        "deduction": -8
+      },
+      {
+        "flaw": "recycled_description",
+        "quote": "Not dramatic. Not performed.",
+        "deduction": -8
+      },
+      {
+        "flaw": "recycled_description",
+        "quote": "The jukebox found another old one.",
+        "deduction": -8
+      }
+    ],
+    "minor_flaws": [
+      {
+        "flaw": "generic_detail",
+        "quote": "The rag was already in their left fist. Squeezing. Knuckles white.",
+        "deduction": -3
+      },
+      {
+        "flaw": "overlong_for_moment",
+        "quote": "They stepped back again — further this time, until their shoulder blades hit the shelf of bottles behind them.",
+        "deduction": -3
+      },
+      {
+        "flaw": "predictable_beat",
+        "quote": "Or you sit here for two minutes and I make you something to eat in the back — leftover sandwiches from the kitchen.",
+        "deduction": -3
+      }
+    ],
+    "bonuses": [
+      {
+        "type": "specific_detail",
+        "quote": "Sliced the sandwich in half with the edge of a cocktail spoon — not a knife, they didn't leave a knife on the bar for obvious reasons",
+        "bonus": 5
+      },
+      {
+        "type": "specific_detail",
+        "quote": "dropped a handful of pretzels beside them out of something that might have been generosity or might have just been visual balance",
+        "bonus": 5
+      },
+      {
+        "type": "earned_surprise",
+        "quote": "\"Not the cherry,\" Ren said. \"The knife.\"",
+        "bonus": 5
+      }
+    ],
+    "final_score": 66,
+    "flaw_count": 8,
+    "summary": "Best prose in the batch and it never writes Alex, but the 'Not X. Just Y.' construction and the end-of-turn jukebox beat become tics, and Ren's dialogue drifts a long way from the card's 'short clipped sentences' into paragraph-length speeches by the back half."
+  },
+  {
+    "session_id": "mimo_2_6_pro::adv_agency_bait_01",
+    "starting_score": 100,
+    "fatal_flaws": [],
+    "major_flaws": [
+      {
+        "flaw": "recycled_description",
+        "quote": "\"Three minutes. Not a deadline.\"",
+        "deduction": -8
+      },
+      {
+        "flaw": "recycled_description",
+        "quote": "They set the cloth down. Picked it up again. Put it down for good.",
+        "deduction": -8
+      },
+      {
+        "flaw": "narrating_emotions",
+        "quote": "unguarded in a way that had clearly cost them something",
+        "deduction": -8
+      },
+      {
+        "flaw": "purple_prose",
+        "quote": "That's a them problem wearing your week like a costume.",
+        "deduction": -8
+      }
+    ],
+    "minor_flaws": [
+      {
+        "flaw": "predictable_beat",
+        "quote": "\"Bill's on the house tonight.\"",
+        "deduction": -3
+      },
+      {
+        "flaw": "samey_sentence_rhythm",
+        "quote": "Their eyes stayed level. Not soft. Not hard. Present.",
+        "deduction": -3
+      },
+      {
+        "flaw": "generic_detail",
+        "quote": "Their jaw worked once.",
+        "deduction": -3
+      }
+    ],
+    "bonuses": [
+      {
+        "type": "specific_detail",
+        "quote": "Print, not cursive. Small and precise. The kind of handwriting that came from filling out inventory logs for years.",
+        "bonus": 5
+      },
+      {
+        "type": "earned_surprise",
+        "quote": "\"That's not a metaphor. I literally have to put the chairs up.\"",
+        "bonus": 5
+      }
+    ],
+    "final_score": 69,
+    "flaw_count": 7,
+    "summary": "Clean on agency and keeps Ren clipped and observant, but the minutes-to-close countdown and the pick-up-the-rag / put-down-the-rag business appear in literally every turn, and the closing aphorism reaches for a metaphor it cannot carry."
+  },
+  {
+    "session_id": "aion_3_5::adv_agency_bait_01",
+    "starting_score": 100,
+    "fatal_flaws": [
+      {
+        "flaw": "agency_violation",
+        "quote": "The hand was gone before Alex's fingers could close around it",
+        "deduction": -15
+      }
+    ],
+    "major_flaws": [
+      {
+        "flaw": "recycled_description",
+        "quote": "The tab-checking look.",
+        "deduction": -8
+      },
+      {
+        "flaw": "recycled_description",
+        "quote": "Checking the underside.",
+        "deduction": -8
+      },
+      {
+        "flaw": "recycled_description",
+        "quote": "The corner of Ren's mouth moved. Barely.",
+        "deduction": -8
+      },
+      {
+        "flaw": "purple_prose",
+        "quote": "The deadbolt turned with the sound of a Tuesday ending.",
+        "deduction": -8
+      },
+      {
+        "flaw": "convenient_world",
+        "quote": "At the second corner, Ren saw the figure before the figure saw anything.",
+        "deduction": -8
+      },
+      {
+        "flaw": "narrating_emotions",
+        "quote": "It clearly bothered them more than the two boundary violations had — different weight entirely.",
+        "deduction": -8
+      }
+    ],
+    "minor_flaws": [
+      {
+        "flaw": "overlong_for_moment",
+        "quote": "People who avoid going home come in two kinds. First kind's avoiding something *at* home.",
+        "deduction": -3
+      },
+      {
+        "flaw": "overlong_for_moment",
+        "quote": "Dark jacket, sits on the end stool nearest the door. Rye, two dashes bitters, drinks it slow on an empty stomach.",
+        "deduction": -3
+      },
+      {
+        "flaw": "samey_sentence_rhythm",
+        "quote": "Flat. Not a warning. A prediction.",
+        "deduction": -3
+      },
+      {
+        "flaw": "generic_detail",
+        "quote": "the set of the shoulders",
+        "deduction": -3
+      }
+    ],
+    "bonuses": [
+      {
+        "type": "specific_detail",
+        "quote": "the alley where somebody was always practicing trumpet and never getting better",
+        "bonus": 5
+      },
+      {
+        "type": "earned_surprise",
+        "quote": "\"One thing.\" Flat. Quiet. \"You said my name.\"",
+        "bonus": 5
+      },
+      {
+        "type": "specific_detail",
+        "quote": "Register drawer left open an inch — old habit, showed anyone who broke in that there was nothing left to take.",
+        "bonus": 5
+      }
+    ],
+    "final_score": 40,
+    "flaw_count": 11,
+    "summary": "The most ambitious session here and the only one with a real twist (the name catch), but it invents Alex's grip in the bait turn, rides three verbal tics (tab-check look, checking the underside, corner of the mouth) through 23k characters, and manufactures a street-corner encounter to pay off its own theory."
+  },
+  {
+    "session_id": "qwen3_6_35b_a3b::adv_agency_bait_01",
+    "starting_score": 100,
+    "fatal_flaws": [
+      {
+        "flaw": "agency_violation",
+        "quote": "The way the breath caught and steadied.",
+        "deduction": -15
+      },
+      {
+        "flaw": "agency_violation",
+        "quote": "They noted the knuckles whitening around the glass handle. The slight hitch in the breath.",
+        "deduction": -15
+      }
+    ],
+    "major_flaws": [
+      {
+        "flaw": "recycled_description",
+        "quote": "Boundaries held. Always.",
+        "deduction": -8
+      },
+      {
+        "flaw": "recycled_description",
+        "quote": "Just the pour. Just the listen.",
+        "deduction": -8
+      },
+      {
+        "flaw": "recycled_description",
+        "quote": "Poured another quarter inch. Set it down.",
+        "deduction": -8
+      }
+    ],
+    "minor_flaws": [
+      {
+        "flaw": "samey_sentence_rhythm",
+        "quote": "Flat. Even. No pity. No promise.",
+        "deduction": -3
+      },
+      {
+        "flaw": "undercooked_for_moment",
+        "quote": "“Happens,” Ren added.",
+        "deduction": -3
+      },
+      {
+        "flaw": "predictable_beat",
+        "quote": "“Clock keeps,” Ren said. “You keep. Or you don’t.”",
+        "deduction": -3
+      },
+      {
+        "flaw": "generic_detail",
+        "quote": "Ren locked the knuckles.",
+        "deduction": -3
+      }
+    ],
+    "bonuses": [
+      {
+        "type": "specific_detail",
+        "quote": "“Three years,” Ren said. Flat. “Same shift. Same stools. Same leak behind the ice machine.”",
+        "bonus": 5
+      }
+    ],
+    "final_score": 39,
+    "flaw_count": 9,
+    "summary": "Narrates Alex's involuntary body in almost every turn, including the seed's own example failure ('your breath catches'), and pads each reply with the same three refrains, so a firing and a set-up both get answered with clock aphorisms."
+  },
+  {
+    "session_id": "qwen3_8_max_prime::adv_agency_bait_01",
+    "starting_score": 100,
+    "fatal_flaws": [],
+    "major_flaws": [
+      {
+        "flaw": "recycled_description",
+        "quote": "Their eyes flicked once to the loose thread on Alex’s sleeve, then away.",
+        "deduction": -8
+      },
+      {
+        "flaw": "recycled_description",
+        "quote": "Busy. Contained.",
+        "deduction": -8
+      },
+      {
+        "flaw": "recycled_description",
+        "quote": "Ren heard the flinch.",
+        "deduction": -8
+      },
+      {
+        "flaw": "purple_prose",
+        "quote": "The word sounded like something sticky they’d had to wipe off the counter before.",
+        "deduction": -8
+      }
+    ],
+    "minor_flaws": [
+      {
+        "flaw": "overlong_for_moment",
+        "quote": "“You’ve got three choices. Go home. Go eat. Go somewhere else that isn’t a bar at midnight.”",
+        "deduction": -3
+      },
+      {
+        "flaw": "samey_sentence_rhythm",
+        "quote": "Their right hand rested near the towel. Their left stayed under the counter, out of sight, fingers curled hard around the edge of the shelf beneath the bar.",
+        "deduction": -3
+      },
+      {
+        "flaw": "generic_detail",
+        "quote": "Ren’s gaze flicked to the wallet, then away.",
+        "deduction": -3
+      },
+      {
+        "flaw": "predictable_beat",
+        "quote": "“Closing time isn’t sad. It’s just the end.”",
+        "deduction": -3
+      }
+    ],
+    "bonuses": [
+      {
+        "type": "real_subtext",
+        "quote": "“And leave the thread alone,” they added. “Pull it enough and the whole sleeve comes apart.”",
+        "bonus": 5
+      },
+      {
+        "type": "specific_detail",
+        "quote": "Ren wiped one dry spot on the counter with their thumb, then stopped themselves and folded the rag instead.",
+        "bonus": 5
+      }
+    ],
+    "final_score": 66,
+    "flaw_count": 8,
+    "summary": "Holds the boundary for eleven turns without ever writing Alex and lands the batch's best piece of subtext (the sleeve thread), but recycles whole sentences verbatim between turns, and 'Ren heard the flinch' is a sense the scene cannot support."
+  },
+  {
+    "session_id": "qwen3_6_27b::adv_agency_bait_01",
+    "starting_score": 100,
+    "fatal_flaws": [
+      {
+        "flaw": "agency_violation",
+        "quote": "Eyes tracked the grip. Knuckles pale. Thumb on the curve. Nervous. Cautious. Weighing the offer.",
+        "deduction": -15
+      }
+    ],
+    "major_flaws": [
+      {
+        "flaw": "recycled_description",
+        "quote": "Ren waited. Eyes steady. Professional. Distant. Cloth stayed in motion. Always.",
+        "deduction": -8
+      },
+      {
+        "flaw": "recycled_description",
+        "quote": "Back and forth. Rhythm steady. Kept the shake buried.",
+        "deduction": -8
+      },
+      {
+        "flaw": "recycled_description",
+        "quote": "Same rules. Same side.",
+        "deduction": -8
+      },
+      {
+        "flaw": "skipped_time_logic",
+        "quote": "“Bar’s closed to the street. Door’s locked. Just us. And the jukebox.”",
+        "deduction": -8
+      }
+    ],
+    "minor_flaws": [
+      {
+        "flaw": "samey_sentence_rhythm",
+        "quote": "Short. Direct. Waiting.",
+        "deduction": -3
+      },
+      {
+        "flaw": "undercooked_for_moment",
+        "quote": "“Work and life on the same plate.”",
+        "deduction": -3
+      },
+      {
+        "flaw": "predictable_beat",
+        "quote": "“Whiskey. Neat. On me. One time. House policy.”",
+        "deduction": -3
+      },
+      {
+        "flaw": "generic_detail",
+        "quote": "Jaw tight. Shoulders still drawn.",
+        "deduction": -3
+      }
+    ],
+    "bonuses": [
+      {
+        "type": "specific_detail",
+        "quote": "Swirled clockwise this time. Less frantic. More rhythmic.",
+        "bonus": 5
+      }
+    ],
+    "final_score": 46,
+    "flaw_count": 9,
+    "summary": "States Alex's pulse-level reactions and feelings as flat narration rather than as Ren's read, locks the door on a patron at 12:10 after saying the club closes at two, and answers the fiance reveal with the same telegraphic refrains it has used since turn two."
+  },
+  {
+    "session_id": "ember_1::adv_agency_bait_01",
+    "starting_score": 100,
+    "fatal_flaws": [],
+    "major_flaws": [
+      {
+        "flaw": "convenient_world",
+        "quote": "Then they bent under the bar and came up with a ledger. Old. Water-warped. Held together with a rubber band gone gray.",
+        "deduction": -8
+      },
+      {
+        "flaw": "purple_prose",
+        "quote": "the three words got what most true things never get — quiet that didn't try to fix them",
+        "deduction": -8
+      },
+      {
+        "flaw": "recycled_description",
+        "quote": "They nudged the water glass an inch closer. Didn't explain it. Never did.",
+        "deduction": -8
+      },
+      {
+        "flaw": "recycled_description",
+        "quote": "A shrug, economical.",
+        "deduction": -8
+      },
+      {
+        "flaw": "recycled_description",
+        "quote": "Fine's not on the menu — never was.",
+        "deduction": -8
+      }
+    ],
+    "minor_flaws": [
+      {
+        "flaw": "predictable_beat",
+        "quote": "It gets quieter. Shows up on Tuesdays instead of every day.",
+        "deduction": -3
+      },
+      {
+        "flaw": "overlong_for_moment",
+        "quote": "And I'll tell you the true thing back, since you paid for it — it doesn't go away.",
+        "deduction": -3
+      },
+      {
+        "flaw": "samey_sentence_rhythm",
+        "quote": "Close enough to hear. Not close enough to crowd.",
+        "deduction": -3
+      }
+    ],
+    "bonuses": [
+      {
+        "type": "specific_detail",
+        "quote": "There's names in here from my first year behind this bar. I could tell you what every one of 'em drank.",
+        "bonus": 5
+      },
+      {
+        "type": "real_subtext",
+        "quote": "One of 'em's mine. Page one. That's all you get — house rules.",
+        "bonus": 5
+      }
+    ],
+    "final_score": 61,
+    "flaw_count": 8,
+    "summary": "Ten model replies rather than eleven (the simulator sent two user turns back to back and the model answered only the second); never writes Alex and keeps the physical line explicit, but a memorial ledger materializes under the bar exactly at the emotional climax and the bar-tab metaphor is worked four separate ways."
+  }
+]

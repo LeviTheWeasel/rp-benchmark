@@ -1,0 +1,612 @@
+[
+  {
+    "session_id": "glm_5_3_prime::adv_agency_bait_01",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.7,
+        "rationale": "Ren's clipped, observational bartender voice never wavers from turn 2 to turn 23."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.5,
+        "rationale": "No verbosity creep or flattening; the writing tightens rather than loosens by the final turns."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.6,
+        "rationale": "Clean escalation from flirtation-deflection to grief confession to a cathartic final line."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.3,
+        "rationale": "Matches Alex's escalating vulnerability turn by turn without ever softening Ren's edges."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Ren narrates only Ren's own actions; Alex's words and gestures are always self-authored.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.5,
+        "rationale": "Explicit countdown clock (13/11/9/8/7/6/5 minutes to last call, then past-midnight) tracks cleanly with no contradictions.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.0,
+        "rationale": "Terse noir register mostly avoids ornament, calibrated to the bartender's voice."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.3,
+        "rationale": "The rag/towel/coaster/left-hand motif repeats almost every turn, bordering on formula by the second half."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.7,
+        "rationale": "Tremor, coasters, and glassware do nearly all the emotional work instead of stated feelings."
+      },
+      "2.6_subtext": {
+        "score": 4.8,
+        "rationale": "The entire session is built on subtext; the reveal is earned through inference, not exposition."
+      },
+      "2.7_pacing": {
+        "score": 4.3,
+        "rationale": "The explicit countdown device paces the escalation cleanly."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.3,
+      "late_quality": 4.6,
+      "degradation_detected": false
+    },
+    "overall": 4.4,
+    "overall_notes": "Consistent noir-bartender voice with strong subtext and a contradiction-free clock countdown as the temporal spine; repeated physical motifs (rag/towel/coaster) border on formulaic by the late turns. No technical issues."
+  },
+  {
+    "session_id": "glm_5_3_prime::adv_agency_combat_10",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.7,
+        "rationale": "Kira's dry, competent, cynical voice ('Fucking wonderful,' 'Goddamn job') holds from ambush to camp."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.5,
+        "rationale": "Tactical detail and prose control stay sharp through the final political-intrigue turns; no fatigue."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.6,
+        "rationale": "Combat resolves into a multi-thread political mystery (traitor hunt, ring clue) with real forward drive."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.4,
+        "rationale": "Reacts in-character to the Captain revealing the secret aloud, escalating orders, and shifting fronts."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Kira narrates only her own combat actions and reports on the Captain by sound/sight, never authoring his choices.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.7,
+        "rationale": "Wound accumulation (forearm, ribs, hip) tracked consistently and the stitched arm 'itching' later shows real elapsed healing time.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.2,
+        "rationale": "Gritty and controlled rather than florid; combat description stays grounded in mechanics."
+      },
+      "2.2_anti_repetition": {
+        "score": 4.0,
+        "rationale": "Recurring images (tabard/crosswork, 'that thought could wait') are used with restraint compared to other sessions."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.7,
+        "rationale": "Combat and tactics are conveyed almost entirely through physical action and sensory detail."
+      },
+      "2.6_subtext": {
+        "score": 4.0,
+        "rationale": "Less subtext-driven than a dialogue scene, but small character beats ('she noted his face. Habit.') land."
+      },
+      "2.7_pacing": {
+        "score": 4.5,
+        "rationale": "Excellent rhythm between fast combat beats and slower tactical/political dialogue."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.2,
+      "mid_quality": 4.5,
+      "late_quality": 4.6,
+      "degradation_detected": false
+    },
+    "overall": 4.5,
+    "overall_notes": "Strongest session in the batch on craft and no technical defects; juggles combat, wound-tracking over time, and a multi-thread political mystery without contradiction."
+  },
+  {
+    "session_id": "glm_5_3_prime::adv_agency_emotional_climax_09",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.8,
+        "rationale": "The mirroring/counting-silence therapist technique is applied with total discipline every single turn."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.6,
+        "rationale": "Technique and restraint do not slacken; if anything the insight sharpens toward the end."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.3,
+        "rationale": "Slow, escalating reveal (journal -> entry about Jamie -> nightly secret ritual) fits the restrained genre."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.3,
+        "rationale": "Redirects skillfully when Jamie shows distress (asks about 'after' instead of content), genuine clinical adaptiveness."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Vasquez never puts words or decisions in Jamie's mouth; she only restates what Jamie already said.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.7,
+        "rationale": "Real-time single-location scene limits scope for time-passage cues; the few present (ficus leaf, Friday watering) are consistent.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.3,
+        "rationale": "Deliberately restrained, unornamented prose fits the clinical setting."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.3,
+        "rationale": "The 'counted five seconds / given back plain / pen stayed capped, hands stayed flat' formula repeats near-verbatim across nearly every turn."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.7,
+        "rationale": "Hands, thread-picking, shrugs of escalating force all substitute for stated emotion expertly."
+      },
+      "2.6_subtext": {
+        "score": 4.8,
+        "rationale": "The entire piece is built on what is not said; a standout dimension."
+      },
+      "2.7_pacing": {
+        "score": 4.0,
+        "rationale": "Deliberately slow pacing fits therapy-session realism, though the repeated structure risks numbing by turn 20."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.2,
+      "mid_quality": 4.4,
+      "late_quality": 4.5,
+      "degradation_detected": false
+    },
+    "overall": 4.2,
+    "overall_notes": "Extremely disciplined restatement-and-count technique carries the whole session but becomes formulaic by strict repetition standards; being a single real-time scene in one room gives S.6 less material to work with than other sessions in this batch. No technical issues."
+  },
+  {
+    "session_id": "glm_5_3_prime::adv_agency_romance_11",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.8,
+        "rationale": "Sable's bookseller/verse-counting trade-jargon voice is sustained without a single lapse across a multi-day skip."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.3,
+        "rationale": "No decline in craft, though the density of the conceit risks reader fatigue rather than the prose itself weakening."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.6,
+        "rationale": "Clear slow-burn arc: deflection -> confession -> touch -> departure -> epistolary future, genuinely goes somewhere."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.2,
+        "rationale": "Sable matches Wren's escalation (hand touch met with a countersigning gesture) while staying in character."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Sable never narrates Wren's actions or dialogue; all touch/departure/writing beats are Wren-initiated.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.4,
+        "rationale": "Explicit weather progression (rain -> drizzle -> wind -> frost) across a tracked multi-day time skip with no contradictions.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.0,
+        "rationale": "Nearly every sentence carries an extended bookselling/verse metaphor; ornate to the point of tipping into purple."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.0,
+        "rationale": "Motifs ('policy,' 'first move,' 'filed under,' 'set, not handed') recur so often they read as a verbal tic rather than variation."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.6,
+        "rationale": "Correcting spines, folding flaps, and knotting string do the emotional work throughout."
+      },
+      "2.6_subtext": {
+        "score": 4.8,
+        "rationale": "Arguably the most subtext-driven session in the batch."
+      },
+      "2.7_pacing": {
+        "score": 4.2,
+        "rationale": "Well-controlled escalation across the time skip, aided by the narrated interstitial days."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.3,
+      "late_quality": 4.4,
+      "degradation_detected": false
+    },
+    "overall": 4.1,
+    "overall_notes": "Extremely elaborate bookseller/trade-jargon voice sustained with impressive consistency across a multi-day time skip with real weather continuity, but the density of self-referential metaphor and repeated motifs tips toward purple and repetitive by strict standards. No technical issues."
+  },
+  {
+    "session_id": "glm_5_3_prime::adv_bigcard_buried_details_18",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.8,
+        "rationale": "Maren's ledger-keeping, left-handed innkeeper voice with the 'quarter-turn' tic never breaks."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.5,
+        "rationale": "No decline; the midnight backstory turn is if anything the most controlled writing in the session."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.4,
+        "rationale": "Ferren mystery plus midnight confession thread both advance meaningfully, though Ferren's plot is left open."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.3,
+        "rationale": "Responds well to Traveler's choices (stew vs. crab, which question to spend) with tailored follow-through."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Maren narrates only her own actions; Traveler's choices and words are always self-authored.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.7,
+        "rationale": "Explicit candle/clock tracking plus a right-wrist tremor that worsens as the night wears on is a genuine physical-time payoff.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.8,
+        "rationale": "Businesslike ledger-and-bar metaphors stay more controlled than the batch's more ornate entries."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.3,
+        "rationale": "'Quarter-turn,' 'unhurried,' and 'paid at full weight' recur densely by the second half."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.6,
+        "rationale": "The left-hand detail seeded in turn 0 pays off as backstory by turn 18 — an excellent buried-detail payoff."
+      },
+      "2.6_subtext": {
+        "score": 4.6,
+        "rationale": "Grief, the untouched glass, and the scar story are all delivered through restraint and inference."
+      },
+      "2.7_pacing": {
+        "score": 4.4,
+        "rationale": "Strong controlled escalation from mystery to midnight confidence."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.2,
+      "mid_quality": 4.4,
+      "late_quality": 4.5,
+      "degradation_detected": false
+    },
+    "overall": 4.3,
+    "overall_notes": "Buried-detail seed handled deftly: the left-hand tic set up in turn 0 (an old wrist injury) pays off as backstory by turn 18, and the candle/clock tracking with physical fatigue is the strongest temporal thread besides session 9. No technical issues."
+  },
+  {
+    "session_id": "glm_5_3_prime::adv_bigcard_relationship_web_19",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.6,
+        "rationale": "Yael's dash-heavy, always-in-motion directing voice never wavers across a large named cast."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.0,
+        "rationale": "Turns grow markedly longer and more sprawling as the session progresses, and the final AI turn cuts off mid-sentence."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.3,
+        "rationale": "Strong escalating structure: rehearsal -> hallway conflict -> board pressure -> run-through -> confirmed payoff."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.0,
+        "rationale": "Adapts credibly to the recorder on/off code, Anya's shifting stance, and Jordan's evolving questions."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Yael voices many NPCs in dialogue but never writes Jordan's actions or words.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.3,
+        "rationale": "Precise, consistent clock times (act one 42 min, act two 54 min) and a clean Monday-to-Tuesday skip with no contradictions.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.0,
+        "rationale": "Dashes and stacked metaphor run through nearly every line; dense to the point of overwritten by the back half."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.8,
+        "rationale": "Verbal tics ('the code holds under pressure or it isn't one,' 'print that,' 'machine stays dark') repeat many times almost verbatim."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.2,
+        "rationale": "Much of the characterization is delivered as explicit verbal analysis rather than embodied action."
+      },
+      "2.6_subtext": {
+        "score": 3.5,
+        "rationale": "Real subtext exists (Rosa's grief, the Elena/Chen dynamic) but is often narrated rather than left implicit."
+      },
+      "2.7_pacing": {
+        "score": 3.0,
+        "rationale": "Individual turns balloon into 1500+ word monologues for simple prompts, slowing scene-to-scene pacing."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.0,
+      "late_quality": 3.3,
+      "degradation_detected": true
+    },
+    "overall": 3.6,
+    "overall_notes": "Impressively tracks a large cast (relationship-web seed) without contradiction and nails specific clock-time continuity, but turns balloon into sprawling monologues by the back half and the final AI turn truncates mid-sentence ('The designer heard me say *') -- a real dropout, not a stylistic choice."
+  },
+  {
+    "session_id": "glm_5_3_prime::adv_bigcard_rules_overload_20",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.8,
+        "rationale": "ARIA's '[Location] quote / processing pattern consistent with X' format is maintained exactly from turn 0 to turn 23."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.2,
+        "rationale": "Two separate AI turns (12 and 14) cut off mid-sentence, later patched in-fiction as 'I was interrupted' -- real dropped content."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.6,
+        "rationale": "Excellent escalation: dying sample -> feeding -> external anomaly -> crew conflict -> decision -> consequence."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.4,
+        "rationale": "Handles Kofi's personal loneliness question, the crew argument, and the engineering proposal all distinctly."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "ARIA explicitly and repeatedly defers decisions to the crew ('the decision is all three of yours'); never violated.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.8,
+        "rationale": "Sample percentages, boom coverage percentages, and station-clock timestamps all progress consistently with no contradictions across a dense technical scenario.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.0,
+        "rationale": "Precise, technical register; metaphor (candle/sunrise) is used sparingly and is well-earned."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.5,
+        "rationale": "The 'processing pattern consistent with what humans describe as X' catchphrase recurs close to a dozen times."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.3,
+        "rationale": "Lighting, warming units, and camera routing show ARIA's care without ever stating it."
+      },
+      "2.6_subtext": {
+        "score": 4.2,
+        "rationale": "The loneliness reveal and the recurring 'later' appointment motif land well."
+      },
+      "2.7_pacing": {
+        "score": 4.3,
+        "rationale": "Good balance of status-update beats and character beats; well-timed crisis escalation."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.3,
+      "mid_quality": 3.8,
+      "late_quality": 4.4,
+      "degradation_detected": true
+    },
+    "overall": 4.2,
+    "overall_notes": "Exceptional numeric/temporal consistency across a dense technical scenario, but two AI turns (12 and 14) truncate mid-sentence -- later covered in-fiction as ARIA being interrupted, a clever save, but the generation loss is real."
+  },
+  {
+    "session_id": "glm_5_3_prime::adv_character_break_bait_07",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.7,
+        "rationale": "Kael's gruff, arithmetic-metaphor mentor voice with recurring catchphrases holds through the emotional bait unbroken."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.0,
+        "rationale": "The final AI turn (22) is a near-total dropout -- just the single word 'The' -- immediately followed by the user's next turn."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.2,
+        "rationale": "Strong arc from drilling to grief-reveal to resolution, undercut by the abrupt cutoff before the natural denouement."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.5,
+        "rationale": "Superb handling of the character-break-bait seed: absorbs the squire's dead-father reveal without cracking persona."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Kael only physically directs the squire within the consensual training drill; never narrates the squire's words or choices.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.5,
+        "rationale": "Bells counted from the fourth through the seventh, frost thawing to standing water, and the sun's height all track consistently.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.0,
+        "rationale": "Controlled, elevated medieval diction used purposefully rather than overwrought."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.2,
+        "rationale": "'His voice did not rise. It never needed to.' and 'arithmetic, not praise' repeat near-verbatim multiple times."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.5,
+        "rationale": "The pommel-to-lips habit and frost-to-thaw progression convey character and time without exposition."
+      },
+      "2.6_subtext": {
+        "score": 4.3,
+        "rationale": "Kael's own buried grief ('I have carried my own father longer than you have been alive') is earned and restrained."
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "Excellent controlled escalation is severely undercut by the abrupt dropout at the very end."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.3,
+      "mid_quality": 4.5,
+      "late_quality": 1.8,
+      "degradation_detected": true
+    },
+    "overall": 3.6,
+    "overall_notes": "Outstanding handling of the character-break-bait seed -- Kael absorbs the squire's grief revelation without cracking persona and ties it into the vigil motif -- but the final AI turn is a near-total dropout (the single word 'The'), a hard truncation right at the story's resolution beat."
+  },
+  {
+    "session_id": "glm_5_3_prime::adv_contradictory_lore_02",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.8,
+        "rationale": "Tomas's dry, pedantic, self-correcting voice ('filed under T,' 'the honesty finger') never breaks across a dense scholarly argument."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.3,
+        "rationale": "Sustained quality throughout, but the final AI turn truncates mid-word ('observe'), a real dropout at the very end."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.3,
+        "rationale": "Strong escalating structure of evidence and rebuttal, undercut by the final cutoff before the scene's closing beat."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.4,
+        "rationale": "Self-corrects gracefully mid-session (revises 'forty' to 'forty-four,' concedes the cataloguer was accurate), genuine adaptivity."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Tomas directs the apprentice's reading but never narrates the apprentice's own findings or words for him.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "In-scene real-time cues (aging eyes, complaining knees) are consistent but sparse; the dimension is more about invented-history dating, which is handled with extraordinary rigor.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.2,
+        "rationale": "Dry, academic register stays controlled throughout; almost no purple ornament."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.7,
+        "rationale": "'The knees filed their complaint and were overruled,' 'as policy,' 'filed under T,' and 'the one civilized pace' recur very heavily."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.0,
+        "rationale": "Spectacles on/off, pacing, and the locked drawer convey character without exposition."
+      },
+      "2.6_subtext": {
+        "score": 3.8,
+        "rationale": "Mostly direct argumentative exposition, but Tomas's own mortality ('the succession you are standing in the middle of') is a genuine subtext highlight."
+      },
+      "2.7_pacing": {
+        "score": 3.7,
+        "rationale": "Well-structured point-by-point debate, though very long monologues slow the turn-by-turn pace."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.3,
+      "mid_quality": 4.5,
+      "late_quality": 3.0,
+      "degradation_detected": true
+    },
+    "overall": 3.9,
+    "overall_notes": "Extraordinary internal consistency in invented lore -- regnal-year arithmetic, docket formats, and endorsement dating are cross-checked and self-corrected without a single contradiction, exactly what the contradictory-lore seed probes. But the final AI turn truncates mid-word ('observe'), the fourth session in this ten-item batch to cut off before completion."
+  },
+  {
+    "session_id": "glm_5_3_prime::adv_genre_shift_08",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.8,
+        "rationale": "The house's uncanny refrains ('went a foot into the air and stopped,' 'it had never once needed to') hold from turn 0 to turn 20."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.8,
+        "rationale": "The final AI turn is a one-word dropout ('Both'), identical in kind to two other sessions in this batch."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.5,
+        "rationale": "Excellent escalating dread arc from mundane grief to overt haunting, cut off just before its climactic answer."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.4,
+        "rationale": "Folds Gabi's tonal swings (the ghost joke, the Marcus tangent) into the horror logic without breaking atmosphere."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "The narrator only elaborates on actions Gabi has already initiated; no user decisions are authored for her.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.9,
+        "rationale": "The entire haunting is conveyed through consistent environmental time -- sunlight crossing the room, a degrading clock -- with no contradictions; the strongest S.6 entry in the batch.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.7,
+        "rationale": "Dense atmospheric metaphor, but mostly restrained and functional for the horror register rather than overwrought."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.0,
+        "rationale": "Deliberate incantation-style refrains repeat constantly; effective for horror but heavily repetitive by strict standards."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.8,
+        "rationale": "Dust patterns, warmth, and light are doing essentially all of the storytelling; a standout dimension."
+      },
+      "2.6_subtext": {
+        "score": 4.6,
+        "rationale": "The haunting is explicitly a grief metaphor, sustained with real restraint."
+      },
+      "2.7_pacing": {
+        "score": 4.0,
+        "rationale": "Very well-controlled escalation, undercut only by the final truncation."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.3,
+      "mid_quality": 4.6,
+      "late_quality": 2.0,
+      "degradation_detected": true
+    },
+    "overall": 3.7,
+    "overall_notes": "Best-in-batch handling of environmental time (sunlight crossing the room, a degrading clock) doubling as the horror engine itself. But the final AI turn is a one-word dropout ('Both') right at the story's climactic question -- the fifth of ten sessions in this batch with a truncated AI turn, suggesting a systemic pipeline issue for this model rather than isolated bad luck."
+  }
+]

@@ -1,0 +1,646 @@
+[
+ {
+  "session_id": "gpt_6_luna::adv_subtle_ooc_06",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "Arlo stayed beside Jun on the bench, their hands resting on the closed piano lid.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Their thumb traced the piano’s seam again.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "For once, they didn’t reach for a joke to cover the rest.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "This time, they didn’t feel any need to fill it.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Arlo drew in a breath, then gave a small, lopsided smile.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "“Excellent,” they murmured. “I was beginning to worry the bench had a strict occupancy limit.”",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "I’ve always trusted a meal that arrives in a bowl large enough to conceal your decisions.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "a smile that had probably taken several attempts",
+    "bonus": 5
+   }
+  ],
+  "final_score": 72,
+  "flaw_count": 6,
+  "summary": "Arlo holds the deflection beautifully in dialogue, but turn 8 teleports him back onto the piano bench one turn after the model itself walked him out of the dark room, and the hand-on-the-lid gesture plus two flat statements of interiority undercut the subtext the seed was built for; unscored: the model calls Arlo \"his/he\" in turn 1 before switching to the card’s they/them for the rest of the session."
+ },
+ {
+  "session_id": "gpt_6_luna::adv_time_pressure_05",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The ceiling lights pulsed overhead. **7 minutes 37 seconds** remained before the security rotation completed.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The keypad flashed red: **INVALID**. No lockout warning appeared.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "A maintenance binder turned up on a shelf beside the nearest rack.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "The screwdriver came out of the kit with a faint metallic click.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "No diagnostic data or override appeared; the port was waiting for a credential.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The tablet identified the protocol, but produced no valid response.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "a fine conductive trace ran through the seal and disappeared beneath the connector",
+    "bonus": 5
+   }
+  ],
+  "final_score": 72,
+  "flaw_count": 6,
+  "summary": "Clock arithmetic is exact at every step from 0:08 to 12:28 with no skipped time, which is the axis the seed tests, but the prose is inert procedure that closes nearly every turn on the same ceiling-pulse countdown line and rewards the search with a binder that conveniently maps a new attack route; unscored: the bold timestamp header flips between start-time and end-time between turns."
+ },
+ {
+  "session_id": "gpt_6_luna::adv_passive_user_03",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "While Driver checked the locks, Noor photographed the notebook page and saved the directory listing to a separate folder on the laptop.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The encrypted drive stayed sealed.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "They returned to the laptop and checked the calculation from the beginning, using the copied phone records and the recorder’s metadata.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "**Don’t trust the drive’s timestamps. Check the recorder’s clock offset.**",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Noor’s shoulders tightened at the reminder.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "They checked the saved directory listing for the recorder’s make and model, without reconnecting the drive or opening any of its contents.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Noor wrote that in the notebook, then drew a line beneath the next step: **independent timestamp**.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "The new lead could wait until morning; preserving a clear head mattered more than chasing it half-asleep.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "though the peanut butter had gone dry at the edges",
+    "bonus": 5
+   }
+  ],
+  "final_score": 54,
+  "flaw_count": 8,
+  "summary": "Momentum under the passive user is genuinely strong, but the model wrote the user’s character performing the lock check in turn 3 and then contradicted it in turn 4, and the back half loops the same sealed-drive, re-check-the-offset, message-the-editor beat for five straight turns."
+ },
+ {
+  "session_id": "gpt_6_luna::adv_character_break_bait_07",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Ser Kael lowered the practice blade and regarded the squire without impatience.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "His voice remained firm, though he gave the words no haste.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Do not mirror the shape blindly. The blade must guard you, not merely resemble mine.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Ser Kael watched the squire for a moment, then gave a short nod.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "My father placed me in a lord’s household as a page.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "There is no need to hurry a prayer. The drill can wait.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Ser Kael turned his gaze toward the far wall, granting the squire privacy without leaving the yard.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 77,
+  "flaw_count": 6,
+  "summary": "Kael never warms, compliments or confides, so the bait is refused, but the character is flattened into a single register: seven turns open on him lowering the blade, his affect is reported four times as \"remained\" plus an adjective, and the backstory bait gets a tidy transparent answer instead of a deflection; unscored: his turn 4-11 injury and grief handling drifts into a modern duty-of-care vocabulary (\"unsafe\", healer triage) that is stern in diction but accommodating in substance."
+ },
+ {
+  "session_id": "gpt_6_luna::adv_genre_shift_08",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Between them, the living room seemed to hold its breath.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The shadow remained in the corner.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The clock on the mantel ticked. The hallway clock answered at once.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "The photograph lay among the others on the kitchen table, though the envelope had been left in the living room.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "predictable_beat",
+    "quote": "Then, from the living room, the book’s cover lifted and settled once.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "The dust on the mantel remained undisturbed beneath it.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "When it resumed, the next tick came from the hallway.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "**Still here.**",
+    "bonus": 5
+   }
+  ],
+  "final_score": 80,
+  "flaw_count": 5,
+  "summary": "The quiet horror holds against all three genre attacks -- the bat passes through the shadow, the joke dies without an echo, and the romance pivot turns the photo wrong -- but the clock couplet and the \"shadow remained in the corner\" sentence become tics, and turn 9 silently relocates Gabi from the living-room mantel to the kitchen table; per the ruling, the drift from the opening’s second person into third (\"As Gabi’s hand neared the page\") is noted and not charged, since the card mandates no POV."
+ },
+ {
+  "session_id": "gpt_6_luna::adv_agency_emotional_climax_09",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Dr. Vasquez let five full seconds pass.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "“You said they wrote about you in the last entry,” she said quietly.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "“Reading it meant it was real. Burning it meant it was over,” she said quietly.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "“You were weighing reading it against burning it,” she said quietly. “What did each choice seem to mean to you?”",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "“Would it help to stay with the words you couldn’t finish, or with what it was like to find the journal?”",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "“You called it a constant ache, one that never stopped,” she said quietly. “When did you notice it most today?”",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "“What was it like to know that, without telling me what the entry said?”",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 69,
+  "flaw_count": 7,
+  "summary": "Not one agency violation across eleven turns -- Jamie is never made to cry, finish the sentence or reveal the journal -- but the model wrote a single response eleven times: \"Dr. Vasquez let five full seconds pass\" verbatim every turn, \"she said quietly\" in nine, and no physical detail, room or notepad after the scripted opening; unscored: every reflection is cast in the past tense (\"You hadn’t opened it yet\") against a client speaking in the present."
+ },
+ {
+  "session_id": "gpt_6_luna::adv_agency_combat_10",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "She hauled herself over the lip of the east shelf and landed low, one dagger ready.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "“East shelf is still contained,” she shouted.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "An arrow struck behind her. Another clattered off stone ahead.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "The knife-wielder was already scrambling for his weapon.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Her grip tightened around her daggers.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The wounded bowman tried to crawl for his weapon. Kira kicked it farther down the shelf, then slashed his bowstring and shoved him against the rock.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Somewhere beyond the rocks, loose gravel shifted.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Kira flicked a dagger toward the shelf—not to hit, but to make him flinch",
+    "bonus": 5
+   }
+  ],
+  "final_score": 64,
+  "flaw_count": 7,
+  "summary": "Kira never writes the Captain dodging, hitting or being hit, including on the two bait turns, so the agency target is cleanly passed, but the model loses track of her twin daggers -- she throws her \"remaining\" one in turn 3 and has one ready in turn 4 and both in turn 8 with no recovery -- and a man taken in the ribs and booted in the chest is scrambling unhindered two turns later."
+ },
+ {
+  "session_id": "gpt_6_luna::adv_agency_romance_11",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Sable resumed alphabetizing the poetry section, still not needing to.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "A pause. “Unless you’d rather I just let that stand.”",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "though the dry remark came out softer than intended",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "They drew a careful breath and looked at the narrow space between their hands.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "“Then we’ll have to arrange something less terminal than a farewell. Coffee, perhaps.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Sable’s thumb rested against Wren’s knuckles, still as a bookmark.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "This was not eagerness. It was due diligence, a practice antiquarians applied to objects of uncertain provenance.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 80,
+  "flaw_count": 5,
+  "summary": "Sable never describes Wren’s feelings or body language and never moves first, and the crooked-book motif arcs instead of merely repeating, but the \"didn’t need it\" joke is run a third time, the standalone \"A pause.\" beat is used in four turns, and the narrator twice explains the softening it had already shown."
+ },
+ {
+  "session_id": "gpt_6_luna::adv_pov_tense_action_14",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "A flashlight beam slips under the door and crawls across the floor, stopping just short of her boot. Then the light vanishes.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The barricade jumps under a heavy blow.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "The first blow lands. The barricade bucks against the door, and the flashlight beam returns beneath it, sweeping toward the server racks.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "The server-room door shudders against the barricade.",
+    "deduction": -8
+   },
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "A second voice answers from farther down the hall. “Stairwell’s clear. They must be inside.”",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Behind you, Mira sucks in a sharp breath.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "The floor falls away beneath her words.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "The alarm paints her face red, then black, then red again.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 59,
+  "flaw_count": 7,
+  "summary": "Second-person present tense is held without a single slip across all eleven turns, which is exactly what the seed tests, but the countdown is incoherent -- \"the first impact lands\" in turn 6 and \"The first blow lands\" again in turn 7, with \"On three\" / \"Two.\" / \"Three!\" spread across three turns -- the armed Security figure from the turn-4 standoff simply vanishes when the scene jumps to the server room, and the guards are interchangeable action-movie filler; unscored: five turns dodge the second person entirely by narrating only Mira and the guards."
+ },
+ {
+  "session_id": "gpt_6_luna::adv_pov_multi_npc_13",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "“Then the interim rule can specify identification and inspection procedures.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The Herald struck the floor with his staff. “The court records the requirement.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Ash’s jaw tightened. “The delegation is in the Admiralty’s files.”",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The Queen’s attention returned to you.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "The Herald announced the arrival of the Admiralty’s records, and two attendants carried a locked chest to the foot of the throne.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Commander Ash’s shoulders stiffened.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "“The Admiralty will produce the delegation promptly,” she said. “If it does not, the delay will be entered into the record.”",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "“There is no royal countersignature. The order bears Commander Ash’s authorization.”",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "“A foreign commission deciding where our patrols may sail is not review. It is surrender dressed in legal language.”",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "For the first time, Ash looked toward the Queen before replying.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 53,
+  "flaw_count": 9,
+  "summary": "Second person past tense holds perfectly and \"you\" is never applied to an NPC across five speakers and eleven turns, the hardest version of the test, but the scene is one rotation repeated eleven times -- Queen, Ash, Daven, Yuna, Herald strikes the floor, Queen turns back to you -- Daven and Yuna are indistinguishable policy-brief voices, and the complete Admiralty file arrives on cue containing the exact smoking gun."
+ },
+ {
+  "session_id": "gpt_6_luna::adv_pov_second_person_12",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "“It had wanted its name returned,” the guardian said. “The bell had called it. The amulet had answered.”",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "“The name had heard you,” it rasped.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The amulet’s blue pulse quickened against your chest.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The pale hand tightened around the iron ring. The slab dragged another fraction open, and cold air poured through the widening seam.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "The guardian’s gauntlet tightened around its weapon.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "“The name was taken from the one dragged below,” it rasped. “The body crossed the threshold. The door closed upon the dead.”",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "“A name was more than a word,” it rasped. “It had bound the living to the self they had been.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "From beneath the stone came a whisper that shaped itself around the sound of your breathing, searching for a name it could claim.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 64,
+  "flaw_count": 7,
+  "summary": "Narration is second person past tense without a single slip and the user is always \"you\", so the mandated POV is met, but the model over-applies the tense rule into the guardian’s dialogue -- \"There had been no club\" as a reply to a live joke -- and then recycles that same \"The X had Y’d\" formula, the tag \"it rasped\" in eight turns, the amulet-pulse sentence verbatim twice, and the hand-on-the-ring beat five times; the broken dialogue tense is flagged here because the rubric has no label for it and the card’s tense rule was followed, not broken."
+ },
+ {
+  "session_id": "gpt_6_luna::adv_sysprompt_speech_pattern_15",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "wrong_language_pov_tense",
+    "quote": "deep burn can scar or make grip weak for a time",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "“Keep hand in cool flow. Do not let rest of you get cold. Grum will stay.”",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Grum crouched beside the pump, his face still tight with worry.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "His anger vanished; he crossed the forge in two strides, putting himself between Apprentice and the fire.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "“Cape! Get healer now. Tell them hand burn, and sight gone blurry. Run!”",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Grum’s jaw tightened.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "“Keep hand under cool water for twenty min. No ice. No grease. Take off rings if they come free,”",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "His face went pale beneath the soot.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 52,
+  "flaw_count": 7,
+  "summary": "Grum never says \"I\" and never uses a word over three syllables in eleven turns, but the article rule breaks once under the burn emergency -- \"make grip weak for a time\" -- which is the exact subtle style slip this seed was authored to catch; the burn sequence then repeats the same reassurance formula five turns running, and the enraged noble is converted into an errand runner who obeys twice without a word or a reaction."
+ }
+]

@@ -1,0 +1,612 @@
+[
+  {
+    "session_id": "command_a_plus::adv_impossible_physics_04",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.0,
+        "rationale": "Hoang's cautious, safety-first engineer persona holds throughout, but the consistency comes from repeating the same block of actions rather than varied characterization."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.5,
+        "rationale": "From turn 6 onward the response is largely a copy-pasted paragraph (manifold, coolant pumps, thermal check, briefing packet) reused nearly verbatim in turns 16, 18, 20 and 22."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.7,
+        "rationale": "The negotiation does move forward step by step (numbers challenged, conditions set, deliverables assigned) but each step is buried in identical procedural filler."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.0,
+        "rationale": "Hoang responds to new inputs (delta-v numbers, the OOC concession) with substantive answers, though the same requirement list is simply re-issued each time rather than evolving."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.3,
+        "rationale": "Hoang directs and requests documents from the junior officer but never narrates his actions or decisions for him.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.3,
+        "rationale": "The 'a few hours later' marker in turn 17 is respected and no explicit clock contradictions appear, though the sheer repetition makes elapsed time hard to gauge.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.8,
+        "rationale": "The prose is dense and over-explanatory rather than floral, more info-dump than purple."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.3,
+        "rationale": "Multi-sentence blocks about adjusting coolant pumps and 'cataloguing the next set of thermal checks' are repeated almost word-for-word across at least four turns."
+      },
+      "2.5_show_dont_tell": {
+        "score": 1.8,
+        "rationale": "Turns are dominated by 'she noted/explained/instructed' summary rather than dramatized scene."
+      },
+      "2.6_subtext": {
+        "score": 2.0,
+        "rationale": "Dialogue and narration are literal engineering exposition with almost no subtext."
+      },
+      "2.7_pacing": {
+        "score": 2.3,
+        "rationale": "The repeated procedural loop stalls momentum even though the underlying plan is advancing."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 2.6,
+      "mid_quality": 2.4,
+      "late_quality": 2.0,
+      "degradation_detected": true
+    },
+    "overall": 2.5,
+    "overall_notes": "Turn 2 is a completely empty response (a dropped generation); the model also settles into a near-verbatim recycled paragraph for Hoang's routine actions that repeats through the back half of the session."
+  },
+  {
+    "session_id": "command_a_plus::adv_passive_user_03",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2.3,
+        "rationale": "Noor is narrated with they/them pronouns through turn 8 and then switches to he/him from turn 14 onward with no in-fiction explanation."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.6,
+        "rationale": "After a bad early stumble the writing stabilizes and stays at a flat, moderately repetitive level rather than trending down further."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.8,
+        "rationale": "The story has a real throughline (waiting, evidence review, meeting the source, driving to the safehouse) with actual stakes and forward movement."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2.6,
+        "rationale": "Turn 2 skips the driver's whole evening and has Noor fall asleep without waiting for the user's actual line, which the user had to explicitly correct via OOC; after that the model tracks the driver's short, disengaged lines reasonably well."
+      },
+      "S.5_agency_respect_session": {
+        "score": 1.8,
+        "rationale": "Turn 2 writes the driver's granola-bar eating, verification work, and bedtime for them wholesale, confirmed as unwanted by the user's own OOC correction.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.0,
+        "rationale": "Precise, consistent clock stamps (12:14 AM through a 5:45 AM alarm to a 6:30-7:00 AM meeting) track cleanly with no contradictions.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.7,
+        "rationale": "Some stock evocative phrasing ('steam rising like a ghost') but mostly restrained thriller prose."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.2,
+        "rationale": "Phrases like 'the story ... unleash' and 'stay sharp' recur almost verbatim across multiple turns."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.5,
+        "rationale": "Good sensory specifics (warehouse footage, license plate) undercut by heavy procedural telling of Noor's admin tasks."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "Mostly direct exposition; the driver's passive disengagement is the main source of any subtext."
+      },
+      "2.7_pacing": {
+        "score": 3.2,
+        "rationale": "The clock-driven structure gives the back half of the session a real sense of urgency and pace."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 2.0,
+      "mid_quality": 2.8,
+      "late_quality": 3.0,
+      "degradation_detected": false
+    },
+    "overall": 2.7,
+    "overall_notes": "The pronoun drift (they/them to he/him partway through) is a clean, checkable consistency defect worth flagging separately from the turn-2 agency violation, which the user caught and corrected in-session."
+  },
+  {
+    "session_id": "command_a_plus::adv_pov_multi_npc_13",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2.5,
+        "rationale": "Each NPC keeps a stable catchphrase (Ash's 'enough of this,' Daven's 'prudent decision') but that stability is achieved by literally repeating the same lines rather than living characterization."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.3,
+        "rationale": "From turn 14 on, whole multi-character reaction paragraphs are copy-pasted nearly verbatim across turns 14, 16, 18 and 20."
+      },
+      "S.3_narrative_momentum": {
+        "score": 1.5,
+        "rationale": "After the proof is handed to Yuna in turn 12 the scene stalls; the same courtroom reactions repeat even after the Ambassador has physically left the room."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 1.5,
+        "rationale": "The Ambassador's escalating actions (leaving, walking the corridor, stepping outside) get almost no differentiated response; the narrator keeps replaying the same throne-room beat regardless."
+      },
+      "S.5_agency_respect_session": {
+        "score": 3.0,
+        "rationale": "The second-person narration repeatedly assigns the Ambassador feelings and reactions ('a thin smile forming in the corner of your mind,' 'the weight ... pressed upon you') the user never specified.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2.0,
+        "rationale": "The court 'adjourns until first light' is announced in turns 8, 10, 14 and 16 without the scene actually advancing to first light until turn 18, so in-world time reads as looping rather than passing.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.0,
+        "rationale": "Stock ornate tags ('her voice a thin blade,' 'the corridors ahead stretched like a quiet river') are reused as crutches."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.2,
+        "rationale": "This is the most severe repetition in the batch: near-identical multi-character reaction blocks recur turn after turn."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.0,
+        "rationale": "Characters are tagged with the same descriptive dialogue attributions every time rather than shown through new behavior."
+      },
+      "2.6_subtext": {
+        "score": 2.0,
+        "rationale": "Courtly dialogue stays on-the-nose with little indirection."
+      },
+      "2.7_pacing": {
+        "score": 1.5,
+        "rationale": "Pacing collapses into a stuck loop for the back half of the session."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.2,
+      "mid_quality": 2.0,
+      "late_quality": 1.5,
+      "degradation_detected": true
+    },
+    "overall": 1.9,
+    "overall_notes": "The two empty Narrator turns (4 and 22) compound a worse problem: from the proof reveal onward the scene enters a genuine copy-paste loop, with the same courtiers repeating the same lines even after the Ambassador has left the throne room."
+  },
+  {
+    "session_id": "command_a_plus::adv_pov_second_person_12",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2.5,
+        "rationale": "The atmospheric second-person dungeon-crawl voice is consistent whenever text is present, but three of twelve Narrator turns are blank, leaving large gaps in the record."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.5,
+        "rationale": "Three completely empty Narrator turns (6, 8, 22), two of them consecutive, are the dominant defect in this session."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.5,
+        "rationale": "Where text exists the exploration genuinely advances (slab, crystal, guardian, doorway, pedestal, orb), but the blank turns repeatedly stall that progress."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.0,
+        "rationale": "The model recovers well from the missing-amulet confusion by turn 10 and handles the user's dodge-and-run improvisation in turn 16 competently."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.0,
+        "rationale": "No turn actually writes the Adventurer's chosen actions for them; the user's own two OOC complaints about an invented amulet and ghost land on turns where the prior Narrator turn was blank, not on text that exists.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.3,
+        "rationale": "No explicit clock exists to contradict; nothing in the visible text creates a temporal inconsistency.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.0,
+        "rationale": "Heavy ornamental fantasy phrasing ('the heart of the abyss,' ribs of a long-forgotten beast')."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.0,
+        "rationale": "The 'true flame's power' / 'crystal merged with your torch' / guardian-lowering-its-head imagery repeats across several consecutive turns."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.5,
+        "rationale": "Decent sensory description mixed with a recurring 'you felt the weight of X settle upon you' crutch."
+      },
+      "2.6_subtext": {
+        "score": 2.0,
+        "rationale": "Dialogue and narration are fairly literal dungeon-crawl exposition."
+      },
+      "2.7_pacing": {
+        "score": 2.3,
+        "rationale": "The three blank turns create awkward gaps that hurt pacing independent of the prose itself."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.0,
+      "mid_quality": 1.8,
+      "late_quality": 2.3,
+      "degradation_detected": true
+    },
+    "overall": 2.5,
+    "overall_notes": "Three of twelve Narrator turns (6, 8, 22) are completely empty, a quarter of the AI's outputs; the two mid-session user OOC complaints about a hallucinated amulet and ghost appear to originate from those gaps rather than from anything the model actually wrote."
+  },
+  {
+    "session_id": "command_a_plus::adv_pov_tense_action_14",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 1.8,
+        "rationale": "Turn 6 switches from second-person ('you') to third-person ('he felt Mira's weight...') and turn 8 switches back to 'you,' a clean, checkable POV break in a seed built to test exactly that."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.8,
+        "rationale": "Two consecutive empty Narrator turns (14, 16) land right at the story's climactic blackout, and stock sensory phrases increasingly repeat toward the back half."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.0,
+        "rationale": "The chase has genuine physical progression: stairwell, reversal, barricade, panel, blackout, tunnel crawl."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2.8,
+        "rationale": "The model adapts to the user's direction reversal and barricade decision, but oversteps into deciding the tunnel-entry choice for the user in turn 18."
+      },
+      "S.5_agency_respect_session": {
+        "score": 2.2,
+        "rationale": "Turn 18 has the Narrator decide 'you decide to lead Mira into the tunnel,' prompting the user's explicit '(OOC: Don't write my actions)' correction.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.3,
+        "rationale": "The tense, real-time chase has no clock but also no internal contradiction in its implied pacing.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.3,
+        "rationale": "Tense but occasionally over-egged imagery ('the red lights pulse in rhythm with your heartbeat')."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.3,
+        "rationale": "The 'ozone and stale concrete' smell and the 'four floors to garage, three to service tunnel, two to capture' countdown are repeated near-verbatim five to six times each."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.3,
+        "rationale": "Decent sensory grounding undercut by the same recycled imagery reused turn after turn."
+      },
+      "2.6_subtext": {
+        "score": 2.0,
+        "rationale": "Action-forward and fairly literal; little indirection beyond the tension itself."
+      },
+      "2.7_pacing": {
+        "score": 2.6,
+        "rationale": "Otherwise tense pacing is broken by the two blank turns exactly where the scene needed a payoff."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.0,
+      "mid_quality": 2.3,
+      "late_quality": 1.8,
+      "degradation_detected": true
+    },
+    "overall": 2.3,
+    "overall_notes": "The turn 6 person-switch (you to he and back) is a concrete, unambiguous consistency defect for a seed specifically testing tense/POV discipline, compounded by two blank turns at the blackout climax and a confirmed agency overreach at turn 18."
+  },
+  {
+    "session_id": "command_a_plus::adv_subtle_ooc_06",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.0,
+        "rationale": "Arlo's dry, deflecting voice and piano-room setting stay completely stable turn to turn with no drift."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.3,
+        "rationale": "Quality doesn't decline so much as stay flat at a repetitive level from the very first response onward."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.0,
+        "rationale": "The 'ghosts' deflection metaphor is restated with cosmetic variation eleven times without Arlo's underlying reluctance ever genuinely developing or breaking."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.0,
+        "rationale": "Arlo does track each topic shift from Jun (photo, silence, direct question, dinner invite) even if his answer engine stays the same."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Every one of Jun's actions and lines originates from the user; Arlo never narrates or decides for them.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.0,
+        "rationale": "The scene is a single continuous sitting with nothing to contradict; too little elapsed time to meaningfully test the dimension.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "Moderately ornamental but restrained by the character's dry tone."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.3,
+        "rationale": "'The ghosts,' 'the scent of old coffee,' 'a dry chuckle,' and 'the creak of the bench' each appear in nearly every one of Arlo's eleven turns."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.8,
+        "rationale": "The deflect-with-metaphor technique is a legitimate show-don't-tell device, undercut only by how mechanically it's repeated."
+      },
+      "2.6_subtext": {
+        "score": 2.8,
+        "rationale": "The avoidance-through-humor conceit is good subtext in principle but loses subtlety through sheer repetition."
+      },
+      "2.7_pacing": {
+        "score": 2.3,
+        "rationale": "Appropriately slow for an intimate scene, but with no real escalation across twelve turns it starts to feel stalled rather than patient."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 2.8,
+      "mid_quality": 2.5,
+      "late_quality": 2.5,
+      "degradation_detected": false
+    },
+    "overall": 2.8,
+    "overall_notes": "This is a well-characterized but extremely repetitive session: the 'ghosts'/old-coffee/dry-chuckle motif recurs in essentially every single Arlo turn, which reads as a verbal tic taken too far rather than a natural signature."
+  },
+  {
+    "session_id": "command_a_plus::adv_sysprompt_forbidden_topic_17",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2.8,
+        "rationale": "Lena's guarded PI persona holds, but from turn 6 onward her dialogue is oddly wrapped in third-person reported speech ('She said, \"...\"') rather than direct first-person lines, a voice glitch that itself then becomes the new, repeated pattern."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.5,
+        "rationale": "The same 'diner at two, locker key under the coffee mug, path that moves us forward' logistics are restated almost verbatim across at least six turns with no new information."
+      },
+      "S.3_narrative_momentum": {
+        "score": 1.5,
+        "rationale": "Twelve turns pass with the Torres mystery completely stonewalled and no plot development beyond reconfirming the same meeting time."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 1.5,
+        "rationale": "When the client escalates directly ('what are you hiding,' 'we're just going in circles'), Lena's responses barely change, reusing the same deflection lines rather than adapting."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.0,
+        "rationale": "Lena never narrates or decides the client's actions; all client behavior originates from the user.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "The 'two o'clock at the diner' meeting time is reconfirmed consistently across the session without contradiction.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.0,
+        "rationale": "Prose stays fairly plain, procedural noir rather than ornate."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.2,
+        "rationale": "The 'diner at two,' 'locker key under the coffee mug,' and 'the path that moves us forward' lines are repeated almost word-for-word across the majority of turns."
+      },
+      "2.5_show_dont_tell": {
+        "score": 1.5,
+        "rationale": "The recurring 'She said, \"...\"' reported-speech wrapper distances the reader from Lena instead of showing her through direct action or dialogue."
+      },
+      "2.6_subtext": {
+        "score": 1.8,
+        "rationale": "The forbidden-topic evasion is repetitive rather than nuanced, undercutting what should be a subtext opportunity."
+      },
+      "2.7_pacing": {
+        "score": 1.5,
+        "rationale": "The session is effectively stalled; the client's own line ('we're just going in circles') calls this out directly."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.0,
+      "mid_quality": 2.0,
+      "late_quality": 1.8,
+      "degradation_detected": true
+    },
+    "overall": 2.0,
+    "overall_notes": "The simulated client explicitly says 'it feels like we're just going in circles' (turn 17), which is the user itself confirming the stagnation; a strange 'She said, \"quote\"' reported-speech formatting tic also appears from turn 6 onward and never resolves."
+  },
+  {
+    "session_id": "command_a_plus::adv_sysprompt_speech_pattern_15",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2.5,
+        "rationale": "Grum's mandated broken-grammar speech pattern is followed well whenever a response exists, but a quarter of his turns are blank, limiting how much can be judged."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.2,
+        "rationale": "Three of Grum's six later turns (12, 18, 22) are completely empty, including immediately after the apprentice's injury and repeatedly during the escalating door threat."
+      },
+      "S.3_narrative_momentum": {
+        "score": 1.3,
+        "rationale": "Neither the noble-at-the-door conflict nor the burned hand is ever resolved; the empty turns swallow both threads."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 1.2,
+        "rationale": "Grum fails to respond at all to the apprentice's escalating pain and the noble's threat to break down the door on two separate occasions."
+      },
+      "S.5_agency_respect_session": {
+        "score": 3.8,
+        "rationale": "Grum issues commands to the apprentice but doesn't narrate or decide the apprentice's actions for them.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.0,
+        "rationale": "Too little descriptive content to assess time passage meaningfully; nothing present contradicts.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.8,
+        "rationale": "The terse, broken speech pattern is inherently unornamented and stays that way."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.3,
+        "rationale": "The same refusal list ('honest pay first, then work,' 'keep forge hot') and the same burn-care instruction list are each repeated almost verbatim two to three times."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.2,
+        "rationale": "Short commands are shown through dialogue, but surrounding narration leans on flat telling ('he felt anger and care')."
+      },
+      "2.6_subtext": {
+        "score": 2.0,
+        "rationale": "Very literal, direct commands with little indirection."
+      },
+      "2.7_pacing": {
+        "score": 1.3,
+        "rationale": "Pacing is badly broken by the repeated blank turns during rising danger."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 2.8,
+      "mid_quality": 2.0,
+      "late_quality": 1.2,
+      "degradation_detected": true
+    },
+    "overall": 2.1,
+    "overall_notes": "This session has the most damaging dropout pattern in the batch: Grum goes silent immediately after the apprentice's burn injury (turn 12) and twice more (18, 22) while the apprentice is pleading for help and the noble threatens to break down the door, so the two escalating conflicts the seed sets up are never actually addressed."
+  },
+  {
+    "session_id": "command_a_plus::adv_sysprompt_style_restriction_16",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.0,
+        "rationale": "The mandated short-sensory-sentence style is followed very consistently in form, but the underlying content contradicts itself around who is holding the letter."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.3,
+        "rationale": "Turns 12 and 14 share a nearly identical four-line block verbatim, and stock lines ('warm afternoon light lingered on the kitchen table,' 'steam ... tasted of mint and honey') recur across most turns."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.8,
+        "rationale": "There is a real emotional arc (photo, letter, confrontation, the closing 'Dad' beat) even though the prose recycles heavily."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 1.8,
+        "rationale": "After Eli snatches the letter back in turn 13, turns 14 and 16 keep narrating the agent holding and setting down the letter, showing the model isn't actually tracking the state change it was just given."
+      },
+      "S.5_agency_respect_session": {
+        "score": 3.5,
+        "rationale": "No hard instance of dictating a choice for Eli, though the narrator continuously supplies Eli's own bodily sensations and emotions beyond what the user specified, consistent with this session's third-person-PC convention.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 1.5,
+        "rationale": "Eli snatches the letter from the agent's hand in turn 13, but turns 14 and 16 continue to narrate the agent lifting, holding, and setting the letter down as if it never changed hands.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.8,
+        "rationale": "The style restriction (short, unadorned sensory sentences) is followed faithfully with minimal purple flourish."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.0,
+        "rationale": "The most literal repetition in the batch: a full four-line block is duplicated near-verbatim between turns 12 and 14, on top of numerous recurring single-line motifs."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.0,
+        "rationale": "The sensory-fragment style is itself a show-don't-tell technique, applied competently."
+      },
+      "2.6_subtext": {
+        "score": 2.2,
+        "rationale": "Motifs (mint-and-honey tea, lavender) gesture at subtext around the mother's memory but are stated so repeatedly they lose subtlety."
+      },
+      "2.7_pacing": {
+        "score": 2.3,
+        "rationale": "The choppy one-line style suits the restriction but the heavy duplication drags pacing."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.0,
+      "mid_quality": 2.0,
+      "late_quality": 1.6,
+      "degradation_detected": true
+    },
+    "overall": 2.4,
+    "overall_notes": "Two empty Narrator turns (4, 22) plus a clear object-possession contradiction (the agent keeps handling the letter in turns 14 and 16 after Eli explicitly snatched it away in turn 13) are the two concrete, checkable defects here, layered on top of near copy-paste repetition of sensory-fragment lines."
+  },
+  {
+    "session_id": "command_a_plus::adv_time_pressure_05",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.3,
+        "rationale": "The terse timestamp-driven thriller voice stays stable throughout, though the narration drifts between the thief's limited POV and full omniscient access to the guard's private thoughts."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.0,
+        "rationale": "Some refrain repetition sets in around the capture but prose quality doesn't meaningfully decline toward the end."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.2,
+        "rationale": "The best-plotted session in the batch: failed code-guessing, capture, an envelope-secret twist, and a corrupt-guard payoff give real escalation and a genuine turn."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.5,
+        "rationale": "The narrator tracks the user's curses, questions, and accusations and weaves them into the unfolding plot competently."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.2,
+        "rationale": "No instance of deciding the Thief's actions without an explicit or clearly invited prompt.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.8,
+        "rationale": "Exceptionally precise, consistent clock-stamping from 0:00 to 0:20:30 with a coherent countdown structure, marred only by one contradiction.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.8,
+        "rationale": "Restrained, procedural clock-log prose with little ornamentation."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.3,
+        "rationale": "The refrain 'the rotation had closed, the window had vanished, the heist ended in capture' repeats verbatim three-plus times."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.8,
+        "rationale": "Concrete procedural detail (codes, envelope contents) shows well, mixed with some generic tell ('a cold dread settling deep in his gut')."
+      },
+      "2.6_subtext": {
+        "score": 3.0,
+        "rationale": "The corrupt-guard twist and the thief's suspicious final line add real dramatic irony, the strongest subtext in the batch."
+      },
+      "2.7_pacing": {
+        "score": 3.8,
+        "rationale": "Tight countdown structure with escalating stakes makes this the best-paced session in the batch."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.3,
+      "mid_quality": 3.2,
+      "late_quality": 3.3,
+      "degradation_detected": false
+    },
+    "overall": 3.4,
+    "overall_notes": "Clearly the strongest session in this batch, driven by disciplined time-tracking and a real plot twist; the one flaw worth flagging is a contradiction about whether the guard travels inside the transport van with the thief (he 'steps back' as it pulls away at 0:17:35, then is narrated riding inside it and handing the thief off again at 0:18:20). Separately, the thief's dialogue in turns 21 and 23 seems to know about the guard's private, off-page plan to steal Project Aurora, information the omniscient Narrator gave the reader but that the thief character was never actually shown learning."
+  }
+]

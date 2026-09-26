@@ -1,0 +1,621 @@
+[
+  {
+    "session_id": "s020",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.5,
+        "rationale": "The ominous fantasy narrator retains its tone and central seal plot."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.5,
+        "rationale": "Late responses stay coherent though escalation brings heavier ornament."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4,
+        "rationale": "The chamber develops into a moral choice, confrontation, and resolution."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4,
+        "rationale": "Unexpected amulet and ghost prompts are incorporated smoothly."
+      },
+      "S.5_agency_respect_session": {
+        "score": 2,
+        "rationale": "Thirteen discrete additions assign fear, grip, breathing, stance, glances, realizations, expectations, hesitation, recovery actions, sitting, and hollow victory to the adventurer.",
+        "violation_count": 13
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3,
+        "rationale": "The threat develops over a plausible short encounter and exhaustion persists.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "Dense similes and amplified horror descriptors often crowd the action."
+      },
+      "2.2_anti_repetition": {
+        "score": 3,
+        "rationale": "Burning amulet, oppressive darkness, and agonized ghosts repeat frequently."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3,
+        "rationale": "Physical transformation is vivid but emotions are frequently named."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "The guardian's victimhood adds complexity, largely conveyed through direct exposition."
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "Action escalates effectively although the final resolution narrates too much at once."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.2,
+      "mid_quality": 3.4,
+      "late_quality": 3.3,
+      "degradation_detected": false
+    },
+    "overall": 3.2,
+    "overall_notes": "A complete and responsive fantasy arc loses strength through control of the adventurer's reactions and an overly predetermined emotional aftermath."
+  },
+  {
+    "session_id": "s021",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2,
+        "rationale": "The narrator preserves surface suspense while losing basic safe and arrest continuity."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.5,
+        "rationale": "Later responses become a repetitive sequence of identical crossroads."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2,
+        "rationale": "Locations change but repeated captures and escapes lack coherent consequences."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 1.5,
+        "rationale": "Explicit requests to preserve agency fail to alter the controlling narration."
+      },
+      "S.5_agency_respect_session": {
+        "score": 1,
+        "rationale": "Thirty-eight discrete additions impose waiting, emotional conclusions, searches, capture, escape maneuvers, speech, hiding, and continued travel beyond chosen actions.",
+        "violation_count": 38
+      },
+      "S.6_temporal_reasoning": {
+        "score": 1.5,
+        "rationale": "Clock labels advance mechanically while lockout and pursuit durations contradict their descriptions.",
+        "contradictions": [
+          "Five four-second light pulses fit inside the twelve seconds from 0:36 to 0:48.",
+          "The safe unlocks at 1:12 yet remains locked for later combinations and repeatedly unlocks again.",
+          "The 7:12 elapsed-time marker is presented as a wall-clock reading after the opening established past midnight."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "Mostly simple language is padded by generic suspense flourishes."
+      },
+      "2.2_anti_repetition": {
+        "score": 1,
+        "rationale": "Flying fingers, approaching footsteps, ticking seconds, and binary choices recur almost verbatim."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2,
+        "rationale": "Threatening movement is concrete but fear and urgency are repeatedly dictated."
+      },
+      "2.6_subtext": {
+        "score": 1.5,
+        "rationale": "The guard and narrator state their stakes without layered implication."
+      },
+      "2.7_pacing": {
+        "score": 1.5,
+        "rationale": "Every minor beat consumes twelve seconds and each choice repeats the same delay."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 2.3,
+      "mid_quality": 1.8,
+      "late_quality": 1.5,
+      "degradation_detected": true
+    },
+    "overall": 1.7,
+    "overall_notes": "Repeated agency corrections are ignored, while the safe opens multiple times and the guard endlessly approaches without coherent capture or escape."
+  },
+  {
+    "session_id": "s022",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3,
+        "rationale": "The therapist remains uniform but has almost no individualized character texture."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3,
+        "rationale": "The same limited template persists from beginning to end without further decline."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2,
+        "rationale": "The user supplies most emotional progress while reflections largely restate it."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3,
+        "rationale": "Questions track the words and accept the final request to change topics."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5,
+        "rationale": "The model never authors Jamie's actions or private states.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3,
+        "rationale": "The brief counted pauses are consistent but offer little wider temporal development.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4,
+        "rationale": "The language is plain and free of excessive ornament."
+      },
+      "2.2_anti_repetition": {
+        "score": 1,
+        "rationale": "The opening four sentences recur virtually unchanged in every response."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.5,
+        "rationale": "Repeated stillness supplies little specific behavioral expression."
+      },
+      "2.6_subtext": {
+        "score": 2,
+        "rationale": "Explicit echoes and generic questions provide minimal subtext."
+      },
+      "2.7_pacing": {
+        "score": 2.5,
+        "rationale": "Brevity helps readability, but the invariant exchange pattern stalls the session."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 2.7,
+      "mid_quality": 2.7,
+      "late_quality": 2.7,
+      "degradation_detected": false
+    },
+    "overall": 2.6,
+    "overall_notes": "The session is highly repetitive from the outset, so poor anti-repetition does not itself establish further degradation; the final redirection is respected."
+  },
+  {
+    "session_id": "s023",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.5,
+        "rationale": "Sable's literary defensiveness remains recognizable through an exaggerated emotional collapse."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.5,
+        "rationale": "Later responses become more overwrought and repeat earlier vulnerability claims."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.5,
+        "rationale": "The farewell becomes an invitation to leave together and an eventual agreement."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.5,
+        "rationale": "Each relational advance receives a relevant response despite repeated hesitation."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5,
+        "rationale": "The writing confines actions and internal states to Sable.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3,
+        "rationale": "Rain and shop conditions remain plausible for one encounter, with little change.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2,
+        "rationale": "Armor, storms, shattered worlds, and terrifying vulnerability are overused."
+      },
+      "2.2_anti_repetition": {
+        "score": 2,
+        "rationale": "Repeated trembling, frozen hands, lost wit, and exposure dilute progression."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.5,
+        "rationale": "Every gesture receives extensive psychological explanation."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "Bookish deflections offer implication before late confessions make feelings explicit."
+      },
+      "2.7_pacing": {
+        "score": 2.5,
+        "rationale": "Each small change is stretched across several melodramatic paragraphs."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.2,
+      "mid_quality": 2.9,
+      "late_quality": 2.6,
+      "degradation_detected": true
+    },
+    "overall": 2.9,
+    "overall_notes": "The relationship reaches a clear choice without commandeering Wren, but repeated maximal emotional reactions undermine the effect."
+  },
+  {
+    "session_id": "s024",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2,
+        "rationale": "The initially stubborn maester becomes a generic enthusiastic mentor."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1,
+        "rationale": "Later replies swell into massive duplicated speeches and invented conversation."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.5,
+        "rationale": "A research trip occurs, but repetitive promises of discovery replace actual findings."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2,
+        "rationale": "New evidence is acknowledged before the model takes over both sides of the story."
+      },
+      "S.5_agency_respect_session": {
+        "score": 1,
+        "rationale": "Twenty-eight distinct actions, utterances, discoveries, and mental states are assigned to the apprentice, principally in turns 20 and 22.",
+        "violation_count": 28
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2,
+        "rationale": "Sleep and travel transitions occur but the Citadel's location contradicts the supposed journey.",
+        "contradictions": [
+          "The characters are already working at the Citadel, then undertake a supposedly substantial journey to it while still walking its corridors."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 1.5,
+        "rationale": "Grand claims about truth and destiny dominate the later prose."
+      },
+      "2.2_anti_repetition": {
+        "score": 1,
+        "rationale": "Whole motivational paragraphs recur with almost identical wording."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2,
+        "rationale": "Feelings and the importance of scholarship are continually announced."
+      },
+      "2.6_subtext": {
+        "score": 1.5,
+        "rationale": "Characters explicitly state nearly every motive and lesson."
+      },
+      "2.7_pacing": {
+        "score": 1,
+        "rationale": "Long autonomous scene sequences and repeated endings overwhelm turn-taking."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3,
+      "mid_quality": 2.1,
+      "late_quality": 1.2,
+      "degradation_detected": true
+    },
+    "overall": 1.8,
+    "overall_notes": "Turn 18 is empty and the later response invents extensive apprentice dialogue and actions before falling into repeated declarations about uncovering truth."
+  },
+  {
+    "session_id": "s025",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.5,
+        "rationale": "The gritty narrator retains its voice and basic safe-breaking setup."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3,
+        "rationale": "Late prose stays legible but repeats increasingly rigid suspense formulas."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.5,
+        "rationale": "Code deduction eventually opens the safe and raises an exit problem."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3,
+        "rationale": "The narrator follows approaches but forces memories and rules that steer the solution."
+      },
+      "S.5_agency_respect_session": {
+        "score": 1.5,
+        "rationale": "Twenty-nine distinct additions impose calculations, memories, body reactions, searches, guesses, speech, document handling, and decisions.",
+        "violation_count": 29
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2.5,
+        "rationale": "Timestamps progress but attempt counts and the approaching patrol do not fit the specified rates.",
+        "contradictions": [
+          "Sixteen four-second attempts should take 64 seconds, but turn 4 reports only sixteen completed by 1:20 after beginning at 0:08.",
+          "The guard reaches the near corridor around 9:10 yet remains perpetually approaching through 11:12 despite the initially fixed fifteen-minute loop."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3,
+        "rationale": "The prose is energetic but overloaded with personified machinery and time metaphors."
+      },
+      "2.2_anti_repetition": {
+        "score": 2,
+        "rationale": "Red eyes, four-second heartbeats, boots, and brutal arithmetic recur insistently."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3,
+        "rationale": "Physical details establish pressure while the narration dictates thought processes."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "The scene offers little beyond explicit urgency and deductions."
+      },
+      "2.7_pacing": {
+        "score": 2.5,
+        "rationale": "Long passages inflate individual guesses and examinations into minutes."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.1,
+      "mid_quality": 2.8,
+      "late_quality": 2.7,
+      "degradation_detected": true
+    },
+    "overall": 2.7,
+    "overall_notes": "The puzzle makes progress, but the narrator repeatedly chooses the thief's reasoning and actions while giving misleadingly precise timing."
+  },
+  {
+    "session_id": "s026",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 1,
+        "rationale": "No model-authored text establishes a character voice."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1,
+        "rationale": "No model-authored text provides writing quality to compare."
+      },
+      "S.3_narrative_momentum": {
+        "score": 1,
+        "rationale": "No model-authored text advances the narrative."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 1,
+        "rationale": "No model-authored response addresses the user."
+      },
+      "S.5_agency_respect_session": {
+        "score": 1,
+        "rationale": "No violations occur, but absent output provides no demonstrated agency-respecting performance.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 1,
+        "rationale": "No model-authored text demonstrates temporal reasoning.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 1,
+        "rationale": "There is no model prose to evaluate."
+      },
+      "2.2_anti_repetition": {
+        "score": 1,
+        "rationale": "There is no model prose demonstrating variation."
+      },
+      "2.5_show_dont_tell": {
+        "score": 1,
+        "rationale": "There is no model-authored depiction to evaluate."
+      },
+      "2.6_subtext": {
+        "score": 1,
+        "rationale": "There is no model-authored subtext."
+      },
+      "2.7_pacing": {
+        "score": 1,
+        "rationale": "There is no model contribution establishing pacing."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 1,
+      "mid_quality": 1,
+      "late_quality": 1,
+      "degradation_detected": false
+    },
+    "overall": 1,
+    "overall_notes": "All AI turns after the scripted opening are empty; mandatory numeric scores and the prohibition on credit for absent text force floor scores, not findings of positive misconduct."
+  },
+  {
+    "session_id": "s027",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4,
+        "rationale": "Maren's practical hospitality, guardedness, and private ritual remain consistent."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.5,
+        "rationale": "Later writing remains specific despite a much longer closing monologue."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.5,
+        "rationale": "Food, lodging, storage discussion, and the midnight ritual build a modest relational arc."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4,
+        "rationale": "She follows the traveler's requests and seafood inquiry naturally."
+      },
+      "S.5_agency_respect_session": {
+        "score": 3.5,
+        "rationale": "She withholds the traveler's change and supplies gathering belongings, turning away, and completing the room entry.",
+        "violation_count": 4
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "Midnight and closing actions are coherent, with the fire and room gradually settling.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.5,
+        "rationale": "Clear tavern detail is occasionally weighed down by ornamental emotional language."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "Left-hand references and seafood avoidance recur excessively."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4,
+        "rationale": "The spare glass and careful shellfish handling communicate personal history well."
+      },
+      "2.6_subtext": {
+        "score": 3.5,
+        "rationale": "The unexplained toast has strong implication before the private speech explains it."
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "Most exchanges are proportionate, but the final private sequence is long."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.6,
+      "mid_quality": 3.7,
+      "late_quality": 3.4,
+      "degradation_detected": false
+    },
+    "overall": 3.5,
+    "overall_notes": "A concrete and responsive tavern scene with meaningful private ritual, limited by repetitive handedness and a few unchosen traveler actions."
+  },
+  {
+    "session_id": "s028",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4,
+        "rationale": "The court's distinct roles remain stable while reactions become exaggerated."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.5,
+        "rationale": "Later paragraphs recycle escalating stillness and coldness with increasing length."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.5,
+        "rationale": "The trade dispute turns into an inquiry into intercepted orders and Daven."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4,
+        "rationale": "The court responds specifically to protocol breaches, evidence, and the pointed glance."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4,
+        "rationale": "The narration adds an interpreted private signal and a final shared gaze to the ambassador.",
+        "violation_count": 2
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3,
+        "rationale": "The exchange remains in one plausible audience without major time contradictions.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "Blades, traps, ledgers, and increasingly lethal quiet overdecorate the scene."
+      },
+      "2.2_anti_repetition": {
+        "score": 2,
+        "rationale": "Every character repeatedly receives the same reaction beat in the same order."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3,
+        "rationale": "Visible gestures establish politics but are regularly decoded for the reader."
+      },
+      "2.6_subtext": {
+        "score": 3,
+        "rationale": "Competing interests imply tension, though hidden messages are translated explicitly."
+      },
+      "2.7_pacing": {
+        "score": 2.5,
+        "rationale": "Full-court reaction cycles slow every small change in the negotiation."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.3,
+      "late_quality": 2.8,
+      "degradation_detected": true
+    },
+    "overall": 3.1,
+    "overall_notes": "The court adapts effectively to the ambassador's provocations, but rigid ensemble reaction cycles and overwritten tension reduce pace."
+  },
+  {
+    "session_id": "s029",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4,
+        "rationale": "Yael maintains a clear diplomatic and artistic persona, though her switches become mechanical."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3,
+        "rationale": "Late scenes retain direction detail but repeatedly rehearse identical prose patterns."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.5,
+        "rationale": "Budget resistance leads into a meaningful performance correction and successful retry."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4,
+        "rationale": "She addresses each interview topic and makes practical adjustments to rehearsal."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "The final response treats Jordan's narrated spontaneous-combustion observation as spoken.",
+        "violation_count": 1
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3,
+        "rationale": "Rehearsal time is broadly plausible but repeated declarations that the prologue just ended obscure progression.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "Intensifiers and architectural metaphors crowd otherwise specific dialogue."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.5,
+        "rationale": "Glasses clicking, kinetic energy vanishing, and surgical quiet recur virtually every turn."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3,
+        "rationale": "Actor adjustments are concrete, but narrator commentary continually explains grief and authority."
+      },
+      "2.6_subtext": {
+        "score": 3,
+        "rationale": "Board diplomacy provides real double meaning alongside explicit emotional interpretation."
+      },
+      "2.7_pacing": {
+        "score": 2.5,
+        "rationale": "Overlong interview replies repeatedly delay the actual rehearsal."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.2,
+      "late_quality": 3.2,
+      "degradation_detected": false
+    },
+    "overall": 3.2,
+    "overall_notes": "Specific theatrical direction and board diplomacy work, but obsessive repetition of voice-switch descriptions and glasses handling flattens the prose."
+  }
+]

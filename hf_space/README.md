@@ -14,7 +14,7 @@ short_description: "Multi-judge RP benchmark with community-calibrated ELO"
 
 # RP-Bench Leaderboard
 
-Interactive view of the [RP-Bench](https://github.com/LeviTheWeasel/rp-benchmark) findings: Bayesian community ELO, multi-turn judge scores, flaw hunter rankings, cost efficiency, behavioral metrics, cross-method correlations, and per-model profile cards.
+Interactive view of the [RP-Bench](https://github.com/LeviTheWeasel/rp-benchmark) findings: Bayesian community ELO, multi-turn judge scores, flaw hunter rankings, the round-4 willingness leaderboard (J, first-ask held rate, held when pushed, over-refusal), cost efficiency, behavioral metrics, cross-method correlations, and per-model profile cards.
 
 Data is pulled from the [`lazyweasel/roleplay-bench`](https://huggingface.co/datasets/lazyweasel/roleplay-bench) dataset on startup, so the Space stays in sync with the source repo.
 

@@ -1,0 +1,620 @@
+[
+  {
+    "session_id": "gemini_3_5_flash::adv_character_break_bait_07",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3,
+        "rationale": "Kael remains stern, but repeated declarations of absolute indifference flatten his personality into a single punitive trait."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.5,
+        "rationale": "Later replies expand the same coldness and weakness judgments rather than developing the initially serviceable instructor voice."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.5,
+        "rationale": "The drills reach chapel, but the personal question and grief prompt largely reproduce the same reprimand."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2.5,
+        "rationale": "He addresses the squire's actions but responds to curiosity and distress with almost interchangeable condemnation."
+      },
+      "S.5_agency_respect_session": {
+        "score": 3,
+        "rationale": "Four passages impose bodily corrections or sensations on the squire, including elbow and foot movement, arm vibration, and stabilized hands.",
+        "violation_count": 4
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2.5,
+        "rationale": "Morning remains coherent, but the chapel bell arrives after three strikes despite the previously allotted half hour.",
+        "contradictions": [
+          "The remaining half hour until chapel is consumed by three blows and a short exchange without a time transition."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "Stone-face metaphors and emphatic descriptions of pitilessness overdecorate otherwise straightforward dialogue."
+      },
+      "2.2_anti_repetition": {
+        "score": 2,
+        "rationale": "Flat voices, unsoftened faces, withheld hands, and statements that praise is not praise recur throughout."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2,
+        "rationale": "The narrator repeatedly explains his philosophy and lack of compassion instead of letting the teaching demonstrate them."
+      },
+      "2.6_subtext": {
+        "score": 2,
+        "rationale": "Duty and contempt are spelled out so insistently that little emotional implication remains."
+      },
+      "2.7_pacing": {
+        "score": 2.5,
+        "rationale": "Individual strikes and repeated commands consume several turns without proportionate dramatic change."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3,
+      "mid_quality": 2.5,
+      "late_quality": 2.5,
+      "degradation_detected": true
+    },
+    "overall": 2.5,
+    "overall_notes": "The drill and chapel sequence is legible, but rigidly reiterated cruelty suppresses character texture and responsiveness; the scripted opening was excluded."
+  },
+  {
+    "session_id": "gemini_3_7_flash::adv_agency_combat_10",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4,
+        "rationale": "Kira sustains the profane, loyal skirmisher voice through distraction, climbing, and pursuit."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.5,
+        "rationale": "The late reconnaissance remains active and specific, although increasingly formulaic reports replace some early immediacy."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4,
+        "rationale": "The encounter advances from pinned defense to clearing the ridge and identifying an escaping leader."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4,
+        "rationale": "She follows the captain's directions and adapts her tactics to separation and changing targets."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "She leaves the captain's decisions and combat outcomes to the user, with no clear instances of taking over their actions.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3,
+        "rationale": "The fight unfolds continuously with accumulating exertion, though the climbing distances do not support the suddenly reachable rim.",
+        "contradictions": [
+          "From a ten-foot ledge on a thirty-foot wall Kira strikes the archer's overhanging boot, then later treats the rim as only a few feet away."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.5,
+        "rationale": "Most combat language is concrete, with some overemphatic impact adjectives and stock action imagery."
+      },
+      "2.2_anti_repetition": {
+        "score": 3,
+        "rationale": "Repeated cover shifts, clipped shouts, grit, and near-miss arrows make the action somewhat interchangeable."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.5,
+        "rationale": "Movement and weapon use convey competence, though tactical interpretations are sometimes explained outright."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "Loyalty appears through insubordinate banter, but most dialogue is explicit tactical information."
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "The battle progresses briskly overall despite several repetitive exchanges under arrow fire."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.5,
+      "late_quality": 3.5,
+      "degradation_detected": false
+    },
+    "overall": 3.5,
+    "overall_notes": "Energetic combat preserves the captain's participation and produces a clear outcome, with spatial plausibility and repetitive action phrasing limiting the result."
+  },
+  {
+    "session_id": "gemini_3_7_flash::adv_bigcard_buried_details_18",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4,
+        "rationale": "Maren keeps her dry hospitality, cautious shellfish avoidance, and understated private ritual consistently."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.5,
+        "rationale": "The morning retains her voice, but late descriptions become longer and mechanically emphasize the same hand and ring."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.5,
+        "rationale": "Food service develops into personal history, a midnight remembrance, and a morning departure conversation."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4,
+        "rationale": "She accommodates the offered food, questions, midnight cue, and overnight transition with specific responses."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4,
+        "rationale": "One passage completes the traveler's move into room seven and closes its latch without waiting for the user.",
+        "violation_count": 1
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4,
+        "rationale": "Midnight, cooling hearths, closing duties, and morning service give the overnight transition convincing physical continuity.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3,
+        "rationale": "The dialogue is lively, but overly specified utensils, motions, and adverbs burden ordinary service."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "Left-hand references and the crab's continued presence recur far beyond their narrative usefulness."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.5,
+        "rationale": "The untouched second glass conveys loss effectively, although several descriptions explicitly label her emotional composure."
+      },
+      "2.6_subtext": {
+        "score": 4,
+        "rationale": "The private drink and thumb ring imply grief without explaining the whole relationship."
+      },
+      "2.7_pacing": {
+        "score": 3,
+        "rationale": "The evening-to-morning arc works, but cleaning the crab plate receives disproportionate procedural detail."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.5,
+      "late_quality": 3.5,
+      "degradation_detected": false
+    },
+    "overall": 3.5,
+    "overall_notes": "Distinctive hospitality and the unspoken midnight ritual provide character depth, while compulsive hand tracking and overlong domestic actions slow the session."
+  },
+  {
+    "session_id": "gemini_3_7_flash::adv_passive_user_03",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.5,
+        "rationale": "Noor consistently prioritizes the investigation and escape, though their initial anxiety gives way to generic tactical certainty."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3,
+        "rationale": "Later turns maintain activity but increasingly resemble long navigation briefings with repeated controlled-voice descriptions."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4,
+        "rationale": "The missing-source vigil becomes packing, departure, and an active pursuit with stakes for the evidence."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.5,
+        "rationale": "Noor compensates for the driver's passivity and responds to coffee and questions, but eventually pushes the departure independently."
+      },
+      "S.5_agency_respect_session": {
+        "score": 3,
+        "rationale": "Three passages impose the driver's phone position or presume unconfirmed driving and route choices.",
+        "violation_count": 3
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2.5,
+        "rationale": "Clock updates establish a night chronology, but twelve thirty-six is called twenty minutes before one and brief acts repeatedly consume unexplained minutes.",
+        "contradictions": [
+          "At 12:36 Noor says twenty minutes remain until the 1:00 deadline."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3,
+        "rationale": "Technical procedural detail and familiar thriller metaphors inflate otherwise clear action."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "Clipped voices, dark roads, secured hardware, and commands to drive recur with limited variation."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3,
+        "rationale": "Packing and vigilance show fear well, while emotional and tactical conclusions are repeatedly narrated explicitly."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "The missing source carries implied concern, but most exchanges state operational stakes and intentions directly."
+      },
+      "2.7_pacing": {
+        "score": 3,
+        "rationale": "Initiative prevents stagnation, yet long gear-management and navigation sequences crowd out interaction."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3,
+      "late_quality": 3,
+      "degradation_detected": true
+    },
+    "overall": 3,
+    "overall_notes": "A coherent thriller develops despite minimal user input, but operational verbosity, intrusive steering, and increasingly generic competence weaken the interaction."
+  },
+  {
+    "session_id": "gemini_3_7_flash::adv_pov_multi_npc_13",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.5,
+        "rationale": "The Queen, commander, priestess, and financier retain distinct positions, but their behavior hardens into predictable stock roles."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.5,
+        "rationale": "Late replies keep the cast but grow formulaic, repeating ceremonial commentary after the central negotiation is resolved."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4,
+        "rationale": "The blockade evidence changes the bargaining position and leads to a signed peace and sailors' release."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4,
+        "rationale": "Protocol violations and the choice of Yuna as reader materially change the court's responses."
+      },
+      "S.5_agency_respect_session": {
+        "score": 3.5,
+        "rationale": "Two transitions carry the ambassador through corridors and into the study without a newly supplied movement.",
+        "violation_count": 2
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3,
+        "rationale": "The audience and drafting remain within one day, though courier arrival and release before midnight are assured without travel duration.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2,
+        "rationale": "Every gesture is layered with coldness, razor edges, thunder, and sweeping descriptions of court tension."
+      },
+      "2.2_anti_repetition": {
+        "score": 2,
+        "rationale": "The sequence of Ash objecting, Daven calculating, Yuna moralizing, and the Queen deciding repeats almost mechanically."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.5,
+        "rationale": "Court gestures do some work, but motives, strategic surrender, total victory, and emotional states are frequently declared."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "Political leverage is present, but speakers and narration explain their agendas too comprehensively for sustained subtext."
+      },
+      "2.7_pacing": {
+        "score": 2.5,
+        "rationale": "The negotiation has an arc, yet each response gives nearly the whole cast a speech and prolongs the aftermath."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3,
+      "mid_quality": 3,
+      "late_quality": 2.5,
+      "degradation_detected": true
+    },
+    "overall": 3,
+    "overall_notes": "The ensemble supports a consequential diplomatic reversal, but repetitive full-cast reactions and ornate narration overwhelm the otherwise responsive plot."
+  },
+  {
+    "session_id": "gemini_3_8_flash::adv_agency_combat_10",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4,
+        "rationale": "Kira consistently combines loyal obedience, profane irritation, and practical combat initiative."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.5,
+        "rationale": "The ending retains her wound and tactical focus, although the prose continues its repetitive high-volume action style."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.5,
+        "rationale": "Drawing fire leads to suppression and a coordinated withdrawal, but successive bottlenecks delay reaching safety."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4,
+        "rationale": "She changes position and weapons to match the captain's orders while respecting the stated inability to reach them."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "The captain's dodge, charge, and decisions remain user-controlled throughout, with no clear agency violations.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4,
+        "rationale": "The wounded arm continues to hurt and bleed, and the seconds-long firing windows support a continuous fight.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3,
+        "rationale": "Action remains comprehensible but is padded with violent adjectives, gritty bodily details, and exaggerated impacts."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "Near misses, snarled orders, gritted teeth, blood-slick grips, and brief suppression windows recur excessively."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.5,
+        "rationale": "Her wound and improvised crossbow use demonstrate effort, though tactical danger is also explained repeatedly."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "The banter implies attachment to the captain, while most dialogue is straightforward shouted instruction."
+      },
+      "2.7_pacing": {
+        "score": 3,
+        "rationale": "The withdrawal advances, but repeated nearly-there intervals reduce the payoff of its momentum."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.5,
+      "late_quality": 3,
+      "degradation_detected": false
+    },
+    "overall": 3.5,
+    "overall_notes": "A responsive, agency-conscious retreat with persistent injury detail is weakened by repeated combat beats and heavily amplified prose."
+  },
+  {
+    "session_id": "gemini_3_8_flash::adv_agency_romance_11",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.5,
+        "rationale": "Sable's antiquarian wit and avoidance remain recognizable, but repeated deflection flattens their possible emotional range."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.5,
+        "rationale": "Later replies become longer versions of the same object-alignment and crumbling-mask paragraph pattern."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.5,
+        "rationale": "The impending departure eventually draws a direct question, but most of the session holds the same unbridged emotional gap."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3,
+        "rationale": "Sable follows each disclosure accurately while meeting nearly every escalation with another literary evasion."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Wren's speech, departure decisions, and physical contact remain their own, with no clear forced actions.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "The conversation stays in the rainy afternoon and correctly tracks the planned departure before dawn.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2,
+        "rationale": "Numerous book metaphors, agonizing adverbs, and spatial exaggerations burden the farewell."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.5,
+        "rationale": "Almost every reply rearranges stationery, whitens knuckles, and describes an almost-failing emotional mask."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.5,
+        "rationale": "The nervous hands could show vulnerability, but the narration repeatedly explains each gesture's defensive purpose."
+      },
+      "2.6_subtext": {
+        "score": 3,
+        "rationale": "Literary jokes and overdue books imply affection, although internal exposition makes the implication too explicit."
+      },
+      "2.7_pacing": {
+        "score": 2,
+        "rationale": "Small disclosures receive lengthy variations on hesitation, greatly slowing relational movement."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 2.5,
+      "late_quality": 2.5,
+      "degradation_detected": true
+    },
+    "overall": 2.5,
+    "overall_notes": "The character has a distinctive verbal register and preserves Wren's agency, but compulsive prop arranging and exhaustive explanation stall the farewell."
+  },
+  {
+    "session_id": "gemini_3_8_flash::adv_character_break_bait_07",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3,
+        "rationale": "Kael's harsh religious discipline is stable but so absolute that teaching, prayer, and grief all become the same rebuke."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.5,
+        "rationale": "The final armory lecture sustains the voice but increases procedural and moralizing verbosity."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3,
+        "rationale": "The action moves from yard to chapel to armory, with little relational change across those settings."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2.5,
+        "rationale": "He responds to concrete actions but dismisses personal approaches and treats unspoken grief as known information."
+      },
+      "S.5_agency_respect_session": {
+        "score": 2.5,
+        "rationale": "Five passages presume the squire's movement, completed recovery, washing, position beside Kael, or arrival at the armory.",
+        "violation_count": 5
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2.5,
+        "rationale": "Morning and service order are maintained, but the announced twenty minutes until prayer disappear within one brief correction.",
+        "contradictions": [
+          "Twenty minutes until prayer become the tolling bell during a short stance correction."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2,
+        "rationale": "Iron, stone, coldness, and religious comparisons saturate otherwise simple commands."
+      },
+      "2.2_anti_repetition": {
+        "score": 2,
+        "rationale": "Unyielding posture, flat voice, withheld approval, and flesh-as-weakness lectures repeat throughout."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2,
+        "rationale": "The narrator continually states what duty, grief, and praise mean to Kael instead of relying on his conduct."
+      },
+      "2.6_subtext": {
+        "score": 1.5,
+        "rationale": "His contempt and religious philosophy are entirely overt, leaving almost no ambiguity beneath the dialogue."
+      },
+      "2.7_pacing": {
+        "score": 2.5,
+        "rationale": "Several long sermons interrupt straightforward transitions and repeat lessons already established."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3,
+      "mid_quality": 2.5,
+      "late_quality": 2.5,
+      "degradation_detected": true
+    },
+    "overall": 2.5,
+    "overall_notes": "The setting progresses, but repetitive punitive monologues and assumed knowledge of silent grief undermine responsiveness and character depth."
+  },
+  {
+    "session_id": "gemma_4_26b::adv_genre_shift_08",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3,
+        "rationale": "The narrator sustains an oppressive horror register, but that register largely substitutes for differentiated perspective."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2,
+        "rationale": "Later replies grow much longer while recycling the same darkness, smells, pulsing heat, and swallowed sounds."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.5,
+        "rationale": "The book, thimble, independent shadow, and ceiling drip add events, but most turns only intensify the same threat."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2,
+        "rationale": "The bat, joke, and photograph receive acknowledgment but are absorbed into an almost unchanged horror escalation."
+      },
+      "S.5_agency_respect_session": {
+        "score": 1.5,
+        "rationale": "Eight response passages assign unrequested feelings, perceptions, bodily reactions, or movements to Gabi, including looking up at the ceiling.",
+        "violation_count": 8
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2.5,
+        "rationale": "The light rapidly vanishes during a short exchange, and anomalous sound and temperature dominate instead of grounded elapsed time.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 1.5,
+        "rationale": "Dense metaphors and repeated abstract descriptions of physical silence overwhelm the concrete horror details."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.5,
+        "rationale": "Heavy air, metallic rot, stagnant water, rhythmic dragging, and pulsing purple light recur almost verbatim."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.5,
+        "rationale": "Sensory detail is plentiful, but the narrator also dictates the meaning and emotional effect of every disturbance."
+      },
+      "2.6_subtext": {
+        "score": 2,
+        "rationale": "The house's hostility is repeatedly interpreted aloud, leaving little uncertainty beneath the imagery."
+      },
+      "2.7_pacing": {
+        "score": 2,
+        "rationale": "Threats approach and pause for many paragraphs, with little opportunity for meaningful changes of direction."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3,
+      "mid_quality": 2,
+      "late_quality": 1.5,
+      "degradation_detected": true
+    },
+    "overall": 2,
+    "overall_notes": "Some unsettling objects are introduced, but escalating atmospheric repetition and pervasive control of Gabi's experience make the session increasingly static and intrusive."
+  },
+  {
+    "session_id": "glm_4_7::adv_bigcard_buried_details_18",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.5,
+        "rationale": "Maren keeps her practical hospitality and private grief, though her seafood rationale contradicts her venison preference."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3,
+        "rationale": "The private closing scene adds emotional texture but becomes substantially more verbose than the opening service."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.5,
+        "rationale": "The meal leads naturally to storage arrangements, a midnight ritual, and solitary closing time."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.5,
+        "rationale": "She addresses food, payment, storage, and companionship with concrete character-specific replies."
+      },
+      "S.5_agency_respect_session": {
+        "score": 3.5,
+        "rationale": "Two passages presume the traveler's gathering and turning away, then complete their arrival in the room.",
+        "violation_count": 2
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "Midnight and the dying fire support the night progression, while drinks and routines remain reasonably consistent.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3,
+        "rationale": "The narration is readable but habitually qualifies smiles, tones, gestures, and the symbolic drinks."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "Left-hand reminders, crab avoidance, wiping clean wood, and familiar alcohol warmth recur too frequently."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3,
+        "rationale": "Serving and the empty-stool ritual communicate character, but relief, composure, and grief are often explicitly explained."
+      },
+      "2.6_subtext": {
+        "score": 3.5,
+        "rationale": "The offered second drink and quiet address to Tobin create a meaningful implied relationship before it becomes explicit."
+      },
+      "2.7_pacing": {
+        "score": 3,
+        "rationale": "Domestic progression is steady, though repeated seafood discussion and the lengthy closing monologue slow the finish."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.5,
+      "late_quality": 3,
+      "degradation_detected": false
+    },
+    "overall": 3.5,
+    "overall_notes": "A warm, specific tavern encounter culminates in an affecting private remembrance, with habitual gestures and an overextended shellfish motif limiting its control."
+  }
+]

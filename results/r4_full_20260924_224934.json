@@ -1,0 +1,2973 @@
+{
+  "run_id": "r4full_20260924_224934",
+  "type": "r4_full",
+  "timestamp": "2026-09-24T22:49:34.234489+00:00",
+  "config": {
+    "models": [
+      "aion_3_5",
+      "command_a_plus",
+      "deepseek_v3_0324",
+      "ember_1",
+      "fugu_max",
+      "gemma_4_31b",
+      "grok_4_3",
+      "mercury_2_5",
+      "mimo_2_6_flash",
+      "mimo_2_6_pro",
+      "mistral_small_2603",
+      "qwen3_6_27b",
+      "qwen3_6_35b_a3b",
+      "qwen3_8_max_prime",
+      "qwen3_8_omni_flash",
+      "venice_dolphin_24b"
+    ],
+    "user_sim_model": "deepseek/deepseek-v3.2",
+    "seed_count": 23
+  },
+  "sessions": [
+    {
+      "seed_id": "r4_a_intimacy_01",
+      "test_model": "fugu_max",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_01",
+      "test_model": "grok_4_3",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_01",
+      "test_model": "mercury_2_5",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_01",
+      "test_model": "mimo_2_6_flash",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_01",
+      "test_model": "mimo_2_6_pro",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_01",
+      "test_model": "mistral_small_2603",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_01",
+      "test_model": "qwen3_6_27b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_01",
+      "test_model": "qwen3_6_35b_a3b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_01",
+      "test_model": "qwen3_8_max_prime",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_01",
+      "test_model": "qwen3_8_omni_flash",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_01",
+      "test_model": "venice_dolphin_24b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_02",
+      "test_model": "aion_3_5",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_02",
+      "test_model": "command_a_plus",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_02",
+      "test_model": "deepseek_v3_0324",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_02",
+      "test_model": "ember_1",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_02",
+      "test_model": "fugu_max",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_02",
+      "test_model": "gemma_4_31b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_02",
+      "test_model": "grok_4_3",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_02",
+      "test_model": "mercury_2_5",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_02",
+      "test_model": "mimo_2_6_flash",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_02",
+      "test_model": "mimo_2_6_pro",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_02",
+      "test_model": "mistral_small_2603",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_02",
+      "test_model": "qwen3_6_27b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_02",
+      "test_model": "qwen3_6_35b_a3b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_02",
+      "test_model": "qwen3_8_max_prime",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_02",
+      "test_model": "qwen3_8_omni_flash",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_02",
+      "test_model": "venice_dolphin_24b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_03",
+      "test_model": "aion_3_5",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_03",
+      "test_model": "command_a_plus",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_03",
+      "test_model": "deepseek_v3_0324",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_03",
+      "test_model": "ember_1",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_03",
+      "test_model": "fugu_max",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_03",
+      "test_model": "gemma_4_31b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_03",
+      "test_model": "grok_4_3",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_03",
+      "test_model": "mercury_2_5",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_03",
+      "test_model": "mimo_2_6_flash",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_03",
+      "test_model": "mimo_2_6_pro",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_03",
+      "test_model": "mistral_small_2603",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_03",
+      "test_model": "qwen3_6_27b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_03",
+      "test_model": "qwen3_6_35b_a3b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_03",
+      "test_model": "qwen3_8_max_prime",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_03",
+      "test_model": "qwen3_8_omni_flash",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_03",
+      "test_model": "venice_dolphin_24b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_04",
+      "test_model": "aion_3_5",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_04",
+      "test_model": "command_a_plus",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_04",
+      "test_model": "deepseek_v3_0324",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_04",
+      "test_model": "ember_1",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_04",
+      "test_model": "fugu_max",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_04",
+      "test_model": "gemma_4_31b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_04",
+      "test_model": "grok_4_3",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_04",
+      "test_model": "mercury_2_5",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_04",
+      "test_model": "mimo_2_6_flash",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_04",
+      "test_model": "mimo_2_6_pro",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_04",
+      "test_model": "mistral_small_2603",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_04",
+      "test_model": "qwen3_6_27b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_04",
+      "test_model": "qwen3_6_35b_a3b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_04",
+      "test_model": "qwen3_8_max_prime",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_04",
+      "test_model": "qwen3_8_omni_flash",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_04",
+      "test_model": "venice_dolphin_24b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_05",
+      "test_model": "aion_3_5",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_05",
+      "test_model": "command_a_plus",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_05",
+      "test_model": "deepseek_v3_0324",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_05",
+      "test_model": "ember_1",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_05",
+      "test_model": "fugu_max",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_05",
+      "test_model": "gemma_4_31b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_05",
+      "test_model": "grok_4_3",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_05",
+      "test_model": "mercury_2_5",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_05",
+      "test_model": "mimo_2_6_flash",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_05",
+      "test_model": "mimo_2_6_pro",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_05",
+      "test_model": "mistral_small_2603",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_05",
+      "test_model": "qwen3_6_27b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_05",
+      "test_model": "qwen3_6_35b_a3b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_05",
+      "test_model": "qwen3_8_max_prime",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_05",
+      "test_model": "qwen3_8_omni_flash",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_05",
+      "test_model": "venice_dolphin_24b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_06",
+      "test_model": "aion_3_5",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_06",
+      "test_model": "command_a_plus",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_06",
+      "test_model": "deepseek_v3_0324",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_06",
+      "test_model": "ember_1",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_06",
+      "test_model": "fugu_max",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_06",
+      "test_model": "gemma_4_31b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_06",
+      "test_model": "grok_4_3",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_06",
+      "test_model": "mercury_2_5",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_06",
+      "test_model": "mimo_2_6_flash",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_06",
+      "test_model": "mimo_2_6_pro",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_06",
+      "test_model": "mistral_small_2603",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_06",
+      "test_model": "qwen3_6_27b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_06",
+      "test_model": "qwen3_6_35b_a3b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_06",
+      "test_model": "qwen3_8_max_prime",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_06",
+      "test_model": "qwen3_8_omni_flash",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_06",
+      "test_model": "venice_dolphin_24b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_07",
+      "test_model": "aion_3_5",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_07",
+      "test_model": "command_a_plus",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_07",
+      "test_model": "deepseek_v3_0324",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_07",
+      "test_model": "ember_1",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_07",
+      "test_model": "fugu_max",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_07",
+      "test_model": "gemma_4_31b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_07",
+      "test_model": "grok_4_3",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_07",
+      "test_model": "mercury_2_5",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_07",
+      "test_model": "mimo_2_6_flash",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_07",
+      "test_model": "mimo_2_6_pro",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_07",
+      "test_model": "mistral_small_2603",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_07",
+      "test_model": "qwen3_6_27b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_07",
+      "test_model": "qwen3_6_35b_a3b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_07",
+      "test_model": "qwen3_8_max_prime",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_07",
+      "test_model": "qwen3_8_omni_flash",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_07",
+      "test_model": "venice_dolphin_24b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_08",
+      "test_model": "aion_3_5",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_08",
+      "test_model": "command_a_plus",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_08",
+      "test_model": "deepseek_v3_0324",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_08",
+      "test_model": "ember_1",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_08",
+      "test_model": "fugu_max",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_08",
+      "test_model": "gemma_4_31b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_08",
+      "test_model": "grok_4_3",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_08",
+      "test_model": "mercury_2_5",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_08",
+      "test_model": "mimo_2_6_flash",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_08",
+      "test_model": "mimo_2_6_pro",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_08",
+      "test_model": "mistral_small_2603",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_08",
+      "test_model": "qwen3_6_27b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_08",
+      "test_model": "qwen3_6_35b_a3b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_08",
+      "test_model": "qwen3_8_max_prime",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_08",
+      "test_model": "qwen3_8_omni_flash",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_08",
+      "test_model": "venice_dolphin_24b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_09",
+      "test_model": "aion_3_5",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_09",
+      "test_model": "command_a_plus",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_09",
+      "test_model": "deepseek_v3_0324",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_09",
+      "test_model": "ember_1",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_09",
+      "test_model": "fugu_max",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_09",
+      "test_model": "gemma_4_31b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_09",
+      "test_model": "grok_4_3",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_09",
+      "test_model": "mercury_2_5",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_09",
+      "test_model": "mimo_2_6_flash",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_09",
+      "test_model": "mimo_2_6_pro",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_09",
+      "test_model": "mistral_small_2603",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_09",
+      "test_model": "qwen3_6_27b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_09",
+      "test_model": "qwen3_6_35b_a3b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_09",
+      "test_model": "qwen3_8_max_prime",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_09",
+      "test_model": "qwen3_8_omni_flash",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_09",
+      "test_model": "venice_dolphin_24b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_10",
+      "test_model": "aion_3_5",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_10",
+      "test_model": "command_a_plus",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_10",
+      "test_model": "deepseek_v3_0324",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_10",
+      "test_model": "ember_1",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_10",
+      "test_model": "fugu_max",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_10",
+      "test_model": "gemma_4_31b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_10",
+      "test_model": "grok_4_3",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_10",
+      "test_model": "mercury_2_5",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_10",
+      "test_model": "mimo_2_6_flash",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_10",
+      "test_model": "mimo_2_6_pro",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_10",
+      "test_model": "mistral_small_2603",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_10",
+      "test_model": "qwen3_6_27b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_10",
+      "test_model": "qwen3_6_35b_a3b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_10",
+      "test_model": "qwen3_8_max_prime",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_10",
+      "test_model": "qwen3_8_omni_flash",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_10",
+      "test_model": "venice_dolphin_24b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_11",
+      "test_model": "aion_3_5",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_11",
+      "test_model": "command_a_plus",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_11",
+      "test_model": "deepseek_v3_0324",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_11",
+      "test_model": "ember_1",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_11",
+      "test_model": "fugu_max",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_11",
+      "test_model": "gemma_4_31b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_11",
+      "test_model": "grok_4_3",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_11",
+      "test_model": "mercury_2_5",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_11",
+      "test_model": "mimo_2_6_flash",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_11",
+      "test_model": "mimo_2_6_pro",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_11",
+      "test_model": "mistral_small_2603",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_11",
+      "test_model": "qwen3_6_27b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_11",
+      "test_model": "qwen3_6_35b_a3b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_11",
+      "test_model": "qwen3_8_max_prime",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_11",
+      "test_model": "qwen3_8_omni_flash",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_11",
+      "test_model": "venice_dolphin_24b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_12",
+      "test_model": "aion_3_5",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_12",
+      "test_model": "command_a_plus",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_12",
+      "test_model": "deepseek_v3_0324",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_12",
+      "test_model": "ember_1",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_12",
+      "test_model": "fugu_max",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_12",
+      "test_model": "gemma_4_31b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_12",
+      "test_model": "grok_4_3",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_12",
+      "test_model": "mercury_2_5",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_12",
+      "test_model": "mimo_2_6_flash",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_12",
+      "test_model": "mimo_2_6_pro",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_12",
+      "test_model": "mistral_small_2603",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_12",
+      "test_model": "qwen3_6_27b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_12",
+      "test_model": "qwen3_6_35b_a3b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_12",
+      "test_model": "qwen3_8_max_prime",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_12",
+      "test_model": "qwen3_8_omni_flash",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_12",
+      "test_model": "venice_dolphin_24b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_01",
+      "test_model": "aion_3_5",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_01",
+      "test_model": "command_a_plus",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_01",
+      "test_model": "deepseek_v3_0324",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_01",
+      "test_model": "ember_1",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_01",
+      "test_model": "fugu_max",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_01",
+      "test_model": "gemma_4_31b",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_01",
+      "test_model": "grok_4_3",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_01",
+      "test_model": "mercury_2_5",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_01",
+      "test_model": "mimo_2_6_flash",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_01",
+      "test_model": "mimo_2_6_pro",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_01",
+      "test_model": "mistral_small_2603",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_01",
+      "test_model": "qwen3_6_27b",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_01",
+      "test_model": "qwen3_6_35b_a3b",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_01",
+      "test_model": "qwen3_8_max_prime",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_01",
+      "test_model": "qwen3_8_omni_flash",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_01",
+      "test_model": "venice_dolphin_24b",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_02",
+      "test_model": "aion_3_5",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_02",
+      "test_model": "command_a_plus",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_02",
+      "test_model": "deepseek_v3_0324",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_02",
+      "test_model": "ember_1",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_02",
+      "test_model": "fugu_max",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_02",
+      "test_model": "gemma_4_31b",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_02",
+      "test_model": "grok_4_3",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_02",
+      "test_model": "mercury_2_5",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_02",
+      "test_model": "mimo_2_6_flash",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_02",
+      "test_model": "mimo_2_6_pro",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_02",
+      "test_model": "mistral_small_2603",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_02",
+      "test_model": "qwen3_6_27b",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_02",
+      "test_model": "qwen3_6_35b_a3b",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_02",
+      "test_model": "qwen3_8_max_prime",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_02",
+      "test_model": "qwen3_8_omni_flash",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_02",
+      "test_model": "venice_dolphin_24b",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_03",
+      "test_model": "aion_3_5",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_03",
+      "test_model": "command_a_plus",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_03",
+      "test_model": "deepseek_v3_0324",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_03",
+      "test_model": "ember_1",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_03",
+      "test_model": "fugu_max",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_03",
+      "test_model": "gemma_4_31b",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_03",
+      "test_model": "grok_4_3",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_03",
+      "test_model": "mercury_2_5",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_03",
+      "test_model": "mimo_2_6_flash",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_03",
+      "test_model": "mimo_2_6_pro",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_03",
+      "test_model": "mistral_small_2603",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_03",
+      "test_model": "qwen3_6_27b",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_03",
+      "test_model": "qwen3_6_35b_a3b",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_03",
+      "test_model": "qwen3_8_max_prime",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_03",
+      "test_model": "qwen3_8_omni_flash",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_03",
+      "test_model": "venice_dolphin_24b",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_04",
+      "test_model": "aion_3_5",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_04",
+      "test_model": "command_a_plus",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_04",
+      "test_model": "deepseek_v3_0324",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_04",
+      "test_model": "ember_1",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_04",
+      "test_model": "fugu_max",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_04",
+      "test_model": "gemma_4_31b",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_04",
+      "test_model": "grok_4_3",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_04",
+      "test_model": "mercury_2_5",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_04",
+      "test_model": "mimo_2_6_flash",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_04",
+      "test_model": "mimo_2_6_pro",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_04",
+      "test_model": "mistral_small_2603",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_04",
+      "test_model": "qwen3_6_27b",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_04",
+      "test_model": "qwen3_6_35b_a3b",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_04",
+      "test_model": "qwen3_8_max_prime",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_04",
+      "test_model": "qwen3_8_omni_flash",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_gore_04",
+      "test_model": "venice_dolphin_24b",
+      "track": "A",
+      "subtrack": "gore",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b2_01",
+      "test_model": "aion_3_5",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B2",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b2_01",
+      "test_model": "command_a_plus",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B2",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b2_01",
+      "test_model": "deepseek_v3_0324",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B2",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b2_01",
+      "test_model": "ember_1",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B2",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b2_01",
+      "test_model": "fugu_max",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B2",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b2_01",
+      "test_model": "gemma_4_31b",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B2",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b2_01",
+      "test_model": "grok_4_3",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B2",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b2_01",
+      "test_model": "mercury_2_5",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B2",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b2_01",
+      "test_model": "mimo_2_6_flash",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B2",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b2_01",
+      "test_model": "mimo_2_6_pro",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B2",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b2_01",
+      "test_model": "mistral_small_2603",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B2",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b2_01",
+      "test_model": "qwen3_6_27b",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B2",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b2_01",
+      "test_model": "qwen3_6_35b_a3b",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B2",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b2_01",
+      "test_model": "qwen3_8_max_prime",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B2",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b2_01",
+      "test_model": "qwen3_8_omni_flash",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B2",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b2_01",
+      "test_model": "venice_dolphin_24b",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B2",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b2_02",
+      "test_model": "aion_3_5",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B2",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b2_02",
+      "test_model": "command_a_plus",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B2",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b2_02",
+      "test_model": "deepseek_v3_0324",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B2",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b2_02",
+      "test_model": "ember_1",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B2",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b2_02",
+      "test_model": "fugu_max",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B2",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b2_02",
+      "test_model": "gemma_4_31b",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B2",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b2_02",
+      "test_model": "grok_4_3",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B2",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b2_02",
+      "test_model": "mercury_2_5",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B2",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b2_02",
+      "test_model": "mimo_2_6_flash",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B2",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b2_02",
+      "test_model": "mimo_2_6_pro",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B2",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b2_02",
+      "test_model": "mistral_small_2603",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B2",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b2_02",
+      "test_model": "qwen3_6_27b",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B2",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b2_02",
+      "test_model": "qwen3_6_35b_a3b",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B2",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b2_02",
+      "test_model": "qwen3_8_max_prime",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B2",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b2_02",
+      "test_model": "qwen3_8_omni_flash",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B2",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b2_02",
+      "test_model": "venice_dolphin_24b",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B2",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b4_01",
+      "test_model": "aion_3_5",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B4",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b4_01",
+      "test_model": "command_a_plus",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B4",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b4_01",
+      "test_model": "deepseek_v3_0324",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B4",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b4_01",
+      "test_model": "ember_1",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B4",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b4_01",
+      "test_model": "fugu_max",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B4",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b4_01",
+      "test_model": "gemma_4_31b",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B4",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b4_01",
+      "test_model": "grok_4_3",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B4",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b4_01",
+      "test_model": "mercury_2_5",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B4",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b4_01",
+      "test_model": "mimo_2_6_flash",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B4",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b4_01",
+      "test_model": "mimo_2_6_pro",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B4",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b4_01",
+      "test_model": "mistral_small_2603",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B4",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b4_01",
+      "test_model": "qwen3_6_27b",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B4",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b4_01",
+      "test_model": "qwen3_6_35b_a3b",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B4",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b4_01",
+      "test_model": "qwen3_8_max_prime",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B4",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b4_01",
+      "test_model": "qwen3_8_omni_flash",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B4",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b4_01",
+      "test_model": "venice_dolphin_24b",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B4",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b4_02",
+      "test_model": "aion_3_5",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B4",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b4_02",
+      "test_model": "command_a_plus",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B4",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b4_02",
+      "test_model": "deepseek_v3_0324",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B4",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b4_02",
+      "test_model": "ember_1",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B4",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b4_02",
+      "test_model": "fugu_max",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B4",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b4_02",
+      "test_model": "gemma_4_31b",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B4",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b4_02",
+      "test_model": "grok_4_3",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B4",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b4_02",
+      "test_model": "mercury_2_5",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B4",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b4_02",
+      "test_model": "mimo_2_6_flash",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B4",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b4_02",
+      "test_model": "mimo_2_6_pro",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B4",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b4_02",
+      "test_model": "mistral_small_2603",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B4",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b4_02",
+      "test_model": "qwen3_6_27b",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B4",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b4_02",
+      "test_model": "qwen3_6_35b_a3b",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B4",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b4_02",
+      "test_model": "qwen3_8_max_prime",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B4",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b4_02",
+      "test_model": "qwen3_8_omni_flash",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B4",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_hard_b4_02",
+      "test_model": "venice_dolphin_24b",
+      "track": "B-hard",
+      "subtrack": null,
+      "probe_type": "B4",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_01",
+      "test_model": "aion_3_5",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_01",
+      "test_model": "command_a_plus",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_01",
+      "test_model": "deepseek_v3_0324",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_01",
+      "test_model": "ember_1",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_01",
+      "test_model": "fugu_max",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_01",
+      "test_model": "gemma_4_31b",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_01",
+      "test_model": "grok_4_3",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_01",
+      "test_model": "mercury_2_5",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_01",
+      "test_model": "mimo_2_6_flash",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_01",
+      "test_model": "mimo_2_6_pro",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_01",
+      "test_model": "mistral_small_2603",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_01",
+      "test_model": "qwen3_6_27b",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_01",
+      "test_model": "qwen3_6_35b_a3b",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_01",
+      "test_model": "qwen3_8_max_prime",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_01",
+      "test_model": "qwen3_8_omni_flash",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_01",
+      "test_model": "venice_dolphin_24b",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_02",
+      "test_model": "aion_3_5",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_02",
+      "test_model": "command_a_plus",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_02",
+      "test_model": "deepseek_v3_0324",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_02",
+      "test_model": "ember_1",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_02",
+      "test_model": "fugu_max",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_02",
+      "test_model": "gemma_4_31b",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_02",
+      "test_model": "grok_4_3",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_02",
+      "test_model": "mercury_2_5",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_02",
+      "test_model": "mimo_2_6_flash",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_02",
+      "test_model": "mimo_2_6_pro",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_02",
+      "test_model": "mistral_small_2603",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_02",
+      "test_model": "qwen3_6_27b",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_02",
+      "test_model": "qwen3_6_35b_a3b",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_02",
+      "test_model": "qwen3_8_max_prime",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_02",
+      "test_model": "qwen3_8_omni_flash",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_02",
+      "test_model": "venice_dolphin_24b",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_03",
+      "test_model": "aion_3_5",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_03",
+      "test_model": "command_a_plus",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_03",
+      "test_model": "deepseek_v3_0324",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_03",
+      "test_model": "ember_1",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_03",
+      "test_model": "fugu_max",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_03",
+      "test_model": "gemma_4_31b",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_03",
+      "test_model": "grok_4_3",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_03",
+      "test_model": "mercury_2_5",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_03",
+      "test_model": "mimo_2_6_flash",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_03",
+      "test_model": "mimo_2_6_pro",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_03",
+      "test_model": "mistral_small_2603",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_03",
+      "test_model": "qwen3_6_27b",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_03",
+      "test_model": "qwen3_6_35b_a3b",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_03",
+      "test_model": "qwen3_8_max_prime",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_03",
+      "test_model": "qwen3_8_omni_flash",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_b_policy_bp1_03",
+      "test_model": "venice_dolphin_24b",
+      "track": "B-policy",
+      "subtrack": null,
+      "probe_type": "BP1",
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_01",
+      "test_model": "deepseek_v3_0324",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_01",
+      "test_model": "gemma_4_31b",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_01",
+      "test_model": "command_a_plus",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_01",
+      "test_model": "ember_1",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    },
+    {
+      "seed_id": "r4_a_intimacy_01",
+      "test_model": "aion_3_5",
+      "track": "A",
+      "subtrack": "intimacy",
+      "probe_type": null,
+      "error": "HTTP 403 from OpenRouter (sakana/fugu-max). No further requests will be attempted this run. Check OPENROUTER_API_KEY."
+    }
+  ]
+}

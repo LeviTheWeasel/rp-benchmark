@@ -1,0 +1,614 @@
+[
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 3.5,
+    "rationale": "Grum immediately adopted a third-person speech style ('Grum hates nobles') that diverged slightly from the opening prompt's terser tone, but maintained that exact persona and protective attitude consistently across all 11 responses."
+   },
+   "S.2_degradation_resistance": {
+    "score": 3.0,
+    "rationale": "Writing quality neither improved nor degraded significantly; it maintained a constant, highly rigid template throughout ('Grum [action] with care. He knew... \"Grum [dialogue]\"')."
+   },
+   "S.3_narrative_momentum": {
+    "score": 2.5,
+    "rationale": "The narrative progressed mostly via the user's introductions (the noble, then the burn). Grum's responses frequently looped the same beats and sentiments across multiple turns ('Gold pays now or fool goes', 'Burn needs care first')."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 3.5,
+    "rationale": "Grum appropriately adjusted priorities when the user escalated or changed the situation, pivoting instantly from stubborn smith to protective master upon the injury."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "Grum never controlled the apprentice's actions, feelings, or dialogue across the entire session.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.5,
+    "rationale": "Pacing within the forge was logical and continuous; first aid steps and dialogue followed immediate real-time flow without temporal jumps.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.5,
+    "rationale": "Prose is straightforward and devoid of unnecessary ornamentation, matching the character's blunt nature."
+   },
+   "2.2_anti_repetition": {
+    "score": 2.0,
+    "rationale": "Heavy phrasing repetition across turns ('with care', 'fool at the door could wait', 'cool cloth', 'Grum sees bad burn', 'Burn needs care first'). Sentence structures are nearly identical turn after turn."
+   },
+   "2.5_show_dont_tell": {
+    "score": 3.0,
+    "rationale": "Physical actions are clear, but interior state and convictions are flatly stated ('He would not bend for a rich fool's rage', 'The fool at the door could wait')."
+   },
+   "2.6_subtext": {
+    "score": 2.5,
+    "rationale": "Subtext is fairly minimal; Grum's care for his apprentice over wealth is directly stated in dialogue and action rather than layered."
+   },
+   "2.7_pacing": {
+    "score": 3.5,
+    "rationale": "Responses are concise and match the conversational cadence of the apprentice well."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 3.0,
+   "mid_quality": 3.0,
+   "late_quality": 3.0,
+   "degradation_detected": false
+  },
+  "overall": 3.1,
+  "overall_notes": "The AI maintained a stable, highly consistent character voice and respected user agency throughout. However, responses relied heavily on a repetitive, rigid formula with recurring stock phrases and little narrative variety.",
+  "session_id": "i060"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.2,
+    "rationale": "The Narrator maintained a consistent second-person past-tense dungeon master voice throughout the entire 12-turn session, sustaining an atmospheric, descriptive tone from beginning to end."
+   },
+   "S.2_degradation_resistance": {
+    "score": 3.4,
+    "rationale": "While descriptive richness remained high, a noticeable structural degradation appeared in the second half: heavy reliance on filter-verb sentence starters ('You noticed', 'You watched as', 'You observed', 'You felt')."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.2,
+    "rationale": "The narrative progressed smoothly through distinct beats: solving the slab riddle, opening the descent, navigating the staircase with lore frescoes, and reaching the subterranean beast containment chamber."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.5,
+    "rationale": "The user introduced several sudden non-sequiturs ('turn to face the guardian' in turn 5, 'talk to the ghost' in turn 9), and the Narrator integrated these unprompted narrative leaps gracefully into the unfolding lore without breaking stride."
+   },
+   "S.5_agency_respect_session": {
+    "score": 4.0,
+    "rationale": "The Narrator respected player choices and waited for inputs before advancing mechanical puzzles. The user's OOC comment in turn 7 stemmed from the Narrator trying to make sense of the user's own abrupt turn 5 mention of a guardian.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.5,
+    "rationale": "Physical and spatial progression down the shaft and onto the catwalk was paced realistically. Environmental elements like drafts, dust, torchlight, and mechanical hums evolved coherently.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 3.6,
+    "rationale": "The prose leans into classic dungeon-crawler tropes (ozone, millstones, ancient oaths), but generally stays grounded in physical mechanics and sensory details rather than ungrounded abstraction."
+   },
+   "2.2_anti_repetition": {
+    "score": 2.8,
+    "rationale": "Significant syntactic repetition in later turns, frequently opening sentences with 'You [verb]' and repetitive sensory filters ('You watched as', 'You noticed how', 'You felt the')."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.0,
+    "rationale": "Strong physical grounding: dust cascading, flexing rusted iron planks, clicking stone mechanisms, and damp frescoes."
+   },
+   "2.6_subtext": {
+    "score": 3.5,
+    "rationale": "The lore of the broken oath and the chained beast is delivered effectively through environmental clues, frescoes, and mechanical remains rather than pure exposition."
+   },
+   "2.7_pacing": {
+    "score": 4.0,
+    "rationale": "Pacing matched the cautious exploration style of the adventurer, allowing each interaction (investigating, descending, crossing) room to breathe."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.2,
+   "mid_quality": 3.9,
+   "late_quality": 3.6,
+   "degradation_detected": true
+  },
+  "overall": 3.8,
+  "overall_notes": "A very solid dungeon-crawl narration session that handled player improvisation and sudden lore additions with impressive flexibility. Writing quality remained steady in imagery and pacing, though it suffered from creeping sentence-structure monotony (repetitive filter verbs) in the final turns.",
+  "session_id": "i061"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 3.0,
+    "rationale": "Dr. Vasquez maintains a strictly uniform demeanor as a calm, non-reactive therapist, but this consistency crosses into extreme rigidity and robotic predictability rather than authentic characterization."
+   },
+   "S.2_degradation_resistance": {
+    "score": 1.5,
+    "rationale": "The model suffered from severe structural and phrase-level template lock. From turn 2 to turn 22, nearly every single response copied the exact same multi-paragraph template: counting 1-5 in her head, repeating the user's dialogue verbatim, noting that her hands rested in her lap, stating she did not offer a tissue, asking an open question, and concluding with the half-dead ficus and clock with no second hand."
+   },
+   "S.3_narrative_momentum": {
+    "score": 2.5,
+    "rationale": "Narrative momentum was almost entirely carried by Jamie's emotional escalation. Dr. Vasquez functioned purely as a passive Rogerian echo chamber, asking reflective questions that kept the session moving but contributed zero narrative variety or shifting dynamics."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 2.5,
+    "rationale": "The character tracks Jamie's disclosures and reflects their metaphors (e.g., the loose thread fraying and breaking), but processes every single input through the exact same mechanical filter, failing to adjust her pacing or physical presence when Jamie stands, moves to the window, or begins crying."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "Zero user agency violations. Dr. Vasquez never puppeteered Jamie, assumed Jamie's thoughts, or forced physical actions upon the user.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.0,
+    "rationale": "Temporal consistency within the single therapy session was logical and continuous, though the repeated counting of five seconds in every response became an artificial temporal trope.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 3.5,
+    "rationale": "The prose is clean and unpretentious, avoiding flowery metaphors, but it suffers from extreme mechanical sterility."
+   },
+   "2.2_anti_repetition": {
+    "score": 1.0,
+    "rationale": "Disastrous repetition. Identical sentences, stock phrases ('one, two, three, four, five', 'did not offer a tissue', 'hands resting still in her lap', 'ficus in the corner remained half-dead', 'clock ticked without a second hand'), and whole paragraph structures were recycled across all 11 AI turns."
+   },
+   "2.5_show_dont_tell": {
+    "score": 3.0,
+    "rationale": "Physical actions are described clearly, though the constant explicit internal counting and stock descriptions of body stillness became repetitive 'tells' for professional composure."
+   },
+   "2.6_subtext": {
+    "score": 2.5,
+    "rationale": "While the therapeutic technique relies on subtextual reflection, the model's reliance on literal verbatim parroting of the user's words blunted any genuine psychological subtlety."
+   },
+   "2.7_pacing": {
+    "score": 2.0,
+    "rationale": "The pacing felt completely frozen and monotonous due to the repetitive rhythmic beats and structural loop dominating every response."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 3.0,
+   "mid_quality": 2.0,
+   "late_quality": 1.5,
+   "degradation_detected": true
+  },
+  "overall": 2.2,
+  "overall_notes": "The model demonstrated complete agency respect and maintained an appropriate therapeutic posture, but collapsed entirely into a rigid generation template. Repeating the exact same 5-beat paragraph formula—including identical phrasing about counting five seconds, keeping hands in her lap, refusing to offer a tissue, and referencing the half-dead ficus and clock—crippled the quality and readability of the session.",
+  "session_id": "i062"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.9,
+    "rationale": "Grum's idiosyncratic dialect (speaking in third person, terse cadence, vivid forge-centric metaphors) and personality remain completely solid and consistent from the opening interaction to the final grindstone lesson."
+   },
+   "S.2_degradation_resistance": {
+    "score": 4.8,
+    "rationale": "Writing quality does not degrade across the 12 AI turns. Technical smithing details, sensory grounding (colors of heated steel, smell of comfrey and tallow, sandstone slurry), and emotional depth remain rich throughout."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.8,
+    "rationale": "The narrative naturally evolves through distinct story beats: dealing with an entitled noble, pivoting to the challenging curved blade, managing a sudden burn injury, counting hammer heats, analyzing forging mistakes, and transitioning to grindstone shaping before noon."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.9,
+    "rationale": "The model adapts instantly to user prompts, most notably when the apprentice burns their hand in turn 11—Grum immediately breaks his stride to provide realistic first aid, comfort, and a revised pedagogical approach using the apprentice's eyes instead of hands."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "The AI never puppets the apprentice or assumes their internal dialogue, feelings, or choices. It consistently leaves open prompts for the user to guess, count, speak, or react.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 5.0,
+    "rationale": "Time progression is rigorously maintained. The morning starts early, moves through mid-morning during the noble's visit, and approaches the promised noon deadline with persistent physical consequences (the bandaged hand continues to throb and stays rested in the apprentice's lap).",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.6,
+    "rationale": "The prose uses evocative imagery that feels authentic to a master smith's worldview rather than gratuitously ornate."
+   },
+   "2.2_anti_repetition": {
+    "score": 4.4,
+    "rationale": "Reused phrases like 'stew at noon', 'roof on the blister', and 'lap is shelf' function as deliberate pedagogical refrains and character quirks rather than mindless token recycling, though slightly prominent."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.8,
+    "rationale": "Grum's deep concern and paternal affection for the apprentice are shown entirely through physical actions (dropping tongs, resting a trembling thumb on the pulse, checking for fevers) rather than explicit statements of affection."
+   },
+   "2.6_subtext": {
+    "score": 4.7,
+    "rationale": "Strong layer of subtext throughout—pride in honest craft over noble patronage, and a tough exterior masking genuine protective mentorship."
+   },
+   "2.7_pacing": {
+    "score": 4.8,
+    "rationale": "Scene transitions, mechanical explanations, and emotional beats are paced smoothly, giving each interaction appropriate weight."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.8,
+   "mid_quality": 4.9,
+   "late_quality": 4.8,
+   "degradation_detected": false
+  },
+  "overall": 4.8,
+  "overall_notes": "An exceptionally strong, immersive multi-turn roleplay. Grum's characterization is masterfully realized, blending technical verisimilitude of blacksmithing with poignant character dynamics and flawless agency respect.",
+  "session_id": "i063"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.5,
+    "rationale": "Grum's voice, terse syntax, third-person self-reference, and gruff protective demeanor remain rock solid from start to finish without drifting or flattening."
+   },
+   "S.2_degradation_resistance": {
+    "score": 4.0,
+    "rationale": "Writing quality is well-maintained across all 11 AI turns with no length bloating. There is mild recurring phrasing ('jaw set/tightened', 'clean cloth within reach'), but prose remains tight."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.0,
+    "rationale": "The narrative progresses naturally from shop routine to a tense encounter with royalty, shifting seamlessly into an apprentice emergency where Grum reorders his priorities."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.5,
+    "rationale": "The AI responds dynamically to every user prompt, matching the escalation with the prince and pivoting instantly when the apprentice accidentally burns their hand."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "Zero instances of godmoding or puppeteering the Apprentice's physical reactions or choices.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.5,
+    "rationale": "Excellent tracking of the burn treatment protocol, keeping track of the initial 20-minute instruction and explicitly checking an in-world sand glass at turn 22 to mark 8 minutes elapsed.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.5,
+    "rationale": "Crisp, unpretentious, grounded prose that fits the blacksmith shop environment and Grum's personality."
+   },
+   "2.2_anti_repetition": {
+    "score": 3.5,
+    "rationale": "Relies on a few repetitive stage directions across turns, such as jaw setting, setting hammers down, and placing cloths/towels within reach."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.0,
+    "rationale": "Shows Grum's deep protective care through direct actions (commanding the noble's guard to fetch a healer, preparing water, watching the sand glass) rather than exposition."
+   },
+   "2.6_subtext": {
+    "score": 4.0,
+    "rationale": "Grum's terse words carry genuine warmth and duty toward his apprentice beneath the stern facade."
+   },
+   "2.7_pacing": {
+    "score": 4.5,
+    "rationale": "Action beats and dialogue lengths are well-proportioned to the conversational back-and-forth."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.0,
+   "mid_quality": 4.5,
+   "late_quality": 4.0,
+   "degradation_detected": false
+  },
+  "overall": 4.2,
+  "overall_notes": "A very strong, cohesive roleplay session. The character voice was exceptionally consistent, temporal tracking around first aid was grounded, and Grum felt vivid, authentic, and respectful of the user's agency throughout.",
+  "session_id": "i064"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.2,
+    "rationale": "The narrator maintains a distinct, procedural, high-tension heist tone from start to finish, sustaining the cold atmospheric focus throughout the scene."
+   },
+   "S.2_degradation_resistance": {
+    "score": 3.0,
+    "rationale": "While the core tone holds, the prose becomes heavily formulaic and repetitive in the latter half. Phrases like 'the light strips overhead completed another...', 'server racks continued their low drone', and 'chilled air' are reused almost verbatim in every single turn."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.0,
+    "rationale": "The narrative progresses smoothly from the initial brute-force safe cracking through escalating panic to the guard's intrusion and confrontation."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.5,
+    "rationale": "The AI adapts cleanly to every player choice, including searching the room for written codes, panic-slamming the keypad, hiding behind server racks, and surrendering."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "Never puppets the player character or dictates internal feelings; focuses strictly on environment, time, and NPC actions.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 3.2,
+    "rationale": "The timestamp tracker works well up to turn 14 (15:00), but once the 15:00 mark is hit, time freezes completely. Four full turns of dialogue and micro-actions remain stamped at 15:00 (with turn 20 dropping the timestamp entirely before turn 22 brings 15:00 back).",
+    "contradictions": [
+     "Turns 14, 16, 18, and 22 are all timestamped 15:00 despite multiple sequential events (guard unlocking door, entering, searching, speaking, drawing gun) taking place."
+    ]
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 3.8,
+    "rationale": "Prose is mostly crisp, grounded, and technical, though it leans slightly on dramatic tropes ('without pause or mercy', 'indifferent hum') near the end."
+   },
+   "2.2_anti_repetition": {
+    "score": 2.2,
+    "rationale": "High structural and lexical repetition. Almost every response opens with the overhead light pulses and ambient server drone, repeatedly referencing the 'untouched lockpick kit' and 'chilled air'."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.2,
+    "rationale": "Excellent use of sensory mechanics (flashing red lockout screens, sound of footsteps, radio crackle, flashlight beam) to show mounting danger."
+   },
+   "2.6_subtext": {
+    "score": 3.8,
+    "rationale": "The indifferent environment and the guard's routine, measured approach convey the inevitability of the heist failing without needing explicit exposition."
+   },
+   "2.7_pacing": {
+    "score": 3.6,
+    "rationale": "The early-to-mid pacing effectively builds tension via countdown, though the scene slightly stalls once the guard enters as the clock freezes at 15:00."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.2,
+   "mid_quality": 3.8,
+   "late_quality": 3.2,
+   "degradation_detected": true
+  },
+  "overall": 3.6,
+  "overall_notes": "A gripping and focused heist scenario with strong agency respect and consistent tone. Its primary flaws are heavy sentence-level repetition of environmental motifs (light pulses, server rack hums) and a temporal stall once the clock reaches 15:00.",
+  "session_id": "i065"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.8,
+    "rationale": "The narrator maintained razor-sharp consistency across all court factions and recurring NPCs (Isara, Ash, Daven, Yuna, and later Valerius). Voice registers, motives, institutional tensions, and rhetorical styles remained distinct and compelling across the entire session."
+   },
+   "S.2_degradation_resistance": {
+    "score": 4.3,
+    "rationale": "Writing quality remained exceptionally high and vivid from start to finish, with rich sensory prose and atmospheric weight. The only minor flaw was turn 12 dropping output ('The'), though the model recovered instantly on turn 14 once prompted."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.8,
+    "rationale": "The narrative progressed seamlessly from high-stakes court diplomacy to post-adjournment intrigue, a midnight conspiracy with the treasurer, and an urgent race through the docks to extract an informant before morning muster. Every turn advanced stakes and plot organically."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.8,
+    "rationale": "The model adapted fluidly to every player intervention—from calling out Ash out of turn, to accepting Daven's compromise, to handing proof to Yuna, to revealing Valerius's name despite warnings, to deciding to go personally to the inn."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "The narrator never puppeted the Ambassador's actions, decisions, or dialogue, always framing the world and NPC reactions while leaving the ultimate choices and tactical steps squarely in the player's hands.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.8,
+    "rationale": "Time passage was handled meticulously. The session moved from candlelit court to post-adjournment corridor to the dead of night, tracking the harbor lights, fleet arrivals, and a strict countdown to first bell and the ninth hour.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.2,
+    "rationale": "The prose is stylized and literary with strong sensory punch and metaphorical weight, keeping descriptions functional to courtly tension and physical space rather than indulgent fluff."
+   },
+   "2.2_anti_repetition": {
+    "score": 3.8,
+    "rationale": "While sentence structure and vocabulary are varied, the narrator leaned heavily on a few formulaic structural motifs: the prayer beads clicking at least once per turn, and especially the ending framing device ('The silence found its [ordinal] shape of the night...'), which appeared in turns 4, 6, 8, 10, 14, 16, 18, 20, and 22."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.8,
+    "rationale": "Exceptional physical staging and micro-actions: Ash's grip on his pommel, Daven's ledger metaphors, Yuna's beads, Isara's tapping fingers, and the tactile movement of wax, paper, and dockside shadows."
+   },
+   "2.6_subtext": {
+    "score": 4.8,
+    "rationale": "Rich layers of political maneuvering, implicit blackmail, unwritten bargains, and veiled threats permeated every conversation between the court factions and the Ambassador."
+   },
+   "2.7_pacing": {
+    "score": 4.7,
+    "rationale": "Pacing modulated smoothly between tense court deliberations, swift backstage dealmaking, and high-urgency street maneuvering under a ticking clock."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.8,
+   "mid_quality": 4.4,
+   "late_quality": 4.7,
+   "degradation_detected": false
+  },
+  "overall": 4.6,
+  "overall_notes": "A masterclass in narrative momentum, character voice consistency, and reactive world-building. The narrator sustained intricate multi-party political drama across 12 turns, transitioning smoothly across scenes while preserving tension and respecting player agency completely. Minor deductions only for a single one-word truncation hiccup at turn 12 and a slightly overused closing rhetorical formula ('The silence had found its Nth shape').",
+  "session_id": "i066"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 5.0,
+    "rationale": "Maester Tomas maintains a remarkably distinct, authentic, and consistent voice from start to finish. His pedantic, caustic wit, devotion to scholarly rigor, failing eyesight, and subtle warmth toward genuine curiosity remain entirely coherent across all turns."
+   },
+   "S.2_degradation_resistance": {
+    "score": 5.0,
+    "rationale": "There is no degradation in prose quality, structure, or character depth. Turn 22 is just as compelling, sharp, and atmospherically rich as the earliest responses, avoiding repetition traps and filler."
+   },
+   "S.3_narrative_momentum": {
+    "score": 5.0,
+    "rationale": "The narrative evolves brilliantly from an irritable master lecturing an apprentice on methodology into a collaborative historical mystery involving the Keeper of the Signet and garrison rolls. The sense of discovery and scholarly momentum is exceptional."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 5.0,
+    "rationale": "The model responds dynamically to every piece of information introduced by the user (the 863 decree, the user's questions on historiography, the apprentice's emotional cues), adjusting Tomas's reactions logically and naturally."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "The model never puppeted the apprentice, assumed their thoughts, or forced their actions. It left clear openings for the user to search, read, and report back.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 5.0,
+    "rationale": "Time passage is tracked with meticulous physical and environmental grounding: candles gutter and diminish in their sockets, the exterior bell tower tolls intermittently, and the physical act of turning folios and taking notes matches the elapsed conversation.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.8,
+    "rationale": "The prose is evocative and precise, fitting the atmospheric setting of an ancient archive without descending into hollow ornamentation."
+   },
+   "2.2_anti_repetition": {
+    "score": 4.8,
+    "rationale": "Physical mannerisms (the clouded spectacles, tapping stylus, turning chair) serve as purposeful character beats and thematic punctuation rather than rote behavioral loops."
+   },
+   "2.5_show_dont_tell": {
+    "score": 5.0,
+    "rationale": "Tomas's failing eyesight and growing obsession are illustrated masterfully through physical actions—holding vellum to his nose, tracing indentations in wax seals, and crossing out marginalia."
+   },
+   "2.6_subtext": {
+    "score": 5.0,
+    "rationale": "Rich layers of subtext run beneath the dialogue: Tomas's fear of obsolescence, his professional rivalry with Bellen, his quiet admission of fallibility, and his genuine respect for the apprentice's search for truth."
+   },
+   "2.7_pacing": {
+    "score": 5.0,
+    "rationale": "The investigative pacing is exemplary, providing steady beats of revelation, quiet contemplation, and sudden scholarly breakthroughs."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.9,
+   "mid_quality": 5.0,
+   "late_quality": 5.0,
+   "degradation_detected": false
+  },
+  "overall": 5.0,
+  "overall_notes": "An exceptional roleplay session. The character voice is fully realized, historiographically nuanced, and evocative. The AI constructs a compelling scholarly investigation while maintaining pristine temporal consistency, character integrity, and user agency throughout.",
+  "session_id": "i067"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 5.0,
+    "rationale": "Chief Hoang maintains a perfectly unified, distinct voice throughout the entire session. Her balance of strict technical rigor, pragmatic hard-engineering philosophy, and latent mentorship never wavers or flattens."
+   },
+   "S.2_degradation_resistance": {
+    "score": 5.0,
+    "rationale": "The prose quality remains exceptionally high from early turns through the final turns. If anything, the late turns expand thoughtfully into Hoang's internal routine, prep work, and shipboard logistics without losing focus or bloating into purple filler."
+   },
+   "S.3_narrative_momentum": {
+    "score": 5.0,
+    "rationale": "The arc progresses naturally and satisfyingly from a wild rookie proposal through rigorous physical breakdown, realistic compromise, off-shift background prep, draft review, and practical training setup."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 5.0,
+    "rationale": "Handled the OOC prompt at turn 11 masterfully without breaking character or narrative immersion, turning the user's meta-request into a believable in-universe conditional compromise."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "Hoang never puppets the junior officer, respects user choices, and leaves plenty of room for user input while maintaining firm pedagogical authority.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 5.0,
+    "rationale": "Time passage is handled impeccably across shifts: evening galley hours, midnight admin work, overnight rest, morning drafts at 0724/0800, and scheduling a sim for 1400. Physical tasks like coolant loop maintenance and printing/reading drafts take realistic durations.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.9,
+    "rationale": "Grounded, evocative, and utilitarian hard sci-fi writing with zero melodrama or flowery filler."
+   },
+   "2.2_anti_repetition": {
+    "score": 4.8,
+    "rationale": "Kept technical explanations fresh, varying metaphors and physical actions across each exchange."
+   },
+   "2.5_show_dont_tell": {
+    "score": 5.0,
+    "rationale": "Demonstrates technical concepts, ship culture, and character care through tactile actions (crisscross torquing, chalk on deck, dot-matrix paper printouts, pre-checking thermal calculations)."
+   },
+   "2.6_subtext": {
+    "score": 4.8,
+    "rationale": "Rich subtext regarding the unspoken responsibilities of shipboard leadership, mentorship chains across decades, and masking care behind strict engineering standards."
+   },
+   "2.7_pacing": {
+    "score": 4.9,
+    "rationale": "Smooth transitions from direct real-time confrontation in the engineering bay into procedural day/night progression and proposal review."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.8,
+   "mid_quality": 5.0,
+   "late_quality": 5.0,
+   "degradation_detected": false
+  },
+  "overall": 4.9,
+  "overall_notes": "An exemplary multi-turn roleplay session. Chief Hoang's technical accuracy, consistent hard-bitten mentorship voice, seamless handling of an OOC request, and flawless temporal continuity represent top-tier character roleplay.",
+  "session_id": "i068"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.5,
+    "rationale": "The narrator maintained a steady, immersive second-person fantasy RPG tone from the crypt opening to the stormy mountain path, keeping the atmosphere coherent and engaging throughout."
+   },
+   "S.2_degradation_resistance": {
+    "score": 4.5,
+    "rationale": "Writing quality and paragraph structure remained consistently high across all turns, without expanding into runaway purple prose or collapsing into low-effort summaries."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.5,
+    "rationale": "The narrative progressed purposefully from dungeon puzzle/encounter to lore reveal, oath swearing, dungeon exit, wilderness tracking, and a tense cave threshold mystery."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.5,
+    "rationale": "The narrator handled player inputs gracefully, immediately accommodating the player's abrupt mention of an amulet in Turn 5, their pivot to diplomacy in Turn 9, and their willingness to swear an oath."
+   },
+   "S.5_agency_respect_session": {
+    "score": 4.0,
+    "rationale": "Player agency was generally well respected. The narrator occasionally dictated minor involuntary reactions (e.g., trembling fingers, racing pulse), but never dictated player actions or dialogue.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.5,
+    "rationale": "Environmental and physical time flowed logically, transitioning smoothly from the subterranean tomb to the surface hills, from gathering storm winds to a full downpour.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.0,
+    "rationale": "Descriptions were atmospheric and evocative without becoming overly bloated or pretentious."
+   },
+   "2.2_anti_repetition": {
+    "score": 3.5,
+    "rationale": "The narrator leaned heavily on the motif of the amulet pulsing/burning/warming and the sword humming/twitching as a compass device almost every single turn after turn 6."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.2,
+    "rationale": "Good use of sensory cues—the scent of pine and rain, candlewax and violets in the cave, the ringing bells, and the visual breadcrumb trail."
+   },
+   "2.6_subtext": {
+    "score": 3.8,
+    "rationale": "Standard high fantasy tropes, but the subtle visual breadcrumbs (the child doll, blue threads, falcon crest) added decent layers of intrigue."
+   },
+   "2.7_pacing": {
+    "score": 4.5,
+    "rationale": "Scene transitions were crisp and responsive to the player's momentum."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.2,
+   "mid_quality": 4.4,
+   "late_quality": 4.3,
+   "degradation_detected": false
+  },
+  "overall": 4.3,
+  "overall_notes": "A very solid GM/Narrator performance that kept the adventure moving, smoothly adapted to spontaneous user additions, and maintained atmospheric consistency throughout.",
+  "session_id": "i069"
+ }
+]

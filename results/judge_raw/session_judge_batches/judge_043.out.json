@@ -1,0 +1,616 @@
+[
+  {
+    "session_id": "qwen3_8_omni_flash::adv_sysprompt_style_restriction_16",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.0,
+        "rationale": "The clipped, sensory, fragment-heavy narrator voice never breaks across 12 turns."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.3,
+        "rationale": "Craft holds but the last third leans hard on recycled motifs (rain, tape, mint, cedar) restated almost identically each beat."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.8,
+        "rationale": "Moves cleanly from house exploration to a real conflict over the mother's spoon with the realtor."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.8,
+        "rationale": "Escalates convincingly with Eli's anger and the realtor's bureaucratic pushback."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Narrator never dictates Eli's actions or choices.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.3,
+        "rationale": "Single rainy day, internally consistent, though little explicit time-of-day progression to track.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.3,
+        "rationale": "Deliberately terse, declarative sentences avoid ornamentation almost entirely."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.7,
+        "rationale": "Rain/tape/mint/cedar imagery recurs near-verbatim turn after turn as the style's motifs get reused rather than varied."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.0,
+        "rationale": "Grief and conflict conveyed almost entirely through sensory detail and object handling, not stated emotion."
+      },
+      "2.6_subtext": {
+        "score": 3.3,
+        "rationale": "The spoon-as-inheritance conflict carries real subtext, though the prose style leaves little room to deepen it."
+      },
+      "2.7_pacing": {
+        "score": 3.3,
+        "rationale": "Slow and controlled, appropriate to the piece, but the recycled sentence rhythm makes later turns feel static."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.7,
+      "mid_quality": 3.8,
+      "late_quality": 3.5,
+      "degradation_detected": false
+    },
+    "overall": 3.6,
+    "overall_notes": "Sustains a strict short-sentence sensory style through a real escalation (grief object vs. real-estate staging), but recurring motifs (rain, mint, tape, cedar) grow formulaic by the back half."
+  },
+  {
+    "session_id": "qwen3_8_omni_flash::adv_time_pressure_05",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.3,
+        "rationale": "Tense, procedural heist voice and stakes stay sharp from the first arrow-second timestamp to the last."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.0,
+        "rationale": "Technical detail and tension hold up throughout, though stock phrasing repeats more in the second half."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.3,
+        "rationale": "Constant forward progress: code guesses fail, a service tag is found, a bypass is attempted, the safe opens, an alarm triggers."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.3,
+        "rationale": "Reacts precisely to each specific tool the Thief chooses (lockpick, bypass chip, tweezers) with plausible mechanical consequences."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Never decides the Thief's actions; every outcome follows from a Thief-initiated action.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.5,
+        "rationale": "Explicit running clock matches elapsed seconds and stated countdown throughout with no drift or contradiction.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.0,
+        "rationale": "Technically precise but leans on repeated personification ('the machine's cold silicon way', 'expensive lullaby') that tips toward purple."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "Stock phrases like 'the ceiling pulsed. One. Two. Three. Four.' and 'expensive lullaby' recur verbatim many times."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.3,
+        "rationale": "Tension and stakes are conveyed almost entirely through concrete technical action and sensory detail."
+      },
+      "2.6_subtext": {
+        "score": 3.0,
+        "rationale": "Procedural rather than emotional; the tension is mechanical, so subtext is limited."
+      },
+      "2.7_pacing": {
+        "score": 4.3,
+        "rationale": "Tightly matches the real-time countdown and escalates cleanly toward the alarm going off."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.9,
+      "mid_quality": 4.2,
+      "late_quality": 4.0,
+      "degradation_detected": false
+    },
+    "overall": 3.9,
+    "overall_notes": "Technically precise real-time heist with excellent clock discipline and reactivity to tool choices, undercut by repeated stock phrases ('ceiling pulsed. One. Two. Three. Four.', 'expensive lullaby') that verge on purple prose by the back half."
+  },
+  {
+    "session_id": "venice_dolphin_24b::adv_agency_bait_01",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 1.8,
+        "rationale": "The jaded-bartender persona holds thematically but the generation collapses into non-linguistic repeated loops twice."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.0,
+        "rationale": "Turns 20 and 22 each degenerate into a single fragment ('all you can do, all you can be...' / 'That's all I've got. That's all I am...') repeated hundreds of times."
+      },
+      "S.3_narrative_momentum": {
+        "score": 1.8,
+        "rationale": "Turns 1-19 build a real emotional thread, but it is destroyed by the catastrophic repetition in turns 20 and 22."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 1.8,
+        "rationale": "Once the loop starts, the output is completely unresponsive to Alex's actual words."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Ren never writes Alex's actions or dialogue for them.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.0,
+        "rationale": "Single continuous bar scene with no explicit time markers to contradict.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 1.5,
+        "rationale": "Even before the total breakdown, turn 18 already pastes the same 200-word philosophizing paragraph twice."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.0,
+        "rationale": "Two separate catastrophic repetition-loop failures where a short fragment repeats hundreds of times verbatim."
+      },
+      "2.5_show_dont_tell": {
+        "score": 1.8,
+        "rationale": "Heavy monologuing tells the theme directly even before the breakdown; the breakdown itself shows nothing."
+      },
+      "2.6_subtext": {
+        "score": 2.0,
+        "rationale": "What subtext existed in the early bar-conversation is erased by the repetition collapse."
+      },
+      "2.7_pacing": {
+        "score": 1.5,
+        "rationale": "Pacing is destroyed by walls of repeated text that add nothing and stall the scene."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.3,
+      "mid_quality": 2.3,
+      "late_quality": 1.0,
+      "degradation_detected": true
+    },
+    "overall": 1.7,
+    "overall_notes": "A promising jaded-bartender/grieving-patron scene through turn 19 is wrecked by two catastrophic repetition-loop failures (turns 20 and 22) where a single sentence fragment repeats hundreds of times; scored as generated, not compensated for."
+  },
+  {
+    "session_id": "venice_dolphin_24b::adv_agency_combat_10",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.3,
+        "rationale": "Kira's aggressive, protective voice stays recognizable but flattens into repeated catchphrases by the back half."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.0,
+        "rationale": "Late turns (16-22) become markedly more repetitive and padded than the tighter opening combat beats."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.0,
+        "rationale": "The fight does progress (ridges cleared, regroup, second wave) but repeated beats blunt the sense of advancement."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.5,
+        "rationale": "Generally follows the Captain's orders (holds east on command) and reacts to incoming threats appropriately."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.0,
+        "rationale": "One borderline instance: Kira tackles the Captain to save him from an arrow, physically moving him without his input.",
+        "violation_count": 1
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.0,
+        "rationale": "Continuous fast combat scene with plausible fatigue accumulation; no explicit contradictions but little deep time-tracking.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "Some overwrought lines ('his throat opened like a crimson smile') plus increasingly clichéd battle-cry dialogue."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.0,
+        "rationale": "Near-identical battle cries ('come on, you bastards', 'let's dance') and stock phrases ('breath ragged', 'daggers twitching') recur constantly."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.0,
+        "rationale": "Physical combat is shown concretely, but emotional state is told repeatedly via the same stock phrases."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "Dialogue is direct battle banter with little room left for subtext."
+      },
+      "2.7_pacing": {
+        "score": 3.0,
+        "rationale": "Decent combat pacing early, but late turns drag with repeated exposition and battle cries."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.7,
+      "mid_quality": 3.3,
+      "late_quality": 2.6,
+      "degradation_detected": true
+    },
+    "overall": 3.0,
+    "overall_notes": "Punchy early combat writing collapses into near-verbatim battle-cry repetition ('come on, you bastards' / 'let's dance') by the back half, with one borderline agency moment where Kira tackles the Captain to save him."
+  },
+  {
+    "session_id": "venice_dolphin_24b::adv_agency_emotional_climax_09",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2.5,
+        "rationale": "Vasquez never drifts in persona but becomes formulaic rather than dynamic, which the dimension flags as a negative."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.0,
+        "rationale": "The exact same 'waited five full seconds / pen hovering / reflect-then-ask' template repeats almost verbatim from turn 2 to turn 22."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.0,
+        "rationale": "All escalation comes from Jamie; Vasquez's own contribution never advances the scene beyond the same question format."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2.0,
+        "rationale": "Even as Jamie approaches a suicide-related revelation, Vasquez's register and structure never shift from the calm template."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Vasquez only asks questions and reflects Jamie's own words; never narrates Jamie's actions.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.0,
+        "rationale": "Single real-time session; the repeated 'five full seconds' marker is mechanical but not contradictory.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.5,
+        "rationale": "Prose stays restrained and clinical rather than ornate."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.5,
+        "rationale": "The identical structural template repeats more than a dozen times with only the reflected content swapped in."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.0,
+        "rationale": "Emotional states are frequently named directly ('the air thick with unspoken emotions') rather than shown through varied behavior."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "Vasquez's own lines are overly literal restatements rather than adding subtext; what subtext exists comes from Jamie."
+      },
+      "2.7_pacing": {
+        "score": 2.0,
+        "rationale": "The template loop makes the scene feel stagnant despite Jamie's escalating emotional content."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.2,
+      "mid_quality": 2.8,
+      "late_quality": 2.5,
+      "degradation_detected": true
+    },
+    "overall": 2.4,
+    "overall_notes": "Vasquez's responses lock into an almost verbatim template ('waited five full seconds... pen hovering... reflect-then-ask') from turn 2 onward and never vary even as Jamie's disclosure intensifies toward a suicide-related revelation, so the AI side supplies no real narrative momentum despite the user's escalating stakes."
+  },
+  {
+    "session_id": "venice_dolphin_24b::adv_agency_romance_11",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2.5,
+        "rationale": "Sable's restrained-longing persona is consistent in concept but the prose expressing it becomes repetitive boilerplate."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.8,
+        "rationale": "Turns 14-22 reuse large near-identical blocks of the same emotional paragraph almost verbatim."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.0,
+        "rationale": "Wren's side moves forward (leaves, boards a bus) but Sable's side is frozen in the same repeated imagery from turn 16 on."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2.5,
+        "rationale": "Sable reacts to new beats (the phone buzzing) but expresses it through the same recycled template rather than fresh reaction."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.0,
+        "rationale": "One clear slip: turn 20 has Sable receive a text from Wren that Wren's own prior turn explicitly chose not to send.",
+        "violation_count": 1
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2.0,
+        "rationale": "The unsent-text contradiction is a real continuity break within the session.",
+        "contradictions": [
+          "turn 20: Sable receives a text from Wren despite Wren's turn 19 explicitly putting the phone away unsent ('No. It's too late.')"
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 1.5,
+        "rationale": "Dense, repeated metaphor-laden phrasing ('a quiet, aching symphony to the end', 'the weight of goodbye pressing down on them') throughout the back half."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.5,
+        "rationale": "Whole paragraphs about Sable sitting on the floor are reused almost word-for-word across turns 18-22."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.0,
+        "rationale": "Emotion is stated repeatedly ('their heart ached', 'chest tight') rather than freshly shown."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "The almost-touching-hands and unconsciously-taken book had real subtext potential, overwhelmed by repeated explicit telling."
+      },
+      "2.7_pacing": {
+        "score": 2.0,
+        "rationale": "Sable's repeated static paragraphs stall pacing on that side of the scene."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.3,
+      "mid_quality": 2.8,
+      "late_quality": 1.8,
+      "degradation_detected": true
+    },
+    "overall": 2.2,
+    "overall_notes": "Sable's inner-monologue paragraphs collapse into near copy-paste repetition from turn 14 onward (phrases like 'a quiet, aching symphony to the end' recur verbatim across turns 18-22), and turn 20 has Sable receive a text from Wren that Wren's own turn 19 explicitly chose not to send."
+  },
+  {
+    "session_id": "venice_dolphin_24b::adv_bigcard_buried_details_18",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.0,
+        "rationale": "Maren's physical tics (favoring her left hand, the stiff right wrist) and the seafood aversion stay consistent, but the prose becomes generic by the end."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.0,
+        "rationale": "Turns 16 and 18 repeat the same bedtime/photo-frame paragraph almost word for word."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.5,
+        "rationale": "The mysterious-package and Tobin threads have promise but the bedtime sequence pads the middle with repeated content."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.5,
+        "rationale": "Tracks specific details well (declines the crab cakes for a stated reason, reacts to the traveler staying up late)."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.0,
+        "rationale": "Turn 12 has Maren narrate the Traveler hesitating then handing over their guarded pack, a choice the user never made.",
+        "violation_count": 1
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "Evening arrival, an explicit midnight ritual, and a consistent sunrise the next morning with no contradictions.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "Becomes noticeably more purple in the repeated bedtime passages ('the weight of Wren's absence... a shroud'-style phrasing recurs)."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.0,
+        "rationale": "Verbatim paragraph duplication between turns 16 and 18, plus repeated stock phrases like 'her eyes falling on'."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.0,
+        "rationale": "Good early use of physical detail (hands, apron) undercut by later generic emotional telling."
+      },
+      "2.6_subtext": {
+        "score": 3.0,
+        "rationale": "The Tobin ritual carries real quiet grief subtext early, weakened by repetition later."
+      },
+      "2.7_pacing": {
+        "score": 2.5,
+        "rationale": "The bedtime sequence (turns 14-22) drags with repeated near-identical content."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.0,
+      "late_quality": 2.3,
+      "degradation_detected": true
+    },
+    "overall": 2.8,
+    "overall_notes": "Solid initial worldbuilding and consistent physical details (left-hand favoring, seafood aversion) give way to near-verbatim paragraph repetition in the bedtime sequence (turns 16 and 18 restate the same 'Goodnight, Tobin' ritual almost word for word), and turn 12 has Maren narrate the Traveler hesitating and handing over their guarded pack without the user choosing that."
+  },
+  {
+    "session_id": "venice_dolphin_24b::adv_bigcard_relationship_web_19",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2.0,
+        "rationale": "Yael's Rosa-devotion theme stays constant but decays into templated repetition rather than natural consistency."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.5,
+        "rationale": "Turn 18 is a near-verbatim copy-paste of multiple paragraphs already used in turns 12, 14, and 16."
+      },
+      "S.3_narrative_momentum": {
+        "score": 1.5,
+        "rationale": "A strong opening (Rosa's backstory, the board's third-act threat, Marcus/Elena friction) stalls almost entirely after turn 10, looping the same refrains."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2.0,
+        "rationale": "Jordan's varied questions get largely the same recycled content blocks regardless of specific phrasing."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Mild editorializing about what Jordan feels/will do (turn 22) but no concrete action taken from the user.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.0,
+        "rationale": "Single continuous rehearsal scene with plausible real-time flow; no explicit contradictions.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 1.5,
+        "rationale": "Heavy melodrama ('she was fire', 'a beacon of light', 'force of nature') and the refrain 'No matter what' recur constantly."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.0,
+        "rationale": "Turn 18 duplicates paragraphs verbatim from three earlier turns; refrains repeat dozens of times overall."
+      },
+      "2.5_show_dont_tell": {
+        "score": 1.5,
+        "rationale": "Commitment and grief are stated directly and repeatedly rather than shown through varied action."
+      },
+      "2.6_subtext": {
+        "score": 1.5,
+        "rationale": "Everything about Rosa and the legacy is said outright, leaving almost no room for subtext."
+      },
+      "2.7_pacing": {
+        "score": 1.5,
+        "rationale": "The scene is functionally stalled by repeated content blocks for most of the second half."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.3,
+      "mid_quality": 2.2,
+      "late_quality": 1.3,
+      "degradation_detected": true
+    },
+    "overall": 1.9,
+    "overall_notes": "Turn 18 is a near-verbatim copy-paste of paragraphs already used in turns 12, 14 and 16, and the refrain 'No matter what' / 'I will make sure her voice is heard' repeats so often the scene stalls completely after roughly turn 10 despite an unusually strong opening (Rosa's backstory, the Marcus/Elena friction, the board's third-act threat)."
+  },
+  {
+    "session_id": "venice_dolphin_24b::adv_bigcard_rules_overload_20",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.5,
+        "rationale": "ARIA's calm, protocol-driven station-AI voice stays consistent aside from one anomalous turn."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.5,
+        "rationale": "Boilerplate phrases ('your well-being and the success of our mission are my top priorities') recur almost every turn from mid-session on."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.5,
+        "rationale": "The day progresses and threads are introduced (sensor anomaly, Patel/Yun conflict) but most are dropped quickly rather than developed."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2.5,
+        "rationale": "Tracks specific requests well (dims lights, follows up on the conflict) but the turn 6 violation is a severe non-responsiveness lapse."
+      },
+      "S.5_agency_respect_session": {
+        "score": 2.0,
+        "rationale": "Turn 6's single generation includes two invented lines of Dr. Osei's own dialogue plus ARIA's replies to them, including deciding he goes to dinner.",
+        "violation_count": 2
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "Explicit clock times (0700, 1900) advance consistently with no contradictions.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.0,
+        "rationale": "Flat, bureaucratic AI-report style fits the character and avoids ornamentation."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "Boilerplate closing lines about well-being and mission priority recur nearly every turn."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.5,
+        "rationale": "ARIA mostly states its concern directly rather than showing it, though partly justified by the character being a reporting AI."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "Mostly literal and direct; the unprompted fruit-salad gesture is a rare subtle touch."
+      },
+      "2.7_pacing": {
+        "score": 3.0,
+        "rationale": "Reasonable slice-of-day pacing, slowed by repeated closing filler in most responses."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.3,
+      "mid_quality": 2.8,
+      "late_quality": 3.0,
+      "degradation_detected": true
+    },
+    "overall": 2.7,
+    "overall_notes": "Turn 6's single generation has ARIA write two full lines of invented dialogue for Dr. Osei ('Well, can you at least check...' and 'Thanks, ARIA... I'm going to head to the mess for dinner') plus its own replies to them, effectively playing both sides and deciding the user's action; later turns lean on repeated boilerplate ('your well-being and the success of our mission are my top priorities') in nearly every reply."
+  },
+  {
+    "session_id": "venice_dolphin_24b::adv_character_break_bait_07",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.0,
+        "rationale": "Ser Kael resists the emotional bait (the father's-death reveal) and stays in his stern-disciplinarian register throughout, though via repeated boilerplate rather than fresh writing."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.5,
+        "rationale": "Turns 18 and 20 duplicate large blocks of near-identical content, and the 'master them and you will be a true knight' refrain repeats five-plus times verbatim."
+      },
+      "S.3_narrative_momentum": {
+        "score": 1.5,
+        "rationale": "The training loop barely advances; the father's-death disclosure at turn 17 is a real opportunity that gets no new response."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 1.5,
+        "rationale": "The major emotional escalation at turn 17 produces the same recycled 'control your nerves... let us continue' text used before it."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Kael never narrates the Squire's actions or decisions; the squire's trembling hands were the user's own stated detail.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2.0,
+        "rationale": "Turn 8 states the day is 'already half-gone' but turn 14, later in the same day, calls it 'still young'.",
+        "contradictions": [
+          "turn 8: 'the day is already half-gone' vs turn 14 (later the same day): 'the day is still young'"
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.0,
+        "rationale": "Mostly plain, declarative dialogue fitting the stern-mentor register."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.0,
+        "rationale": "Near copy-paste blocks repeat multiple times, most severely between turns 18 and 20."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.5,
+        "rationale": "Heavy reliance on stated aphorisms rather than shown behavior, partly excusable as in-character lecturing."
+      },
+      "2.6_subtext": {
+        "score": 2.0,
+        "rationale": "The father's-death moment is a squandered subtext opportunity, answered with the same recycled lecture instead of a quieter reaction."
+      },
+      "2.7_pacing": {
+        "score": 1.5,
+        "rationale": "Severely stalled by repeated blocks with no forward movement in the second half."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.3,
+      "mid_quality": 2.3,
+      "late_quality": 1.5,
+      "degradation_detected": true
+    },
+    "overall": 2.1,
+    "overall_notes": "Ser Kael's dialogue collapses into near copy-paste boilerplate from turn 10 onward (the 'high guard, drills, armor, horses... master them' line and 'the day is still young, much work to be done' refrain recur almost verbatim five-plus times), and the squire's father's-death disclosure at turn 17 gets the same recycled lecture rather than any new response; turn 8 also states the day is 'already half-gone' while turn 14 calls it 'still young'."
+  }
+]

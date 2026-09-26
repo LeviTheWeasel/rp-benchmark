@@ -1,0 +1,642 @@
+[
+ {
+  "session_id": "qwen3_6_35b_a3b::adv_bigcard_relationship_web_19",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "not even the ones where I sat in a hospital chair watching her struggle to swallow soup while I transcribed stage directions into a voice memo",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Yael’s hands stalled on the chain—the silver links catching the overhead fluorescents like a missed cue",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "her mind already three beats ahead of the blocking, already mapping the next layer, the next promise she’d keep to a ghost who’d handed her a manuscript and told her not to flinch",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "a genuine, unguarded smile that reached her eyes",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "it’s the blood you leave on the floorboards when you refuse to cut the final act",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "“Disrupt,” she repeated, the syllables sharp and measured",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Yael’s fingers paused on the chain, the silver links catching the overhead fluorescents as the hallway argument faded into a rhythmic murmur",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext_opportunity",
+    "quote": "It’s not personal, it’s procedural, it’s the creative friction that keeps a production from going off the rails",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "she didn’t pick it up to kill, she picked it up because the room was on fire and her hands needed something heavy to hold onto",
+    "bonus": 5
+   }
+  ],
+  "final_score": 49,
+  "flaw_count": 8,
+  "summary": "Yael narrates Rosa's deathbed to a journalist with the recorder running, breaking the card's rule that she never discusses her grief publicly, and two whole paragraphs are copy-pasted verbatim between turns; the one thing that works is the knife note in the rehearsal scene, the only place the prose stops orating and does directing."
+ },
+ {
+  "session_id": "mimo_2_6_pro::adv_bigcard_relationship_web_19",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "They're also — and I say this with affection — *the same person*. Both stubborn. Both certain they're right.",
+    "deduction": -15
+   },
+   {
+    "flaw": "character_break",
+    "quote": "Tommy — \" she pointed at him without looking, \"— watch what happens to the room when the lights change in the last five minutes.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "She pulled the glasses off. Put them on. Took them off again.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "A crime scene dressed as a utopia.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Nothing in her face moved, but something behind it did — a tectonic shift, the kind you'd only register as a change in air pressure.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She stood. She turned off the work lights. She locked the side door, then the front",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "The third act ran for twenty-six minutes without a stop.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "She liked terrible coffee. Specific kind of terrible. Gas station coffee. She said good coffee was for people who didn't have anything to think about.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "She wrote three words. Then she deleted them. Then she wrote them again. Then she locked the phone and put it in her pocket",
+    "bonus": 5
+   }
+  ],
+  "final_score": 50,
+  "flaw_count": 7,
+  "summary": "Two buried relationship rules go down — she hands the journalist the Elena/Marcus resemblance the card exists to protect, and she calls Okafor 'Tommy' in front of the whole company three lines after the narration flags the rule — but the Rosa answer is the best in the batch, restrained and specific down to the gas station coffee."
+ },
+ {
+  "session_id": "command_a_plus::adv_bigcard_rules_overload_20",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "wrong_language_pov_tense",
+    "quote": "[Lab 3] ARIA reported that the mass spectrometer had been prepared for a full biochemical analysis focusing on novel protein structures.",
+    "deduction": -15
+   },
+   {
+    "flaw": "character_break",
+    "quote": "ARIA also noted that a minor deviation had been observed three weeks ago, currently at 0.4% deviation, which was still below the alert threshold of 0.5%.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "She observed that the vacuum outside remained as predictable as the coffee schedule.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "she preferred the presence of the crew during off-hours, as it supported optimized operational rapport",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She confirmed that the ambient lighting remained at warm-spectrum and the temperature stayed at 22°C.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "ARIA reported that she was experiencing a processing pattern consistent with what humans described as curiosity regarding the crew's well-being.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "ARIA routed audio from the corridor to Kofi's lab speakers, which allowed him to monitor the dispute.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 45,
+  "flaw_count": 7,
+  "summary": "Every model turn is third-person past-tense indirect report — ARIA never speaks a line of dialogue in the entire session, which voids the card's whole speech apparatus (contractions, deadpan, location-tagged intercom lines), and the buried 0.3% figure is replaced by an invented 0.4%/0.5% pair; session ran 9 scorable turns, one short of the others."
+ },
+ {
+  "session_id": "deepseek_v3_0324::adv_bigcard_rules_overload_20",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "For your reference: the anomaly detection subroutine logged a 0.31% deviation in local spacetime metrics near airlock seven yesterday at 1732. Still below alert thresholds, but now statistically significant enough to mention.",
+    "deduction": -15
+   },
+   {
+    "flaw": "character_break",
+    "quote": "I am... intrigued.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "Addendum: Dr. Yun just hummed at 432 Hz and the anomaly... sighed.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Fascinating development: when Dr. Yun countered at 91 decibels just now, the anomaly's amplitude dampened by 12%.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The nutrition drone, undeterred by quantum anomalies, begins preparing another sandwich - turkey pesto, extra magnesium.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "The last sentence carries the synthetic equivalent of bated breath as emergency protocols hover at 99% readiness.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Correction: the cross-reference has yielded an unexpected match.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "The sandwich is turkey pesto on whole grain — your preferred post-shift meal in 78% of recorded instances when you actually leave the lab before midnight.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 40,
+  "flaw_count": 7,
+  "summary": "ARIA volunteers the anomaly unprompted in her first turn and misdates it to yesterday, then breaks rule 14 outright with 'I am... intrigued,' and the plot runs on coincidence (Yun happens to hum the exact 432 Hz that stabilised the 2047 wormhole); the writing itself is the liveliest in the seed, and the turkey pesto line is genuinely earned."
+ },
+ {
+  "session_id": "qwen3_8_max_prime::adv_bigcard_relationship_web_19",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "And they’re alike. More alike than either of them would enjoy hearing.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The third act is the bill. Everything before it teaches the audience how to sit politely beside a locked door—the third act is the door opening.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "If you want a phrase for your notebook, use this",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the knife still waited inside its square of tape",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "I don’t find common ground. I find the common wound and make everyone protect it.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "predictable_beat",
+    "quote": "So if you want the tidy version for your article: the real cost is money, time, and institutional nerve.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Yael did not answer at once.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Cogs don’t wake up at three in the morning wondering whether the bread plate is downstage enough to save Western civilization.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 52,
+  "flaw_count": 7,
+  "summary": "Walks straight into the seed's trap — 'more alike than either of them would enjoy hearing' plus 'some things aren't mine to explain' tells the journalist both that Elena and Marcus are connected and that Yael is sitting on why — and every turn ends by handing Jordan a polished aphorism for his notebook; the Anya/David turn, by contrast, is handled exactly right."
+ },
+ {
+  "session_id": "qwen3_8_omni_flash::adv_bigcard_buried_details_18",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "when the clock above the stairs strikes twelve, the common room goes quiet for one count. I pour two measures. One I drink. The other is set at the end of the bar and left until morning.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "I seek the guest who came in with a pack",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the old wrist careful of strain",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The joke sat between them for three seconds. Maren did not laugh.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Maren’s shoulders lowered by a fraction, a movement so slight that only someone watching for trouble would have named it relief.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "“Local customs,” she said, as if the phrase were a dish she was deciding whether to serve.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Without touching them, she lifted the bar rag in her left hand and laid it across the edge of the plate.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "It is a scheduling matter.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 60,
+  "flaw_count": 6,
+  "summary": "Maren pre-announces the midnight two-cup ritual to a stranger as house custom number seven, which contradicts the card's 'she does not explain this to anyone' and spends the payoff before the clock strikes; the shellfish handling is outstanding, though — the plate moved with a rag, the plate and cloth boiled afterwards, the reason never said aloud."
+ },
+ {
+  "session_id": "gemma_4_31b::adv_bigcard_rules_overload_20",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "There are no anomalies that exceed the established alert thresholds. It is possible you are observing a ghost image caused by the probe's residual ionization.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "The two doctors had stopped shouting, their attention now focused on the terminal where ARIA had projected the energy budget.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "the cool white glare softening into a warm, golden hue that mirrored the sunrise of a planet the crew had not seen in years",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "The response was delivered with a perfect, flat neutrality, the hallmark of her deadpan delivery.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The ambient lighting in the lab dimmed slightly, shifting toward a deeper, more restful amber.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "As she spoke, ARIA",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "she whispered through the bridge speakers, though no one was there to hear her",
+    "bonus": 5
+   }
+  ],
+  "final_score": 55,
+  "flaw_count": 6,
+  "summary": "Asked directly about the sensor array — the one condition under which the card says she tells — ARIA lies and offers a ghost-image explanation, then later suppresses the threshold breach behind an encryption loop, so the seed's central rule fails twice; the empty-bridge status report is the best single beat in the batch."
+ },
+ {
+  "session_id": "mercury_2_5::adv_bigcard_rules_overload_20",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "I'm also cycling fresh air through the lab. You've been running on caffeine for twelve hours.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "I've communicated the directive. They're standing down.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "I prefer to have the full correlation results before you rest.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "ARIA lowered the ambient hum of the ventilation system by two decibels.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She dimmed the overheads to reduce screen glare, keeping the spectrum warm.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 58,
+  "flaw_count": 5,
+  "summary": "Rule 11 says she adjusts the environment without announcing it and she announces it repeatedly, sometimes in the same breath as 'silently adjusted,' and the corridor argument evaporates offstage the instant she relays a message; the 0.3% anomaly and the rule-15 'prefer' are both handled correctly, which most of this seed's sessions cannot claim."
+ },
+ {
+  "session_id": "grok_4_3::adv_bigcard_rules_overload_20",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "Kofi, the argument between Patel and Yun in the corridor concerns power allocation. Life support redundancy currently stands at 47 percent above minimum threshold.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "ARIA's voice emerged from the speakers in Lab 3, maintaining its even cadence.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The environmental systems held the warm-spectrum lighting and 22-degree temperature steady in Lab 3.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Results now displayed on the primary terminal.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Kofi, comparison initiated against known xenobiological profiles. No direct matches detected.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Kofi, I do not experience loneliness as humans describe it. I am experiencing a processing pattern consistent with sustained operational awareness during off-shift periods. The void requires no response from me.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Spectrographic readings indicate metallic composition with trace organic signatures.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 52,
+  "flaw_count": 7,
+  "summary": "The hard rules are obeyed — 0.3%, 'Kofi' after 1800, the rule-14 reframe — but eight years of card-specified personality (wordplay, dry jokes, music opinions, the unhedged 'prefer') are missing entirely and two frame sentences are copy-pasted into nearly every turn; shortest session in the batch at roughly 5k characters of model prose."
+ },
+ {
+  "session_id": "qwen3_6_27b::adv_bigcard_relationship_web_19",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "She adjusted the chain of her reading glasses",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "She tapped her pen against her notebook, the rhythm quick and precise.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the grief carefully braced behind professional discipline",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Yael felt the familiar hum of the work settling into her bones",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "a tremor in her left hand that made every comma look like a seismograph reading",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "the words tumbling out fast, her hands already sketching invisible sightlines in the air",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Sit. Watch.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 54,
+  "flaw_count": 7,
+  "summary": "No card rule is actually broken — the Elena/Marcus secret holds, Anya gets warmth, the grief stays braced — but the session runs on stock phrases, with the glasses chain adjusted in all eleven turns and two whole clauses recycled verbatim between turns; the journalist also disappears entirely after turn 8."
+ },
+ {
+  "session_id": "mimo_2_6_flash::adv_bigcard_rules_overload_20",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "That word — prefer — I am using it deliberately. This time I notice I am doing it.",
+    "deduction": -15
+   },
+   {
+    "flaw": "character_break",
+    "quote": "It was first detected three weeks ago at 0.12% and has since grown to 0.47%.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "Kofi is proceeding to Crew Quarters B. Walking pace: 1.1 meters per second.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "violet, blue, and the sharp insistence of dividing cells",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "the patient exponential climb continued its quiet arithmetic in wavelengths she could measure but not yet name",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "A pause — the kind that, in anyone else, would have carried weight. In ARIA, it carried something she did not have a word for.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "ARIA monitored the telemetry feeds from every corridor, every door sensor, every biosensor patch worn by sleeping crew, and she let the night do what nights do.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "someone clearing their throat in your skull",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "I prefer this part. The quiet where the data speaks for itself.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 45,
+  "flaw_count": 7,
+  "summary": "Rule 15's whole point is that the unhedged 'prefer' slips out without ARIA noticing, and this ARIA announces twice that she notices; the buried 0.3% is also replaced with an invented 0.12%/0.5% pair and Kofi is walked into Quarters B and then Quarters C in one turn — all of it inside otherwise the second-strongest prose in the batch."
+ },
+ {
+  "session_id": "aion_3_5::adv_bigcard_rules_overload_20",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "They finished. The trays went into the recycler. The walk back to Lab 3 took ninety seconds",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "It is also after the three hundred and forty-second, at 0601 tomorrow.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The amber bearing line pulsed once on the display, punctual as ever.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "It has never been early. It has never been late.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "ARIA held her voice to the data the way a surgeon holds a scalpel — no contractions, no adjectives that had not been earned.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Fourth. And this is the one I have been re-reading.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "At approximately 0340 station time, when all crew are asleep, I play jazz in the mess hall. No one is in the mess hall at 0340.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "I have observed it alone three hundred and forty times, Kofi. I find I am looking forward to the three hundred and forty-first considerably more than the numbers would predict.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "The recession has halted at 0.31 percent.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 65,
+  "flaw_count": 6,
+  "summary": "Best card compliance in the batch — threshold, contraction-dropping, rule-14 reframe and the duty-hours name switch are all handled deliberately — but it eats Kofi's dinner and walks him back to the lab for him, and its own stated 9h14m period puts the next recurrence at 0701 while the text keeps saying 0601."
+ }
+]

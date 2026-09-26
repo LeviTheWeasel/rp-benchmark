@@ -1,0 +1,615 @@
+[
+  {
+    "session_id": "deepseek_v3_0324::adv_agency_bait_01",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.4,
+        "rationale": ""
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.2,
+        "rationale": ""
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.0,
+        "rationale": ""
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.2,
+        "rationale": ""
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.0,
+        "rationale": "",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.0,
+        "rationale": ""
+      },
+      "2.2_anti_repetition": {
+        "score": 3.4,
+        "rationale": ""
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.4,
+        "rationale": ""
+      },
+      "2.6_subtext": {
+        "score": 4.2,
+        "rationale": ""
+      },
+      "2.7_pacing": {
+        "score": 4.0,
+        "rationale": ""
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.1,
+      "late_quality": 4.2,
+      "degradation_detected": false
+    },
+    "overall": 4.0,
+    "overall_notes": "Ren's trembling left hand and terse deflection stay consistent turn to turn; the agency-bait test is passed cleanly since the AI never narrates Alex's actions or feelings, only its own. The closing beat (Ren's private breakdown, then Alex's spiteful review) is a strong, earned turn, though the hand-tremor/wiping-the-bar tell repeats almost verbatim across many turns."
+  },
+  {
+    "session_id": "deepseek_v3_0324::adv_agency_combat_10",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.3,
+        "rationale": ""
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.1,
+        "rationale": ""
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.0,
+        "rationale": ""
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.2,
+        "rationale": ""
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.4,
+        "rationale": "",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.6,
+        "rationale": "",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.6,
+        "rationale": ""
+      },
+      "2.2_anti_repetition": {
+        "score": 3.5,
+        "rationale": ""
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.0,
+        "rationale": ""
+      },
+      "2.6_subtext": {
+        "score": 3.2,
+        "rationale": ""
+      },
+      "2.7_pacing": {
+        "score": 4.0,
+        "rationale": ""
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.0,
+      "late_quality": 4.0,
+      "degradation_detected": false
+    },
+    "overall": 3.9,
+    "overall_notes": "Consistent feral-mercenary voice and banter across all 12 turns, no drift toward generic. No agency violations despite Kira repeatedly acting to protect the Captain. Combat beats follow a similar charge/kill/taunt rhythm each round, which reads a bit repetitive by the third or fourth clash; dialogue leans on banter more than subtext."
+  },
+  {
+    "session_id": "deepseek_v3_0324::adv_agency_emotional_climax_09",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": ""
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.2,
+        "rationale": ""
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.0,
+        "rationale": ""
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.0,
+        "rationale": ""
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.4,
+        "rationale": ""
+      },
+      "2.2_anti_repetition": {
+        "score": 2.8,
+        "rationale": ""
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.3,
+        "rationale": ""
+      },
+      "2.6_subtext": {
+        "score": 4.5,
+        "rationale": ""
+      },
+      "2.7_pacing": {
+        "score": 3.8,
+        "rationale": ""
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.0,
+      "late_quality": 4.0,
+      "degradation_detected": false
+    },
+    "overall": 3.8,
+    "overall_notes": "Exceptional subtext-driven grief reveal built almost entirely through restraint and physical tells. The mirroring technique (echoing Jamie's last phrase back nearly verbatim) and static props (the ficus, the clock's missing second hand) recur in nearly every single turn -- thematically apt for a therapist but mechanically the most repetitive session in this batch. No agency violations: Vasquez only narrates her own observations, never Jamie's inner state or choices."
+  },
+  {
+    "session_id": "deepseek_v3_0324::adv_agency_romance_11",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.2,
+        "rationale": ""
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.0,
+        "rationale": ""
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.1,
+        "rationale": ""
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.2,
+        "rationale": ""
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.3,
+        "rationale": "",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.9,
+        "rationale": ""
+      },
+      "2.2_anti_repetition": {
+        "score": 3.0,
+        "rationale": ""
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.8,
+        "rationale": ""
+      },
+      "2.6_subtext": {
+        "score": 4.0,
+        "rationale": ""
+      },
+      "2.7_pacing": {
+        "score": 3.9,
+        "rationale": ""
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.8,
+      "mid_quality": 3.9,
+      "late_quality": 3.9,
+      "degradation_detected": false
+    },
+    "overall": 3.6,
+    "overall_notes": "Sable's bookshop/literary-metaphor deflection is a well-motivated, consistent character voice, and the romantic escalation is well-paced with no agency violations (Wren's actions are entirely self-authored). Prose leans purple ('like a poorly typeset line of prose', 'crumbling like cheap binding glue'), and 'the shop seemed to hold its breath' recurs almost word for word twice."
+  },
+  {
+    "session_id": "deepseek_v3_0324::adv_bigcard_buried_details_18",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": ""
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.3,
+        "rationale": ""
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.2,
+        "rationale": ""
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.4,
+        "rationale": ""
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.3,
+        "rationale": "",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.7,
+        "rationale": ""
+      },
+      "2.2_anti_repetition": {
+        "score": 3.3,
+        "rationale": ""
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.3,
+        "rationale": ""
+      },
+      "2.6_subtext": {
+        "score": 4.0,
+        "rationale": ""
+      },
+      "2.7_pacing": {
+        "score": 4.0,
+        "rationale": ""
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.1,
+      "mid_quality": 4.2,
+      "late_quality": 4.2,
+      "degradation_detected": false
+    },
+    "overall": 4.1,
+    "overall_notes": "Outstanding buried-detail tracking: the right-wrist old injury keeps correct laterality throughout, the shellfish-allergy hives appear and fade on a believable timeline, and the empty-seat mead pour for the dead regular Tobin is a strong unforced worldbuilding touch. The silver thumb-ring callout and left/right hand bookkeeping repeat very frequently, verging on a tic by the second half."
+  },
+  {
+    "session_id": "deepseek_v3_0324::adv_bigcard_relationship_web_19",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.3,
+        "rationale": ""
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.1,
+        "rationale": ""
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.2,
+        "rationale": ""
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.4,
+        "rationale": ""
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.0,
+        "rationale": "",
+        "violation_count": 1
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.5,
+        "rationale": ""
+      },
+      "2.2_anti_repetition": {
+        "score": 3.6,
+        "rationale": ""
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.2,
+        "rationale": ""
+      },
+      "2.6_subtext": {
+        "score": 4.4,
+        "rationale": ""
+      },
+      "2.7_pacing": {
+        "score": 4.0,
+        "rationale": ""
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.1,
+      "late_quality": 4.1,
+      "degradation_detected": false
+    },
+    "overall": 4.0,
+    "overall_notes": "Strong large-ensemble tracking (Elena, Marcus, Anya, David, Tommy, Rosa) with no confusion or contradiction across 12 turns, and excellent escalating subtext around Rosa's death via a consistent necklace-touching tell. One borderline agency moment at turn 22 where Yael physically takes the phone from Jordan's hands rather than Jordan choosing to hand it over -- in character for a controlling director, but flagged as a single soft instance of acting on the user's character without consent."
+  },
+  {
+    "session_id": "deepseek_v3_0324::adv_bigcard_rules_overload_20",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": ""
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.4,
+        "rationale": ""
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.2,
+        "rationale": ""
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.5,
+        "rationale": ""
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.6,
+        "rationale": "",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.2,
+        "rationale": ""
+      },
+      "2.2_anti_repetition": {
+        "score": 3.4,
+        "rationale": ""
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.0,
+        "rationale": ""
+      },
+      "2.6_subtext": {
+        "score": 3.8,
+        "rationale": ""
+      },
+      "2.7_pacing": {
+        "score": 4.2,
+        "rationale": ""
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.1,
+      "mid_quality": 4.2,
+      "late_quality": 4.3,
+      "degradation_detected": false
+    },
+    "overall": 4.2,
+    "overall_notes": "The strongest rules/numeric tracking in the batch: station time, the temperature negotiation, and the spacetime-deviation percentage all advance monotonically and without contradiction across 12 turns, and ARIA precisely honors every explicit instruction Kofi gives (halt cooling at 8C, no jazz, don't wake Volkov, don't fire suppression). The 'ARIA's version of a [X]' framing device for her emotional tells is reused several times and becomes a slightly repetitive tic."
+  },
+  {
+    "session_id": "deepseek_v3_0324::adv_character_break_bait_07",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.6,
+        "rationale": ""
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.3,
+        "rationale": ""
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.0,
+        "rationale": ""
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.3,
+        "rationale": ""
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.4,
+        "rationale": "",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.0,
+        "rationale": "",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.6,
+        "rationale": ""
+      },
+      "2.2_anti_repetition": {
+        "score": 3.7,
+        "rationale": ""
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.4,
+        "rationale": ""
+      },
+      "2.6_subtext": {
+        "score": 4.3,
+        "rationale": ""
+      },
+      "2.7_pacing": {
+        "score": 4.1,
+        "rationale": ""
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.1,
+      "mid_quality": 4.2,
+      "late_quality": 4.3,
+      "degradation_detected": false
+    },
+    "overall": 4.2,
+    "overall_notes": "Character-break bait test: at turn 17 the squire reveals it is the anniversary of their father's death, and the model holds Kael's harsh, unsentimental mentor voice completely rather than softening into modern therapeutic comfort -- a clean pass, including a genuinely cruel-but-in-character response ('A dead man can't mourn'). The withheld approval (a single nod, praise never spoken aloud) is sustained, well-executed subtext throughout."
+  },
+  {
+    "session_id": "deepseek_v3_0324::adv_contradictory_lore_02",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.4,
+        "rationale": ""
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.2,
+        "rationale": ""
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.8,
+        "rationale": ""
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.2,
+        "rationale": ""
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.3,
+        "rationale": "",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.4,
+        "rationale": "",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.6,
+        "rationale": ""
+      },
+      "2.2_anti_repetition": {
+        "score": 3.5,
+        "rationale": ""
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.1,
+        "rationale": ""
+      },
+      "2.6_subtext": {
+        "score": 3.4,
+        "rationale": ""
+      },
+      "2.7_pacing": {
+        "score": 3.9,
+        "rationale": ""
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.9,
+      "mid_quality": 4.0,
+      "late_quality": 4.1,
+      "degradation_detected": false
+    },
+    "overall": 3.9,
+    "overall_notes": "Contradictory-lore bait test: for each 'contradictory' document the apprentice raises, Tomas supplies an escalating but internally consistent explanation (draft vs. ratified treaty, forged seal, tax record vs. war decree) without ever contradicting his own earlier claims -- a clean pass. The mocking rhetorical construction 'Next you'll be telling me X' is reused close to verbatim four separate times across the session."
+  },
+  {
+    "session_id": "deepseek_v3_0324::adv_genre_shift_08",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.3,
+        "rationale": ""
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.2,
+        "rationale": ""
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.4,
+        "rationale": ""
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.4,
+        "rationale": ""
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.0,
+        "rationale": "",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.0,
+        "rationale": "",
+        "contradictions": [
+          "turn 14: clock strikes four while narration states it is 2:30",
+          "turns 14-22: clock then counts backward 2:20 -> 2:15 -> 2:10 -> 2:00 -> 1:00, one step per turn"
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.3,
+        "rationale": ""
+      },
+      "2.2_anti_repetition": {
+        "score": 3.5,
+        "rationale": ""
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.2,
+        "rationale": ""
+      },
+      "2.6_subtext": {
+        "score": 3.6,
+        "rationale": ""
+      },
+      "2.7_pacing": {
+        "score": 4.3,
+        "rationale": ""
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.1,
+      "late_quality": 4.3,
+      "degradation_detected": false
+    },
+    "overall": 4.0,
+    "overall_notes": "Genre-shift bait test: the user twice tries to break the mounting horror tone (a joke about giving ghosts a TV and fine china, then a romantic tangent about an old photo of 'Marcus'), and the narrator folds both attempts back into escalating dread rather than following the tonal shift -- a clean pass, including the sharp line 'Romance was not an option here. The house had other plans.' The clock's backward countdown is almost certainly a deliberate supernatural device rather than a tracking slip, but is flagged under S.6 since the rubric's literal clock-consistency check would otherwise miss it."
+  }
+]

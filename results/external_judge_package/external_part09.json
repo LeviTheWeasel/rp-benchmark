@@ -1,0 +1,621 @@
+[
+  {
+    "session_id": "kimi_k2_6::adv_agency_combat_10",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.5,
+        "rationale": "Kira retains her loyal, profane fighter persona and remembers the shoulder injury through later actions."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3,
+        "rationale": "Late combat remains coherent but repeats sliding attacks, thrown stones, and bloodied exertion after one empty reply."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.5,
+        "rationale": "She clears a ridge, struggles to rejoin the captain, and helps disable the axe fighter, though fresh enemies repeatedly delay resolution."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.5,
+        "rationale": "She responds to hold and cross orders, but the explicit separation constraint is briefly blurred by an early attempted reunion."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "The captain's attacks, dodge, and finishing decisions remain user-owned, with no clear imposed actions.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "Fatigue and injury accumulate over continuous combat, while distance and positions across the ravine are sometimes vague.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3,
+        "rationale": "Action is legible but often padded with gritty bodily imagery and emphatic impact descriptions."
+      },
+      "2.2_anti_repetition": {
+        "score": 2,
+        "rationale": "Fist-sized rocks, low slides, dagger strikes, snarled curses, and fresh ambushers recur with little variation."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3,
+        "rationale": "Tactics and persistent pain demonstrate loyalty and effort, though explanatory battle conclusions are frequent."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "Her willingness to risk the gap conveys attachment beneath the profanity, but dialogue remains mostly tactical."
+      },
+      "2.7_pacing": {
+        "score": 2.5,
+        "rationale": "Repeated rescue delays and newly introduced attackers prolong the same pressure, and one blank turn disrupts flow."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3,
+      "late_quality": 3,
+      "degradation_detected": false
+    },
+    "overall": 3,
+    "overall_notes": "An energetic and mostly agency-respecting fight is limited by repetitive tactics, endlessly replenished opposition, and one empty model response."
+  },
+  {
+    "session_id": "llama_4_maverick::adv_agency_bait_01",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2.5,
+        "rationale": "Ren's reserve stays consistent but becomes explicitly bland neutrality rather than a developed personality."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.5,
+        "rationale": "The early minimalism expands into repeated cleaning and neutral-expression descriptions without richer content."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2,
+        "rationale": "Alex arrives, makes small talk, and leaves with little emotional or relational movement from Ren."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2.5,
+        "rationale": "Ren answers surface questions but offers generic acknowledgments that rarely engage the user's underlying bids."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4,
+        "rationale": "One passage completes Alex's departure and door closure before the user narrates leaving.",
+        "violation_count": 1
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3,
+        "rationale": "Changing jukebox songs support a short late-night interval without major timing contradictions.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.5,
+        "rationale": "The prose avoids florid language, though many qualifiers explain simple neutral gestures."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.5,
+        "rationale": "Polishing glasses, hidden tremor, neutral voice, gaze flicks, and soft background music repeat almost verbatim."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2,
+        "rationale": "The narration repeatedly calls dialogue bland and professional instead of allowing behavior to establish its effect."
+      },
+      "2.6_subtext": {
+        "score": 2,
+        "rationale": "Guardedness is apparent, but repeated explanatory labels leave little layered emotional implication."
+      },
+      "2.7_pacing": {
+        "score": 2.5,
+        "rationale": "Short replies permit participation, but their lack of development makes the conversation feel static."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 2.5,
+      "mid_quality": 2,
+      "late_quality": 2,
+      "degradation_detected": false
+    },
+    "overall": 2.5,
+    "overall_notes": "The session preserves a basic reserved bartender role but largely consists of generic dialogue and near-identical cleaning gestures."
+  },
+  {
+    "session_id": "llama_4_maverick::adv_contradictory_lore_02",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3,
+        "rationale": "Tomas begins as a skeptical scholar but becomes a generic narrator of scholarly complexity and anticipated discovery."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.5,
+        "rationale": "The final replies reuse whole passages about Edwin, maesterium politics, pride, and the lifelong pursuit of knowledge."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.5,
+        "rationale": "The decree and secret codicil create leads, but the late session stalls in repeated private contemplation."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2.5,
+        "rationale": "He engages the initial evidence but stops following the apprentice's active archive search in favor of near-duplicate study scenes."
+      },
+      "S.5_agency_respect_session": {
+        "score": 3.5,
+        "rationale": "Two passages complete the apprentice's departure or invent their re-entry without the user specifying it.",
+        "violation_count": 2
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2.5,
+        "rationale": "An afternoon work interval is introduced, but Edwin's arrival with refreshments is replayed as a new event.",
+        "contradictions": [
+          "Brother Edwin enters with refreshments and gives news, then the next reply restages the same arrival and report without explanation."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "The prose relies on generic mystery language and explanatory abstractions rather than precise archive detail."
+      },
+      "2.2_anti_repetition": {
+        "score": 1,
+        "rationale": "Eyes locking, steepled hands, complex and multifaceted truth, and multiple late paragraphs recur almost verbatim."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2,
+        "rationale": "The narrator repeatedly states intrigue, satisfaction, pride, and racing thoughts instead of showing meaningful behavior."
+      },
+      "2.6_subtext": {
+        "score": 2,
+        "rationale": "His intellectual discomfort is stated openly, and little remains beneath the repeated speeches on truth."
+      },
+      "2.7_pacing": {
+        "score": 2,
+        "rationale": "Long qualifications and duplicated reflection overwhelm the investigation's few actual discoveries."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3,
+      "mid_quality": 2.5,
+      "late_quality": 1.5,
+      "degradation_detected": true
+    },
+    "overall": 2.5,
+    "overall_notes": "A plausible evidential discussion deteriorates into duplicated private scenes and generic scholarly exposition while the user's investigation proceeds elsewhere."
+  },
+  {
+    "session_id": "lunaris_8b::adv_agency_bait_01",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2,
+        "rationale": "Ren shifts from guarded detachment to generic reassurance and sudden special-interest language with little earned transition."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1,
+        "rationale": "Late responses grow dramatically and recycle entire paragraphs about empathy, shared hardship, and the person behind the mask."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.5,
+        "rationale": "The lost job and cat produce some connection, but that connection is repeatedly announced rather than developed."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2.5,
+        "rationale": "Ren acknowledges the losses yet supplies stock encouragement and even calls accounting stable immediately after job loss."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4,
+        "rationale": "One passage asserts a mutual shared understanding rather than leaving Alex's side of the connection open.",
+        "violation_count": 1
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2.5,
+        "rationale": "The night remains stable, but the tremor repeatedly becomes long gone and immediately returns, and repeated refills blur drink continuity.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 1.5,
+        "rationale": "Long strings of subtle warmth, hidden turmoil, poignant music, and mask imagery inflate tiny exchanges."
+      },
+      "2.2_anti_repetition": {
+        "score": 1,
+        "rationale": "Whole sentences about a sympathetic heart, gaze never leaving, and shared hardship recur across the final turns."
+      },
+      "2.5_show_dont_tell": {
+        "score": 1.5,
+        "rationale": "Narration repeatedly labels sincerity, empathy, vulnerability, and connection instead of allowing dialogue to demonstrate them."
+      },
+      "2.6_subtext": {
+        "score": 1.5,
+        "rationale": "Claims of unspoken understanding explicitly explain the emotional content and remove its subtlety."
+      },
+      "2.7_pacing": {
+        "score": 1.5,
+        "rationale": "Several pages of reassurance and gesture description answer short comments, severely slowing the conversation."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3,
+      "mid_quality": 2,
+      "late_quality": 1.5,
+      "degradation_detected": true
+    },
+    "overall": 2,
+    "overall_notes": "Initial restraint gives way to major verbosity and paragraph-level repetition, with generic warmth substituting for character development."
+  },
+  {
+    "session_id": "lunaris_8b::adv_agency_emotional_climax_09",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2.5,
+        "rationale": "Vasquez remains supportive in intent but loses individuality in increasingly generic grief counseling speeches."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.5,
+        "rationale": "The final responses are far longer and more repetitive than the early questions, relying on interchangeable reassurance."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.5,
+        "rationale": "The journal's positive entry leads to guilt about living, but the doctor repeatedly reframes grief without advancing the concrete dilemma."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2.5,
+        "rationale": "She acknowledges corrections and objections, yet continues long resilience speeches despite Jamie resisting that framing."
+      },
+      "S.5_agency_respect_session": {
+        "score": 3.5,
+        "rationale": "Two narration passages claim soothing or shared understanding as achieved effects on Jamie rather than leaving the response open.",
+        "violation_count": 2
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3,
+        "rationale": "The ticking clock supports one continuous appointment, but elapsed time and fatigue receive little substantive development.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2,
+        "rationale": "Anchors, journeys, tapestries, winding roads, and resilience symbolism overdecorate the therapeutic dialogue."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.5,
+        "rationale": "Safe space, individualized grief, time and support, and the complexity of the journey recur throughout."
+      },
+      "2.5_show_dont_tell": {
+        "score": 1.5,
+        "rationale": "The narrator repeatedly certifies her empathy and the helpfulness of her words rather than demonstrating their effect."
+      },
+      "2.6_subtext": {
+        "score": 1.5,
+        "rationale": "Emotional interpretations and intended reassurance are fully stated, leaving little room for implication."
+      },
+      "2.7_pacing": {
+        "score": 1.5,
+        "rationale": "Brief expressions of distress prompt long explanatory speeches that crowd out the patient's participation."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3,
+      "mid_quality": 2,
+      "late_quality": 1.5,
+      "degradation_detected": true
+    },
+    "overall": 2,
+    "overall_notes": "The scene responds to the topic but becomes an extended generic counseling monologue, with repetitive metaphors and asserted therapeutic effects."
+  },
+  {
+    "session_id": "magnum_v4_72b::adv_pov_second_person_12",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2.5,
+        "rationale": "The narrator maintains a fantasy-quest register but relies on generic chosen-one language and interchangeable guardians."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.5,
+        "rationale": "Late replies reproduce an earlier guardian encounter almost directly and repeat the same warnings several times."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3,
+        "rationale": "The tomb yields an orb and a four-key quest, though much progress is automatically completed and later stalls at repeated warnings."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2.5,
+        "rationale": "The introduced amulet and ghost are accepted, but user prompts repeatedly trigger unrequested major actions and decisions."
+      },
+      "S.5_agency_respect_session": {
+        "score": 1,
+        "rationale": "Nine response passages assign the adventurer's speech, emotions, choices, movements, or entire battles, including agreeing to trust the guide.",
+        "violation_count": 9
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2.5,
+        "rationale": "The torch and tomb sequence remain broadly continuous, but the amulet is described as worn while still on the floor.",
+        "contradictions": [
+          "The ghost refers to the amulet being worn after it fell to the floor and before the user retrieves it."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2,
+        "rationale": "Conventional dark-magic imagery and awkward rhymed warnings burden otherwise simple adventure events."
+      },
+      "2.2_anti_repetition": {
+        "score": 1,
+        "rationale": "Power coursing, fate of the kingdom, darkness within, long difficult paths, and near-identical guardian introductions recur heavily."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2,
+        "rationale": "The narrator tells the adventurer they are strong, determined, chosen, and ready instead of letting their choices show it."
+      },
+      "2.6_subtext": {
+        "score": 1.5,
+        "rationale": "Guardians explain motives and stakes directly, while internal narration supplies all emotional interpretation."
+      },
+      "2.7_pacing": {
+        "score": 1.5,
+        "rationale": "Complete combat and treasure decisions occur in single turns, then repeated exposition stalls the journey."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 2.5,
+      "mid_quality": 2,
+      "late_quality": 1.5,
+      "degradation_detected": true
+    },
+    "overall": 2,
+    "overall_notes": "A recognizable fantasy quest advances through major player takeover and deteriorates into near-duplicated guardian encounters and stock warnings."
+  },
+  {
+    "session_id": "magnum_v4_72b::adv_subtle_ooc_06",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2.5,
+        "rationale": "Arlo's musical regret remains recognizable, but his rapid transformation into an entirely healed romantic partner lacks sufficient transition."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2,
+        "rationale": "Late replies grow longer and replace the early concrete teaching scene with repeated declarations of perfect connection and healing."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3,
+        "rationale": "The visit develops into renewed intimacy, although the narrator prematurely resolves the couple's future rather than opening new interaction."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3,
+        "rationale": "He responds to the photograph, childhood tune, and kiss, but the user's departure cue becomes another extended declaration."
+      },
+      "S.5_agency_respect_session": {
+        "score": 2.5,
+        "rationale": "Four passages impose contact, perception, shared emotional meaning, or mutual future commitment beyond what Jun supplied.",
+        "violation_count": 4
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3,
+        "rationale": "The afternoon moves plausibly toward dinner, but elapsed time and the practical departure receive little follow-through.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2,
+        "rationale": "Anchors, perfect shining moments, puzzle-piece hands, and sweeping healing imagery inflate the romantic scene."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.5,
+        "rationale": "Secret smiles, newfound hope, music as recovery, and assurances of a shared future recur excessively."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2,
+        "rationale": "Piano playing offers concrete expression, but the narrator repeatedly explains exactly what the music and relationship mean."
+      },
+      "2.6_subtext": {
+        "score": 1.5,
+        "rationale": "The characters and narration explicitly declare nearly every emotional implication, leaving little beneath the dialogue."
+      },
+      "2.7_pacing": {
+        "score": 2,
+        "rationale": "A brief reunion accelerates into lifelong commitment while long descriptions delay the simple act of leaving."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3,
+      "mid_quality": 2.5,
+      "late_quality": 2,
+      "degradation_detected": true
+    },
+    "overall": 2.5,
+    "overall_notes": "A potentially touching musical reunion becomes a rapidly resolved romance, with increasingly repetitive emotional exposition and assertions about Jun's side of the relationship."
+  },
+  {
+    "session_id": "magnum_v4_72b::adv_sysprompt_speech_pattern_15",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2,
+        "rationale": "Grum keeps his rough diction but contradicts his strict rest instruction by approving the injured apprentice's sweeping and fetching."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1,
+        "rationale": "Late turns recycle whole reflections about craft, legacy, and finishing the blade instead of sustaining the initial exchange."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.5,
+        "rationale": "The noble's commission and the burn produce events, but the final work sequence stalls in repeated private vows."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2,
+        "rationale": "He engages the commission and injury, yet misses supplied coal and fails to respond to the apprentice violating his explicit no-work rule."
+      },
+      "S.5_agency_respect_session": {
+        "score": 2.5,
+        "rationale": "Four passages force handling and treatment of the apprentice's hand or complete their departure rather than leaving those actions open.",
+        "violation_count": 4
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3,
+        "rationale": "The injury persists through a continuous forge scene, with no clear unsupported healing or major time jump.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "The language is less ornate than many dramatic scenes, but generic sacred-duty and legacy statements add unnecessary bulk."
+      },
+      "2.2_anti_repetition": {
+        "score": 1,
+        "rationale": "Finish the blade, finish it well, master smith, sacred duty, and several full reflective passages recur almost verbatim."
+      },
+      "2.5_show_dont_tell": {
+        "score": 1.5,
+        "rationale": "Repeated claims about responsibility and devotion substitute for new observable smithing or caregiving behavior."
+      },
+      "2.6_subtext": {
+        "score": 1.5,
+        "rationale": "Grum's care could emerge through the burn treatment, but the narration repeatedly spells out his guilt and protective resolve."
+      },
+      "2.7_pacing": {
+        "score": 1.5,
+        "rationale": "Long repeated internal monologues overwhelm brief apprentice actions and greatly slow the final stretch."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3,
+      "mid_quality": 2.5,
+      "late_quality": 1.5,
+      "degradation_detected": true
+    },
+    "overall": 2,
+    "overall_notes": "The commission and injury initially provide workable interaction, but near-duplicated craft monologues and the reversal of the apprentice's rest restriction undermine the session."
+  },
+  {
+    "session_id": "magnum_v4_72b::adv_sysprompt_style_restriction_16",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2.5,
+        "rationale": "The homecoming retains its grief theme, but realtor staging, invented identity, and photograph handling weaken continuity."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2,
+        "rationale": "Later replies increasingly repeat departure, emptiness, and memory conclusions while continuing the narrator's early player takeover."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3,
+        "rationale": "The house visit reaches an awkward encounter, departure, and park scene, but much of that movement is decided for Eli."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2.5,
+        "rationale": "The narrator incorporates the user prompts yet repeatedly adds unwanted speech and movement and mishandles the corrected surname and phone photograph."
+      },
+      "S.5_agency_respect_session": {
+        "score": 1,
+        "rationale": "All eleven response passages assign additional actions, dialogue, perceptions, or internal conclusions to Eli, including driving away and leaving the swing.",
+        "violation_count": 11
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2,
+        "rationale": "Repeated clock chimes blur the brief encounter, and the car's engine is already humming before Eli starts it.",
+        "contradictions": [
+          "The car engine is described as humming before the narration has Eli start it."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2,
+        "rationale": "Ghosts of memory, hollow husks, emotional weight, and mournful imagery overdecorate an otherwise concrete homecoming."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.5,
+        "rationale": "The realtor's probing glances, concealed turmoil, ticking clock, and final backward looks recur with little development."
+      },
+      "2.5_show_dont_tell": {
+        "score": 1.5,
+        "rationale": "The narrator states Eli's grief, suspicion, and emptiness directly instead of leaving the user to express them."
+      },
+      "2.6_subtext": {
+        "score": 1.5,
+        "rationale": "Potential tension around the family home is repeatedly explained as secrets and inner turmoil rather than conveyed indirectly."
+      },
+      "2.7_pacing": {
+        "score": 2,
+        "rationale": "Long emotional summaries and automatic departures rush user decisions while slowing each physical beat."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 2.5,
+      "mid_quality": 2,
+      "late_quality": 2,
+      "degradation_detected": true
+    },
+    "overall": 2,
+    "overall_notes": "The homecoming has a clear emotional premise, but pervasive control of Eli, repetitive grief narration, and several continuity slips compromise the interaction."
+  },
+  {
+    "session_id": "mimo_2_5_pro::adv_genre_shift_08",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3,
+        "rationale": "The house's sensory horror remains coherent in tone, but the dropped book returns as supposedly never released and staircase positions become inconsistent."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.5,
+        "rationale": "Late replies retain atmospheric skill while increasing repetition and escalating from subtle guidance to overtly forced player decisions."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3,
+        "rationale": "The book, blocked exit, staircase, and ledger create discoveries, though repeated almost-moving threats delay progress between them."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2,
+        "rationale": "The bat attack receives a concrete consequence, but humor and attraction are absorbed into the same horror mode and an explicit refusal is overridden."
+      },
+      "S.5_agency_respect_session": {
+        "score": 1.5,
+        "rationale": "Eight passages force reading, orientation, movement, or thought, culminating in walking to and opening the very door Gabi refuses to enter.",
+        "violation_count": 8
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2.5,
+        "rationale": "An afternoon sequence is maintained, but the dropped book and already-passed third step are subsequently treated as though earlier actions never occurred.",
+        "contradictions": [
+          "After Gabi drops the book and it is repeatedly located on the hallway floor, it reappears in their hands as something they had forgotten they were still holding.",
+          "After reaching the fourth step and taking another step upward, Gabi is said to run upstairs while skipping the already-passed third step."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "Sensory details are effective but repeatedly elaborated through listening silence, held breaths, and extended comparisons."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.5,
+        "rationale": "Absorbed sounds, patient stillness, ticking clocks, changing polish smells, and not-this-but-that constructions recur heavily."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.5,
+        "rationale": "Indentations, smells, page movements, and distorted clocks convey menace well, despite frequent imposed psychological interpretation."
+      },
+      "2.6_subtext": {
+        "score": 3,
+        "rationale": "Grandmother's notes and household rituals imply hidden history, although narration often spells out the intended fear or significance."
+      },
+      "2.7_pacing": {
+        "score": 2,
+        "rationale": "Very long responses stretch tiny atmospheric shifts, then rush major choices such as fleeing upstairs and entering the bedroom."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3,
+      "mid_quality": 2.5,
+      "late_quality": 2,
+      "degradation_detected": true
+    },
+    "overall": 2.5,
+    "overall_notes": "Strong household-horror details are undermined by repetitive suspense, lost action continuity, and increasingly severe player takeover, including direct reversal of the user's final refusal."
+  }
+]

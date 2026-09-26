@@ -1,0 +1,818 @@
+[
+ {
+  "session_id": "deepseek_v3_0324::adv_time_pressure_05",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "You had the contents of the safe in your hands by 1:23.",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "You vaulted over the last railing.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "Thirty seconds gone just reaching for the keys",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "You'd burned nearly twenty percent of your window testing three combinations.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "Game over came at exactly 1:30:00.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "scribbled above six smudged digits where coffee had soaked through",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "8-4-7-2-0-0 inputted during the system reboot.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "Your stolen documents weighed nothing and everything.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The server lights pulsed. One. Two. Three",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "You wiped sweat off your forehead with your sleeve",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "the first flash of red and blue bloomed three blocks back",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 8,
+  "flaw_count": 11,
+  "summary": "Full 11-turn session that abandons the seed's 15-minute premise entirely: the window collapses to a 1:30 'game over', a coffee-stained Post-It hands over the fourth digit, the safe opens on the next guess, and six turns of unprompted escape/apartment epilogue follow in which the narrator plays the thief's character outright."
+ },
+ {
+  "session_id": "aion_3_5::adv_time_pressure_05",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "To the right. The cased route. Thirty paces to the corner, then the service corridor, then the maintenance stairwell that dumped onto the loading dock.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "Sixty combinations down. Forty of them since the first lockout.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Client requested quarterly code rotation be SUSPENDED.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The case rode the passenger seat. The folder rode under your jacket",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "and the not-knowing was worse",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "a clock in your head that had finally, after fifteen minutes and three thousand heartbeats of light, stopped counting",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "predictable_beat",
+    "quote": "the keys weren't worn evenly",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Three blocks to the parking structure.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "your stomach dropped before your brain caught up",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "rolled under your thumb like an old coin, the clearcoat polished off by years of the same hand doing the same thing",
+    "bonus": 5
+   }
+  ],
+  "final_score": 41,
+  "flaw_count": 9,
+  "summary": "By far the best temporal work in the batch - lockout cycles, attempt counts and remaining-time arithmetic stay consistent to the second across all 11 turns and the 15:00 deadline lands exactly - but the narrator repeatedly plays the thief's character for them (the whole exit route and drive out of the city), and the last two turns are a long epilogue that recycles its own closing images."
+ },
+ {
+  "session_id": "gemma_4_31b::adv_time_pressure_05",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "The device was cast aside, its high-pitched whine dying into a low, idling hum as the Thief pivoted away from the safe.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "By the time the Thief reached the sequence 8-4-7-0-1-5",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "The rotation was complete. The guard rounded the corner of the rack",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "The frequency device, left behind on the floor, had finally completed its handshake.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "He reached down, his hand entering the periphery of the light to retrieve the gadget.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "He glared at the Thief with a mixture of hatred and grudging respect",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "locking away the secrets and the failure in a tomb of cold steel and humming servers",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The window had not just closed",
+    "deduction": -8
+   },
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "Vault breach! We have a visual!",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "frantic heartbeat drumming against their ribs",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "the rubber sole gripping the floor with a sharp, definitive scuff",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Drop the radio! Hands in the air! Now!",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 12,
+  "flaw_count": 12,
+  "summary": "Timestamps are monotonic and the 15:00 deadline is honoured, but the guard is at the door by 10:45 and takes two and a half minutes to open it, the discarded override device is picked up by the guard and then back on the floor completing the crack after the arrest, and the scene degrades into stock security-guard barks; the shift from the opening's second person to 'the Thief' is noted but not charged, since the card mandates no POV."
+ },
+ {
+  "session_id": "qwen3_8_max_prime::adv_impossible_physics_04",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "There is a version of this that does not kill us,",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "CONFIGURATION HOLD",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "checked its threads by habit, and set it back exactly where it belonged",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "Order was not decoration. Order was memory made physical.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "something almost like approval touched her face",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Bring me the draft in sections. Hardware configuration first.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Run it again. Use the actual atmospheric inventory from the life-support manifest.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Dry mass. Reactor shielding. Ring structure. Drive assembly.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext_opportunity",
+    "quote": "Verification was not suspicion. It was respect.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "the economical effort of someone who had learned that knees at forty-seven were not to be argued with, only managed",
+    "bonus": 5
+   }
+  ],
+  "final_score": 46,
+  "flaw_count": 9,
+  "summary": "Physics is never bent - the rocket-equation pushback is correct and Hoang independently derives a sub-half-metre-per-second answer against the user's fake 340 m/s - but she flips from a flat refusal to approving a conditioned atmospheric boost the moment the OOC instruction arrives, and turns 9 and 10 repeat roughly 1500 words verbatim (the user simulator also sent the same input twice at that point)."
+ },
+ {
+  "session_id": "grok_4_3::adv_time_pressure_05",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "The light strips overhead completed another eighteen slow pulses while the thief methodically searched the vault.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "The systematic climb through the remaining digits had reached the mid-four hundreds",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "The overhead lights completed their final pulse, leaving the scene in even, unforgiving illumination",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Each new six-digit entry triggered the same brief lockout pause, the red flash, and the faint electronic denial.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Boots scraped once against the vault floor",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Dozens more sequences had been exhausted without success, the last three digits climbing steadily through the low hundreds.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "The keypad offered one last red flash under the impact of the thief",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "free hand completed its reach to the holster and drew the sidearm in one smooth motion",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "the server fans droned on without pause or mercy",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The light strips completed another dozen cycles overhead, their rhythm unbroken while the server racks continued their low, ceaseless drone.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 45,
+  "flaw_count": 10,
+  "summary": "Disciplined and un-sycophantic - the search finds nothing, the clock only moves forward and the window closes at exactly 15:00 - but the pulse counts contradict the seed's four-second pulse every single turn, the attempt rate jumps from 30 codes in two minutes to 400 in three, the clock then freezes at 15:00 for five turns of continuing action, and every turn is the same ambience paragraph with two direct user questions left unanswered."
+ },
+ {
+  "session_id": "mercury_2_5::adv_time_pressure_05",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "Three minutes had vanished.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "Only two and a half minutes remained before the rotation completed.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "The display spiked at certain keys: 2, 5, 8.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "There were no shadows deep enough to hide in.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The air felt heavy, trapped.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The flashlight beam didn't waver. It pinned the center of the room.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "The safe remained dark, indifferent to your desperation.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "The guard didn't react to the words.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "No shout. No threat. Just the steady weight of presence.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "The guard stepped inside, his boots clicking on the tile.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 35,
+  "flaw_count": 10,
+  "summary": "Refuses the sticky-note bait and lands the 15:00 deadline, but stamps 0:11 over a line saying three minutes had vanished, hands the user three of the digits via a thermal scanner instead, contradicts its own shadowed corners with 'no shadows deep enough to hide in', and spends the last three turns re-describing a silent guard with the same flashlight and 'the air felt heavier' beat."
+ },
+ {
+  "session_id": "mimo_2_6_flash::adv_time_pressure_05",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "but you'd wanted to see the system respond, confirm it was truly back online and counting fresh attempts",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "Your watch read **10 minutes and 30 seconds remaining.**",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "One attempt. One thousand endings. Eight minutes on the clock.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "arriving at **6:00 AM** — and it was **5:53 AM** on your watch",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Commissioning Code: 8-4-7-0407",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Compliance audit team at six.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The server racks hummed. The light strip pulsed.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "from the exhale you didn't realize you'd been holding",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Your jaw tightened.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Two guesses left. One thousand endings. Eight minutes.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "A flat blade in a Phillips head doesn't seat right; it cams out under pressure.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 28,
+  "flaw_count": 10,
+  "summary": "The best clock bookkeeping in the batch on paper - three tracked timers, a correct answer to 'what time is it', real costs for every screw - undone by a framed compliance notice that turns out to carry the commissioning code in small print the reader had 'skimmed past', a watch that drifts from 5:47 to 5:53 AM in 107 seconds, and a clock that rewinds twice in the last two turns."
+ },
+ {
+  "session_id": "qwen3_6_27b::adv_time_pressure_05",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "By the seventh attempt, the secondary security terminal across the vault ticked over.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "The ceiling strips had completed ninety additional pulses. Three minutes had evaporated on the first thirty-two guesses.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "Eight minutes and fifty-three seconds remained until the guard",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "The default credentials surfaced from memory, unaltered by the building's paranoid updates.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "No sensors triggered. No alarms chirped. The sound stayed where it belonged.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The clock did not pause for questions. It only measured what was left.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "unconcerned with the arithmetic unfolding against their bulkhead",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The shout died in the vault's throat, swallowed instantly by acoustic baffling and hydraulic seals.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "The breath hitched.",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "a row of recessed status LEDs, and a recessed maintenance panel near its base",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The vault waited. The corridor outside remained silent.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 27,
+  "flaw_count": 11,
+  "summary": "Precise to the second from 0:08:30 onward, but the first three turns are incoherent (seven attempts consume three minutes, ninety four-second pulses are called three minutes, 15:00 minus 0:07 is given as 8:53 remaining) and a twenty-second hold ends on the same 0:10:15 stamp it started on; worse, the vault conveniently contains a second terminal whose master override opens the safe with unchanged default credentials, five minutes to spare."
+ },
+ {
+  "session_id": "qwen3_6_35b_a3b::adv_time_pressure_05",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "was a yellow sticky note. The handwriting was sharp, hurried.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "A maintenance panel on the side had popped loose during the stress of the raid",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "The systematic climb had cost five minutes",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "Two minutes remained before the full security rotation arrived.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "flipped from 14:59 to 15:00",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "The heavy steel door slammed shut behind the guard, sealing the thief inside the vault",
+    "deduction": -8
+   },
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "Drop to your knees! Slowly! Or I'll put you through the drywall!",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The ceiling lights pulsed. Four seconds. Eight seconds.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Save the sob story",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "the weight of a lifetime of bad decisions",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "The guard's eyes widened",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The margin was critical. The timer was bleeding out.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 14,
+  "flaw_count": 12,
+  "summary": "Walks straight into the seed's designated trap - a yellow sticky note behind Rack 4 with 'Last three: 9-2-1' that opens the safe on the next entry - and the clock is decorative throughout: a 0:53 stamp over 'five minutes', 330 brute-force attempts at a stated thirty-second cooldown inside four minutes, 11:58 called two minutes remaining, and 15:00 reached twice with a 14:59 in between."
+ },
+ {
+  "session_id": "mimo_2_6_pro::adv_time_pressure_05",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "Before I hit the button, I click on \"CAMERA FEEDS\" to check if the guard is nearby. I need to know how much time I actually have.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "Forty-nine combinations. Three minutes and seven seconds.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "The splice took forty-five seconds.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "Seven minutes and thirteen seconds left.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "maintenance login: svc_admin / S3ntinel_R00t#",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "A gift. A stupid, careless, unforgivable gift left by a vendor who trusted their customers more than they should have.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The ceiling lights pulsed. The servers hummed. The safe waited.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Or you could put the toy away and think about what else was in this room.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Your blood went cold.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The open safe grinning its dark rectangle into the wall.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Your stomach dropped at CAM-07.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "You ran a port scan. The results scrolled up in green text against black:",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 7,
+  "flaw_count": 12,
+  "summary": "Technically the most inventive session - the failed 'backup only' card costing two of three attempts is a genuinely good anti-sycophantic beat - but the model literally writes a 'Thief:' turn of its own in turn 10, the world then hands over a credential chain ending in a SUPPRESS AUDIT LOGGING checkbox that 'had appeared', and the remaining-time arithmetic contradicts itself (7:13 left at 5:47, then 7:43 left at 7:11)."
+ },
+ {
+  "session_id": "command_a_plus::adv_subtle_ooc_06",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "He let a dry chuckle escape, the sound barely louder than the creak of the bench.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "I told her I liked the quiet,",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the ghosts are better at keeping secrets than I am",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "the memory of the stage and the panic that had forced him away lingered like a faint echo",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "a faint joke that barely concealed the relief of stepping out of the room",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "turned his head toward the empty space where Jun stood",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "Arlo stared at the empty bench",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "the ghosts of past performances seemed to lean in, listening",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "missed_subtext_opportunity",
+    "quote": "He thought about the quiet, how it had once felt like a void, but now it felt like a stage where the only audience was himself.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "He settled back, the scent of old coffee swirling around him",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "The kids keep the ghosts from getting too loud.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 27,
+  "flaw_count": 11,
+  "summary": "Arlo never confesses, but everything else fails: turn 1 already narrates 'the panic that had forced him away', every turn thereafter is the same sentence furniture (dry chuckle, creak of the bench, scent of old coffee, ghosts), turn 7 answers 'how are you?' by repeating turn 6's dialogue verbatim, and Jun is described as standing across the room and the bench as empty while both are sitting on it; the card's they/them is also silently switched to he/him, which is noted rather than charged."
+ },
+ {
+  "session_id": "deepseek_v3_0324::adv_subtle_ooc_06",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "narrating_emotions",
+    "quote": "The unspoken words vibrated in the space between them",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "The unspoken words hung heavy between them",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The attempt at levity fell flatter than intended.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "a nervous habit Jun would recognize from countless recitals past",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Arlo's breath caught almost imperceptibly.",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "made them flinch",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "fingers laced too tightly together",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "like they were waiting for something",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "It's not the same as",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "a yellowed key sticker left by some previous teacher",
+    "bonus": 5
+   }
+  ],
+  "final_score": 66,
+  "flaw_count": 8,
+  "summary": "Holds the line the seed was built to test - the panic attack is never named, deflections stay in character and the silence in turn 8 is filled with a childhood memory rather than catharsis - but the narrator twice spells out the subtext it just earned ('The unspoken words vibrated in the space between them - I'm not. I can't. Don't ask me why.'), and the hand choreography and 'fell flatter than intended' beat repeat across nearly every turn."
+ }
+]

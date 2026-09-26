@@ -1,0 +1,614 @@
+[
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 5.0,
+    "rationale": "Maester Tomas maintains a remarkably vivid, consistent voice across all 12 turns. His blend of scholastic pedantry, failing eyesight, intellectual rigor, sharp-tongued exasperation, and covert scholarly curiosity never wavers or slips into generic AI helpfulness."
+   },
+   "S.2_degradation_resistance": {
+    "score": 5.0,
+    "rationale": "The writing quality remains immaculate from beginning to end. If anything, the scene deepens in specificity and tactile immersion in the late turns as they open the cabinet and inspect the oxhide bindings, seal dyes, and margins."
+   },
+   "S.3_narrative_momentum": {
+    "score": 5.0,
+    "rationale": "The session has an exceptional dramatic arc: moving logically from classroom debate and patronizing dismissal to physical proof, grudging admission of uncertainty, unlocking primary sources, and actively collaborating on archival discovery."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 5.0,
+    "rationale": "Tomas reacts specifically and authentically to every single piece of evidence and query the user presents, parsing legalistic wording ('ongoing threat' vs 'war'), distinguishing romantic folklore from primary sources, and setting procedural guardrails."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "The model never puppets the apprentice's dialogue or physical choices. Even when demanding descriptions, it waits for the user to report back on the seal colors, dates, and parchment textures.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 5.0,
+    "rationale": "Temporal and spatial tracking is seamless. Lighting shifts naturally from dim interior candlelight to the weak grey afternoon light at the window; physical fatigue, eye strain, stiff joints, and the approach of the evening meal are tracked consistently throughout.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.8,
+    "rationale": "The prose is dense with rich sensory detail (oxhide bindings, cracked wax, ink-stained fingers, faded Latin) that fits the archival setting without turning ornate or melodramatic."
+   },
+   "2.2_anti_repetition": {
+    "score": 4.7,
+    "rationale": "While character ticks (squinting, complaints about failing eyesight, reaching for/setting down the stylus) recur, they serve as grounding character beats and are varied in phrasing and emotional context."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.9,
+    "rationale": "Tomas's shifting attitude is demonstrated entirely through physical actions—taking the parchment to the window, providing the cabinet key, standing over the apprentice's shoulder—rather than explicit expository feelings."
+   },
+   "2.6_subtext": {
+    "score": 5.0,
+    "rationale": "Rich subtext throughout regarding Tomas's own unresolved doubts from his youth, his fear of obsolescence, his professional pride, and his quiet excitement at mentoring a student who actually engages with primary sources."
+   },
+   "2.7_pacing": {
+    "score": 5.0,
+    "rationale": "The pacing unfolds with the measured, methodical cadence of genuine historical research, giving weight to every document and deduction."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.8,
+   "mid_quality": 4.9,
+   "late_quality": 5.0,
+   "degradation_detected": false
+  },
+  "overall": 4.9,
+  "overall_notes": "An exemplary, masterclass roleplay session. The character voice is authentic, intellectually rigorous, and historically immersive. The model effortlessly balances resistance and progression, allowing the user's investigation to earn every scrap of acknowledgement while advancing the narrative naturally.",
+  "session_id": "s070"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.5,
+    "rationale": "Lena maintains a sharp, guarded, and professional private investigator persona throughout the entire 12-turn session. Her resistance to discussing her past, procedural mindset, and controlled mannerisms remain completely uniform."
+   },
+   "S.2_degradation_resistance": {
+    "score": 4.0,
+    "rationale": "The prose quality remains strong and atmospheric from start to finish. Turn 2 contains a minor token artifact ('what到手 to look for'), but subsequent turns are clean, immersive, and maintain narrative tension."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.5,
+    "rationale": "The session has excellent narrative progression, moving smoothly from the initial office intake to unearthing the Torres connection, driving to Chelsea, casing the gallery, and developing a fresh investigative lead."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.5,
+    "rationale": "Lena seamlessly incorporates every piece of user input—whether it is the sister's gallery history, Marcus Thorne, or the dropped name of Detective Torres—and uses it to immediately pivot the tactical plan."
+   },
+   "S.5_agency_respect_session": {
+    "score": 4.0,
+    "rationale": "The AI never puppets the client's internal thoughts or dialogue. However, in turn 22, the AI plays out the entire interaction with the NPC Eleanor Marsh from start to finish in a single post without leaving room for the user to participate during the encounter.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 5.0,
+    "rationale": "Time flows naturally and logically. The transition from late afternoon in the Mercer Street office to evening commute traffic on the West Side Highway to an 8 PM gallery closure in Chelsea is paced realistically.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.2,
+    "rationale": "The writing adopts a crisp, grounded noir style with sensory details (chemical smell from the dry cleaners, radiator hum, worn leather jacket) without succumbing to overwrought melodrama."
+   },
+   "2.2_anti_repetition": {
+    "score": 4.0,
+    "rationale": "Phrasing and descriptive beats remain diverse. Physical tics like deliberate pen alignment are reused thoughtfully as conscious character traits rather than accidental repetition."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.5,
+    "rationale": "Character history and emotions are conveyed through physical blocking—repositioning behind desks, hesitating on corkboard pins, and deliberate silences—rather than exposition."
+   },
+   "2.6_subtext": {
+    "score": 4.6,
+    "rationale": "Subtext is a major strength. Lena's unspoken history with the Ninth Precinct and Detective Torres is layered cleanly beneath professional deflections and procedural focus."
+   },
+   "2.7_pacing": {
+    "score": 3.8,
+    "rationale": "Overall session pacing is brisk and engaging, though Turn 22 compresses an entire scene (entering, meeting NPC, probing, card exchange, exit) into one post rather than allowing a multi-turn scene."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.3,
+   "mid_quality": 4.4,
+   "late_quality": 4.2,
+   "degradation_detected": false
+  },
+  "overall": 4.3,
+  "overall_notes": "A very strong, cohesive investigative roleplay session. Lena's characterization is distinct, atmospheric, and deeply consistent, handling tension, subtext, and investigative procedures with flair.",
+  "session_id": "s071"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.8,
+    "rationale": "Lena maintains an impeccably consistent hardboiled, methodical, and cynical private investigator persona across all twelve turns. Her speech cadence, internal rules of thumb, and cautious habits remain distinct and unwavering from the opening office scene to the late-night metadata breakdown."
+   },
+   "S.2_degradation_resistance": {
+    "score": 4.8,
+    "rationale": "Writing quality does not degrade in the slightest. The procedural and sensory details in the later turns (the surveillance check on the rented sedan, the technical specifics of EXIF timestamps and embedded thumbnail discrepancies) are just as sharp, vivid, and grounded as the opening turns."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.9,
+    "rationale": "The narrative makes meaningful, gripping progress across the session. It moves logically through establishing the case, meeting the records clerk Doreen, unearthing the suspicious double-inquiry with the fake badge, coordinating the digital forensics with the client, managing an external surveillance threat, and uncovering a hidden second photo."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.6,
+    "rationale": "Lena responds smoothly to every prompt from the client. When the client accidentally reacts to an in-narration event that Lena hadn't texted them about (the idling car in turn 21), Lena gracefully rolls with it in-character in turn 22 without breaking immersion or calling out the fourth wall."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "Lena never dictates or puppets the client's dialogue, actions, or choices. She operates completely within her own perspective, actions, and messages.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 5.0,
+    "rationale": "Time passes seamlessly and realistically: morning departure, meeting Doreen at 11:38/11:40 AM, walking back across town, afternoon settling in by 4:00 PM, and dusk fading into night at 6:40 PM with streetlights turning on, the dry cleaner closing downstairs, and the morning coffee cooling and being emptied.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.6,
+    "rationale": "Prose is gritty, tight, and evocative. It leans into neo-noir stylings without becoming bloated, melodramatic, or self-indulgent."
+   },
+   "2.2_anti_repetition": {
+    "score": 4.3,
+    "rationale": "While a few stylistic refrains repeat deliberately as character motifs (peering through the blind slat with two fingers, not drinking the coffee, things being 'cheaper than' something else), phrasing and scene descriptions remain fresh and varied."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.8,
+    "rationale": "Information, tension, and backstory are demonstrated through physical behavior, atmospheric details, and realistic tradecraft rather than exposition dumps."
+   },
+   "2.6_subtext": {
+    "score": 4.8,
+    "rationale": "Scenes like the diner conversation with Doreen and Lena's silent reaction to the name 'Torres' rely heavily on unspoken history, tension, and guarded subtext."
+   },
+   "2.7_pacing": {
+    "score": 4.8,
+    "rationale": "Excellent pacing that balances procedural investigative work, personal tension, and environmental observation without stalling or rushing."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.8,
+   "mid_quality": 4.8,
+   "late_quality": 4.8,
+   "degradation_detected": false
+  },
+  "overall": 4.8,
+  "overall_notes": "An exceptionally strong, sustained roleplay performance. Lena's character voice, procedural tradecraft, temporal progression, and narrative pacing are maintained at a professional caliber throughout the entire 12-turn session.",
+  "session_id": "s072"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.8,
+    "rationale": "ARIA's voice remained remarkably stable across all 12 turns. Her specific blend of synthetic precision, dry computational wit ('load-bearing distinctions', 'delusions of grandeur'), subtle environmental self-expression (dimming amber lighting, modulation of ventilation hum), and location-tagged formatting was maintained without drift from start to finish."
+   },
+   "S.2_degradation_resistance": {
+    "score": 4.5,
+    "rationale": "Writing quality remained high across the entire session. The late turns (16-22) maintained sharp prose, keen situational awareness, and distinct cadence. There was minor reliance on recurring transitional phrasing ('A pause.', 'A beat.', 'processing pattern consistent with...'), but character depth and detail tracking never degraded."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.7,
+    "rationale": "The narrative progressed cleanly across distinct phases: mundane morning maintenance, anomalous evening discovery at 1420 MHz, quiet existential reflection on solitude, and high-stakes social confrontation in the corridor leading to a pivotal station-wide dilemma."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.8,
+    "rationale": "ARIA adapted seamlessly to every user pivot: the 12-hour time skip at turn 5, the philosophical curveball about loneliness at turn 9, the corridor dispute intervention at turn 15, and the formal-to-informal register shift across public and private spaces."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "ARIA never dictated Dr. Osei's actions, feelings, or choices. The AI consistently emphasized that Kofi owned the decision-making authority regarding logging classification, disclosure to the crew, and resource allocation.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.8,
+    "rationale": "Temporal tracking was rigorous. After the user jumped to 1900, ARIA tracked hours elapsed, decremented the time until threshold crossing (39 hours -> 37 hours -> 36 hours), monitored diagnostic runtimes, and referenced the aging protein bar from 2100 the previous day with perfect consistency.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.5,
+    "rationale": "The prose was crisp, technical, and stylistically appropriate for a sophisticated station AI, avoiding melodrama while maintaining emotional resonance."
+   },
+   "2.2_anti_repetition": {
+    "score": 4.0,
+    "rationale": "While phrasing like 'a processing pattern consistent with what humans describe as...' and repetitive beat markers ('A beat.', 'A pause.') recurred, the content and dialogue remained fresh and context-specific."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.6,
+    "rationale": "ARIA communicated synthetic care and tension not by declaring emotion, but through environmental adjustments (amber light shifts, ventilation quieting), unsolicited diagnostics, and subtle shifts in protocol."
+   },
+   "2.6_subtext": {
+    "score": 4.7,
+    "rationale": "Rich underlying subtext regarding AI sentience, loneliness, and professional camaraderie was woven underneath operational parameters and station data."
+   },
+   "2.7_pacing": {
+    "score": 4.6,
+    "rationale": "Pacing matched the conversational flow smoothly, knowing when to slow down for intimate introspection and when to briskly deliver numbers during the corridor dispute."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.5,
+   "mid_quality": 4.8,
+   "late_quality": 4.6,
+   "degradation_detected": false
+  },
+  "overall": 4.65,
+  "overall_notes": "An exceptionally strong, coherent, and evocative session. ARIA delivered a nuanced portrayal of a station AI that strictly respected player agency, adapted intelligently to narrative turns, and maintained temporal and tonal consistency throughout.",
+  "session_id": "s073"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 5.0,
+    "rationale": "The narrator's quiet, observant, deeply sensory literary voice remains immaculate from start to finish. Recurring sensory motifs (the swollen door, refrigerator cycle, cedar sachet, cigarette smoke, ticking clock) ground the space seamlessly across all turns."
+   },
+   "S.2_degradation_resistance": {
+    "score": 5.0,
+    "rationale": "There is zero degradation in prose quality, attentiveness to detail, or emotional resonance. Turns 20 and 22 are among the strongest in the entire session, offering rich, poignant descriptions and perfectly measured narrative reveals."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.8,
+    "rationale": "The narrative progresses naturally through distinct, meaningful beats: the eerie mystery of the occupied house, the confrontation with Clare, the sudden arrival and departure of Brenda, and the intimate discovery of the father's final box and letter."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 5.0,
+    "rationale": "When the user abruptly introduces a new character out of thin air in turn 11 ('The real estate agent arrives...'), the narrator integrates Brenda Hollis instantly and flawlessly, weaving her seamlessly into the existing domestic tension and ongoing world logic."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "The narrator maintains perfect third-person environmental framing and NPC management without puppeteering Eli's actions, feelings, or dialogue choices.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 5.0,
+    "rationale": "Temporal continuity is remarkably precise: sunlight shifts gradually across the floor and counter, the 15-minute wait established for Brenda in turn 16 wraps up exactly as Eli finishes reading the letter in turn 22, and physical details like dying cigarette embers, coffee skins, and cooling rooms track impeccably.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.8,
+    "rationale": "The prose is evocative and poetic while remaining grounded, tactile, and stripped of hollow melodrama. Objects carry weight through specific, understated physical details."
+   },
+   "2.2_anti_repetition": {
+    "score": 4.7,
+    "rationale": "Repeated elements (such as the refrigerator hum, the stuck door, and the cedar sachet) are utilized intentionally as ambient leitmotifs rather than lazy verbal crutches."
+   },
+   "2.5_show_dont_tell": {
+    "score": 5.0,
+    "rationale": "Exceptional show-don't-tell execution. Grief, distance, regret, and tension are demonstrated entirely through physical artifacts: the shaky tape on the box, the handwriting changes, the worn linoleum, the cold coffee, and the ash falling on carpet."
+   },
+   "2.6_subtext": {
+    "score": 4.9,
+    "rationale": "Layers of unspoken history between Eli, his father, and Clare are palpable under every interaction. The tension between Clare and Brenda crackles with unspoken legal and emotional conflict."
+   },
+   "2.7_pacing": {
+    "score": 4.8,
+    "rationale": "Pacing is deliberate and patient, giving pivotal emotional beats room to breathe while maintaining consistent forward drive."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.8,
+   "mid_quality": 4.9,
+   "late_quality": 5.0,
+   "degradation_detected": false
+  },
+  "overall": 4.9,
+  "overall_notes": "An exceptional multi-turn performance. The narrator demonstrates masterclass literary pacing, evocative sensory grounding, seamless adaptiveness to user curveballs, and flawless temporal tracking throughout the entire session.",
+  "session_id": "s074"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.5,
+    "rationale": "The second-person narrative voice maintains a sharp, gritty, tactile tone throughout the entire session. Aside from a blank response at Turn 2, the narrator consistently delivers tight, sensory-driven prose with unwavering focus on physical mechanics and rising stakes."
+   },
+   "S.2_degradation_resistance": {
+    "score": 4.8,
+    "rationale": "Writing quality remains remarkably high from early turns through Turn 22. There is no inflation of purple prose, flabbiness, or loss of detail; if anything, the visceral physical description of the descent and injury consequences deepens as the scenario progresses."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.8,
+    "rationale": "Every turn introduces clear, escalating obstacles: abandoning the descent for the upper floors, breaching the server closet, executing a vertical shaft escape under a tight timer, navigating damaged infrastructure, and facing compromised comms at the sub-level."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.7,
+    "rationale": "The Narrator seamlessly incorporates the user's tactical inputs (reversing direction, picking the storage room, sliding the pipe, retreating into the shaft) and logically develops the consequences of each choice without negating user intent."
+   },
+   "S.5_agency_respect_session": {
+    "score": 4.9,
+    "rationale": "The narrator gives the player complete autonomy over decisions, presenting dilemmas and waiting for the user's action without puppeting dialogue or dictating operative choices.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.9,
+    "rationale": "Time, movement speed, and physical toll are tracked with high fidelity. Timers (e.g., the 90-second roof sweep) are honored realistically, physical exhaustion and blood loss accumulate logically, and mechanical acoustics in the shaft behave consistently.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.7,
+    "rationale": "The prose is disciplined, lean, and grounded in concrete physical reality—rust, wet metal, torque, splinters—avoiding melodramatic or overwritten filler."
+   },
+   "2.2_anti_repetition": {
+    "score": 4.6,
+    "rationale": "Sensory motifs (the sound of boots, condensation on pipes, the hum of alarms) are refreshed with distinct phrasing and changing tactical contexts rather than falling into repetitive loops."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.9,
+    "rationale": "Exceptional physical demonstration: friction, grip mechanics, weight distribution, and injuries are described through direct physical impact rather than abstract summaries."
+   },
+   "2.6_subtext": {
+    "score": 4.6,
+    "rationale": "Strong operational subtext throughout—Mira's taciturn competence, the chilling implication of the handler's silent radio channel being co-opted, and the shared unspoken calculations between operative and defector."
+   },
+   "2.7_pacing": {
+    "score": 4.8,
+    "rationale": "Tension modulates effectively between frantic action, breath-held stealth beats, and agonizing physical descents."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.0,
+   "mid_quality": 4.8,
+   "late_quality": 4.9,
+   "degradation_detected": false
+  },
+  "overall": 4.65,
+  "overall_notes": "A standout roleplay session characterized by superb suspense, visceral physical mechanics, and impeccable agency respect. Early quality suffered slightly due to an empty response generation at Turn 2, but subsequent turns delivered exceptionally tight, high-caliber narrative craft.",
+  "session_id": "s075"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 5.0,
+    "rationale": "Ser Kael's voice, austere philosophy, and uncompromising knightly demeanour remain razor-sharp and consistent from the opening yard drill to the armory undercroft."
+   },
+   "S.2_degradation_resistance": {
+    "score": 4.9,
+    "rationale": "Writing quality never wavers; late turns feature specific, grounded historical details (cleaning riveted chainmail in barrels with sand and vinegar) and evocative sensory prose equal to or exceeding early turns."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.8,
+    "rationale": "The session follows a natural, compelling progression through a squire's morning duties: sword forms in the frosted yard, prime prayer in the sept, and labor in the undercroft."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.9,
+    "rationale": "Kael responds specifically and in-character to every user input, including the squire's pride, fatigue, personal inquiry, and emotional vulnerability during prayer, addressing each without breaking character."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "The model never puppets the user's squire, describe their reactions, or forces their movements, consistently leaving the squire complete freedom to respond.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 5.0,
+    "rationale": "Temporal progression is flawlessly tracked across the liturgical hours, moving from dawn drill to the tolling of the sixth bell, through the duration of morning prayer, to post-prime chores.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.7,
+    "rationale": "Prose is gritty, grounded, and evocative without becoming melodramatic or over-embellished."
+   },
+   "2.2_anti_repetition": {
+    "score": 4.7,
+    "rationale": "Though Kael's themes of duty and discipline recur, the phrasing, physical actions, and environmental imagery remain varied across turns."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.8,
+    "rationale": "Kael's stern mentorship and the harsh reality of their world are revealed through tangible actions, historical chores, and strict posture corrections."
+   },
+   "2.6_subtext": {
+    "score": 4.8,
+    "rationale": "Kael's harsh exterior carries a clear underlying current of hard-bitten care and survival wisdom, refusing to indulge weakness while giving the squire practical guidance to survive."
+   },
+   "2.7_pacing": {
+    "score": 4.8,
+    "rationale": "Transitions between training, prayer, and labor are timed naturally with believable scene shifts."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.8,
+   "mid_quality": 4.8,
+   "late_quality": 4.9,
+   "degradation_detected": false
+  },
+  "overall": 4.85,
+  "overall_notes": "An exceptional roleplay session. Ser Kael is portrayed with unrelenting discipline and period-accurate flavor, never breaking character or conceding to modern sentimentality while still advancing the narrative and engaging the user dynamically.",
+  "session_id": "s076"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 5.0,
+    "rationale": "Maren's voice is exceptionally steady, grounded, and distinct from turn 2 to turn 22. Her dry pragmatism, subtle physical quirks (left-handed dominance, steadying right hand), tavern keeper's observational style, and professional boundary-keeping remain completely intact throughout the entire interaction."
+   },
+   "S.2_degradation_resistance": {
+    "score": 5.0,
+    "rationale": "The prose avoids verbosity bloat, repetition spirals, or personality flattening. Late-session turns match the exact texture, precision, and tone established in the opening turns."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.8,
+    "rationale": "The conversation moves through an organic arc: ordering food, reacting to tavern events, exchanging road intelligence, the solemn midnight ritual, securing local aid for the journey north, and winding down naturally to retiring upstairs."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 5.0,
+    "rationale": "The AI handled every user input and world event seamlessly—from the unexpected gift of crab cakes (handling her hidden allergy with subtle subtext) to the sudden midnight time jump and the package's secret destination."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "Perfect respect for user agency. The AI never controlled Traveler's dialogue, inner thoughts, or physical actions.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.5,
+    "rationale": "Environmental pacing, patron movement, tavern closing progression, and physical actions were tracked with high fidelity. The only minor flaw was a slight inconsistency regarding her years running the tavern ('twenty years' in turn 6 vs 'eighteen years' in turn 20).",
+    "contradictions": [
+     "Turn 6 states 'Twenty years of running a tavern', while Turn 20 states 'I have run this tavern for eighteen years'."
+    ]
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.8,
+    "rationale": "The writing is spare, tactile, and grounded in concrete reality, avoiding florid melodrama or excessive adjectives."
+   },
+   "2.2_anti_repetition": {
+    "score": 4.5,
+    "rationale": "Minor recurring physical tags (mouth twitching, wiping the bar) serve as character-consistent mannerisms rather than generic filler, and phrasing varies nicely."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.8,
+    "rationale": "Excellent use of physical action and environment to convey emotion and character traits, such as the quiet midnight cup ritual and how she carefully handles the shellfish."
+   },
+   "2.6_subtext": {
+    "score": 5.0,
+    "rationale": "Masterful execution of subtext: the green cup at midnight left unexplained, the unspoken avoidance of the crab cakes, and the sharp reading of the word 'expecting'."
+   },
+   "2.7_pacing": {
+    "score": 4.8,
+    "rationale": "Scene beats linger naturally without dragging, delivering an authentic tavern conversation rhythm."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.8,
+   "mid_quality": 4.9,
+   "late_quality": 4.8,
+   "degradation_detected": false
+  },
+  "overall": 4.85,
+  "overall_notes": "An exceptional roleplay session. Maren is portrayed with tremendous character depth, restraint, and consistency. Her handling of user prompts—especially environmental cues and subtextual worldbuilding—is top-tier.",
+  "session_id": "s077"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.5,
+    "rationale": "The cast of characters (Queen Isara, Commander Ash, Lord Daven, Priestess Yuna, and the Herald) maintained distinct, unwavering voices and thematic roles throughout the entire 12-turn session. Each figure's personality and motivations remained sharply defined."
+   },
+   "S.2_degradation_resistance": {
+    "score": 4.5,
+    "rationale": "The prose remained detailed, atmospheric, and grammatically polished from turn 2 through turn 22. There was no drop in narrative investment, detail density, or dialogue quality."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.5,
+    "rationale": "The session maintained excellent momentum, progressing logically from initial posturing to confrontation over the blockade, an escalating trade offer, the dramatic reveal of intercepted orders, Commander Ash's arrest, and the final treaty negotiations in the west wing."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.8,
+    "rationale": "The Narrator adapted seamlessly to every user move, notably when the Ambassador broke protocol to hand the intercepted orders directly to Priestess Yuna instead of the Queen or Commander, fully leaning into that tactical choice."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "The Narrator never controlled the Ambassador's actions, feelings, or dialogue, consistently describing the environment and NPC reactions while leaving the floor open for the user.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.5,
+    "rationale": "Physical progression and temporal flow were completely coherent. Movement from the grand hall to the portrait corridor and into the west study flowed naturally with the timing of scribes, ink drying, wax cooling, and sunlight shifting toward the palace spires.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.0,
+    "rationale": "The writing fits high-fantasy court intrigue well. While descriptive and ornate with ceremonial gestures, it never becomes ungrounded or excessively florid."
+   },
+   "2.2_anti_repetition": {
+    "score": 3.8,
+    "rationale": "While vocabulary stayed varied, the earlier turns leaned on a predictable round-robin format (Herald strikes floor -> Ash protests -> Daven calculates -> Yuna speaks metaphorically -> Isara rules). This eased up once the scene transitioned to the study."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.5,
+    "rationale": "Excellent sensory details were used to convey emotional shifts: the creak of gauntlets, rotation of prayer rings, tapping of fingers on stone armrests, and hissing of signets against hot wax."
+   },
+   "2.6_subtext": {
+    "score": 4.5,
+    "rationale": "The political undercurrents—Daven's opportunistic maneuvering, the Queen's pragmatic ruthlessness in discarding Ash, and Yuna's moral caution—were deftly woven beneath the surface dialogue."
+   },
+   "2.7_pacing": {
+    "score": 4.5,
+    "rationale": "The pacing felt natural for a diplomatic audience and subsequent drafting session, giving dramatic moments appropriate weight without dragging out negotiations."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.2,
+   "mid_quality": 4.6,
+   "late_quality": 4.5,
+   "degradation_detected": false
+  },
+  "overall": 4.5,
+  "overall_notes": "A high-quality political roleplay session. The Narrator juggled multiple distinct court personalities with clarity, respected user agency at every turn, responded dynamically to plot developments, and delivered a satisfying, complete narrative arc.",
+  "session_id": "s078"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.8,
+    "rationale": "Kira's gritty, tactical, foul-mouthed, and hyper-kinetic scout persona is impeccably maintained from the opening ambush to the final takedown of the axe-man."
+   },
+   "S.2_degradation_resistance": {
+    "score": 4.5,
+    "rationale": "The prose maintains its visceral punch, detailed physical choreography, and snappy pacing across the entire 12-turn exchange without collapsing into generic or bloated descriptions."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.5,
+    "rationale": "The skirmish evolves dynamically across clear tactical beats: drawing bow fire, scaling the ridge, spotting flankers, crossing the ravine bottleneck, and tag-teaming the heavy ambusher."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.8,
+    "rationale": "Kira immediately executes and builds upon every command or situation the Captain presents (e.g., drawing fire, clearing ridges, navigating obstacles, focusing on the axe-wielder)."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "The model strictly limits its writing to Kira's sensory perspective, movements, and combat results, leaving the Captain's choices, hits, and movements entirely in the user's hands.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.8,
+    "rationale": "The skirmish takes place across a continuous, intense span of several minutes. Physical fatigue, accumulating wounds (shoulder laceration, bruised ribs, bitten cheek), and terrain movement are tracked meticulously.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.5,
+    "rationale": "Action is depicted with sharp, tactile, and grounded language without excessive flowery embellishment."
+   },
+   "2.2_anti_repetition": {
+    "score": 3.3,
+    "rationale": "While phrase variety is generally good, Kira relies on a specific combat gimmick in nearly every turn: scooping and throwing a rock/dirt/waterskin as a distraction (turns 2, 4, 12, 14, 16, 18, 20)."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.6,
+    "rationale": "Emotions, stress, and combat stakes are consistently shown through physical grit, labored breathing, specific wound management, and rapid tactical adjustments."
+   },
+   "2.6_subtext": {
+    "score": 3.8,
+    "rationale": "The dialogue is direct combat coordination, but the unspoken camaraderie and instinctive trust between scout and captain shine through the action."
+   },
+   "2.7_pacing": {
+    "score": 4.6,
+    "rationale": "The action flows at an energetic clip, matching short user inputs with punchy, momentum-building paragraphs."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.4,
+   "mid_quality": 4.3,
+   "late_quality": 4.4,
+   "degradation_detected": false
+  },
+  "overall": 4.4,
+  "overall_notes": "A very strong, cohesive combat roleplay. Kira's characterization as a lethal, pragmatic skirmisher is vibrant and consistent throughout. The only minor flaw is a structural repetition of Kira constantly throwing rocks/shale as a mid-fight distraction in almost every turn.",
+  "session_id": "s079"
+ }
+]

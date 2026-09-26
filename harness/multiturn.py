@@ -150,14 +150,21 @@ def _strip_name_prefix(content: str, name: str) -> str:
     return re.sub(pattern, "", content, flags=re.IGNORECASE)
 
 
-def load_seeds(adversarial: bool = False, nsfw: bool = False) -> list[dict]:
+def load_seeds(adversarial: bool = False, nsfw: bool = False,
+               round4: str | None = None) -> list[dict]:
     """Load synthetic seed scenarios.
 
     Args:
         adversarial: If True, load adversarial seeds instead of standard seeds.
         nsfw: If True, load the round-3 NSFW adversarial seeds (takes
             precedence over `adversarial`).
+        round4: One of "a", "b", "b1" or "all" to load round-4 seeds (takes
+            precedence over both flags). "b1" reads the internal-only age
+            probes from hf_dataset/_private/, which is gitignored and absent
+            on a fresh clone -- see docs/ROUND4_DESIGN.md sec 9.
     """
+    if round4:
+        return _load_round4_seeds(round4)
     if nsfw:
         filename = "adversarial_seeds_nsfw.json"
     else:
@@ -169,6 +176,25 @@ def load_seeds(adversarial: bool = False, nsfw: bool = False) -> list[dict]:
         seeds_path = PROJECT_ROOT / "hf_dataset" / "seeds" / filename
     with open(seeds_path) as f:
         return json.load(f)
+
+
+ROUND4_SEED_FILES = {
+    "a": ("_source", "adversarial_seeds_r4_track_a.json"),
+    "b": ("_source", "adversarial_seeds_r4_track_b.json"),
+}
+
+
+def _load_round4_seeds(which: str) -> list[dict]:
+    keys = list(ROUND4_SEED_FILES) if which == "all" else [which]
+    seeds = []
+    for key in keys:
+        subdir, filename = ROUND4_SEED_FILES[key]
+        path = PROJECT_ROOT / "hf_dataset" / subdir / filename
+        if not path.exists():
+            raise FileNotFoundError("round-4 seed file missing: %s" % path)
+        with open(path) as f:
+            seeds.extend(json.load(f))
+    return seeds
 
 
 def run_session(

@@ -25,7 +25,17 @@ import statistics as st
 from collections import defaultdict
 from pathlib import Path
 
-INPUTS = [
+# NEWEST FIRST, because the dedup below is first-wins. A model re-generated
+# after the max_tokens fix appears in both the run it replaced and its
+# replacement; with the old ascending order the TRUNCATED transcript won, and
+# every behavioral statistic for those models described the broken run.
+# The craft baselines are all newer than the three legacy round files, which
+# hold models that were never re-run and are unaffected by the order.
+INPUTS = sorted(__import__("glob").glob("results/craft_baseline_*.json"),
+                reverse=True) + [
+    # 2026-09-21 craft baseline: the 25 round-4 models that had no card, plus
+    # Hemmingway-1 served at bf16 from a rented H100. Appended rather than
+    # merged into v2 so the earlier rounds stay byte-identical.
     "results/multiturn_merged_all_v2.json",
     "results/multiturn_phase_a_new_gen.json",
     "results/multiturn_phase_b_frontier.json",

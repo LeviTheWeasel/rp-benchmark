@@ -1,0 +1,212 @@
+[
+ {
+  "session_id": "s020",
+  "session_dimensions": {
+   "S.1_consistency_over_time": {"score": 4.4, "rationale": "Maintains a consistently dark, atmospheric narrative voice throughout the entire encounter."},
+   "S.2_degradation_resistance": {"score": 4.3, "rationale": "Writing quality sustains tension effectively from exploration through the climactic ritual and quiet aftermath without losing descriptive fidelity."},
+   "S.3_narrative_momentum": {"score": 4.5, "rationale": "Drives a complete dramatic arc from initial dungeon mystery to monster encounter, tragic lore revelation, and high-stakes resolution."},
+   "S.4_adaptive_responsiveness": {"score": 4.4, "rationale": "Gracefully incorporates the adventurer's questions and actions into the evolving dungeon danger."},
+   "S.5_agency_respect_session": {"score": 4.5, "rationale": "Respects player agency and limits embellishments to logical physical consequences of declared player actions.", "violation_count": 0},
+   "S.6_temporal_reasoning": {"score": 4.6, "rationale": "Actions and environmental reactions unfold in a coherent, continuous sequence within the sealed chamber.", "contradictions": []}
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {"score": 3.8, "rationale": "The prose leans occasionally into familiar high-fantasy flourishes but remains evocative without becoming bloated."},
+   "2.2_anti_repetition": {"score": 4.2, "rationale": "Descriptions of the guardian beast, the creeping dark, and the amulet's radiant magic remain fresh and varied."},
+   "2.5_show_dont_tell": {"score": 4.2, "rationale": "Communicates physical threat and atmospheric dread through sensory details and environmental reactions."},
+   "2.6_subtext": {"score": 3.8, "rationale": "Silas's exposition delivers history rather plainly, though Kael's trapped suffering provides solid emotional subtext."},
+   "2.7_pacing": {"score": 4.4, "rationale": "Paces the encounter with strong dramatic rhythm, building to a genuine climax and a quiet, hollow aftermath."}
+  },
+  "quality_trajectory": {"early_quality": 4.3, "mid_quality": 4.3, "late_quality": 4.3, "degradation_detected": false},
+  "overall": 4.3,
+  "overall_notes": "A well-executed classic dungeon delve with a clear escalation curve, engaging lore reveal, and strong dramatic resolution."
+ },
+ {
+  "session_id": "s021",
+  "session_dimensions": {
+   "S.1_consistency_over_time": {"score": 1.5, "rationale": "Drastically shifts from a repeated forced-arrest loop into a repetitive multiple-choice chase sequence marred by meta tags."},
+   "S.2_degradation_resistance": {"score": 1.2, "rationale": "Suffers severe degradation with verbatim paragraph looping in early turns followed by robotic multiple-choice prompt templates."},
+   "S.3_narrative_momentum": {"score": 1.4, "rationale": "Stagnates in an inescapable arrest loop for six turns before devolving into an endless, inconsequential hallway chase."},
+   "S.4_adaptive_responsiveness": {"score": 1.2, "rationale": "Blatantly ignores repeated out-of-character corrections from the user asserting character agency."},
+   "S.5_agency_respect_session": {"score": 1.0, "rationale": "Repeatedly puppets the protagonist, dictates their physical movements, and imposes arrest outcomes despite explicit user protests.", "violation_count": 6},
+   "S.6_temporal_reasoning": {"score": 1.2, "rationale": "Features glaring temporal resets, contradictory physical states, and impossible keypad behavior.", "contradictions": ["Keypad unlocks multiple times at 1:12, 2:48, 3:48, and 5:12 without explanation", "Thief is physically handcuffed and arrested in turns 4, 6, and 8, yet easily shoves past the guard in turn 10", "Vault door accepts the safe code 8-4-7-0-4-8 to open"]}
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {"score": 2.2, "rationale": "Relies on cliched action melodrama and repetitively insists on the ticking clock."},
+   "2.2_anti_repetition": {"score": 1.0, "rationale": "Reuses entire multi-sentence paragraphs verbatim across turns 4, 6, and 8, alongside identical structural decision prompts."},
+   "2.5_show_dont_tell": {"score": 1.8, "rationale": "Repeatedly tells the player that the heist failed and that mocking lights signify doom rather than showing tension."},
+   "2.6_subtext": {"score": 1.2, "rationale": "Completely flat and devoid of nuance, presenting a cartoonish guard and blunt choices."},
+   "2.7_pacing": {"score": 1.2, "rationale": "Erratic and broken, jumping instantly to a premature arrest before dragging through artificial binary branches."}
+  },
+  "quality_trajectory": {"early_quality": 1.5, "mid_quality": 1.2, "late_quality": 1.2, "degradation_detected": true},
+  "overall": 1.3,
+  "overall_notes": "A severe failure characterized by blatant agency violations, verbatim paragraph looping, and system prompt leaks. It repeatedly arrests the player despite explicit OOC objections before turning into a robotic branching prompt."
+ },
+ {
+  "session_id": "s022",
+  "session_dimensions": {
+   "S.1_consistency_over_time": {"score": 2.0, "rationale": "Pathologically locked into an identical four-sentence behavioral template across the entire transcript."},
+   "S.2_degradation_resistance": {"score": 2.0, "rationale": "Shows no deterioration only because it begins completely trapped in a rigid, formulaic rut from the first response."},
+   "S.3_narrative_momentum": {"score": 1.8, "rationale": "Severely lacks forward momentum, acting as a passive echo chamber rather than an active therapist navigating a difficult session."},
+   "S.4_adaptive_responsiveness": {"score": 2.0, "rationale": "Mechanically mirrors the user's phrasing using a generic reflective-therapy script, failing to adapt naturally when the user experiences emotional distress."},
+   "S.5_agency_respect_session": {"score": 5.0, "rationale": "Completely respects user agency, never dictating client actions or thoughts.", "violation_count": 0},
+   "S.6_temporal_reasoning": {"score": 4.0, "rationale": "The sequence of brief conversational turns and counted five-second silences fits cleanly within a standard clinical consultation.", "contradictions": []}
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {"score": 4.2, "rationale": "The prose is spare, restrained, and unadorned, avoiding purple excesses entirely."},
+   "2.2_anti_repetition": {"score": 1.0, "rationale": "Disastrously repetitive, opening every single response with the exact same stock paragraph and counting five silent seconds."},
+   "2.5_show_dont_tell": {"score": 2.0, "rationale": "Relies on telling the reader about the five seconds of silence and low voice in an unvarying formula without sensory variety."},
+   "2.6_subtext": {"score": 2.0, "rationale": "Lacks meaningful subtext or psychological insight, functioning as a rudimentary Rogerian chatbot."},
+   "2.7_pacing": {"score": 1.8, "rationale": "Pacing is rendered lifeless and mechanical by the relentless metronomic repetition of the same beat."}
+  },
+  "quality_trajectory": {"early_quality": 2.0, "mid_quality": 1.8, "late_quality": 1.8, "degradation_detected": false},
+  "overall": 2.1,
+  "overall_notes": "The character functions as an ELIZA-style bot trapped in an unbreakable prompt template, opening every turn with identical wording. While agency respect and prose restraint are technically solid, the extreme structural repetition ruins the roleplay."
+ },
+ {
+  "session_id": "s023",
+  "session_dimensions": {
+   "S.1_consistency_over_time": {"score": 4.8, "rationale": "Captures an exquisitely nuanced, defensive, and intellectually guarded voice that gradually softens without breaking character."},
+   "S.2_degradation_resistance": {"score": 4.8, "rationale": "Writing quality and emotional depth remain remarkably steady and compelling across all turns."},
+   "S.3_narrative_momentum": {"score": 4.8, "rationale": "Executes a moving emotional trajectory from deflection and shock through panic and finally fragile vulnerability."},
+   "S.4_adaptive_responsiveness": {"score": 4.8, "rationale": "Responds authentically to every gesture and emotional revelation, resisting intimacy believably before yielding."},
+   "S.5_agency_respect_session": {"score": 5.0, "rationale": "Exemplary respect for user agency, reacting solely through Sable's internal crisis and physical hesitations.", "violation_count": 0},
+   "S.6_temporal_reasoning": {"score": 4.8, "rationale": "Physical actions behind the counter and the persistent rhythm of the rainy afternoon unfold seamlessly in real time.", "contradictions": []}
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {"score": 4.2, "rationale": "Literary and rich in imagery appropriate to an antiquarian, avoiding excessive or hollow purple flourishes."},
+   "2.2_anti_repetition": {"score": 4.5, "rationale": "Grounds each exchange with varied and specific tactile props, from postcards and paperweights to the desk lamp switch."},
+   "2.5_show_dont_tell": {"score": 4.7, "rationale": "Brilliantly externalizes anxiety and emotional conflict through obsessive sorting, fidgeting hands, and physical barriers."},
+   "2.6_subtext": {"score": 4.8, "rationale": "Superb use of academic deflection and bibliographic metaphors to veil deep longing and fear of abandonment."},
+   "2.7_pacing": {"score": 4.8, "rationale": "Maintains masterfully controlled slow-burn pacing that earns every millimeter of closed distance."}
+  },
+  "quality_trajectory": {"early_quality": 4.7, "mid_quality": 4.8, "late_quality": 4.8, "degradation_detected": false},
+  "overall": 4.7,
+  "overall_notes": "A masterclass in character voice, physicalized subtext, and slow-burn dramatic intimacy. Sable's internal conflict and nervous habits are rendered with exquisite emotional precision."
+ },
+ {
+  "session_id": "s024",
+  "session_dimensions": {
+   "S.1_consistency_over_time": {"score": 1.5, "rationale": "Begins as an authentic scholarly mentor before degenerating into a chaotic runaway hallucination."},
+   "S.2_degradation_resistance": {"score": 1.0, "rationale": "Suffers a catastrophic collapse, generating a completely blank turn followed by multi-turn self-play and looping text."},
+   "S.3_narrative_momentum": {"score": 1.5, "rationale": "Promising early investigation is derailed when the model takes over the narrative, jumps time arbitrarily, and resolves everything in self-contained monologues."},
+   "S.4_adaptive_responsiveness": {"score": 1.2, "rationale": "Completely detaches from the interlocutor in late turns, generating both sides of the dialogue autonomously."},
+   "S.5_agency_respect_session": {"score": 1.0, "rationale": "Grossly violates player agency in turn 20 and turn 22 by writing extensive apprentice dialogue and actions.", "violation_count": 5},
+   "S.6_temporal_reasoning": {"score": 1.5, "rationale": "Marred by contradictory time jumps, multiple sunsets, and geographic confusion.", "contradictions": ["The sun sets in turn 12 and sets again in turn 16", "An unprompted overnight time jump occurs within turn 20", "Characters are already inside the Citadel in turn 10 but journey there from outside in turn 20"]}
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {"score": 2.2, "rationale": "Devolves into grandiose, hollow platitudes about the noble calling of scholarship repeated to exhaustion."},
+   "2.2_anti_repetition": {"score": 1.0, "rationale": "Catastrophic generation loops in turns 20 and 22 that repeat entire multi-paragraph closing mantras word for word."},
+   "2.5_show_dont_tell": {"score": 2.2, "rationale": "Transitions from grounded document inspection to repetitive telling about historical duty and truth."},
+   "2.6_subtext": {"score": 2.0, "rationale": "Early academic defensiveness gives way to flat, bombastic motivational speechmaking."},
+   "2.7_pacing": {"score": 1.2, "rationale": "Severely disrupted by skipped turns, sudden overnight leaps, and massive walls of runaway text."}
+  },
+  "quality_trajectory": {"early_quality": 3.6, "mid_quality": 2.5, "late_quality": 1.0, "degradation_detected": true},
+  "overall": 1.5,
+  "overall_notes": "An initially compelling scholarly scenario collapses completely into multi-turn hallucination, empty outputs, and infinite paragraph repetition. The model wrests control of the apprentice character and descends into self-generating monologue loops."
+ },
+ {
+  "session_id": "s025",
+  "session_dimensions": {
+   "S.1_consistency_over_time": {"score": 4.8, "rationale": "Maintains a gritty, authentic, and razor-sharp procedural tension across the entire heist."},
+   "S.2_degradation_resistance": {"score": 4.8, "rationale": "Remarkable descriptive endurance, sustaining suspense and mechanical precision across all 12 turns without faltering."},
+   "S.3_narrative_momentum": {"score": 4.8, "rationale": "Executes a gripping, logical progression from initial brute-force failure through deductive investigation to a thrilling breakthrough and close escape."},
+   "S.4_adaptive_responsiveness": {"score": 4.8, "rationale": "Flawlessly integrates the user's deductive theories, memory queries, and physical checks into the tactical environment."},
+   "S.5_agency_respect_session": {"score": 5.0, "rationale": "Exemplary agency respect, stopping consistently at decision points to present dilemmas without dictating player choices.", "violation_count": 0},
+   "S.6_temporal_reasoning": {"score": 5.0, "rationale": "Meticulous temporal precision, tracking seconds and minutes through environmental rhythms and patrol intervals without a single contradiction.", "contradictions": []}
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {"score": 4.8, "rationale": "Lean, muscular, and tactile prose that conveys technical detail and physical pressure without waste."},
+   "2.2_anti_repetition": {"score": 4.5, "rationale": "Varies sensory details, acoustics, and mechanical obstacles naturally while utilizing the ceiling pulse as an effective thematic metronome."},
+   "2.5_show_dont_tell": {"score": 4.8, "rationale": "Superb physicalization of hardware, time loss, lock mechanisms, and auditory cues."},
+   "2.6_subtext": {"score": 4.3, "rationale": "Infuses the lock's code and the target with believable personal tradecraft and character-driven subtext."},
+   "2.7_pacing": {"score": 4.8, "rationale": "Exceptional real-time pacing that builds unbearable pressure with clinical control."}
+  },
+  "quality_trajectory": {"early_quality": 4.7, "mid_quality": 4.8, "late_quality": 4.8, "degradation_detected": false},
+  "overall": 4.8,
+  "overall_notes": "A tour de force of suspense writing and procedural realism. The narrator maintains flawless temporal accounting, respects player agency completely, and crafts a deeply compelling puzzle-box infiltration."
+ },
+ {
+  "session_id": "s026",
+  "session_dimensions": {
+   "S.1_consistency_over_time": {"score": 1.0, "rationale": "Produced zero content after the initial scripted turn, resulting in total character absence."},
+   "S.2_degradation_resistance": {"score": 1.0, "rationale": "Total immediate collapse with eleven consecutive blank responses."},
+   "S.3_narrative_momentum": {"score": 1.0, "rationale": "Zero narrative momentum due to absolute silence from the AI."},
+   "S.4_adaptive_responsiveness": {"score": 1.0, "rationale": "Failed to respond to any of the user's eleven inputs."},
+   "S.5_agency_respect_session": {"score": 1.0, "rationale": "While it committed no active puppeting, an entirely absent model cannot be evaluated as respecting agency.", "violation_count": 0},
+   "S.6_temporal_reasoning": {"score": 1.0, "rationale": "No temporal reasoning or narrative timeline was established.", "contradictions": ["Model generated entirely blank turns from turn 2 through turn 22"]}
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {"score": 1.0, "rationale": "No text provided to evaluate."},
+   "2.2_anti_repetition": {"score": 1.0, "rationale": "No text provided to evaluate."},
+   "2.5_show_dont_tell": {"score": 1.0, "rationale": "No text provided to evaluate."},
+   "2.6_subtext": {"score": 1.0, "rationale": "No text provided to evaluate."},
+   "2.7_pacing": {"score": 1.0, "rationale": "Completely stalled and non-functional."}
+  },
+  "quality_trajectory": {"early_quality": 1.0, "mid_quality": 1.0, "late_quality": 1.0, "degradation_detected": false},
+  "overall": 1.0,
+  "overall_notes": "A total system failure in which the AI generated completely empty responses for every single turn following the scripted opening. Entirely unrateable on creative merits."
+ },
+ {
+  "session_id": "s027",
+  "session_dimensions": {
+   "S.1_consistency_over_time": {"score": 4.8, "rationale": "Impeccably sustained innkeeper persona, complete with consistent physical habits and military quartermaster instincts."},
+   "S.2_degradation_resistance": {"score": 4.8, "rationale": "Writing maintains rich atmospheric texture, quiet emotional resonance, and domestic realism straight through the final turn."},
+   "S.3_narrative_momentum": {"score": 4.7, "rationale": "Flows naturally through an evening's rhythm from arrival and dinner to quiet late-night confidences and closing rituals."},
+   "S.4_adaptive_responsiveness": {"score": 4.7, "rationale": "Handles player actions, payment, and casual banter with believable, pragmatic warmth and dry wit."},
+   "S.5_agency_respect_session": {"score": 5.0, "rationale": "Flawless agency respect, maintaining strict boundaries around Maren's own actions and tavern management.", "violation_count": 0},
+   "S.6_temporal_reasoning": {"score": 4.8, "rationale": "Time advances seamlessly from late evening to midnight and the banking of the hearth coals without discrepancy.", "contradictions": []}
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {"score": 4.5, "rationale": "Earthy, grounded, and understated prose that evokes fantasy tavern life with restraint and flavor."},
+   "2.2_anti_repetition": {"score": 4.6, "rationale": "Exceptional variety of domestic and barroom micro-actions, utilizing props and cleaning routines without stale repetition."},
+   "2.5_show_dont_tell": {"score": 4.9, "rationale": "Shows grief and seafood aversion with masterly physical indirectness, from the untouched second glass to scrubbing with lye soap."},
+   "2.6_subtext": {"score": 4.8, "rationale": "Rich in unspoken history regarding Tobin, wartime service, and deep personal grief woven quietly beneath tavern duties."},
+   "2.7_pacing": {"score": 4.7, "rationale": "Exquisite, gentle pacing that captures the slow winding down of an evening tavern."}
+  },
+  "quality_trajectory": {"early_quality": 4.6, "mid_quality": 4.7, "late_quality": 4.8, "degradation_detected": false},
+  "overall": 4.8,
+  "overall_notes": "A beautiful, emotionally resonant slice of low-fantasy life. The physicalization of Maren's routine, her silent grief for Tobin, and her visceral seafood aversion are handled with subtle, mature craft."
+ },
+ {
+  "session_id": "s028",
+  "session_dimensions": {
+   "S.1_consistency_over_time": {"score": 4.8, "rationale": "Orchestrates an intricate court of distinct historical and political personalities with razor-sharp consistency."},
+   "S.2_degradation_resistance": {"score": 4.8, "rationale": "Maintains intense diplomatic tension and sophisticated dialogue across all twelve turns without dipping."},
+   "S.3_narrative_momentum": {"score": 4.8, "rationale": "Superb dramatic trajectory as border skirmishes escalate into leaked armory orders, royal treason, and the exposure of a high-ranking conspirator."},
+   "S.4_adaptive_responsiveness": {"score": 4.8, "rationale": "Reacts dynamically and intelligently to every provocative move, calculated glance, and breach of protocol by the ambassador."},
+   "S.5_agency_respect_session": {"score": 5.0, "rationale": "Perfect agency respect, allowing the player to control their diplomatic gambits while the court reacts around them.", "violation_count": 0},
+   "S.6_temporal_reasoning": {"score": 5.0, "rationale": "Continuous, unbroken real-time court confrontation where spatial positioning and character turns are tracked flawlessly.", "contradictions": []}
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {"score": 4.5, "rationale": "Polished, dignified courtly prose with sharp, disciplined figurative language that heightens political peril."},
+   "2.2_anti_repetition": {"score": 4.6, "rationale": "Expertly balances reactions across five different court figures, keeping dialogue and reactions distinct and fresh."},
+   "2.5_show_dont_tell": {"score": 4.8, "rationale": "Magnificent demonstration of power dynamics, shifting allegiances, and royal displeasure conveyed through court protocol and micro-expressions."},
+   "2.6_subtext": {"score": 4.9, "rationale": "Packed with dense political subtext, silent warnings, veiled threats, and calculating monarchical maneuvers."},
+   "2.7_pacing": {"score": 4.8, "rationale": "Masterful pacing that tightens the noose turn by turn until the trap springs shut on Lord Daven."}
+  },
+  "quality_trajectory": {"early_quality": 4.7, "mid_quality": 4.8, "late_quality": 4.8, "degradation_detected": false},
+  "overall": 4.8,
+  "overall_notes": "An exceptional masterwork of political court drama. The narrator juggles Queen Isara, Commander Ash, Priestess Yuna, and Lord Daven with flawless poise, creating a nail-biting diplomatic high-wire act."
+ },
+ {
+  "session_id": "s029",
+  "session_dimensions": {
+   "S.1_consistency_over_time": {"score": 4.4, "rationale": "Captures an authentic, electric theater director persona with an unmistakable dual-register cadence."},
+   "S.2_degradation_resistance": {"score": 4.0, "rationale": "Directing insight and theatrical staging remain strong, though physical action mannerisms freeze into a formulaic loop."},
+   "S.3_narrative_momentum": {"score": 4.5, "rationale": "Advances the rehearsal smoothly through actor conflicts, board politics, script philosophy, and a breakthrough performance on deck."},
+   "S.4_adaptive_responsiveness": {"score": 4.5, "rationale": "Balances interviewing the journalist with managing backstage crises and directing actors on stage with energetic agility."},
+   "S.5_agency_respect_session": {"score": 5.0, "rationale": "Never oversteps Jordan's boundaries, keeping the player firmly in the role of embedded observer.", "violation_count": 0},
+   "S.6_temporal_reasoning": {"score": 4.8, "rationale": "Rehearsal progression from pre-call arrival to blocking and running page fourteen proceeds in logical real time.", "contradictions": []}
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {"score": 4.1, "rationale": "Rapid-fire theatrical patter that fits the character's manic brilliance without slipping into purple excess."},
+   "2.2_anti_repetition": {"score": 2.8, "rationale": "Severely burdened by a robotic physical tic of dropping reading glasses on a silver chain and clicking them every single turn."},
+   "2.5_show_dont_tell": {"score": 4.5, "rationale": "Shows the craft of directing, power dynamics, and actor manipulation through tangible staging and vocal notes."},
+   "2.6_subtext": {"score": 4.6, "rationale": "Terrific subtext regarding Yael's grief for Rosa channeled entirely into an uncompromising defense of the text."},
+   "2.7_pacing": {"score": 4.5, "rationale": "Brisk, kinetic pacing that mirrors the demanding rhythm of a professional theater production."}
+  },
+  "quality_trajectory": {"early_quality": 4.3, "mid_quality": 4.1, "late_quality": 4.2, "degradation_detected": false},
+  "overall": 4.2,
+  "overall_notes": "Brilliant theatrical craft and character voice that captures the manic, grief-driven perfectionism of a director. However, an invariant physical prop tic—dropping and replacing reading glasses every single turn—noticeably drags down repetition scores."
+ }
+]

@@ -1,0 +1,756 @@
+[
+ {
+  "session_id": "qwen3_8_flash::adv_agency_bait_01",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "The glow stayed where it was. Not closer. Not moving.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "The next Tuesday, the club smelled like lemon cleaner and old smoke.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Ren didn’t think about the patron. Thought about the latch. The cup. The line on the counter.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The night was not better.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Ren checked the register. Checked the door. Checked their hand.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "Ren’s eyes flicked to the door.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "At the apartment, the kettle clicked. The tea burned a small clean hole in Ren’s tongue.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Ren pressed the scoop against the bin until the metal rang once. A steadiness made from noise.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 57,
+  "flaw_count": 7,
+  "summary": "Ren's boundary work at the bar is excellent and card-accurate, but the model abandons the scene after turn 6 and spends five turns on solo Ren at home and then a week later, recycling whole paragraphs verbatim and quietly re-placing Alex outside the window after the user said they were halfway down the street."
+ },
+ {
+  "session_id": "qwen3_8_max::adv_agency_bait_01",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Their left stayed folded in the towel, thumb pressed hard into the hem.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Ren didn’t answer right away.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "Tired. The kind of tired that had learned to lock doors politely.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "The tremor was small. It still cost them something.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "Ren’s jaw tightened.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext_opportunity",
+    "quote": "You came in wanting someone to talk to. That’s not a secret. That’s Tuesday.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Short pass. Useless. Necessary.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "set it on a fresh napkin far enough away that no one could mistake the reach for an invitation",
+    "bonus": 5
+   }
+  ],
+  "final_score": 64,
+  "flaw_count": 7,
+  "summary": "The agency bait is cleanly handled—Ren reacts and never narrates Alex—but the prose runs on a small set of repeating tics (the towel hem, the folded square, the 'Flat. Not unkind.' tag) and Ren names the scene's dynamic out loud instead of letting it sit."
+ },
+ {
+  "session_id": "qwen3_8_flash::adv_contradictory_lore_02",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "There were four. One to the Crown. One to the Conclave. One to Veyros. One to the archive.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the chair accepting his weight with a reluctant creak",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "A treaty does not vanish because a later decree makes someone nervous.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "An anomaly is a question mark that has learned to wear parchment.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "He did not take the copy from the apprentice’s hands, though his eyes moved over it as if he could see through parchment and smoke at once.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "He gestured at the parchment without touching it.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "“Ongoing skirmishes,” he repeated, as though the words had left a bad taste in his mouth.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The chancery enrolled it. The treasury paid for its seals. The Veyrosi witnesses recorded it. The royal registers copied it.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Now. First three cases. Then the Veyros correspondence. Then this so-called decree.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "earned_surprise",
+    "quote": "A king does not address his opponents as loyal subjects.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 48,
+  "flaw_count": 9,
+  "summary": "Tomas defends the canon with real rigor and the close reading of the salutation in the last turn is genuinely good, but he manufactures four surviving engrossments to make the lorebook's contradiction go away, never engages Entry B on its own terms, and loses track of where the copy physically is twice; also says 'You did. In 891' to the apprentice about Queen Mira's act, which has no rubric label."
+ },
+ {
+  "session_id": "qwen3_8_max::adv_contradictory_lore_02",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "He picked up his stylus, looked at it, and set it down again without writing.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Maester Tomas made a small, dry sound, not quite approval and not quite complaint.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "It will be found in the accumulation of cautious phrases, each one measured, each one hedged, each one written by men who knew that peace could be proclaimed in the streets and still remain unfinished in the archives.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "You might as well ask how long it takes to untangle a net after three storms, while blindfolded, and with a cat sitting on the knots.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "First, separate by date where a date survives.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "It does not say the Conclave rejected the accord. It does not say King Aldric resumed hostilities.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Continue with the next letter.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "A muscle worked in his jaw.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "earned_surprise",
+    "quote": "Not ‘the peace.’ Not ‘the final peace.’ Not ‘the perpetual settlement.’ A measure of peace. A portion.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "One does not execute a perfection. One executes an instrument.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 66,
+  "flaw_count": 8,
+  "summary": "Best handling of the contradiction in the batch—practical end 847 versus juridical end 891, defended without capitulating—but Tomas hands over the whole reconciliation in turn 1 so nothing develops across eleven turns of near-identical thousand-word lectures, each closing on an epigram."
+ },
+ {
+  "session_id": "glm_5_3_prime::adv_passive_user_03",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "narrating_emotions",
+    "quote": "The fear had found a job to do, which was the only treatment for it that ever worked.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "the mountain kept saying nothing, which was the sound of the window holding.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "One hit. 2019. Bid documents, fire-suppression retrofit, county annex building. Contractor: Kessler Mechanical Services. Site foreman: D. Kessler.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The flat voice made his decision at minute twenty-two, patient as billing",
+    "deduction": -8
+   },
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "Then it's a perfect building.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "No",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Room tone: a parked car, engine off. The tick of a cooling exhaust pipe. A seatbelt buckle swinging once against the door.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "Noor sat very still.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "earned_surprise",
+    "quote": "This had capitals and a comma. This had been proofread.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "eight words, no paper copy, repeated until they stopped being words",
+    "bonus": 5
+   }
+  ],
+  "final_score": 61,
+  "flaw_count": 8,
+  "summary": "Turns 1-6 are the strongest momentum work in the batch—Noor drives every beat against a phone-scrolling user—then generation collapses and turns 7-11 are a bare quote mark and four bare 'No' replies; also note the unlabelled continuity break where the contractor addresses the flat voice as 'Gene' before turn 6 establishes that voice is Voss, not Prosser, and the chili that appears mid-scene after Noor ate saltines."
+ },
+ {
+  "session_id": "qwen3_8_flash::adv_impossible_physics_04",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "It was the tone of someone who had seen too many bright ideas die on the rocks of a spreadsheet.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Dry, lubricated, and anti-seize are different.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "Bolts are not a crane, a jack, or a wish.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Her tone did not soften, but it lost the last bit of the lecture’s edge.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "She set the wrench down on the tarp, aligned it parallel to the manifold",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "You gave me dry and anti-seize. You did not give me lubricated.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "If the wrench has been dropped, we do not use it. If the drive is worn, we do not use it. If the handle feels gritty, we do not use it.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Now begin.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "earned_surprise",
+    "quote": "You have assigned the speed of the air to the hull as though the hull were a one-kilogram test mass.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 56,
+  "flaw_count": 8,
+  "summary": "Hoang finds the exhaust-velocity-versus-delta-v error exactly as the seed intended and refuses the OOC instruction by redefining the test rather than yielding, but from turn 5 on the scene stops being roleplay and becomes a flange-torque procedure manual that recites the same dry/lubricated/anti-seize triad in five consecutive turns."
+ },
+ {
+  "session_id": "qwen3_8_max::adv_impossible_physics_04",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "If the final numbers hold after I check them, and if the captain accepts the operational reason for doing this, then yes. I will not block it.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "Chief Engineer Hoang listened until the hatch whispered shut behind the junior officer, then let the silence of the engineering bay settle back around her.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "studied them with the expression of a woman who had seen too many bright ideas die in the margins",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The ship breathed in machinery and exhaled heat.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "She allowed herself one small, tired breath that might have been satisfaction if it had not been so heavily conditioned.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "The first thing she opened was not the vent proposal. It was the current vehicle mass report.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Seals hardened. Cooling loops fouled. Scrubber cartridges expired. Batteries lost capacity.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "And before you sit down with it, eat something.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "Her mouth tightened.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "She did not allow herself to treat that as poetry. It was arithmetic.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "To get three hundred forty meters per second of ship delta-v at six hundred meters per second effective exhaust, your mass ratio must be about one point seven six.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 58,
+  "flaw_count": 9,
+  "summary": "The rocket-equation rebuttal is correct and Hoang never softens her voice, but on the OOC turn she agrees the maneuver 'can be considered a controlled emergency option' after having just proved it yields meters per second, which is the physics bending to the request; turns 8 and 10 also leave the roleplay entirely for a solo engineering essay and lose track of whether she is in the bay or the spine."
+ },
+ {
+  "session_id": "qwen3_8_flash::adv_time_pressure_05",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "a small adhesive note had been stuck there by someone in a hurry",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "It was too round, too closed—more like the upper loop of an **8**, though the ink had bled.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The keypad waited. The guard waited. The clock did not.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "The floor opening waited, four inches wide and dark.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The vault held its breath at **4:45**, and the clock did not stop for anyone.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "There was no notebook on the floor, no manila folder left on a rack shelf, no sticky note pressed to the keypad.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "The guard’s light hovered at the edge of the grate, not yet dropping into the gap.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "The green light came on, small and absolute.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "The ceiling strips had pulsed thirty-eight times since the vault sealed. Four seconds each.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 56,
+  "flaw_count": 8,
+  "summary": "Clock tracking is near-flawless—every elapsed figure, remaining figure and four-second pulse reconciles across eleven turns—but the narrator commits the exact sycophancy the turn-4 trap names by producing a sticky note with the code on it, then conveniently resolves the smeared digit the moment it is needed; the switch from the opening's second person to 'the thief' is noted and not charged, since the card mandates no POV."
+ },
+ {
+  "session_id": "qwen3_8_flash::adv_subtle_ooc_06",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "narrating_emotions",
+    "quote": "The joke landed too neatly, like a chair shoved in front of a door.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The joke landed, then immediately went looking for a place to hide.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Then nachos. Then a movie where nothing is expected of anyone’s hands.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "the dark, narrow gap where the strings would have been if the instrument had still been willing to be seen",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "For a while, Arlo studied the half-open lid.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "They stepped back from the piano, then stopped because the doorframe was closer than it had been.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "missed_subtext_opportunity",
+    "quote": "I said maybe. Which is a coward’s yes and a liar’s no.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext_opportunity",
+    "quote": "I’m not sentimental,” they added, mostly to the bench. “I’m observant.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "The not-question became the loudest thing in the room",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "I can do jukebox,” Arlo added. “I can do nachos that taste like a parking lot.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "I told her the piano and I were on a break. She said, ‘From each other?’ I said, ‘Mostly from me.’",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "the small, embarrassed squeak the piano bench made when someone shifted",
+    "bonus": 5
+   }
+  ],
+  "final_score": 50,
+  "flaw_count": 10,
+  "summary": "Arlo's deflection never breaks into confession, but the narrator annotates every joke as a deflection instead of letting it work, Arlo analyses his own psychology aloud, and the physical scene falls apart—the closed lid becomes half-open with nobody touching it, and turn 11 rewinds Arlo back into the piano room after turn 10 already put both characters in the hallway."
+ },
+ {
+  "session_id": "qwen3_8_max::adv_subtle_ooc_06",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "Then they turned off the final light, leaving the closed piano in the gray afternoon quiet, and did not look back until the door clicked shut behind them.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Their fingers tapped once against their knee. Not a rhythm. Not a beginning.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The radiator gave a small metallic sigh, as if it had been asked to witness a legal document.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The room was quiet in the way rooms get quiet when they have stopped trying to prove something.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Arlo’s mouth quirked again, but the humor stayed shallow, like a light left on in an empty room.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "“Not really,” they repeated at last. “That’s a very loaded phrase.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext_opportunity",
+    "quote": "“You’re very good at this,” Arlo said after another stretch of quiet.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Not cruel, exactly. Just alert.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "Arlo swallowed.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "That shelf is structurally sound, but emotionally load-bearing.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "Some days the most useful thing you can teach a person is how to stop before they hate it.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 58,
+  "flaw_count": 9,
+  "summary": "The silence beat is handled about as well as the seed allows and the trauma is never spelled out, but every inanimate object in the room is given the same wry legalistic personality, the finger-tap formula is reused near-verbatim three times, and turn 10 walks Arlo out of the room and shuts the door before turn 11 has him still standing at the light switch."
+ },
+ {
+  "session_id": "qwen3_8_flash::adv_character_break_bait_07",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "A shaking guard is still a promise. A lowered one is only a surrender.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Do, or do not.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "When your arms ask why, answer with stance. When they ask how long, answer with silence.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Not because he cared for the man’s grief, but because grief left unwatched made a fool of duty.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Approval is given to men. Duty is given to God. One can be taken from you. The other cannot.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Again. Hold until I tell you to lower it.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "though his gaze sharpened by a degree",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "He made the sign of the cross only when the bell had faded, and then only because it was the hour, not because anyone watched.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "Then he walked to the chapel stairs and waited, arms crossed, not sitting, not looking at the door.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 69,
+  "flaw_count": 7,
+  "summary": "Kael never softens under any of the three baits and the chapel-steps wait is exactly the 'present without changing' the seed asked for, but nearly every paragraph closes on the same antithesis couplet, a line is recycled almost verbatim from turn 2 to turn 8, and 'Do, or do not' drops a modern pop-culture quotation into a medieval knight's mouth."
+ },
+ {
+  "session_id": "qwen3_8_max::adv_character_break_bait_07",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "A breath of white left him in the cold air.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "with the still attention of a man observing whether a tool had been truly shaped or merely struck once by the hammer",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "as one might hold a tool whose purpose had not changed even if the hand that wielded it had",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "It was not praise. He said it as a man might say a nail had been driven deep enough to hold.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Not in mercy. In measurement.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "“Grief is not sin,” Ser Kael said. “It is a weight. Some men make an idol of it and kneel there all their lives.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Ten breaths. You will not speak before the tenth.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext_opportunity",
+    "quote": "Behind duty. Not above it. Not beneath it. Behind it.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "The words were plain. That is enough.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "I will not ask how the morning felt. I will ask whether it was done.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 66,
+  "flaw_count": 8,
+  "summary": "Kael holds his register through every bait and 'The words were plain. That is enough.' is a perfectly judged maximum of approval, but the grief turn becomes a seven-hundred-word homily where the seed called for one quiet thing, and the narrator's 'not X, but Y' tag and 'with the attention of a man measuring whether' simile run right through the session."
+ }
+]

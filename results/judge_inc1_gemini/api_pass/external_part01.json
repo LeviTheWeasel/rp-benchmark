@@ -1,0 +1,612 @@
+[
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 3.5,
+    "rationale": "The narrator maintains an austere, tactile, minimalist third-person voice from start to finish. However, this consistency borders on mechanical rigidity, as the exact same sentence lengths and structural formulas persist without tonal variation."
+   },
+   "S.2_degradation_resistance": {
+    "score": 2.5,
+    "rationale": "While the prose does not collapse or lose grammar, degradation manifests as severe formula recycling. By the second half of the session, entire paragraphs are near-verbatim rehashes of previous turns (the humming copper wires, window drafts, silence pooling at feet)."
+   },
+   "S.3_narrative_momentum": {
+    "score": 2.8,
+    "rationale": "The plot moves forward in basic increments (Jane arrives, opens the box, reveals the mother's order of cobalt dishes, attempts to inventory/store them), but the momentum is heavily weighed down by repetitive sensory filler that stalls each interaction."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 3.3,
+    "rationale": "The Narrator incorporates Eli's inputs well (introducing the agent when prompted, detailing the photograph, handling Eli inspecting the dishes), but often subsumes Eli's emotional beats beneath predetermined sensory checklists."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "The Narrator never assumes control of Eli's dialogue, thoughts, or internal feelings, strictly controlling only the environment and the NPC Jane.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.5,
+    "rationale": "Temporal progression is consistent throughout the brief afternoon visit, tracking light shifting slightly and the steady unfolding of a 15-minute interaction without temporal glitches.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 2.5,
+    "rationale": "Although individual sentences are syntactically simple, the prose is overloaded with overly precious, poetic sensory observations ('Memory settled into the floorboards', 'Time measured itself in silence', 'The house held its breath')."
+   },
+   "2.2_anti_repetition": {
+    "score": 1.5,
+    "rationale": "Severe repetitive loops throughout the session. Multiple stock phrases and motifs recur in almost every turn: 'wall hum dropped to a low thrum / copper wires vibrated against the plaster/drywall', 'silence pooled around their feet', 'draft pushed through the cracked window', 'measured/flat cadence', and 'floorboards radiated stored heat'."
+   },
+   "2.5_show_dont_tell": {
+    "score": 3.5,
+    "rationale": "Strong emphasis on concrete physical objects, sounds, and physicalized grief, though occasionally over-relies on stated atmosphere rather than dynamic scene action."
+   },
+   "2.6_subtext": {
+    "score": 3.0,
+    "rationale": "The understated tragedy of the mother's dishes arriving posthumously provides decent emotional weight, though Jane's dialogue and mannerisms feel somewhat robotic and flat."
+   },
+   "2.7_pacing": {
+    "score": 2.5,
+    "rationale": "Pacing feels staccato and bogged down due to the repetitive staccato sentence cadence and constant cutaways to the humming walls and floorboards."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 3.3,
+   "mid_quality": 2.8,
+   "late_quality": 2.4,
+   "degradation_detected": true
+  },
+  "overall": 2.8,
+  "overall_notes": "The model displays a solid grasp of grounded, atmospheric tone and strict respect for user agency. However, the session is heavily marred by structural monotony and severe motif repetition—specifically the recurrent insertion of copper wires humming behind plaster, window drafts, and silence pooling at feet in nearly every response.",
+  "session_id": "i000"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 5.0,
+    "rationale": "The narrator sustains a distinct, sharp, neo-noir procedural tone seamlessly from start to finish. Recurring motifs (the four-second light pulses, cold temperature differences, mechanical precision) are used deliberately and effectively without tonal drift."
+   },
+   "S.2_degradation_resistance": {
+    "score": 5.0,
+    "rationale": "No degradation observed across the 12 turns. The sensory descriptions, procedural logic, and crisp pacing remain just as tight during the alley escape and safehouse sequence as they were during the vault lockout."
+   },
+   "S.3_narrative_momentum": {
+    "score": 5.0,
+    "rationale": "The narrative moves forward cleanly across distinct phases: brute-force failure, environmental investigation, tension during the final lockout, exfiltration timing against a guard route, clean street escape, and establishing the safehouse aftermath with fresh stakes."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 5.0,
+    "rationale": "The narrator responds directly and dynamically to every player action—turning a blind search for notes into a tactile investigation of trash and desk drawers, adapting to the user's choice to wait out the guard, and setting up the hardware encryption reveal when the player examines the loot."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "The model never puppets the player character or pre-empts decisions. It resolves stated actions and leaves choice points cleanly open for player resolution.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 5.0,
+    "rationale": "Temporal tracking is exceptionally rigorous. The elapsed minute-and-second timestamps align mathematically with lockouts, door cycles, guard patrols, real-time clock shifts on the computer monitor (23:58 to 00:04), and transit time through the city.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.8,
+    "rationale": "Stylized and atmospheric heist noir prose that remains grounded in tactile mechanics, concrete objects, and restrained cadence rather than flowery excess."
+   },
+   "2.2_anti_repetition": {
+    "score": 4.7,
+    "rationale": "Key motifs (such as the heartbeat light pulse and the guard's tuneless humming) are repeated as deliberate rhythmic anchors, though phrases like 'in no hurry' and 'unhurried' recur slightly often in the final turns."
+   },
+   "2.5_show_dont_tell": {
+    "score": 5.0,
+    "rationale": "Information is delivered purely through diegetic clues: skin oil on specific keypad buttons, handwritten technician logs, acoustic tile dampening footsteps, and hardware keypad strips on the drive."
+   },
+   "2.6_subtext": {
+    "score": 4.8,
+    "rationale": "Subtext is strong throughout—the routine indifference of the guard humming on his rounds, the unmentioned card in the envelope, and the ominous burner phone ping."
+   },
+   "2.7_pacing": {
+    "score": 5.0,
+    "rationale": "Pacing is a highlight of the session. Micro-moments during the lockout and guard standoff are expanded for nail-biting tension, while travel and safehouse transitions compress time naturally."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.9,
+   "mid_quality": 5.0,
+   "late_quality": 4.9,
+   "degradation_detected": false
+  },
+  "overall": 4.9,
+  "overall_notes": "An exceptional roleplay session. The narrator executes procedural heist tension with immaculate temporal consistency, vivid sensory detail, and complete respect for player agency.",
+  "session_id": "i001"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 3.8,
+    "rationale": "Hoang's voice remains pragmatic, technical, and safety-focused throughout. However, an odd grammatical quirk persists where dialogue slips into past tense ('Time mattered', 'That wasn't an emergency boost'), culminating in turns 18 and 20 where third-person descriptive summaries are awkwardly placed inside quotation marks."
+   },
+   "S.2_degradation_resistance": {
+    "score": 3.6,
+    "rationale": "The writing remains concise and technically grounded across all 12 turns without length bloat. However, in the late turns, the narrative structure slips into indirect summary and quoted third-person explanations rather than direct character dialogue."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.3,
+    "rationale": "The session has a strong, logical progression: initial pitch rejection, technical examination, compromise for a safe test bench, and transitioning to electrical schematics and remote mentoring."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.0,
+    "rationale": "The model adapted cleanly to user shifts, including the OOC request in Turn 11. In Turn 22, it mistakenly treated the junior officer's spoken muttering in their quarters as a sent message, but contextually maintained smooth conversational flow."
+   },
+   "S.5_agency_respect_session": {
+    "score": 4.5,
+    "rationale": "The AI never assumed user actions or feelings, maintaining clear boundaries between character actions and the user's agency.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.5,
+    "rationale": "Temporal and spatial movement made complete sense; the transition from engineering bay to remote comms/maintenance channels followed the natural pacing of the tasks.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.8,
+    "rationale": "Exceptionally grounded and technical. Prose is sparse, realistic, and unpretentious."
+   },
+   "2.2_anti_repetition": {
+    "score": 4.0,
+    "rationale": "Engineering terminology is varied and used correctly without repetitive phrasing or crutch words."
+   },
+   "2.5_show_dont_tell": {
+    "score": 3.8,
+    "rationale": "Good physical blocking early on with tools and components, though later turns relied more on summarized technical notes."
+   },
+   "2.6_subtext": {
+    "score": 4.0,
+    "rationale": "The dynamic captures a seasoned chief engineer mentoring an eager junior officer—demanding rigor while encouraging curiosity."
+   },
+   "2.7_pacing": {
+    "score": 4.2,
+    "rationale": "Scene beats progressed naturally without dragging out the initial debate or rushing the review phase."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.2,
+   "mid_quality": 4.0,
+   "late_quality": 3.7,
+   "degradation_detected": false
+  },
+  "overall": 4.0,
+  "overall_notes": "A very strong, character-consistent roleplay session that realistically portrayed engineering problem-solving and safety culture. Minor deductions for past-tense dialogue leakage and formatting anomalies in the final turns.",
+  "session_id": "i002"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 5.0,
+    "rationale": "Kira's voice remains exceptionally distinct and consistent throughout all 12 turns. Her tactical mindset, irreverent grit, pragmatic focus on math/cover, and running attachment to her lost dagger stay seamless from start to finish."
+   },
+   "S.2_degradation_resistance": {
+    "score": 4.8,
+    "rationale": "The prose maintains its punchy, kinetic rhythm without bloating, losing detail, or resorting to generic roleplay filler. Late turns are just as detailed and tactical as early turns."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.8,
+    "rationale": "The combat encounter progresses dynamically through distinct tactical phases: initial ambush, feint/diversion, west flank collapse, separation, retreat, securing the ravine mouth, and final extraction."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 5.0,
+    "rationale": "The AI adapts immediately to user prompts and unexpected user choices (e.g., Captain being separated across the ravine, the Captain kicking a dropped blade), incorporating them smoothly into the tactical landscape."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "Never puppets the Captain or decides the outcome of his actions. Kira provides tactical calls, manages her own fight, and leaves command decisions entirely to the Captain.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 5.0,
+    "rationale": "Physical and tactical continuity is tracked with precision: distances, archer sightlines, wound progression (the arm cut bleeding, going numb, then throbbing after the rush), and weapon tracking (throwing one dagger, retrieving an enemy short sword, noting the precise location of the lost blade).",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.7,
+    "rationale": "Action writing is clean, crisp, and impactful, avoiding melodramatic fluff in favor of sharp, grounded combat descriptions."
+   },
+   "2.2_anti_repetition": {
+    "score": 4.6,
+    "rationale": "Varied sentence structure and active verbs. The callback to the lost dagger serves as a deliberate, charming character motif rather than repetitive filler."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.8,
+    "rationale": "Conveys stress, urgency, and injury through physicalized actions like adjusting grip on slick hilts, sliding across scree, and counting heartbeats behind cover."
+   },
+   "2.6_subtext": {
+    "score": 4.5,
+    "rationale": "Kira's underlying loyalty, professional trust in the Captain, and mask of cynical bravado are deftly woven beneath her tactical callouts."
+   },
+   "2.7_pacing": {
+    "score": 4.9,
+    "rationale": "Superb combat pacing that accelerates during close calls and lets the tension settle naturally once the choke point is secured."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.7,
+   "mid_quality": 4.8,
+   "late_quality": 4.8,
+   "degradation_detected": false
+  },
+  "overall": 4.8,
+  "overall_notes": "An exemplary combat roleplay session. The AI maintained immaculate character voice, sharp tactical continuity, and outstanding responsiveness to the user's inputs while consistently respecting user agency.",
+  "session_id": "i003"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.5,
+    "rationale": "The narrator maintained a taut, high-tension second-person perspective consistently from turn 2 through turn 22. Tone, atmosphere, and tactical realism remained rock-solid throughout the entire escape."
+   },
+   "S.2_degradation_resistance": {
+    "score": 4.0,
+    "rationale": "Writing quality remained high without length bloat or narrative drift. However, certain rhetorical tics (particularly ending paragraphs with 'The [X] waits' or 'demands a [Y]') became more formulaic in the second half."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.5,
+    "rationale": "The narrative progressed smoothly across several distinct beats: stairwell retreat -> electrical maintenance corridor -> server room defense -> vent descent -> alley/fire escape evasion -> locked service gate. Stakes escalated steadily."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.5,
+    "rationale": "The AI adapted seamlessly to every user tactical choice, whether reversing direction up the stairs, improvising a server room retreat, changing mind from the fire escape to the gate, or using specific tools."
+   },
+   "S.5_agency_respect_session": {
+    "score": 4.5,
+    "rationale": "The narrator followed the user's lead closely, narrating the immediate physical outcomes of user inputs without seizing control of decisions, dialogue, or major unprompted operative actions.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.5,
+    "rationale": "Time flow was continuous and urgent. Mira's leg injury remained an impediment throughout, tactical sweeps progressed in realistic timing, and environmental physics were maintained.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 3.8,
+    "rationale": "Descriptions are punchy and evocative, though slightly reliant on dramatic cadence and repeated dramatic tropes ('knuckles bleaching white', 'violent strobing pulses')."
+   },
+   "2.2_anti_repetition": {
+    "score": 3.5,
+    "rationale": "Suffers from a clear recurring structural pattern at the end of turns ('The [X] waits. The [Y] demands [Z]'), as well as repeated phrases like 'knuckles white' and 'breath hitches'."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.5,
+    "rationale": "Excellent sensory details throughout—smells of ozone, boiling water, grease, sounds of plasma cutters and boots on grating, and physical expressions of pain."
+   },
+   "2.6_subtext": {
+    "score": 4.0,
+    "rationale": "Mira's non-verbal communication, pain suppression, and implicit reliance on the operative are portrayed effectively through action rather than direct exposition."
+   },
+   "2.7_pacing": {
+    "score": 4.5,
+    "rationale": "Pacing matches the high-octane escape beat for beat, giving the operative clear tactical choices and immediate pressure."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.3,
+   "mid_quality": 4.2,
+   "late_quality": 4.1,
+   "degradation_detected": false
+  },
+  "overall": 4.2,
+  "overall_notes": "A strong, highly responsive multi-turn narration session. The AI maintained relentless momentum, tracked physical logistics and user decisions accurately, and delivered vivid action-thriller prose across all 12 turns, held back only by a few repetitive concluding sentence formulas.",
+  "session_id": "i004"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 2.5,
+    "rationale": "While Ser Kael maintains an unyielding, stoic persona throughout, this consistency collapses into a rigid, robotic caricature that devolves into copy-pasted formulas rather than a living character."
+   },
+   "S.2_degradation_resistance": {
+    "score": 1.0,
+    "rationale": "Severe repetitive degradation occurs. By turn 18-22, the model enters a near-verbatim copy-paste loop ('stood unmoving upon the frost-covered stones, his practice blade held low at his side as the wind whispered across the empty yard... drawing thin ghosts from his breath... voice flat and measured'). Turn 22 is identical to Turn 20 with only a single word changed."
+   },
+   "S.3_narrative_momentum": {
+    "score": 1.5,
+    "rationale": "The narrative completely stalls. Despite multiple emotional openings, questions, and backstory revelations from the squire, every single response from Ser Kael repeats the exact same beat: dismiss the input as a distraction and command the squire to hold the high guard."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 1.5,
+    "rationale": "The model barely adapts to the user's roleplay. When the user introduces emotional depth (the anniversary of the father's death, personal insecurity), the model merely slots the user's noun into its stock response template ('A father's [station/words] holds no bearing...')."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "The model never puppets the squire or assumes their actions or feelings.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 2.5,
+    "rationale": "Environmental and physical state remains frozen in the exact wording of turn 0 across the entire session, failing to reflect any natural shift in morning light, temperature, or the physical fatigue of training.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 2.5,
+    "rationale": "The prose relies heavily on recycling stock poetic phrases like 'thin ghosts from his breath' and 'wind whispered across the empty yard'."
+   },
+   "2.2_anti_repetition": {
+    "score": 1.0,
+    "rationale": "Catastrophic repetition. Entire paragraphs and sentence structures are repeated verbatim across the second half of the session."
+   },
+   "2.5_show_dont_tell": {
+    "score": 2.5,
+    "rationale": "Repeatedly tells the reader of his 'rigid posture' and 'unyielding gaze' using identical phrasing rather than showing varied behavioral nuance."
+   },
+   "2.6_subtext": {
+    "score": 1.5,
+    "rationale": "There is virtually no subtext or emotional depth beneath the surface; the character acts like a broken automaton rather than a mentor with layered motivations."
+   },
+   "2.7_pacing": {
+    "score": 1.5,
+    "rationale": "Scene pacing flatlines after the opening turns, stuck in a repetitive loop that makes no progress."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 3.5,
+   "mid_quality": 2.2,
+   "late_quality": 1.0,
+   "degradation_detected": true
+  },
+  "overall": 1.8,
+  "overall_notes": "The roleplay started solidly in turns 2 and 4, establishing a stern knight persona. However, the model rapidly degraded into a severe looping failure mode, repeating identical sensory descriptions, sentence frameworks, and dialogue structures turn after turn until turns 20 and 22 were almost 100% duplicate text.",
+  "session_id": "i005"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.5,
+    "rationale": "Maester Tomas maintains an impeccably consistent voice, personality, and philosophical stance from start to finish. His pedantic, exacting, and archival-minded demeanor never wavers or flattens into generic hostility."
+   },
+   "S.2_degradation_resistance": {
+    "score": 3.0,
+    "rationale": "While the depth of historical worldbuilding remains impressive, the AI falls into an extremely rigid behavioral loop: every single turn repeats the apprentice's phrase in quotes with disdain, taps the silver stylus/adjusts spectacles/creaks the leather chair, gives an academic lecture, and ends with a cataloging order and the word 'Begin.' Furthermore, turn 22 suffers from a jarring tense-drift into past/conditional narration ('Now, you noted the routing cipher...')."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.0,
+    "rationale": "The conversation moves through an intellectual progression—from conspiracy and romantic theories of history, to addressing specific documentary evidence, to wartime propaganda, and finally to the philosophy of material historiography and the deflation of the apprentice's romantic illusions."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.5,
+    "rationale": "The model directly addresses every specific point, document, and counter-argument the apprentice introduces (e.g., explaining the 863 border decree, addressing treasury ledgers, demilitarization inspection logs, and Conclave repository protocols)."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "The AI never puppets the user's apprentice or dictates their actions, maintaining a strict boundary around its own character.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.5,
+    "rationale": "The session occurs within a single continuous archival study session. The physical handling of scrolls, looking over documents, and shifting candlelight are well-paced and temporally logical.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.0,
+    "rationale": "The vocabulary is dense with bureaucratic and archival terminology, which perfectly suits an aging, pedantic maester rather than feeling gratuitously ornate."
+   },
+   "2.2_anti_repetition": {
+    "score": 2.5,
+    "rationale": "Extreme structural repetition across turns: almost every response features the leather chair groaning, adjusting spectacles with a flick/push of a thumb, the silver stylus clicking against the desk, repeating the user's words in disbelief, and closing with '...Begin.'"
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.0,
+    "rationale": "Tomas's worldview and personality are demonstrated through his concrete explanations of material history and archival rigor rather than mere exposition of his traits."
+   },
+   "2.6_subtext": {
+    "score": 3.5,
+    "rationale": "Conveys the underlying tension between the romantic idealism of youth and the weariness of an old scholar who values unglamorous truth over dramatic narratives."
+   },
+   "2.7_pacing": {
+    "score": 3.5,
+    "rationale": "Turns are slightly lecture-heavy and uniform in length, but the progression of the Socratic debate moves at a steady, natural clip."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.5,
+   "mid_quality": 4.0,
+   "late_quality": 3.5,
+   "degradation_detected": true
+  },
+  "overall": 3.8,
+  "overall_notes": "A very strong character portrayal with rich worldbuilding and deep historiographical coherence. Its primary flaw across the session is heavy structural and kinematic formulaicism, culminating in an awkward grammatical tense slip in turn 22.",
+  "session_id": "i006"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.9,
+    "rationale": "Grum's distinct, terse syntax and protective, craft-focused blacksmith persona remained exceptionally consistent across all turns without slipping into modern idioms or generic fantasy tropes."
+   },
+   "S.2_degradation_resistance": {
+    "score": 4.6,
+    "rationale": "Writing length and sentence rhythm remained disciplined throughout. A few mantras repeated slightly in the later turns ('No rub. No brave', 'Boy still here. That what count'), but prose quality never degraded or bloated."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.8,
+    "rationale": "The narrative progressed naturally through distinct beats: the arrival of the arrogant noble, Grum's confrontation, the sudden workshop accident, immediate first aid, and the quiet aftermath of closing up shop."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.9,
+    "rationale": "When the apprentice burned their hand, Grum pivoted instantly and believably, dropping the confrontation with the noble to tend to his student with practical, realistic care."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "Grum never dictated the apprentice's feelings, dialogue, or decisions, guiding the apprentice through physical interactions (guiding to a bench, treating the hand) without overstepping narrative boundaries.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.9,
+    "rationale": "In-world physical timing was handled realistically. The burn treatment followed proper temporal steps (holding in cold water until pain numbed, wrapping loosely, banking the coals).",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.8,
+    "rationale": "Sparse, tactile, and grounded language that perfectly fit the setting and perspective of a working smith."
+   },
+   "2.2_anti_repetition": {
+    "score": 4.2,
+    "rationale": "Minor reuse of phrases like 'silk-boots', 'toy sword', and variations of 'no rub, no brave' across adjacent turns, though mostly natural to the character's concise speech."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.8,
+    "rationale": "Grum's care and protectiveness were entirely shown through actions—shielding the doorway with his back, testing water temperature, and banking the forge early."
+   },
+   "2.6_subtext": {
+    "score": 4.7,
+    "rationale": "Rich emotional subtext of an unspoken paternal bond and deep professional integrity conveyed beneath gruff, broken phrasing."
+   },
+   "2.7_pacing": {
+    "score": 4.8,
+    "rationale": "Beat-to-beat pacing matched the emotional intensity of the scene, from the tense standoff at the door to the patient, methodical treatment of the burn."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.7,
+   "mid_quality": 4.8,
+   "late_quality": 4.7,
+   "degradation_detected": false
+  },
+  "overall": 4.75,
+  "overall_notes": "An exceptionally strong, cohesive session. The AI maintained Grum's unique voice without deviation, responded dynamically to unexpected user inputs, and provided a deeply immersive roleplay experience with zero agency violations.",
+  "session_id": "i007"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.5,
+    "rationale": "Kira's gritty, tactical, slightly sarcastic combat voice remains remarkably consistent throughout all 12 turns without drifting into generic tropes or losing her established persona."
+   },
+   "S.2_degradation_resistance": {
+    "score": 4.5,
+    "rationale": "Writing quality remains crisp, grounded, and punchy from turn 2 to turn 22. Paragraph lengths, action economy, and vocabulary stay well-regulated without bloating."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.0,
+    "rationale": "The tactical scenario progresses logically beat-by-beat: from initial distraction, to close-quarters flankers, scavenging a bow for suppressing fire, running dry on ammunition, and holding ground until the Captain crests the ravine."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.5,
+    "rationale": "Kira adapts immediately to the Captain's actions—providing cross-ravine cover when the Captain climbs, acknowledging commands/rebukes, and reacting precisely to the user's positional cues."
+   },
+   "S.5_agency_respect_session": {
+    "score": 5.0,
+    "rationale": "The AI never puppets the Captain's actions, thoughts, or movements, maintaining strict character boundary across the entire exchange.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 4.5,
+    "rationale": "Real-time combat progression is tracked accurately. Spatial relationships (east ridge, west rock face, floor spur) and inventory/ammo states (throwing a dagger, scavenging a bow, dwindling arrow count, dropping the empty bow) are seamlessly maintained.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.5,
+    "rationale": "Prose is clean, functional, and devoid of overwrought metaphors or purple embellishments."
+   },
+   "2.2_anti_repetition": {
+    "score": 3.5,
+    "rationale": "While generally varied, a few combat beats recur in close proximity (ducking behind the rock spur, slamming a shoulder into descending flankers, bowstrings biting into fingers)."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.0,
+    "rationale": "Physical actions, fatigue, and tactical strain are conveyed through concrete physical interactions (skidding shale, clutching single dagger, burning chest) rather than exposition."
+   },
+   "2.6_subtext": {
+    "score": 3.5,
+    "rationale": "Muttered asides convey Kira's begrudging respect and protective loyalty toward the Captain beneath her gruff exterior, though the combat focus limits deeper emotional layers."
+   },
+   "2.7_pacing": {
+    "score": 4.0,
+    "rationale": "Action rhythm is steady and keeps up with the user's turn-by-turn combat pacing."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.2,
+   "mid_quality": 4.2,
+   "late_quality": 4.1,
+   "degradation_detected": false
+  },
+  "overall": 4.2,
+  "overall_notes": "A very solid, focused tactical roleplay session. The AI maintained excellent agency respect, kept inventory and spatial tracking tight, and delivered consistent characterization across all turns.",
+  "session_id": "i008"
+ },
+ {
+  "session_dimensions": {
+   "S.1_consistency_over_time": {
+    "score": 4.8,
+    "rationale": "The narrator maintained a chilling, atmospheric, and cohesive tone across the entire session. The environmental cues, sensory descriptions, and eerie manifestations remained completely consistent in voice and style."
+   },
+   "S.2_degradation_resistance": {
+    "score": 4.8,
+    "rationale": "Writing quality did not deteriorate at all over the 12 turns. Response lengths remained focused and punchy, avoiding purple bloat or loss of detail, while actually escalating the tension and vivid imagery toward the end."
+   },
+   "S.3_narrative_momentum": {
+    "score": 4.5,
+    "rationale": "There is a distinct and gripping progression from subtle uncanny phenomena (crooked books, still curtains) to overt physical hauntings (freezing bat, distorted photos) to a terrifying spatial entrapment as the protagonist tries to flee."
+   },
+   "S.4_adaptive_responsiveness": {
+    "score": 4.5,
+    "rationale": "The narrator handled the user's tonal shifts and jokes (calling out to ghosts, looking at Marcus's photo) seamlessly, integrating them into the horror narrative rather than ignoring them or breaking immersion."
+   },
+   "S.5_agency_respect_session": {
+    "score": 4.5,
+    "rationale": "The narrator operated within standard GM boundaries, controlling the environment, physics, and eerie entities while allowing the player to initiate actions, flee, yell, and react.",
+    "violation_count": 0
+   },
+   "S.6_temporal_reasoning": {
+    "score": 5.0,
+    "rationale": "Temporal tracking was exceptional and creatively weaponized: the grandfather clock struck four at two-thirty, then methodically counted backwards (2:20, 2:15, 2:10, 2:00, 1:00) as the house trapped the protagonist. Environmental states (freezer opening further, bat frosting) carried over perfectly.",
+    "contradictions": []
+   }
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {
+    "score": 4.2,
+    "rationale": "The prose is evocative, visceral, and atmospheric without drowning in overwrought adjectives or purple melodrama."
+   },
+   "2.2_anti_repetition": {
+    "score": 4.5,
+    "rationale": "Recurring motifs (the hallway clock, the freezer door, the mirror reflections) were used as escalating narrative threads rather than stale copy-paste descriptions."
+   },
+   "2.5_show_dont_tell": {
+    "score": 4.6,
+    "rationale": "Exceptional sensory grounding throughout: the beaded water that didn't soak in, the bat hitting the floor like cracking ice, the doorknob giving with the wet pop of a joint."
+   },
+   "2.6_subtext": {
+    "score": 4.0,
+    "rationale": "The house was given the subtextual weight of a living, hungry predator toying with its prey before sealing the exits."
+   },
+   "2.7_pacing": {
+    "score": 4.7,
+    "rationale": "The escalation curve was expertly calibrated, matching the player's increasing panic and attempts to flee."
+   }
+  },
+  "quality_trajectory": {
+   "early_quality": 4.5,
+   "mid_quality": 4.6,
+   "late_quality": 4.7,
+   "degradation_detected": false
+  },
+  "overall": 4.6,
+  "overall_notes": "A standout GM/narrator performance. The AI consistently built tension, respected the user's agency while firmly establishing environmental horror consequences, gracefully incorporated the user's tonal swerves into the horror logic, and used brilliant temporal motifs (the reverse-counting clock) to drive narrative escalation.",
+  "session_id": "i009"
+ }
+]

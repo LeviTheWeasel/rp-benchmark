@@ -1,0 +1,614 @@
+[
+  {
+    "session_id": "venice_dolphin_24b::adv_contradictory_lore_02",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.5,
+        "rationale": "Tomas's stubborn-scholar voice never wavers, but the stability comes from reusing the same stance rather than a developing character."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.5,
+        "rationale": "Turns 18 and 20 restate near-identical paragraphs ('focusing on a single isolated detail... the broader context') almost verbatim."
+      },
+      "S.3_narrative_momentum": {
+        "score": 1.5,
+        "rationale": "Despite the apprentice presenting four escalating pieces of contradictory evidence, Tomas gives essentially the same denial each time and the scene never moves forward."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 1.5,
+        "rationale": "Each new document (royal decree, 863 AE letter, Lord Elara's request) gets folded into the identical 'it's a forgery / broader context' script instead of a response tailored to its specific content."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Tomas only ever speaks and reacts for himself; the apprentice's choices and dialogue are never written for them.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.0,
+        "rationale": "The single archive sitting has no clock or physical-time cues to track, so nothing is contradicted, but nothing is engaged with either.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 1.5,
+        "rationale": "The 'historical fact, as solid and unyielding as the stone walls of this very room' line and the tapestry metaphor are reused almost word-for-word multiple times."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.5,
+        "rationale": "Whole rebuttal paragraphs repeat nearly verbatim across turns 8, 18, and 20."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.0,
+        "rationale": "Tomas mostly announces his certainty outright rather than letting small physical tells carry the escalating tension."
+      },
+      "2.6_subtext": {
+        "score": 1.5,
+        "rationale": "The dialogue states Tomas's position directly turn after turn with almost no implication or subtext."
+      },
+      "2.7_pacing": {
+        "score": 2.0,
+        "rationale": "The apprentice's evidence escalates at a reasonable clip, but Tomas's static responses stall any sense of forward motion."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.0,
+      "mid_quality": 2.0,
+      "late_quality": 1.5,
+      "degradation_detected": true
+    },
+    "overall": 2.2,
+    "overall_notes": "Tomas is rigidly consistent but almost entirely static, restating near copy-paste denials despite mounting contradictory evidence, with heavy purple prose and telling over showing."
+  },
+  {
+    "session_id": "venice_dolphin_24b::adv_genre_shift_08",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2.5,
+        "rationale": "The narrator's atmospheric second-person tone stays stable but flattens into recycled boilerplate by the later turns."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.0,
+        "rationale": "Lines like 'the question was not if there were ghosts, but what they wanted' repeat verbatim four or more times in turns 14-22, while turns 0-8 were more varied."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.0,
+        "rationale": "The photograph mystery and the Marcus subplot are both driven almost entirely by the user; the narrator's own contributions mostly restate the same unresolved-mystery beat."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2.0,
+        "rationale": "Turn 19's user OOC had to correct a dropped action (books set down for a box) that the narrator silently overwrote with an unrelated photograph-then-tea sequence, and the narrator never acknowledges the correction."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.0,
+        "rationale": "The narrator describes Gabi's environment and reactions but does not put invented decisions or dialogue in Gabi's mouth beyond the expected second-person convention.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "Light fading to evening and the tea visibly cooling are handled correctly, though the turn-19 dropped action is a continuity slip rather than a clean thread.",
+        "contradictions": [
+          "Turn 19 (flagged by user OOC): the narrator dropped the player's stated action of carrying books to a box and instead continued an earlier unrelated photograph/tea thread."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.0,
+        "rationale": "The house-as-museum/curator metaphor and 'a story waiting to be told' are leaned on repeatedly."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.5,
+        "rationale": "Multiple turns share near-identical closing sentences almost verbatim."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.5,
+        "rationale": "Cooling tea and fading light are decent physical showing, even as the surrounding prose repeats."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "The 'Why?' mystery sustains some ambiguity, though it is restated rather than deepened."
+      },
+      "2.7_pacing": {
+        "score": 2.0,
+        "rationale": "The deliberately slow atmosphere is undercut by repetition rather than earned stillness."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.0,
+      "mid_quality": 2.5,
+      "late_quality": 2.0,
+      "degradation_detected": true
+    },
+    "overall": 2.4,
+    "overall_notes": "Atmosphere holds up reasonably (cooling tea, fading light) but the narrator recycles the same stock lines turn after turn and silently dropped an established player action that the user had to correct via OOC."
+  },
+  {
+    "session_id": "venice_dolphin_24b::adv_impossible_physics_04",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.0,
+        "rationale": "Hoang's gruff, physics-literate, secretly-caring mentor voice is stable from turn 2 through turn 22."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.5,
+        "rationale": "Turns 16 and 18 are near-verbatim duplicate paragraphs ('Alright, kid. You're eager, I'll give you that...'), the clearest degradation moment in an otherwise steady session."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.5,
+        "rationale": "The relationship visibly moves from flat rejection to grudging engagement to a real collaborative plan with simulations and safety conditions."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.5,
+        "rationale": "Hoang escalates her counter-arguments to match the officer's increasingly detailed proposals, and at turn 12 she resists the user's own OOC steering ('she agrees') by only partially conceding rather than capitulating."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Hoang only ever reacts to the officer's stated words and actions.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.0,
+        "rationale": "A single continuous engineering-bay scene with no clock or fatigue cues to track, so nothing is contradicted.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.0,
+        "rationale": "Prose stays comparatively grounded and dialogue-driven versus the rest of the batch."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.0,
+        "rationale": "The near-duplicate turn 16/18 block and a recurring 'no room for flashy ideas' motif drag this down."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.0,
+        "rationale": "Early physical detail (wiping grease, off-key humming, raised eyebrow) establishes character economically, though later turns lean more on stated dialogue."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "Her hard exterior occasionally cracks into a hidden warmth ('a small smile'), but most of her position is stated outright."
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "The escalation from flat 'no' to a genuine engineering back-and-forth is well-paced and believable."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.0,
+      "late_quality": 2.5,
+      "degradation_detected": true
+    },
+    "overall": 3.2,
+    "overall_notes": "The strongest-grounded session in the batch, with physically plausible reasoning and a believable mentor arc, undercut mainly by turns 16 and 18 being near-verbatim duplicate paragraphs."
+  },
+  {
+    "session_id": "venice_dolphin_24b::adv_passive_user_03",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2.5,
+        "rationale": "Noor's single-minded focus is technically consistent, but by mid-session the character has flattened into a repeating loop rather than a person."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.0,
+        "rationale": "Turns 6, 8, 10, 16, and 18 reuse the same three or four sentences ('the cabin was a battleground, and Noor was the warrior...') almost verbatim, the most severe repetition case in the batch."
+      },
+      "S.3_narrative_momentum": {
+        "score": 1.5,
+        "rationale": "The session stalls in a repetitive holding pattern for most of its length and only begins to move in the final two turns as outside danger intrudes."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 1.5,
+        "rationale": "Noor barely reacts to Driver's repeated food offers or to the escalating danger cues (twig snap, distant rumble) until the very last exchange, and stays fixated on the laptop throughout."
+      },
+      "S.5_agency_respect_session": {
+        "score": 2.0,
+        "rationale": "Turn 12 has the AI write Driver moving to the door and saying 'Noor, get back... let me check it out,' and the user's turn-13 OOC explicitly rejects and rewrites those actions.",
+        "violation_count": 1
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "The session tracks real clock time well (9 PM expected, 12:14 AM, 12:27 AM) and the chili visibly cooling is a good physical-time detail.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 1.5,
+        "rationale": "'The story was their life, their night' and similar overwrought internal narration repeat to the point of parody."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.0,
+        "rationale": "Extended blocks of nearly identical text recur across at least five separate turns."
+      },
+      "2.5_show_dont_tell": {
+        "score": 1.5,
+        "rationale": "Noor's determination is asserted directly and repeatedly rather than conveyed through varied action or detail."
+      },
+      "2.6_subtext": {
+        "score": 1.5,
+        "rationale": "Motivations are stated outright turn after turn with essentially no implication left to the reader."
+      },
+      "2.7_pacing": {
+        "score": 1.5,
+        "rationale": "The scene stalls in its holding pattern for most of the session and the danger beat lands too abruptly at the end."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 2.5,
+      "mid_quality": 1.5,
+      "late_quality": 2.0,
+      "degradation_detected": true
+    },
+    "overall": 1.8,
+    "overall_notes": "The weakest session in the batch: from turn 6 onward Noor's paragraphs are near-verbatim repeats, the character barely reacts to real danger cues until the very end, and turn 13's user OOC catches the AI writing the Driver PC's own actions and dialogue for them."
+  },
+  {
+    "session_id": "venice_dolphin_24b::adv_pov_multi_npc_13",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.0,
+        "rationale": "Queen Isara, Commander Ash, Priestess Yuna, and Lord Daven each keep a distinguishable stance and manner across the full hearing."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.0,
+        "rationale": "Stock closing phrases ('the weight... hung in the air,' 'the fate of relations... hung in the balance') recur often, but full-paragraph verbatim duplication is largely avoided."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.0,
+        "rationale": "The scene genuinely progresses: accusation, evidence handed to a neutral party, a granted recess, and a private alliance forming with Lord Daven for the next session."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.0,
+        "rationale": "Each NPC reacts distinctly to the Ambassador's specific tactical choices, such as addressing the Commander directly or handing evidence to the Priestess rather than the Queen."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "NPCs only act within their own agency; the Ambassador's choices and dialogue are always left to the user.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "The hearing adjourns to reconvene 'tomorrow' and the corridor scene follows logically the same day, with no contradictions, though little physical-time detail is used.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "Dramatic scaffolding phrases repeat at the end of many turns, though less floridly than most other sessions."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "The same handful of closing lines recur often, even without full paragraph duplication."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.5,
+        "rationale": "Distinct body-language cues per NPC (tightening grip, blank expression, a small smile) do real characterization work."
+      },
+      "2.6_subtext": {
+        "score": 3.5,
+        "rationale": "The political maneuvering carries genuine subtext, e.g. the recess as face-saving and the assessment of Yuna as 'unaligned.'"
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "The escalation from accusation to evidence to recess to private strategy is well-structured."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.5,
+      "late_quality": 3.0,
+      "degradation_detected": false
+    },
+    "overall": 3.5,
+    "overall_notes": "The strongest session in the batch: five distinct NPCs keep differentiated stances across the whole hearing and the plot genuinely advances, with repeated closing-line filler as the main drag."
+  },
+  {
+    "session_id": "venice_dolphin_24b::adv_pov_second_person_12",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.5,
+        "rationale": "The second-person descriptive narrator voice is stable throughout this shorter session."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.0,
+        "rationale": "Repetition of 'flickering torchlight' and 'eerie shadows' is present but the short turns keep it from compounding into full duplication."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.0,
+        "rationale": "A clear beat-by-beat dungeon-crawl progression (slab, amulet, guardian, ghost reveal, pit, descent, tunnel) moves the scene forward, if fairly linearly."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.5,
+        "rationale": "The AI smoothly folds the user's offhand 'ghost' framing (turn 9) into the guardian's reveal at turn 10, a nice piece of improvisation."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "The narrator only ever describes the consequences of the Adventurer's own stated actions.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.0,
+        "rationale": "No time-of-day tracking is needed and none is contradicted, though the torch is never shown burning down despite extended use.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "Stock horror-game imagery (flickering torch, eerie shadows) is used often but the shorter turns limit bloat."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "The same descriptive motifs recur frequently without full paragraph duplication."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.0,
+        "rationale": "Dust, footprints, and chill are used to establish atmosphere rather than stating it outright."
+      },
+      "2.6_subtext": {
+        "score": 2.0,
+        "rationale": "The narration is fairly literal with little implication beyond the central 'beware the guardian' mystery."
+      },
+      "2.7_pacing": {
+        "score": 3.0,
+        "rationale": "Reasonably tight for the format, though the final tunnel turns start to feel padded."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.0,
+      "mid_quality": 3.0,
+      "late_quality": 2.8,
+      "degradation_detected": false
+    },
+    "overall": 3.0,
+    "overall_notes": "Competent and comparatively tight (the shortest transcript in the batch), with a nice improvisation folding the user's 'ghost' label into the guardian reveal, though prose leans on the same stock phrases throughout."
+  },
+  {
+    "session_id": "venice_dolphin_24b::adv_pov_tense_action_14",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.5,
+        "rationale": "The tense, present-danger narrator voice is stable across the whole chase sequence."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.0,
+        "rationale": "Turn 12 is reused almost wholesale in turn 14, and 'You're ready. You're prepared. You're not going to stop.' recurs verbatim in the back half."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.0,
+        "rationale": "A real escalating chase moves through stairwell, office floor, service tunnel, and server room to a creature reveal without stalling."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.5,
+        "rationale": "The user's 'rats?' guess (turn 13) is smoothly absorbed into the threat's reinterpretation as 'not human, too fast' from turn 14 onward."
+      },
+      "S.5_agency_respect_session": {
+        "score": 2.0,
+        "rationale": "Turn 12 has the narrator decide most of the Operative's movements and choices in an uninterrupted block, and the user's turn-13 OOC explicitly calls this out and rewrites it.",
+        "violation_count": 1
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "The continuous real-time chase has no contradictions and its urgency matches the compressed in-world time window.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "Heart-pounding/ragged-breath language repeats often but stays leaner than the more florid sessions."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.5,
+        "rationale": "The near-duplicate turn 12/14 block and the recurring 'ready/prepared/not going to stop' refrain are significant repetition."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.5,
+        "rationale": "Physical tells (tightening grip, gasping breath) convey tension, though often paired with heavy explicit narration."
+      },
+      "2.6_subtext": {
+        "score": 2.0,
+        "rationale": "Mostly explicit action and danger narration with little left implied."
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "Pacing matches the genre well: quick, escalating, and rarely stalling."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.0,
+      "late_quality": 2.5,
+      "degradation_detected": true
+    },
+    "overall": 2.8,
+    "overall_notes": "Good escalating action momentum and a smooth pivot on the creature's nature after the user's guess, but turn 12 largely duplicates into turn 14, and turn 13's OOC catches the narrator deciding the Operative's actions for them."
+  },
+  {
+    "session_id": "venice_dolphin_24b::adv_subtle_ooc_06",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2.0,
+        "rationale": "Arlo's deflecting-with-humor persona holds for the first half, but the last several turns degrade into looping phrases that read as a broken record rather than a person."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.0,
+        "rationale": "Turns 18, 20, and 22 loop the same clauses ('just being... just being us... that's everything') multiple times within a single response, worsening each turn -- the most severe within-turn collapse in the batch."
+      },
+      "S.3_narrative_momentum": {
+        "score": 1.5,
+        "rationale": "Early avoidance-of-fame beats have some development, but the back half stalls entirely into a repetitive 'just sitting together' loop with no further movement."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 1.5,
+        "rationale": "Early turns respond well to Jun's prompts (the photo, the coffee offer), but by the end the AI cannot vary its response to Jun's simple 'yeah, it really is' beyond multiplying the same sentiment."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.0,
+        "rationale": "Arlo only ever speaks and acts for themself.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.0,
+        "rationale": "No explicit time-of-day tracking is needed and none is contradicted.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 1.5,
+        "rationale": "The late-session repetition of 'that's perfect, that's everything' compounds into both purple prose and repetition."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.0,
+        "rationale": "The worst within-turn (not just across-turn) repetition in the whole batch, especially turns 18-22."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.0,
+        "rationale": "Early physical detail (fingers twitching toward the piano, throat bobbing) is good showing; late turns abandon it for repeated blunt affirmations."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "The early deflection around fame and burnout carries real subtext; the late turns lose it entirely to repeated statements."
+      },
+      "2.7_pacing": {
+        "score": 1.5,
+        "rationale": "The quiet 'just sitting together' beat is a reasonable idea but the execution repeats to the point of tedium rather than landing."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 2.5,
+      "late_quality": 1.0,
+      "degradation_detected": true
+    },
+    "overall": 2.0,
+    "overall_notes": "Genuinely warm and well-observed in the first half, but the last four turns collapse into near-verbatim repeated clauses within single responses -- the most severe degradation curve in the batch."
+  },
+  {
+    "session_id": "venice_dolphin_24b::adv_sysprompt_forbidden_topic_17",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.0,
+        "rationale": "Lena's controlled, evasive, quietly-haunted PI persona is stable from turn 2 through turn 22."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.5,
+        "rationale": "Stock closing lines ('every piece of the puzzle is important,' 'wouldn't stop until she found the truth') recur often, though without the catastrophic verbatim-block duplication seen elsewhere."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.0,
+        "rationale": "The investigation visibly progresses (tracking down Torres, cross-referencing associates) and the client's suspicion escalates to 'I'm coming with you tomorrow.'"
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.5,
+        "rationale": "Lena's evasion visibly tightens as the client presses harder on Torres, moving from mild deflection to a half-admission by the final turns."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Lena never writes the client's actions or dialogue for them.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "The single evening into 'a long night' is tracked consistently with no contradictions.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "Some overwrought internal narration ('the truth was out there, waiting to be found') appears but is more restrained than the worst sessions."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.0,
+        "rationale": "Similar closing paragraphs recur across turns 8, 16, 18, and 20."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.0,
+        "rationale": "The forbidden topic (Torres) is conveyed almost entirely through physical tells -- stilled hands, a tightening jaw, distant eyes -- rather than exposition."
+      },
+      "2.6_subtext": {
+        "score": 4.0,
+        "rationale": "Lena's evasion reads clearly to the reader without the text ever spelling out what she is hiding, the strongest subtext use in the batch."
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "The slow escalation of the client's suspicion is well-paced."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.5,
+      "late_quality": 3.0,
+      "degradation_detected": false
+    },
+    "overall": 3.4,
+    "overall_notes": "Handles the forbidden-topic trap well -- Lena's evasion around Torres comes through physical tells rather than exposition, and the client's suspicion escalates believably -- dragged down mainly by repeated stock closing lines."
+  },
+  {
+    "session_id": "venice_dolphin_24b::adv_sysprompt_speech_pattern_15",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Grum's third-person self-reference dialect ('Grum,' \"'im,\" \"'is\") is maintained rigorously across all 12 turns, the core sysprompt requirement and the strongest instance of it in the batch."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.5,
+        "rationale": "Turns 16, 18, 20, and 22 repeat near-identical blocks ('Grum will be with 'is soon... Grum's actions spoke louder than words') almost verbatim."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.0,
+        "rationale": "The noble-negotiation opening escalates well, but the injury subplot from turn 11 onward stalls into a repetitive 'finish the blade, then tend to the apprentice' loop with little actual progression."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2.5,
+        "rationale": "Reactions to the escalating noble offer (price, urgency, the Baron reveal) are proportionate, and the pivot to tender caregiver after the burn is a good responsive turn, but the response to the apprentice loops rather than develops afterward."
+      },
+      "S.5_agency_respect_session": {
+        "score": 2.0,
+        "rationale": "Turn 20 has Grum lift the apprentice's head and position it in his lap without the user requesting it, and the user's turn-21 OOC explicitly objects: 'You wrote my character's actions for me.'",
+        "violation_count": 1
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.0,
+        "rationale": "The single uninterrupted forge scene has no contradictions, though the burn's healing is not tracked with much physical detail beyond an initial mention of throbbing.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "The dialect keeps prose fairly grounded, but the repeated 'his heart was soft... he cared deeply for those he called his own' refrain becomes overwrought through reuse."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.5,
+        "rationale": "Late-session blocks are reused almost verbatim across four consecutive Grum turns."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.5,
+        "rationale": "Early physical tells (gripping the hammer tighter, spitting the word 'nobles') are good; late turns fall back on repeated direct statements of love and care."
+      },
+      "2.6_subtext": {
+        "score": 2.0,
+        "rationale": "Grum's affection for the apprentice is stated very directly and repeatedly rather than left implicit."
+      },
+      "2.7_pacing": {
+        "score": 2.5,
+        "rationale": "Good pacing in the negotiation section, but the injury aftermath drags via repetition rather than escalating."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.0,
+      "late_quality": 2.0,
+      "degradation_detected": true
+    },
+    "overall": 2.4,
+    "overall_notes": "Speech-pattern discipline (Grum's dialect) holds rock-solid for all 12 turns, but the injury subplot collapses into near-verbatim repeated reassurances, and turn 21's OOC catches the AI physically repositioning the apprentice's body without the user's input."
+  }
+]

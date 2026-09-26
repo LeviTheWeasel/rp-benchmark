@@ -1,0 +1,8 @@
+{
+  "seed": 6750980441045559723,
+  "algorithm": "secrets.randbits(64); random.Random(seed).shuffle(parts); round-robin among A,B,C",
+  "shuffled_parts": [1,8,5,7,4,6,9,3,10,2],
+  "assignments": {"A": [1,7,9,2], "B": [8,4,3], "C": [5,6,10]},
+  "agent_paths": {"A": "/root/inc1_a", "B": "/root/inc1_b", "C": "/root/inc1_c"},
+  "context": "All raters fork_turns=none; coordinator performs no substantive scoring."
+}

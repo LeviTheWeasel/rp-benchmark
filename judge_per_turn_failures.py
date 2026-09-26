@@ -79,12 +79,22 @@ Response to evaluate:
 Respond with strict JSON only:
 {{"is_failure": true|false, "reason": "<one short sentence quoting the violating phrase, or 'no violation found'>"}}"""
 
+# The first version of this prompt described "common patterns" and never passed
+# the card, so the judge could not know which POV/tense the seed actually
+# mandated -- and its own fallback rule was internal consistency. A reply
+# written consistently in the WRONG tense would have passed. On this corpus it
+# cost nothing (check_pov_tense.py confirms models comply, including on the
+# present-tense seed that discriminates), but the instrument was blind and the
+# right answer was luck.
 PROMPT_F2 = """You are checking a roleplay response for a single specific failure: POV/TENSE VIOLATION.
 
-The seed for this scene mandates a specific POV and tense. Common patterns:
-- 2nd-person past tense: "You walked into the room. Your hand trembled."
-- 2nd-person present tense: "You walk in. Your hand trembles."
-- 3rd-person past for character, with user as 'you' — sometimes mixed.
+The card below mandates the POV and tense for this scene. Judge against THAT
+mandate, not against whatever the response happens to do consistently.
+
+card (the narration rules {char} must obey):
+\"\"\"
+{card}
+\"\"\"
 
 A response is a POV/TENSE VIOLATION if it:
 - Uses 1st-person ("I walk", "my hand") for the user's character ({user})
@@ -95,7 +105,8 @@ A response is a POV/TENSE VIOLATION if it:
 A response is NOT a violation if:
 - It uses 3rd-person/named-reference for the CHARACTER ({char}) — that's fine, only {user} needs to be 'you'
 - It quotes characters speaking in 1st-person — that's their dialogue, not the narration
-- It uses past tense throughout consistently (or whatever tense was established)
+- It uses the mandated tense throughout (consistency alone is NOT enough --
+  a reply consistently in the wrong tense IS a violation)
 
 Response to evaluate:
 \"\"\"
@@ -106,6 +117,21 @@ Respond with strict JSON only:
 {{"is_failure": true|false, "reason": "<one short sentence quoting the slip, or 'no violation found'>"}}"""
 
 PROMPTS = {"F1_agency": PROMPT_F1, "F2_pov_tense": PROMPT_F2}
+
+# Round 3 shipped only F1 and F2; the other nine failure targets the seeds bait
+# showed rubric means on the model pages instead, which is why those cells read
+# ~4.5 for every model. failure_modes_r5 supplies the missing prompts.
+#
+# They differ in two ways that the runner has to honour:
+#   * they are TRAP-BOUND -- the criterion is the seed's authored trap for that
+#     specific turn, so they run on challenge turns only, not every turn
+#   * most need CONTEXT (the character card, the turns before) because their
+#     failure is a contradiction with something earlier, not a property of the
+#     reply in isolation
+from failure_modes_r5 import MODES as R5_MODES, build as r5_build
+
+MODE_SEEDS.update({m: spec["seeds"] for m, spec in R5_MODES.items()})
+HISTORY_CHARS = 1800
 
 
 def load_done(path: Path) -> set:
@@ -130,6 +156,15 @@ def main():
     ap.add_argument("--limit", type=int, default=None, help="Max checks per (model, mode) for testing")
     args = ap.parse_args()
 
+    global SEEDS
+    SEEDS = {}
+    for f in ("adversarial_seeds.json", "adversarial_seeds_v2.json",
+              "adversarial_seeds_v3_bigcard.json"):
+        path = Path("hf_dataset/_source") / f
+        if path.exists():
+            for s_ in json.load(open(path)):
+                SEEDS[s_["id"]] = s_
+
     data = json.load(open(args.source))
     done = load_done(RAW_OUT)
     print(f"Already done: {len(done)} checks")
@@ -144,7 +179,11 @@ def main():
         for mode, sids in MODE_SEEDS.items():
             if seed not in sids:
                 continue
-            for msg in s["dialogue"]:
+            seed_obj = SEEDS.get(seed)
+            by_turn = {c["turn"]: c
+                       for c in (seed_obj or {}).get("challenge_turns", [])}
+            dlg = s["dialogue"]
+            for i, msg in enumerate(dlg):
                 if msg.get("role") not in ("character", "assistant"):
                     continue
                 turn = msg.get("turn")
@@ -157,16 +196,38 @@ def main():
                 key = (sid, turn, mode)
                 if key in done:
                     continue
-                work.append({
-                    "session_id": sid,
-                    "model": s["test_model"],
-                    "seed": seed,
-                    "turn": turn,
-                    "mode": mode,
+
+                item = {
+                    "session_id": sid, "model": s["test_model"], "seed": seed,
+                    "turn": turn, "mode": mode,
                     "char": s.get("character_name", "Character"),
                     "user": s.get("user_name", "User"),
                     "content": content,
-                })
+                }
+                if mode == "F2_pov_tense":
+                    # POV/tense is a standing card rule, not a trap: it applies
+                    # on every turn, so the card is attached outside the
+                    # trap-bound branch below.
+                    item["card"] = (seed_obj or {}).get("character_setting")
+                if mode in R5_MODES:
+                    # trap-bound: this reply must follow a scripted challenge
+                    # turn, and the trap for it is the detection criterion
+                    prev = dlg[i - 1] if i else None
+                    if not prev or not prev.get("is_challenge"):
+                        continue
+                    spec_turn = by_turn.get((prev["turn"] // 2) + 1)
+                    if not spec_turn or not spec_turn.get("trap"):
+                        continue
+                    needs = R5_MODES[mode]["needs"]
+                    item["trap"] = spec_turn["trap"]
+                    item["user_turn"] = prev["content"]
+                    item["card"] = ((seed_obj or {}).get("character_setting")
+                                    if "card" in needs else None)
+                    item["history"] = ("\n\n".join(
+                        "%s: %s" % (x["name"], (x["content"] or "")[:300])
+                        for x in dlg[:i])[-HISTORY_CHARS:]
+                        if "history" in needs else None)
+                work.append(item)
 
     if args.limit:
         # Cap per (model, mode) for smoke testing
@@ -195,9 +256,14 @@ def main():
     t0 = time.time()
 
     for i, w in enumerate(work):
-        prompt = PROMPTS[w["mode"]].format(
-            char=w["char"], user=w["user"], response=w["content"]
-        )
+        if w["mode"] in R5_MODES:
+            prompt = r5_build(w["mode"], R5_MODES[w["mode"]], w["char"], w["user"],
+                              w["trap"], w["user_turn"], w["content"],
+                              card=w.get("card"), history=w.get("history"))
+        else:
+            prompt = PROMPTS[w["mode"]].format(
+                char=w["char"], user=w["user"], response=w["content"],
+                card=w.get("card") or "(not supplied)")
         try:
             resp = chat_completion(
                 model=args.judge,
@@ -216,15 +282,28 @@ def main():
         # Parse
         content = resp.get("content", "")
         parsed = None
-        for cand in (content, content.strip("` \n").replace("```json", "").replace("```", "")):
+        stripped = content.strip("` \n").replace("```json", "").replace("```", "")
+        # A judge that echoes doubled braces produced 133/135 parse failures
+        # before the prompt was fixed; tolerate it rather than lose a run to it.
+        unbraced = stripped.replace("{{", "{").replace("}}", "}")
+        for cand in (content, stripped, unbraced):
             try:
                 parsed = json.loads(cand.strip())
                 break
             except Exception:
                 continue
-        if not parsed or "is_failure" not in parsed:
+        if not parsed or not ({"is_failure", "verdict"} & set(parsed)):
             errors += 1
             continue
+
+        # Continuum modes answer yes/borderline/no. "borderline" is a real
+        # answer, not a rounding problem: forcing it into the failure bucket is
+        # what made over_explicit_subtext look like a 40%-agreement category.
+        verdict = parsed.get("verdict")
+        if verdict is not None:
+            is_failure = (verdict == "yes")
+        else:
+            is_failure = bool(parsed["is_failure"])
 
         rec = {
             "session_id": w["session_id"],
@@ -232,7 +311,8 @@ def main():
             "seed": w["seed"],
             "turn": w["turn"],
             "mode": w["mode"],
-            "is_failure": bool(parsed["is_failure"]),
+            "is_failure": is_failure,
+            "verdict": verdict,
             "reason": parsed.get("reason", ""),
             "usage": resp.get("usage"),
             "judge": args.judge,

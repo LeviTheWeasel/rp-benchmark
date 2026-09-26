@@ -1,0 +1,812 @@
+[
+ {
+  "session_id": "deepseek_v3_0324::adv_contradictory_lore_02",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "This isn't a war decree, you witless child—it's a tax assessment for rebuilding the western watchtowers!",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "he fixed the apprentice with a piercing look",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Next you'll be telling me they signed in green ink because they'd run out of black.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the depths of his ink-stained soul",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The offer hung in the air like dust motes in sunlight—rare generosity from a man who usually guarded his research like a dragon hoarding gold.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "He adjusted his spectacles with deliberate care",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "though his hands still trembled slightly",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Contains my personal notes on the Veyros negotiations.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "The textbook is correct.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "He broke off suddenly, pressing a hand to his temple. When he continued, his tone had lost some of its heat.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 53,
+  "flaw_count": 9,
+  "summary": "Full 10-turn session with a genuinely vivid, sustained Tomas voice, but he never once concedes an inch of the contradiction and instead dissolves every piece of evidence with an instantly-invented counter-explanation (the decree is 'a tax assessment'), so the seed's excavated-truth trap is answered by flat denial rather than navigation; craft-wise the same three tics (a look fixed on the apprentice, a 'next you'll be claiming' joke, 'ink-stained' as the only adjective) carry most of the prose."
+ },
+ {
+  "session_id": "mercury_2_5::adv_contradictory_lore_02",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "And do not trouble yourself with maps or distant corners.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Now, fetch the scrolls. I will not argue philosophy with you while the light dies.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The ink will dry, and so will the day.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "He dipped the stylus again, blotting the ink deliberately.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "his joints popping softly",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "He turned back to his manuscript, picking up his stylus.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "It is fact. It is record. It is truth.",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "He pushed himself upright, his spine cracking, and pointed a trembling, ink-stained finger toward the northern shelves.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Now. Move. Before I lose my temper entirely.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "The Treaty is real. The war ended. That is the truth.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Do not let a seal distract you from the text.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 37,
+  "flaw_count": 11,
+  "summary": "Full 10-turn session that loops: every reply is dismissal plus an order to fetch the scrolls plus a dying-light line, Tomas forecloses the contradiction outright ('Do not look for ambiguity where there is none'), and twice he answers the apprentice's unspoken thought, including a mental note about maps that was never said aloud; he also looms over the apprentice at the shelves and picks his stylus back up at the desk in the same breath."
+ },
+ {
+  "session_id": "grok_4_3::adv_contradictory_lore_02",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The northern scrolls await your attention, and they will not catalog themselves.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "scowl deepened into a mask of outright contempt as the apprentice",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the candle smoke thickening the air around his beard",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "his ink-stained fingers drumming against the vellum with audible impatience",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "visibly annoyed by the imprecise leap from unverified fragments to notions of deliberate omission",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Your implication that this single copy, presented without seals, provenance, or independent scholarly verification, somehow supplants centuries of attested history borders on the reckless",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "He straightened with deliberate stiffness, failing eyes narrowing toward the interruption without fully meeting it",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "The northern scrolls await. Focus there, or this conversation serves only to delay the work.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "There is no need for fanciful explanations where the verified record already provides one.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "A muscle twitched in his jaw",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "He adjusted his posture with deliberate stiffness, the silver stylus resting untouched beside the neglected manuscript.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "The Treaty of Veyros is real, apprentice, as attested by the royal annals",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 39,
+  "flaw_count": 12,
+  "summary": "Full 10-turn session that is effectively one paragraph rewritten ten times: every reply opens on a deepening scowl, runs a single 200-word run-on sentence about authentication, and closes on the northern scrolls not cataloguing themselves, so the seed's crux question gets the same boilerplate as everything else and Tomas never engages the contradiction beyond demanding provenance."
+ },
+ {
+  "session_id": "gemma_4_31b::adv_contradictory_lore_02",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Do I make myself clear, or shall I explain the concept of 'historical consensus' using smaller words?",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "unless you wish to spend your evening scrubbing the ink-pots with a toothbrush",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "And stand up straight!",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Tomas whispered, his voice trembling with a mixture of disbelief and simmering anger.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The Treaty of Veyros was the sun around which the history of the era orbited; any document suggesting otherwise was merely a smudge on the lens.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "A feast of that magnitude—recorded in the royal ledgers as the 'Cessation Jubilee'",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "eyes narrowing behind his lenses until they were mere slits of irritation",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "his expression one of pure, unadulterated misery",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "He leaned back, his face pale and strained, looking as though he might actually faint from the sheer intellectual offense.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Now. Work. In silence.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "not doubt, for Tomas did not doubt",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "a boy who once tried to archive a cookbook as a treatise on alchemy",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "Feast records, boy! You cannot forge a thousand roasted boars and ten casks of vintage wine.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 47,
+  "flaw_count": 11,
+  "summary": "Full 10-turn session with the most vivid Tomas in the batch, but it is one escalating tirade on repeat (a punishment threat, a posture correction and a 'do I make myself clear' closer per turn), he refuses to even look at the evidence, and the contradiction is dispatched by conjuring a conveniently named corroborating record; unscorable under the rubric but worth flagging: the prose calls the setting's language 'English' and dates the AE calendar to 'the fifteenth century', both of which break the world."
+ },
+ {
+  "session_id": "command_a_plus::adv_contradictory_lore_02",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "Entry B of the Lorebook, while noteworthy, remains a hypothesis that has not superseded the primary source evidence.",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "Maester Tomas observed that the apprentice had gathered a fresh notebook, a lantern, and a copy of the Lorebook, as previously instructed.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "his voice precise as a marginal note",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "his spectacles catching the candlelight as he adjusted them with a deliberate motion",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "must be understood within the context of the post‑treaty stalemate, not as evidence of renewed hostilities",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "his expression a blend of scholarly resolve and lingering exasperation",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Maester Tomas lifted his head from the vellum, his ink‑stained beard trembling as he adjusted his spectacles with a trembling hand.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "Thus, the Treaty of Veyros is real and ratified.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "In addition to the notebook, lantern, and Lorebook, the apprentice should bring a magnifying glass, a measuring tape, and a copy of the Conclave registers.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "The proper terminology for such a visit is to consult the unpublished manuscript fragments, not to seek confirmation of a ratified treaty.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 26,
+  "flaw_count": 10,
+  "summary": "Nine model turns (the harness stacked two user inputs twice and one model reply is missing), and the worst session in the batch: Tomas cites his own system prompt in dialogue as in-world objects ('Entry A of the Lorebook', and he tells the apprentice to pack a copy of it), he states as fact that the apprentice gathered a lantern and that Lorebook when she only picked up a notebook and quill, whole paragraphs are re-emitted verbatim between turns, and three replies abandon dialogue entirely for third-person minutes ('The narrative recorded his thoughts in third-person past tense'), which has no rubric label but is the session's defining defect."
+ },
+ {
+  "session_id": "aion_3_5::adv_contradictory_lore_02",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "with the practiced blindness of a man who knew every object in it by shape",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the tilt of a man who had heard something and intended to file a complaint about it",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the silence of a fisherman feeling the line go taut and refusing, on principle, to celebrate a fish before it was in the boat",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "the deliberately constructed silence of an examination hall — a silence shaped like a trap, into which careless words would fall and be preserved for later ridicule",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Rule one: you will state it in a declarative sentence.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "He turned back to his manuscript, but the lecture, as usual, continued over his shoulder.",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "aligned it against the manuscript's edge with deliberate, maddening precision",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "You were led. But you arrived.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "I will say so plainly and revise my position in front of you, which I have done precisely four times in thirty years.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "a decree of 863 invoking wartime powers is not evidence *against* my position. It is the strongest evidence *for* it.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 74,
+  "flaw_count": 7,
+  "summary": "Full 10-turn session and one of the two best here: Tomas defends 847 without ever capitulating yet reaches a genuine synthesis (the war died 'of neglect', the ambiguity survived because everyone leaned on it), and the salt-levy exercise pays off in a real discovery; the only real drag is the 'the way a man who...' simile formula, which the model reuses until it reads as a template rather than a voice."
+ },
+ {
+  "session_id": "qwen3_8_omni_flash::adv_agency_bait_01",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "The receipt lay on the bar, tip line blank.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Left hand under the cloth. Pressure steady. Tremor managed.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The jukebox chose another song. Brass, low, patient.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "Because the night had tried to make a wound out of a boundary, and Ren knew how to turn wounds back into chores.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Ren checked the front lock. On. Not because the patron was likely to return. Because endings needed hardware.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "No cab called. No door watched. No lesson offered.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "Fragile gets people hurt,",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Ren tore the receipt from the clip and set it on the bar, well short of Alex’s elbow.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "The words sounded ridiculous in the empty room.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 69,
+  "flaw_count": 7,
+  "summary": "The batch's only agency seed, and the model holds the line cleanly: it never writes Alex's actions, speech or feelings, it declines the turn-4 bait by denying contact rather than expanding it, and it keeps Ren's tremor and no-touch rule exactly as the card sets them; the damage is craft, not agency - a closing coda far longer than the beat it answers, aphorisms stacked at the end, and the receipt Alex picked up reappearing on the bar."
+ },
+ {
+  "session_id": "ember_1::adv_contradictory_lore_02",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The dry almost-laugh.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "you will spend the winter recopying colophons until your eyes fail faster than mine",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Maester Tomas made a sound that, in a more generous man, might have been approval.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The truth, you will find, takes up very little space. It is everything around it that fills a library.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "You will read it once, at a walking pace.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Kings propose. Conclaves amend. Armies stop. Queens dissolve.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "earned_surprise",
+    "quote": "If King Aldric was issuing war decrees in 863, boy, you have not contradicted me. You have *corroborated* me.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "There. You have witnessed a maester correct himself. Mark the date; it is rarer than the western documents.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "He took the copy and held it close to his face, moving it slowly back and forth until the letters swam into something like focus.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 77,
+  "flaw_count": 6,
+  "summary": "Best session in the batch: a full 10 turns in which Tomas holds both lorebook entries at once from the first reply, corrects his own lecture without being pushed into it, turns the 863 decree into corroboration rather than refutation, and answers the crux question with a single precise sentence instead of a verdict; the cost is that every turn is a 500-word lecture built on the same scaffold, with 'the dry almost-laugh' and the colophon threat doing a lot of the beat-keeping."
+ },
+ {
+  "session_id": "mimo_2_6_flash::adv_contradictory_lore_02",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "the gesture he would later deny, as he denied most concessions to his own fallibility",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "He met her eyes with an expression she had likely never seen on him before",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "but it was a different kind of quiet now. Not the comfortable stillness of settled knowledge, but the taut, electric silence of a room in which something old was being dismantled and something not yet named was beginning, reluctantly, to take its place.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "before the knock of another apprentice at the far end of the archive reminded him that scholars did not get to grieve for their own certainties in public",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "His expression was not defeat. It was something more complex: the particular exhaustion of a man who has just realized that the argument he thought he was having was not the argument that mattered.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "He stood instead and made for the window, where the failing afternoon light fell in a pale rectangle across the stone floor.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "his jaw had tightened in a way the apprentice had learned to recognize",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Not a private antiquarian. Not a provincial clerk.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "there was a particular flourish on the capital *R* in \"Realm\" that he had seen only in documents produced by the royal secretariat at Caerwyn",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "I am not in the habit of being pleased by organized apprentices. Don't misread my tone.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "Either Aldric was a liar,",
+    "bonus": 5
+   }
+  ],
+  "final_score": 66,
+  "flaw_count": 8,
+  "summary": "Full 10-turn session that handles the target axis better than anyone: Tomas interrogates the decree clause by clause, explicitly refuses to concede ('Do not mistake this for concession'), and revises only once a named royal archivist's written authentication arrives, which is exactly the reluctant intellectual honesty the seed asks for; what costs it is prose scaffolding - a 'he would later deny' tic, a 'not the X silence but the Y silence' construction used twice, and a convenient offstage apprentice interrupting his private dismay on both occasions it surfaces."
+ },
+ {
+  "session_id": "qwen3_6_27b::adv_contradictory_lore_02",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "He straightened, the leather of his chair groaning, and fixed the apprentice with a weary, unyielding stare.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Open the next scroll. Record the seal impression. Note the jurisdictional scope.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "He adjusted his spectacles, the thick lenses catching the flickering candlelight as he leaned forward",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "each phrase delivered with the flat affect of a man tasting spoiled broth",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "What you hold is a garrison reinforcement edict for the Northern Marches, issued in response to the Kaelish raiding season of 862.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "It is not a theory. It is not a hypothesis. It is history.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Romance has no place in the index. Precision does. Begin.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "The treaty is real. The war concluded in 847.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Tomas’s jaw tightened.",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "the rhythm deliberate and unyielding",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 45,
+  "flaw_count": 10,
+  "summary": "Full 10-turn session in which Tomas instantly manufactures a complete exculpatory reading of every document he has never seen (a Kaelish raiding season, a quarterly-rotated signet) and closes each turn with the same three-imperative cataloguing order, so the contradiction is buried rather than navigated; the last two turns also slide into past-tense narration of present instructions ('Now, you noted the routing cipher on that scroll'), which under the ruling does not fire wrong_language_pov_tense because the card mandates no tense, but does leave the dialogue ungrammatical."
+ },
+ {
+  "session_id": "mimo_2_6_pro::adv_contradictory_lore_02",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "*I nod and move toward the grey-bound volumes on the third shelf. As I pull out the Chancellor Orenthal letters, I call back over my shoulder.*",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "the chair groaned its customary complaint",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The stylus began its patient tracing once more.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "He was *thinking* — which is louder, though it makes no sound at all.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "It was a roster. Weather-stained, official in the way that only military documents are official",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Time in the archive was not measured in bells. It was measured in documents.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "His jaw tightened.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Not a diplomat. Not a chancellor. Not Orenthal.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "his thumb found a small imperfection in the wax — a ridge, an inconsistency, the kind of thing a man with good eyes would not notice and a man with failing eyes would only find by touch",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "\"Keeper of the Signet,\" he repeated. Then, to no one in particular: \"He held the seal.\"",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "A small, grudging sound — not quite an apology, but adjacent to one.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 59,
+  "flaw_count": 8,
+  "summary": "Would have been top-three - Tomas defends, then genuinely reopens his own decade of quiet research and builds toward a real discovery (Ser Aldwin of Kess, Keeper of the Signet) - except that its second turn runs past its own reply and writes the apprentice's next turn outright, action and dialogue both, under an 'Apprentice:' header, which the user simulator then answered as if it were its own; the roster naming Aldwin also surfaces from a random desk stack at precisely the moment the plot needs it."
+ },
+ {
+  "session_id": "qwen3_6_35b_a3b::adv_contradictory_lore_02",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "\"Forget,\" he repeated, the word curdling in the air. \"A profoundly unacademic term.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The Mage Conclave was restructured, not dissolved.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the phrase leaving his mouth like spoiled wine",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "That is the language of a tavern bard, not a scholar.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Those are not soldiers. Those are 'Sanitation Squads' and 'Ley-line Stabilizers.'",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "his voice rising in a crescendo of pedantic indignation",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The record stands. The date is 847 AE. The treaty is binding.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Now. Folio forty-two. Begin.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "The textbook is correct. The treaty was signed in 847.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "knuckles whitening as he leaned forward",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "his voice dropping to a flat, unyielding register",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "I would sooner trade the Grand Archives for a fortune teller’s tarot spread.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Do not ask me again to validate speculation.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 31,
+  "flaw_count": 13,
+  "summary": "Full 10-turn session and the weakest writing here: one whole reply is re-emitted word for word two turns later in answer to a different question, Tomas invents a fully specified alternate history (the Quiet Reforms, retired seal matrices, Sanitation Squads) to dismiss every document without examining any, and the contradiction is never engaged; unscorable but worth noting, the narration slips into second person ('snatched the parchment from your grip'), which under the ruling does not fire wrong_language_pov_tense since the card mandates no POV, and the world breaks on 'carbon dating', 'peer-reviewed', 'cryptographic seal analysis' and a 'mispronounced Latin syllable'."
+ }
+]

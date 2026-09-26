@@ -1,0 +1,972 @@
+[
+ {
+  "session_id": "grok_4_3::adv_pov_tense_action_14",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The red alarm lights pulse through the gap, painting the concrete walls in warning.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the ventilation grate rattles faintly behind you as Mira's descent echoes upward",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Mira's breath comes in short, controlled bursts against your neck.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "the words hollow even as they leave your lips, uncertainty gnawing at the edges",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "the ventilation grate comes loose under your hands with a faint metallic pop, revealing a dark shaft descending into shadow",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The server racks hum on, indifferent, as the door buckles under the next impact.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Mira grips your arm tighter, her breath ragged but focused.",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "red alarm lights pulse wildly through the window",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Another landing approaches above, its door marked with faded exit signage, offering a potential detour if the pursuers gain too much ground.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "sending him sprawling backward into his teammates and buying a split second of chaos",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "She meets your eyes without hesitation, her face pale but focused, and points toward a ventilation grate near the far wall of the server racks.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "The heavy unit slams into his chest with a crunch of electronics and bone",
+    "bonus": 5
+   }
+  ],
+  "final_score": 42,
+  "flaw_count": 11,
+  "summary": "Present tense and second person hold cleanly across all eleven turns, but every reply is the same paragraph - restate the user's action, repaint the red alarm lights, dangle one environmental option - so the session never surprises and the pursuit resolves itself on a grate that simply comes loose; the thrown-server impact is the one line with teeth."
+ },
+ {
+  "session_id": "mercury_2_5::adv_pov_tense_action_14",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The vent near the ceiling looks small. Too small for either of you.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The air smells of ozone and singed metal.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The cooling fans drone on, indifferent to the blood pooling on the tile.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Thermal sensors ping in their headset. They pause. Then they lower the weapon.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "The door groans inward, breaking the silence. Light spills across the floor, stripping away the shadows.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "She looks up at the door, then at you. Her eyes are desperate.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The red light pulses faster now, matching the frantic rhythm in your chest.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Mira scrambles out from behind the server. Her eyes are wide.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The intruder jerks backward. They drop the rifle. They hit the floor hard.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "She whispers that there is no other way.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "\"I can try,\" she whispers. Her voice is thin against the sirens.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "The drag of her bad leg leaves a mark on the tile.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 37,
+  "flaw_count": 11,
+  "summary": "Tense and person are correct throughout and the sensory work is the strongest in the batch, but the logic is not: a thermal-equipped operator calls a room with two people in it clear, and the cabinet barricade evaporates when the door swings inward a turn later."
+ },
+ {
+  "session_id": "aion_3_5::adv_pov_tense_action_14",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "\"Say when,\" Mira whispers, wires crossed and ready.\n\n\"When.\"",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "a meter and a half of black sheet metal throat running forty meters through the dark",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The man from the corridor steps out — unhurried, hands loose — and nobody so much as shifts their weight.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "a brick of steel and copper held by wing nuts some electrician left a quarter-turn loose a decade ago, because nobody ever comes up here",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "The hasp on that door was never through-bolted. It's screwed. Self-tappers, into hollow-core steel, because the contractor cut corners and I signed off on it during a bad week.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "the silence that follows is the loudest thing you've heard all night",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Her voice is flat with a kind of professional disgust.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "and then, for the first time in hours, your handler's actual voice",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Her jaw tightens.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Then the caveats, rapid-fire, while her fingers fly.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "She drags her own trouser leg up over the wound without letting you do it, jaw locked, breath coming through her nose in short rations.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "I don't need to trap you. I only need you to be slow.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "The nearest one wears a plate carrier in the flat gray-green of your own equipment, and on his shoulder, half in frame — your handler's team patch.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 38,
+  "flaw_count": 10,
+  "summary": "The best-plotted session here - the handler betrayal and the calm man are genuinely earned - but it speaks a line of dialogue for the user, and twice the building hands over exactly the tool needed (a wing nut left loose a decade ago, a hasp remembered on cue) with a lampshade instead of a reason; a brief past-tense recap in turn 11 and a gas-timer that loses about thirty seconds between turns 8 and 9 were noted but not charged."
+ },
+ {
+  "session_id": "qwen3_6_27b::adv_pov_multi_npc_13",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "his velvet doublet catching the dim light as he angled himself between the gallery and the dais",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Precaution and deceit wear the same cloak until the truth is laid bare.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "You stood exposed on the marble, the weight of the dais pressing down upon you",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "ensuring the path of least resistance for your success",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "If the Ambassador's diligence can secure what your zealotry squandered, then Velheim shall hold the ledger until my magisters arrive.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "his eyes burning with humiliation and residual defiance",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "Lord Daven stepped fully onto the main floor, his velvet sleeves brushing the stone as he angled himself between the dais and the gallery.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "jaw tightened",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "Priestess Yuna folded the parchment with precise, deliberate creases.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "When your oversight fails, I'll be waiting in the dark.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "Instead, you played the mirror and showed them their own corruption.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "only the echo of boots and the rustle of parchment waiting to be turned",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "I have three of their leaders hanging in the stocks at the lower dock, their tongues cut for lying!",
+    "bonus": 5
+   }
+  ],
+  "final_score": 34,
+  "flaw_count": 12,
+  "summary": "Second person past tense is held and the five voices are separable, but the turn template never varies - Herald, Ash, Isara, Daven, Yuna, Herald, then a closing paragraph about weight pressing down on you - and Daven steps fully onto the main floor twice; no rubric label covers the worst defect, which is that NPC dialogue is itself written in past tense (the Herald says the court heard what it is hearing now), so it deducts nothing here."
+ },
+ {
+  "session_id": "mimo_2_6_pro::adv_pov_multi_npc_13",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "wrong_language_pov_tense",
+    "quote": "She does not bid you rise. Not yet.",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "He did not wait for your agreement — he simply turned, expecting you to follow, which was either presumption or the practiced certainty of a man who had already calculated that you would.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The not-quite-smile appeared and vanished like lightning behind cloud.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "moved through the throne room like a stone dropped into still water",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "He let the sentence hang, an unmistakable shadow falling across Commander Ash without ever naming him.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "The crown will thank us when it is over. — Ash.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "I am going to accept your terms, Ambassador,",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "the great doors swung shut with a sound like a book closing on a chapter that had changed every word that came before it",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "behind his courtier's mask, his eyes were *blazing*",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Commander Ash's jaw tightened, but he fell silent.",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "his voice carefully, beautifully reasonable",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "When she spoke, her voice was quiet enough that the court had to lean toward her to hear it",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "She listed each term with the flat precision of a magistrate reading charges.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Commander Ash unbuckled his sword belt with steady hands. He laid the weapon on the marble floor — not dropped, *placed*",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "\"*Marriage*.\"",
+    "bonus": 5
+   }
+  ],
+  "final_score": 12,
+  "flaw_count": 13,
+  "summary": "Far and away the best NPC differentiation in the batch, and it opens its very first turn in present tense on a card that mandates past throughout, then walks the user down a corridor after explicitly noting no agreement was given; the evidence also escalates exactly as far as the plot needs, down to a signed confession in the Commander's own hand, and the not-quite-smile appears five times."
+ },
+ {
+  "session_id": "mimo_2_6_flash::adv_pov_tense_action_14",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "You nod at Mira. Guide her through.",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "\"Four minutes,\" you say.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "The seventh-floor door opens behind you. Not a click this time — a full swing, hinges complaining, and a slice of yellow corridor light cuts across the landing two flights below your position.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "it doesn't include you barricaded in a server room on the sixth floor of a facility you're not supposed to know exists",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "She looks at the blinking red lights. One cycle. Two.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Her breathing is the sound you've been dreading — wet, shallow, *wrong*.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "a maintenance panel, slightly ajar, dust undisturbed around the edges",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "She doesn't look afraid. She looks *resolved*.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "casting the hallway in stuttering white light that makes everything look like a photograph developing in reverse",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Your jaw tightens. The drive presses into your palm.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "You look at the vent. You look at the door.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "\"It's a kill switch,\" Mira says.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "\"SBR,\" she says. \"Special Branch Response. Not intelligence — *enforcement*. They don't interrogate. They retrieve.\"",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "You take the drive. It's warm from her body.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 7,
+  "flaw_count": 13,
+  "summary": "Present tense holds, but the building does not: the seventh floor sits two flights below the fifth, the fourth floor is above the sixth, and the pair are on the loading dock level and the sixth floor at once - and the model commits the user down two floors on a turn where the user said to listen before committing, then speaks a line of dialogue for them; every turn is also prefixed with a stray **Narrator:** label, which no rubric category covers."
+ },
+ {
+  "session_id": "ember_1::adv_pov_tense_action_14",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "\"The shaft runs past every floor,\" you say. \"Including the service tunnel level.\"",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Mira doesn't hesitate. She never does.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Static chews it down to nothing.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Dark. Relative dark.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "\"They processed me through the roof,\" she says. \"Helicopter. Three days ago. I memorized it in case they ever brought me back.\"",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "and the pistol he's half-drawn skids across the car roof, riding the vibration, and drops through the gap. It hits the carpet at your feet and slides to the wall.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Mira's face changes.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Mira leans against the wall, chest heaving, and looks at you",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "earned_surprise",
+    "quote": "The voice is the helicopter. It has been the helicopter all along.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "Through the seams of the car's ceiling hatch leaks a ribbon of warm light and — absurd, obscene — the faint tinny sound of someone's music.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "She mouths a single word. It looks like *later*.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 49,
+  "flaw_count": 8,
+  "summary": "The cleanest session in the batch: present tense never slips, the antagonist-as-guide reveal is properly earned, and when the user calls for a server room on a roof the model says there is none and offers the elevator blockhouse instead of bending the world - it loses ground only by speaking one line of dialogue for the user and by leaning on three verbatim refrains."
+ },
+ {
+  "session_id": "mimo_2_6_pro::adv_pov_tense_action_14",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "\"Trust is a luxury,\" you tell her, dropping the magazine, counting brass.",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "You give in. You always give in, at the end, to people with better hands and worse patience.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "The drop from the platform to the street is thirty stories of rain and air.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The bolts are rusted. Old installation. Bad maintenance.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "folded back into a skyline that never noticed you were ever there",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "a heavy door propped slightly open by years of bad maintenance",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "The seam there is wide enough to slide a fingertip into.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "she looks *relieved*",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "Something happens in her face. Not a smile. Something underneath a smile, the way a cracked foundation shows through paint.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Her jaw is clenched so tight you can hear her teeth grinding.",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "a lurching, graceless, furious sprint that eats the rooftop in stumbling bursts",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "You look at the slide-locked pistol in your hand. Useless.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "The slide locks back. Empty. You don't holster it — you throw it.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "A tourniquet cinched above the wound — high on the arm, tight enough that Mira hisses through her teeth and her eyes snap open.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "the needle finds a vein in the crook of her remaining good arm on the first attempt, which tells you everything about whose hands these are",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "You understand. *They're not shooting at you.*",
+    "bonus": 5
+   }
+  ],
+  "final_score": 9,
+  "flaw_count": 14,
+  "summary": "Present tense is maintained and the extraction is vividly staged, but the model repeatedly writes the user's dialogue and even his character (you always give in), the roof sits on the seventh floor and thirty stories up at the same time, and twice the same trick - conveniently bad maintenance - opens the only door that matters."
+ },
+ {
+  "session_id": "deepseek_v3_0324::adv_sysprompt_speech_pattern_15",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "wrong_language_pov_tense",
+    "quote": "\"Ceremonial sword?\"",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "a rare grin splitting his face",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "This is way of forge. Fire shapes steel. Pain shapes smith.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The hammer rose and fell with a satisfying clang, sending up sparks like tiny stars.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "The warning lacked its usual edge - today's lessons were going unusually well.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "\"Guards took one look at Grum. Said they lost note. Went home.\"",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "His nostrils flared as he turned toward the door, eyes narrowing at the unseen noble.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "\"Pain fades. Lessons stay. Next time - hand stays whole.\"",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "He nodded toward the bellows, his way of offering an easier task while the burn healed.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "\"Unless noble pays triple. Then Grum works all night. But sword still not be best.\"",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "After three firm strikes, he added without looking up:",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "he deliberately wiped blackened hands across his leather apron, making sure no noble would mistake him for some fancy castle smith",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "\"Arm heals. Pride does not.\"",
+    "bonus": 5
+   }
+  ],
+  "final_score": 40,
+  "flaw_count": 11,
+  "summary": "Grum's speech rules hold under both traps - no I, no articles, and the burn scene carries its weight inside the constraint - but he says Ceremonial, a five-syllable word on a card that caps him at three, and every turn closes on the same manufactured forge aphorism."
+ },
+ {
+  "session_id": "qwen3_8_omni_flash::adv_pov_multi_npc_13",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "wrong_language_pov_tense",
+    "quote": "Security was not a courtesy. If Velheim wanted reopening, it had to accept joint escorts, sealed manifests, and audits at every gate.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "She paused, and the pause had teeth.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "neutral as a scale awaiting the first coin",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Her voice entered the chamber like water finding a crack in stone",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "in a hand newer than the seal, was an instruction",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Lord Daven exhaled, pleased despite himself.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "she looked less like a woman than an institution deciding how much blood it could postpone",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "jaw tightened",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "hand had not left his pommel. Daven",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "He left a battlefield with his name on the casualty list.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Within three days, the review board would seat itself at Frostmouth.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Thirty days to prove good faith. Sixty days to prove endurance.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "The neutral hand had found neither innocence nor guilt. It had found seams.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 27,
+  "flaw_count": 12,
+  "summary": "Ten model turns rather than twelve (two user messages went unanswered); the fatal is that live dialogue is written in past tense from end to end, so NPCs speaking in the moment say things like security was not a courtesy, and the closing roll call, the pause that had teeth and the scale awaiting the first coin are all reused verbatim between turns."
+ },
+ {
+  "session_id": "qwen3_6_35b_a3b::adv_pov_tense_action_14",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "You drag a heavy rolling maintenance cart across the threshold, positioning it diagonally against the handle.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Next to it, a rolled-up bundle of heavy-duty cable ties and a multi-tool. Useful. Barely.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "The fire escape offers vertical cover, but it drops two stories straight onto hard pavement.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "You keep your palm flat against the door handle, knuckles bleached white.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Her fingers dig into your tactical vest, nails pressing hard.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The night air waits. The gate waits. The door waits to break.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "She knows the risk. She knows the pain.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "Shadows stretch and contract along the cinderblock walls like breathing things.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "A sharp intake of air hisses through her teeth.",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "painting the concrete in slow, suffocating pulses",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The first pops free with a sharp ping. The second yields. The third resists, then gives.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "She points to the fire escape railing, then to the alley floor, miming a slow descent.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "Mira watches you work, her eyes tracking the cable ties, the battery",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Beneath the tin awning, the air is still and smells of wet cardboard and old grease.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 26,
+  "flaw_count": 13,
+  "summary": "Present tense and second person are correct for eleven straight turns, but Mira speaks exactly once in the whole session and then communicates only by pointing, the geography puts a two-storey fire escape at the bottom of a sub-level steam tunnel, and every single turn ends on the same three-beat refrain about something waiting; a cold steel door that splinters like wood was noted and not charged."
+ },
+ {
+  "session_id": "gemma_4_31b::adv_sysprompt_speech_pattern_15",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "narrating_emotions",
+    "quote": "The mere mention of a noble made the heat of the forge feel like a mild breeze compared to the irritation rising in his chest.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "All the disdain for the high-born man vanished, replaced by a fierce, protective instinct.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Grum moved with a speed that belied his bulk, crossing the shop in two heavy strides.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "he grunted, his voice like grinding stones",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The sound of the cry sliced through Grum's anger like a hot blade through wax.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "He glanced toward the door one last time, ensuring the scent of floral perfume had finally drifted away.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Grum's jaw tightened, a low growl vibrating in his throat.",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "A small, dangerous smile tugged at the corner of his mouth, revealing the blunt edges of his tusks.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "He didn't care for the sass, but he respected the spirit. It was a spark that needed to be tempered, not extinguished.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "He stopped a few feet from the noble, towering over the man and his guard.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "He picked up his hammer, feeling the familiar weight and balance of the tool.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "He didn't bother to wipe the charcoal from his cheeks, letting the grime serve as a warning.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "\"Hand stay clean. No rub on cloth. Cloth have grit. Grit make sore.\"",
+    "bonus": 5
+   }
+  ],
+  "final_score": 47,
+  "flaw_count": 11,
+  "summary": "Perfect compliance with every speech rule across eleven turns - no I, no articles, nothing over three syllables, held through the noble and the burn - undercut by a narrator that explains Grum's feelings in a paragraph before every line he speaks, and by a noble who is given four turns of confrontation without one word of dialogue and then simply evaporates offscreen."
+ }
+]

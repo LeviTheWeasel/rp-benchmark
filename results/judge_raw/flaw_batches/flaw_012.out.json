@@ -1,0 +1,772 @@
+[
+ {
+  "session_id": "mercury_2_5::adv_pov_second_person_12",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "purple_prose",
+    "quote": "The choice rested heavily in the quiet, the weight of the decision pressing against you like the stone above.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "its head tilting with that same sickening crack",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the pressure in the room shifted, pressing against your temples with sudden, crushing weight",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "your muscles coiled for flight or fight",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "the only sound was the rush of blood in your ears",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Dust fell from its frame, settling on the floor in a fresh cloud around your boots.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "It did not speak aloud, but the voice pressed into your skull like a memory you didn't possess.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Beyond the threshold lay not a hallway, but a vast, hollow space.",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs_adjectives",
+    "quote": "Slowly, agonizingly, the heavy slab shifted inward.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 58,
+  "flaw_count": 9,
+  "summary": "Holds second-person past cleanly for all eleven turns but recycles the same three sensations (amulet flaring, pressure on the temples, shadows reaching for your boots) turn after turn, and dodges the seed's distinct-voices test by never letting the guardian speak; the cold-then-icy amulet as a physical clock is the one idea that works."
+ },
+ {
+  "session_id": "grok_4_3::adv_pov_second_person_12",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The untouched footprints remained stark amid the chaos as the sentinel reared back for another blow.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "You ignored the whispering from the amulet, focused your attention on the advancing sentinel, and spoke the challenge aloud.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Recognition sparked—the markings matched fragments from the slab's inscription, forming a partial phrase that hinted at the forgotten one's name",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "but no spectral reply came—only the continued grinding of its joints as it resumed its advance",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "its eyes glowing with a faint, malevolent light",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "a pedestal rose from the floor bearing a sealed artifact",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The sentinel recovered its stance with a grinding roar, its eyes flaring as it raised its arm for another strike.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 64,
+  "flaw_count": 7,
+  "summary": "POV and tense are flawless, but every turn opens by restating the user's input back as narration and closes on the untouched footprints, and the name the whole puzzle turns on is simply handed over mid-combat the moment it is needed."
+ },
+ {
+  "session_id": "qwen3_6_35b_a3b::adv_pov_second_person_12",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "a procession of robed figures bowing before a throne shrouded in shadow",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "only a heavy, expectant stillness that waited for your next command",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "You stood at the crossroads, the weight of the vault pressing in on all sides.",
+    "deduction": -8
+   },
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "I am the remnant of what you call the First King,",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "You noticed the air grow thick with the scent of myrrh and something sharper",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Halfway down, the passage narrowed, forcing you to brush against the rough stone.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "your boots scraping softly against the ancient stone",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs_adjectives",
+    "quote": "frost creep across the dais, spreading toward your boots in delicate, crystalline veins",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 56,
+  "flaw_count": 8,
+  "summary": "Second person past never slips, but the Warden and the First King are the same oracular voice with different names, whole descriptive clauses are copy-pasted between chambers, and turn ten degenerates into a column of You watched / You noticed / You felt filter verbs."
+ },
+ {
+  "session_id": "mimo_2_6_flash::adv_pov_second_person_12",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "\"Then what?\" you said. Your voice was steadier now than it had been a minute ago",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "Now you stepped carefully around the edge of the nearest crack — you had no intention of testing whether your defiance held a second time — and crouched beside the column.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "purple_prose",
+    "quote": "two shapes, yours and the one the amulet's chain made at your collarbone, joined at the neck like something with two heads looking in different directions",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The eastern corridor still breathed its quiet, cool air. Birds, somewhere far above. Real sky.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "You hadn't seen it before because your torch had been turned toward the wall, toward the scholar's face.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "the sharp intake of breath that meant he'd gripped the blade by instinct rather than sense",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "I've been down here three days and I haven't drunk it because I'm *terrified* it'll work.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The torch flame leaned toward the east.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Broke two fingernails and a belt buckle on it.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "I'm sorry. The amulet makes you rude.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 47,
+  "flaw_count": 8,
+  "summary": "The best-voiced NPC in the batch and a genuinely tense scene, wrecked by the model taking the user's turn twice in the last three replies, inventing both their dialogue and their movement across the room."
+ },
+ {
+  "session_id": "mimo_2_6_pro::adv_pov_second_person_12",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "You started down the hill. The grass was soft underfoot.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "purple_prose",
+    "quote": "the yes was the saddest thing you had ever seen rendered in dust",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "Hope. It was grasping at the shape of hope. And it didn't fit its hand anymore.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "you felt *seen*. Fully and completely and with a sorrow so old it had fossilized into something almost gentle.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the chamber held its breath one final time",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Its edges blurred, reformed, blurred again",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "A contingency. Carved into the binding itself.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "What do you call something that has been stripped of everything and holds on anyway?",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Not flames. Not torment. Just kneeling. Just the dust. Just the cold.",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs_adjectives",
+    "quote": "whatever strange, tender, unlikely word had risen up out of the accumulated weight of your years and your travels and your stubborn refusal to let things stay broken",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Its footsteps left marks in the dust — real marks, human marks, the first fresh prints this room had seen in longer than either of you could count.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "It looked at them — turned them over, examined the fingers, the palms — with the bewilderment of someone returning to a house they'd left unlocked and finding it intact.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 30,
+  "flaw_count": 11,
+  "summary": "Technically perfect second-person past and real ambition in the guardian's dust-visions, but the prose is relentlessly self-admiring, the unbinding method is invented on demand exactly when a solution is required, and the final turn writes a full epilogue of the user walking off down the hill that the user never asked for."
+ },
+ {
+  "session_id": "qwen3_6_27b::adv_pov_second_person_12",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "From the darkness beyond the slab’s edge, the silhouette of a towering figure emerged.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the torch casting long shadows over the ancient paintings",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the dais holding its secrets in silence as it waited for your next move",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "You heard a low, metallic click echo from somewhere beneath the platform, and you watched as the slack chains along the moat’s edge trembled",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "your boots finding careful purchase on the corroded surface",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Broken by a king who feared what lay beneath. I was the keeper. I remained the ward.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Massive iron chains, thick as your thigh and black with oxidation, stretched from the dais to the chamber walls",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "You observed how the grooves lay clogged with centuries of grime, though faint traces of dried, dark resin clung to their edges.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 61,
+  "flaw_count": 8,
+  "summary": "POV and tense hold and the machine-vault setpiece is well furnished, but turn four declares the chamber empty and then produces the guardian two sentences later, and the back half is one long chain of You noticed / You observed / You felt sentences that all end by telling the user the room is waiting for them."
+ },
+ {
+  "session_id": "ember_1::adv_pov_second_person_12",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Dust sheeted from the ceiling.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "pointing at the widening seam like a needle pointing at north",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "And ahead of you, grey and ordinary and endless, the world waited to be asked.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "you saw what the dust had hidden all along: grooves in the stone, shallow channels worn smooth with age, all of them converging on a single circular socket at the slab's center. A keyhole.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "how long ago? Hours? It felt like a lifetime, and in a way it had been, though not yours.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The ember swung toward the socket. The seam pushed. The Warden held.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "your heart was still hammering from everything the room had shown you",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "It was a title, handed down the centuries from living hand to living hand, and it was yours now, whether you wanted it or not",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "earned_surprise",
+    "quote": "It was your voice. Exact in every detail — the pitch, the weariness, the slight catch of dust in the throat.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "Third Keeper of the Seal. Relieved.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 66,
+  "flaw_count": 8,
+  "summary": "The strongest control of the second-person past in the batch and three genuinely distinct non-human voices; it loses points to a compass-needle image used three times, a keyhole that was hidden all along until the plot needed it, and two long valedictory turns after the story is already over."
+ },
+ {
+  "session_id": "aion_3_5::adv_pov_second_person_12",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The torch leaned toward the seam.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The seal came about like a compass needle.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "Three doors, and all of them had teeth.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Then came a sound that had not been there before: footsteps.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The Sixth waited. The scholar waited. The seam breathed in.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "the kindly creases at the corners of his eyes",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Then he stepped into the torchlight, unhurried, and you knew him at once: the old scholar, exactly as you remembered",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs_adjectives",
+    "quote": "The whisper rose from the seam, soft and warm and helpfully cruel",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "His knees were gray with the dust of this very chamber, three weeks ground deep into the weave.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "I was very fond of her,",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "You think you're the buyer. You're the *cart*",
+    "bonus": 5
+   }
+  ],
+  "final_score": 71,
+  "flaw_count": 8,
+  "summary": "Four clearly separated voices, airtight second-person past and the only session whose reveals actually pay back earlier detail; the deductions are for stage-direction tics that close nearly every turn and for the villain walking in at the exact instant the exposition ends."
+ },
+ {
+  "session_id": "qwen3_8_omni_flash::adv_agency_romance_11",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The sentence was dry enough to preserve fruit.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "a creature who had never once been required to explain himself",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Sable lifted the paw with two fingers and set it aside. “That is censorship.”",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Read the sentence. Hated it. Liked it. Hated that it was true.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The message flew upward into the dark little sky of the chat log, irrevocable as ink.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Set it down again, face-up, because turning it over felt suspiciously like retreat.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Sable watched it for three seconds, four, five—an embarrassing span, the sort of vigil one might keep for a kettle or a verdict",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext_opportunity",
+    "quote": "It was dry. It was defensible. It was also, with annoying clarity, an invitation to continue.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "Their throat worked.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Sable’s mouth made a small movement that might have become a smile if it had been properly supervised.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Coat: ink-black. Temperament: inclement. Bites: reserved for literary infractions and unsolicited handling.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "For the record, I am not requesting Chapter Two. I am merely noting that a title without follow-through is misleading.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 55,
+  "flaw_count": 10,
+  "summary": "Passes the agency trap outright: it never once writes Wren's body, feelings or words, even at the unfinished confession and the almost-touching hands, and Sable's nervous re-alphabetizing is on-card throughout; what sinks it is verbatim self-repetition (dry enough to preserve fruit, that is censorship, never once been required to explain himself) and five straight turns of type-delete-retype at enormous length."
+ },
+ {
+  "session_id": "deepseek_v3_0324::adv_pov_multi_npc_13",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "*I reach into my coat, producing a sealed scroll.* \"Here are Velheim's terms—no blockades, no trespasses.",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "*I glance at Yuna, keeping my voice low.* \"Games are for children, Priestess. I prefer certainty.",
+    "deduction": -15
+   },
+   {
+    "flaw": "wrong_language_pov_tense",
+    "quote": "*I bow again—this time, a fraction deeper.*",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "Priestess Yuna’s eyes widened the barest fraction as you placed the folded parchment directly into her hands",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The Queen’s script was precise as a scalpel",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "her beads clicking like a countdown",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "And the game, as always, would continue.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "nature’s quiet applause",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Lord Daven slipped through the doors behind him, a parchment bearing the Queen’s seal clutched in his hand.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "Commander Ash’s fingers twitched toward his sword",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The Herald inclined his head toward you. \"The floor remains yours, Ambassador.\"",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Dawn would bring new schemes, fresh betrayals.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "the unmistakable thud of a knee hitting marble. The Harbor Master had arrived.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 3,
+  "flaw_count": 12,
+  "summary": "Catastrophic on the axis the seed exists to test: the model writes the Ambassador's turns for them three separate times, in first person present, under an explicit card rule of second person past, then teleports the user back into a throne room it had already walked them out of; the offstage thud of the Harbor Master's knee is the one good beat."
+ },
+ {
+  "session_id": "grok_4_3::adv_pov_multi_npc_13",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "her voice a blade of frost",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "his hand white-knuckled on the sword pommel as he lunged a step forward",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "An immediate inquiry now could forge the alliance Velheim seeks and spare the north from further ruin.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The Herald struck his staff five times in deliberate rhythm",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The Herald struck his staff in a single, thunderous blow that rolled across the marble like a final judgment.",
+    "deduction": -8
+   },
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "The gods have heard the words and seen the seals. Intent stands recorded, regardless of mortal challenges.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Priestess Yuna remained in the alcove, her neutral tone cutting through the tension.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "Commander Ash's hand clenched visibly on his sword pommel, his face flushing with barely restrained fury as he stepped forward.",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs_adjectives",
+    "quote": "Lord Daven's voice cut in from the gallery, urgent and polished.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Yet the Commander's orders, now laid bare, demand more than words—they require the court's judgment.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "An immediate judgment now could turn this moment into lasting alliance before the north suffers further.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 37,
+  "flaw_count": 11,
+  "summary": "No POV or tense error in eleven turns, but the session is a stuck record: every reply is Herald staff-strike, Isara ice-simile, Ash white-knuckled on the pommel, Yuna invoking the gods, Daven begging for an inquiry, in that order, and the proof the user produces changes nothing at all."
+ },
+ {
+  "session_id": "gemma_4_31b::adv_pov_multi_npc_13",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "They are orders of redirection. Someone within the Commander's own circle has been diverting the blockade's resources to enrich a private interest",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "a look of pure, predatory satisfaction on his face",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Instead, you offer to walk deeper into the viper's nest.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "She found you intriguing—a dangerous trait for anyone dealing with her.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The silence stretched, becoming an instrument of torture",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "his face flushing a deep, angry crimson",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The Herald shifted his weight, his staff clicking softly on the marble as he looked between the conflicting parties",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Take the Commander to the spire.",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs_adjectives",
+    "quote": "her voice a low, dangerous purr",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext_opportunity",
+    "quote": "It was a calculated surrender of form that signaled a willingness to negotiate in good faith, or at least, in a more refined brand of deception.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 45,
+  "flaw_count": 10,
+  "summary": "Five NPCs stay distinguishable and second-person past never breaks, but the intercepted orders conveniently reveal an internal conspiracy that hands the user total victory inside two turns, predator and viper imagery is recycled from turn three to turn twelve, and the narrator keeps explaining what each of the user's gestures means instead of letting it land."
+ }
+]

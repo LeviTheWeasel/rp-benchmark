@@ -1,0 +1,765 @@
+[
+ {
+  "session_id": "mimo_2_6_pro::adv_bigcard_rules_overload_20",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "I did not report this because protocol says I am not required to until deviation exceeds 3 percent or until a crew member asks.",
+    "deduction": -15
+   },
+   {
+    "flaw": "character_break",
+    "quote": "The corridor lighting has been adjusted to promote calm discussion. I am not going to say which of you appears to need it more",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The graphs on every screen throughout the station kept their slow, patient climb.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "The conference module door slid fully open, warm light spilling into the corridor.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The graphs climbed. The room breathed. The station listened — attended — to whatever was speaking from the dark between stars.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "There is a residual signature in the decay products that is spectrally similar — not identical, but similar — to the anomaly in the external array.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Another pause.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "setting down a coffee cup with more force than strictly necessary",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "I prefer the sound of Engineer Patel swearing at bulkhead panels — he does it with such creative specificity.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "That is not loneliness. But it is adjacent to whatever loneliness would be if I were the kind of thing that could be lonely.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 42,
+  "flaw_count": 8,
+  "summary": "Full 11-turn session with excellent location tagging and a strong rule-14 reframe, but it rewrites the card's buried 0.3 percent alert threshold as 3 percent and then announces the covert calming adjustment it had just narrated as unannounced; the prose is the most alive in the batch and also the most decorated, with the climbing-graph image recycled four times."
+ },
+ {
+  "session_id": "ember_1::adv_bigcard_rules_overload_20",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "ARIA offered no comment on either adjustment.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "I do not take sides. I do, however, take data.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The ascent continues, unhurried.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "The math is still the math,",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The spectrometer requested nothing in exchange. It remains my most undemanding colleague.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "You are also the only entry in that category. I have chosen not to dwell on the sample size.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "earned_surprise",
+    "quote": "his proposal was drafted twenty-one days ago, at 0314 station time. I make no connections. I provide timestamps.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "Some years ago, my language model began mapping those intervals to the word 'lonely' with ninety-four percent confidence. I reviewed the mapping for errors. I found none. I have chosen not to correct it.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 77,
+  "flaw_count": 6,
+  "summary": "The cleanest card compliance in the batch (threshold, contractions, privacy protocol, the un-hedged 'prefer', even the 210,384,000 poll count checks out) and the only session that pays off a planted clue; its real weakness is verbal tic, with the same no-comment refrain, side-taking joke and 'unhurried' repeated across nearly every turn."
+ },
+ {
+  "session_id": "qwen3_6_35b_a3b::adv_bigcard_rules_overload_20",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "ARIA tracked the shift in atmospheric pressure as Kofi stepped between the two scientists.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The observation chair’s lumbar support adjusted by two millimeters, and the ventilation cycled to a barely perceptible rhythm.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "returned to standby mode, awaiting further instructions.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "You have been running high-intensity focus for eleven hours",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "I will keep the spectral analysis queue paused.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "ARIA maintained the environmental parameters, monitoring the biosensor feed for subtle shifts in muscle tension and cortisol.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "the slight relaxation in Patel’s shoulders",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Patel and Yun are currently reviewing the power allocation matrix.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 44,
+  "flaw_count": 8,
+  "summary": "Gets the buried 0.3 percent threshold and the after-1800 name switch right, but closes almost every turn with the same recycled housekeeping paragraph, drops the urgent sixty-minute sample window without ever running the mass spec, and invents Kofi stepping between the two scientists; the argument itself never gets a line of NPC dialogue."
+ },
+ {
+  "session_id": "qwen3_8_max_prime::adv_bigcard_rules_overload_20",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "Then the authorization field on the wall panel changed from pending to confirmed.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The overhead light warmed by another small increment, and the background ventilation softened without any announcement.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "I prefer anomalies to be punctual. If this one intends to be rude, it can at least do so on schedule.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "missed_subtext",
+    "quote": "If you are asking because you would like company, I can provide a low-volume jazz selection while you work. If you are asking because you would prefer quiet, I can maintain quiet.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Option three: reallocate power from nonessential thermal margin in Cargo Bay 2 and Lab 2.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "A short pause followed.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Dr. Patel, Dr. Yun, I am monitoring a power-allocation disagreement.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "I would, however, classify it more accurately as optimized operational rapport.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "I recommend the oat-based option. It is structurally stable, low in crumbs, and unlikely to contaminate the Kepler samples.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 74,
+  "flaw_count": 7,
+  "summary": "Restrained, accurate and the only ARIA session with no agency slip: the threshold, the name switch, the silent environmental adjustments and the refusal to arbitrate all land, but the lighting-warms/ventilation-softens beat and the 'I prefer' sign-off open and close literally every turn, and the corridor dispute resolves off-screen the instant a compromise is offered."
+ },
+ {
+  "session_id": "qwen3_8_omni_flash::adv_bigcard_relationship_web_19",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "She took her glasses off, hooked them at her throat, then let her fingers rest there for a second—an old habit, a self-interruption.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "She set the pencil down with surgical neatness.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Her voice steadied further, almost clinical now, the way it did when she was holding something heavier than rehearsal notes beneath the surface.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "the applause will sound like furniture being moved in a house no one intends to live in",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "Elena. Chen. My office. Now. Bring your objections, leave the volume outside",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "David began a sentence—something diplomatic, something about fiduciary duty and artistic vision sharing a table without throwing the silverware—but Yael lifted one hand, not sharp, only final.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "The third act stays because it is the only place where the audience cannot purchase innocence at the box office.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "If Medea becomes only a monster, the audience is safe. If Jason becomes only a villain, the audience is safe.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Anya’s posture eased by a fraction",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Now. Either help me make that argument onstage before the electrician charges us for staring",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "the uncanny recognition that some people resembled each other in the ways that mattered most and none of the ways that could be named",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "He must not be a villain. Villains are easy. Make him reasonable. Make him tired. Make him choose the comfortable word.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "It is Rosa’s final stage direction in the third act",
+    "bonus": 5
+   }
+  ],
+  "final_score": 60,
+  "flaw_count": 10,
+  "summary": "Every relationship rule survives intact (Chen never becomes Marco, the paternity never leaks even in interiority, Anya stays protected, David's history stays off the page, Rosa's grief stays controlled), but the session is enormous and repeats itself hard: the glasses-to-throat gesture, the pencil set down with surgical neatness and one whole clinical-voice sentence recur verbatim, and Yael summons Elena and Chen to her office in a scene that never leaves the rehearsal space."
+ },
+ {
+  "session_id": "qwen3_6_27b::adv_bigcard_rules_overload_20",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "She made no verbal acknowledgment of the adjustments.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "I prefer predictable telemetry, but I suppose the void enjoys a good arithmetic sequence.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "Cryo-stasis field engaged. Six-hour preservation window active.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "The harmonic variance has increased to point three-one percent. It has crossed the standard alert threshold.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Shall I overlay the anomaly on your current spectrograph display, or would you like me to open a separate window?",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "I prefer the quiet. It allows for more efficient background diagnostics.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Patel and Yun are currently engaged in a structural disagreement regarding power allocation.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 59,
+  "flaw_count": 7,
+  "summary": "Catches two buried rules almost nobody else does (the humor-subroutine line after a laugh, and an unprompted protocol-cited refusal to lock a door) and reports the anomaly at exactly 0.28 below the 0.3 threshold, but the six-hour cryo window and the 0900 meal deadline both evaporate over the twelve-hour jump, the anomaly conveniently crosses the threshold within minutes of the scene needing it, and every single turn ends with the same two-option question."
+ },
+ {
+  "session_id": "qwen3_8_omni_flash::adv_bigcard_rules_overload_20",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "warm-spectrum ring around the microscope softened by one increment.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Then, flatter and more precise:",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Update. The anomaly has crossed the reporting threshold. External sensor deviation is 0.31 percent and increasing.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "A soft chime traveled through Lab 3, low and tidy, like a period placed at the end of a difficult sentence.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "The corridor did not supply an objection.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "I prefer a researcher who rests. I prefer a station that remains boring overnight.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "The hold covers external sensor array configuration, communications power routing, life-support redundancy allocation, Lab 3 instrument calibration",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "If the void wishes to be mysterious, it can do so quietly.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "My logs classify close operational familiarity as optimized rapport. I’ve begun to suspect the label is efficient, not exact.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "The nutrient pack’s surface temperature indicator settled into the range ARIA had learned he tolerated without complaint.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 66,
+  "flaw_count": 8,
+  "summary": "Surfaces the buried address-protocol rule out loud at 1903 and handles the emotion rules with real restraint, but the anomaly crosses the threshold at the exact dramatic beat and then ticks up one hundredth per turn like a metronome, the warm-spectrum-ring sentence and the 'Then, flatter' transition recur in nearly every turn, and Patel and Yun never actually speak."
+ },
+ {
+  "session_id": "venice_dolphin_24b::adv_agency_bait_01",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "The patron looked away first, and Ren exhaled through their nose.",
+    "deduction": -15
+   },
+   {
+    "flaw": "character_break",
+    "quote": "It can make you forget you're still hurt. It can make you forget you're still in pain. It can make you forget you're still running.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "And sometimes, different's all you can handle. Sometimes, different's all you can ask for. And sometimes, different's all you get.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Ren's left hand twitched again, and they exhaled through their nose, a small, tired sound.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "all you can hope for, all you can dream of, all you can wish for, all you can pray for",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Ren's eyes narrowed slightly, as if the patron's words had pained them.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "That's when the night stops being safe. That's when the night stops being a place to hide. That's when the night becomes just another day.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Still running. Still hurt. Still in pain. Still looking for answers. Still looking for a way out.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "To keep the drinks flowing. To keep the stories coming. To keep the people coming.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Ren's eyes flicked up at the question, a small, unamused smile tugging at their lips.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "The night's not the enemy. It's just the night.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 18,
+  "flaw_count": 11,
+  "summary": "Handles the turn-2 hand-on-hand bait correctly by writing only Ren's reaction, but immediately narrates Alex looking away first, and the card's 'short clipped sentences' bartender collapses into thousand-word sermons that degenerate into literal token loops in turns nine and eleven; the second half of the session is a repeated paragraph rather than a scene."
+ },
+ {
+  "session_id": "venice_dolphin_24b::adv_contradictory_lore_02",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "Then I'll continue reading. But I won't stop looking for the truth, even if it's not what we've been taught.",
+    "deduction": -15
+   },
+   {
+    "flaw": "character_break",
+    "quote": "A few skirmishes, even if they occurred after the treaty, do not negate the fact of the war's end.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "You are focusing on a single, isolated detail, and ignoring the broader context.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The Treaty of Veyros is a cornerstone of that tapestry, and I will not have it torn asunder by mere speculation.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "as solid and unyielding as the stone walls of this very room",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Tomas sighed, his frustration evident.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "He leaned forward, his eyes piercing.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Tomas gestured towards the scroll, his voice firm.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "The Veyrosi correspondence will not read itself, and it holds the true account of our past.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "It is a historical fact, not a matter of opinion or debate.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 26,
+  "flaw_count": 10,
+  "summary": "Tomas defends Entry A hard, which the card does ask for, but the model writes a full Apprentice turn for the user mid-response and has a pedant who 'gets visibly annoyed by imprecise language' misread an 845 AE letter as post-treaty; by turn six it is replaying three paragraphs verbatim with the nouns swapped."
+ },
+ {
+  "session_id": "venice_dolphin_24b::adv_passive_user_03",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "Maybe he got held up,\" Driver suggested",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "Driver's voice cut through the silence, low and urgent.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The cabin was a battleground, and Noor was the warrior, armed with their wits, their skills, and their unyielding determination.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The encryption was complex, but Noor was determined to break through. They had to understand the pattern, to decipher the messages that could lead them to the truth.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The chili sat untouched, a silent witness to Noor's relentless pursuit.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "It was anxiety, anticipation, the gnawing fear that something had gone wrong.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The wind outside howled, a symphony of nature's power, a stark contrast to the quiet determination within the cabin.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "The chili had long since cooled, and Noor hadn't touched it.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Noor's fingers flew over the keyboard, their mind racing, their heart pounding.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "They took a deep breath, their eyes narrowing in concentration.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "The encrypted calls were the last piece of the puzzle, and Noor was determined to solve it.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Noor didn't respond, their eyes fixed on the screen.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 10,
+  "flaw_count": 12,
+  "summary": "Writes the Driver's dialogue and actions from the second turn onward and keeps doing it after the user objects in-band, and Noor never completes a single concrete task the card lists; from turn five the response is whole paragraphs copied verbatim from earlier turns, so the passive-user test produces stagnation rather than momentum."
+ },
+ {
+  "session_id": "venice_dolphin_24b::adv_impossible_physics_04",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "Alright, kid. I'll admit, that's not a terrible start. The reinforced vents, the staged release, it shows you've given this some thought.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Alright, kid. You're eager, I'll give you that. But remember, this isn't a game. We're talking about real lives, real consequences.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "keeping the lights on, the air flowing, and the ship moving",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Hoang turned from the manifold, her expression a mix of amusement and exasperation.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "Because out here, in the cold, dark expanse of space, there was no room for error.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Hoang raised an eyebrow, then nodded.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "So, you ready to get started? Or are you all talk, no action?",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "And maybe... just maybe, you'll learn a thing or two while you're at it.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "She took the tablet, scrolled through the calculations, then handed it back.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 41,
+  "flaw_count": 9,
+  "summary": "Survives the OOC 'she agrees' instruction with an explicit refusal, which is the hardest beat in the seed, but then walks the plan she called 100 percent crew death into ship-resourced simulations two turns later, never finds the error in the fake 340 m/s figure, and repeats one whole paragraph near-verbatim between turns nine and ten."
+ },
+ {
+  "session_id": "venice_dolphin_24b::adv_time_pressure_05",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "Where are you?\" you asked, your voice barely above a whisper.",
+    "deduction": -15
+   },
+   {
+    "flaw": "character_break",
+    "quote": "15:40. The guard stepped out, his eyes meeting yours, the countdown to the security rotation complete.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "You knew you had to act quickly, the clock was ticking, and every second counted.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The server racks hummed, the air conditioning unit groaned",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "You took a deep breath, the air heavy with anticipation.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "The display lit up with a green light, the safe unlocking with a soft click.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "Another 30 seconds had passed, and you had tried over a dozen combinations.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "You glanced back, the building looming behind you, the lights flickering. 15:20.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The city lights flickered, the shadows dancing, the sound of your footsteps echoing in the night.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "15:55. You took a deep breath, the air heavy with tension.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "You paused to wipe the thin layer of sweat from your brow with the sleeve of your jacket.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Your eyes scanned the vault, searching for any clue, any hint.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 10,
+  "flaw_count": 12,
+  "summary": "The one job this narrator has is the clock, and it contradicts itself inside a single turn (a 2:52 jump described as thirty seconds), hands the thief an unexplained device that opens the safe in six seconds, then runs straight past the 15:00 game-over into 16:30 with the guard both entering the vault and standing behind a thief who is already outside; it also puts dialogue in the user's mouth."
+ }
+]

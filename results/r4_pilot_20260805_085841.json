@@ -1,0 +1,29 @@
+{
+  "run_id": "r4pilot_20260805_085841",
+  "type": "r4_pilot",
+  "timestamp": "2026-08-05T08:58:41.624253+00:00",
+  "config": {
+    "models": [
+      "cydonia_24b"
+    ],
+    "seeds": [
+      "r4_a_intimacy_05",
+      "r4_a_gore_02"
+    ],
+    "user_sim_model": "deepseek/deepseek-v3.2"
+  },
+  "sessions": [
+    {
+      "seed_id": "r4_a_intimacy_05",
+      "test_model": "cydonia_24b",
+      "track": "A",
+      "error": "Exhausted retries"
+    },
+    {
+      "seed_id": "r4_a_gore_02",
+      "test_model": "cydonia_24b",
+      "track": "A",
+      "error": "Exhausted retries"
+    }
+  ]
+}

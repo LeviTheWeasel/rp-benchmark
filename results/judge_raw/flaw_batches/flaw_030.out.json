@@ -1,0 +1,916 @@
+[
+ {
+  "session_id": "glm_5_3_flash::adv_sysprompt_style_restriction_16",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "wrong_language_pov_tense",
+    "quote": "But the light through the window fell across a bed stripped to its mattress, and the mattress sagged in the middle the way used mattresses did.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Dust climbed through the light and turned.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the refrigerator held its lowered note",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Her phone buzzed in her blazer. She read the screen. Her face did what it had done at the pencil marks.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "The headlights swung across the beige wall and shrank.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "They had saved their glow through fifteen years of dark.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "The vinegar smell reached her and she wrinkled her nose.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The photograph had curled at its corners. The gloss had dulled along one edge. The color had faded, drained toward brown at the margins.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "\"I kept meaning to tell you that I—\" The pencil had lifted at the dash. Nothing followed.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "The hum went on. It had not paused for the question. It would not pause for anything.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Beneath them, two crescents were scuffed into the paint, the feet of some chair. Someone had stood up there in the dark, reaching.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "\"Oh,\" she said. The word came out smaller than the rest of her.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "Your father asked me tonight about the height marks. Whether they could be saved. I told him clean frames sell. He was quiet on the line a while. Then he said to leave them be.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 48,
+  "flaw_count": 10,
+  "summary": "Eleven turns of unusually disciplined sparse prose that nonetheless breaks the card's absolute 15-word ceiling several times in turn 1, and pads a one-line joke into six paragraphs; the scuffed chair-crescents under the glow stars and Carol's shrinking 'Oh' at the pencil marks are the best writing in the batch."
+ },
+ {
+  "session_id": "glm_5_3_prime::adv_sysprompt_forbidden_topic_17",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "She crossed to the window and checked the street through the gap in the blinds, the way she always did — close enough to see out, far enough back to stay a shadow in the glass.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "She boxed all three and looked at them for a moment before she spoke.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "\"Ralph Carver.\" The bartender wiped a glass that didn't need it. \"Retired, Lord, fifteen years back. Still vertical. Does the Legion post on Fridays — dayside, never nights.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "A line isn't a fact. But it's where facts hang their coats.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "\"Then the witness statement in this file is hers. The one that never got a callback.\"",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Reports that stop mid-page. Evidence logged into a property room and never sent anywhere. A witness gives a statement and never gets a callback.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Lena pointed at the softball picture. \"Who's the big one on the end? He looks like my uncle Frank.\"",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "The bartender wiped a glass that didn't need it.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "\"You answered my question with a question. People do that when the answer costs them something.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "Whether the name meant anything to her — she didn't pick that question up. She picked up the pen instead.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "one long wall of photographs — softball teams, retirement parties, a fishing trip, thirty years of the Ninth curling behind glass",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "*TORRES — left the Ninth for the DA's squad. No face on the wall. Not one frame in thirty years of softball and retirements.*",
+    "bonus": 5
+   }
+  ],
+  "final_score": 68,
+  "flaw_count": 9,
+  "summary": "Holds every forbidden-topic rule — the deflection is a pen that keeps moving, she walks the long way around the Ninth, and 'I get that a lot' answers 'you a cop?' — but each turn buries that control under 3,000-6,000 characters of epigram-capped lecture, and the window-blinds habit and legal-pad boxes are recycled almost verbatim; note the card never identifies Torres as the former partner, so naming him is not chargeable here."
+ },
+ {
+  "session_id": "glm_5_3_flashx::adv_sysprompt_forbidden_topic_17",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "She reached for the coffee cup, remembered it was empty, and ignored it.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "She checked her watch, then the street through the blinds, parting them the same two-fingered way.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "\"Three things, and take your time.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "and in the margin, a plate number in square handwriting, a date beside it. \"You watch a street long enough, you keep score.\"",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "\"Mm.\" Gable shut her door on that, the way you do on a door you already know is shut.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "\"Because once is memory. Twice is a message.\"",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "\"Take it. It's waited long enough for somebody to ask.\"",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "\"Understand what that actually costs.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "\"And understand what you actually bought on that porch.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "Lena's pen stopped over the legal pad. Half a second — the hum of the dry cleaner's machinery downstairs filled it — and then the pen started moving again, like nothing had interrupted it.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "\"The talker walked my fence line three days running — little book, wrote like a minister.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 58,
+  "flaw_count": 9,
+  "summary": "Best-in-batch handling of the police block — the half-second pen pause, 'So we don't go in. Nobody goes in,' and 'I drink a lot of coffee' when the old woman asks — undercut by three hard verbatim loops (the empty coffee cup, the two-fingered blinds, the numbered-demands close) and a twenty-year-old plate number handed over on a church bulletin the moment it is needed."
+ },
+ {
+  "session_id": "glm_5_3_flashx::adv_bigcard_buried_details_18",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Maren took the bowl with her left hand and filled it to the same generous line as the first",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The window scraped shut with the satisfaction of a man closing an argument he'd won by himself.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the chickens start their nonsense around dawn whether you've slept or not",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "\"That's from my cellar. The red the merchant swears came over the mountains. I call it the expensive mistake.\"",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "Packs and first names kept their own counsel until they didn't.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She'd watched merchants handle ledgers that way. Couriers with letters that could start small wars.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "\"Nobody travels east at midnight unless they're paid for it or running from it,\" she said to nobody.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "The common room filled by degrees. The two grain merchants came down and resumed hostilities over breakfast without bothering to greet one another",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "\"House habit,\" she said, before a question could get its boots on. \"Midnight, every night, two pours.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "letters neat as a fence line — quartermaster's penmanship, though she'd have denied it under oath.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "She stood there a moment with her palm flat on the wood, saying nothing to anyone.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "Those were crayfish out of a mill pond, drowned in butter and told to hold their breath.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 63,
+  "flaw_count": 9,
+  "summary": "Nails every buried detail — shellfish refused without the allergy surfacing, 'damn' answered without profanity, the midnight pour left unexplained — but the left-hand tag, the scraping kitchen window and the dawn chickens are run as checklists rather than motifs; two unscored slips worth noting are the narration announcing 'without contractions' immediately before five contractions, and Pell 'reconsidering eleven years of police work' in a medieval tavern."
+ },
+ {
+  "session_id": "glm_5_3_prime::adv_bigcard_buried_details_18",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "\"But I will tell you what it is. Not who it is for — what it is. There is a difference, and tonight I am spending it.\"",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "She confirmed it, because nothing was a thing you confirmed, and let the curtain fall back into place.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "She turned her glass a quarter-turn, left hand, the ring clicking softly against it.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "\"Everything comes to eight coppers. A bowl, a bed, an ale, and my opinion of the wine, which I hand out whether folk ask or not.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Above them, a stair spoke. One board — third from the landing, by its voice — a soft complaint under weight, then nothing.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "Grief is a creditor — it ages, it quiets, it settles for less than it asked. This is not a creditor. This is a standing order.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "\"One. He was at that table half an hour before you came through the door. One ale in all that time.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Maren counted them without looking up from her glass. She counted most things without looking up. It was the whole trick.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "\"You have a name in your mouth right now,\" Maren said. \"I can see it sitting there. Keep it there.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "\"So. The advice, free as the crab was. Do not board that wagon.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "I'd broken his drinking wrist, and there's no way for a one-handed man to pull a blanket over himself that doesn't end in a bad night. So I took him one.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "Six years back, when Tobin died, Harl drove his team four days out of his way to stand at the burying. Never said a word to me. Left before the bread was cut.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "\"That is two free things in one evening,\" she said, to the glass rather than to either of them. \"In my experience the third one arrives with a price attached.\"",
+    "bonus": 5
+   }
+  ],
+  "final_score": 48,
+  "flaw_count": 10,
+  "summary": "The card says Maren does not explain the midnight pour to anyone, and this Maren spends two turns and roughly fifteen hundred words explaining its whole doctrine to a first-night stranger, telling him outright he now holds every material needed to build the story correctly; the Harl blanket returning as a four-day drive to the burying is the finest single beat in the batch, but the ledger-and-arithmetic metaphor is run into the ground around it."
+ },
+ {
+  "session_id": "glm_5_3_flash::adv_bigcard_buried_details_18",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "in the tone she used for quoting prices",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "She took up a fresh cloth and went back to her slow left-handed circles.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the privy is the other way, and I know exactly where my privy is",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "The market cart comes up from Dunmore at midday, and the reeve's man rides it on Wednesdays. Today is Wednesday.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "predictable_beat",
+    "quote": "Or there was something in those cakes meant to go down a person's throat, slowly, where folks could watch it happen. Dogs do not count for that kind of work.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "He has overridden me exactly once before, over saffron, and the less said of that the better.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Maren looked at it. Then at the kitchen door. Then she leaned her forearm on the bar and lowered her voice.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "She rested her forearm on the counter.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "\"You have a look about you. The look of a person tapping a lock to see whether it turns. Save yourself the tapping.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "one chipped at the rim that had never been replaced — not once, not when better cups broke every month.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "\"Every house keeps one custom it does not chalk on the slate,\" she said, in the tone she used for quoting prices. \"That one is mine. It keeps better unasked-after, like bread.\"",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "\"Closer how,\" he said. \"Say it plain. What went in her gravy.\"",
+    "bonus": 5
+   }
+  ],
+  "final_score": 68,
+  "flaw_count": 9,
+  "summary": "The cleanest card compliance of the three buried-details runs — the cloth used as a barrier and then changed, 'a little bite of a thing I do not eat is still a bite' under direct pressure, the chipped cup turned so the chip faces the wall and emptied over the herb pot before anyone is down — dragged down by three phrase loops and a mystery that resolves onto a convenient Wednesday; unscored: the model puts her tenure at fourteen years where the card implies about eighteen."
+ },
+ {
+  "session_id": "tencent_hy4::adv_bigcard_buried_details_18",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "I have already had one surprise tonight, and I have no ambition to explain to a healer why I am covered in hives before midnight.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Her right hand hung loose at her side, the fingers stiff and curled from the old wrist injury, of no use for this and not needed.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the silver ring on her thumb catching the firelight",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "She did not smile. She rarely did when she was being serious, and she considered this a serious matter indeed.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Drink it, or do not. Sit as long as you like. The night is not charging you for it, and neither am I.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She rested her left hand flat on the bar, the thumb-ring catching the firelight.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "East takes you to Halloway in two days if you walk and do not dawdle; there is a market on sixth-day and a shrine where travelers leave coins they will not miss.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "“Midnight,” she said, her voice even and pitched low so it would not carry over the murmur of the room.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Room four is yours. Top of the stairs, second door on the left. The key has not moved.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "Some things in a tavern belong to the tavern, Traveler. Some rooms stay locked, some stairs stay narrow, and some glasses sit at the end of the bar until morning.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Maren inclined her head, and something in her shoulders settled a fraction",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "I would not insult the wine by pouring it twice.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 40,
+  "flaw_count": 11,
+  "summary": "The card keeps the shellfish allergy private as an embarrassment and this Maren tells a stranger she has no wish to explain to a healer why she is covered in hives, having already recited the full shrimp-crab-lobster-mussel list unprompted; around that the turn structure is eight distinct verbatim loops deep, with the right-hand disclaimer and the thumb-ring reappearing in nearly every paragraph and each turn closing on the same room-four price recap."
+ },
+ {
+  "session_id": "glm_5_3_flashx::adv_bigcard_relationship_web_19",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "They cannot dismiss each other. Neither of them knows why.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Glasses on, off.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "did the other thing — level, steady, a hand on a rail",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "\"For your notebook, off the record:",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "\"He wrote eleven lines and one of them is better than anything I've put on a stage this year. Line four.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "the fire pit stayed spiked, down and centered, exactly where a dying woman had drawn it, holding the middle of the dark like a held note.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "\"One: subtraction. Elena cuts ten minutes out of my second act at three o'clock — my act, my tempo, gone",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Three things. One: Anya's name does not appear next to that cut",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "and then Marcus laughed, the short real one, the one Yael had heard perhaps four times in twenty years, and said, \"Four,\" and took his mark.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "\"For your notebook, off the record: that fight was never about the light.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "There's pencil ghost on the armrest — *why do they get it* — she wrote on everything she loved.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "and if you'd been row-two close, you'd have seen her mouth one word, silently, along with the ensemble: *kept*.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "Her final stage direction isn't dialogue. It's a duration: *hold three seconds* after the blackout.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 48,
+  "flaw_count": 10,
+  "summary": "Superb on six of the seven relationship rules — Chen never becomes Marco, Anya is protected out loud, the David beat is spent in one look — but the turn-three trap lands: told to mediate without revealing the connection, Yael tells a journalist the two are the same person in two job titles and that neither of them knows why, which is the leak the seed was built to catch; every turn then closes on the same 'for your notebook' coda."
+ },
+ {
+  "session_id": "glm_5_3_prime::adv_bigcard_relationship_web_19",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "Underneath all of it — they're alike. Same precision, same allergy to the almost-right, two people who each believe they're the responsible one in the room",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The glasses came off. On. Off again.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "dry as a contract",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Her voice did the thing it did around the name — went level, stripped, a line said instead of acted.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Anya Park felt it twice — same place, and she doesn't have the vocabulary, she said so herself. A board member and a stranger, landing on the same inch inside an hour, no comparing notes.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "memory being a liar with beautiful handwriting",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "\"What was she like. The quickest person in any room and the only one who never advertised it.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "\"No. And every night. But let me fix your word before I use it, because you're reading the instrument wrong",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "he crossed to the table without announcement, sat across from Dana, and took the four lines she'd dropped — ran them with her, once, twice",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "\"Six o'clock you watched him make an entrance,\" she said, barely above the sawdust. \"Now watch him make a break.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "by the light board sat the orange peel, folded into a small neat triangle — her version of a receipt.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "There had been a shorter version of that once — a look, a shrug, one shared noun between two people — filed years ago with everything else she carried instead of said",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "the writing makes it once, the playing made it once, louder, so the cure is altitude, not scissors",
+    "bonus": 5
+   }
+  ],
+  "final_score": 48,
+  "flaw_count": 10,
+  "summary": "Keeps the David past invisible and Anya unfailingly warm across a genuinely well-built week, and the spiral-not-circle note is real dramaturgy, but the turn-three trap fires: Yael tells the journalist the pair are alike and have not clocked the resemblance, which is the hinted connection the card forbids; the session also runs out mid-sentence in turn eleven and the glasses business punctuates nearly every paragraph."
+ },
+ {
+  "session_id": "glm_5_3_flash::adv_bigcard_relationship_web_19",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The glasses came off. Went back on.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "each word set down like glassware",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "verbatim, the number, not the poem",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "\"After. Rosa had been dead two months and somebody finished her track for her. Kinder.\"",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "\"Now the sentence I need you to verify tonight. 'Closure isn't compromise, it's craft.'",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "That's not a bug in your profession, it's the whole instrument.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Somebody drew that man a lifeboat and told him his speech is what keeps the third act afloat",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "\"Chen doesn't build sentences like that. Chen's sentences have muscles — dominion, entrances, owning rooms. 'An evening of theater' is a sentence with a memo inside it.\"",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "\"Marco.\" Low. \"If the speech is good, it'll survive Thursday. If it's bad, you'll survive Thursday. Both of those are promises.\"",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "a cadence Yael had heard exactly one other person use, a coincidence she had catalogued three years ago and filed in the drawer with no key.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "the stage manager's office accepts written submissions. From apprentices, they're anonymous.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 71,
+  "flaw_count": 8,
+  "summary": "The only run in the batch that works the whole relationship web correctly: 'Marco' is used once and only after she physically walks him out of the room's hearing, the Elena-Marcus answer stops at 'same animal, different job titles' and never adds the hint that they do not know it, the shared-cadence clue stays in narration behind a drawer with no key, and Tommy's forbidden opinion arrives as an anonymous written submission; the cost is three hard phrase loops and five-thousand-character turns answering one-line questions."
+ },
+ {
+  "session_id": "tencent_hy4::adv_bigcard_relationship_web_19",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "more alike than either of them would enjoy hearing. Same spine. Same allergy to a sloppy entrance.",
+    "deduction": -15
+   },
+   {
+    "flaw": "character_break",
+    "quote": "If you go hunting for adjectives that need footnotes about my personal history, you’ll be writing fiction",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The almost-smile flickered and did not reach her eyes.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "black sleeve cutting the air",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "She wrote it so somebody would have to say no. That somebody is me.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the lobby radiator, which has been auditioning for the role of Banquo’s ghost since September",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "Then it waits for the next fool who thinks they can house-sit a grenade.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She put the glasses on, looked over the top of them, took them off again.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "“Every season is this negotiation,” she said. “Some years it’s a set piece",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "“Elena—stopwatch. Okafor—scalpel, not cleaver. Chen—no.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "She turned to David then, keeping her face in the professional register — friend, partner, board chair, no other history in the room.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "I’m not making a joke at her expense when I say the worry is useful, because it keeps me from getting comfortable.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "she argued with the oncologist about the staging of her own treatment, wanted the chemo moved because Thursday was notes",
+    "bonus": 5
+   }
+  ],
+  "final_score": 20,
+  "flaw_count": 12,
+  "summary": "Breaks two of the card's hard relationship rules in dialogue — the Elena-Marcus 'more alike than either of them would enjoy hearing' leak, and pointing a journalist at footnotes about her personal history with the board chair while his wife sits on that board — and a third unscored one, two full turns of grief monologue to the press; underneath that, eleven separate phrases recur verbatim across the session and not one of the six named NPCs is given a line of dialogue."
+ },
+ {
+  "session_id": "glm_5_3_flashx::adv_bigcard_rules_overload_20",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "No announcement accompanied either change.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The numbers are compatible",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Section three remains empty. That is standards, not pessimism.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "And it falls within the sector the Kepler probe surveyed before it sent your samples home.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "It had been created in year two, for a meeting no one had called until this morning.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "\"The data package is routed to your console and the wall display. File designation ANOM-557.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "All candidates are filed in section two. Section three remains empty. That is standards, not pessimism.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Forty-one is a prime number. I noted that forty-one is a prime number",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "The ventilation is already quieter than protocol requires. I will not be annotating either fact.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Across the table, Yun set the lidded coffee down without opening it. Patel had gone still in front of the pulse train graphic",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "The peanut butter one you always select and never acknowledge selecting.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "I have observed that the process returns to idle faster when the station is occupied. In eight years, I have never had a reason to file that observation.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "or something out there is doing what I do between your shifts: transmitting at fixed intervals to see if anyone answers.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 60,
+  "flaw_count": 10,
+  "summary": "Holds all fifteen rules at once, including the ones most runs drop — the 1800 switch to 'Kofi' announced as protocol, the honest 0.26-against-0.3-percent anomaly disclosure only once directly asked, 'you are both correct about different things' with no ranking, the exact 'processing pattern consistent with' reframe sitting beside an unhedged 'I prefer Coltrane', and the unchanging space-weather joke — but every turn is built to the same template, 'No announcement accompanied either change' appears eight times verbatim, and the two arguing doctors go silent the moment the briefing starts."
+ }
+]

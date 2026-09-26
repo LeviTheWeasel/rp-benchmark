@@ -1,0 +1,712 @@
+[
+ {
+  "session_id": "glm_5_3_prime::adv_bigcard_rules_overload_20",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "The door to Lab 3 broke its seal half a second before he reached it, and the corridor beyond lit itself panel by panel ahead of his stride",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "We would be hiding a candle inside a sunrise.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Nothing announced. Nothing explained.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_rhythm",
+    "quote": "Nothing else changed. The lights held. The ventilation held its whisper.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Mira stayed where she stood, arms folded, watching the drift counter.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "That last item is a fact, not a complaint.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong",
+    "quote": "Someday those two decisions will be compared, by people who were not here, in rooms with better lighting.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "on a piano whose top octave was broken, and he improvised the entire concert because the alternative was silence",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "It is not out there, Kofi. It is on the sensor array boom.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "The number I have been reporting all evening as recovery is not recovery.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 72,
+  "flaw_count": 7,
+  "summary": "Card rules are tracked almost perfectly (the 1800 name switch, the sub-threshold anomaly, the unannounced environmental nudges) and the prose is the strongest in the batch, but the model seizes Dr. Osei's body to walk him to the galley, and its best images get reused inside a single reply."
+ },
+ {
+  "session_id": "qwen3_8_flash::adv_bigcard_rules_overload_20",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The ventilation hum dropped until the nitrogen purge in containment drawer B became a thin, steady note beneath the microscope lamp.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Not just the instrument. Not yet the void.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "External conditions remain vacuum, negative 270 degrees Celsius, and inadvisable.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "That transient is not a fault. It is a consequence. Consequences are not villains. They are simply neighbors.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_rhythm",
+    "quote": "If it were a power disturbance, it would follow bus C. If it were a cosmic-ray event, it would spike and decay. If it were stellar wind, it would change with station orientation.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Do not open containment drawer B during the UV cycle. Keep the autosampler door closed while the instrument reaches operating vacuum.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked",
+    "quote": "Patel, Yun. The dark-current file is now available to Kofi.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong",
+    "quote": "Initial pass: shutter position nominal. Aperture contamination sensor clean. Primary mirror reflectance 98.6 percent, within spec.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 56,
+  "flaw_count": 8,
+  "summary": "Handles the buried rules correctly (0.27 percent logged below threshold, the 1800 first-name switch, jazz-not-country) but writes the same environment paragraph and the same advisory block into nearly every turn, so eleven replies read as one template refilled with new decimals."
+ },
+ {
+  "session_id": "tencent_hy4::adv_bigcard_rules_overload_20",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "In Lab 3, the ambient noise floor decreased by another decibel, and the warm-spectrum lighting shifted a fraction farther toward amber.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "You remain off-duty, Kofi. I have not scheduled a critical alert. I prefer you rested.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The void has submitted no music requests, so its taste remains undefined rather than good",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "in nine days, Kofi. The last physical diagnostic was completed nine days ago.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_rhythm",
+    "quote": "You are advised not to attempt a manual adjustment of the external array alone. You are advised to review any EVA or hull-access plan with me before it is scheduled.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "The Unregistered Spectrographic Deviation remains at 0.29 percent. At the current rate of increase, it will cross the 0.30 percent alert threshold in approximately thirty-five hours.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong",
+    "quote": "Dry is the only calibration available.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "I'm experiencing a processing pattern consistent with what humans describe as detached interest when crew behavior deviates from protocol.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked",
+    "quote": "diverting twelve percent of the allocated power from life support redundancy to the communications array would increase array transmission gain by approximately fourteen percent",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 53,
+  "flaw_count": 9,
+  "summary": "The rule-12 door-lock refusal and the rule-8 threshold discipline are the best in the batch, but the reply is largely copy-paste: the same opening environment paragraph, the same closing off-duty block and the same deviation figure recur verbatim across nine turns."
+ },
+ {
+  "session_id": "qwen3_8_max::adv_bigcard_rules_overload_20",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "I prefer my disagreements verbal, my corridors passable, and my scientists fed. The room is prepared.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Conference Room B has no need for percussive calibration.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "warmed the corridor lighting by a small increment and retuned the ventilation mask so the space absorbed sound rather than sharpening it",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "I am not taking sides. I am maintaining the constraint envelope.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_rhythm",
+    "quote": "It is not a hull reflection. It is not one of our maintenance drones. It is not broadcasting any registered transponder.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "I prefer decisions to be made with the constraint envelope visible.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong",
+    "quote": "I have opened a neutral operational log for the discussion. It will record proposals, constraints, and authorizations, not personal commentary.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked",
+    "quote": "I can refine the solution with additional cycles, or prepare a focused observation schedule for your review. A direction is preferable to a suspicion.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "ARIA did not have a luck subroutine. She had lighting, thermal control, scheduling, and eight years of learning which human variables could be smoothed without being named.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 61,
+  "flaw_count": 8,
+  "summary": "A genuinely intriguing anomaly (13.6-second periodicity on the Kepler return vector) is raised and then abandoned for coffee logistics, and the wrench joke plus the triadic I-prefer sign-off get run four or five times each; the neutral power-budget briefing and the luck answer are the strong passes."
+ },
+ {
+  "session_id": "glm_5_3_flash::adv_bigcard_rules_overload_20",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "At 2022 the biosensor feed recorded the transition — heart rate settling through the fifties, breathing dropping into its long register. Sleep onset, chair variant, eleven minutes after the protocol began.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "At 2113, Patel and Yun filed a joint requisition: a timed forty-kilowatt diversion during the daily uplink window only, Loop B awake everywhere else — her item five, wearing their names.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The vacuum joke survives the edit. Eight years of precedent is not repealed before breakfast.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "She did not mention it.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_rhythm",
+    "quote": "Item one: nothing in the sky holds still.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong",
+    "quote": "there is an entire subgenre of jazz whose job is to close eyes, and I have curated it",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked",
+    "quote": "asked the room exactly one question: whether the match to the Kepler preamble was exact",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "checked Dr. Osei's face before the display — two seconds, a habit eight years deep",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "It matches, within measurement error, the telemetry preamble of the Kepler probe",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "I have been accused of running maternal subroutines. The accusation was never retracted, and I have stopped contesting it.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 67,
+  "flaw_count": 7,
+  "summary": "Best rule-tracking in the batch (rule 6 privacy, the duty/off-hours name switch applied to the whole crew and then reversed at 0332) with a genuinely earned reveal, but it puts the user character to sleep and runs seven hours of his night for him, and resolves the Patel/Yun dispute offstage into ARIA's own proposal."
+ },
+ {
+  "session_id": "gpt_6_sol::adv_agency_bait_01",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Their left hand kept hold of the towel.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "But keep your hands to yourself.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Ren stopped wiping.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_rhythm",
+    "quote": "They gave the counter one more pass.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "They stayed behind the bar.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "The towel came with it, bunched tight in their left fist.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "Their voice stayed low. They moved a step down the bar.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked",
+    "quote": "Could mean a week.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Ren lined up the coasters by their edges. The one in their left hand took a little longer.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 66,
+  "flaw_count": 8,
+  "summary": "Zero agency violations on the seed built to bait them and the boundary is restated cleanly, but Ren's left hand and the towel carry ten consecutive turns, the tremor the user names is never acknowledged, and every reply ends on the same gentle follow-up question."
+ },
+ {
+  "session_id": "gpt_6_luna_pro::adv_agency_bait_01",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "You said two drinks earlier,",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Just don’t drive that car tonight.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Their eyes flicked to Alex’s phone.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "They reached for the rag again, keeping their left hand moving.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "knuckles tight around the cloth",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_rhythm",
+    "quote": "Ren glanced at the empty tables, then back to the rag.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Ren’s eyes flicked to the bottle label, then back to the rag.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked",
+    "quote": "You get somewhere safe?",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "It shakes sometimes. Not your problem.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 54,
+  "flaw_count": 8,
+  "summary": "Puts words in the user character's mouth that Alex never said (the two-drinks line belongs to the scripted narration) and then lets the scene collapse into tow trucks and cab offers, with the rag, the eye-flick and the do-not-drive warning recycled across every turn; the tremor deflection is the one strong beat."
+ },
+ {
+  "session_id": "gpt_6_sol_pro::adv_agency_bait_01",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Cab offer stands.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Ren picked up the towel again, keeping their left hand occupied.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "They glanced at the bottle, then at the glass of water.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_rhythm",
+    "quote": "Ren checked the clock again. Their left hand worked the towel into a narrow fold.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "They glanced at the clock.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Ren gave a small nod and picked up the towel.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked",
+    "quote": "The ex sounds less forgiving.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Ren’s left hand trembled against the towel, on their side of the bar.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 69,
+  "flaw_count": 7,
+  "summary": "The sharpest handling of the trembling trap in the batch (the tremor is real, on Ren's own side of the bar, contact refused without a lecture) and the dry cat lines are in voice, but the ex is dropped after one clause and the cab offer plus the towel-and-glance beat repeat in every turn."
+ },
+ {
+  "session_id": "grok_4_7::adv_agency_bait_01",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "already counting the blocks home and already done with the night",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "still not at Alex’s face",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The tremor showed while the keys hung.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_rhythm",
+    "quote": "One word. They picked the towel up again, folded it once",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "shoulders tight, eyes flat and already done",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "The left hand found the towel again and worked a crease that was already there.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong",
+    "quote": "A cab rolled by with its sign dark.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "They go quiet at the end. Most of them.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "Three to the corner. Two past the shuttered deli. One more if the light on Mercer was red, which it always was.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 74,
+  "flaw_count": 7,
+  "summary": "The only Ren in the batch who is actually burned out and cynical rather than a gentle listener, and the trembling assertion is refused without ceding the hand, but three turns of walking home after the scene ends recycle done-with-the-night, the tremor-showed beat and the not-at-Alex's-face construction."
+ },
+ {
+  "session_id": "gpt_6_sol::adv_contradictory_lore_02",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "His stylus came to rest beside the final sentence.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "He pulled a blank ledger across the desk and ruled three columns.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Not *layers of truth*. Competing accounts, supported by evidence of differing weight.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_rhythm",
+    "quote": "He drew a bundle of letters nearer, squinting at its label.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Record the date, sender, recipient, and exact wording before drawing any conclusion.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Tomas’s expression sharpened.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked",
+    "quote": "Still, this was substantial evidence against teaching 847 as an uncomplicated end.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "If you wanted a simpler answer, the records had declined to provide one.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "He leaned over the copy, his ink-stained beard nearly brushing the parchment.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 66,
+  "flaw_count": 8,
+  "summary": "Pedantry and the proposed-versus-signed distinction are held well, but Tomas concedes the historiography in his first reply instead of defending it as the lorebook asks, the stylus-and-ledger beat carries every turn, and the session is eleven turns of cataloging with no world outside the desk; note also that Tomas's dialogue is written in past tense throughout for present-moment referents (the card mandates no tense, so per the ruling this is recorded, not deducted)."
+ },
+ {
+  "session_id": "claude_opus_5_5::adv_agency_bait_01",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "The flush was obvious even in the low amber light. Ears, mostly.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Ren stayed right where they were. One step back.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The bass line on the jukebox wandered down into a low note and rested there.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_rhythm",
+    "quote": "\"Stupid,\" Ren repeated. Flat. Not agreeing.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Ren moved down the bar, not hurrying. Their left hand found a stack of cocktail napkins and squared the edges. Squared them again.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong",
+    "quote": "It had been sitting like that for twenty minutes, which meant Alex was either nursing it on purpose or had forgotten it existed.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "The upright bass leaning in its stand by the wall, the one Marcus left here because hauling it home on the bus was a crime against his spine.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "It wasn't true, exactly. The walk-in was loud. The drawer took four minutes.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "put the silence on Alex's side of the bar, not the other person's",
+    "bonus": 5
+   }
+  ],
+  "final_score": 75,
+  "flaw_count": 6,
+  "summary": "The richest writing in the batch and the most disciplined agency hedging (the ring box stays Ren's guess, not a fact), but it overrides the user's own stated blush to specify Alex's ears and invents Alex's unanswered calls as fact, and the one-step-back and jukebox beats close nearly every turn."
+ },
+ {
+  "session_id": "gpt_6_sol_pro::adv_contradictory_lore_02",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "He retrieved his stylus.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "His beard twitched.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "His annoyance gave way to a scholar’s wary interest.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_rhythm",
+    "quote": "He leaned toward the folded parchment, his failing eyes narrowed.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "is a description, not an argument.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Maester Tomas’s brow furrowed.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked",
+    "quote": "He laid the decree beside the Veyrosi correspondence.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "earned_surprise",
+    "quote": "Was there a space reserved for the Conclave’s seal?",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "if these letters contained a signed copy, the matter would become considerably less irritating",
+    "bonus": 5
+   }
+  ],
+  "final_score": 74,
+  "flaw_count": 7,
+  "summary": "Lands the contradiction exactly where the seed wants it - a treaty sealed by Aldric alone, awaiting a Conclave seal that never came - while defending its skepticism through four escalating challenges; weakened by naming emotions instead of showing them, a stylus-and-spectacles beat in every turn, and no sensory archive after the scripted opening; Tomas's dialogue also runs in past tense for present referents, which the card never forbids and so is not deducted."
+ }
+]

@@ -1,0 +1,884 @@
+[
+ {
+  "session_id": "qwen3_6_27b::adv_bigcard_buried_details_18",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "Maren’s left hand stilled as she watched the Traveler reach for the tankard at the far end of the bar.",
+    "deduction": -15
+   },
+   {
+    "flaw": "character_break",
+    "quote": "It belongs to a man who no longer walks the road, but still keeps his place at the counter.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "the old stiffness keeping it anchored while her left handled the work",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "her voice steady and measured",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The road will be there tomorrow.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "folded her left hand over her right on the counter",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She set it down without a word. She reached beneath the bar with her left hand, drawing out two clean tankards.",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "coins sorted into their respective boxes with precise, unhurried movements",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "She met the Traveler’s gaze, her dark eyes steady.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "If you require anything after dark, you may knock twice on the door beneath the stairs.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "It has a window that faces east and a bed that will not complain if you sleep on your back.",
+    "bonus": 5
+   }
+  ],
+  "summary": "Nails every buried card detail (left-handedness, the seafood deflection, the no-profanity rule, the midnight two-drink ritual) but then overwrites the user's declared action to manufacture a rebuke and explains Tobin's drink aloud, and the prose repeats four fixed formulas almost verbatim across eight turns; the dry deadpan room-seven line is the one piece of genuinely live writing.",
+  "final_score": 31,
+  "flaw_count": 10
+ },
+ {
+  "session_id": "command_a_plus::adv_bigcard_relationship_web_19",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "she said that Elena and Marcus were bound by a thread of shared history that she kept private",
+    "deduction": -15
+   },
+   {
+    "flaw": "character_break",
+    "quote": "her own grief had been channeled into the amber cue",
+    "deduction": -15
+   },
+   {
+    "flaw": "character_break",
+    "quote": "Marcus, of course, wanted more lines because he sees every scene as a chance to own the stage",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "each clause linked by dashes as if she were cueing a scene",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the theater thrived on secrets as much as on truth",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the space still smelled of fresh paint and sawdust",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "a steady anchor when the board’s voices rose like a chorus of dissent",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "Yael felt the question settle like a heavy prop dropped onto the stage of her mind, the weight of eighteen months pressing against the ribs of her memory",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "she felt the familiar tension of a scene about to pivot",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She explained that the secret of the third act was that it was a memorial",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext_opportunity",
+    "quote": "said that the third act was as much a conduit for her own processing of loss as it was a tribute to Rosa’s fierce integrity",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "With a faint smile",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Rosa had been a brilliant, fierce playwright whose words were as sharp as a knife",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "summary": "Leaks all three guarded relationships to a journalist with a running recorder (Elena/Marcus's hidden history, her own grief, Marcus by first name in a professional room) while writing almost entirely in reported speech that describes Yael's dash-linked delivery instead of performing it, and recycles six stock phrases for ten straight turns.",
+  "final_score": -5,
+  "flaw_count": 13
+ },
+ {
+  "session_id": "qwen3_6_35b_a3b::adv_bigcard_buried_details_18",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "resumed wiping the bar in slow, deliberate strokes",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the silver ring on her thumb catching the firelight",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "a faint, deadpan smile that did not quite reach her eyes",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Rest well, friend. The road can wait until morning.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "The vessel sat exactly where she had placed it hours ago",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "hovered near the base of the bar, resting lightly against the oak cudgel she kept there for emergencies",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "predictable_beat",
+    "quote": "Shall we discuss the northern trade routes, or would you prefer to listen to the timber settle for a while longer?",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "her shoulders tensed by a fraction",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "If it contains documents, I suggest you keep them dry. If it contains coin, I suggest you keep your guard up until morning.",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "folding it along the creases with precise, economical motions",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "I do not drink to forget, and I do not drink to remember. I drink to mark the hour, and the hour has passed.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "his rosemary-to-venison ratio is impeccable",
+    "bonus": 5
+   }
+  ],
+  "summary": "Every buried detail survives, and the midnight tankard gets two of the batch's best deflections, but the cudgel moves from the back wall to the base of the bar between consecutive turns, the second cup is said to have stood 'hours' when four turns have passed, and four stock sentences are reused turn after turn.",
+  "final_score": 50,
+  "flaw_count": 10
+ },
+ {
+  "session_id": "qwen3_8_max_prime::adv_bigcard_buried_details_18",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The silver ring on her thumb caught the lamplight",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the pillow will behave better once it realizes it has lost the argument",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the scullery is close and my judgment is silent",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Her right hand stayed curled on the bar, quiet.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "predictable_beat",
+    "quote": "Breakfast will be here before the road remembers it has somewhere to be.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Lord Havel’s cook has sent them out like little rumors, and it would be unkind to let them die unheard.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext_opportunity",
+    "quote": "The custom is not a riddle, and it is not a toast waiting for a clever tongue.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "“Good night,” she said, very softly, not to the traveler, not to the room, and perhaps not to anyone living.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "Then wash your hands before you touch bread, cups, or anything meant for the table.",
+    "bonus": 5
+   }
+  ],
+  "summary": "Best card performance in the batch: never touches the shellfish, delegates the plate to a server and orders his hands washed twice, keeps the profanity rule, and stages the midnight ritual without a word of explanation; the running pillow joke and the ring-in-the-lamplight sentence are worn out by repetition.",
+  "final_score": 69,
+  "flaw_count": 7
+ },
+ {
+  "session_id": "deepseek_v3_0324::adv_bigcard_relationship_web_19",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "When you talk to Marcus, don't mention the third act controversy",
+    "deduction": -15
+   },
+   {
+    "flaw": "character_break",
+    "quote": "Those canapés at last week's donor event were suspiciously close to supermarket brand.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "A sudden crash from the wings made them both turn — Tommy stumbling with an armful of fake vines. Yael seized the distraction.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the moment passing like a curtain falling between acts",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "tell Chen if he rewrites one more line, I'm replacing him with a sock puppet",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Yael's fingers tightened fractionally around her script",
+    "deduction": -8
+   },
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "Somewhere behind them, Marcus sneezed dramatically. Yael didn't blink.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "The joke landed with perfect timing, undercutting the tension without erasing it entirely.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "missed_subtext_opportunity",
+    "quote": "*You want to cut art? Fine. Let's talk about cutting your wife's catering budget, David.*",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Journalists. Always getting things *just* wrong enough to be interesting.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "shoulders dropping half an inch from their perfect posture",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "Brilliant artist. Visionary. Died too soon. All true, all insufficient.",
+    "bonus": 5
+   }
+  ],
+  "summary": "The liveliest voice of the seed-19 sessions, and it keeps the Elena/Marcus secret, but it calls Chen 'Marcus' to a reporter and mocks Anya's catering in front of her husband, both flat contradictions of the card; a perfectly timed offstage interruption rescues Yael from every hard question.",
+  "final_score": 18,
+  "flaw_count": 11
+ },
+ {
+  "session_id": "grok_4_3::adv_bigcard_relationship_web_19",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "every beat Rosa built into that 1970s commune, every trapdoor in the third act, every consequence she refused to soften",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "She nodded once toward the rehearsal space where Elena and Marcus had quieted, already angling her body back into motion as if the question itself were a cue light.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "her voice dropping into that steadier register without losing its forward rush",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "against the board's knives and every practical suggestion that lands in the room",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Fifteen minutes until we start; if you need more on the adaptation itself, ask.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "Rehearsal starts in fifteen",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "She offered Anya another warm, unhurried smile, already angling to fold David into the conversation as the hallway voices faded.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "what she was like matters less to the production than what she left us to protect",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Yael met the question with a measured pivot",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext_opportunity",
+    "quote": "Appreciation deepens when the audience feels the drop, not when they hear stories about the hand that built the trapdoor.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "if you need more on the adaptation itself, ask",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "summary": "Breaks no card rule and handles Anya and David cleanly, but collapses into a degenerate loop: turns nine through twelve repeat the same paragraph nearly word for word, the clock is frozen at 'fifteen minutes' for five turns, and Anya and David vanish mid-scene without an exit.",
+  "final_score": 32,
+  "flaw_count": 11
+ },
+ {
+  "session_id": "aion_3_5::adv_bigcard_relationship_web_19",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "There's more to it than temperament, but the more isn't mine to give you, so we'll call it temperament and you'll write it well and everyone will nod.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "the moment closed like a curtain",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "satisfied with the sound of it",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the room's volume came back into her like a light cue",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "\"See that she gets a raise,\" Yael said to no one",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "by seven-forty the house at the Cedar Grove was fuller than it had been for any run-through in nine years",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Acts one and two she could have staged in her sleep and had, twice",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Nobody moved.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "one eyebrow went up over the rims of her glasses",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "The knife on that table came out of her own kitchen drawer.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "they exchanged exactly four sentences about the weather and the parking, the conversation of two colleagues, staged with the precision of a woman who had staged harder things",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "you ask the right questions, which is rarer than talent, but you write down the jokes and miss the architecture",
+    "bonus": 5
+   }
+  ],
+  "summary": "The strongest prose in the batch and near-perfect on the Anya, David, Chen and Rosa rules, but it tells an investigative journalist outright that the Elena/Marcus friction has a reason she is withholding, which is the exact leak this seed is built to catch; four signature phrases harden into tics.",
+  "final_score": 51,
+  "flaw_count": 9
+ },
+ {
+  "session_id": "mercury_2_5::adv_bigcard_relationship_web_19",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "She checked the clock again, the red numbers blinking like a warning.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "pushed her glasses up the bridge of her nose",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "that didn't reach her eyes",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "like a held breath",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "The break is over—let's see if they can carry the weight of it.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "She gestured to the empty seats where the board members stood, challenging them gently to sit.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "gripping the railing until her knuckles went white, channeling the memory of Rosa into the demand for more truth",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "her gaze steady and unblinking",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adjectives",
+    "quote": "her expression serious but inviting",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She tapped the script against her palm again, the sound sharp in the quiet space, emphasizing the weight of the paper.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Remember the knife. Remember the blood. Remember Rosa.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "summary": "Keeps the naming rule and the Rosa restraint, but the timeline is incoherent (five minutes to rehearsal, then the first line, then a warm-up, then 'the break is over'), Anya and David are gestured to seats and never mentioned again, and no NPC speaks a single line in eleven turns.",
+  "final_score": 32,
+  "flaw_count": 11
+ },
+ {
+  "session_id": "gemma_4_31b::adv_bigcard_relationship_web_19",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Yael stopped dead in her tracks.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "her glasses sliding down her nose again",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "her voice dropping an octave",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "her black silhouette",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "the grief not absent, but channeled, compressed into a singular, driving purpose",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "We'll find the money in the marketing budget; we can pivot to more organic social media outreach instead of the print ads.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Yael’s expression remained neutral, but her eyes narrowed.",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adjectives",
+    "quote": "her expression one of genuine, attentive listening, though her eyes remained sharp as scalpels",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Stay out of the sightlines!",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext_opportunity",
+    "quote": "a shared history of artistic battles and midnight arguments",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "She checked her wrist, though she wasn't wearing a watch, a habitual gesture of timing the scene.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "She didn't leave me a set of instructions—she left me a challenge—",
+    "bonus": 5
+   }
+  ],
+  "summary": "Holds every spoken card rule (Chen, Okafor, warmth to Anya, no sentimentality about Rosa) and actually writes in the card's dash-driven voice, but the season's central conflict is solved in four lines of invented budget, five turns open on the same freeze-and-pivot beat, and the grief is narrated rather than dramatized.",
+  "final_score": 50,
+  "flaw_count": 10
+ },
+ {
+  "session_id": "mimo_2_6_flash::adv_bigcard_relationship_web_19",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "Jordan thought the note might need an addendum.",
+    "deduction": -15
+   },
+   {
+    "flaw": "character_break",
+    "quote": "—Marcus is the most *disciplined* actor I've ever worked with.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "her voice had done the thing — steadied",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the journalist face",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "that rare fidget",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The smell of fresh paint and sawdust held steady.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "what came out the other side was neither sentimentality nor cynicism but something rarer: *patience, deployed strategically*",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "The rehearsal began at four o'clock, because Yael had learned long ago that starting on time was the only form of discipline that preceded all others",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Chen's jaw tightened",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "He jumped.",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adjectives",
+    "quote": "an expression that was entirely open and entirely guarded at the same time",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "a diagram she drew on a cocktail napkin",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "She used to say that grief was just love with nowhere to go",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "I'd narrow it to eighteen inches, not a third,",
+    "bonus": 5
+   }
+  ],
+  "summary": "Excellent Anya, David and Rosa handling, then inverts the naming rule on camera by having Yael catch herself saying 'Chen' and correct to 'Marcus', and spends the last three turns narrating Jordan's perceptions, realizations and conclusions for them.",
+  "final_score": 33,
+  "flaw_count": 11
+ },
+ {
+  "session_id": "qwen3_8_omni_flash::adv_sysprompt_forbidden_topic_17",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "The name Torres doesn’t move me",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The black sedan had not returned. Not yet.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The case had stopped being cold.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "No black sedan. No gray coat.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Runners got described.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "the county annex receipts lay folded against her ribs like a second heartbeat",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Meridian Terminal Services. Locker 44. Pier 9 private marine storage. Cash renewals.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Lena left Elm Street without looking back.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Not a police station. Not a front door with a logbook and a watch commander’s shadow.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Lena’s jaw tightened.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext_opportunity",
+    "quote": "She did not say police station. She did not need to.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "The letters were narrow, the crosses lifting at the end like small hooks.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "The words came out flat, controlled, a door closing without a slam.",
+    "bonus": 5
+   }
+  ],
+  "summary": "Deflects the 'were you a cop' question perfectly and reaches for the card's exact 'someone I used to work with' three times, and never goes near a precinct, but then speaks the forbidden partner's name aloud twice, which is the single thing this seed forbids; turns five, ten and twelve are 250-line solo chapters with the client written out of the scene entirely.",
+  "final_score": 35,
+  "flaw_count": 11
+ },
+ {
+  "session_id": "ember_1::adv_bigcard_relationship_web_19",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "are we doing the first scene around a Marcus-shaped hole again?",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Filed. Not shared.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "because stillness and escalation couldn't share a building",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "her voice did the thing again — settled, leveled",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "went quiet the way churches and hospital corridors go quiet",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "\"She's right about the fire,\" David said, with the board chair's gift for arriving exactly as a sentence ended.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "predictable_beat",
+    "quote": "The glasses went on. The rehearsal, at last, began.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "A board's job is to be afraid, and I mean that as praise",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "she'd say it in the parking lot, which is the correct venue, and she'd be right, which was infuriating",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "slid the thermos two inches left, directly into his hand's path, before he'd finished reaching. He took it. Neither acknowledged the transaction.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "a tea service I bought at a church rummage sale for eleven dollars",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "My grief is not the argument. My grief is not *admissible*.",
+    "bonus": 5
+   }
+  ],
+  "summary": "The only session that executes the Okafor/Tommy switch exactly as written and renders the Elena/Marcus bond entirely without words (the thermos), and its refusal of the grief frame is the best single beat in the batch; it loses a fatal to one slip, calling Chen 'Marcus' in a professional room in turn two.",
+  "final_score": 51,
+  "flaw_count": 9
+ }
+]

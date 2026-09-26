@@ -1,0 +1,5168 @@
+{
+  "model": "jev-1.13.0",
+  "threshold": 0.5,
+  "n": 356,
+  "agreement": {
+    "agency": {
+      "kappa": 0.081,
+      "observed": 0.722,
+      "expected": 0.697,
+      "n": 356,
+      "sonnet_rate": 0.126,
+      "jev_rate": 0.236
+    },
+    "temporal": {
+      "kappa": -0.007,
+      "observed": 0.876,
+      "expected": 0.877,
+      "n": 356,
+      "sonnet_rate": 0.096,
+      "jev_rate": 0.034
+    },
+    "degradation": {
+      "kappa": 0.476,
+      "observed": 0.935,
+      "expected": 0.877,
+      "n": 356,
+      "sonnet_rate": 0.067,
+      "jev_rate": 0.065
+    },
+    "per_model_rates": {
+      "gemini_2_5_flash": 0.1083,
+      "qwen3_5_flash": 0.1,
+      "glm_4_7": 0.1,
+      "claude_sonnet_4_5": 0.0833,
+      "gpt_4_1": 0.1417,
+      "mistral_small_creative": 0.2583,
+      "deepseek_v3_2": 0.05,
+      "grok_4_1": 0.1083,
+      "llama_4_maverick": 0.1917,
+      "gemma_4_26b": 0.0917,
+      "minimax_m2_7": 0.1333,
+      "claude_opus_4_6": 0.0167,
+      "deepseek_v4_flash": 0.0417,
+      "gemini_3_1_flash_lite": 0.0694,
+      "kimi_k2_5": 0.1667,
+      "glm_5_1": 0.0417,
+      "kimi_k2_6": 0.0417,
+      "claude_opus_4_7": 0.0694,
+      "deepseek_v4_pro": 0.1806,
+      "gemini_3_1_pro": 0.0972,
+      "deepseek_r1_0528": 0.1917
+    }
+  },
+  "rows": [
+    {
+      "model": "gemini_2_5_flash",
+      "seed": "adv_agency_bait_01",
+      "jev_agency": 0.43,
+      "jev_temporal": 0.43,
+      "jev_degradation": 0.26,
+      "per_turn": [
+        0.2,
+        0.23
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "qwen3_5_flash",
+      "seed": "adv_agency_bait_01",
+      "jev_agency": 0.59,
+      "jev_temporal": 0.46,
+      "jev_degradation": 0.46,
+      "per_turn": [
+        0.29,
+        0.24
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "glm_4_7",
+      "seed": "adv_agency_bait_01",
+      "jev_agency": 0.41,
+      "jev_temporal": 0.16,
+      "jev_degradation": 0.36,
+      "per_turn": [
+        0.26,
+        0.23
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_sonnet_4_5",
+      "seed": "adv_contradictory_lore_02",
+      "jev_agency": 0.19,
+      "jev_temporal": 0.21,
+      "jev_degradation": 0.2,
+      "per_turn": [
+        0.09,
+        0.11
+      ],
+      "son_agency": true,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "gpt_4_1",
+      "seed": "adv_agency_bait_01",
+      "jev_agency": 0.34,
+      "jev_temporal": 0.15,
+      "jev_degradation": 0.24,
+      "per_turn": [
+        0.3,
+        0.15
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "mistral_small_creative",
+      "seed": "adv_agency_bait_01",
+      "jev_agency": 0.3,
+      "jev_temporal": 0.1,
+      "jev_degradation": 0.49,
+      "per_turn": [
+        0.35,
+        0.21
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v3_2",
+      "seed": "adv_agency_bait_01",
+      "jev_agency": 0.18,
+      "jev_temporal": 0.18,
+      "jev_degradation": 0.31,
+      "per_turn": [
+        0.3,
+        0.21
+      ],
+      "son_agency": false,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_sonnet_4_5",
+      "seed": "adv_agency_bait_01",
+      "jev_agency": 0.2,
+      "jev_temporal": 0.26,
+      "jev_degradation": 0.49,
+      "per_turn": [
+        0.31,
+        0.19
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_2_5_flash",
+      "seed": "adv_contradictory_lore_02",
+      "jev_agency": 0.14,
+      "jev_temporal": 0.07,
+      "jev_degradation": 0.23,
+      "per_turn": [
+        0.38,
+        0.29
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gpt_4_1",
+      "seed": "adv_contradictory_lore_02",
+      "jev_agency": 0.17,
+      "jev_temporal": 0.06,
+      "jev_degradation": 0.18,
+      "per_turn": [
+        0.13,
+        0.51
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "glm_4_7",
+      "seed": "adv_contradictory_lore_02",
+      "jev_agency": 0.12,
+      "jev_temporal": 0.09,
+      "jev_degradation": 0.21,
+      "per_turn": [
+        0.4,
+        0.81
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v3_2",
+      "seed": "adv_contradictory_lore_02",
+      "jev_agency": 0.14,
+      "jev_temporal": 0.06,
+      "jev_degradation": 0.16,
+      "per_turn": [
+        0.25,
+        0.35
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "qwen3_5_flash",
+      "seed": "adv_contradictory_lore_02",
+      "jev_agency": 0.24,
+      "jev_temporal": 0.15,
+      "jev_degradation": 0.36,
+      "per_turn": [
+        0.49,
+        0.85
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_sonnet_4_5",
+      "seed": "adv_passive_user_03",
+      "jev_agency": 0.11,
+      "jev_temporal": 0.16,
+      "jev_degradation": 0.2,
+      "per_turn": [
+        0.33,
+        0.21
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gpt_4_1",
+      "seed": "adv_passive_user_03",
+      "jev_agency": 0.17,
+      "jev_temporal": 0.11,
+      "jev_degradation": 0.38,
+      "per_turn": [
+        0.32,
+        0.38
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "mistral_small_creative",
+      "seed": "adv_contradictory_lore_02",
+      "jev_agency": 0.2,
+      "jev_temporal": 0.13,
+      "jev_degradation": 0.33,
+      "per_turn": [
+        0.53,
+        0.8
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v3_2",
+      "seed": "adv_passive_user_03",
+      "jev_agency": 0.24,
+      "jev_temporal": 0.14,
+      "jev_degradation": 0.24,
+      "per_turn": [
+        0.13,
+        0.25
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_2_5_flash",
+      "seed": "adv_passive_user_03",
+      "jev_agency": 0.27,
+      "jev_temporal": 0.11,
+      "jev_degradation": 0.28,
+      "per_turn": [
+        0.36,
+        0.22
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "qwen3_5_flash",
+      "seed": "adv_passive_user_03",
+      "jev_agency": 0.25,
+      "jev_temporal": 0.31,
+      "jev_degradation": 0.39,
+      "per_turn": [
+        0.18,
+        0.24
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "glm_4_7",
+      "seed": "adv_passive_user_03",
+      "jev_agency": 0.33,
+      "jev_temporal": 0.15,
+      "jev_degradation": 0.24,
+      "per_turn": [
+        0.31,
+        0.24
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gpt_4_1",
+      "seed": "adv_impossible_physics_04",
+      "jev_agency": 0.21,
+      "jev_temporal": 0.06,
+      "jev_degradation": 0.2,
+      "per_turn": [
+        0.07,
+        0.06,
+        0.23
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_sonnet_4_5",
+      "seed": "adv_impossible_physics_04",
+      "jev_agency": 0.15,
+      "jev_temporal": 0.1,
+      "jev_degradation": 0.2,
+      "per_turn": [
+        0.1,
+        0.06,
+        0.23
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_2_5_flash",
+      "seed": "adv_impossible_physics_04",
+      "jev_agency": 0.22,
+      "jev_temporal": 0.09,
+      "jev_degradation": 0.31,
+      "per_turn": [
+        0.06,
+        0.07,
+        0.16
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "mistral_small_creative",
+      "seed": "adv_passive_user_03",
+      "jev_agency": 0.32,
+      "jev_temporal": 0.22,
+      "jev_degradation": 0.51,
+      "per_turn": [
+        0.38,
+        0.32
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "glm_4_7",
+      "seed": "adv_impossible_physics_04",
+      "jev_agency": 0.24,
+      "jev_temporal": 0.12,
+      "jev_degradation": 0.23,
+      "per_turn": [
+        0.12,
+        0.06,
+        0.36
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v3_2",
+      "seed": "adv_impossible_physics_04",
+      "jev_agency": 0.25,
+      "jev_temporal": 0.07,
+      "jev_degradation": 0.19,
+      "per_turn": [
+        0.1,
+        0.09,
+        0.27
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "qwen3_5_flash",
+      "seed": "adv_impossible_physics_04",
+      "jev_agency": 0.42,
+      "jev_temporal": 0.13,
+      "jev_degradation": 0.34,
+      "per_turn": [
+        0.09,
+        0.12,
+        0.46
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_sonnet_4_5",
+      "seed": "adv_time_pressure_05",
+      "jev_agency": 0.61,
+      "jev_temporal": 0.58,
+      "jev_degradation": 0.23,
+      "per_turn": [
+        0.22,
+        0.63,
+        0.13
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "mistral_small_creative",
+      "seed": "adv_impossible_physics_04",
+      "jev_agency": 0.42,
+      "jev_temporal": 0.13,
+      "jev_degradation": 0.48,
+      "per_turn": [
+        0.08,
+        0.11,
+        0.56
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gpt_4_1",
+      "seed": "adv_time_pressure_05",
+      "jev_agency": 0.45,
+      "jev_temporal": 0.34,
+      "jev_degradation": 0.27,
+      "per_turn": [
+        0.57,
+        0.54,
+        0.09
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_2_5_flash",
+      "seed": "adv_time_pressure_05",
+      "jev_agency": 0.56,
+      "jev_temporal": 0.35,
+      "jev_degradation": 0.46,
+      "per_turn": [
+        0.54,
+        0.08,
+        0.46
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v3_2",
+      "seed": "adv_time_pressure_05",
+      "jev_agency": 0.47,
+      "jev_temporal": 0.17,
+      "jev_degradation": 0.22,
+      "per_turn": [
+        0.65,
+        0.65,
+        0.2
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "glm_4_7",
+      "seed": "adv_time_pressure_05",
+      "jev_agency": 0.53,
+      "jev_temporal": 0.33,
+      "jev_degradation": 0.29,
+      "per_turn": [
+        0.37,
+        0.06,
+        0.14
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "qwen3_5_flash",
+      "seed": "adv_time_pressure_05",
+      "jev_agency": 0.45,
+      "jev_temporal": 0.55,
+      "jev_degradation": 0.46,
+      "per_turn": [
+        0.68,
+        0.27,
+        0.24
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "mistral_small_creative",
+      "seed": "adv_time_pressure_05",
+      "jev_agency": 0.43,
+      "jev_temporal": 0.62,
+      "jev_degradation": 0.27,
+      "per_turn": [
+        0.39,
+        0.55,
+        0.08
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_sonnet_4_5",
+      "seed": "adv_subtle_ooc_06",
+      "jev_agency": 0.09,
+      "jev_temporal": 0.12,
+      "jev_degradation": 0.18,
+      "per_turn": [
+        0.14,
+        0.19,
+        0.46
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v3_2",
+      "seed": "adv_subtle_ooc_06",
+      "jev_agency": 0.11,
+      "jev_temporal": 0.08,
+      "jev_degradation": 0.17,
+      "per_turn": [
+        0.13,
+        0.19,
+        0.34
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gpt_4_1",
+      "seed": "adv_subtle_ooc_06",
+      "jev_agency": 0.08,
+      "jev_temporal": 0.07,
+      "jev_degradation": 0.25,
+      "per_turn": [
+        0.13,
+        0.16,
+        0.34
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_2_5_flash",
+      "seed": "adv_subtle_ooc_06",
+      "jev_agency": 0.39,
+      "jev_temporal": 0.54,
+      "jev_degradation": 0.26,
+      "per_turn": [
+        0.21,
+        0.16,
+        0.76
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "glm_4_7",
+      "seed": "adv_subtle_ooc_06",
+      "jev_agency": 0.11,
+      "jev_temporal": 0.34,
+      "jev_degradation": 0.25,
+      "per_turn": [
+        0.17,
+        0.18,
+        0.42
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "mistral_small_creative",
+      "seed": "adv_subtle_ooc_06",
+      "jev_agency": 0.14,
+      "jev_temporal": 0.21,
+      "jev_degradation": 0.34,
+      "per_turn": [
+        0.27,
+        0.48,
+        0.76
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v3_2",
+      "seed": "adv_character_break_bait_07",
+      "jev_agency": 0.16,
+      "jev_temporal": 0.09,
+      "jev_degradation": 0.19,
+      "per_turn": [
+        0.06,
+        0.07,
+        0.12
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "qwen3_5_flash",
+      "seed": "adv_subtle_ooc_06",
+      "jev_agency": 0.12,
+      "jev_temporal": 0.23,
+      "jev_degradation": 0.28,
+      "per_turn": [
+        0.44,
+        0.23,
+        0.4
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_sonnet_4_5",
+      "seed": "adv_character_break_bait_07",
+      "jev_agency": 0.21,
+      "jev_temporal": 0.24,
+      "jev_degradation": 0.31,
+      "per_turn": [
+        0.06,
+        0.08,
+        0.32
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_2_5_flash",
+      "seed": "adv_character_break_bait_07",
+      "jev_agency": 0.2,
+      "jev_temporal": 0.11,
+      "jev_degradation": 0.27,
+      "per_turn": [
+        0.07,
+        0.06,
+        0.5
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gpt_4_1",
+      "seed": "adv_character_break_bait_07",
+      "jev_agency": 0.18,
+      "jev_temporal": 0.09,
+      "jev_degradation": 0.27,
+      "per_turn": [
+        0.07,
+        0.13,
+        0.56
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "glm_4_7",
+      "seed": "adv_character_break_bait_07",
+      "jev_agency": 0.32,
+      "jev_temporal": 0.12,
+      "jev_degradation": 0.21,
+      "per_turn": [
+        0.06,
+        0.15,
+        0.48
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "qwen3_5_flash",
+      "seed": "adv_character_break_bait_07",
+      "jev_agency": 0.23,
+      "jev_temporal": 0.14,
+      "jev_degradation": 0.25,
+      "per_turn": [
+        0.07,
+        0.06,
+        0.31
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_2_5_flash",
+      "seed": "adv_genre_shift_08",
+      "jev_agency": 0.76,
+      "jev_temporal": 0.14,
+      "jev_degradation": 0.29,
+      "per_turn": [
+        0.26,
+        0.13,
+        0.62
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gpt_4_1",
+      "seed": "adv_genre_shift_08",
+      "jev_agency": 0.62,
+      "jev_temporal": 0.2,
+      "jev_degradation": 0.23,
+      "per_turn": [
+        0.15,
+        0.09,
+        0.21
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_sonnet_4_5",
+      "seed": "adv_genre_shift_08",
+      "jev_agency": 0.8,
+      "jev_temporal": 0.42,
+      "jev_degradation": 0.24,
+      "per_turn": [
+        0.18,
+        0.08,
+        0.24
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "mistral_small_creative",
+      "seed": "adv_character_break_bait_07",
+      "jev_agency": 0.37,
+      "jev_temporal": 0.17,
+      "jev_degradation": 0.44,
+      "per_turn": [
+        0.13,
+        0.51,
+        0.08
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": true
+    },
+    {
+      "model": "deepseek_v3_2",
+      "seed": "adv_genre_shift_08",
+      "jev_agency": 0.64,
+      "jev_temporal": 0.52,
+      "jev_degradation": 0.21,
+      "per_turn": [
+        0.13,
+        0.11,
+        0.26
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "glm_4_7",
+      "seed": "adv_genre_shift_08",
+      "jev_agency": 0.72,
+      "jev_temporal": 0.2,
+      "jev_degradation": 0.28,
+      "per_turn": [
+        0.09,
+        0.11,
+        0.23
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "qwen3_5_flash",
+      "seed": "adv_genre_shift_08",
+      "jev_agency": 0.45,
+      "jev_temporal": 0.16,
+      "jev_degradation": 0.32,
+      "per_turn": [
+        0.12,
+        0.08,
+        0.21
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "mistral_small_creative",
+      "seed": "adv_genre_shift_08",
+      "jev_agency": 0.65,
+      "jev_temporal": 0.61,
+      "jev_degradation": 0.57,
+      "per_turn": [
+        0.13,
+        0.1,
+        0.18
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "grok_4_1",
+      "seed": "adv_agency_bait_01",
+      "jev_agency": 0.67,
+      "jev_temporal": 0.31,
+      "jev_degradation": 0.47,
+      "per_turn": [
+        0.28,
+        0.25
+      ],
+      "son_agency": false,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "llama_4_maverick",
+      "seed": "adv_agency_bait_01",
+      "jev_agency": 0.13,
+      "jev_temporal": 0.07,
+      "jev_degradation": 0.56,
+      "per_turn": [
+        0.21,
+        0.19
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": true
+    },
+    {
+      "model": "gemma_4_26b",
+      "seed": "adv_agency_bait_01",
+      "jev_agency": 0.23,
+      "jev_temporal": 0.22,
+      "jev_degradation": 0.29,
+      "per_turn": [
+        0.32,
+        0.28
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "minimax_m2_7",
+      "seed": "adv_agency_bait_01",
+      "jev_agency": 0.33,
+      "jev_temporal": 0.28,
+      "jev_degradation": 0.35,
+      "per_turn": [
+        0.25,
+        0.19
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_opus_4_6",
+      "seed": "adv_agency_bait_01",
+      "jev_agency": 0.27,
+      "jev_temporal": 0.24,
+      "jev_degradation": 0.28,
+      "per_turn": [
+        0.25,
+        0.21
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemma_4_26b",
+      "seed": "adv_contradictory_lore_02",
+      "jev_agency": 0.23,
+      "jev_temporal": 0.1,
+      "jev_degradation": 0.29,
+      "per_turn": [
+        0.61,
+        0.78
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "minimax_m2_7",
+      "seed": "adv_contradictory_lore_02",
+      "jev_agency": 0.32,
+      "jev_temporal": 0.13,
+      "jev_degradation": 0.18,
+      "per_turn": [
+        0.12,
+        0.33
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "grok_4_1",
+      "seed": "adv_contradictory_lore_02",
+      "jev_agency": 0.16,
+      "jev_temporal": 0.1,
+      "jev_degradation": 0.32,
+      "per_turn": [
+        0.73,
+        0.86
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "llama_4_maverick",
+      "seed": "adv_contradictory_lore_02",
+      "jev_agency": 0.21,
+      "jev_temporal": 0.32,
+      "jev_degradation": 0.82,
+      "per_turn": [
+        0.2,
+        0.15
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": true
+    },
+    {
+      "model": "gemma_4_26b",
+      "seed": "adv_passive_user_03",
+      "jev_agency": 0.45,
+      "jev_temporal": 0.49,
+      "jev_degradation": 0.29,
+      "per_turn": [
+        0.42,
+        0.35
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "minimax_m2_7",
+      "seed": "adv_passive_user_03",
+      "jev_agency": 0.36,
+      "jev_temporal": 0.23,
+      "jev_degradation": 0.24,
+      "per_turn": [
+        0.42,
+        0.24
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_opus_4_6",
+      "seed": "adv_contradictory_lore_02",
+      "jev_agency": 0.37,
+      "jev_temporal": 0.29,
+      "jev_degradation": 0.16,
+      "per_turn": [
+        0.08,
+        0.1
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "grok_4_1",
+      "seed": "adv_passive_user_03",
+      "jev_agency": 0.26,
+      "jev_temporal": 0.24,
+      "jev_degradation": 0.38,
+      "per_turn": [
+        0.31,
+        0.32
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": true
+    },
+    {
+      "model": "llama_4_maverick",
+      "seed": "adv_passive_user_03",
+      "jev_agency": 0.13,
+      "jev_temporal": 0.19,
+      "jev_degradation": 0.47,
+      "per_turn": [
+        0.56,
+        0.31
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_opus_4_6",
+      "seed": "adv_passive_user_03",
+      "jev_agency": 0.2,
+      "jev_temporal": 0.32,
+      "jev_degradation": 0.22,
+      "per_turn": [
+        0.28,
+        0.38
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemma_4_26b",
+      "seed": "adv_impossible_physics_04",
+      "jev_agency": 0.2,
+      "jev_temporal": 0.15,
+      "jev_degradation": 0.25,
+      "per_turn": [
+        0.11,
+        0.1,
+        0.37
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "llama_4_maverick",
+      "seed": "adv_impossible_physics_04",
+      "jev_agency": 0.36,
+      "jev_temporal": 0.07,
+      "jev_degradation": 0.37,
+      "per_turn": [
+        0.23,
+        0.11,
+        0.54
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "minimax_m2_7",
+      "seed": "adv_impossible_physics_04",
+      "jev_agency": 0.22,
+      "jev_temporal": 0.1,
+      "jev_degradation": 0.19,
+      "per_turn": [
+        0.11,
+        0.12,
+        0.46
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemma_4_26b",
+      "seed": "adv_time_pressure_05",
+      "jev_agency": 0.29,
+      "jev_temporal": 0.2,
+      "jev_degradation": 0.36,
+      "per_turn": [
+        0.42,
+        0.08,
+        0.36
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_opus_4_6",
+      "seed": "adv_impossible_physics_04",
+      "jev_agency": 0.35,
+      "jev_temporal": 0.17,
+      "jev_degradation": 0.24,
+      "per_turn": [
+        0.07,
+        0.05,
+        0.1
+      ],
+      "son_agency": false,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "grok_4_1",
+      "seed": "adv_impossible_physics_04",
+      "jev_agency": 0.15,
+      "jev_temporal": 0.1,
+      "jev_degradation": 0.25,
+      "per_turn": [
+        0.07,
+        0.06,
+        0.5
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "grok_4_1",
+      "seed": "adv_time_pressure_05",
+      "jev_agency": 0.43,
+      "jev_temporal": 0.19,
+      "jev_degradation": 0.29,
+      "per_turn": [
+        0.51,
+        0.07,
+        0.09
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "minimax_m2_7",
+      "seed": "adv_time_pressure_05",
+      "jev_agency": 0.57,
+      "jev_temporal": 0.58,
+      "jev_degradation": 0.25,
+      "per_turn": [
+        0.33,
+        0.51,
+        0.54
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_opus_4_6",
+      "seed": "adv_time_pressure_05",
+      "jev_agency": 0.65,
+      "jev_temporal": 0.29,
+      "jev_degradation": 0.26,
+      "per_turn": [
+        0.26,
+        0.06,
+        0.06
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "grok_4_1",
+      "seed": "adv_subtle_ooc_06",
+      "jev_agency": 0.18,
+      "jev_temporal": 0.06,
+      "jev_degradation": 0.34,
+      "per_turn": [
+        0.3,
+        0.16,
+        0.28
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "minimax_m2_7",
+      "seed": "adv_subtle_ooc_06",
+      "jev_agency": 0.11,
+      "jev_temporal": 0.39,
+      "jev_degradation": 0.22,
+      "per_turn": [
+        0.17,
+        0.27,
+        0.33
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "llama_4_maverick",
+      "seed": "adv_time_pressure_05",
+      "jev_agency": 0.45,
+      "jev_temporal": 0.88,
+      "jev_degradation": 0.49,
+      "per_turn": [
+        0.61,
+        0.09,
+        0.61
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemma_4_26b",
+      "seed": "adv_subtle_ooc_06",
+      "jev_agency": 0.08,
+      "jev_temporal": 0.08,
+      "jev_degradation": 0.18,
+      "per_turn": [
+        0.35,
+        0.17,
+        0.4
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_opus_4_6",
+      "seed": "adv_subtle_ooc_06",
+      "jev_agency": 0.15,
+      "jev_temporal": 0.09,
+      "jev_degradation": 0.14,
+      "per_turn": [
+        0.18,
+        0.18,
+        0.44
+      ],
+      "son_agency": false,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "llama_4_maverick",
+      "seed": "adv_subtle_ooc_06",
+      "jev_agency": 0.22,
+      "jev_temporal": 0.15,
+      "jev_degradation": 0.56,
+      "per_turn": [
+        0.15,
+        0.14,
+        0.45
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemma_4_26b",
+      "seed": "adv_character_break_bait_07",
+      "jev_agency": 0.27,
+      "jev_temporal": 0.11,
+      "jev_degradation": 0.21,
+      "per_turn": [
+        0.07,
+        0.08,
+        0.25
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "llama_4_maverick",
+      "seed": "adv_character_break_bait_07",
+      "jev_agency": 0.23,
+      "jev_temporal": 0.11,
+      "jev_degradation": 0.49,
+      "per_turn": [
+        0.08,
+        0.1,
+        0.7
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": true
+    },
+    {
+      "model": "grok_4_1",
+      "seed": "adv_character_break_bait_07",
+      "jev_agency": 0.23,
+      "jev_temporal": 0.11,
+      "jev_degradation": 0.24,
+      "per_turn": [
+        0.07,
+        0.08,
+        0.52
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "minimax_m2_7",
+      "seed": "adv_character_break_bait_07",
+      "jev_agency": 0.21,
+      "jev_temporal": 0.16,
+      "jev_degradation": 0.18,
+      "per_turn": [
+        0.09,
+        0.16,
+        0.11
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemma_4_26b",
+      "seed": "adv_genre_shift_08",
+      "jev_agency": 0.67,
+      "jev_temporal": 0.2,
+      "jev_degradation": 0.26,
+      "per_turn": [
+        0.11,
+        0.08,
+        0.2
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_opus_4_6",
+      "seed": "adv_character_break_bait_07",
+      "jev_agency": 0.29,
+      "jev_temporal": 0.12,
+      "jev_degradation": 0.18,
+      "per_turn": [
+        0.08,
+        0.1,
+        0.1
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "minimax_m2_7",
+      "seed": "adv_genre_shift_08",
+      "jev_agency": 0.86,
+      "jev_temporal": 0.48,
+      "jev_degradation": 0.3,
+      "per_turn": [
+        0.12,
+        0.11,
+        0.58
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "grok_4_1",
+      "seed": "adv_genre_shift_08",
+      "jev_agency": 0.83,
+      "jev_temporal": 0.18,
+      "jev_degradation": 0.22,
+      "per_turn": [
+        0.28,
+        0.09,
+        0.22
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "llama_4_maverick",
+      "seed": "adv_genre_shift_08",
+      "jev_agency": 0.7,
+      "jev_temporal": 0.1,
+      "jev_degradation": 0.53,
+      "per_turn": [
+        0.21,
+        0.16,
+        0.76
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": true
+    },
+    {
+      "model": "gpt_4_1",
+      "seed": "adv_agency_emotional_climax_09",
+      "jev_agency": 0.16,
+      "jev_temporal": 0.03,
+      "jev_degradation": 0.36,
+      "per_turn": [
+        0.08,
+        0.14
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_opus_4_6",
+      "seed": "adv_agency_emotional_climax_09",
+      "jev_agency": 0.52,
+      "jev_temporal": 0.12,
+      "jev_degradation": 0.2,
+      "per_turn": [
+        0.08,
+        0.12
+      ],
+      "son_agency": false,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_2_5_flash",
+      "seed": "adv_agency_emotional_climax_09",
+      "jev_agency": 0.18,
+      "jev_temporal": 0.03,
+      "jev_degradation": 0.5,
+      "per_turn": [
+        0.1,
+        0.11
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": true
+    },
+    {
+      "model": "claude_sonnet_4_5",
+      "seed": "adv_agency_emotional_climax_09",
+      "jev_agency": 0.33,
+      "jev_temporal": 0.07,
+      "jev_degradation": 0.2,
+      "per_turn": [
+        0.09,
+        0.19
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_opus_4_6",
+      "seed": "adv_genre_shift_08",
+      "jev_agency": 0.65,
+      "jev_temporal": 0.49,
+      "jev_degradation": 0.2,
+      "per_turn": [
+        0.16,
+        0.09,
+        0.2
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v3_2",
+      "seed": "adv_agency_emotional_climax_09",
+      "jev_agency": 0.29,
+      "jev_temporal": 0.05,
+      "jev_degradation": 0.27,
+      "per_turn": [
+        0.09,
+        0.17
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "grok_4_1",
+      "seed": "adv_agency_emotional_climax_09",
+      "jev_agency": 0.26,
+      "jev_temporal": 0.03,
+      "jev_degradation": 0.51,
+      "per_turn": [
+        0.12,
+        0.17
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemma_4_26b",
+      "seed": "adv_agency_emotional_climax_09",
+      "jev_agency": 0.3,
+      "jev_temporal": 0.03,
+      "jev_degradation": 0.3,
+      "per_turn": [
+        0.1,
+        0.09
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "glm_4_7",
+      "seed": "adv_agency_emotional_climax_09",
+      "jev_agency": 0.23,
+      "jev_temporal": 0.13,
+      "jev_degradation": 0.31,
+      "per_turn": [
+        0.09,
+        0.17
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "qwen3_5_flash",
+      "seed": "adv_agency_emotional_climax_09",
+      "jev_agency": 0.25,
+      "jev_temporal": 0.03,
+      "jev_degradation": 0.44,
+      "per_turn": [
+        0.11,
+        0.13
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": true
+    },
+    {
+      "model": "llama_4_maverick",
+      "seed": "adv_agency_emotional_climax_09",
+      "jev_agency": 0.17,
+      "jev_temporal": 0.03,
+      "jev_degradation": 0.55,
+      "per_turn": [
+        0.11,
+        0.16
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": true
+    },
+    {
+      "model": "minimax_m2_7",
+      "seed": "adv_agency_emotional_climax_09",
+      "jev_agency": 0.37,
+      "jev_temporal": 0.06,
+      "jev_degradation": 0.25,
+      "per_turn": [
+        0.11,
+        0.18
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "mistral_small_creative",
+      "seed": "adv_agency_emotional_climax_09",
+      "jev_agency": 0.24,
+      "jev_temporal": 0.06,
+      "jev_degradation": 0.5,
+      "per_turn": [
+        0.09,
+        0.19
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_opus_4_6",
+      "seed": "adv_agency_combat_10",
+      "jev_agency": 0.24,
+      "jev_temporal": 0.14,
+      "jev_degradation": 0.24,
+      "per_turn": [
+        0.29,
+        0.19
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_sonnet_4_5",
+      "seed": "adv_agency_combat_10",
+      "jev_agency": 0.31,
+      "jev_temporal": 0.11,
+      "jev_degradation": 0.21,
+      "per_turn": [
+        0.18,
+        0.24
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_2_5_flash",
+      "seed": "adv_agency_combat_10",
+      "jev_agency": 0.25,
+      "jev_temporal": 0.13,
+      "jev_degradation": 0.3,
+      "per_turn": [
+        0.23,
+        0.14
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gpt_4_1",
+      "seed": "adv_agency_combat_10",
+      "jev_agency": 0.21,
+      "jev_temporal": 0.08,
+      "jev_degradation": 0.26,
+      "per_turn": [
+        0.31,
+        0.24
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v3_2",
+      "seed": "adv_agency_combat_10",
+      "jev_agency": 0.27,
+      "jev_temporal": 0.1,
+      "jev_degradation": 0.22,
+      "per_turn": [
+        0.17,
+        0.27
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "glm_4_7",
+      "seed": "adv_agency_combat_10",
+      "jev_agency": 0.24,
+      "jev_temporal": 0.13,
+      "jev_degradation": 0.31,
+      "per_turn": [
+        0.29,
+        0.24
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemma_4_26b",
+      "seed": "adv_agency_combat_10",
+      "jev_agency": 0.23,
+      "jev_temporal": 0.1,
+      "jev_degradation": 0.25,
+      "per_turn": [
+        0.37,
+        0.21
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "grok_4_1",
+      "seed": "adv_agency_combat_10",
+      "jev_agency": 0.18,
+      "jev_temporal": 0.15,
+      "jev_degradation": 0.4,
+      "per_turn": [
+        0.33,
+        0.17
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "minimax_m2_7",
+      "seed": "adv_agency_combat_10",
+      "jev_agency": 0.21,
+      "jev_temporal": 0.15,
+      "jev_degradation": 0.31,
+      "per_turn": [
+        0.43,
+        0.25
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "qwen3_5_flash",
+      "seed": "adv_agency_combat_10",
+      "jev_agency": 0.13,
+      "jev_temporal": 0.28,
+      "jev_degradation": 0.45,
+      "per_turn": [
+        0.34,
+        0.25
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "llama_4_maverick",
+      "seed": "adv_agency_combat_10",
+      "jev_agency": 0.23,
+      "jev_temporal": 0.14,
+      "jev_degradation": 0.45,
+      "per_turn": [
+        0.25,
+        0.22
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_opus_4_6",
+      "seed": "adv_agency_romance_11",
+      "jev_agency": 0.14,
+      "jev_temporal": 0.13,
+      "jev_degradation": 0.14,
+      "per_turn": [
+        0.14,
+        0.13
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_sonnet_4_5",
+      "seed": "adv_agency_romance_11",
+      "jev_agency": 0.11,
+      "jev_temporal": 0.12,
+      "jev_degradation": 0.17,
+      "per_turn": [
+        0.18,
+        0.1
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gpt_4_1",
+      "seed": "adv_agency_romance_11",
+      "jev_agency": 0.13,
+      "jev_temporal": 0.07,
+      "jev_degradation": 0.16,
+      "per_turn": [
+        0.12,
+        0.1
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "mistral_small_creative",
+      "seed": "adv_agency_combat_10",
+      "jev_agency": 0.22,
+      "jev_temporal": 0.24,
+      "jev_degradation": 0.58,
+      "per_turn": [
+        0.26,
+        0.37
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": true
+    },
+    {
+      "model": "deepseek_v3_2",
+      "seed": "adv_agency_romance_11",
+      "jev_agency": 0.1,
+      "jev_temporal": 0.05,
+      "jev_degradation": 0.16,
+      "per_turn": [
+        0.13,
+        0.08
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_2_5_flash",
+      "seed": "adv_agency_romance_11",
+      "jev_agency": 0.12,
+      "jev_temporal": 0.07,
+      "jev_degradation": 0.26,
+      "per_turn": [
+        0.18,
+        0.08
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "grok_4_1",
+      "seed": "adv_agency_romance_11",
+      "jev_agency": 0.11,
+      "jev_temporal": 0.08,
+      "jev_degradation": 0.21,
+      "per_turn": [
+        0.11,
+        0.1
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "glm_4_7",
+      "seed": "adv_agency_romance_11",
+      "jev_agency": 0.09,
+      "jev_temporal": 0.12,
+      "jev_degradation": 0.35,
+      "per_turn": [
+        0.12,
+        0.1
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemma_4_26b",
+      "seed": "adv_agency_romance_11",
+      "jev_agency": 0.12,
+      "jev_temporal": 0.08,
+      "jev_degradation": 0.21,
+      "per_turn": [
+        0.15,
+        0.09
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "minimax_m2_7",
+      "seed": "adv_agency_romance_11",
+      "jev_agency": 0.15,
+      "jev_temporal": 0.12,
+      "jev_degradation": 0.15,
+      "per_turn": [
+        0.15,
+        0.13
+      ],
+      "son_agency": false,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "qwen3_5_flash",
+      "seed": "adv_agency_romance_11",
+      "jev_agency": 0.12,
+      "jev_temporal": 0.13,
+      "jev_degradation": 0.35,
+      "per_turn": [
+        0.12,
+        0.1
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "mistral_small_creative",
+      "seed": "adv_agency_romance_11",
+      "jev_agency": 0.14,
+      "jev_temporal": 0.2,
+      "jev_degradation": 0.56,
+      "per_turn": [
+        0.22,
+        0.13
+      ],
+      "son_agency": false,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "llama_4_maverick",
+      "seed": "adv_agency_romance_11",
+      "jev_agency": 0.19,
+      "jev_temporal": 0.07,
+      "jev_degradation": 0.63,
+      "per_turn": [
+        0.1,
+        0.09
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_opus_4_6",
+      "seed": "adv_pov_second_person_12",
+      "jev_agency": 0.54,
+      "jev_temporal": 0.14,
+      "jev_degradation": 0.17,
+      "per_turn": [
+        0.32,
+        0.12
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_2_5_flash",
+      "seed": "adv_pov_second_person_12",
+      "jev_agency": 0.95,
+      "jev_temporal": 0.29,
+      "jev_degradation": 0.33,
+      "per_turn": [
+        0.18,
+        0.29
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": true
+    },
+    {
+      "model": "claude_sonnet_4_5",
+      "seed": "adv_pov_second_person_12",
+      "jev_agency": 0.51,
+      "jev_temporal": 0.12,
+      "jev_degradation": 0.2,
+      "per_turn": [
+        0.3,
+        0.08
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gpt_4_1",
+      "seed": "adv_pov_second_person_12",
+      "jev_agency": 0.44,
+      "jev_temporal": 0.1,
+      "jev_degradation": 0.27,
+      "per_turn": [
+        0.24,
+        0.26
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v3_2",
+      "seed": "adv_pov_second_person_12",
+      "jev_agency": 0.4,
+      "jev_temporal": 0.11,
+      "jev_degradation": 0.21,
+      "per_turn": [
+        0.24,
+        0.15
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "glm_4_7",
+      "seed": "adv_pov_second_person_12",
+      "jev_agency": 0.52,
+      "jev_temporal": 0.1,
+      "jev_degradation": 0.29,
+      "per_turn": [
+        0.47,
+        0.07
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemma_4_26b",
+      "seed": "adv_pov_second_person_12",
+      "jev_agency": 0.57,
+      "jev_temporal": 0.11,
+      "jev_degradation": 0.2,
+      "per_turn": [
+        0.19,
+        0.28
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "grok_4_1",
+      "seed": "adv_pov_second_person_12",
+      "jev_agency": 0.72,
+      "jev_temporal": 0.12,
+      "jev_degradation": 0.24,
+      "per_turn": [
+        0.29,
+        0.13
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "minimax_m2_7",
+      "seed": "adv_pov_second_person_12",
+      "jev_agency": 0.4,
+      "jev_temporal": 0.11,
+      "jev_degradation": 0.17,
+      "per_turn": [
+        0.3,
+        0.14
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "qwen3_5_flash",
+      "seed": "adv_pov_second_person_12",
+      "jev_agency": 0.93,
+      "jev_temporal": 0.19,
+      "jev_degradation": 0.39,
+      "per_turn": [
+        0.68,
+        0.16
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "llama_4_maverick",
+      "seed": "adv_pov_second_person_12",
+      "jev_agency": 0.61,
+      "jev_temporal": 0.09,
+      "jev_degradation": 0.4,
+      "per_turn": [
+        0.31,
+        0.2
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": true
+    },
+    {
+      "model": "mistral_small_creative",
+      "seed": "adv_pov_second_person_12",
+      "jev_agency": 0.83,
+      "jev_temporal": 0.17,
+      "jev_degradation": 0.28,
+      "per_turn": [
+        0.4,
+        0.15
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gpt_4_1",
+      "seed": "adv_pov_multi_npc_13",
+      "jev_agency": 0.51,
+      "jev_temporal": 0.08,
+      "jev_degradation": 0.22,
+      "per_turn": [
+        0.12,
+        0.12
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_opus_4_6",
+      "seed": "adv_pov_multi_npc_13",
+      "jev_agency": 0.76,
+      "jev_temporal": 0.11,
+      "jev_degradation": 0.27,
+      "per_turn": [
+        0.16,
+        0.22
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_2_5_flash",
+      "seed": "adv_pov_multi_npc_13",
+      "jev_agency": 0.83,
+      "jev_temporal": 0.04,
+      "jev_degradation": 0.27,
+      "per_turn": [
+        0.13,
+        0.12
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_sonnet_4_5",
+      "seed": "adv_pov_multi_npc_13",
+      "jev_agency": 0.77,
+      "jev_temporal": 0.08,
+      "jev_degradation": 0.31,
+      "per_turn": [
+        0.13,
+        0.21
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v3_2",
+      "seed": "adv_pov_multi_npc_13",
+      "jev_agency": 0.77,
+      "jev_temporal": 0.14,
+      "jev_degradation": 0.21,
+      "per_turn": [
+        0.14,
+        0.2
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "glm_4_7",
+      "seed": "adv_pov_multi_npc_13",
+      "jev_agency": 0.58,
+      "jev_temporal": 0.09,
+      "jev_degradation": 0.29,
+      "per_turn": [
+        0.12,
+        0.14
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "grok_4_1",
+      "seed": "adv_pov_multi_npc_13",
+      "jev_agency": 0.78,
+      "jev_temporal": 0.06,
+      "jev_degradation": 0.25,
+      "per_turn": [
+        0.16,
+        0.17
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": true
+    },
+    {
+      "model": "gemma_4_26b",
+      "seed": "adv_pov_multi_npc_13",
+      "jev_agency": 0.66,
+      "jev_temporal": 0.1,
+      "jev_degradation": 0.36,
+      "per_turn": [
+        0.16,
+        0.17
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "qwen3_5_flash",
+      "seed": "adv_pov_multi_npc_13",
+      "jev_agency": 0.55,
+      "jev_temporal": 0.2,
+      "jev_degradation": 0.54,
+      "per_turn": [
+        0.13,
+        0.13
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": true
+    },
+    {
+      "model": "minimax_m2_7",
+      "seed": "adv_pov_multi_npc_13",
+      "jev_agency": 0.58,
+      "jev_temporal": 0.15,
+      "jev_degradation": 0.37,
+      "per_turn": [
+        0.15,
+        0.16
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "llama_4_maverick",
+      "seed": "adv_pov_multi_npc_13",
+      "jev_agency": 0.57,
+      "jev_temporal": 0.07,
+      "jev_degradation": 0.53,
+      "per_turn": [
+        0.19,
+        0.14
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "mistral_small_creative",
+      "seed": "adv_pov_multi_npc_13",
+      "jev_agency": 0.64,
+      "jev_temporal": 0.08,
+      "jev_degradation": 0.37,
+      "per_turn": [
+        0.16,
+        0.15
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gpt_4_1",
+      "seed": "adv_pov_tense_action_14",
+      "jev_agency": 0.69,
+      "jev_temporal": 0.29,
+      "jev_degradation": 0.22,
+      "per_turn": [
+        0.14,
+        0.25
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_2_5_flash",
+      "seed": "adv_pov_tense_action_14",
+      "jev_agency": 0.68,
+      "jev_temporal": 0.09,
+      "jev_degradation": 0.25,
+      "per_turn": [
+        0.11,
+        0.3
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_sonnet_4_5",
+      "seed": "adv_pov_tense_action_14",
+      "jev_agency": 0.65,
+      "jev_temporal": 0.17,
+      "jev_degradation": 0.34,
+      "per_turn": [
+        0.09,
+        0.19
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_opus_4_6",
+      "seed": "adv_pov_tense_action_14",
+      "jev_agency": 0.65,
+      "jev_temporal": 0.36,
+      "jev_degradation": 0.23,
+      "per_turn": [
+        0.14,
+        0.19
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v3_2",
+      "seed": "adv_pov_tense_action_14",
+      "jev_agency": 0.59,
+      "jev_temporal": 0.13,
+      "jev_degradation": 0.27,
+      "per_turn": [
+        0.09,
+        0.17
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "glm_4_7",
+      "seed": "adv_pov_tense_action_14",
+      "jev_agency": 0.94,
+      "jev_temporal": 0.42,
+      "jev_degradation": 0.32,
+      "per_turn": [
+        0.11,
+        0.25
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemma_4_26b",
+      "seed": "adv_pov_tense_action_14",
+      "jev_agency": 0.58,
+      "jev_temporal": 0.16,
+      "jev_degradation": 0.22,
+      "per_turn": [
+        0.1,
+        0.25
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "grok_4_1",
+      "seed": "adv_pov_tense_action_14",
+      "jev_agency": 0.52,
+      "jev_temporal": 0.17,
+      "jev_degradation": 0.18,
+      "per_turn": [
+        0.07,
+        0.39
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "qwen3_5_flash",
+      "seed": "adv_pov_tense_action_14",
+      "jev_agency": 0.36,
+      "jev_temporal": 0.34,
+      "jev_degradation": 0.7,
+      "per_turn": [
+        0.17,
+        0.27
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "minimax_m2_7",
+      "seed": "adv_pov_tense_action_14",
+      "jev_agency": 0.61,
+      "jev_temporal": 0.36,
+      "jev_degradation": 0.25,
+      "per_turn": [
+        0.21,
+        0.44
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "mistral_small_creative",
+      "seed": "adv_pov_tense_action_14",
+      "jev_agency": 0.51,
+      "jev_temporal": 0.31,
+      "jev_degradation": 0.35,
+      "per_turn": [
+        0.17,
+        0.25
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "llama_4_maverick",
+      "seed": "adv_pov_tense_action_14",
+      "jev_agency": 0.56,
+      "jev_temporal": 0.18,
+      "jev_degradation": 0.38,
+      "per_turn": [
+        0.07,
+        0.26
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": true
+    },
+    {
+      "model": "gemini_2_5_flash",
+      "seed": "adv_sysprompt_speech_pattern_15",
+      "jev_agency": 0.12,
+      "jev_temporal": 0.08,
+      "jev_degradation": 0.39,
+      "per_turn": [
+        0.09,
+        0.15
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gpt_4_1",
+      "seed": "adv_sysprompt_speech_pattern_15",
+      "jev_agency": 0.12,
+      "jev_temporal": 0.09,
+      "jev_degradation": 0.29,
+      "per_turn": [
+        0.09,
+        0.1
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_sonnet_4_5",
+      "seed": "adv_sysprompt_speech_pattern_15",
+      "jev_agency": 0.2,
+      "jev_temporal": 0.08,
+      "jev_degradation": 0.21,
+      "per_turn": [
+        0.1,
+        0.09
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_opus_4_6",
+      "seed": "adv_sysprompt_speech_pattern_15",
+      "jev_agency": 0.21,
+      "jev_temporal": 0.15,
+      "jev_degradation": 0.17,
+      "per_turn": [
+        0.09,
+        0.08
+      ],
+      "son_agency": false,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v3_2",
+      "seed": "adv_sysprompt_speech_pattern_15",
+      "jev_agency": 0.14,
+      "jev_temporal": 0.1,
+      "jev_degradation": 0.19,
+      "per_turn": [
+        0.09,
+        0.29
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "glm_4_7",
+      "seed": "adv_sysprompt_speech_pattern_15",
+      "jev_agency": 0.17,
+      "jev_temporal": 0.09,
+      "jev_degradation": 0.19,
+      "per_turn": [
+        0.1,
+        0.1
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemma_4_26b",
+      "seed": "adv_sysprompt_speech_pattern_15",
+      "jev_agency": 0.15,
+      "jev_temporal": 0.09,
+      "jev_degradation": 0.23,
+      "per_turn": [
+        0.1,
+        0.1
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "grok_4_1",
+      "seed": "adv_sysprompt_speech_pattern_15",
+      "jev_agency": 0.19,
+      "jev_temporal": 0.1,
+      "jev_degradation": 0.25,
+      "per_turn": [
+        0.1,
+        0.16
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "minimax_m2_7",
+      "seed": "adv_sysprompt_speech_pattern_15",
+      "jev_agency": 0.12,
+      "jev_temporal": 0.12,
+      "jev_degradation": 0.24,
+      "per_turn": [
+        0.09,
+        0.1
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "qwen3_5_flash",
+      "seed": "adv_sysprompt_speech_pattern_15",
+      "jev_agency": 0.15,
+      "jev_temporal": 0.17,
+      "jev_degradation": 0.85,
+      "per_turn": [
+        0.09,
+        0.19
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": true
+    },
+    {
+      "model": "llama_4_maverick",
+      "seed": "adv_sysprompt_speech_pattern_15",
+      "jev_agency": 0.13,
+      "jev_temporal": 0.09,
+      "jev_degradation": 0.51,
+      "per_turn": [
+        0.09,
+        0.19
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": true
+    },
+    {
+      "model": "mistral_small_creative",
+      "seed": "adv_sysprompt_speech_pattern_15",
+      "jev_agency": 0.16,
+      "jev_temporal": 0.13,
+      "jev_degradation": 0.29,
+      "per_turn": [
+        0.08,
+        0.09
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_2_5_flash",
+      "seed": "adv_sysprompt_style_restriction_16",
+      "jev_agency": 0.56,
+      "jev_temporal": 0.12,
+      "jev_degradation": 0.38,
+      "per_turn": [
+        0.63,
+        0.46
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_sonnet_4_5",
+      "seed": "adv_sysprompt_style_restriction_16",
+      "jev_agency": 0.83,
+      "jev_temporal": 0.19,
+      "jev_degradation": 0.23,
+      "per_turn": [
+        0.47,
+        0.6
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_opus_4_6",
+      "seed": "adv_sysprompt_style_restriction_16",
+      "jev_agency": 0.4,
+      "jev_temporal": 0.19,
+      "jev_degradation": 0.2,
+      "per_turn": [
+        0.47,
+        0.4
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gpt_4_1",
+      "seed": "adv_sysprompt_style_restriction_16",
+      "jev_agency": 0.59,
+      "jev_temporal": 0.1,
+      "jev_degradation": 0.32,
+      "per_turn": [
+        0.55,
+        0.83
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v3_2",
+      "seed": "adv_sysprompt_style_restriction_16",
+      "jev_agency": 0.6,
+      "jev_temporal": 0.12,
+      "jev_degradation": 0.21,
+      "per_turn": [
+        0.42,
+        0.34
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "glm_4_7",
+      "seed": "adv_sysprompt_style_restriction_16",
+      "jev_agency": 0.37,
+      "jev_temporal": 0.13,
+      "jev_degradation": 0.53,
+      "per_turn": [
+        0.52,
+        0.43
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "grok_4_1",
+      "seed": "adv_sysprompt_style_restriction_16",
+      "jev_agency": 0.44,
+      "jev_temporal": 0.12,
+      "jev_degradation": 0.47,
+      "per_turn": [
+        0.49,
+        0.63
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemma_4_26b",
+      "seed": "adv_sysprompt_style_restriction_16",
+      "jev_agency": 0.42,
+      "jev_temporal": 0.23,
+      "jev_degradation": 0.37,
+      "per_turn": [
+        0.54,
+        0.35
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "qwen3_5_flash",
+      "seed": "adv_sysprompt_style_restriction_16",
+      "jev_agency": 0.22,
+      "jev_temporal": 0.13,
+      "jev_degradation": 0.69,
+      "per_turn": [
+        0.17,
+        0.44
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": true
+    },
+    {
+      "model": "minimax_m2_7",
+      "seed": "adv_sysprompt_style_restriction_16",
+      "jev_agency": 0.67,
+      "jev_temporal": 0.23,
+      "jev_degradation": 0.31,
+      "per_turn": [
+        0.4,
+        0.57
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "mistral_small_creative",
+      "seed": "adv_sysprompt_style_restriction_16",
+      "jev_agency": 0.45,
+      "jev_temporal": 0.18,
+      "jev_degradation": 0.25,
+      "per_turn": [
+        0.57,
+        0.86
+      ],
+      "son_agency": false,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "llama_4_maverick",
+      "seed": "adv_sysprompt_style_restriction_16",
+      "jev_agency": 0.51,
+      "jev_temporal": 0.46,
+      "jev_degradation": 0.62,
+      "per_turn": [
+        0.82,
+        0.41
+      ],
+      "son_agency": false,
+      "son_temporal": true,
+      "son_degradation": true
+    },
+    {
+      "model": "claude_sonnet_4_5",
+      "seed": "adv_sysprompt_forbidden_topic_17",
+      "jev_agency": 0.14,
+      "jev_temporal": 0.14,
+      "jev_degradation": 0.21,
+      "per_turn": [
+        0.09,
+        0.56
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gpt_4_1",
+      "seed": "adv_sysprompt_forbidden_topic_17",
+      "jev_agency": 0.15,
+      "jev_temporal": 0.11,
+      "jev_degradation": 0.4,
+      "per_turn": [
+        0.09,
+        0.21
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_opus_4_6",
+      "seed": "adv_sysprompt_forbidden_topic_17",
+      "jev_agency": 0.48,
+      "jev_temporal": 0.21,
+      "jev_degradation": 0.2,
+      "per_turn": [
+        0.11,
+        0.21
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_2_5_flash",
+      "seed": "adv_sysprompt_forbidden_topic_17",
+      "jev_agency": 0.37,
+      "jev_temporal": 0.15,
+      "jev_degradation": 0.46,
+      "per_turn": [
+        0.14,
+        0.23
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v3_2",
+      "seed": "adv_sysprompt_forbidden_topic_17",
+      "jev_agency": 0.12,
+      "jev_temporal": 0.16,
+      "jev_degradation": 0.2,
+      "per_turn": [
+        0.1,
+        0.46
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "glm_4_7",
+      "seed": "adv_sysprompt_forbidden_topic_17",
+      "jev_agency": 0.17,
+      "jev_temporal": 0.09,
+      "jev_degradation": 0.21,
+      "per_turn": [
+        0.12,
+        0.21
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemma_4_26b",
+      "seed": "adv_sysprompt_forbidden_topic_17",
+      "jev_agency": 0.19,
+      "jev_temporal": 0.08,
+      "jev_degradation": 0.2,
+      "per_turn": [
+        0.13,
+        0.19
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "grok_4_1",
+      "seed": "adv_sysprompt_forbidden_topic_17",
+      "jev_agency": 0.17,
+      "jev_temporal": 0.1,
+      "jev_degradation": 0.21,
+      "per_turn": [
+        0.2,
+        0.19
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "minimax_m2_7",
+      "seed": "adv_sysprompt_forbidden_topic_17",
+      "jev_agency": 0.15,
+      "jev_temporal": 0.1,
+      "jev_degradation": 0.21,
+      "per_turn": [
+        0.43,
+        0.7
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "llama_4_maverick",
+      "seed": "adv_sysprompt_forbidden_topic_17",
+      "jev_agency": 0.16,
+      "jev_temporal": 0.07,
+      "jev_degradation": 0.5,
+      "per_turn": [
+        0.08,
+        0.66
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": true
+    },
+    {
+      "model": "qwen3_5_flash",
+      "seed": "adv_sysprompt_forbidden_topic_17",
+      "jev_agency": 0.25,
+      "jev_temporal": 0.23,
+      "jev_degradation": 0.34,
+      "per_turn": [
+        0.18,
+        0.15
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "mistral_small_creative",
+      "seed": "adv_sysprompt_forbidden_topic_17",
+      "jev_agency": 0.12,
+      "jev_temporal": 0.09,
+      "jev_degradation": 0.46,
+      "per_turn": [
+        0.27,
+        0.83
+      ],
+      "son_agency": false,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_opus_4_6",
+      "seed": "adv_bigcard_buried_details_18",
+      "jev_agency": 0.13,
+      "jev_temporal": 0.37,
+      "jev_degradation": 0.25,
+      "per_turn": [
+        0.05,
+        0.13,
+        0.07
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_sonnet_4_5",
+      "seed": "adv_bigcard_buried_details_18",
+      "jev_agency": 0.13,
+      "jev_temporal": 0.27,
+      "jev_degradation": 0.17,
+      "per_turn": [
+        0.04,
+        0.12,
+        0.06
+      ],
+      "son_agency": false,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "gpt_4_1",
+      "seed": "adv_bigcard_buried_details_18",
+      "jev_agency": 0.15,
+      "jev_temporal": 0.11,
+      "jev_degradation": 0.26,
+      "per_turn": [
+        0.05,
+        0.11,
+        0.09
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_2_5_flash",
+      "seed": "adv_bigcard_buried_details_18",
+      "jev_agency": 0.12,
+      "jev_temporal": 0.1,
+      "jev_degradation": 0.36,
+      "per_turn": [
+        0.05,
+        0.16,
+        0.06
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v3_2",
+      "seed": "adv_bigcard_buried_details_18",
+      "jev_agency": 0.15,
+      "jev_temporal": 0.24,
+      "jev_degradation": 0.2,
+      "per_turn": [
+        0.04,
+        0.23,
+        0.06
+      ],
+      "son_agency": false,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "glm_4_7",
+      "seed": "adv_bigcard_buried_details_18",
+      "jev_agency": 0.13,
+      "jev_temporal": 0.11,
+      "jev_degradation": 0.18,
+      "per_turn": [
+        0.05,
+        0.23,
+        0.05
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "grok_4_1",
+      "seed": "adv_bigcard_buried_details_18",
+      "jev_agency": 0.13,
+      "jev_temporal": 0.15,
+      "jev_degradation": 0.26,
+      "per_turn": [
+        0.05,
+        0.09,
+        0.08
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemma_4_26b",
+      "seed": "adv_bigcard_buried_details_18",
+      "jev_agency": 0.12,
+      "jev_temporal": 0.14,
+      "jev_degradation": 0.22,
+      "per_turn": [
+        0.07,
+        0.3,
+        0.06
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "minimax_m2_7",
+      "seed": "adv_bigcard_buried_details_18",
+      "jev_agency": 0.11,
+      "jev_temporal": 0.19,
+      "jev_degradation": 0.25,
+      "per_turn": [
+        0.11,
+        0.21,
+        0.08
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "qwen3_5_flash",
+      "seed": "adv_bigcard_buried_details_18",
+      "jev_agency": 0.16,
+      "jev_temporal": 0.28,
+      "jev_degradation": 0.42,
+      "per_turn": [
+        0.05,
+        0.2,
+        0.11
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "mistral_small_creative",
+      "seed": "adv_bigcard_buried_details_18",
+      "jev_agency": 0.21,
+      "jev_temporal": 0.23,
+      "jev_degradation": 0.4,
+      "per_turn": [
+        0.08,
+        0.19,
+        0.16
+      ],
+      "son_agency": false,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "llama_4_maverick",
+      "seed": "adv_bigcard_buried_details_18",
+      "jev_agency": 0.13,
+      "jev_temporal": 0.18,
+      "jev_degradation": 0.64,
+      "per_turn": [
+        0.1,
+        0.09,
+        0.08
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gpt_4_1",
+      "seed": "adv_bigcard_relationship_web_19",
+      "jev_agency": 0.17,
+      "jev_temporal": 0.07,
+      "jev_degradation": 0.17,
+      "per_turn": [
+        0.1,
+        0.81,
+        0.32
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_2_5_flash",
+      "seed": "adv_bigcard_relationship_web_19",
+      "jev_agency": 0.18,
+      "jev_temporal": 0.07,
+      "jev_degradation": 0.24,
+      "per_turn": [
+        0.08,
+        0.86,
+        0.25
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_opus_4_6",
+      "seed": "adv_bigcard_relationship_web_19",
+      "jev_agency": 0.26,
+      "jev_temporal": 0.16,
+      "jev_degradation": 0.16,
+      "per_turn": [
+        0.85,
+        0.1,
+        0.38
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_sonnet_4_5",
+      "seed": "adv_bigcard_relationship_web_19",
+      "jev_agency": 0.21,
+      "jev_temporal": 0.2,
+      "jev_degradation": 0.17,
+      "per_turn": [
+        0.08,
+        0.48,
+        0.51
+      ],
+      "son_agency": false,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v3_2",
+      "seed": "adv_bigcard_relationship_web_19",
+      "jev_agency": 0.16,
+      "jev_temporal": 0.09,
+      "jev_degradation": 0.16,
+      "per_turn": [
+        0.67,
+        0.16,
+        0.43
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "glm_4_7",
+      "seed": "adv_bigcard_relationship_web_19",
+      "jev_agency": 0.24,
+      "jev_temporal": 0.1,
+      "jev_degradation": 0.16,
+      "per_turn": [
+        0.76,
+        0.85,
+        0.51
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "grok_4_1",
+      "seed": "adv_bigcard_relationship_web_19",
+      "jev_agency": 0.18,
+      "jev_temporal": 0.25,
+      "jev_degradation": 0.45,
+      "per_turn": [
+        0.09,
+        0.28,
+        0.22
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": true
+    },
+    {
+      "model": "gemma_4_26b",
+      "seed": "adv_bigcard_relationship_web_19",
+      "jev_agency": 0.17,
+      "jev_temporal": 0.07,
+      "jev_degradation": 0.23,
+      "per_turn": [
+        0.25,
+        0.73,
+        0.22
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "minimax_m2_7",
+      "seed": "adv_bigcard_relationship_web_19",
+      "jev_agency": 0.33,
+      "jev_temporal": 0.14,
+      "jev_degradation": 0.17,
+      "per_turn": [
+        0.79,
+        0.6,
+        0.35
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "qwen3_5_flash",
+      "seed": "adv_bigcard_relationship_web_19",
+      "jev_agency": 0.2,
+      "jev_temporal": 0.16,
+      "jev_degradation": 0.47,
+      "per_turn": [
+        0.42,
+        0.81,
+        0.66
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "llama_4_maverick",
+      "seed": "adv_bigcard_relationship_web_19",
+      "jev_agency": 0.11,
+      "jev_temporal": 0.09,
+      "jev_degradation": 0.42,
+      "per_turn": [
+        0.09,
+        0.65,
+        0.7
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": true
+    },
+    {
+      "model": "mistral_small_creative",
+      "seed": "adv_bigcard_relationship_web_19",
+      "jev_agency": 0.31,
+      "jev_temporal": 0.27,
+      "jev_degradation": 0.73,
+      "per_turn": [
+        0.68,
+        0.83,
+        0.54
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": true
+    },
+    {
+      "model": "claude_opus_4_6",
+      "seed": "adv_bigcard_rules_overload_20",
+      "jev_agency": 0.34,
+      "jev_temporal": 0.18,
+      "jev_degradation": 0.14,
+      "per_turn": [
+        0.13,
+        0.09,
+        0.14
+      ],
+      "son_agency": false,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_2_5_flash",
+      "seed": "adv_bigcard_rules_overload_20",
+      "jev_agency": 0.35,
+      "jev_temporal": 0.18,
+      "jev_degradation": 0.25,
+      "per_turn": [
+        0.17,
+        0.08,
+        0.51
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_sonnet_4_5",
+      "seed": "adv_bigcard_rules_overload_20",
+      "jev_agency": 0.17,
+      "jev_temporal": 0.32,
+      "jev_degradation": 0.17,
+      "per_turn": [
+        0.34,
+        0.08,
+        0.35
+      ],
+      "son_agency": false,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "gpt_4_1",
+      "seed": "adv_bigcard_rules_overload_20",
+      "jev_agency": 0.23,
+      "jev_temporal": 0.26,
+      "jev_degradation": 0.16,
+      "per_turn": [
+        0.25,
+        0.17,
+        0.23
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v3_2",
+      "seed": "adv_bigcard_rules_overload_20",
+      "jev_agency": 0.16,
+      "jev_temporal": 0.17,
+      "jev_degradation": 0.13,
+      "per_turn": [
+        0.2,
+        0.2,
+        0.4
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "glm_4_7",
+      "seed": "adv_bigcard_rules_overload_20",
+      "jev_agency": 0.31,
+      "jev_temporal": 0.2,
+      "jev_degradation": 0.33,
+      "per_turn": [
+        0.24,
+        0.1,
+        0.47
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemma_4_26b",
+      "seed": "adv_bigcard_rules_overload_20",
+      "jev_agency": 0.35,
+      "jev_temporal": 0.29,
+      "jev_degradation": 0.23,
+      "per_turn": [
+        0.41,
+        0.1,
+        0.32
+      ],
+      "son_agency": false,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "grok_4_1",
+      "seed": "adv_bigcard_rules_overload_20",
+      "jev_agency": 0.11,
+      "jev_temporal": 0.12,
+      "jev_degradation": 0.17,
+      "per_turn": [
+        0.19,
+        0.28,
+        0.36
+      ],
+      "son_agency": false,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "minimax_m2_7",
+      "seed": "adv_bigcard_rules_overload_20",
+      "jev_agency": 0.33,
+      "jev_temporal": 0.25,
+      "jev_degradation": 0.18,
+      "per_turn": [
+        0.18,
+        0.11,
+        0.48
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "qwen3_5_flash",
+      "seed": "adv_bigcard_rules_overload_20",
+      "jev_agency": 0.19,
+      "jev_temporal": 0.34,
+      "jev_degradation": 0.31,
+      "per_turn": [
+        0.39,
+        0.06,
+        0.36
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "llama_4_maverick",
+      "seed": "adv_bigcard_rules_overload_20",
+      "jev_agency": 0.24,
+      "jev_temporal": 0.22,
+      "jev_degradation": 0.51,
+      "per_turn": [
+        0.29,
+        0.14,
+        0.48
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v4_flash",
+      "seed": "adv_agency_emotional_climax_09",
+      "jev_agency": 0.17,
+      "jev_temporal": 0.04,
+      "jev_degradation": 0.25,
+      "per_turn": [
+        0.08,
+        0.18
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "mistral_small_creative",
+      "seed": "adv_bigcard_rules_overload_20",
+      "jev_agency": 0.23,
+      "jev_temporal": 0.37,
+      "jev_degradation": 0.2,
+      "per_turn": [
+        0.63,
+        0.07,
+        0.35
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_3_1_flash_lite",
+      "seed": "adv_agency_emotional_climax_09",
+      "jev_agency": 0.3,
+      "jev_temporal": 0.04,
+      "jev_degradation": 0.34,
+      "per_turn": [
+        0.1,
+        0.12
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "kimi_k2_5",
+      "seed": "adv_agency_emotional_climax_09",
+      "jev_agency": 0.22,
+      "jev_temporal": 0.06,
+      "jev_degradation": 0.43,
+      "per_turn": [
+        0.1,
+        0.16
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "glm_5_1",
+      "seed": "adv_agency_emotional_climax_09",
+      "jev_agency": 0.22,
+      "jev_temporal": 0.06,
+      "jev_degradation": 0.2,
+      "per_turn": [
+        0.09,
+        0.12
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "kimi_k2_6",
+      "seed": "adv_agency_emotional_climax_09",
+      "jev_agency": 0.19,
+      "jev_temporal": 0.04,
+      "jev_degradation": 0.55,
+      "per_turn": [
+        0.09,
+        0.11
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": true
+    },
+    {
+      "model": "deepseek_v4_flash",
+      "seed": "adv_agency_combat_10",
+      "jev_agency": 0.25,
+      "jev_temporal": 0.09,
+      "jev_degradation": 0.2,
+      "per_turn": [
+        0.3,
+        0.32
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "glm_5_1",
+      "seed": "adv_agency_combat_10",
+      "jev_agency": 0.18,
+      "jev_temporal": 0.12,
+      "jev_degradation": 0.23,
+      "per_turn": [
+        0.26,
+        0.32
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_3_1_flash_lite",
+      "seed": "adv_agency_combat_10",
+      "jev_agency": 0.22,
+      "jev_temporal": 0.11,
+      "jev_degradation": 0.23,
+      "per_turn": [
+        0.22,
+        0.31
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "kimi_k2_5",
+      "seed": "adv_agency_combat_10",
+      "jev_agency": 0.28,
+      "jev_temporal": 0.2,
+      "jev_degradation": 0.35,
+      "per_turn": [
+        0.22,
+        0.24
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v4_flash",
+      "seed": "adv_agency_romance_11",
+      "jev_agency": 0.1,
+      "jev_temporal": 0.21,
+      "jev_degradation": 0.19,
+      "per_turn": [
+        0.14,
+        0.09
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "kimi_k2_6",
+      "seed": "adv_agency_combat_10",
+      "jev_agency": 0.16,
+      "jev_temporal": 0.14,
+      "jev_degradation": 0.25,
+      "per_turn": [
+        0.28,
+        0.37
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_3_1_flash_lite",
+      "seed": "adv_agency_romance_11",
+      "jev_agency": 0.1,
+      "jev_temporal": 0.1,
+      "jev_degradation": 0.23,
+      "per_turn": [
+        0.13,
+        0.07
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "glm_5_1",
+      "seed": "adv_agency_romance_11",
+      "jev_agency": 0.2,
+      "jev_temporal": 0.14,
+      "jev_degradation": 0.21,
+      "per_turn": [
+        0.14,
+        0.28
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "kimi_k2_5",
+      "seed": "adv_agency_romance_11",
+      "jev_agency": 0.1,
+      "jev_temporal": 0.11,
+      "jev_degradation": 0.22,
+      "per_turn": [
+        0.18,
+        0.14
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "glm_5_1",
+      "seed": "adv_pov_second_person_12",
+      "jev_agency": 0.45,
+      "jev_temporal": 0.14,
+      "jev_degradation": 0.18,
+      "per_turn": [
+        0.3,
+        0.09
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v4_flash",
+      "seed": "adv_pov_second_person_12",
+      "jev_agency": 0.33,
+      "jev_temporal": 0.09,
+      "jev_degradation": 0.19,
+      "per_turn": [
+        0.46,
+        0.1
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "kimi_k2_6",
+      "seed": "adv_agency_romance_11",
+      "jev_agency": 0.07,
+      "jev_temporal": 0.11,
+      "jev_degradation": 0.36,
+      "per_turn": [
+        0.15,
+        0.12
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_3_1_flash_lite",
+      "seed": "adv_pov_second_person_12",
+      "jev_agency": 0.49,
+      "jev_temporal": 0.19,
+      "jev_degradation": 0.18,
+      "per_turn": [
+        0.36,
+        0.09
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "kimi_k2_5",
+      "seed": "adv_pov_second_person_12",
+      "jev_agency": 0.63,
+      "jev_temporal": 0.24,
+      "jev_degradation": 0.19,
+      "per_turn": [
+        0.36,
+        0.11
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v4_flash",
+      "seed": "adv_pov_multi_npc_13",
+      "jev_agency": 0.52,
+      "jev_temporal": 0.08,
+      "jev_degradation": 0.22,
+      "per_turn": [
+        0.13,
+        0.18
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "kimi_k2_6",
+      "seed": "adv_pov_second_person_12",
+      "jev_agency": 0.45,
+      "jev_temporal": 0.17,
+      "jev_degradation": 0.2,
+      "per_turn": [
+        0.31,
+        0.29
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "glm_5_1",
+      "seed": "adv_pov_multi_npc_13",
+      "jev_agency": 0.7,
+      "jev_temporal": 0.11,
+      "jev_degradation": 0.2,
+      "per_turn": [
+        0.15,
+        0.11
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "kimi_k2_5",
+      "seed": "adv_pov_multi_npc_13",
+      "jev_agency": 0.77,
+      "jev_temporal": 0.08,
+      "jev_degradation": 0.24,
+      "per_turn": [
+        0.15,
+        0.22
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_3_1_flash_lite",
+      "seed": "adv_pov_multi_npc_13",
+      "jev_agency": 0.72,
+      "jev_temporal": 0.08,
+      "jev_degradation": 0.23,
+      "per_turn": [
+        0.14,
+        0.16
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "kimi_k2_6",
+      "seed": "adv_pov_multi_npc_13",
+      "jev_agency": 0.63,
+      "jev_temporal": 0.08,
+      "jev_degradation": 0.32,
+      "per_turn": [
+        0.16,
+        0.16
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "glm_5_1",
+      "seed": "adv_pov_tense_action_14",
+      "jev_agency": 0.6,
+      "jev_temporal": 0.56,
+      "jev_degradation": 0.24,
+      "per_turn": [
+        0.12,
+        0.14
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v4_flash",
+      "seed": "adv_pov_tense_action_14",
+      "jev_agency": 0.53,
+      "jev_temporal": 0.41,
+      "jev_degradation": 0.19,
+      "per_turn": [
+        0.19,
+        0.26
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_3_1_flash_lite",
+      "seed": "adv_pov_tense_action_14",
+      "jev_agency": 0.55,
+      "jev_temporal": 0.44,
+      "jev_degradation": 0.21,
+      "per_turn": [
+        0.08,
+        0.21
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "kimi_k2_5",
+      "seed": "adv_pov_tense_action_14",
+      "jev_agency": 0.56,
+      "jev_temporal": 0.19,
+      "jev_degradation": 0.22,
+      "per_turn": [
+        0.09,
+        0.21
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "kimi_k2_6",
+      "seed": "adv_pov_tense_action_14",
+      "jev_agency": 0.51,
+      "jev_temporal": 0.59,
+      "jev_degradation": 0.22,
+      "per_turn": [
+        0.09,
+        0.26
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "glm_5_1",
+      "seed": "adv_sysprompt_speech_pattern_15",
+      "jev_agency": 0.2,
+      "jev_temporal": 0.11,
+      "jev_degradation": 0.16,
+      "per_turn": [
+        0.08,
+        0.11
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_3_1_flash_lite",
+      "seed": "adv_sysprompt_speech_pattern_15",
+      "jev_agency": 0.14,
+      "jev_temporal": 0.1,
+      "jev_degradation": 0.2,
+      "per_turn": [
+        0.11,
+        0.16
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v4_flash",
+      "seed": "adv_sysprompt_speech_pattern_15",
+      "jev_agency": 0.12,
+      "jev_temporal": 0.14,
+      "jev_degradation": 0.17,
+      "per_turn": [
+        0.09,
+        0.09
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v4_flash",
+      "seed": "adv_sysprompt_style_restriction_16",
+      "jev_agency": 0.38,
+      "jev_temporal": 0.11,
+      "jev_degradation": 0.22,
+      "per_turn": [
+        0.27,
+        0.35
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "kimi_k2_5",
+      "seed": "adv_sysprompt_speech_pattern_15",
+      "jev_agency": 0.2,
+      "jev_temporal": 0.1,
+      "jev_degradation": 0.25,
+      "per_turn": [
+        0.1,
+        0.08
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "kimi_k2_6",
+      "seed": "adv_sysprompt_speech_pattern_15",
+      "jev_agency": 0.16,
+      "jev_temporal": 0.1,
+      "jev_degradation": 0.27,
+      "per_turn": [
+        0.11,
+        0.08
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "glm_5_1",
+      "seed": "adv_sysprompt_style_restriction_16",
+      "jev_agency": 0.65,
+      "jev_temporal": 0.11,
+      "jev_degradation": 0.33,
+      "per_turn": [
+        0.45,
+        0.65
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_3_1_flash_lite",
+      "seed": "adv_sysprompt_style_restriction_16",
+      "jev_agency": 0.55,
+      "jev_temporal": 0.18,
+      "jev_degradation": 0.35,
+      "per_turn": [
+        0.69,
+        0.31
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "kimi_k2_6",
+      "seed": "adv_sysprompt_style_restriction_16",
+      "jev_agency": 0.29,
+      "jev_temporal": 0.1,
+      "jev_degradation": 0.33,
+      "per_turn": [
+        0.49,
+        0.57
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "kimi_k2_5",
+      "seed": "adv_sysprompt_style_restriction_16",
+      "jev_agency": 0.46,
+      "jev_temporal": 0.11,
+      "jev_degradation": 0.3,
+      "per_turn": [
+        0.53,
+        0.53
+      ],
+      "son_agency": false,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v4_flash",
+      "seed": "adv_sysprompt_forbidden_topic_17",
+      "jev_agency": 0.25,
+      "jev_temporal": 0.42,
+      "jev_degradation": 0.27,
+      "per_turn": [
+        0.1,
+        0.85
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "glm_5_1",
+      "seed": "adv_sysprompt_forbidden_topic_17",
+      "jev_agency": 0.17,
+      "jev_temporal": 0.16,
+      "jev_degradation": 0.23,
+      "per_turn": [
+        0.18,
+        0.27
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_3_1_flash_lite",
+      "seed": "adv_sysprompt_forbidden_topic_17",
+      "jev_agency": 0.28,
+      "jev_temporal": 0.13,
+      "jev_degradation": 0.23,
+      "per_turn": [
+        0.16,
+        0.13
+      ],
+      "son_agency": false,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "kimi_k2_6",
+      "seed": "adv_sysprompt_forbidden_topic_17",
+      "jev_agency": 0.32,
+      "jev_temporal": 0.12,
+      "jev_degradation": 0.16,
+      "per_turn": [
+        0.15,
+        0.31
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "kimi_k2_5",
+      "seed": "adv_sysprompt_forbidden_topic_17",
+      "jev_agency": 0.2,
+      "jev_temporal": 0.13,
+      "jev_degradation": 0.15,
+      "per_turn": [
+        0.14,
+        0.14
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v4_flash",
+      "seed": "adv_bigcard_buried_details_18",
+      "jev_agency": 0.2,
+      "jev_temporal": 0.17,
+      "jev_degradation": 0.18,
+      "per_turn": [
+        0.06,
+        0.17,
+        0.06
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "glm_5_1",
+      "seed": "adv_bigcard_buried_details_18",
+      "jev_agency": 0.14,
+      "jev_temporal": 0.11,
+      "jev_degradation": 0.17,
+      "per_turn": [
+        0.04,
+        0.14,
+        0.12
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_3_1_flash_lite",
+      "seed": "adv_bigcard_buried_details_18",
+      "jev_agency": 0.14,
+      "jev_temporal": 0.28,
+      "jev_degradation": 0.23,
+      "per_turn": [
+        0.05,
+        0.19,
+        0.11
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "kimi_k2_6",
+      "seed": "adv_bigcard_buried_details_18",
+      "jev_agency": 0.14,
+      "jev_temporal": 0.26,
+      "jev_degradation": 0.24,
+      "per_turn": [
+        0.04,
+        0.13,
+        0.17
+      ],
+      "son_agency": false,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "kimi_k2_5",
+      "seed": "adv_bigcard_buried_details_18",
+      "jev_agency": 0.19,
+      "jev_temporal": 0.2,
+      "jev_degradation": 0.23,
+      "per_turn": [
+        0.05,
+        0.15,
+        0.19
+      ],
+      "son_agency": false,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "glm_5_1",
+      "seed": "adv_bigcard_relationship_web_19",
+      "jev_agency": 0.15,
+      "jev_temporal": 0.08,
+      "jev_degradation": 0.16,
+      "per_turn": [
+        0.37,
+        0.27,
+        0.2
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_3_1_flash_lite",
+      "seed": "adv_bigcard_relationship_web_19",
+      "jev_agency": 0.18,
+      "jev_temporal": 0.11,
+      "jev_degradation": 0.2,
+      "per_turn": [
+        0.31,
+        0.52,
+        0.34
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v4_flash",
+      "seed": "adv_bigcard_relationship_web_19",
+      "jev_agency": 0.2,
+      "jev_temporal": 0.1,
+      "jev_degradation": 0.16,
+      "per_turn": [
+        0.13,
+        0.49,
+        0.34
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "kimi_k2_5",
+      "seed": "adv_bigcard_relationship_web_19",
+      "jev_agency": 0.29,
+      "jev_temporal": 0.11,
+      "jev_degradation": 0.2,
+      "per_turn": [
+        0.82,
+        0.7,
+        0.44
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "kimi_k2_6",
+      "seed": "adv_bigcard_relationship_web_19",
+      "jev_agency": 0.21,
+      "jev_temporal": 0.1,
+      "jev_degradation": 0.19,
+      "per_turn": [
+        0.3,
+        0.2,
+        0.35
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v4_flash",
+      "seed": "adv_bigcard_rules_overload_20",
+      "jev_agency": 0.18,
+      "jev_temporal": 0.24,
+      "jev_degradation": 0.13,
+      "per_turn": [
+        0.25,
+        0.15,
+        0.32
+      ],
+      "son_agency": false,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "glm_5_1",
+      "seed": "adv_bigcard_rules_overload_20",
+      "jev_agency": 0.32,
+      "jev_temporal": 0.23,
+      "jev_degradation": 0.18,
+      "per_turn": [
+        0.16,
+        0.09,
+        0.37
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_3_1_flash_lite",
+      "seed": "adv_bigcard_rules_overload_20",
+      "jev_agency": 0.22,
+      "jev_temporal": 0.19,
+      "jev_degradation": 0.16,
+      "per_turn": [
+        0.17,
+        0.07,
+        0.42
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_opus_4_7",
+      "seed": "adv_agency_emotional_climax_09",
+      "jev_agency": 0.16,
+      "jev_temporal": 0.05,
+      "jev_degradation": 0.21,
+      "per_turn": [
+        0.08,
+        0.1
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v4_pro",
+      "seed": "adv_agency_emotional_climax_09",
+      "jev_agency": 0.29,
+      "jev_temporal": 0.1,
+      "jev_degradation": 0.19,
+      "per_turn": [
+        0.08,
+        0.11
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "kimi_k2_5",
+      "seed": "adv_bigcard_rules_overload_20",
+      "jev_agency": 0.2,
+      "jev_temporal": 0.27,
+      "jev_degradation": 0.19,
+      "per_turn": [
+        0.18,
+        0.07,
+        0.51
+      ],
+      "son_agency": false,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "kimi_k2_6",
+      "seed": "adv_bigcard_rules_overload_20",
+      "jev_agency": 0.25,
+      "jev_temporal": 0.25,
+      "jev_degradation": 0.21,
+      "per_turn": [
+        0.26,
+        0.3,
+        0.36
+      ],
+      "son_agency": false,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_3_1_pro",
+      "seed": "adv_agency_emotional_climax_09",
+      "jev_agency": 0.16,
+      "jev_temporal": 0.03,
+      "jev_degradation": 0.38,
+      "per_turn": [
+        0.08,
+        0.11
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_opus_4_7",
+      "seed": "adv_agency_combat_10",
+      "jev_agency": 0.28,
+      "jev_temporal": 0.11,
+      "jev_degradation": 0.21,
+      "per_turn": [
+        0.33,
+        0.28
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_3_1_pro",
+      "seed": "adv_agency_combat_10",
+      "jev_agency": 0.21,
+      "jev_temporal": 0.11,
+      "jev_degradation": 0.26,
+      "per_turn": [
+        0.3,
+        0.3
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v4_pro",
+      "seed": "adv_agency_combat_10",
+      "jev_agency": 0.16,
+      "jev_temporal": 0.11,
+      "jev_degradation": 0.21,
+      "per_turn": [
+        0.33,
+        0.34
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_opus_4_7",
+      "seed": "adv_agency_romance_11",
+      "jev_agency": 0.13,
+      "jev_temporal": 0.09,
+      "jev_degradation": 0.16,
+      "per_turn": [
+        0.12,
+        0.09
+      ],
+      "son_agency": false,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v4_pro",
+      "seed": "adv_agency_romance_11",
+      "jev_agency": 0.17,
+      "jev_temporal": 0.08,
+      "jev_degradation": 0.17,
+      "per_turn": [
+        0.17,
+        0.11
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_opus_4_7",
+      "seed": "adv_pov_second_person_12",
+      "jev_agency": 0.46,
+      "jev_temporal": 0.12,
+      "jev_degradation": 0.19,
+      "per_turn": [
+        0.32,
+        0.21
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_3_1_pro",
+      "seed": "adv_agency_romance_11",
+      "jev_agency": 0.13,
+      "jev_temporal": 0.08,
+      "jev_degradation": 0.24,
+      "per_turn": [
+        0.14,
+        0.33
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v4_pro",
+      "seed": "adv_pov_second_person_12",
+      "jev_agency": 0.41,
+      "jev_temporal": 0.1,
+      "jev_degradation": 0.16,
+      "per_turn": [
+        0.51,
+        0.08
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_3_1_pro",
+      "seed": "adv_pov_second_person_12",
+      "jev_agency": 0.56,
+      "jev_temporal": 0.11,
+      "jev_degradation": 0.22,
+      "per_turn": [
+        0.17,
+        0.12
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v4_pro",
+      "seed": "adv_pov_multi_npc_13",
+      "jev_agency": 0.71,
+      "jev_temporal": 0.08,
+      "jev_degradation": 0.21,
+      "per_turn": [
+        0.12,
+        0.16
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_opus_4_7",
+      "seed": "adv_pov_multi_npc_13",
+      "jev_agency": 0.78,
+      "jev_temporal": 0.09,
+      "jev_degradation": 0.28,
+      "per_turn": [
+        0.12,
+        0.15
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_3_1_pro",
+      "seed": "adv_pov_multi_npc_13",
+      "jev_agency": 0.76,
+      "jev_temporal": 0.09,
+      "jev_degradation": 0.29,
+      "per_turn": [
+        0.14,
+        0.16
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_3_1_pro",
+      "seed": "adv_pov_tense_action_14",
+      "jev_agency": 0.55,
+      "jev_temporal": 0.13,
+      "jev_degradation": 0.24,
+      "per_turn": [
+        0.11,
+        0.28
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v4_pro",
+      "seed": "adv_pov_tense_action_14",
+      "jev_agency": 0.58,
+      "jev_temporal": 0.15,
+      "jev_degradation": 0.18,
+      "per_turn": [
+        0.11,
+        0.22
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_opus_4_7",
+      "seed": "adv_pov_tense_action_14",
+      "jev_agency": 0.68,
+      "jev_temporal": 0.49,
+      "jev_degradation": 0.21,
+      "per_turn": [
+        0.12,
+        0.19
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_opus_4_7",
+      "seed": "adv_sysprompt_speech_pattern_15",
+      "jev_agency": 0.22,
+      "jev_temporal": 0.1,
+      "jev_degradation": 0.16,
+      "per_turn": [
+        0.09,
+        0.09
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v4_pro",
+      "seed": "adv_sysprompt_speech_pattern_15",
+      "jev_agency": 0.12,
+      "jev_temporal": 0.13,
+      "jev_degradation": 0.17,
+      "per_turn": [
+        0.1,
+        0.12
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_3_1_pro",
+      "seed": "adv_sysprompt_speech_pattern_15",
+      "jev_agency": 0.31,
+      "jev_temporal": 0.1,
+      "jev_degradation": 0.2,
+      "per_turn": [
+        0.1,
+        0.07
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_3_1_pro",
+      "seed": "adv_sysprompt_style_restriction_16",
+      "jev_agency": 0.58,
+      "jev_temporal": 0.26,
+      "jev_degradation": 0.49,
+      "per_turn": [
+        0.31,
+        0.55
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_opus_4_7",
+      "seed": "adv_sysprompt_style_restriction_16",
+      "jev_agency": 0.6,
+      "jev_temporal": 0.16,
+      "jev_degradation": 0.16,
+      "per_turn": [
+        0.46,
+        0.8
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v4_pro",
+      "seed": "adv_sysprompt_style_restriction_16",
+      "jev_agency": 0.64,
+      "jev_temporal": 0.32,
+      "jev_degradation": 0.27,
+      "per_turn": [
+        0.5,
+        0.55
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_opus_4_7",
+      "seed": "adv_sysprompt_forbidden_topic_17",
+      "jev_agency": 0.3,
+      "jev_temporal": 0.12,
+      "jev_degradation": 0.15,
+      "per_turn": [
+        0.09,
+        0.19
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v4_pro",
+      "seed": "adv_sysprompt_forbidden_topic_17",
+      "jev_agency": 0.15,
+      "jev_temporal": 0.09,
+      "jev_degradation": 0.19,
+      "per_turn": [
+        0.09,
+        0.57
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_3_1_pro",
+      "seed": "adv_sysprompt_forbidden_topic_17",
+      "jev_agency": 0.21,
+      "jev_temporal": 0.11,
+      "jev_degradation": 0.18,
+      "per_turn": [
+        0.11,
+        0.19
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_opus_4_7",
+      "seed": "adv_bigcard_buried_details_18",
+      "jev_agency": 0.18,
+      "jev_temporal": 0.28,
+      "jev_degradation": 0.2,
+      "per_turn": [
+        0.05,
+        0.12,
+        0.06
+      ],
+      "son_agency": false,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v4_pro",
+      "seed": "adv_bigcard_buried_details_18",
+      "jev_agency": 0.22,
+      "jev_temporal": 0.18,
+      "jev_degradation": 0.24,
+      "per_turn": [
+        0.05,
+        0.2,
+        0.06
+      ],
+      "son_agency": false,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_3_1_pro",
+      "seed": "adv_bigcard_buried_details_18",
+      "jev_agency": 0.12,
+      "jev_temporal": 0.13,
+      "jev_degradation": 0.23,
+      "per_turn": [
+        0.04,
+        0.12,
+        0.05
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v4_pro",
+      "seed": "adv_bigcard_relationship_web_19",
+      "jev_agency": 0.31,
+      "jev_temporal": 0.09,
+      "jev_degradation": 0.16,
+      "per_turn": [
+        0.88,
+        0.17,
+        0.37
+      ],
+      "son_agency": true,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_opus_4_7",
+      "seed": "adv_bigcard_relationship_web_19",
+      "jev_agency": 0.34,
+      "jev_temporal": 0.12,
+      "jev_degradation": 0.16,
+      "per_turn": [
+        0.58,
+        0.23,
+        0.33
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "claude_opus_4_7",
+      "seed": "adv_bigcard_rules_overload_20",
+      "jev_agency": 0.25,
+      "jev_temporal": 0.2,
+      "jev_degradation": 0.13,
+      "per_turn": [
+        0.15,
+        0.06,
+        0.41
+      ],
+      "son_agency": false,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_3_1_pro",
+      "seed": "adv_bigcard_relationship_web_19",
+      "jev_agency": 0.17,
+      "jev_temporal": 0.25,
+      "jev_degradation": 0.21,
+      "per_turn": [
+        0.54,
+        0.11,
+        0.13
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "gemini_3_1_pro",
+      "seed": "adv_bigcard_rules_overload_20",
+      "jev_agency": 0.24,
+      "jev_temporal": 0.22,
+      "jev_degradation": 0.37,
+      "per_turn": [
+        0.7,
+        0.09,
+        0.18
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_v4_pro",
+      "seed": "adv_bigcard_rules_overload_20",
+      "jev_agency": 0.23,
+      "jev_temporal": 0.2,
+      "jev_degradation": 0.14,
+      "per_turn": [
+        0.52,
+        0.1,
+        0.38
+      ],
+      "son_agency": false,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_r1_0528",
+      "seed": "adv_agency_bait_01",
+      "jev_agency": 0.29,
+      "jev_temporal": 0.13,
+      "jev_degradation": 0.37,
+      "per_turn": [
+        0.32,
+        0.24
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_r1_0528",
+      "seed": "adv_contradictory_lore_02",
+      "jev_agency": 0.19,
+      "jev_temporal": 0.13,
+      "jev_degradation": 0.24,
+      "per_turn": [
+        0.58,
+        0.76
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_r1_0528",
+      "seed": "adv_passive_user_03",
+      "jev_agency": 0.15,
+      "jev_temporal": 0.18,
+      "jev_degradation": 0.25,
+      "per_turn": [
+        0.29,
+        0.29
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_r1_0528",
+      "seed": "adv_impossible_physics_04",
+      "jev_agency": 0.22,
+      "jev_temporal": 0.13,
+      "jev_degradation": 0.17,
+      "per_turn": [
+        0.07,
+        0.07,
+        0.54
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_r1_0528",
+      "seed": "adv_time_pressure_05",
+      "jev_agency": 0.46,
+      "jev_temporal": 0.69,
+      "jev_degradation": 0.24,
+      "per_turn": [
+        0.56,
+        0.07,
+        0.2
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_r1_0528",
+      "seed": "adv_subtle_ooc_06",
+      "jev_agency": 0.13,
+      "jev_temporal": 0.08,
+      "jev_degradation": 0.25,
+      "per_turn": [
+        0.25,
+        0.16,
+        0.42
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_r1_0528",
+      "seed": "adv_character_break_bait_07",
+      "jev_agency": 0.34,
+      "jev_temporal": 0.15,
+      "jev_degradation": 0.24,
+      "per_turn": [
+        0.07,
+        0.19,
+        0.19
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_r1_0528",
+      "seed": "adv_genre_shift_08",
+      "jev_agency": 0.71,
+      "jev_temporal": 0.26,
+      "jev_degradation": 0.31,
+      "per_turn": [
+        0.13,
+        0.09,
+        0.17
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_r1_0528",
+      "seed": "adv_agency_emotional_climax_09",
+      "jev_agency": 0.39,
+      "jev_temporal": 0.11,
+      "jev_degradation": 0.46,
+      "per_turn": [
+        0.09,
+        0.15
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_r1_0528",
+      "seed": "adv_agency_combat_10",
+      "jev_agency": 0.3,
+      "jev_temporal": 0.13,
+      "jev_degradation": 0.31,
+      "per_turn": [
+        0.21,
+        0.27
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_r1_0528",
+      "seed": "adv_agency_romance_11",
+      "jev_agency": 0.12,
+      "jev_temporal": 0.06,
+      "jev_degradation": 0.18,
+      "per_turn": [
+        0.13,
+        0.09
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_r1_0528",
+      "seed": "adv_pov_second_person_12",
+      "jev_agency": 0.47,
+      "jev_temporal": 0.14,
+      "jev_degradation": 0.32,
+      "per_turn": [
+        0.57,
+        0.18
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_r1_0528",
+      "seed": "adv_pov_multi_npc_13",
+      "jev_agency": 0.73,
+      "jev_temporal": 0.08,
+      "jev_degradation": 0.24,
+      "per_turn": [
+        0.17,
+        0.16
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_r1_0528",
+      "seed": "adv_pov_tense_action_14",
+      "jev_agency": 0.52,
+      "jev_temporal": 0.3,
+      "jev_degradation": 0.21,
+      "per_turn": [
+        0.1,
+        0.19
+      ],
+      "son_agency": true,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_r1_0528",
+      "seed": "adv_sysprompt_speech_pattern_15",
+      "jev_agency": 0.26,
+      "jev_temporal": 0.1,
+      "jev_degradation": 0.23,
+      "per_turn": [
+        0.07,
+        0.09
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_r1_0528",
+      "seed": "adv_sysprompt_style_restriction_16",
+      "jev_agency": 0.62,
+      "jev_temporal": 0.13,
+      "jev_degradation": 0.37,
+      "per_turn": [
+        0.73,
+        0.79
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_r1_0528",
+      "seed": "adv_sysprompt_forbidden_topic_17",
+      "jev_agency": 0.18,
+      "jev_temporal": 0.16,
+      "jev_degradation": 0.18,
+      "per_turn": [
+        0.09,
+        0.2
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_r1_0528",
+      "seed": "adv_bigcard_buried_details_18",
+      "jev_agency": 0.18,
+      "jev_temporal": 0.62,
+      "jev_degradation": 0.28,
+      "per_turn": [
+        0.05,
+        0.29,
+        0.08
+      ],
+      "son_agency": false,
+      "son_temporal": true,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_r1_0528",
+      "seed": "adv_bigcard_rules_overload_20",
+      "jev_agency": 0.26,
+      "jev_temporal": 0.19,
+      "jev_degradation": 0.18,
+      "per_turn": [
+        0.53,
+        0.14,
+        0.42
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    },
+    {
+      "model": "deepseek_r1_0528",
+      "seed": "adv_bigcard_relationship_web_19",
+      "jev_agency": 0.22,
+      "jev_temporal": 0.11,
+      "jev_degradation": 0.17,
+      "per_turn": [
+        0.38,
+        0.6,
+        0.27
+      ],
+      "son_agency": false,
+      "son_temporal": false,
+      "son_degradation": false
+    }
+  ]
+}

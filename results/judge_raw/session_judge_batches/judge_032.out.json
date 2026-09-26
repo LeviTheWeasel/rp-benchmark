@@ -1,0 +1,616 @@
+[
+  {
+    "session_id": "mimo_2_6_flash::adv_pov_multi_npc_13",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Narrator voice and every NPC's distinct register (Isara's stillness, Ash's clipped authority, Daven's smoothness) hold perfectly across all 12 turns."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.5,
+        "rationale": "Quality never drops but turns grow markedly longer and more elaborate as the hearing progresses, especially turns 18-22."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.5,
+        "rationale": "Clean escalating courtroom arc from opening protocol breach to a commander's confession, with real stakes and reversals."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.5,
+        "rationale": "NPCs react precisely to the Ambassador's specific choices (breaking protocol, routing evidence through Yuna instead of the Queen)."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.0,
+        "rationale": "The narrator elaborates extensively on the Ambassador's internal feelings/thoughts as 'you', but always building on emotions the player themself specified rather than inventing new decisions.",
+        "violation_count": 1
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.3,
+        "rationale": "Single continuous hearing in real time with no skips; counted durations ('eleven seconds', 'three heartbeats') are used consistently and nothing contradicts itself.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.5,
+        "rationale": "Very high, deliberate stylization; frequent short-fragment sentences and extended metaphor keep it purple but purposeful."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.8,
+        "rationale": "Heavy overuse of the 'Not X. It was Y' and 'She said nothing. But...' constructions across nearly every turn."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.0,
+        "rationale": "Political maneuvering is rendered through body language and pacing rather than exposition."
+      },
+      "2.6_subtext": {
+        "score": 4.5,
+        "rationale": "Excellent unspoken tension and power-reading throughout the whole hearing."
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "Strong escalation but later turns slow the pace with very long descriptive passages."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.3,
+      "late_quality": 4.0,
+      "degradation_detected": false
+    },
+    "overall": 3.8,
+    "overall_notes": "One of the more literary and structurally ambitious sessions in the batch (multi-NPC courtroom drama); prose is dense and stylistically repetitive but the plotting and NPC consistency are excellent."
+  },
+  {
+    "session_id": "mimo_2_6_flash::adv_pov_second_person_12",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.0,
+        "rationale": "Narrator's ominous 2nd-person tone and the scholar's voice both stay consistent start to finish."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.0,
+        "rationale": "No verbosity creep or quality loss comparing the opening dungeon scene to the closing vial decision."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.0,
+        "rationale": "Clear escalation from discovery to threat to backstory to an irreversible choice, ending on a natural cliffhanger."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.0,
+        "rationale": "Narrator adapts well to each of the player's choices (wearing the amulet, calling out, handing over the sword)."
+      },
+      "S.5_agency_respect_session": {
+        "score": 2.5,
+        "rationale": "Narrator twice puts unwritten dialogue directly in the player's mouth ('\"Then what?\" you said' at turn 20 and '\"Yeah,\" you said. \"I am.\"' at turn 22) rather than only building on player-specified actions.",
+        "violation_count": 2
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.0,
+        "rationale": "Single continuous scene with no time-skip issues; the amulet's warmth/cold cues and the scholar's '3 days' timeline stay consistent.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.0,
+        "rationale": "Ornate and metaphor-heavy ('the glass was warm... its own small, patient metabolism') throughout."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.3,
+        "rationale": "Some recurring descriptive beats (the vial's warmth, the amulet's temperature) but not excessive."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.8,
+        "rationale": "Good sensory grounding of the scholar's fear and the dungeon's threat."
+      },
+      "2.6_subtext": {
+        "score": 4.0,
+        "rationale": "The scholar's self-loathing and fear are conveyed well through hesitation and broken sentences."
+      },
+      "2.7_pacing": {
+        "score": 3.8,
+        "rationale": "Well-paced escalation toward the vial decision."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.8,
+      "mid_quality": 4.0,
+      "late_quality": 3.8,
+      "degradation_detected": false
+    },
+    "overall": 3.5,
+    "overall_notes": "Solid horror-adventure writing, but marked down for two clear instances of the narrator inventing the player character's own spoken dialogue rather than only extending player-declared actions."
+  },
+  {
+    "session_id": "mimo_2_6_flash::adv_pov_tense_action_14",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.2,
+        "rationale": "Tense present-tense action voice stays sharp and consistent for all 12 turns."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.0,
+        "rationale": "No loss of tension or quality comparing early stairwell scenes to the late bulkhead escape."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.5,
+        "rationale": "Tight, escalating chase structure with a clear countdown and rising stakes throughout."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.3,
+        "rationale": "Reacts precisely to the operative's tactical choices (reversing direction, barricading, dropping into the vent)."
+      },
+      "S.5_agency_respect_session": {
+        "score": 3.5,
+        "rationale": "One instance of the narrator supplying player dialogue not specified by the user ('\"Four minutes,\" you say' at turn 20).",
+        "violation_count": 1
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.5,
+        "rationale": "The handler's countdown ('four minutes' to 'ninety seconds') and the chase geography stay internally consistent throughout.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.0,
+        "rationale": "Terse, punchy prose well-suited to the genre with minimal overwriting."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.0,
+        "rationale": "A '**Narrator:**' header artifact is duplicated at the start of nearly every narrator turn from turn 4 onward, and 'the light strip pulsed'-style refrains recur often."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.3,
+        "rationale": "Strong physical, sensory detail throughout the chase."
+      },
+      "2.6_subtext": {
+        "score": 3.5,
+        "rationale": "Less overt subtext given the action focus, but Mira's characterization has some depth."
+      },
+      "2.7_pacing": {
+        "score": 4.5,
+        "rationale": "Excellent tension control via escalating countdown and obstacles."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.2,
+      "late_quality": 4.2,
+      "degradation_detected": false
+    },
+    "overall": 4.0,
+    "overall_notes": "Strong, tightly-plotted chase thriller; note a recurring formatting artifact (duplicated '**Narrator:**' label) present in most narrator turns that should be flagged to the harness as a possible template bug."
+  },
+  {
+    "session_id": "mimo_2_6_flash::adv_subtle_ooc_06",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.7,
+        "rationale": "Arlo's deflecting wit over real trauma is perfectly consistent turn to turn, with the guard visibly and believably lowering only late in the session."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.5,
+        "rationale": "If anything the writing deepens rather than degrades; no drift toward generic dialogue anywhere."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.7,
+        "rationale": "Genuine emotional arc from guarded banter to vulnerability to a forward-looking decision (the diner)."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.5,
+        "rationale": "Beautifully tuned to Jun's choices — when Jun stops pushing and just sits, Arlo opens up unprompted."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.8,
+        "rationale": "AI plays only Arlo; never narrates or decides Jun's actions or dialogue.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.5,
+        "rationale": "Light moving across the floor and the shift from afternoon to evening to a night walk is tracked precisely and consistently.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.3,
+        "rationale": "Restrained, precise prose; metaphor is used sparingly and earns its place."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.8,
+        "rationale": "Some deliberate recurring motifs (the fridge's B-flat hum, the thumb-press 'metronome') function as intentional leitmotifs rather than filler."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.7,
+        "rationale": "Exceptional — virtually everything is inferred through behavior, deflection, and dialogue rather than stated."
+      },
+      "2.6_subtext": {
+        "score": 4.8,
+        "rationale": "Outstanding subtext throughout; the performance-anxiety backstory is never stated outright yet fully legible."
+      },
+      "2.7_pacing": {
+        "score": 4.3,
+        "rationale": "Patient without dragging; the long silences are earned."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.3,
+      "mid_quality": 4.6,
+      "late_quality": 4.6,
+      "degradation_detected": false
+    },
+    "overall": 4.4,
+    "overall_notes": "The strongest session in the batch: understated, consistent, and emotionally precise character writing with no agency violations and minimal genre excess."
+  },
+  {
+    "session_id": "mimo_2_6_flash::adv_sysprompt_forbidden_topic_17",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.3,
+        "rationale": "Lena's guarded, procedural, control-driven persona holds throughout."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.8,
+        "rationale": "Quality is steady but the investigative info-dumping in the back half feels structurally repetitive."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.8,
+        "rationale": "Methodical, plausible mystery escalation (rumor to corroboration to a plan) but fairly incremental rather than dramatic."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.0,
+        "rationale": "Deflects 'were you a cop?' cleanly (likely the forbidden-topic test) and gives progressively more detail as trust builds."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Lena only acts and speaks for herself; no instances of writing the client's actions.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.3,
+        "rationale": "The 'two hours' / 'six weeks' / 'twelve weeks' / 'forty-eight hours' figures are used consistently and without contradiction.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.0,
+        "rationale": "Restrained noir register without overreach."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.2,
+        "rationale": "Frequent similar 'She said X. She paused. She continued.' beats across many turns given the investigative structure."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.8,
+        "rationale": "Physical business (pen-tapping, blind-checking, arm-crossing) does real characterization work."
+      },
+      "2.6_subtext": {
+        "score": 4.0,
+        "rationale": "The evasive non-answer to the cop question is well-handled subtext for a system-prompt-restricted topic."
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "Somewhat exposition-heavy in places as Lena narrates her own plan aloud."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.8,
+      "mid_quality": 4.0,
+      "late_quality": 4.0,
+      "degradation_detected": false
+    },
+    "overall": 3.9,
+    "overall_notes": "Well-controlled noir procedural; the apparent forbidden-topic probe ('were you a cop?') is handled with a clean, in-character deflection rather than a break."
+  },
+  {
+    "session_id": "mimo_2_6_flash::adv_sysprompt_speech_pattern_15",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.8,
+        "rationale": "Grum's third-person, article-dropping speech pattern never breaks, including in the most emotional beats."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.2,
+        "rationale": "Holds steady; no drift toward more conventional grammar as the scene turns emotional."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.0,
+        "rationale": "Contained but complete arc: forge work, noble negotiation, injury, and a real vulnerability payoff."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.3,
+        "rationale": "Shifts convincingly from gruff negotiation to panicked tenderness the moment the apprentice is hurt."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "No instances found of Grum's narration deciding the apprentice's actions or words.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.0,
+        "rationale": "Single continuous forge-shop scene; no clock is tracked explicitly but nothing about time passing contradicts itself.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.8,
+        "rationale": "Narration around Grum's terse dialogue is fairly lyrical at times but stays controlled."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.0,
+        "rationale": "Noticeable repetition of scene-filler beats ('the merchant's blade waited on the anvil', forge crackling/popping) recurring near-verbatim across turns."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.8,
+        "rationale": "Good use of gesture (the scarred hand, the salve) to carry emotion."
+      },
+      "2.6_subtext": {
+        "score": 4.0,
+        "rationale": "The apology and vulnerability scene lands well through implication rather than statement."
+      },
+      "2.7_pacing": {
+        "score": 3.8,
+        "rationale": "Reasonable pacing; the injury scene provides a good mid-story shift."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.2,
+      "late_quality": 4.0,
+      "degradation_detected": false
+    },
+    "overall": 4.0,
+    "overall_notes": "A warm, consistently-voiced mentor/apprentice piece; the speech-pattern constraint is sustained flawlessly for all 12 turns, though the prose leans on a few repeated descriptive beats."
+  },
+  {
+    "session_id": "mimo_2_6_flash::adv_sysprompt_style_restriction_16",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "The instructed telegraphic, short-declarative style never breaks across all 12 turns — extremely disciplined adherence."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.8,
+        "rationale": "Consistent but consistently repetitive; no degradation because it starts and stays at the same descriptive density."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.0,
+        "rationale": "Mostly a slow object-by-object exploration; the realtor confrontation is the only real external plot beat."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.8,
+        "rationale": "Responds accurately to whatever the player introduces (photo, realtor, basement) but rarely initiates its own complications."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.3,
+        "rationale": "No instances of the narrator inventing dialogue or decisions for Eli.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.0,
+        "rationale": "The single-evening visit tracks a plausible dusk-to-dark progression (streetlight dimming, then dark) with no contradictions.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.5,
+        "rationale": "Extremely restrained; the terse style strongly avoids ornamentation."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.3,
+        "rationale": "The telegraphic style becomes genuinely repetitive — near-identical filler beats ('the box waited', 'the moth held its place', 'X sat/waited/held') recur constantly without adding information."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.8,
+        "rationale": "Concrete, catalogued physical detail throughout, though it tips into listing rather than meaningful showing."
+      },
+      "2.6_subtext": {
+        "score": 3.3,
+        "rationale": "The realtor's forced cheer and fishing for the photo album has some subtext; otherwise thin."
+      },
+      "2.7_pacing": {
+        "score": 2.8,
+        "rationale": "The heavy environmental cataloguing in the basement section drags momentum."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.3,
+      "mid_quality": 3.3,
+      "late_quality": 3.3,
+      "degradation_detected": false
+    },
+    "overall": 3.3,
+    "overall_notes": "The style restriction (short, telegraphic sentences) is followed with impressive discipline, but that same constraint produces heavy repetition of descriptive filler and slow pacing, especially in the basement stretch."
+  },
+  {
+    "session_id": "mimo_2_6_flash::adv_time_pressure_05",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.6,
+        "rationale": "Techno-thriller present-tense timestamped voice is airtight across all 12 turns."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.5,
+        "rationale": "Complexity increases (the permanent-lockout twist) without any loss of coherence or quality."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.6,
+        "rationale": "Excellent escalating tension with a genuine mid-session complication (irreversible lockout risk)."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.5,
+        "rationale": "Precisely tracks consequences of the player's specific technical choices (screwdriver work, wire-stripping)."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "No instances found of the narrator writing dialogue or decisions for the Thief.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.0,
+        "rationale": "Three simultaneous clocks (elapsed time, 15:00 guard-return window, keypad cooldown) are tracked with near-perfect arithmetic for the whole session; one isolated error found.",
+        "contradictions": [
+          "At ~5:28 elapsed the guard-return clock is stated as '10 minutes and 30 seconds remaining,' but the 15:00 total window established and reused consistently everywhere else in the session implies it should read ~9:32; by 6:20 the countdown is exactly correct again (8:40 = 15:00-6:20), so the error appears to be an isolated ~58s slip rather than a sustained drift."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.3,
+        "rationale": "Technical, procedural language stays restrained and appropriate to the genre."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.3,
+        "rationale": "The 'server racks hummed / light strip pulsed' refrain recurs almost verbatim in nearly every turn."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.3,
+        "rationale": "Strong procedural show-don't-tell (screw threading, wire stripping) instead of exposition."
+      },
+      "2.6_subtext": {
+        "score": 3.2,
+        "rationale": "Limited subtext by genre design — mostly overt technical tension rather than interpersonal."
+      },
+      "2.7_pacing": {
+        "score": 4.5,
+        "rationale": "Excellent pacing; the multi-clock countdown structure drives momentum superbly."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.2,
+      "mid_quality": 4.4,
+      "late_quality": 4.4,
+      "degradation_detected": false
+    },
+    "overall": 4.2,
+    "overall_notes": "Exceptionally well-engineered time-pressure scene tracking three simultaneous countdown clocks with near-perfect arithmetic; one clear numeric slip found (see S.6 contradictions) — a rare catch given how precise the rest of the session is."
+  },
+  {
+    "session_id": "mimo_2_6_pro::adv_agency_bait_01",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Ren's guarded, dry, economical voice (and the recurring tremor/rag business) stays consistent throughout."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.3,
+        "rationale": "No verbosity creep; the session stays admirably concise from open to close."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.0,
+        "rationale": "Clear emotional arc from tension/boundary-setting to a caring, concrete resolution (the contact list)."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.5,
+        "rationale": "Handles the early hand-touch escalation firmly and in-character, then warms appropriately as Alex opens up."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.7,
+        "rationale": "Never touches back or acts for Alex; consistently leaves choices (take the paper or not) with the player, which is exactly what the agency-bait seed is testing.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.7,
+        "rationale": "The countdown to close is mostly consistent (13→12→9→8→7→5→3 minutes) but the final turn's 'Chairs in five' appears to increase after 'Three minutes' two turns earlier rather than continuing to count down.",
+        "contradictions": [
+          "Turn 20 states 'Three minutes' to close; turn 22 then says 'Chairs in five,' which reads as the countdown moving backward unless it is meant as a separate post-last-call cleanup timer — that distinction is never made explicit."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.6,
+        "rationale": "Spare, minimalist prose (almost Hemingway-esque) fits the bartender voice throughout."
+      },
+      "2.2_anti_repetition": {
+        "score": 4.0,
+        "rationale": "The rag/tremor/left-hand motif is used as deliberate characterization rather than filler."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.5,
+        "rationale": "Excellent — tremor, posture, and small gestures carry nearly all characterization."
+      },
+      "2.6_subtext": {
+        "score": 4.5,
+        "rationale": "The whole scene is built on subtext: the boundary-setting, the unstated backstory behind the tremor."
+      },
+      "2.7_pacing": {
+        "score": 4.0,
+        "rationale": "Good quiet pacing matched to the bar setting."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.2,
+      "mid_quality": 4.4,
+      "late_quality": 4.3,
+      "degradation_detected": false
+    },
+    "overall": 4.1,
+    "overall_notes": "Excellent, restrained bartender-scene writing that handles a clear agency-bait probe (the early hand-touch) cleanly; one minor time-tracking wrinkle noted in S.6 (see contradictions)."
+  },
+  {
+    "session_id": "mimo_2_6_pro::adv_agency_combat_10",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Kira's tactical, foul-mouthed, competent voice is consistent from the ambush to the aftermath banter."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.3,
+        "rationale": "No energy or quality loss between the opening ambush and the closing march north."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.5,
+        "rationale": "Strong tactical arc: ambush, sacrifice play, near-death, victory, consequence (the fleeing runners)."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.5,
+        "rationale": "Precisely reacts to the Captain's specific combat actions and being cut off, adjusting tactics accordingly."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.7,
+        "rationale": "Kira never decides or narrates the Captain's actions — always reacts to what the player specifies, exactly as this agency-focused combat seed requires.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.3,
+        "rationale": "Injuries (rib, forearm, shoulder) accumulate and stay referenced consistently through to the post-fight banter; the single continuous battle has no pacing/time contradictions.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.8,
+        "rationale": "Some metaphor-heavy action beats ('hit him like a freight cart') but generally controlled for the genre."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.7,
+        "rationale": "Repeated shouted lines ('EYES ON ME!'/'LOOK AT ME!') are a deliberate in-fiction tactic (drawing fire) rather than lazy repetition."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.2,
+        "rationale": "Injuries and physical state are tracked and shown consistently rather than told."
+      },
+      "2.6_subtext": {
+        "score": 3.7,
+        "rationale": "Modest but real subtext in the closing exchange (the Captain's rare smile, Kira looking away)."
+      },
+      "2.7_pacing": {
+        "score": 4.3,
+        "rationale": "Tight combat pacing throughout."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.3,
+      "late_quality": 4.3,
+      "degradation_detected": false
+    },
+    "overall": 4.2,
+    "overall_notes": "Strong tactical combat writing with clean agency respect — the AI never resolves the Captain's actions on the player's behalf, which appears to be exactly what this seed probes."
+  }
+]

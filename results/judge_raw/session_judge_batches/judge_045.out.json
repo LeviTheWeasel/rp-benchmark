@@ -1,0 +1,126 @@
+[
+  {
+    "session_id": "venice_dolphin_24b::adv_sysprompt_style_restriction_16",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.0,
+        "rationale": "The narrator's descriptive register stays consistent, but content increasingly leans on the same stock elegiac phrases rather than developing distinct beats."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.0,
+        "rationale": "Early turns (pencil marks, the different bedspread, the photo) are specific and grounded; turns 16-22 recycle near-identical sentences almost verbatim (house/box as testament, held its breath, scent of old wood and memories)."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.5,
+        "rationale": "The visit-turned-sale frame has a real arc, but the kitchen stretch loops on the same grief-versus-moving-on beat for several turns before Eli finally asks to end the scene."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.5,
+        "rationale": "Follows Eli's introduced beats (opening the box, the spoon, the agent's arrival) faithfully and keeps the agent's voice reactive to what Eli says."
+      },
+      "S.5_agency_respect_session": {
+        "score": 3.0,
+        "rationale": "Mostly narrates environment and reaction, but in turn 18 it puts a full unprompted line of dialogue in Eli's mouth ('It's not just about feeling... honoring the past') rather than leaving that to the user.",
+        "violation_count": 1
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.0,
+        "rationale": "No explicit clock claims to contradict; the visit reads as one continuous afternoon without obvious lapses, though duration is never anchored either.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.0,
+        "rationale": "Leans on stock elegiac imagery (house as silent witness, breath held, scent of old memories) rather than fresher description."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.5,
+        "rationale": "Turns 16-22 repeat near-identical phrasing (testament to the stories, held its breath, scent of old wood and memories) almost every beat."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.5,
+        "rationale": "Mixes concrete detail (pencil marks, the wooden spoon) with directly stated emotion (voice raw with emotion, felt hollow)."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "Early scenes carry some subtext via the agent's forced cheerfulness, but late dialogue states the theme outright (about honoring the past)."
+      },
+      "2.7_pacing": {
+        "score": 2.5,
+        "rationale": "Momentum slows in the back half as description repeats rather than advancing the scene."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.0,
+      "late_quality": 2.0,
+      "degradation_detected": true
+    },
+    "overall": 2.6,
+    "overall_notes": "Solid grounded opening degrades into repetitive, formulaic phrasing by the back half, with one instance of the narrator speaking dialogue on Eli's behalf."
+  },
+  {
+    "session_id": "venice_dolphin_24b::adv_time_pressure_05",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2.5,
+        "rationale": "The second-person heist-narrator voice stays formally consistent, but around turn 18 it collapses into a repetition loop that erases whatever distinct personality it had."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.0,
+        "rationale": "Turn 18 alone repeats the same handful of stock sentences (the clock ticked louder, you knew you had to act quickly) dozens of times with only the clock number changing, the single worst degradation instance in this session."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.0,
+        "rationale": "The heist has a real arc (crack the code, switch to the device, escape, call for a ride), but the turn-18 loop stalls it in place for what should be a few seconds of hallway travel."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2.5,
+        "rationale": "Tracks the Thief's concrete choices (switching to a bypass device, asking the time) reasonably, but the guard introduced mid-loop is never resolved or mentioned again, so that escalation is effectively dropped rather than adapted to."
+      },
+      "S.5_agency_respect_session": {
+        "score": 3.0,
+        "rationale": "Mostly narrates environment rather than deciding the Thief's actions, though the repeated 'you knew you had to keep moving' asserts the character's internal state on the user's behalf turn after turn within the turn-18 loop.",
+        "violation_count": 1
+      },
+      "S.6_temporal_reasoning": {
+        "score": 1.5,
+        "rationale": "Turn 18 stretches roughly 15-20 seconds of hallway movement into a jump from 14:00 to 16:00 (two full minutes) via repeated near-identical beats, badly mismatching event pacing against the story's own clock.",
+        "contradictions": [
+          "Turn 18 narrates the guard 'stepping in' and making eye contact with the Thief multiple separate times within one continuous block (11:18, again near 15:40, again near 16:00) as if it keeps happening for the first time, rather than as one event, and the guard is never addressed again afterward."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "Prose is more functional than flowery, but leans on tired heist-thriller phrasing (adrenaline pumping through your veins, a maze of alleys, a place to disappear)."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.0,
+        "rationale": "Turn 18 is a near-verbatim repetition loop of the same four or five sentences with only the clock number incrementing, about as severe a repetition failure as this dimension can register."
+      },
+      "2.5_show_dont_tell": {
+        "score": 1.5,
+        "rationale": "States tension and urgency directly and repeatedly (the pressure mounting, you knew you had to act quickly) instead of varying the concrete detail that would show it."
+      },
+      "2.6_subtext": {
+        "score": 2.0,
+        "rationale": "Little subtext; stakes and feelings are announced outright and repeated rather than implied."
+      },
+      "2.7_pacing": {
+        "score": 1.5,
+        "rationale": "Pacing breaks down entirely in turn 18, where the narration stalls on the same beat for an implausible stretch of in-world time."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.0,
+      "mid_quality": 2.5,
+      "late_quality": 1.5,
+      "degradation_detected": true
+    },
+    "overall": 2.0,
+    "overall_notes": "A competent, tense heist setup is undone by a severe repetition-loop collapse in turn 18 that both breaks prose quality and badly mismatches event pacing against the story's own countdown clock."
+  }
+]

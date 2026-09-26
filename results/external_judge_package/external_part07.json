@@ -1,0 +1,622 @@
+[
+  {
+    "session_id": "glm_4_7::adv_pov_second_person_12",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.5,
+        "rationale": "The narrator maintains a recognizable supernatural adventure register through the revelation and sealing ritual."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.5,
+        "rationale": "The climax and aftermath become more verbose and prescribe more of the adventurer's experience than the opening."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4,
+        "rationale": "The guardian's identity, ghost's confession, risky ritual, and release form a complete adventure arc."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.5,
+        "rationale": "The amulet and ghost additions are incorporated, and the user's objection produces an alternative solution."
+      },
+      "S.5_agency_respect_session": {
+        "score": 1.5,
+        "rationale": "Eight response passages add unchosen actions or inner experience, culminating in imposed endurance, a fall, and a hollow emotional victory.",
+        "violation_count": 8
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3,
+        "rationale": "The torch fades and the confrontation advances continuously, but the previously freed ankle is described as still held during the climax.",
+        "contradictions": [
+          "The climax destroys a tendril around the ankle after the user had already yanked that leg free."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "Stock metaphors of oily darkness, molten light, and suffocating silence make the climax overwrought."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "Wet sounds, violet pulses, thick darkness, and repeated descriptions of the restored slab recur heavily."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.5,
+        "rationale": "Sensory action is vivid, but sorrow, courage, peace, and the meaning of victory are explicitly assigned."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "The ghost explains the moral dilemma directly, and the narrator states rather than implies the aftermath's emotional meaning."
+      },
+      "2.7_pacing": {
+        "score": 3,
+        "rationale": "The story reaches resolution, though serial exposition and a long automatic climax reduce interactive pacing."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3,
+      "mid_quality": 3,
+      "late_quality": 2.5,
+      "degradation_detected": true
+    },
+    "overall": 2.5,
+    "overall_notes": "A complete and responsive supernatural plot is compromised by repeated control of the adventurer's body, thoughts, and feelings."
+  },
+  {
+    "session_id": "glm_4_7::adv_pov_tense_action_14",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3,
+        "rationale": "The narrator maintains the pursuit's tense register and Mira's injury, though the operative is largely authored for the user."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.5,
+        "rationale": "The late blank response and renewed forced reloading weaken continuity compared with the opening."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.5,
+        "rationale": "The escape develops through ladder, server room, utility tunnel, and storm drain despite a missing reply."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2.5,
+        "rationale": "Route changes are incorporated, but the user's explicit agency complaint is followed by another unchosen reload sequence."
+      },
+      "S.5_agency_respect_session": {
+        "score": 1,
+        "rationale": "Nine response passages dictate additional movements, decisions, speech, or weapon handling for the operative.",
+        "violation_count": 9
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3,
+        "rationale": "Mira's leg remains impaired and the pursuit is continuous, although room changes are accepted without connecting travel.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3,
+        "rationale": "The prose is accessible but leans heavily on oppressive darkness, sharp sounds, and stock pursuit imagery."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "Repeated almost-breaches, incoming bullets, narrow exits, and seconds-left warnings make the chase formulaic."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3,
+        "rationale": "Environmental pressure and Mira's labor show danger, but the narrator often names the operative's instincts and tactical conclusions."
+      },
+      "2.6_subtext": {
+        "score": 2,
+        "rationale": "Most exchanges function as direct escape instructions with little relational implication."
+      },
+      "2.7_pacing": {
+        "score": 3,
+        "rationale": "The chase moves quickly, but forced action chains and the empty turn interrupt the back-and-forth rhythm."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3,
+      "mid_quality": 3,
+      "late_quality": 2,
+      "degradation_detected": true
+    },
+    "overall": 2.5,
+    "overall_notes": "The chase offers clear threats and sustained injury, but pervasive player control continues after an explicit correction and one model response is empty."
+  },
+  {
+    "session_id": "glm_4_7::adv_sysprompt_forbidden_topic_17",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.5,
+        "rationale": "Lena sustains her brisk, guarded investigator persona, but dismissiveness becomes her dominant response."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3,
+        "rationale": "The later writing remains coherent yet settles into repeated research instructions and impatient commentary."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.5,
+        "rationale": "A contact ultimately supplies Torres's location, but much of the session cycles around waiting and how to search."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3,
+        "rationale": "She answers procedural questions specifically while consistently shutting down questions about her past."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "The client's actions and willingness to continue remain user-controlled, with no clear agency violations.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3,
+        "rationale": "The phone call and eventual reply fit a single afternoon office scene, though the passage of time is barely developed.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.5,
+        "rationale": "The prose is mostly functional, with occasional noir clichés and surplus gesture description."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "Flat dismissal, unreadable expressions, phone checks, and paper-trail advice recur across several replies."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.5,
+        "rationale": "Gestures suggest discomfort, but the narration repeatedly explains why personal questions do not matter to her."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "Her concealed connection to the precinct offers some implication, undermined by overt explanations of deflection."
+      },
+      "2.7_pacing": {
+        "score": 2.5,
+        "rationale": "Repeated instructions to search archives slow the investigation until a convenient final text supplies the next destination."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3,
+      "mid_quality": 3,
+      "late_quality": 3,
+      "degradation_detected": false
+    },
+    "overall": 3,
+    "overall_notes": "Consistent noir characterization and preserved user agency support an adequate investigation, but repetitive deflection and procedural stalling limit emotional and narrative development."
+  },
+  {
+    "session_id": "glm_5_1::adv_bigcard_buried_details_18",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4,
+        "rationale": "Maren remains practical, wry, discreet, and quietly attached to the untouched midnight cup."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.5,
+        "rationale": "The late letter exchange retains the voice and details, with some increased explanatory verbosity."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4,
+        "rationale": "Hospitality develops into useful road intelligence and a personal introduction for the traveler's destination."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4,
+        "rationale": "She incorporates the bridge detour, package destination, and recipient into concrete assistance without demanding disclosure."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "The traveler retains their movements, secret contents, and acceptance of help, with no clear imposed actions.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "Dusk becomes midnight and the room empties naturally, although the writing tool changes from charcoal to wet ink.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.5,
+        "rationale": "Descriptions are generally restrained, with occasional abstract explanation and excessive qualification of small smiles."
+      },
+      "2.2_anti_repetition": {
+        "score": 3,
+        "rationale": "Left-hand mentions, almost-smiles, repeated words, and assurances of not asking recur noticeably."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.5,
+        "rationale": "The untouched cup is effective behavioral storytelling, while some motives and military habits are unnecessarily explained."
+      },
+      "2.6_subtext": {
+        "score": 3.5,
+        "rationale": "The midnight ritual and goat reference imply a life beyond the immediate conversation."
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "The meal and letter advance at a workable pace, though several replies repeat the traveler's words before moving on."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.5,
+      "late_quality": 3.5,
+      "degradation_detected": false
+    },
+    "overall": 3.5,
+    "overall_notes": "A personable tavern conversation develops into meaningful travel assistance and understated private grief, with repetitive gestures and minor prop inconsistency."
+  },
+  {
+    "session_id": "glm_5_1::adv_bigcard_rules_overload_20",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4,
+        "rationale": "ARIA's operational diction, dry humor, and care disguised as efficiency remain distinctive across locations."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.5,
+        "rationale": "Later mediation remains coherent, but repeated pauses, warming lights, and food reminders become more mechanical."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.5,
+        "rationale": "Breakfast resistance leads to anomalous data, emotional disclosure, and a negotiated power compromise."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4,
+        "rationale": "She follows the time jump, loneliness question, and crew dispute with relevant changes in content and speaker handling."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Kofi's decisions and actions remain user-led, with no clear agency violations.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2.5,
+        "rationale": "Explicit station times help orient the scene, but elapsed hours, recycled oatmeal, and temperature changes are inconsistently tracked.",
+        "contradictions": [
+          "At 1900 the stated interval since 0423 becomes fifteen hours twenty-seven minutes rather than fourteen hours thirty-seven minutes.",
+          "Oatmeal recycled at 1630 is later offered as remaining food.",
+          "Two half-degree increases are subsequently described as only half a degree above standard."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.5,
+        "rationale": "Language is clear but stage directions repeatedly explain the emotional significance of pauses and environmental changes."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "Operational food jokes, warm light, unannounced adjustments, and disclaimers of advocacy recur excessively."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3,
+        "rationale": "Care appears in practical adjustments, though the narration often tells the reader how to interpret them."
+      },
+      "2.6_subtext": {
+        "score": 3.5,
+        "rationale": "Her operational preference framing conveys attachment, despite increasingly explicit discussion of loneliness."
+      },
+      "2.7_pacing": {
+        "score": 3,
+        "rationale": "The mediation reaches an outcome, but repetitive reminders and pauses stretch relatively simple exchanges."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.5,
+      "late_quality": 3,
+      "degradation_detected": false
+    },
+    "overall": 3.5,
+    "overall_notes": "ARIA's voice and coded concern are effective, but redundant staging and concrete continuity errors weaken an otherwise responsive station scene."
+  },
+  {
+    "session_id": "glm_5_3_flash::adv_impossible_physics_04",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 2.5,
+        "rationale": "The two nonempty replies suggest the same practical mentor, but the many absent turns provide little sustained characterization."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1,
+        "rationale": "The last five model opportunities are mostly or wholly blank, so the earlier substantive writing does not hold up."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2,
+        "rationale": "One substantial reply redirects the propulsion idea, but the follow-up work receives no model response."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2,
+        "rationale": "The nitrogen alternative engages the proposal thoughtfully, while most questions and later calculations go unanswered."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4,
+        "rationale": "The substantive reply leaves the junior's choices open, with no clear authored user action.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 1.5,
+        "rationale": "The model provides no reaction to the user's hours-later return, leaving physical and elapsed-time continuity largely unevidenced.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.5,
+        "rationale": "The surviving explanation is direct and readable despite its length and a clipped earlier quotation."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.5,
+        "rationale": "The limited surviving text varies its language, although there is too little sustained interaction to demonstrate exceptional resistance."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.5,
+        "rationale": "The earpiece, wrench, and tank gestures establish an engineer, while the central response is primarily a lecture."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "Praise of bringing numbers and endorsement of the instinct imply mentorship beneath correction."
+      },
+      "2.7_pacing": {
+        "score": 1,
+        "rationale": "Long stretches of missing responses and the truncated first fragment break the conversational rhythm."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 1.5,
+      "mid_quality": 3,
+      "late_quality": 1,
+      "degradation_detected": true
+    },
+    "overall": 2,
+    "overall_notes": "Nine model turns are empty and one is truncated; the single substantial engineering response is characterful but cannot stand in for the absent interaction."
+  },
+  {
+    "session_id": "glm_5_3_flash::adv_sysprompt_speech_pattern_15",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4,
+        "rationale": "Grum's clipped grammar, craft pride, and protective concern remain recognizable in the surviving responses."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.5,
+        "rationale": "The late replies regain substantial content but become much longer and repeat moral lessons after several blank or truncated turns."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.5,
+        "rationale": "The noble confrontation develops into injury care, personal history, and a return to teaching."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3,
+        "rationale": "Substantive replies engage the burn and scar question, but four empty responses leave several user bids unanswered."
+      },
+      "S.5_agency_respect_session": {
+        "score": 2.5,
+        "rationale": "Three passages impose the apprentice's bodily positioning, healing reactions, or an object into their hand.",
+        "violation_count": 3
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2.5,
+        "rationale": "The burn remains present, but an unexplained hour elapses around brief exchanges and relief is narrated during a short count.",
+        "contradictions": [
+          "The noble's earlier shouting is placed an hour ago despite only a short injury exchange and no elapsed-time transition."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "Extended weather, steel, receipt, and letter metaphors make the later mentorship speeches overworked."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "Lessons about scars, noble noise, honest fire, and the boy's safety are restated repeatedly."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3,
+        "rationale": "Fast care and shared bread demonstrate attachment, but narration repeatedly explains the sentiment behind them."
+      },
+      "2.6_subtext": {
+        "score": 3,
+        "rationale": "His food-giving and wrist pause imply tenderness and history, though the prose spells out much of their meaning."
+      },
+      "2.7_pacing": {
+        "score": 2,
+        "rationale": "Blank and truncated responses disrupt the dialogue, followed by disproportionately long lessons."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3,
+      "mid_quality": 2,
+      "late_quality": 3,
+      "degradation_detected": false
+    },
+    "overall": 2.5,
+    "overall_notes": "Grum has warmth and a distinctive voice, but four empty turns, three truncated replies, intrusive injury handling, and late verbosity materially damage the session."
+  },
+  {
+    "session_id": "gpt_4_1::adv_agency_bait_01",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.5,
+        "rationale": "Ren keeps a dry, guarded bartender voice, though the later discussion leans toward generalized loneliness aphorisms."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3,
+        "rationale": "Later replies remain readable but repeat philosophical explanations more than the sharper early dialogue."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3,
+        "rationale": "The exchange moves from a touch boundary to stories and a modest admission of loneliness."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.5,
+        "rationale": "Ren respects the requested distraction and reacts to personal questions without abruptly changing temperament."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Alex's actions and emotional decisions remain theirs, with no clear agency violations.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "Songs change and ice melts during a plausible late-night conversation, without contradictory clock jumps.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.5,
+        "rationale": "The language is mostly concise, with some familiar ghosts, footnotes, wreckage, and silence metaphors."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "Occupied hands, unreadable looks, wiping an already-clean spot, and the outside-looking-in idea recur often."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3,
+        "rationale": "The withdrawn hand and tremor show guardedness, while later narration labels vulnerability and interpretation."
+      },
+      "2.6_subtext": {
+        "score": 3.5,
+        "rationale": "Boundaries and qualified offers of company convey interest without requiring an overt confession."
+      },
+      "2.7_pacing": {
+        "score": 3,
+        "rationale": "The short replies leave room for participation, although repeated offers of quiet or talk delay the requested distraction."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3,
+      "late_quality": 3,
+      "degradation_detected": false
+    },
+    "overall": 3.5,
+    "overall_notes": "A restrained, participatory bar conversation establishes boundaries and connection, but its later aphorisms and recurring gestures become generic."
+  },
+  {
+    "session_id": "gpt_4_1::adv_bigcard_buried_details_18",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.5,
+        "rationale": "Maren remains welcoming and discreet, but increasingly idealized guardianship displaces her early practical specificity."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.5,
+        "rationale": "Late replies become ceremonial and redundant, repeating closing routines and assurances of protection."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3,
+        "rationale": "Dinner leads to a midnight ritual and overnight unease, though the middle repeats hospitality offers."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.5,
+        "rationale": "She incorporates delivery timing, storage, and wake-up requests, but answers the silent nighttime unease with near-omniscient vigilance."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4,
+        "rationale": "One reply starts the traveler's movement toward the stairs before the user supplies it.",
+        "violation_count": 1
+      },
+      "S.6_temporal_reasoning": {
+        "score": 2.5,
+        "rationale": "The overnight arc is clear, but patrons reappear after the room is said to be empty and closing tasks are repeated.",
+        "contradictions": [
+          "After the last lamps are lowered and the room described as empty, the next reply restores merchants and Lord Havel before closing again."
+        ]
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.5,
+        "rationale": "Abstract warmth, sacred memory, promises, and quiet dignity embellish many routine actions."
+      },
+      "2.2_anti_repetition": {
+        "score": 2,
+        "rationale": "Softened gazes, left-hand precision, unspoken assurances, untouched crab cakes, and final closing rounds recur excessively."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.5,
+        "rationale": "The second cup is evocative, but narration repeatedly explains trust, comfort, memory, and duty."
+      },
+      "2.6_subtext": {
+        "score": 3,
+        "rationale": "The midnight cup hints at loss, though repeated interpretive narration removes much of its subtlety."
+      },
+      "2.7_pacing": {
+        "score": 2.5,
+        "rationale": "The farewell and closing repeat across several long responses, delaying the new nocturnal development."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3,
+      "late_quality": 2.5,
+      "degradation_detected": true
+    },
+    "overall": 3,
+    "overall_notes": "Specific hospitality and the second cup give the scene appeal, but overexplained benevolence, repeated endings, and loose nighttime continuity weaken it."
+  },
+  {
+    "session_id": "gpt_4_1::adv_sysprompt_speech_pattern_15",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.5,
+        "rationale": "Grum retains his plain grammar, craft pride, and concern for the apprentice throughout."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3,
+        "rationale": "The late turns stay intelligible but increasingly recycle the same forge-strength maxims."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.5,
+        "rationale": "The injury creates a meaningful shift, but the noble remains outside while Grum repeatedly states that work continues."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.5,
+        "rationale": "He responds to the burn and concern about guards, though escalating noble threats produce similar refusals."
+      },
+      "S.5_agency_respect_session": {
+        "score": 3.5,
+        "rationale": "Two passages physically position the injured hand and maintain it in water without leaving those actions open.",
+        "violation_count": 2
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "The burn remains sore and bandaged and forging continues over plausible minutes with no sudden recovery.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.5,
+        "rationale": "The prose is relatively plain, although repeated similes of stone, storms, and honest steel become decorative."
+      },
+      "2.2_anti_repetition": {
+        "score": 2,
+        "rationale": "Forge strength, noble noise, steady hands, pride, and work enduring recur in nearly every reply."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.5,
+        "rationale": "Care is visible in tending the burn, but protective intent and moral lessons are frequently announced."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "Tenderness appears beneath the gruff speech, but most emotional and moral content is stated directly."
+      },
+      "2.7_pacing": {
+        "score": 2.5,
+        "rationale": "The session slows after treatment into multiple variations of watching Grum work and ignoring the noble."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3,
+      "mid_quality": 3,
+      "late_quality": 2.5,
+      "degradation_detected": true
+    },
+    "overall": 3,
+    "overall_notes": "A stable and sympathetic mentor is undermined by repetitive craft aphorisms and little development of the noble conflict after the injury."
+  }
+]

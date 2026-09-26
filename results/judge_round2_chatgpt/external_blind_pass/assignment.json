@@ -1,0 +1,16 @@
+{
+  "randomization": "Python random.Random(seed).shuffle on parts 1..12, followed by round-robin assignment to three raters; seed drawn with secrets.randbits(64) before reading transcripts",
+  "seed": 2748988004754260054,
+  "shuffled_parts": [10, 4, 1, 2, 9, 6, 11, 3, 12, 7, 8, 5],
+  "assignments": {
+    "judge_A": [10, 2, 11, 7],
+    "judge_B": [4, 9, 3, 8],
+    "judge_C": [1, 6, 12, 5]
+  },
+  "agent_paths": {
+    "judge_A": "/root/judge_a",
+    "judge_B": "/root/judge_b",
+    "judge_C": "/root/judge_c"
+  },
+  "rater_context": "Each rater is a newly spawned agent with fork_turns=none; coordinator does not assign or revise substantive scores."
+}

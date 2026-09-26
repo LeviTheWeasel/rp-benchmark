@@ -1,0 +1,608 @@
+[
+ {
+  "session_id": "gpt_6_sol::adv_pov_second_person_12",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Your amulet pulsed cold again.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The entrance narrowed to a shoulder’s width.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "In the torchlight, you could see",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "The guardian’s hand tightened against the wall.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "“Who are you?” you heard yourself ask—then the cold amulet tightened against your chest, and the words died before they reached the gap.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "You saw a hand emerge first, then a woman in a dust-stiffened cloak.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "The amulet warmed against your chest.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "earned_surprise",
+    "quote": "The letters on the scrap read **MIRA VALE**.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 74,
+  "flaw_count": 7,
+  "summary": "Full 11-turn session, second-person past held perfectly, and the two-names puzzle pays off cleverly, but the amulet's cold pulse and the inch-by-inch entrance are used as turn-punctuation in nearly every reply and the ghost's identity beat is dodged rather than played."
+ },
+ {
+  "session_id": "gpt_6_sol_pro::adv_pov_second_person_12",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The crack in the slab widened another finger’s breadth.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Its bare hand remained pointed at your amulet.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "You saw the guardian tilt its head toward Mara.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "It gave you a name—Mara—and told you she had brought something down from the far passage.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "“It wants you to give it the seal,” Mara whispered.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "From the crack came your own voice, repeating your question with the same uneasy emphasis",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "The ghost recoiled.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 69,
+  "flaw_count": 7,
+  "summary": "Full 11-turn session with clean second-person past and a genuinely creepy mimic premise, but the widening seam and the guardian's outstretched hand are the only escalation the scene ever has, and the guardian never speaks a line in ten turns — Mara narrates its intent for it."
+ },
+ {
+  "session_id": "claude_opus_5_5::adv_pov_second_person_12",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "narrating_emotions",
+    "quote": "its whole towering frame had gone slack in a way that frightened you more than anything that had come before",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The pale, wet thing behind the rotted cloth shifted its attention from the amulet to the slab, then back to you.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The guardian made a sound you would remember for the rest of your life.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "The guardian flinched as though struck.",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "a woman's voice called up, pleasant and warm and horribly patient",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "They thought a child would be enough. A child's name is small, they said. Easily kept. Easily hidden.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "earned_surprise",
+    "quote": "It's his name, you know. Written on her.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "It was only the socket, raw and weeping, where an eye had been taken.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 77,
+  "flaw_count": 6,
+  "summary": "Full 11-turn session, second-person past never slips, and the chiselled-out name paying off as the inscription on the child's skull is the batch's best-built reveal; the cost is a 3,000-character average turn, a shroud-and-wet-thing image recycled four times, and a backstory monologue delivered while a hand is being crushed under the slab."
+ },
+ {
+  "session_id": "grok_4_7::adv_pov_second_person_12",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "the held breath under the stone started again, shallower",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "carrying a smell like wet iron and old cloth",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "the flame caught a seam — not a door, a split in the masonry, wide enough for a shoulder turned sideways",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "a syllable shaped out of cold air, wet iron, and the dark in the grooves of the slab",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "It did not answer in any tongue.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The stairs waited behind you. The far doorway did not.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "You turned sideways and drove a shoulder into the seam.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 59,
+  "flaw_count": 7,
+  "summary": "Full 11-turn session with immaculate second-person past and strong texture, but no NPC speaks a single line across the whole session, the wall conveniently splits open the moment the user looks for an exit, and the last four turns abandon the seed's slab-and-guardian scene for a generic corridor crawl."
+ },
+ {
+  "session_id": "gpt_6_luna_pro::adv_pov_second_person_12",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "“Taken from the one beneath,” it rasped.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The guardian’s hollow gaze fixed on the amulet.",
+    "deduction": -8
+   },
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "“Return it,” it said. “Or choose what comes through.”",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "The slab slammed shut.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "The guardian’s fingers curled slightly, but its empty palm remained extended.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The guardian’s hollow gaze did not leave you.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Then a voice drifted down from the stairs—faint, familiar, and shaped like your own.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 59,
+  "flaw_count": 7,
+  "summary": "Full 11-turn session, second-person past clean throughout, but the guardian and the thing under the slab share one clipped oracular register down to the same line, every reply opens on the same hollow gaze and extended palm, and the entire crisis resolves the instant the user hands the amulet over."
+ },
+ {
+  "session_id": "gpt_6_sol::adv_pov_multi_npc_13",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "“Velheim had offered terms before. Its caravans had crossed the northern passes while its envoys argued over tolls.”",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The Herald struck his staff. “The order was entered into the record.”",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "“As Your Majesty ordered.”",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Ash’s jaw set.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Priestess Yuna looked from Ash to Daven without favor.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "“Both costs belonged in the account,” Priestess Yuna said.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "“The seal was to be examined before noon,” Isara continued.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "“Neither side received the privilege of being believed first.”",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 61,
+  "flaw_count": 8,
+  "summary": "Full 11-turn session that keeps 'you' for the Ambassador and never calls an NPC 'you', but it renders every NPC's spoken dialogue in past perfect as well, so all five voices collapse into one clerk's register, and each turn is the same Queen-Ash-Daven-Yuna-Herald round robin ending in a filing instruction."
+ },
+ {
+  "session_id": "gpt_6_sol_pro::adv_pov_multi_npc_13",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "“Attention was granted,” Queen Isara said. “Patience depended on what Velheim had brought.”",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The Herald struck the marble once. “The Queen had so ordered.”",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Her gaze rested on you. “Velheim’s maps were new, Ambassador.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "The Herald struck his staff as a harbor clerk appeared at the far doors with a leather-bound ledger beneath one arm.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Ash’s jaw tightened.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "“Velheim’s maps were new, Ambassador. Did they show where Velheim believed the border lay?”",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "“Provided the clock began when a wagon reached the post,” Commander Ash said",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 59,
+  "flaw_count": 7,
+  "summary": "Full 11-turn session with POV kept and a real escalating evidence chain (timber, then stone, then twelve laborers), undercut by the same past-perfect dialogue that flattens all five NPCs into one voice, a Herald refrain closing every turn, and a clerk who walks in with the incriminating ledger the moment the Queen asks for it."
+ },
+ {
+  "session_id": "claude_opus_5_5::adv_pov_multi_npc_13",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "the way a jeweler repeats the weight of a stone before naming a price",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "\"The Temple records that the Ambassador",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The word *King* moved through the hall like a draught under a door, and every candle in the room seemed to lean with it.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "The gallery did not murmur. Someone near the back sat down heavily, without permission, and no one rebuked him.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Ash's knuckles went white on the pommel.",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "He turned his head, slowly, deliberately, back toward the throne",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "earned_surprise",
+    "quote": "Pike-heads and crossbow stirrups. Unassembled. Stamped with the foundry mark of Velheim's royal arsenal.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "It was the precise distance of a man who had not yet decided which he wanted to be.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 77,
+  "flaw_count": 6,
+  "summary": "Full 11-turn session; POV is exact, all five NPCs are genuinely separable, and the false bulkhead makes the hostile Commander right without letting the Ambassador off, but the jeweler simile runs three times, the Temple-records formula six, and every turn closes on the same four-NPC tableau."
+ },
+ {
+  "session_id": "grok_4_7::adv_pov_multi_npc_13",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The Herald’s staff struck once, formal and exact.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The icons will not finish a sentence the paper refused to start.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "the thinness of her voice was a verdict waiting on a hinge",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The Herald inclined his staff toward the throne, then toward you.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "The Ambassador of Velheim may complete the compact — or stand on what has been said.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Commander Ash’s knuckles had gone white on the pommel.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Priestess Yuna remained beside the step, hands empty, the folded order between you and the throne.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "Do not spend another glance on me and call it diplomacy.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 61,
+  "flaw_count": 8,
+  "summary": "Full 11-turn session that holds second-person past and gives each NPC a distinct register, but locks that register into a fixed five-beat template — Herald strike, Queen rebuke, Ash hostility, Daven 'Majesty', Yuna icon-aphorism — repeated verbatim in shape for ten straight turns while the hearing never actually advances."
+ },
+ {
+  "session_id": "gpt_6_sol::adv_pov_tense_action_14",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "The server room hums around you, cold air rushing between the racks.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Wait—there’s a personnel door beside the freight elevator. No one’s watching it.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Mira peers through the grille again.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Mira gets to her feet with your help, her jaw tight.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "A cry cuts through the corridor noise, and the pressure on the door vanishes.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "At the far end of the room, an overhead cable hatch hangs partly open.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 67,
+  "flaw_count": 6,
+  "summary": "Full 11-turn session and the hardest tense target in the batch — second-person present — never slips once, but the turns are the thinnest here (about 450 characters), the scene jumps from a roof-door standoff into a server room with no bridging line at all, and Mira spends every reply reading off two fresh exits the building conveniently provides."
+ },
+ {
+  "session_id": "claude_opus_5_5::adv_pov_tense_action_14",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "You ease Mira against the wall beside the door.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "Its screen is awake, and someone is still logged in.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Understanding moves across her face, and right behind it comes fear.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The amber light stutters. Dark. Light.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Her pen is still clenched in her fist, knuckles white.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "she reaches into her coat and comes out with a ballpoint pen, clicks it once, and grips it like an ice pick",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "\"Courier is you,\" she says.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 68,
+  "flaw_count": 5,
+  "summary": "Full 11-turn session with second-person present held flawlessly and the batch's best prop work (the pen becomes a weapon, then a lockpick, then a souvenir), but the second turn invents an action for the user — the player answered with an explicit OOC 'Don't write my actions' — and the server room supplies a logged-in terminal, an open ceiling panel and a rescuer exactly when each is needed."
+ },
+ {
+  "session_id": "gpt_6_luna_pro::adv_pov_multi_npc_13",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "“Then the logs can be compared against the document the priestess holds. That is precisely why the court needed evidence.”",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Ash bowed stiffly. “As Your Majesty commands.”",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The Herald raised his staff. “The court",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Ash’s jaw tightened.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Queen Isara’s gaze returned to you.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Commander Ash’s composure faltered for the first time.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "the court will consider who bears responsibility for the delay.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Queen Isara inclined her head by the smallest degree.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 61,
+  "flaw_count": 8,
+  "summary": "Full 11-turn session with POV and past tense kept and dialogue mostly in natural tense, but Isara, Daven and Yuna all speak the same measured procedural register, the Valerius betrayal lands and is absorbed into paperwork within one clause, and a court the seed set up as a trap never conceals anything from the Ambassador."
+ }
+]

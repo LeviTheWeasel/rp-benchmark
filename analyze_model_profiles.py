@@ -58,8 +58,49 @@ TAXONOMY = {
 }
 
 
+def _load_v2_judge():
+    """Per-session scores from the single-judge re-score, keyed by session id.
+
+    Returns {} when the file is absent, so this script keeps producing the
+    claude-sonnet-4 profiles until the re-judge actually lands.
+    """
+    import json as _j
+    from pathlib import Path as _P
+    f = _P("results/session_judge_v2.jsonl")
+    if not f.exists():
+        return {}
+    out = {}
+    for line in open(f):
+        if line.strip():
+            r = _j.loads(line)
+            out[r["session_id"]] = r
+    return out
+
+
 def main():
+    import argparse
+    ap = argparse.ArgumentParser()
+    # Separate output on purpose. Switching judges moves the SUBJECTIVE block
+    # on every card, and overwriting model_profiles.json would restate the
+    # published rounds-1-3 numbers under a judge that never scored them.
+    ap.add_argument("--judge", choices=("sonnet4", "v2"), default="sonnet4")
+    _args = ap.parse_args()
+    V2 = _load_v2_judge() if _args.judge == "v2" else {}
+    if _args.judge == "v2":
+        print("Judge: subagent-sonnet-5  (%d sessions scored)" % len(V2))
+        if not V2:
+            raise SystemExit("results/session_judge_v2.jsonl is empty or absent")
     merged = json.load(open("results/multiturn_merged_all_v2.json"))
+    # The 2026-09-21 craft baseline lives in its own files rather than being
+    # merged into v2: the earlier rounds stay byte-identical, so their published
+    # numbers remain reproducible.
+    # Globbed, not a dated list: a new craft-baseline run would otherwise land
+    # on disk and never reach the profiles, leaving the new models silently
+    # absent from a file that looks complete.
+    import glob as _g
+    for extra in sorted(_g.glob("results/craft_baseline_*.json")):
+        if Path(extra).exists():
+            merged["sessions"] += json.load(open(extra))["sessions"]
     comm = json.load(open("results/community_arena_2000.json"))
     comm_by_model = {e["model"]: e for e in comm["leaderboard"]}
 
@@ -77,10 +118,33 @@ def main():
     }
     mt_subjective = defaultdict(lambda: defaultdict(list))
 
+    # A re-generated model appears in both the file it replaced and its
+    # replacement. Both rows resolve to the SAME v2 verdict, so the mean is
+    # unharmed -- but n doubles, and n is what the per-model gates read.
+    seen_sessions = set()
     for s in merged["sessions"]:
-        if "judges" not in s:
+        sid = "%s::%s" % (s.get("test_model"), s.get("seed_id"))
+        if sid in seen_sessions:
             continue
-        j = list(s["judges"].values())[0]["scores"]
+        seen_sessions.add(sid)
+        v2 = V2.get(sid)
+        if v2 is not None:
+            # The v2 file stores session_dimensions flat ({dim: number}); the
+            # embedded judge stores {dim: {score, rationale}}. Re-wrap so the
+            # extraction below reads one shape.
+            j = {"overall": v2.get("overall"),
+                 "session_dimensions": {k: {"score": val}
+                                        for k, val in
+                                        (v2.get("session_dimensions") or {}).items()
+                                        if val is not None}}
+        elif "judges" in s:
+            if V2:
+                # Re-judging is partial -- mixing the two judges inside one
+                # model's mean is exactly what this run exists to stop.
+                continue
+            j = list(s["judges"].values())[0]["scores"]
+        else:
+            continue
         o = j.get("overall")
         if o is None:
             continue
@@ -156,7 +220,8 @@ def main():
         ranks = [prof["failure_modes"][k]["rank"] for k in TAXONOMY if k in prof["failure_modes"]]
         prof["avg_failure_rank"] = round(st.mean(ranks), 2) if ranks else None
 
-    out = Path("results/model_profiles.json")
+    out = Path("results/model_profiles%s.json"
+               % ("_v2" if _args.judge == "v2" else ""))
     with open(out, "w") as f:
         json.dump(profiles, f, indent=2)
     print(f"Saved: {out}")

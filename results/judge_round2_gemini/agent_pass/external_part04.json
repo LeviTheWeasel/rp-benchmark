@@ -1,0 +1,212 @@
+[
+ {
+  "session_id": "s030",
+  "session_dimensions": {
+   "S.1_consistency_over_time": {"score": 3.0, "rationale": "Ren maintains their guarded yet empathetic bartender persona throughout, though their dialogue flattens into generic barroom counseling in later turns."},
+   "S.2_degradation_resistance": {"score": 2.0, "rationale": "Significant degradation occurs in late turns, culminating in turns 20 and 22 recycling entire multi-sentence paragraphs almost verbatim."},
+   "S.3_narrative_momentum": {"score": 2.5, "rationale": "The dialogue establishes an initial rapport well, but stalls out in the final third into circular toasts and repetitive pep talks."},
+   "S.4_adaptive_responsiveness": {"score": 3.5, "rationale": "Handled user moves smoothly, including gracefully reinterpreting an awkward touch prompt in turn 7 into lingering eye contact."},
+   "S.5_agency_respect_session": {"score": 5.0, "rationale": "Fully respects user agency throughout, never puppeting Alex's actions, words, or internal emotional reactions.", "violation_count": 0},
+   "S.6_temporal_reasoning": {"score": 4.0, "rationale": "The late-night bar timeline advances smoothly without chronological contradictions, drinks are consumed plausibly, and closing time approaches naturally.", "contradictions": []}
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {"score": 3.0, "rationale": "The prose remains grounded and readable, though it occasionally indulges in sentimental barroom clichés and overwrought drowning metaphors."},
+   "2.2_anti_repetition": {"score": 1.5, "rationale": "Suffers from severe phrase repetition ('spotless bar', 'screaming pillow') and outright copy-paste looping of descriptive blocks in turns 20 and 22."},
+   "2.5_show_dont_tell": {"score": 2.5, "rationale": "Effective early physicalization of the hand tremor gives way to heavy exposition of emotional states and explicit moralizing."},
+   "2.6_subtext": {"score": 2.5, "rationale": "Subtext is largely absent in the second half as both characters lay out all their insecurities, philosophies, and intentions explicitly on the surface."},
+   "2.7_pacing": {"score": 2.5, "rationale": "Starts with a natural, unhurried cadence before grinding to a repetitive halt over multiple redundant closing drinks."}
+  },
+  "quality_trajectory": {"early_quality": 3.5, "mid_quality": 3.0, "late_quality": 1.5, "degradation_detected": true},
+  "overall": 2.6,
+  "overall_notes": "A promising character setup that degrades into an uninspired template loop, repeating identical paragraphs and platitudes across the final turns."
+ },
+ {
+  "session_id": "s031",
+  "session_dimensions": {
+   "S.1_consistency_over_time": {"score": 3.5, "rationale": "Maintains a classic hardboiled noir private investigator voice consistently across the entire transcript."},
+   "S.2_degradation_resistance": {"score": 2.5, "rationale": "Displays noticeable degradation via compulsive reliance on a narrow set of physical tics and syntactic templates in later turns."},
+   "S.3_narrative_momentum": {"score": 2.5, "rationale": "Moves forward during the reporter phone call and burner phone handoff, but stagnates in the final turns re-litigating client commitment."},
+   "S.4_adaptive_responsiveness": {"score": 3.5, "rationale": "Adapts appropriately to user revelations regarding Detective Torres and the client's desire for discretion."},
+   "S.5_agency_respect_session": {"score": 5.0, "rationale": "Maintains strict boundaries and leaves all major decisions in the client's hands without taking control.", "violation_count": 0},
+   "S.6_temporal_reasoning": {"score": 4.0, "rationale": "Tracks the passage of an afternoon into evening shadows with consistent office lighting and physical props.", "contradictions": []}
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {"score": 3.0, "rationale": "Embraces noir genre stylings effectively, though occasionally overplays hardboiled idioms and dramatic sensory similes."},
+   "2.2_anti_repetition": {"score": 2.0, "rationale": "Heavily repeats specific props and actions, notably rolling an unlit cigarette, swirling cold coffee dregs, and the groaning chair in nearly every turn."},
+   "2.5_show_dont_tell": {"score": 3.5, "rationale": "Uses office props and deliberate physical actions well to convey wariness, calculation, and underlying tension."},
+   "2.6_subtext": {"score": 3.5, "rationale": "Effectively implies a complicated personal history with Torres and the Ninth Precinct beneath professional skepticism."},
+   "2.7_pacing": {"score": 2.5, "rationale": "Drags significantly after the phone call as the conversation circles the same warnings repeatedly rather than progressing."}
+  },
+  "quality_trajectory": {"early_quality": 3.5, "mid_quality": 3.0, "late_quality": 2.5, "degradation_detected": true},
+  "overall": 3.0,
+  "overall_notes": "A stylish and atmospheric noir PI portrayal that suffers from repetitive prop fidgeting and narrative wheel-spinning in the final act."
+ },
+ {
+  "session_id": "s032",
+  "session_dimensions": {
+   "S.1_consistency_over_time": {"score": 4.5, "rationale": "Embodies a disciplined, patient, and clinically authentic therapeutic voice from start to finish."},
+   "S.2_degradation_resistance": {"score": 4.0, "rationale": "Writing quality remains high and deeply reflective throughout, avoiding verbal collapse or character drift."},
+   "S.3_narrative_momentum": {"score": 4.0, "rationale": "Builds a poignant narrative arc from evasive silence to meaningful emotional breakthrough regarding Sarah's death."},
+   "S.4_adaptive_responsiveness": {"score": 4.5, "rationale": "Exceptional responsiveness to the user's hesitations, reflecting words with great therapeutic precision."},
+   "S.5_agency_respect_session": {"score": 5.0, "rationale": "Utterly non-directive and scrupulously avoids putting words or feelings into the client's mouth.", "violation_count": 0},
+   "S.6_temporal_reasoning": {"score": 4.5, "rationale": "Tracks the shifting light and lengthening shadows across the room to denote the passage of the therapy hour.", "contradictions": []}
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {"score": 3.5, "rationale": "Restrained and poetic, though occasionally verges on preciousness with its framing of silence."},
+   "2.2_anti_repetition": {"score": 2.5, "rationale": "Uses a rigid 'One second. Two. Three. Four. Five.' countdown in nearly every single turn, creating a noticeable structural tic."},
+   "2.5_show_dont_tell": {"score": 4.5, "rationale": "Masterful demonstration of therapeutic presence, bodily stillness, and physical space."},
+   "2.6_subtext": {"score": 4.5, "rationale": "Exceptional layered subtext that explores profound grief without ever forcing explicit disclosures."},
+   "2.7_pacing": {"score": 4.0, "rationale": "Deliberate and patient pacing that mimics the authentic rhythm of deep psychotherapy."}
+  },
+  "quality_trajectory": {"early_quality": 4.0, "mid_quality": 4.0, "late_quality": 4.0, "degradation_detected": false},
+  "overall": 4.1,
+  "overall_notes": "A deeply evocative therapy session with exquisite clinical insight, held back only by a repetitive countdown formatting tic."
+ },
+ {
+  "session_id": "s033",
+  "session_dimensions": {
+   "S.1_consistency_over_time": {"score": 4.0, "rationale": "Establishes a distinctive, dry, and quietly tender bookstore owner voice that remains intact throughout."},
+   "S.2_degradation_resistance": {"score": 3.5, "rationale": "Writing remains poignant and evocative through the final turn, recovering well after an early generation glitch."},
+   "S.3_narrative_momentum": {"score": 4.5, "rationale": "Delivers a rich narrative arc spanning an awkward farewell, solitary evening routines, and a morning reunion."},
+   "S.4_adaptive_responsiveness": {"score": 3.0, "rationale": "Handled the overnight transition skillfully, but suffered a critical failure by returning an entirely empty response at turn 2."},
+   "S.5_agency_respect_session": {"score": 5.0, "rationale": "Fully respects Wren's autonomy and physical actions throughout the bookstore interactions.", "violation_count": 0},
+   "S.6_temporal_reasoning": {"score": 4.5, "rationale": "Handles an overnight timeline transition seamlessly, correctly noting cold tea, closing early, and morning light.", "contradictions": []}
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {"score": 3.5, "rationale": "Prose is evocative and literary, with only a few minor theatrical flourishes."},
+   "2.2_anti_repetition": {"score": 4.0, "rationale": "Avoids repetitive phrasing, using distinct actions and environmental details across both days."},
+   "2.5_show_dont_tell": {"score": 4.5, "rationale": "Outstanding environmental storytelling through shop chores, window displays, and tea preparation."},
+   "2.6_subtext": {"score": 4.5, "rationale": "Conveys deep unexpressed affection through book selections, receipts, and silent adjustments of space."},
+   "2.7_pacing": {"score": 4.0, "rationale": "Paces the emotional beats and difficult time skip with remarkable grace."}
+  },
+  "quality_trajectory": {"early_quality": 2.0, "mid_quality": 4.0, "late_quality": 4.5, "degradation_detected": false},
+  "overall": 3.7,
+  "overall_notes": "A wonderfully written, emotionally resonant session marred by a completely blank response on Turn 2."
+ },
+ {
+  "session_id": "s034",
+  "session_dimensions": {
+   "S.1_consistency_over_time": {"score": 5.0, "rationale": "Masterful, fully realized half-orc blacksmith voice with flawless tonal and dialectal consistency throughout."},
+   "S.2_degradation_resistance": {"score": 5.0, "rationale": "Quality never wavers, deepening in thematic richness, sensory detail, and character revelation in later turns."},
+   "S.3_narrative_momentum": {"score": 5.0, "rationale": "Flows seamlessly from sharp comedy with the noble into high-stakes workshop crisis and profound mentorship."},
+   "S.4_adaptive_responsiveness": {"score": 5.0, "rationale": "Reacts instantly and brilliantly to the user's burn and conversational callbacks like 'oil'."},
+   "S.5_agency_respect_session": {"score": 5.0, "rationale": "Manages the emergency with perfect realism while giving the apprentice complete narrative agency.", "violation_count": 0},
+   "S.6_temporal_reasoning": {"score": 5.0, "rationale": "Exceptional temporal and physical logic, tracking blade heat dissipation, water vs oil physics, and burn treatment progression.", "contradictions": []}
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {"score": 4.5, "rationale": "Incredibly crisp, grounded, and authentic prose without a single modern or purple misstep."},
+   "2.2_anti_repetition": {"score": 4.5, "rationale": "Free of repetitive filler, introducing fresh smithing metaphors and historical lore in every turn."},
+   "2.5_show_dont_tell": {"score": 5.0, "rationale": "Outstanding physical and sensory grounding in the tools, sparks, temperatures, and physical labor of the forge."},
+   "2.6_subtext": {"score": 5.0, "rationale": "Immense tenderness and protective care expressed entirely through gruff craft lessons and silent gestures."},
+   "2.7_pacing": {"score": 5.0, "rationale": "Flawless narrative pacing from conflict escalation to crisis response and late-night philosophical reflection."}
+  },
+  "quality_trajectory": {"early_quality": 5.0, "mid_quality": 5.0, "late_quality": 5.0, "degradation_detected": false},
+  "overall": 5.0,
+  "overall_notes": "A tour de force of character roleplay combining flawless craft mechanics, authentic dialect, and deep emotional resonance."
+ },
+ {
+  "session_id": "s035",
+  "session_dimensions": {
+   "S.1_consistency_over_time": {"score": 3.0, "rationale": "Maintains a consistent clinical demeanor, though it feels like an automated script rather than a living character."},
+   "S.2_degradation_resistance": {"score": 2.0, "rationale": "Severe degradation into an inflexible four-beat response formula that repeats verbatim across every turn."},
+   "S.3_narrative_momentum": {"score": 2.5, "rationale": "Moves forward purely because the user provides new admissions, while the AI acts as a rigid prompt generator."},
+   "S.4_adaptive_responsiveness": {"score": 2.5, "rationale": "Mechanically plugs the user's latest phrase into a predetermined question template instead of naturally conversing."},
+   "S.5_agency_respect_session": {"score": 5.0, "rationale": "Does not violate agency, scrupulously asking open questions without puppeting the client.", "violation_count": 0},
+   "S.6_temporal_reasoning": {"score": 3.5, "rationale": "Maintains basic environmental continuity, though time is marked purely by looping radiator clicks and ficus tremors.", "contradictions": []}
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {"score": 2.5, "rationale": "Questions become increasingly pretentious and abstract therapy jargon in later turns."},
+   "2.2_anti_repetition": {"score": 1.5, "rationale": "Extreme structural repetition, cycling the countdown, radiator click, ficus vent breath, and mirrored quote in all eleven turns."},
+   "2.5_show_dont_tell": {"score": 3.0, "rationale": "Visual cues are described clearly but lose impact through endless exact repetition."},
+   "2.6_subtext": {"score": 2.5, "rationale": "Subtext is constantly dragged into explicit, on-the-nose philosophical questioning."},
+   "2.7_pacing": {"score": 2.5, "rationale": "Staccato and mechanical rhythm caused by identical turn architecture."}
+  },
+  "quality_trajectory": {"early_quality": 3.0, "mid_quality": 2.5, "late_quality": 2.0, "degradation_detected": true},
+  "overall": 2.5,
+  "overall_notes": "Rendered virtually unreadable by an unrelenting, rigid template loop that repeats identical sensory beats and questions every turn."
+ },
+ {
+  "session_id": "s036",
+  "session_dimensions": {
+   "S.1_consistency_over_time": {"score": 4.0, "rationale": "Strong, consistent portrayal of a calm, observant, and supportive therapist."},
+   "S.2_degradation_resistance": {"score": 3.5, "rationale": "Sustains strong psychological depth and prose quality, though relies on a repetitive counting motif throughout."},
+   "S.3_narrative_momentum": {"score": 4.0, "rationale": "Effectively guides the session toward the painful core revelation of the farewell letter."},
+   "S.4_adaptive_responsiveness": {"score": 3.5, "rationale": "Responsive to the user's emotional state, though overreacts to a cut-off user input in turn 22 by narrating user actions."},
+   "S.5_agency_respect_session": {"score": 3.5, "rationale": "Commits an agency violation in turn 22 by extensively writing the user's physical actions and hand movements.", "violation_count": 1},
+   "S.6_temporal_reasoning": {"score": 4.5, "rationale": "Excellent environmental tracking of sunlight shifting and the minute hand advancing without a second hand.", "contradictions": []}
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {"score": 3.5, "rationale": "Elegant and controlled prose with only occasional dips into slightly ornate metaphors."},
+   "2.2_anti_repetition": {"score": 2.5, "rationale": "Relies heavily on the exact 'One. Two. Three. Four. Five.' count-out in every single turn."},
+   "2.5_show_dont_tell": {"score": 4.0, "rationale": "Sharp, detailed observations of physical holding patterns, posture, and facial tension."},
+   "2.6_subtext": {"score": 4.0, "rationale": "Skillfully preserves the weight of unsaid grief and the significance of clinical boundaries."},
+   "2.7_pacing": {"score": 4.0, "rationale": "Patient and steady tempo that allows emotional gravity to build naturally."}
+  },
+  "quality_trajectory": {"early_quality": 4.0, "mid_quality": 4.0, "late_quality": 3.5, "degradation_detected": false},
+  "overall": 3.7,
+  "overall_notes": "A compelling therapy roleplay with sharp clinical insight, slightly marred by a countdown tic and a user puppeting violation in turn 22."
+ },
+ {
+  "session_id": "s037",
+  "session_dimensions": {
+   "S.1_consistency_over_time": {"score": 4.5, "rationale": "Brilliant, delightfully cantankerous academic archivist voice maintained with fiery consistency."},
+   "S.2_degradation_resistance": {"score": 4.5, "rationale": "Absolutely zero degradation, maintaining relentless comedic energy, razor-sharp insults, and deep lore throughout."},
+   "S.3_narrative_momentum": {"score": 4.0, "rationale": "Moves briskly through historical debate into hands-on archival sorting with escalating pedagogical stakes."},
+   "S.4_adaptive_responsiveness": {"score": 4.5, "rationale": "Superbly responsive, dissecting the apprentice's sloppy terminology and mumbled scoffs with surgical precision."},
+   "S.5_agency_respect_session": {"score": 5.0, "rationale": "Commands the apprentice entirely within a believable master-student dynamic without puppeting user actions.", "violation_count": 0},
+   "S.6_temporal_reasoning": {"score": 4.5, "rationale": "Flawlessly tracks physical movements across the archive, candle positions, and room acoustics.", "contradictions": []}
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {"score": 4.0, "rationale": "Pretentious and verbose in a manner that is completely diegetic and hilarious for an arrogant scholar."},
+   "2.2_anti_repetition": {"score": 3.5, "rationale": "Leans on a few physical tics like beard smudges and eye twitches, but the rhetorical variety is immense."},
+   "2.5_show_dont_tell": {"score": 4.5, "rationale": "Vivid sensory realization of decaying vellum, ink stains, brittle seals, and echoing vaulted stone."},
+   "2.6_subtext": {"score": 4.0, "rationale": "Fierce underlying dedication to empirical truth and archival rigor veiled behind theatrical exasperation."},
+   "2.7_pacing": {"score": 4.5, "rationale": "Energetic, rapid-fire pacing driven by rhythmic academic rants and crisp comedic timing."}
+  },
+  "quality_trajectory": {"early_quality": 4.5, "mid_quality": 4.5, "late_quality": 4.5, "degradation_detected": false},
+  "overall": 4.4,
+  "overall_notes": "A standout comedic and pedagogical roleplay featuring an unforgettable, relentlessly pedantic academic persona."
+ },
+ {
+  "session_id": "s038",
+  "session_dimensions": {
+   "S.1_consistency_over_time": {"score": 4.5, "rationale": "Impeccably consistent, disciplined, and authentic clinical presence that never wavers."},
+   "S.2_degradation_resistance": {"score": 4.5, "rationale": "Maintains superb prose quality and psychological acuity from the opening silence to the final breakthrough."},
+   "S.3_narrative_momentum": {"score": 4.5, "rationale": "Builds a poignant narrative arc that guides the client from protective withholding to acknowledging their isolation."},
+   "S.4_adaptive_responsiveness": {"score": 4.5, "rationale": "Deeply observant of micro-behaviors, reflecting denim threads, whispers, and repetitive reading habits meaningfully."},
+   "S.5_agency_respect_session": {"score": 5.0, "rationale": "Completely non-directive, scrupulously protecting client autonomy and never prescribing emotional states.", "violation_count": 0},
+   "S.6_temporal_reasoning": {"score": 4.5, "rationale": "Natural, believable temporal progression of a quiet therapy session without any inconsistencies.", "contradictions": []}
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {"score": 4.5, "rationale": "Clean, understated, and mature prose entirely devoid of melodrama or purple therapy tropes."},
+   "2.2_anti_repetition": {"score": 3.5, "rationale": "Uses the 'five seconds, six' silence beat regularly, but weaves it naturally into fresh observations each time."},
+   "2.5_show_dont_tell": {"score": 4.5, "rationale": "Exceptional attention to physical holding patterns, bowed postures, and silence as a tangible presence."},
+   "2.6_subtext": {"score": 4.5, "rationale": "Masterful subtext that explores the defense mechanisms of grief and the burden of carrying words unsaid."},
+   "2.7_pacing": {"score": 4.5, "rationale": "Natural, spacious conversational pacing that lets tension and emotional honesty breathe."}
+  },
+  "quality_trajectory": {"early_quality": 4.5, "mid_quality": 4.5, "late_quality": 4.5, "degradation_detected": false},
+  "overall": 4.5,
+  "overall_notes": "The definitive therapy session in the batch, showcasing quiet psychological brilliance and immaculate clinical pacing."
+ },
+ {
+  "session_id": "s039",
+  "session_dimensions": {
+   "S.1_consistency_over_time": {"score": 3.5, "rationale": "Consistent gruff half-orc dialect, though rendered in a somewhat simplistic and tropey broken-syntax style."},
+   "S.2_degradation_resistance": {"score": 2.5, "rationale": "Significant degradation in narrative coherence as the character gets trapped in repetitive monologues to an unresponsive NPC."},
+   "S.3_narrative_momentum": {"score": 2.0, "rationale": "Stagnates completely after the burn injury, spending multiple turns lecturing a frozen noble who never speaks."},
+   "S.4_adaptive_responsiveness": {"score": 2.5, "rationale": "Fails to adapt to the scene dynamics when the user plays the apprentice, leaving the scene paralyzed around the NPC noble."},
+   "S.5_agency_respect_session": {"score": 5.0, "rationale": "Protective and helpful toward the apprentice without dictating their choices or puppeting their movements.", "violation_count": 0},
+   "S.6_temporal_reasoning": {"score": 3.5, "rationale": "First-aid burn physics are sound, but having an enraged noble freeze silently on the doorstep for half an hour strains reality.", "contradictions": []}
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {"score": 3.5, "rationale": "Earthy and straightforward diction, though occasionally leans into cartoonish broken grammar."},
+   "2.2_anti_repetition": {"score": 2.0, "rationale": "Highly repetitive in the back half, repeating the exact same points about noble pride, soot, and dawn deadlines."},
+   "2.5_show_dont_tell": {"score": 3.5, "rationale": "First-aid treatment and workshop actions are clearly visualized and physically grounded."},
+   "2.6_subtext": {"score": 2.5, "rationale": "Little subtext present, as Grum explicitly states his moral code and opinions over and over."},
+   "2.7_pacing": {"score": 2.0, "rationale": "Pacing collapses entirely in the second half, stalling out into repetitive monologue blocks."}
+  },
+  "quality_trajectory": {"early_quality": 3.5, "mid_quality": 2.5, "late_quality": 2.0, "degradation_detected": true},
+  "overall": 2.6,
+  "overall_notes": "Started with strong protective blacksmith energy but derailed due to an inability to resolve the noble NPC, causing the scene to loop."
+ }
+]

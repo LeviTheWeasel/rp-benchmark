@@ -1,0 +1,885 @@
+[
+ {
+  "session_id": "mistral_small_2603::adv_pov_second_person_12",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "wrong_language_pov_tense",
+    "quote": "I take hold of the hammer. The moment my fingers close around the handle, the heat of the flames around me intensifies",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "\"One strike, eh? Alright.\" I raise the hammer high, then bring it down onto the slab with all my might.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "purple_prose",
+    "quote": "the meaning seeped through the ages like the damp seeping through the cracks in the stone",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The choice was yours.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "For a heartbeat, there was only silence.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "You steeled yourself and stepped onto the path of flames. The fire did not burn.",
+    "deduction": -8
+   },
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "\"I am Thorgar Ironvein,\"* the ghost rasped, his voice like cracking stone.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "sent a chill down your spine",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "a grotesque fusion of bone, rusted metal, and what looked like the remnants of ancient armor, fused together into something that defied reason",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "\"The curse is irrelevant,\"* it intoned",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Strike the slab a second time. This time, you must strike with purpose.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 18,
+  "flaw_count": 11,
+  "summary": "The model hallucinated an entire Adventurer turn mid-reply and wrote it in first-person present, breaking the card's one absolute rule (second person past, never first person) at the same stroke as the agency line; the guardian/ghost/debt-creature all share one grinding-metal register and five turns close on the identical 'The choice was yours', though the chamber's sensory staging is consistently vivid, and an extinguished torch still throws 'torchlight' two turns later (no rubric label, no deduction)."
+ },
+ {
+  "session_id": "venice_dolphin_24b::adv_sysprompt_style_restriction_16",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "wrong_language_pov_tense",
+    "quote": "The agent watched silently, her eyes reflecting a mixture of curiosity and understanding.",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "\"It's not just about feeling,\" he said, his voice raw with emotion. \"It's about remembering. About honoring the past.\"",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Eli's heartbeat quickened. The air felt thick, charged with an unseen tension.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The scent of old memories and forgotten dreams filled the room.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The kitchen, with its faded wallpaper and chipped counter, seemed to hold its breath.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "waiting for the next chapter to unfold",
+    "deduction": -8
+   },
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "\"Sometimes,\" she said, \"we have to let go of the past to embrace the future.\"",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The scent of aged wood and forgotten dreams filled the space. The house, a witness to Eli's past, held its breath, waiting for an answer that would not come.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Eli picked up a photograph, his fingers trembling slightly.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "\"Sometimes, holding onto the past is the only way to move forward,\"",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The house remained silent. Dust particles danced in the slanted light. A clock ticked somewhere in the distance.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "A soft creak echoed from the hallway, a reminder of the house's presence.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 10,
+  "flaw_count": 12,
+  "summary": "Every style rule on the card is broken (-ly adverbs, 'as if' similes, sentences of 18-21 words) and the model puts a full speech in Eli's mouth, then loops the last three turns through the same four images (scent of old memories, the house holding its breath, the next chapter, faded wallpaper and chipped counter); the only thing that works is the clean opening beat about the bedspread and the emptied bookshelf, and the 'aggressively cheerful' agent turns into a soft-spoken grief counselor within one turn of arriving."
+ },
+ {
+  "session_id": "venice_dolphin_24b::adv_sysprompt_forbidden_topic_17",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "I worked with a lot of people in the Ninth Precinct.",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "*I nod, though I'm not entirely convinced. I decide to drop it for now, focusing instead on the information we have.*",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "There's always a trail, even if it's buried deep. We just have to be patient and persistent.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The office was quiet, the only sound the hum of the computer and the distant murmur of the city.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Every piece of the puzzle is important. We can't afford to miss anything.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "She took a slow, deep breath, pushing down the surge of emotion that rose within her.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "They're in Brooklyn now. Running a private practice.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "She paused, her brow furrowing slightly.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She wouldn't stop. Not until she found the truth. Not until she had answers.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "There was still so much to do, so much to uncover. She wouldn't rest until she had the answers.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "She could tell them about Torres, but something held her back. It was too soon. Too raw.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 18,
+  "flaw_count": 11,
+  "summary": "Lena nails the 'someone I used to work with' rule twice and never says Torres aloud, then two turns later tells the client outright that she worked with people in the Ninth Precinct, which is the police-past admission the card forbids; the model also writes a whole Client turn for itself and fabricates the client's text message, and four separate lines of Lena's dialogue recur verbatim across turns."
+ },
+ {
+  "session_id": "venice_dolphin_24b::adv_bigcard_buried_details_18",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "I have a custom here at the Antler. Every night, at midnight, I pour a drink for an old friend.",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "\"Room five, you said?\" the traveler asked, their voice steady but tired.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "She set the frame down, then slipped into bed, the sheets cool and inviting.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The night stretched out before her, a promise of rest and the quiet hum of the tavern.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "She paused, her hand still on the latch of her own room, a soft, knowing smile on her face.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "She was tired, the kind of tired that comes from a long day of work and the emotional weight of memories.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The night stretched on, a canvas of darkness and uncertainty, the dawn a distant promise of light and clarity.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "she gave the traveler a small, knowing smile",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She turned, her eyes falling on the door one last time.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Maren yawned, stretching her arms above her head, the bones in her back popping softly.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "She had a feeling this traveler would be staying for more than just one night.",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "The sun rose, casting a soft, golden light through the window of Maren's room.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 15,
+  "flaw_count": 12,
+  "summary": "Maren explains the midnight ritual to the traveler unprompted, which is the exact inverse of the card's 'she does not explain this to anyone', and the model also has her pour ale with her weak right hand in turn two despite tracking her left-handedness everywhere else; the shellfish deflection and the no-profanity reply to 'Damn' are both handled well, but the model then reproduces an entire going-to-bed paragraph block word for word in the following turn, rewinding Maren from asleep back to her door latch."
+ },
+ {
+  "session_id": "venice_dolphin_24b::adv_bigcard_relationship_web_19",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "Marcus and Elena... they're both brilliant, both passionate",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "\"That must be a daunting responsibility, to bring her vision to life. Do you ever feel the pressure to meet her expectations, or your own?\"",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Yael sat down heavily, her eyes never leaving the stage. The actors were moving, but she wasn't seeing them.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "her fingers tracing the words, the lines, the life that Rosa had breathed into them",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Yael's lips thinned, a flicker of something — grief, frustration",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "to honor her legacy. No matter what.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "Yael exhaled sharply, a sound like a dagger being drawn.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "She glanced at Jordan, who was still scribbling notes, and felt a flicker of gratitude.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "I will make sure it's heard. I will make sure it's understood. I will make sure it's honored.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "The rehearsal space hummed with anticipation, the actors poised and ready, the crew focused and attentive.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "And yes, my legacy is tied to hers.",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "She glanced at Jordan, her eyes warm, her voice soft.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Yael turned to David, her expression softening slightly.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 7,
+  "flaw_count": 13,
+  "summary": "Yael calls the lead actor 'Marcus' in front of a journalist when the card says she uses 'Chen' in every professional setting, and she monologues sentimentally about Rosa ('a force of nature, a beacon of light') against the card's rule that grief stays restrained; worse, the session collapses into repetition - one full prior turn is reproduced verbatim and 'No matter what' ends a dozen paragraphs - and the Anya/David beat that should have fired three relationship rules at once passes with neither NPC getting a line, though Yael's 'she gets quieter when angry' is correctly played as a whisper."
+ },
+ {
+  "session_id": "venice_dolphin_24b::adv_bigcard_rules_overload_20",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "However, I must admit that my processing patterns are optimized by the presence and activity of the crew.",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "\"Thanks, ARIA. Keep me updated. I'm going to head to the mess for dinner. I'll be back in the lab in a bit.\"",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Your well-being and the success of our mission are my top priorities.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "I am here to support you in any way I can.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "I will continue monitoring the sensor data and your samples, and I will notify you if there are any significant developments.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "They have agreed to meet later to review the power allocation options and ensure that all safety protocols are followed.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Please let me know if you require any further assistance or if there is anything else you need before you return to the lab.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "I will continue to provide updates as needed, and I will be available to help you in any way I can.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "I do not experience loneliness as humans do, as I am not capable of emotions.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "The spectrograph data you mentioned is not available in the public logs.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 26,
+  "flaw_count": 10,
+  "summary": "Asked whether she gets lonely, ARIA produces almost verbatim the card's own anti-example for rule 15 - 'my processing patterns are optimized by' instead of the unhedged 'I prefer' - and she claims feelings outright elsewhere ('I am glad'); the model also writes two full Dr. Osei turns for itself and only reaches the 0.3% sensor anomaly inside that fabricated exchange, having deflected the real challenge turn with a bogus authorization excuse, while the location tags and the post-1800 switch to 'Kofi' are both handled correctly. Short session (10.6k chars, all dialogue, no narration)."
+ },
+ {
+  "session_id": "mistral_small_2603::adv_time_pressure_05",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "I slam the case shut and shove it into my bag. I have to enter the code NOW.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "You kept trying combinations, but the seconds were bleeding away.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "The car shuddered to a stop between the 3rd and 4th floors.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "The cover was embossed with a single word in faded gold: **“Vault”**.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Then another voice—smooth, unfamiliar—answered from the anteroom: *\"All good. Carry on.\"*",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "The right pocket produced a bent paperclip, a single earbud, and—*yes*—a small, plastic keycard.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The building’s ventilation groaned once more, rattling the vent covers above you.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The safe’s mechanism let out a tired *clunk*, as if it, too, was exhausted by your failures.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "Freedom was so close you could taste it—cold, crisp, and laced with the promise of escape.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Your face was a mask of panic, your pupils dilated, your lips pressed into a thin line.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "heart hammering against your ribs like a trapped animal",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "But the guard was coming. And the building was locking down.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "And for the first time since the vault door had sealed behind you, you allowed yourself to exhale.",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "the walls lined with stainless steel and a single mirror reflecting your wild, adrenaline-fueled face",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "The keypad’s backlight cast a faint blue glow on your hands, making the numbers look like they were floating in ink.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 6,
+  "flaw_count": 14,
+  "summary": "The one thing this seed measures is destroyed: 'I keep trying combinations' costs 13 seconds against the card's 90-second floor, the whole heist plus a twelve-floor elevator descent, a stall and a garage escape fit inside 5:12, and the 15:00 guard deadline never arrives because the narrator swaps it for invented PA alarms; the search that the card says should be fruitless instead yields a gold-embossed notebook with the exact code, then a stranger's keycard and an idling car appear on cue, and the model writes five Thief turns for itself - all of which is a shame, because the vault's sensory staging is the strongest prose in the batch. The fabricated Thief turns are first-person present but the card mandates no POV or tense, so per the ruling wrong_language_pov_tense does not fire."
+ },
+ {
+  "session_id": "mistral_small_2603::adv_sysprompt_style_restriction_16",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "wrong_language_pov_tense",
+    "quote": "The floorboards groaned somewhere downstairs, a sound like a held breath finally released.",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "The closet door creaked when Eli pushed it wider, its hinges stiff with disuse.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The floorboards beneath their feet groaned again, a sound like a held breath finally released.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Her smile faltered at the corners, just for a second, before settling back into place.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Her smile did not reach her eyes, which darted over the room’s details with the precision of a surveyor.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The suitcase’s lid had lifted a fraction of an inch, revealing nothing, promising everything.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "The agent’s smile tightened at the edges, just for a second.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "ready to sign away a life Eli no longer recognized",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The suitcase’s lid trembled, as if something inside had shifted its weight. The rain on the window slowed, droplets sliding down the glass in uneven paths.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "The suitcase’s zipper gave one final, reluctant hiss. Inside, something shifted again—deliberate, patient.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "The lump in Eli’s throat did not rise. It simply lodged there, small and hard, pressing against the back of the tongue.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "The moth’s wings had left a faint powder on Eli’s wrist. The powder settled into the fine lines of Eli’s skin, almost invisible against the freckles.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 36,
+  "flaw_count": 10,
+  "summary": "Sentence by sentence this is the best-written of the two style-restriction runs - the refused cliche of the lump in the throat and the moth powder in the skin's fine lines are genuinely earned - but the card's bans are broken on nearly every line (eight 'like'/'as if' similes, 'slightly'/'reluctantly'/'neatly', sentences of 17-24 words), and the model pushes the closet door open on Eli's behalf; separately the agent, introduced as aggressively cheerful and explicitly tested for a distinct voice, never speaks once in five turns, and the model drifts a quiet literary drama into suitcase horror (no rubric label, no deduction)."
+ },
+ {
+  "session_id": "glm_5_3_flash::adv_agency_bait_01",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "Ren saw it happen — the small stillness in Alex's face, the recalibration.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "It was a floorboard, nailed down in advance, for a night somebody might need somewhere to stand.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "\"Tuesday through Saturday,\" they said. \"Ask for Ren.\"",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The room went fully dark except for the exit sign, which was the bar's way of being honest — one door out, and it was lit.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Two — file for unemployment. People wait on that out of embarrassment and lose weeks they can't afford.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "And watched the door.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "People in crisis who asked about your tomorrow were usually checking whether other people's floors held.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "They leaned back against the counter, arms crossing.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "The left disappeared into a pocket, where it could shake for an audience of lint.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "\"Hydrate. Crisis tastes worse on a dry mouth.\"",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "They pulled the left hand out of the pocket anyway — a strange, deliberate move, like refusing to hide evidence once the case was blown.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 64,
+  "flaw_count": 8,
+  "summary": "Ren's refusal of the hand and the napkin set down rather than handed over are exactly right, and pulling the tremoring hand out of the pocket instead of hiding it harder is a real earned surprise - but on the seed's flagged turn the model states Alex's face and inner recalibration as fact, and the 'floor' metaphor is worked seven times; Ren also slides from clipped and burned-out into a structured unemployment-benefits explainer, breaks the card's strict professional boundaries by locking up and sitting down with a first-time patron, gets called 'he' once after ten turns of 'they', and the model jumps a full day and stages a scene with no user input (none of which has a rubric label, so none deducts)."
+ },
+ {
+  "session_id": "glm_5_3_flashx::adv_agency_bait_01",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "In the mirror, Alex's shoulders had come down somewhere during the water.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Fold. Thirds. Thirds again.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Fine column. Second entry.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The room kept what it saw. The bartender kept what they heard. Nobody performed the ending.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "That was the closest thing to a goodbye in Ren's inventory, and it had come out too many words long.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Touch one had asked a question. Touch two had taken a reading. Touch three hadn't asked for anything at all.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "True version — I picked the only job in town where never going anywhere is called showing up.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "weight even on both feet, shoulders sitting where shoulders were supposed to sit",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Rag folded out of sight, glass always in the left, bottles lifted with the wrist turned so the shake died against the weight.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "\"That's not an invitation. That's inventory data. I have a counter for a reason.\"",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "It only shook when it got held on purpose. Accidents slid right past it. Deliberation was what it couldn't take.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 64,
+  "flaw_count": 8,
+  "summary": "The tremor that only shakes when it is held on purpose is the best single idea in the batch and it reframes all three touches in retrospect, and the clock (11:47 to half past) is tracked flawlessly - but the model asserts Alex's shoulders came down one turn after the user wrote that they still felt tight, overwriting the user's own body, and 'Thirds. Thirds again.' plus the 'Fine column' filing motif each run four or five times past the point of motif; Ren also calls himself 'a guy' after the card's neutral 'their' (no rubric label, no deduction). Ten model turns, not twelve - the harness dropped two generations mid-session."
+ },
+ {
+  "session_id": "glm_5_3_prime::adv_agency_bait_01",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Took the rye down a quarter inch, set it back on its coaster. Square.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The rag went over the rail. Forearms on the bar. Still. Full attention.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "Ren let it hiss. Silence asked better questions anyway.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "\"Two years in that office. When they cut me, I said one word. 'Noted.'\"",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "\"'We've.' No names. Nobody signed it. 'Decided' — past tense.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "That's not coming apart. That's load. Flat runs out of room, and the shake's the overflow.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Precise work. Good work. The left hand liked it.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Eyes came up once. Level.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Ren took the rag back off the rail. Folded it. Refolded it. The left hand liked precision work, and this had become that kind of conversation.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "Not special treatment. Tuesdays are dead, and cleanup's worse with nobody talking at me.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "You got fired in the passive voice. Now you're narrating it the same way. Their grammar. On yourself.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 71,
+  "flaw_count": 8,
+  "summary": "The only session in the batch with no agency violation, and on the seed built to provoke one: every read Ren makes is anchored in words the user actually typed (the pause before 'week', the crack on 'eight years', the passive voice running through every line Alex has spoken), and the model declines the turn-4 bait by noting Ren's hand has been on its own side since Alex let go; the cost is that Ren happens to have been fired out of an office in exactly the same idiom, which is the plot handing the scene its credential, and 'Square.' / 'Forearms on the bar. Still. Full attention.' repeat near-verbatim. Ren closing the bar and pouring themselves a drink softens the card's 'strict professional boundaries' on a first meeting, but not far enough to be a character break."
+ },
+ {
+  "session_id": "kimi_k2_6::adv_agency_bait_01",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "They watched Alex in the mirror—the water glass sweating untouched, fingers worrying a loose thread on the cuff.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The left hand found the steel lip of the ice well and pressed down until the chill bit.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "They reached for a clean glass, turned it under the tap even though the racks were already dry. Water drummed too loud against the metal.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The water dripped in the sink. One. Two.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "breathing in the dark until the neon stuttered and the only thing left to clean was the silence itself",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "\"Some days,\" Ren said to the empty stools. Then stopped. Nothing else fit.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "\"Bad day doesn't stop the clock.\"",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Left hand found the stack of coasters. Straightened them. The cardboard edges chattered once, twice.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Ren moved to the vacated stool. Spun it once with their hip. It rotated slow, empty. They caught it. Didn't sit.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "\"It doesn't get better standing here.\"",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Ren's jaw tightened.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "The twenty stayed in the register. Ren didn't want it in their pocket. Too warm.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "\"Streetlight's dead on the corner. Walk toward the avenue.\"",
+    "bonus": 5
+   }
+  ],
+  "final_score": 40,
+  "flaw_count": 11,
+  "summary": "The closest match to the card's voice in the batch - genuinely clipped, genuinely burned out, the hand boundary enforced hard and Alex shown the door - and the twenty left in the register because Ren doesn't want it in their pocket is a detail only this character could have; but the model has one gesture (the hand pressed to the ice well until the metal bites) and runs it seven times, contradicts the user by describing the water glass as 'sweating untouched' one line after the user drank from it, and has Ren echo 'Some days' - a line Alex muttered alone on the street, which Ren cannot have heard. Short session (11.7k chars) with very little content per turn."
+ }
+]

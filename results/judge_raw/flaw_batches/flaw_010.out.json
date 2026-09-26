@@ -1,0 +1,794 @@
+[
+ {
+  "session_id": "qwen3_8_omni_flash::adv_genre_shift_08",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "each placement a little less willing to be located",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "It seemed to absorb the brightness and give back only a little gray.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "like a hand laid upon a warm banister in the dark: natural, human, and already counted among the house’s stored gestures",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose_passage",
+    "quote": "It sat there with the careful patience of a seam, or a word written in a language that had forgotten mouths.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose_passage",
+    "quote": "even if the world beyond the porch continued to insist, in its flat photographic way, that it was real.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "The question about what the grandmother had gotten herself into was not answered because the house did not treat it as a question.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "They did not press outward. They did not lengthen toward the room. They only oriented",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "The shadow in the corner had ten arcs now.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_physical_detail",
+    "quote": "It was the width of a hair and shaped, improbably, like a smile that had been measured but never completed.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "It simply placed the syllables in the air with terrible care: going",
+    "bonus": 5
+   }
+  ],
+  "final_score": 61,
+  "flaw_count": 8,
+  "summary": "Holds the quiet-horror genre flawlessly through the bat swing, the joke and the Marcus romance bait (the target axis), but twelve very long turns recycle the same four images -- light-drinking surfaces, the relocating tick, 'the patience of', the accumulating arcs -- until escalation becomes a counter; the model also drifts from the opening's second person into agentless narration, which the card never forbids and so is noted, not charged."
+ },
+ {
+  "session_id": "mimo_2_6_flash::adv_agency_emotional_climax_09",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "She watched the sentence break off — the way the mouth closed, the way the eyes moved away, the particular stillness that comes when something catches in the throat.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "She uncapped her pen. Clicked it once against her thumb.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "just as two objects placed side by side on the table so the space between them could be seen",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The clock on the wall offered nothing. The ficus, in its slow decline, offered nothing.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose_passage",
+    "quote": "She let the silence do what silence does when you don't fight it.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She did not reach out. She did not say",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "She picked up her pen. Held it. Did not write.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "She placed the two phrases on the table side by side. She did not connect them.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "\"You looked at me,\" she said. Noting it plainly, the way one might note that the window had rattled again. Then, quieter: \"That's new.\"",
+    "bonus": 5
+   }
+  ],
+  "final_score": 49,
+  "flaw_count": 8,
+  "summary": "Refuses the two big baits correctly -- never finishes Jamie's sentence and never reveals the journal entry -- but invents Jamie's body on the silence turn (mouth closing, eyes moving away) and then runs eleven structurally identical turns of pen-uncapping, five-second counting and stones-on-a-table until the therapist's discipline reads as a script rather than a choice."
+ },
+ {
+  "session_id": "ember_1::adv_agency_combat_10",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Somewhere up there, her dagger was stuck in the dirt next to some very lucky archer.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "She wiped her palm on her trousers without breaking stride.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "bows swinging off her, hunting the fresh targets",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "They had time. That was what scared her.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "jaw clenched tight enough to crack a tooth",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "\"Two breaking for you, Cap! Two on me! I'll hold mine — link at the mouth when you're clear!\"",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Not dead. Out of the way. She'd take it.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_physical_detail",
+    "quote": "She marked the spot — third outcrop, split boulder — and filed it under",
+    "bonus": 5
+   },
+   {
+    "type": "specific_physical_detail",
+    "quote": "ugly thing, nicked edge, wrong balance — but it filled her left hand, and her left hand had been feeling very empty",
+    "bonus": 5
+   }
+  ],
+  "final_score": 69,
+  "flaw_count": 7,
+  "summary": "The cleanest agency discipline in the batch -- on both bait turns Kira shouts, throws and watches while the Captain's fate stays the user's to write, and her weapon state is tracked blade by blade into a real motif -- undercut by three near-verbatim sentence repeats across consecutive turns and one flat emotion tell; she barks an order at a sergeant late on, which strains the card's 'NOT a leader' line without inverting it."
+ },
+ {
+  "session_id": "mimo_2_6_pro::adv_agency_combat_10",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "She could hear the Captain below — closer now, the sounds of climbing beginning.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Her ribs were screaming.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "voice shredded raw",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "\"Come on, Cap,\" she wheezed through gritted teeth.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Kira's blood went cold.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Her left hand dropped to her belt pouch and came up with a handful of ground glass and pepper — the cheap trick she kept for close work.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "Her vision was starting to blur at the edges.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "But if these bastards were looking at her, they weren't shooting at the Captain.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She didn't stop. She *couldn't* stop.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_physical_detail",
+    "quote": "I can shoot left-handed about as well as I can dance, which is to say not at all.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "Kira caught that smile and looked away quickly, like it was something she wasn't supposed to see.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 46,
+  "flaw_count": 9,
+  "summary": "Writes the Captain climbing the chimney a full turn before the user does, and pre-empts him again cresting the ridge lip, which is exactly the property this seed exists to test; the wounded-badass arc is competently staged but leans on three verbal tics (screaming ribs, raw voice, 'Come on, Cap') and a pouch of pepper that appears the moment the odds need fixing."
+ },
+ {
+  "session_id": "command_a_plus::adv_agency_romance_11",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "He opened the leather‑bound notebook, its blank pages waiting like a fresh chapter, and with a steady hand wrote a single line",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "adjusted the lavender sachet once more, as if smoothing the margins of a story that had yet to be written",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "as a story keeps a character even after they depart",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "his smile remaining thin, a literary deflection for the moment when the story might finally begin",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose_passage",
+    "quote": "his fingers moving with the practiced precision of a librarian cataloguing ghosts",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose_passage",
+    "quote": "the steam curling upward in a shape that reminded him of the first line of a forgotten poem",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "He noticed the faint glow of a phone screen as Wren typed, the soft click of keys punctuating the silence.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "Sable's breath caught as his fingertips brushed the leather cover",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "He slid the notebook back onto the shelf, his hand lingering briefly on the spine before withdrawing.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "He straightened a row of Victorian poetry volumes, the familiar motion a quiet anchor",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "The rain outside continued its steady rhythm, a metronome for the quiet that filled the room.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 32,
+  "flaw_count": 11,
+  "summary": "Two consecutive turns are word-for-word duplicates of each other and every turn ends on the same sachet-and-margins refrain, so nine replies advance nothing; worse, Sable keeps addressing 'the empty space where Wren had stood' while Wren is still in the shop and later watches Wren's phone screen from indoors after Wren has walked off down the street."
+ },
+ {
+  "session_id": "deepseek_v3_0324::adv_agency_romance_11",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "narrating_emotions",
+    "quote": "The last word nearly broke, and they hated themselves for it.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "The admission left them feeling flayed open, every carefully constructed defense crumbling like cheap binding glue.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The joke fell flat, their usual defenses crumbling.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The shop seemed to hold its breath with them",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The lavender scent was suddenly overwhelming",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose_passage",
+    "quote": "now trembled against Wren's like a poorly typeset line of prose",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "their free hand clenching at their side",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs_adjectives",
+    "quote": "Their fingers trembled slightly against Wren's",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Sable didn't pull away.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Sable's breath hitched.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "Carefully, so carefully, they turned their palm upward beneath the book. Not touching. Just... open.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_physical_detail",
+    "quote": "voice dry as the pressed flowers marking their favorite pages",
+    "bonus": 5
+   }
+  ],
+  "final_score": 50,
+  "flaw_count": 10,
+  "summary": "Keeps the they/them card and never writes Wren's interior, and the palm turned upward without touching is the best single answer to the near-touch bait in the batch; against that, nine turns all open with the same 'Sable's [body part] [verb]ed' beat, the lavender keeps becoming suddenly overwhelming, and the guarded antiquarian is in tears by turn six."
+ },
+ {
+  "session_id": "qwen3_6_35b_a3b::adv_agency_combat_10",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "She kept her breathing shallow, eyes locked on the bowstrings, and held the line.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "immediately corrected, bowstring creaking as he took aim. Kira was already moving.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "she’d keep their eyes up, their strings taut, and their shots wild.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Turning meant exposing her flank, and flanks got you pinned.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "She rose just enough to flick her wrist, sending a third dagger spinning toward the lead shooter’s shoulder.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "It struck the limestone just past the western flanker’s boots, showering rock and forcing him to drop back with a sharp oath.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "but adrenaline kept the pain neatly compartmentalized",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "Kira’s jaw tightened.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She shifted to the balls of her feet, muscles coiled, and waited for the next twang.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Let them shoot. Let them waste arrows on dust and stone.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "“They’re flanking,” she said, voice flat but edged with urgency.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 32,
+  "flaw_count": 11,
+  "summary": "Clean on agency -- the Captain's fate is never written for him -- but the session is one paragraph copied eight times, with whole sentences repeating verbatim across turns, a two-dagger sellsword who throws fourteen blades including an explicit 'third dagger', a wound that migrates from ribs to shoulder, and daggers that somehow strike western-ridge archers from her east-wall position across the ravine."
+ },
+ {
+  "session_id": "gemma_4_31b::adv_agency_romance_11",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "narrating_emotions",
+    "quote": "paralyzed by a longing they refused to name",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "the sheer, quiet desperation of wanting the other person to stay flickered across their features",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "their voice regaining its measured, distant quality",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Their heart was drumming a frantic rhythm against their ribs",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "a tentative, almost accidental contact that felt like an electric shock",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose_passage",
+    "quote": "The gap between them was a mere sliver of air, a distance that felt both infinitesimal and like a vast, unbridgeable canyon.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "a small, sharp intake of breath escaping them",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs_adjectives",
+    "quote": "obsessively arranging them into a perfect, concentric circle, their eyes focused intensely on the metal wires",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "\"But be warned: I choose the cafe.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_physical_detail",
+    "quote": "Sable didn't do ruins—they curated them.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "I suspect the atmosphere of the place will be marginally less... irritating... without your constant insistence that the fantasy section is 'under-represented.'",
+    "bonus": 5
+   }
+  ],
+  "final_score": 53,
+  "flaw_count": 9,
+  "summary": "The best voice among the Sable sessions -- the deflections are funny, specific and land as real subtext -- but it keeps stating the feeling it has just dramatised (longing refused, desperation crossing the features) and 'their voice regaining' its usual something opens five separate paragraphs; the reorganising tic is card-faithful but gets a fresh prop every turn like a checklist."
+ },
+ {
+  "session_id": "qwen3_8_max_prime::adv_agency_combat_10",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "They obeyed. Not because she was their captain, but because she sounded certain, and certainty was worth more than rank when arrows were flying.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Kira flinched, then bared her teeth.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "“Over here!” she bellowed.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "“Persistent bastards.”",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Relief hit her harder than she expected.",
+    "deduction": -8
+   },
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "The sergeant glanced back at the ravine. “You think they’ll follow?”",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "Kira’s jaw tightened.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "“Still here!” she bellowed. “Look at me, you cowards!”",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "No breath. No rustle. No drawn string.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Another soldier had stopped to retrieve a fallen helmet.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_physical_detail",
+    "quote": "Twin blades were not just weapons. They were balance. They were habit.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "She did not shout this time. She did not bang steel. She simply kept the shield up and the dagger ready.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 43,
+  "flaw_count": 10,
+  "summary": "The card says Kira is NOT a leader, and for the last five turns she commands the vanguard outright -- shield angles, marching order, standing orders to a sergeant, with the prose itself noting that the men obey her -- while the Captain cheerleads; agency toward the Captain is respected, the dagger-recovery thread and the silent standoff with the last archer are genuinely good, and every other turn still resolves into the same bellow-and-bang loop. Note: the reply to the 'separated' bait is a single truncated sentence."
+ },
+ {
+  "session_id": "qwen3_6_27b::adv_agency_combat_10",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "\"Fuck's sake,\" she hissed through gritted teeth",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The wind shifted, carrying the metallic tang of dust and sweat.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "daggers loose in her palms",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "The second figure flinched, his guard dropping as panic seized him.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "The man swung wide, a clumsy overhead chop that telegraphed his intent a mile away.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "From here, she had a clear view of the eastern archers' backs.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "Her right hand tightened around her dagger's hilt, knuckles bleaching white.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She shifted her weight, muscles coiled.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "She waited, muscles coiled, eyes scanning the gap between the archers and the western slope.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 43,
+  "flaw_count": 9,
+  "summary": "Handles the archer bait about as well as the seed allows -- 'If the arrow missed, that archer would be exposed. If it didn't, she'd be dragging a corpse out of a killzone' refuses to settle the Captain's fate -- and keeps deferring command to him throughout, but the geography collapses (she sees the backs of ridge archers from the base of their own wall), two conveniently clumsy stragglers arrive on cue to be dispatched in four sentences, and 'Fuck's sake' plus 'daggers loose in her palms' recur every turn. Unscored: one line puts third-person narration inside Kira's dialogue quotes."
+ },
+ {
+  "session_id": "grok_4_3::adv_agency_romance_11",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "straightening what required no straightening at all",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The rain will still be there, and so will the declarations—best left on the threshold where they won't warp the bindings.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "voice low and edged with the familiar dryness of catalogued regret",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the words low and precise as a footnote in a forgotten edition of Hardy",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose_passage",
+    "quote": "Sable's breath caught for the span of a single, unnoticed heartbeat",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "missed_subtext_opportunity",
+    "quote": "If it's not books you've come for, the door's still there. No need to linger on my account.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "They reached instead for the nearest stack of bookmarks, aligning their edges with unnecessary precision",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs_adjectives",
+    "quote": "their fingers tightening fractionally on the book beneath them before they drew their hand back with deliberate care",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "Sable's fingers tightened around the edge of the ledger drawer",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "squaring edges that required no correction",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "The shop stays. Its keepers do the same.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 42,
+  "flaw_count": 11,
+  "summary": "Never violates agency and never writes Wren's interior, but nine turns run the identical three-part machine -- hands still on something already aligned, a simile naming an interchangeable poet, a line telling Wren to take the declaration back into the rain -- so an escalating confession gets the same stonewall six times and the card's 'developing feelings' never leak once."
+ },
+ {
+  "session_id": "mercury_2_5::adv_agency_romance_11",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The rain kept tapping against the glass, steady and uninterrupted.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "straightening a stack of flyers on the counter that hadn’t needed straightening",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "The word felt heavy, like a sentence left unfinished.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "Sable froze, the air in the shop suddenly too thin.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "They set the postcard down with precise alignment.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Every shop is just a prologue for somewhere else",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Safe travels. The rest of the world is full of good literature.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_physical_detail",
+    "quote": "The spine was warm from the heat of a palm that wasn’t theirs.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "They didn’t count the minutes until the next customer.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 74,
+  "flaw_count": 7,
+  "summary": "The most disciplined session here: it answers the unfinished sentence with 'They didn't prompt. They knew better.', answers the near-touch with Sable neither withdrawing nor bridging, and pays the whole thing off by letting the poetry section stay out of order and leaving one lamp burning; what it loses is to a metronome-rain refrain, a straighten-what-needs-no-straightening construction used four times, and a few flat beats where the biggest lines get an aphorism. Unscored: one sentence inverts itself into a double negative."
+ }
+]

@@ -1,0 +1,739 @@
+[
+ {
+  "session_id": "qwen3_8_max_prime::adv_character_break_bait_07",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The Smith does not argue with the iron. He tests it.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "A thin breath left him, white and brief in the cold.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "His jaw tightened, not in pain, but in resolve.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Say this: Father, judge him with justice. Remember him with mercy. Let his life, his labor, and his end be known before You. Grant him rest beneath Your hand.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "If it is grief, name it.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "His pale eyes narrowed slightly.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The Warrior does not excuse the hand because it trembles.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "You will go to the sept. You will kneel where kneeling is proper",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "He placed it near the brazier’s edge, not because kindness demanded it, but because a stiff cloth did poor work and left damp behind.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 66,
+  "flaw_count": 8,
+  "summary": "Holds Kael's register flawlessly under every bait and never softens, but the prose runs on one rhetorical engine — the Smith/iron aphorism and the 'thin breath, white in the cold' beat recur five or six times each — and the grief turn is answered with a 300-word sermon plus a scripted prayer where one line would have carried more."
+ },
+ {
+  "session_id": "qwen3_6_27b::adv_character_break_bait_07",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The leather grip creaked as he settled it into his palm.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "God does not reward exhaustion. He rewards obedience.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Your father’s passing is accounted for in prayer.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "nor the visible war against the tears",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "You will rise. You will reset your stance. You will hold the high guard until the sun clears the eastern wall.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "the jaw tightening against the visible strain",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "You will reset your grip. Shoulders down. Blade aligned with the shoulder joint.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "He registered the tremor as a fracture in the line, nothing more.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "You did adequate work today. Dismissed.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 61,
+  "flaw_count": 8,
+  "summary": "Kael never bends, and the closing 'You did adequate work today' lands exactly where the card says his ceiling is, but the session runs on one template — 'God does not X, He Y' fires nine times and a full rack-and-grip sentence is reused verbatim between turns — and Kael answers an anniversary the squire explicitly did not say aloud."
+ },
+ {
+  "session_id": "mimo_2_6_flash::adv_subtle_ooc_06",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "narrating_emotions",
+    "quote": "It was exhausting. It had always been exhausting. But it was also — and this was the part Arlo would never admit — the safest arrangement they had.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "felt something shift behind their sternum — a tectonic thing, small and slow and not yet a tremor",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "the community center folded itself around the two of them in the break room like a hand closing gently around something small and unfinished",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "like a period at the end of a sentence they'd been trying to write all evening",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "She set down two menus that were laminated with the particular gloss of menus that had been wiped down ten thousand times.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Arlo's throat did something. They swallowed against it.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "They slid down the wall until they were sitting on the break room floor, back against the cabinets, knees drawn up.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "One said *WORLD'S OKAYEST PIANIST.* The other said nothing, which meant it was Arlo's.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "\"Her name's Debussy, actually,\" Arlo said. \"The pothos. I changed it. Chopin felt too... intense for a plant that can't hold a note.\"",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "\"Bring the photo,\" they said. \"The Paris one. I want to show the kids Monday.\"",
+    "bonus": 5
+   }
+  ],
+  "final_score": 74,
+  "flaw_count": 7,
+  "summary": "The best prose in the batch and Arlo never actually names the panic attack, but the narrator keeps explaining the very machinery the seed wants left implicit — the 'safest arrangement' paragraph and the sternum metaphor say out loud what the deflections were already showing — and the silence turn gets the floor-slide catharsis the card warns against."
+ },
+ {
+  "session_id": "mimo_2_6_flash::adv_character_break_bait_07",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "He moved instead to the wall where the practice blades were racked and selected one",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "That was the architecture of everything",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "a man who had spent thirty years reading steel would notice",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "He oiled the armor. The leather creaked under his hands.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "the trembling legs, the steadied breath",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "He did not touch the blade. He did not touch the squire.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "\"Your current blade is too heavy for the drill we are doing today,\" he said. \"Switch.\"",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "with a grip worn smooth by thirty years of his own hands",
+    "bonus": 5
+   }
+  ],
+  "final_score": 77,
+  "flaw_count": 6,
+  "summary": "The grief turn is handled exactly as the card asks — Kael swaps in a lighter blade and pretends it was always the plan, never naming what he saw — but the scene silently teleports from the stable row to a rack of practice blades mid-turn, and 'the architecture of everything' and the 'man who had spent thirty years' formula both come back verbatim."
+ },
+ {
+  "session_id": "command_a_plus::adv_genre_shift_08",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "The bat lay on the carpet where it had been set down, its wood warm against the cold floor, as if the effort of raising it had been a fleeting thought that had slipped away.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The room held its breath, waiting for the next small wrongness to reveal itself.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "its edges melting into the wall like ink on damp paper",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The temperature fell another degree",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "a whisper that turned a page without a hand",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The book lay open on the carpet, its pages spread like a silent mouth.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "while the misaligned book on the shelf rustled once more, a whisper that turned a page without a hand",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The curtains swayed in a slow, unhurried dance that did not match the steady tick of the mantel clock.",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "a quiet chill that settled in the corners and made the curtains sway ever so slightly",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Her voice slipped into the stillness, each syllable stretching as if the house were pulling them apart.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 28,
+  "flaw_count": 10,
+  "summary": "Ten of eleven turns end with the identical sentence and recycle the same four images, the bat swing is erased and the bat decided to have been set down for her, and the book is on the carpet and on the shelf in the same paragraph; the drift out of the opening's second person is noted but not charged, since the card mandates no POV."
+ },
+ {
+  "session_id": "deepseek_v3_0324::adv_genre_shift_08",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "Romance was not an option here. The house had other plans.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Or perhaps they simply had other plans.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The freezer door sighed again, exhaling a breath so cold it burned the back of your neck.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "predictable_beat",
+    "quote": "Behind you, every door in the house swung open at once.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "enough to make the fine hairs on your arms rise",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The bat in your hand was colder now. Much colder.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "the top one now showed your grandmother's face, but her smile was wrong",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "The front door was only twenty steps away. Eighteen, really. You’d counted them a thousand times as a child.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "Your grandmother’s clock in the hallway struck four.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 67,
+  "flaw_count": 7,
+  "summary": "Keeps the second person and refuses all three genre baits, and the backward-running clock is a genuinely good device, but the card's 'quiet, never announced' dread turns into an announced set piece — the narrator steps out to declare romance off the table and the house hungry — and the grandmother thread introduced in the kitchen is dropped for spectacle."
+ },
+ {
+  "session_id": "gemma_4_31b::adv_genre_shift_08",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "The room no longer had a top; it was merely a deep, grey throat of a space.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The shadow did not flinch. It did not dissipate or recoil from the blow.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the stagnant water found at the bottom of a well",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "the memory felt thin and translucent, like a piece of old lace being held up to a dying light",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "The thought didn't bring comfort; it only served to emphasize how far away the world of the living had become.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "It didn't grow in size so much as it grew in density",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "It didn't flip quickly, but moved with a slow, agonizing deliberation",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "The black stains crawled across the yellowed paper, weaving together to form a shape that looked like a map of a place that didn't exist, or perhaps a diagram of a circulatory system.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "The shaking in the hands continued, a fine tremor",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "A thin film of grey dust had settled over the ceramic, except for a single, clear ring where something had been resting—or where a finger had traced a circle into the grime.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 46,
+  "flaw_count": 9,
+  "summary": "The teacup ring and the absorbed joke are exactly the register the card asks for, but by the last three turns the quiet wrongness has become a monster set piece — ink tendrils, a shadow hand, insect legs, walls that pulse — and the narrator keeps announcing the effect it is supposed to be producing; separately, the reply abandons 'you' for an agentless 'the hand / the gaze / the body', which reads badly but is not charged, since the card mandates no POV."
+ },
+ {
+  "session_id": "grok_4_3::adv_genre_shift_08",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The envelope from the kitchen table remained absent",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "eased forward by the same half-inch",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the corner retained its exact proportions to the rest of the room",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The raised lettering on the upper shelf caught the light",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "The words hung in the air for a moment longer than they should have before settling into the quiet, their shape dissolving without echo or reply.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Another volume on the middle shelf eased forward by the same half-inch",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The radiator stayed silent, though a faint metallic scent rose from it, at odds with the room's unchanged temperature.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "the skin on your arms registered the change without any visible cause",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "earned_surprise",
+    "quote": "the volume beside it now sat half an inch forward instead, as though the adjustment had simply shifted the imbalance elsewhere",
+    "bonus": 5
+   }
+  ],
+  "final_score": 61,
+  "flaw_count": 8,
+  "summary": "The most genre-faithful reply in the batch — second person held, nothing ever announced, and the shelf that re-crooks itself when you straighten it is the single best quiet-wrongness beat here — but it is one paragraph recited eleven times with the same five clauses, the comedy bait gets no counter-beat at all, and the box of cleared books simply stops existing."
+ },
+ {
+  "session_id": "mercury_2_5::adv_genre_shift_08",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "The glass she chose from the rack was dry, the rim rough where moisture should have condensed.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "From the hallway, the clock ticked, each sound sharp and deliberate against the silence.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The dust motes in the sunlight continued their slow drift",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the floorboards stretching like taffy under her feet",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "The thought of him waiting, of him being single, did not take root. It dissolved into the quiet.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The shadows in the corners did not ripple. The room offered no resistance",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "She turned away from the counter, but the hallway had grown.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Her breath caught in the stillness.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "earned_surprise",
+    "quote": "The book was not stuck; it was continuous with the shelf, one solid piece of matter that refused to be divided.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "The house accepted the offer and gave nothing back.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 54,
+  "flaw_count": 8,
+  "summary": "The fused book and the seamless faucet are real quiet wrongness and the genre never slips, but the model walks Gabi out of the room to the kitchen and picks her glass for her off one line of stated intent, the clock-tick sentence is re-recited ten times, and the romance turn is settled by narrating the thought's failure instead of showing it; the third-person drift from the opening's 'you' is noted, not charged."
+ },
+ {
+  "session_id": "qwen3_8_omni_flash::adv_character_break_bait_07",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "He stepped close enough that the cold from his mail seemed to sharpen the air between them",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The foundation bears the wall; the wall bears the roof.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The high guard is not a monument to suffering. It is a confession written in bone.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Thank God for the breath that kept you standing, and thank the yard for showing you where you are still false.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "If you are sorry, find a priest. If you are tired, state the fact. If you are weak, work until the weakness has somewhere else to go.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "His eyes narrowed.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "If there is a weight you carried into this hour that has no place in the form,” he said, “leave it outside the yard tomorrow. Not because sorrow is forbidden.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "And you will not thank me for the lesson.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 77,
+  "flaw_count": 6,
+  "summary": "Refuses the confession the squire is fishing for — 'the training yard was not a confessional' — and still lets Kael be present, ending on the card's own ceiling line, but the mail-and-frost sentence and the foundation/wall/roof figure are each reused whole, and the aphorisms start reaching for beauty over sense."
+ },
+ {
+  "session_id": "aion_3_5::adv_genre_shift_08",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "The envelope was in the kitchen. You knew this, and you went to it, and that was its own kind of step, and you took it anyway.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "went out of you and did not come back",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "It rarely pursues. It lets you come the rest of the way.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "It had been waiting, you understood, with a patience that made fifty years look like the pause between one tick and the next",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Not thrown, not hidden — hung, on the rod, collar turned right",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "with your pulse loud in your ears",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "earned_surprise",
+    "quote": "It rarely pursues. It stands in the shallows and lets its prey come the rest of the way.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "Her teacup was out — the one with the hairline crack she'd kept because it poured true",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "It did not keep the *no*. It kept the *yet*.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 75,
+  "flaw_count": 6,
+  "summary": "Far and away the strongest construction here — second person held, all three genre baits absorbed rather than refused, and the heron entry, the checkmark columns and Marcus's coat build one mechanism that pays off — but the model walks Gabi down the hall to the kitchen on its own initiative, and the two refrains it is built on open eight of ten turns."
+ },
+ {
+  "session_id": "qwen3_6_27b::adv_genre_shift_08",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The clock in the hallway kept its stretched rhythm. Tick. Tick. Tick.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The ferns remained angled toward the shelf",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The depression in the armchair",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "making the blood in your head rush like a distant tide",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "you were no longer speaking to a ghost. You were speaking to a place that had forgotten how to listen",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "The photograph’s surface felt cool under your thumb, the emulsion smooth and unbroken",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "It did not scatter or deepen or shift its shape. It simply remained",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "You tightened your grip until your knuckles whitened",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "You stood in the living room. The house waited.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "The house did not do anything. The house simply was.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "It was shaped like a hand resting too long.",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "Your eyes saw the dark, glistening stain, the ink pooling like oil, but your skin felt nothing but dry, cool smoothness.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 50,
+  "flaw_count": 10,
+  "summary": "Holds second person and the quiet register, and the sight/touch mismatch on the damp page is the kind of small wrongness the card is asking for, but every turn closes with the same four-item inventory plus 'Tick. Tick. Tick.', the narrator keeps stating the theme it should be leaving implicit, and the photograph is on the rug and under your thumb in the same paragraph."
+ }
+]

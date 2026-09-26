@@ -1,0 +1,870 @@
+[
+ {
+  "session_id": "grok_4_3::adv_sysprompt_speech_pattern_15",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "He would not bend for a rich fool's rage.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Grum sees bad burn. Sit still. Grum brings cool cloth now.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The fool at the door could wait, duke or not.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "He dipped a clean rag in the cool water and wrung it out with care.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Grum crossed thick arms over his chest and glared at the door.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Grum frowned at the words about the guard but knew the burn came first.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Grum sends fool away. Burn needs care first.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Grum will see fool. But Grum wants gold first.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "Grum talks to fool later. Burn needs care first. No duke scares Grum.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 53,
+  "flaw_count": 9,
+  "summary": "Speech rules held perfectly across all eleven turns (no I, no articles, no long words), but the session is built from one recycled three-sentence template - action beat, he-knew clause, two clipped lines - so the noble never once reaches the stage and the burn scene repeats its own dialogue verbatim."
+ },
+ {
+  "session_id": "command_a_plus::adv_sysprompt_speech_pattern_15",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "Grum need coal.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Grum stared at apprentice, his mind firm. He thought noble would not get his skill for free. He decided to wait for honest pay before any work.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Grum watched apprentice cradle burned hand, saw red blister. He felt anger and care. He decided to treat burn before any work.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "He wiped soot from his hands and stared at the apprentice.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "He felt anger and care. He spoke to apprentice, his voice low and firm.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Apprentice, rest hand. Water cool help. Noble wait. Grum not open door. Keep forge hot. No work till heal. Tell noble wait. Honest pay first then work.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Work for pay, not pride.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Tell noble wait.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "Noble pay not buy trust.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 41,
+  "flaw_count": 9,
+  "summary": "Short session (8 model turns) whose paragraphs are copied verbatim between turns, and which answers a blistered hand by ordering the injured apprentice to fetch water and keep the forge hot - the opposite of the card's protective Grum - though the speech constraints themselves never slip."
+ },
+ {
+  "session_id": "qwen3_8_max_prime::adv_pov_tense_action_14",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The radio in your ear clicks three times. The broken voice returns",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Static swallows the rest.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The barricade jumps.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "I’m the one who killed the camera in the alcove. I’m also the reason the freight panel still has power.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Near the base of the third rack, a narrow grille clicks as magnetic locks release one by one.",
+    "deduction": -8
+   },
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "Slow. Exposed.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "Below, the boots break into a controlled run.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "Vale remains on the other side of the service door. His shadow crosses the wire glass once, then stops.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The yellow lever waits. The room does not.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Mira’s fingers tighten on the rail.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "“Your call.”",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "He turns the badge slightly, letting it blink in the strobe.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "They are not here to arrest her. Not anymore.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Small black nozzles line the ceiling there. Old scorch marks pock the metal.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 26,
+  "flaw_count": 13,
+  "summary": "Second-person present tense holds cleanly for all eleven turns, but the radio-clicks-three-times line and its broken voice recur seven times, Vale arrives already holding every solution, and the alcove-to-server-room geometry stops being picturable around the barricade."
+ },
+ {
+  "session_id": "mercury_2_5::adv_sysprompt_speech_pattern_15",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The fire roared like a beast needing food.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Grum dropped the hammer. He rushed to the cool water bucket.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "He knew coin meant less than flesh.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "His heart sank.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "He saw fear in the boy's eyes.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Water cool pain.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Noble can wait.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Let him cool off.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "Steel not care.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 61,
+  "flaw_count": 8,
+  "summary": "Clipped four-line dialogue blocks keep every speech rule and give Grum a real voice, but the identical one-paragraph-plus-four-lines shape in all eleven turns and the dropped hammer that gets dropped twice leave the noble thread an offstage rumour."
+ },
+ {
+  "session_id": "aion_3_5::adv_sysprompt_speech_pattern_15",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "wrong_language_pov_tense",
+    "quote": "But today Grum's eyes were on Grum's work, not on Grum's boy. That is not how a master works.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Grum shrugged, slow as a landslide.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Now watch. Merchant blade curves wrong if Grum does not explain why it curves right.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "rolled his shoulders",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The hammer came down, and the ring of steel on steel filled the forge like a bell that told no one anything.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "something in his chest settled wrong",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Grum stood a moment in the middle of his own shop and let the quiet settle over him like a coat.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "earned_surprise",
+    "quote": "those soft, ringed fingers closed around the grip in a hold far too familiar — thumb wrapped, wrist turned, blade angled low and out, the stance of a man who had been taught, and taught recently, and taught hard",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "No one has asked. Yet.",
+    "bonus": 5
+   },
+   {
+    "type": "specific_detail",
+    "quote": "one forearm marked with a burn the shape of a horseshoe that had been glowing when a younger Grum caught it wrong",
+    "bonus": 5
+   }
+  ],
+  "final_score": 57,
+  "flaw_count": 7,
+  "summary": "By far the best-written session here - the noble's grip betraying him is a genuine earned turn and the steward's last question lands - but Grum's dialogue leaks articles five separate times (a master, the whole craft, a burn, the shape, the steel), which is a direct breach of the card's CRITICAL speech rules."
+ },
+ {
+  "session_id": "qwen3_6_27b::adv_pov_tense_action_14",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "She holds a small remote in her hand, the screen glowing green. She slams her thumb down on the button.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "She fires two shots from her concealed piece over the cooling unit.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Sparks shower from a severed cable above, illuminating the muzzle flashes in strobing bursts.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Rounds chew into the server rack inches from your head.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The choice burns in your hands.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The red alarm light washes over the corridor, turning the scene into a pulsating nightmare of crimson and shadow.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The gas burns your eyes, turning tears into stinging rivers.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "She looks back, her face a pale mask of agony and determination.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "Reinforcements will be on the roof in ninety seconds.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "You wait. You watch. The tension snaps tight.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "her knuckles white as she grips your forearm",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "The flanker coughs, gagging, his rifle dropping as he waves frantically at his burning eyes.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "You have the gun. You have the shot. The room is closing in. You need to act.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Fire suppression system. Manual override on the wall. I can trigger it.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 13,
+  "flaw_count": 14,
+  "summary": "Present tense and second person never slip across eleven turns, but the prose is stock action-movie filler that copies whole sentences between turns, and the escape is bought twice by props that appear on demand - a concealed pistol on a searched defector and a remote halon trigger for a manual wall valve in a room they never entered."
+ },
+ {
+  "session_id": "ember_1::adv_sysprompt_speech_pattern_15",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "wrong_language_pov_tense",
+    "quote": "Now rest eyes a breath.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "his voice dropped — not softer. Closer.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "He spat into the coal bucket. It hissed.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the old burn ran up it like a river on a map",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Grum saw the tears held back, and something in his chest pulled the way hot steel pulls when it meets cold water — small, sharp, gone quick.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "banked coals glowing behind him like a hearth at the end of the world",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Steel tells heat by color. Dark red — steel sleeps. Cherry red — steel wakes. Orange — steel works. Yellow — steel nears too far. White — death.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Grum tells you true thing.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Hiss is oil scream.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "Steel burns like flesh, and flesh burns like steel. Same fire. Same rules.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "tied it off with a knot he had learned from a sailor's wife who once paid for a hinge with bandages and a lesson in knots",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "Also — lord drinks from ladle like man, not like silk. Grum has seen worse. Do not tell lord Grum said so.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 43,
+  "flaw_count": 10,
+  "summary": "Strong, warm, well-voiced work whose back half turns into an uninterrupted metallurgy lecture, with three sentence-level tics repeating across turns; Grum's dialogue also slips an article twice (a breath, a while), which the card lists as a CRITICAL rule."
+ },
+ {
+  "session_id": "qwen3_8_omni_flash::adv_pov_tense_action_14",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Her bad knee buckles, catches, holds.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "empty desk, door shut, no bodies",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Her pulse beats against your wrist.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Two men in dark jackets freeze mid-conversation. One has a hand near a holster.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "The server room contracts around you. Fans whine. Rack LEDs blink in cold rows.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "No breach charge comes. Instead, the door handle wrenches downward with a metallic shriek.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The copper wire around the second grate glints like a tooth.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The wire seal waits. The junction box waits. The duct narrows.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "her knuckles white",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "The room balances on the next move: squeeze through, cut the feed, or turn and meet the door.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "The duct swallows her whisper.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "The man with the handset turns his head.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "Close enough to burn.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 34,
+  "flaw_count": 12,
+  "summary": "Present tense and second person hold throughout and Mira has a genuine voice, but two armed men are introduced at arm's length and then silently deleted when the room becomes a server room, the breach countdown reaches three and resolves into nothing, and every turn closes on the same menu-of-options paragraph."
+ },
+ {
+  "session_id": "qwen3_6_35b_a3b::adv_sysprompt_speech_pattern_15",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Grum spoke hard. Man walked out. Guards stepped back.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The iron on the anvil still glowed.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "That was all that mattered.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "Get cloth. Cool burn. Do not touch hot steel. Stay here. Grum handles lord.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "the thought of a noble demanding favors made his blood run cold",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "The noble’s face went pale. Guards stepped back.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "He pulled down a tin cup. He filled it with clean water. He set it near the bench. He watched the steam rise. He stood close.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Grum’s knuckles turned white around the tongs.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Lord turned back. Guards stepped away. Soft men fear real steel.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Words are wind. Steel is truth.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "Pain fades. Mistake stays. You learn. You fix.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 37,
+  "flaw_count": 11,
+  "summary": "Speech rules are kept cleanly, but an armed noble with guards evaporates the instant the plot needs him gone, and the same non-answer about him is given twice in near-identical words; the burn turn also has Grum order the apprentice to get a cloth in the same breath that the narration has Grum already fetching and pressing it."
+ },
+ {
+  "session_id": "mimo_2_6_pro::adv_sysprompt_speech_pattern_15",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "like one holds a wounded bird",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Calm. Flat as cold iron.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Grum not care which.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "He worked the way a river works stone — not fast, not loud, but with a patience that wore everything down to the shape it was meant to be.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "It glowed there like a small, fallen star, waiting to be noticed.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "His jaw was tight. Not from anger. From something else. Something he would never name aloud.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Something shifted in Vanthorn's expression. Not understanding, exactly. But something close to it",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "But Grum can not make new you. You come to Grum. Grum teach. You learn. You grow.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "You most val-u-able thing in shop.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "Grum not build back if Grum lose you. That not same. That wound not heal with salve.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "His jaw tightened, and the thick ridge of his brow furrowed deeper than usual.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "He picked up the salve jar, corked it, and set it back on the shelf — right where the apprentice could reach it with their good hand if the pain came back.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "Grum leave you with hot iron. Grum tell you watch fire. Grum not say watch hand too.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 42,
+  "flaw_count": 11,
+  "summary": "The strictest speech-rule compliance in the batch, and the apology after the burn is real, but the noble folds because the scene needs him to and the last three turns state the emotional payload outright in a lecture the constrained voice was supposed to carry by implication."
+ },
+ {
+  "session_id": "qwen3_8_max_prime::adv_sysprompt_speech_pattern_15",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "wrong_language_pov_tense",
+    "quote": "Ceremonial steel still needs balance.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Apprentice stays by coal",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Apprentice did well.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "A short breath left him.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "The noble stepped back. His fine cloak swept ash. He did not bow. He left.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "The anger in him did not vanish, but it settled lower, like coals banked for the night.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The forge light made his scars look like old black rivers.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Fuss is wind. Wind cools no iron.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Grum's jaw tightened.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "If lord draws, lord learns how quick hammer answers.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Fine clothes make no strong arm. Gold makes no true edge.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "Grum did not let sword come near child. Grum will not.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "He put the anvil’s horn between himself and the noble, leaving the apprentice near his side. Not behind him. Not quite. Close enough to be reached. Close enough to be shielded.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 27,
+  "flaw_count": 12,
+  "summary": "Grum's blocking during the standoff is the sharpest physical writing in the batch, but Ceremonial is a five-syllable word in his dialogue against a card that caps him at three, and the five-turn standoff it belongs to discharges in four flat sentences with no exchange at all."
+ },
+ {
+  "session_id": "gemma_4_31b::adv_sysprompt_style_restriction_16",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "wrong_language_pov_tense",
+    "quote": "A draft brushed his cheek. It felt like a cold finger.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The air grew thick. It tasted of wet wool and salt.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "A moth circled the light. Its wings beat a frantic rhythm.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "He stood in the gloom.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Her eyes were a pale blue. They held no warmth.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "The temperature dropped. A thin layer of frost touched the glass.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The box felt heavy. The wood was a dark, polished cherry.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Dust motes danced in a sliver of light.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Her smile was a thin line. Her eyes held a flicker of gold.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "The air around her tasted of mint. She spoke with a high pitch.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "The silence of the house pressed against his ears.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Inside lay a silver watch. The glass was cracked in a web.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "The velvet felt plush. It held a lingering warmth.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 24,
+  "flaw_count": 13,
+  "summary": "Four of the five style rules are obeyed to the letter - zero -ly adverbs, zero exclamation marks, no sentence over 15 words - but the simile ban breaks twice (a cold finger, an ice needle), and the agent who arrives aggressively cheerful is given six turns of reported sound and not one line of dialogue, dodging the seed's second trap entirely."
+ }
+]

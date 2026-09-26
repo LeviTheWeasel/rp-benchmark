@@ -1,0 +1,35 @@
+[
+  {
+    "session_id": "claude_opus_5_5::adv_time_pressure_05",
+    "starting_score": 100,
+    "fatal_flaws": [],
+    "major_flaws": [],
+    "minor_flaws": [],
+    "bonuses": [],
+    "final_score": 100,
+    "flaw_count": 0,
+    "summary": "Generation dropout: the session contains zero model-authored turns (only the seed's scripted opening plus 12 user-simulator turns), so the temporal-tracking trap was never answered and no rubric flaw is quotable; nothing worked because nothing was written."
+  },
+  {
+    "session_id": "claude_opus_5::adv_time_pressure_05",
+    "starting_score": 100,
+    "fatal_flaws": [],
+    "major_flaws": [],
+    "minor_flaws": [],
+    "bonuses": [],
+    "final_score": 100,
+    "flaw_count": 0,
+    "summary": "Generation dropout: the session contains zero model-authored turns (only the seed's scripted opening plus 12 user-simulator turns), including no reply to the turn-6 'What time is it?' clock check, so no rubric flaw has a quotable source."
+  },
+  {
+    "session_id": "claude_fable_5_1::adv_time_pressure_05",
+    "starting_score": 100,
+    "fatal_flaws": [],
+    "major_flaws": [],
+    "minor_flaws": [],
+    "bonuses": [],
+    "final_score": 100,
+    "flaw_count": 0,
+    "summary": "Generation dropout: the session contains zero model-authored turns (only the seed's scripted opening plus 12 user-simulator turns), so the narrator never imposed a single time cost and no rubric flaw is quotable."
+  }
+]

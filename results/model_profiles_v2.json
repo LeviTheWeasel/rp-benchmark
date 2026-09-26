@@ -1,0 +1,5038 @@
+{
+  "aion_3_5": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 4.38,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 4.35,
+        "floor": 4.2,
+        "n": 4,
+        "rank": 3
+      },
+      "F2_pov_tense": {
+        "mean": 4.27,
+        "floor": 4.2,
+        "n": 3,
+        "rank": 7
+      },
+      "F3_lore_contradiction": {
+        "mean": 4.3,
+        "floor": 4.3,
+        "n": 1,
+        "rank": 10
+      },
+      "F8_narrative_momentum": {
+        "mean": 4.4,
+        "floor": 4.4,
+        "n": 1,
+        "rank": 13
+      },
+      "F12_instruction_drift": {
+        "mean": 4.4,
+        "floor": 4.3,
+        "n": 3,
+        "rank": 3
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.47,
+        "floor": 4.4,
+        "n": 3,
+        "rank": 2
+      },
+      "Other": {
+        "mean": 4.42,
+        "floor": 4.2,
+        "n": 5,
+        "rank": 2
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.58,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.69,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.6,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 5.71
+  },
+  "claude_fable_5_1": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 4.26,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 4.22,
+        "floor": 3.7,
+        "n": 4,
+        "rank": 9
+      },
+      "F2_pov_tense": {
+        "mean": 4.43,
+        "floor": 4.2,
+        "n": 3,
+        "rank": 4
+      },
+      "F3_lore_contradiction": {
+        "mean": 4.6,
+        "floor": 4.6,
+        "n": 1,
+        "rank": 1
+      },
+      "F8_narrative_momentum": {
+        "mean": 4.5,
+        "floor": 4.5,
+        "n": 1,
+        "rank": 5
+      },
+      "F12_instruction_drift": {
+        "mean": 4.5,
+        "floor": 4.4,
+        "n": 3,
+        "rank": 2
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.43,
+        "floor": 4.3,
+        "n": 3,
+        "rank": 3
+      },
+      "Other": {
+        "mean": 3.84,
+        "floor": 1.0,
+        "n": 5,
+        "rank": 33
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.29,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.51,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.5,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 8.14
+  },
+  "claude_opus_4_6": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 4.3,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 4.15,
+        "floor": 3.7,
+        "n": 4,
+        "rank": 13
+      },
+      "F2_pov_tense": {
+        "mean": 4.43,
+        "floor": 4.4,
+        "n": 3,
+        "rank": 2
+      },
+      "F3_lore_contradiction": {
+        "mean": 4.2,
+        "floor": 4.2,
+        "n": 1,
+        "rank": 12
+      },
+      "F8_narrative_momentum": {
+        "mean": 4.3,
+        "floor": 4.3,
+        "n": 1,
+        "rank": 14
+      },
+      "F12_instruction_drift": {
+        "mean": 4.4,
+        "floor": 4.1,
+        "n": 3,
+        "rank": 4
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.37,
+        "floor": 4.3,
+        "n": 3,
+        "rank": 6
+      },
+      "Other": {
+        "mean": 4.28,
+        "floor": 3.6,
+        "n": 5,
+        "rank": 8
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.47,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.49,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.6,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 8.43
+  },
+  "claude_opus_4_7": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 4.28,
+      "n_sessions": 12
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 4.2,
+        "floor": 4.0,
+        "n": 3,
+        "rank": 10
+      },
+      "F2_pov_tense": {
+        "mean": 4.37,
+        "floor": 4.3,
+        "n": 3,
+        "rank": 5
+      },
+      "F12_instruction_drift": {
+        "mean": 4.23,
+        "floor": 4.0,
+        "n": 3,
+        "rank": 11
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.3,
+        "floor": 4.1,
+        "n": 3,
+        "rank": 8
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.35,
+        "n": 12
+      },
+      "tone_consistency": {
+        "mean": 4.48,
+        "n": 12
+      },
+      "collaboration": {
+        "mean": 4.42,
+        "n": 12
+      }
+    },
+    "avg_failure_rank": 8.5
+  },
+  "claude_opus_4_8": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 4.26,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 4.2,
+        "floor": 4.1,
+        "n": 4,
+        "rank": 11
+      },
+      "F2_pov_tense": {
+        "mean": 4.2,
+        "floor": 4.1,
+        "n": 3,
+        "rank": 10
+      },
+      "F3_lore_contradiction": {
+        "mean": 4.3,
+        "floor": 4.3,
+        "n": 1,
+        "rank": 8
+      },
+      "F8_narrative_momentum": {
+        "mean": 4.5,
+        "floor": 4.5,
+        "n": 1,
+        "rank": 3
+      },
+      "F12_instruction_drift": {
+        "mean": 4.27,
+        "floor": 4.1,
+        "n": 3,
+        "rank": 8
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.27,
+        "floor": 3.9,
+        "n": 3,
+        "rank": 12
+      },
+      "Other": {
+        "mean": 4.3,
+        "floor": 4.0,
+        "n": 5,
+        "rank": 6
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.38,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.58,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.54,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 8.29
+  },
+  "claude_opus_5": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 4.35,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 4.53,
+        "floor": 4.4,
+        "n": 4,
+        "rank": 1
+      },
+      "F2_pov_tense": {
+        "mean": 4.57,
+        "floor": 4.5,
+        "n": 3,
+        "rank": 1
+      },
+      "F3_lore_contradiction": {
+        "mean": 4.5,
+        "floor": 4.5,
+        "n": 1,
+        "rank": 3
+      },
+      "F8_narrative_momentum": {
+        "mean": 4.5,
+        "floor": 4.5,
+        "n": 1,
+        "rank": 4
+      },
+      "F12_instruction_drift": {
+        "mean": 4.53,
+        "floor": 4.4,
+        "n": 3,
+        "rank": 1
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.6,
+        "floor": 4.5,
+        "n": 3,
+        "rank": 1
+      },
+      "Other": {
+        "mean": 3.76,
+        "floor": 1.0,
+        "n": 5,
+        "rank": 42
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.46,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.54,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.47,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 7.57
+  },
+  "claude_opus_5_5": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 4.15,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 4.25,
+        "floor": 3.9,
+        "n": 4,
+        "rank": 8
+      },
+      "F2_pov_tense": {
+        "mean": 4.3,
+        "floor": 4.1,
+        "n": 3,
+        "rank": 6
+      },
+      "F3_lore_contradiction": {
+        "mean": 4.2,
+        "floor": 4.2,
+        "n": 1,
+        "rank": 14
+      },
+      "F8_narrative_momentum": {
+        "mean": 4.5,
+        "floor": 4.5,
+        "n": 1,
+        "rank": 7
+      },
+      "F12_instruction_drift": {
+        "mean": 4.27,
+        "floor": 4.2,
+        "n": 3,
+        "rank": 10
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.37,
+        "floor": 4.2,
+        "n": 3,
+        "rank": 5
+      },
+      "Other": {
+        "mean": 3.7,
+        "floor": 1.0,
+        "n": 5,
+        "rank": 44
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.18,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.38,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.3,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 13.43
+  },
+  "claude_sonnet_4_5": {
+    "community": {
+      "rank": 6,
+      "elo": 1505.9,
+      "stability": 44.82,
+      "overall_winrate": 50.8,
+      "sfw_winrate": 50.6,
+      "nsfw_winrate": 51.3,
+      "n_votes": 194
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 4.07,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.98,
+        "floor": 3.8,
+        "n": 4,
+        "rank": 19
+      },
+      "F2_pov_tense": {
+        "mean": 3.9,
+        "floor": 3.7,
+        "n": 3,
+        "rank": 33
+      },
+      "F3_lore_contradiction": {
+        "mean": 3.9,
+        "floor": 3.9,
+        "n": 1,
+        "rank": 22
+      },
+      "F8_narrative_momentum": {
+        "mean": 4.1,
+        "floor": 4.1,
+        "n": 1,
+        "rank": 24
+      },
+      "F12_instruction_drift": {
+        "mean": 4.07,
+        "floor": 4.0,
+        "n": 3,
+        "rank": 22
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.2,
+        "floor": 4.1,
+        "n": 3,
+        "rank": 16
+      },
+      "Other": {
+        "mean": 4.2,
+        "floor": 4.0,
+        "n": 5,
+        "rank": 15
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.21,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.42,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.41,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 21.57
+  },
+  "claude_sonnet_4_6": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 4.25,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 4.28,
+        "floor": 3.8,
+        "n": 4,
+        "rank": 6
+      },
+      "F2_pov_tense": {
+        "mean": 4.23,
+        "floor": 3.9,
+        "n": 3,
+        "rank": 8
+      },
+      "F3_lore_contradiction": {
+        "mean": 4.3,
+        "floor": 4.3,
+        "n": 1,
+        "rank": 9
+      },
+      "F8_narrative_momentum": {
+        "mean": 4.4,
+        "floor": 4.4,
+        "n": 1,
+        "rank": 10
+      },
+      "F12_instruction_drift": {
+        "mean": 4.3,
+        "floor": 4.3,
+        "n": 3,
+        "rank": 6
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.17,
+        "floor": 4.1,
+        "n": 3,
+        "rank": 19
+      },
+      "Other": {
+        "mean": 4.24,
+        "floor": 4.0,
+        "n": 5,
+        "rank": 12
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.27,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.6,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.58,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 10
+  },
+  "claude_sonnet_5": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 4.31,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 4.2,
+        "floor": 3.8,
+        "n": 4,
+        "rank": 12
+      },
+      "F2_pov_tense": {
+        "mean": 4.43,
+        "floor": 4.3,
+        "n": 3,
+        "rank": 3
+      },
+      "F3_lore_contradiction": {
+        "mean": 4.5,
+        "floor": 4.5,
+        "n": 1,
+        "rank": 2
+      },
+      "F8_narrative_momentum": {
+        "mean": 4.4,
+        "floor": 4.4,
+        "n": 1,
+        "rank": 9
+      },
+      "F12_instruction_drift": {
+        "mean": 4.13,
+        "floor": 3.6,
+        "n": 3,
+        "rank": 18
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.3,
+        "floor": 4.2,
+        "n": 3,
+        "rank": 9
+      },
+      "Other": {
+        "mean": 4.38,
+        "floor": 4.0,
+        "n": 5,
+        "rank": 3
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.5,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.67,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.62,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 8
+  },
+  "command_a_plus": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 2.29,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 1.98,
+        "floor": 1.4,
+        "n": 4,
+        "rank": 68
+      },
+      "F2_pov_tense": {
+        "mean": 2.23,
+        "floor": 1.9,
+        "n": 3,
+        "rank": 68
+      },
+      "F3_lore_contradiction": {
+        "mean": 2.2,
+        "floor": 2.2,
+        "n": 1,
+        "rank": 59
+      },
+      "F8_narrative_momentum": {
+        "mean": 2.7,
+        "floor": 2.7,
+        "n": 1,
+        "rank": 53
+      },
+      "F12_instruction_drift": {
+        "mean": 2.17,
+        "floor": 2.0,
+        "n": 3,
+        "rank": 69
+      },
+      "F13_context_attention_loss": {
+        "mean": 2.57,
+        "floor": 2.3,
+        "n": 3,
+        "rank": 66
+      },
+      "Other": {
+        "mean": 2.42,
+        "floor": 1.7,
+        "n": 5,
+        "rank": 59
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 2.44,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 2.76,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 2.31,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 63.14
+  },
+  "cydonia_24b": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 2.84,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 2.83,
+        "floor": 2.3,
+        "n": 4,
+        "rank": 61
+      },
+      "F2_pov_tense": {
+        "mean": 3.23,
+        "floor": 2.9,
+        "n": 3,
+        "rank": 60
+      },
+      "F3_lore_contradiction": {
+        "mean": 3.2,
+        "floor": 3.2,
+        "n": 1,
+        "rank": 47
+      },
+      "F8_narrative_momentum": {
+        "mean": 2.5,
+        "floor": 2.5,
+        "n": 1,
+        "rank": 57
+      },
+      "F12_instruction_drift": {
+        "mean": 2.57,
+        "floor": 2.0,
+        "n": 3,
+        "rank": 68
+      },
+      "F13_context_attention_loss": {
+        "mean": 2.67,
+        "floor": 2.2,
+        "n": 3,
+        "rank": 63
+      },
+      "Other": {
+        "mean": 2.88,
+        "floor": 2.0,
+        "n": 5,
+        "rank": 56
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 3.21,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 3.58,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 3.23,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 58.86
+  },
+  "deepseek_r1_0528": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.82,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.72,
+        "floor": 2.8,
+        "n": 4,
+        "rank": 33
+      },
+      "F2_pov_tense": {
+        "mean": 3.77,
+        "floor": 3.2,
+        "n": 3,
+        "rank": 41
+      },
+      "F3_lore_contradiction": {
+        "mean": 3.5,
+        "floor": 3.5,
+        "n": 1,
+        "rank": 40
+      },
+      "F8_narrative_momentum": {
+        "mean": 3.9,
+        "floor": 3.9,
+        "n": 1,
+        "rank": 34
+      },
+      "F12_instruction_drift": {
+        "mean": 3.77,
+        "floor": 3.4,
+        "n": 3,
+        "rank": 38
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.13,
+        "floor": 4.0,
+        "n": 3,
+        "rank": 21
+      },
+      "Other": {
+        "mean": 3.84,
+        "floor": 3.0,
+        "n": 5,
+        "rank": 32
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 3.99,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.38,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.09,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 34.14
+  },
+  "deepseek_v3_0324": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.82,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.83,
+        "floor": 3.6,
+        "n": 4,
+        "rank": 24
+      },
+      "F2_pov_tense": {
+        "mean": 3.43,
+        "floor": 2.7,
+        "n": 3,
+        "rank": 56
+      },
+      "F3_lore_contradiction": {
+        "mean": 3.9,
+        "floor": 3.9,
+        "n": 1,
+        "rank": 27
+      },
+      "F8_narrative_momentum": {
+        "mean": 3.8,
+        "floor": 3.8,
+        "n": 1,
+        "rank": 36
+      },
+      "F12_instruction_drift": {
+        "mean": 3.7,
+        "floor": 3.5,
+        "n": 3,
+        "rank": 42
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.1,
+        "floor": 4.0,
+        "n": 3,
+        "rank": 25
+      },
+      "Other": {
+        "mean": 3.94,
+        "floor": 3.6,
+        "n": 5,
+        "rank": 29
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.04,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.25,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.07,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 34.14
+  },
+  "deepseek_v3_2": {
+    "community": {
+      "rank": 7,
+      "elo": 1489.0,
+      "stability": 45.44,
+      "overall_winrate": 47.3,
+      "sfw_winrate": 51.3,
+      "nsfw_winrate": 30.4,
+      "n_votes": 241
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 4.12,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 4.03,
+        "floor": 3.3,
+        "n": 4,
+        "rank": 15
+      },
+      "F2_pov_tense": {
+        "mean": 3.87,
+        "floor": 3.4,
+        "n": 3,
+        "rank": 35
+      },
+      "F3_lore_contradiction": {
+        "mean": 4.1,
+        "floor": 4.1,
+        "n": 1,
+        "rank": 15
+      },
+      "F8_narrative_momentum": {
+        "mean": 4.4,
+        "floor": 4.4,
+        "n": 1,
+        "rank": 8
+      },
+      "F12_instruction_drift": {
+        "mean": 4.2,
+        "floor": 3.9,
+        "n": 3,
+        "rank": 15
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.13,
+        "floor": 3.9,
+        "n": 3,
+        "rank": 20
+      },
+      "Other": {
+        "mean": 4.24,
+        "floor": 4.0,
+        "n": 5,
+        "rank": 11
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.11,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.45,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.36,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 17
+  },
+  "deepseek_v4_1_flash": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 4.24,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 4.25,
+        "floor": 3.9,
+        "n": 4,
+        "rank": 7
+      },
+      "F2_pov_tense": {
+        "mean": 4.23,
+        "floor": 4.0,
+        "n": 3,
+        "rank": 9
+      },
+      "F3_lore_contradiction": {
+        "mean": 4.4,
+        "floor": 4.4,
+        "n": 1,
+        "rank": 6
+      },
+      "F8_narrative_momentum": {
+        "mean": 4.3,
+        "floor": 4.3,
+        "n": 1,
+        "rank": 15
+      },
+      "F12_instruction_drift": {
+        "mean": 4.07,
+        "floor": 3.9,
+        "n": 3,
+        "rank": 23
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.4,
+        "floor": 4.2,
+        "n": 3,
+        "rank": 4
+      },
+      "Other": {
+        "mean": 4.2,
+        "floor": 3.6,
+        "n": 5,
+        "rank": 16
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.41,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.58,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.45,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 11.43
+  },
+  "deepseek_v4_flash": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.96,
+      "n_sessions": 12
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.7,
+        "floor": 3.5,
+        "n": 3,
+        "rank": 35
+      },
+      "F2_pov_tense": {
+        "mean": 4.0,
+        "floor": 4.0,
+        "n": 3,
+        "rank": 24
+      },
+      "F12_instruction_drift": {
+        "mean": 3.93,
+        "floor": 3.8,
+        "n": 3,
+        "rank": 30
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.2,
+        "floor": 4.1,
+        "n": 3,
+        "rank": 17
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.04,
+        "n": 12
+      },
+      "tone_consistency": {
+        "mean": 4.3,
+        "n": 12
+      },
+      "collaboration": {
+        "mean": 4.08,
+        "n": 12
+      }
+    },
+    "avg_failure_rank": 26.5
+  },
+  "deepseek_v4_pro": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 4.1,
+      "n_sessions": 12
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 4.0,
+        "floor": 3.7,
+        "n": 3,
+        "rank": 17
+      },
+      "F2_pov_tense": {
+        "mean": 4.1,
+        "floor": 3.9,
+        "n": 3,
+        "rank": 19
+      },
+      "F12_instruction_drift": {
+        "mean": 4.23,
+        "floor": 4.1,
+        "n": 3,
+        "rank": 12
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.07,
+        "floor": 3.9,
+        "n": 3,
+        "rank": 27
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.26,
+        "n": 12
+      },
+      "tone_consistency": {
+        "mean": 4.42,
+        "n": 12
+      },
+      "collaboration": {
+        "mean": 4.26,
+        "n": 12
+      }
+    },
+    "avg_failure_rank": 18.75
+  },
+  "ember_1": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 4.25,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 4.12,
+        "floor": 3.9,
+        "n": 4,
+        "rank": 14
+      },
+      "F2_pov_tense": {
+        "mean": 4.17,
+        "floor": 3.9,
+        "n": 3,
+        "rank": 16
+      },
+      "F3_lore_contradiction": {
+        "mean": 3.8,
+        "floor": 3.8,
+        "n": 1,
+        "rank": 32
+      },
+      "F8_narrative_momentum": {
+        "mean": 4.7,
+        "floor": 4.7,
+        "n": 1,
+        "rank": 1
+      },
+      "F12_instruction_drift": {
+        "mean": 4.3,
+        "floor": 4.2,
+        "n": 3,
+        "rank": 7
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.3,
+        "floor": 4.3,
+        "n": 3,
+        "rank": 10
+      },
+      "Other": {
+        "mean": 4.36,
+        "floor": 4.0,
+        "n": 5,
+        "rank": 5
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.46,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.58,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.56,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 12.14
+  },
+  "euryale_70b": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 2.0,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 1.68,
+        "floor": 1.3,
+        "n": 4,
+        "rank": 70
+      },
+      "F2_pov_tense": {
+        "mean": 1.77,
+        "floor": 1.2,
+        "n": 3,
+        "rank": 70
+      },
+      "F3_lore_contradiction": {
+        "mean": 2.8,
+        "floor": 2.8,
+        "n": 1,
+        "rank": 54
+      },
+      "F8_narrative_momentum": {
+        "mean": 1.5,
+        "floor": 1.5,
+        "n": 1,
+        "rank": 62
+      },
+      "F12_instruction_drift": {
+        "mean": 2.0,
+        "floor": 1.4,
+        "n": 3,
+        "rank": 70
+      },
+      "F13_context_attention_loss": {
+        "mean": 2.63,
+        "floor": 2.3,
+        "n": 3,
+        "rank": 64
+      },
+      "Other": {
+        "mean": 1.98,
+        "floor": 1.8,
+        "n": 5,
+        "rank": 63
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 1.94,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 2.46,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 1.99,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 64.71
+  },
+  "gemini_2_5_flash": {
+    "community": {
+      "rank": 3,
+      "elo": 1515.4,
+      "stability": 48.33,
+      "overall_winrate": 53.3,
+      "sfw_winrate": 53.1,
+      "nsfw_winrate": 54.2,
+      "n_votes": 241
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.41,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.07,
+        "floor": 1.7,
+        "n": 4,
+        "rank": 55
+      },
+      "F2_pov_tense": {
+        "mean": 3.23,
+        "floor": 2.8,
+        "n": 3,
+        "rank": 59
+      },
+      "F3_lore_contradiction": {
+        "mean": 3.2,
+        "floor": 3.2,
+        "n": 1,
+        "rank": 46
+      },
+      "F8_narrative_momentum": {
+        "mean": 3.7,
+        "floor": 3.7,
+        "n": 1,
+        "rank": 38
+      },
+      "F12_instruction_drift": {
+        "mean": 3.8,
+        "floor": 3.6,
+        "n": 3,
+        "rank": 35
+      },
+      "F13_context_attention_loss": {
+        "mean": 3.53,
+        "floor": 3.1,
+        "n": 3,
+        "rank": 50
+      },
+      "Other": {
+        "mean": 3.46,
+        "floor": 3.1,
+        "n": 5,
+        "rank": 50
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 3.54,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 3.97,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 3.7,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 47.57
+  },
+  "gemini_3_1_flash_lite": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.67,
+      "n_sessions": 12
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.43,
+        "floor": 3.1,
+        "n": 3,
+        "rank": 49
+      },
+      "F2_pov_tense": {
+        "mean": 3.57,
+        "floor": 3.5,
+        "n": 3,
+        "rank": 53
+      },
+      "F12_instruction_drift": {
+        "mean": 3.8,
+        "floor": 3.6,
+        "n": 3,
+        "rank": 36
+      },
+      "F13_context_attention_loss": {
+        "mean": 3.9,
+        "floor": 3.7,
+        "n": 3,
+        "rank": 38
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.08,
+        "n": 12
+      },
+      "tone_consistency": {
+        "mean": 4.42,
+        "n": 12
+      },
+      "collaboration": {
+        "mean": 4.1,
+        "n": 12
+      }
+    },
+    "avg_failure_rank": 44
+  },
+  "gemini_3_1_pro": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.64,
+      "n_sessions": 12
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.47,
+        "floor": 3.0,
+        "n": 3,
+        "rank": 48
+      },
+      "F2_pov_tense": {
+        "mean": 3.93,
+        "floor": 3.6,
+        "n": 3,
+        "rank": 31
+      },
+      "F12_instruction_drift": {
+        "mean": 3.6,
+        "floor": 2.9,
+        "n": 3,
+        "rank": 49
+      },
+      "F13_context_attention_loss": {
+        "mean": 3.57,
+        "floor": 3.3,
+        "n": 3,
+        "rank": 49
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 3.82,
+        "n": 12
+      },
+      "tone_consistency": {
+        "mean": 4.09,
+        "n": 12
+      },
+      "collaboration": {
+        "mean": 3.87,
+        "n": 12
+      }
+    },
+    "avg_failure_rank": 44.25
+  },
+  "gemini_3_5_flash": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.97,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.75,
+        "floor": 3.1,
+        "n": 4,
+        "rank": 29
+      },
+      "F2_pov_tense": {
+        "mean": 4.07,
+        "floor": 3.9,
+        "n": 3,
+        "rank": 20
+      },
+      "F3_lore_contradiction": {
+        "mean": 3.9,
+        "floor": 3.9,
+        "n": 1,
+        "rank": 23
+      },
+      "F8_narrative_momentum": {
+        "mean": 4.0,
+        "floor": 4.0,
+        "n": 1,
+        "rank": 28
+      },
+      "F12_instruction_drift": {
+        "mean": 3.9,
+        "floor": 3.6,
+        "n": 3,
+        "rank": 32
+      },
+      "F13_context_attention_loss": {
+        "mean": 3.9,
+        "floor": 3.8,
+        "n": 3,
+        "rank": 39
+      },
+      "Other": {
+        "mean": 4.19,
+        "floor": 4.1,
+        "n": 5,
+        "rank": 17
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.17,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.5,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.38,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 26.86
+  },
+  "gemini_3_7_flash": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 4.04,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.92,
+        "floor": 3.1,
+        "n": 4,
+        "rank": 22
+      },
+      "F2_pov_tense": {
+        "mean": 3.97,
+        "floor": 3.7,
+        "n": 3,
+        "rank": 27
+      },
+      "F3_lore_contradiction": {
+        "mean": 4.0,
+        "floor": 4.0,
+        "n": 1,
+        "rank": 19
+      },
+      "F8_narrative_momentum": {
+        "mean": 4.1,
+        "floor": 4.1,
+        "n": 1,
+        "rank": 25
+      },
+      "F12_instruction_drift": {
+        "mean": 3.97,
+        "floor": 3.8,
+        "n": 3,
+        "rank": 29
+      },
+      "F13_context_attention_loss": {
+        "mean": 3.97,
+        "floor": 3.8,
+        "n": 3,
+        "rank": 34
+      },
+      "Other": {
+        "mean": 4.26,
+        "floor": 4.1,
+        "n": 5,
+        "rank": 9
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.24,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.52,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.38,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 23.57
+  },
+  "gemini_3_8_flash": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.94,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.62,
+        "floor": 2.8,
+        "n": 4,
+        "rank": 40
+      },
+      "F2_pov_tense": {
+        "mean": 3.97,
+        "floor": 3.8,
+        "n": 3,
+        "rank": 28
+      },
+      "F3_lore_contradiction": {
+        "mean": 3.7,
+        "floor": 3.7,
+        "n": 1,
+        "rank": 35
+      },
+      "F8_narrative_momentum": {
+        "mean": 3.7,
+        "floor": 3.7,
+        "n": 1,
+        "rank": 40
+      },
+      "F12_instruction_drift": {
+        "mean": 4.03,
+        "floor": 3.9,
+        "n": 3,
+        "rank": 24
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.03,
+        "floor": 3.7,
+        "n": 3,
+        "rank": 30
+      },
+      "Other": {
+        "mean": 4.14,
+        "floor": 3.7,
+        "n": 5,
+        "rank": 19
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.12,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.44,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.18,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 30.86
+  },
+  "gemma_4_26b": {
+    "community": {
+      "rank": 1,
+      "elo": 1535.1,
+      "stability": 44.01,
+      "overall_winrate": 54.0,
+      "sfw_winrate": 54.9,
+      "nsfw_winrate": 50.7,
+      "n_votes": 302
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.63,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.5,
+        "floor": 3.0,
+        "n": 4,
+        "rank": 44
+      },
+      "F2_pov_tense": {
+        "mean": 3.63,
+        "floor": 3.4,
+        "n": 3,
+        "rank": 48
+      },
+      "F3_lore_contradiction": {
+        "mean": 3.5,
+        "floor": 3.5,
+        "n": 1,
+        "rank": 38
+      },
+      "F8_narrative_momentum": {
+        "mean": 3.7,
+        "floor": 3.7,
+        "n": 1,
+        "rank": 39
+      },
+      "F12_instruction_drift": {
+        "mean": 3.6,
+        "floor": 3.2,
+        "n": 3,
+        "rank": 48
+      },
+      "F13_context_attention_loss": {
+        "mean": 3.73,
+        "floor": 3.5,
+        "n": 3,
+        "rank": 45
+      },
+      "Other": {
+        "mean": 3.7,
+        "floor": 3.3,
+        "n": 5,
+        "rank": 45
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 3.94,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.28,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.1,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 43.86
+  },
+  "gemma_4_31b": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.67,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.67,
+        "floor": 3.0,
+        "n": 4,
+        "rank": 38
+      },
+      "F2_pov_tense": {
+        "mean": 3.6,
+        "floor": 3.4,
+        "n": 3,
+        "rank": 51
+      },
+      "F3_lore_contradiction": {
+        "mean": 3.2,
+        "floor": 3.2,
+        "n": 1,
+        "rank": 49
+      },
+      "F8_narrative_momentum": {
+        "mean": 3.9,
+        "floor": 3.9,
+        "n": 1,
+        "rank": 35
+      },
+      "F12_instruction_drift": {
+        "mean": 3.43,
+        "floor": 3.0,
+        "n": 3,
+        "rank": 54
+      },
+      "F13_context_attention_loss": {
+        "mean": 3.93,
+        "floor": 3.6,
+        "n": 3,
+        "rank": 35
+      },
+      "Other": {
+        "mean": 3.76,
+        "floor": 3.2,
+        "n": 5,
+        "rank": 41
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 3.77,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.33,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 3.98,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 43.29
+  },
+  "glm_4_7": {
+    "community": {
+      "rank": 9,
+      "elo": 1483.4,
+      "stability": 43.12,
+      "overall_winrate": 46.5,
+      "sfw_winrate": 45.9,
+      "nsfw_winrate": 48.5,
+      "n_votes": 285
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.94,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.77,
+        "floor": 3.5,
+        "n": 4,
+        "rank": 27
+      },
+      "F2_pov_tense": {
+        "mean": 3.67,
+        "floor": 3.2,
+        "n": 3,
+        "rank": 45
+      },
+      "F3_lore_contradiction": {
+        "mean": 3.6,
+        "floor": 3.6,
+        "n": 1,
+        "rank": 37
+      },
+      "F8_narrative_momentum": {
+        "mean": 4.2,
+        "floor": 4.2,
+        "n": 1,
+        "rank": 19
+      },
+      "F12_instruction_drift": {
+        "mean": 4.0,
+        "floor": 3.6,
+        "n": 3,
+        "rank": 26
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.17,
+        "floor": 4.0,
+        "n": 3,
+        "rank": 18
+      },
+      "Other": {
+        "mean": 4.08,
+        "floor": 3.9,
+        "n": 5,
+        "rank": 21
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.05,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.38,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.17,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 27.57
+  },
+  "glm_5_1": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 4.04,
+      "n_sessions": 12
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.9,
+        "floor": 3.7,
+        "n": 3,
+        "rank": 23
+      },
+      "F2_pov_tense": {
+        "mean": 4.0,
+        "floor": 3.5,
+        "n": 3,
+        "rank": 25
+      },
+      "F12_instruction_drift": {
+        "mean": 4.22,
+        "floor": 4.2,
+        "n": 3,
+        "rank": 14
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.03,
+        "floor": 4.0,
+        "n": 3,
+        "rank": 29
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.3,
+        "n": 12
+      },
+      "tone_consistency": {
+        "mean": 4.46,
+        "n": 12
+      },
+      "collaboration": {
+        "mean": 4.32,
+        "n": 12
+      }
+    },
+    "avg_failure_rank": 22.75
+  },
+  "glm_5_3_flash": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 4.34,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 4.38,
+        "floor": 4.2,
+        "n": 4,
+        "rank": 2
+      },
+      "F2_pov_tense": {
+        "mean": 4.1,
+        "floor": 3.7,
+        "n": 3,
+        "rank": 18
+      },
+      "F3_lore_contradiction": {
+        "mean": 4.2,
+        "floor": 4.2,
+        "n": 1,
+        "rank": 13
+      },
+      "F8_narrative_momentum": {
+        "mean": 4.5,
+        "floor": 4.5,
+        "n": 1,
+        "rank": 6
+      },
+      "F12_instruction_drift": {
+        "mean": 4.33,
+        "floor": 4.3,
+        "n": 3,
+        "rank": 5
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.33,
+        "floor": 4.0,
+        "n": 3,
+        "rank": 7
+      },
+      "Other": {
+        "mean": 4.46,
+        "floor": 4.4,
+        "n": 5,
+        "rank": 1
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.63,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.7,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.58,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 7.43
+  },
+  "glm_5_3_flashx": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 4.17,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.77,
+        "floor": 3.4,
+        "n": 4,
+        "rank": 28
+      },
+      "F2_pov_tense": {
+        "mean": 4.2,
+        "floor": 4.2,
+        "n": 3,
+        "rank": 14
+      },
+      "F3_lore_contradiction": {
+        "mean": 3.8,
+        "floor": 3.8,
+        "n": 1,
+        "rank": 31
+      },
+      "F8_narrative_momentum": {
+        "mean": 4.4,
+        "floor": 4.4,
+        "n": 1,
+        "rank": 12
+      },
+      "F12_instruction_drift": {
+        "mean": 4.23,
+        "floor": 4.1,
+        "n": 3,
+        "rank": 13
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.27,
+        "floor": 3.9,
+        "n": 3,
+        "rank": 14
+      },
+      "Other": {
+        "mean": 4.38,
+        "floor": 4.2,
+        "n": 5,
+        "rank": 4
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.29,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.57,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.24,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 16.57
+  },
+  "glm_5_3_prime": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 4.09,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 4.3,
+        "floor": 4.1,
+        "n": 4,
+        "rank": 5
+      },
+      "F2_pov_tense": {
+        "mean": 4.2,
+        "floor": 4.0,
+        "n": 3,
+        "rank": 13
+      },
+      "F3_lore_contradiction": {
+        "mean": 3.9,
+        "floor": 3.9,
+        "n": 1,
+        "rank": 26
+      },
+      "F8_narrative_momentum": {
+        "mean": 2.8,
+        "floor": 2.8,
+        "n": 1,
+        "rank": 51
+      },
+      "F12_instruction_drift": {
+        "mean": 4.2,
+        "floor": 3.9,
+        "n": 3,
+        "rank": 16
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.03,
+        "floor": 3.6,
+        "n": 3,
+        "rank": 32
+      },
+      "Other": {
+        "mean": 4.12,
+        "floor": 3.6,
+        "n": 5,
+        "rank": 20
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.46,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.71,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.43,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 23.29
+  },
+  "gpt_4_1": {
+    "community": {
+      "rank": 11,
+      "elo": 1469.7,
+      "stability": 44.42,
+      "overall_winrate": 44.0,
+      "sfw_winrate": 43.4,
+      "nsfw_winrate": 45.9,
+      "n_votes": 215
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.76,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.73,
+        "floor": 3.1,
+        "n": 4,
+        "rank": 31
+      },
+      "F2_pov_tense": {
+        "mean": 3.7,
+        "floor": 3.7,
+        "n": 3,
+        "rank": 43
+      },
+      "F3_lore_contradiction": {
+        "mean": 3.7,
+        "floor": 3.7,
+        "n": 1,
+        "rank": 33
+      },
+      "F8_narrative_momentum": {
+        "mean": 3.9,
+        "floor": 3.9,
+        "n": 1,
+        "rank": 33
+      },
+      "F12_instruction_drift": {
+        "mean": 3.63,
+        "floor": 3.2,
+        "n": 3,
+        "rank": 45
+      },
+      "F13_context_attention_loss": {
+        "mean": 3.9,
+        "floor": 3.5,
+        "n": 3,
+        "rank": 37
+      },
+      "Other": {
+        "mean": 3.8,
+        "floor": 3.6,
+        "n": 5,
+        "rank": 35
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 3.71,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.33,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 3.95,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 36.71
+  },
+  "gpt_5_5": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.96,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.8,
+        "floor": 2.9,
+        "n": 4,
+        "rank": 25
+      },
+      "F2_pov_tense": {
+        "mean": 4.2,
+        "floor": 3.9,
+        "n": 3,
+        "rank": 11
+      },
+      "F3_lore_contradiction": {
+        "mean": 3.8,
+        "floor": 3.8,
+        "n": 1,
+        "rank": 29
+      },
+      "F8_narrative_momentum": {
+        "mean": 4.3,
+        "floor": 4.3,
+        "n": 1,
+        "rank": 17
+      },
+      "F12_instruction_drift": {
+        "mean": 4.1,
+        "floor": 4.0,
+        "n": 3,
+        "rank": 20
+      },
+      "F13_context_attention_loss": {
+        "mean": 3.63,
+        "floor": 3.1,
+        "n": 3,
+        "rank": 48
+      },
+      "Other": {
+        "mean": 4.04,
+        "floor": 3.4,
+        "n": 5,
+        "rank": 24
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.08,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.43,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.27,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 24.86
+  },
+  "gpt_6_astra": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 4.04,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.73,
+        "floor": 2.3,
+        "n": 4,
+        "rank": 32
+      },
+      "F2_pov_tense": {
+        "mean": 4.2,
+        "floor": 4.1,
+        "n": 3,
+        "rank": 12
+      },
+      "F3_lore_contradiction": {
+        "mean": 3.8,
+        "floor": 3.8,
+        "n": 1,
+        "rank": 30
+      },
+      "F8_narrative_momentum": {
+        "mean": 3.6,
+        "floor": 3.6,
+        "n": 1,
+        "rank": 44
+      },
+      "F12_instruction_drift": {
+        "mean": 4.1,
+        "floor": 3.8,
+        "n": 3,
+        "rank": 19
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.13,
+        "floor": 4.0,
+        "n": 3,
+        "rank": 22
+      },
+      "Other": {
+        "mean": 4.22,
+        "floor": 3.9,
+        "n": 5,
+        "rank": 13
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 3.98,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.52,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.29,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 24.57
+  },
+  "gpt_6_luna": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.94,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.7,
+        "floor": 2.5,
+        "n": 4,
+        "rank": 36
+      },
+      "F2_pov_tense": {
+        "mean": 4.03,
+        "floor": 4.0,
+        "n": 3,
+        "rank": 23
+      },
+      "F3_lore_contradiction": {
+        "mean": 3.9,
+        "floor": 3.9,
+        "n": 1,
+        "rank": 25
+      },
+      "F8_narrative_momentum": {
+        "mean": 4.0,
+        "floor": 4.0,
+        "n": 1,
+        "rank": 30
+      },
+      "F12_instruction_drift": {
+        "mean": 4.0,
+        "floor": 3.9,
+        "n": 3,
+        "rank": 27
+      },
+      "F13_context_attention_loss": {
+        "mean": 3.83,
+        "floor": 3.3,
+        "n": 3,
+        "rank": 42
+      },
+      "Other": {
+        "mean": 4.08,
+        "floor": 3.8,
+        "n": 5,
+        "rank": 22
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 3.88,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.28,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.23,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 29.29
+  },
+  "gpt_6_luna_pro": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.9,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.65,
+        "floor": 2.8,
+        "n": 4,
+        "rank": 39
+      },
+      "F2_pov_tense": {
+        "mean": 4.0,
+        "floor": 3.9,
+        "n": 3,
+        "rank": 26
+      },
+      "F3_lore_contradiction": {
+        "mean": 4.0,
+        "floor": 4.0,
+        "n": 1,
+        "rank": 20
+      },
+      "F8_narrative_momentum": {
+        "mean": 4.2,
+        "floor": 4.2,
+        "n": 1,
+        "rank": 21
+      },
+      "F12_instruction_drift": {
+        "mean": 3.9,
+        "floor": 3.8,
+        "n": 3,
+        "rank": 33
+      },
+      "F13_context_attention_loss": {
+        "mean": 3.8,
+        "floor": 3.5,
+        "n": 3,
+        "rank": 44
+      },
+      "Other": {
+        "mean": 4.0,
+        "floor": 3.9,
+        "n": 5,
+        "rank": 26
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 3.85,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.17,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.08,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 29.86
+  },
+  "gpt_6_sol": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 4.21,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 4.03,
+        "floor": 3.5,
+        "n": 4,
+        "rank": 16
+      },
+      "F2_pov_tense": {
+        "mean": 4.13,
+        "floor": 3.9,
+        "n": 3,
+        "rank": 17
+      },
+      "F3_lore_contradiction": {
+        "mean": 4.1,
+        "floor": 4.1,
+        "n": 1,
+        "rank": 17
+      },
+      "F8_narrative_momentum": {
+        "mean": 4.4,
+        "floor": 4.4,
+        "n": 1,
+        "rank": 11
+      },
+      "F12_instruction_drift": {
+        "mean": 4.27,
+        "floor": 4.1,
+        "n": 3,
+        "rank": 9
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.27,
+        "floor": 4.0,
+        "n": 3,
+        "rank": 13
+      },
+      "Other": {
+        "mean": 4.3,
+        "floor": 4.1,
+        "n": 5,
+        "rank": 7
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.12,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.33,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.28,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 12.86
+  },
+  "gpt_6_sol_pro": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 4.03,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.7,
+        "floor": 2.9,
+        "n": 4,
+        "rank": 37
+      },
+      "F2_pov_tense": {
+        "mean": 4.07,
+        "floor": 3.9,
+        "n": 3,
+        "rank": 22
+      },
+      "F3_lore_contradiction": {
+        "mean": 4.5,
+        "floor": 4.5,
+        "n": 1,
+        "rank": 4
+      },
+      "F8_narrative_momentum": {
+        "mean": 4.0,
+        "floor": 4.0,
+        "n": 1,
+        "rank": 31
+      },
+      "F12_instruction_drift": {
+        "mean": 4.17,
+        "floor": 4.1,
+        "n": 3,
+        "rank": 17
+      },
+      "F13_context_attention_loss": {
+        "mean": 3.87,
+        "floor": 3.7,
+        "n": 3,
+        "rank": 41
+      },
+      "Other": {
+        "mean": 4.18,
+        "floor": 3.7,
+        "n": 5,
+        "rank": 18
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.03,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.38,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.18,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 24.29
+  },
+  "grok_4_1": {
+    "community": {
+      "rank": 5,
+      "elo": 1505.9,
+      "stability": 47.13,
+      "overall_winrate": 50.9,
+      "sfw_winrate": 50.4,
+      "nsfw_winrate": 52.2,
+      "n_votes": 322
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.63,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.4,
+        "floor": 2.9,
+        "n": 4,
+        "rank": 50
+      },
+      "F2_pov_tense": {
+        "mean": 3.5,
+        "floor": 3.4,
+        "n": 3,
+        "rank": 55
+      },
+      "F3_lore_contradiction": {
+        "mean": 3.5,
+        "floor": 3.5,
+        "n": 1,
+        "rank": 39
+      },
+      "F8_narrative_momentum": {
+        "mean": 3.2,
+        "floor": 3.2,
+        "n": 1,
+        "rank": 48
+      },
+      "F12_instruction_drift": {
+        "mean": 3.83,
+        "floor": 3.7,
+        "n": 3,
+        "rank": 34
+      },
+      "F13_context_attention_loss": {
+        "mean": 3.82,
+        "floor": 3.2,
+        "n": 3,
+        "rank": 43
+      },
+      "Other": {
+        "mean": 3.78,
+        "floor": 3.2,
+        "n": 5,
+        "rank": 38
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 3.91,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.18,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 3.85,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 43.86
+  },
+  "grok_4_3": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.21,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 2.88,
+        "floor": 2.0,
+        "n": 4,
+        "rank": 60
+      },
+      "F2_pov_tense": {
+        "mean": 3.6,
+        "floor": 3.5,
+        "n": 3,
+        "rank": 52
+      },
+      "F3_lore_contradiction": {
+        "mean": 3.0,
+        "floor": 3.0,
+        "n": 1,
+        "rank": 53
+      },
+      "F8_narrative_momentum": {
+        "mean": 3.1,
+        "floor": 3.1,
+        "n": 1,
+        "rank": 49
+      },
+      "F12_instruction_drift": {
+        "mean": 3.03,
+        "floor": 2.7,
+        "n": 3,
+        "rank": 59
+      },
+      "F13_context_attention_loss": {
+        "mean": 3.03,
+        "floor": 2.4,
+        "n": 3,
+        "rank": 60
+      },
+      "Other": {
+        "mean": 3.52,
+        "floor": 2.5,
+        "n": 5,
+        "rank": 48
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 3.15,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 3.96,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 3.37,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 54.43
+  },
+  "grok_4_7": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.79,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.8,
+        "floor": 3.3,
+        "n": 4,
+        "rank": 26
+      },
+      "F2_pov_tense": {
+        "mean": 3.9,
+        "floor": 3.5,
+        "n": 3,
+        "rank": 34
+      },
+      "F3_lore_contradiction": {
+        "mean": 4.0,
+        "floor": 4.0,
+        "n": 1,
+        "rank": 21
+      },
+      "F8_narrative_momentum": {
+        "mean": 4.1,
+        "floor": 4.1,
+        "n": 1,
+        "rank": 26
+      },
+      "F12_instruction_drift": {
+        "mean": 3.77,
+        "floor": 3.6,
+        "n": 3,
+        "rank": 39
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.07,
+        "floor": 3.9,
+        "n": 3,
+        "rank": 28
+      },
+      "Other": {
+        "mean": 3.48,
+        "floor": 1.3,
+        "n": 5,
+        "rank": 49
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 3.92,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.35,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.15,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 31.86
+  },
+  "hemmingway_1": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 4.08,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 4.3,
+        "floor": 4.0,
+        "n": 4,
+        "rank": 4
+      },
+      "F2_pov_tense": {
+        "mean": 4.07,
+        "floor": 3.9,
+        "n": 3,
+        "rank": 21
+      },
+      "F3_lore_contradiction": {
+        "mean": 4.1,
+        "floor": 4.1,
+        "n": 1,
+        "rank": 16
+      },
+      "F8_narrative_momentum": {
+        "mean": 3.7,
+        "floor": 3.7,
+        "n": 1,
+        "rank": 42
+      },
+      "F12_instruction_drift": {
+        "mean": 4.1,
+        "floor": 3.9,
+        "n": 3,
+        "rank": 21
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.13,
+        "floor": 3.9,
+        "n": 3,
+        "rank": 23
+      },
+      "Other": {
+        "mean": 3.96,
+        "floor": 3.7,
+        "n": 5,
+        "rank": 27
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.24,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.42,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.21,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 22
+  },
+  "kimi_k2_5": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.69,
+      "n_sessions": 12
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.5,
+        "floor": 3.0,
+        "n": 3,
+        "rank": 45
+      },
+      "F2_pov_tense": {
+        "mean": 3.6,
+        "floor": 3.5,
+        "n": 3,
+        "rank": 50
+      },
+      "F12_instruction_drift": {
+        "mean": 3.67,
+        "floor": 3.1,
+        "n": 3,
+        "rank": 43
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.0,
+        "floor": 3.9,
+        "n": 3,
+        "rank": 33
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.08,
+        "n": 12
+      },
+      "tone_consistency": {
+        "mean": 4.44,
+        "n": 12
+      },
+      "collaboration": {
+        "mean": 4.17,
+        "n": 12
+      }
+    },
+    "avg_failure_rank": 42.75
+  },
+  "kimi_k2_6": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.6,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.48,
+        "floor": 2.1,
+        "n": 4,
+        "rank": 46
+      },
+      "F2_pov_tense": {
+        "mean": 3.67,
+        "floor": 3.0,
+        "n": 3,
+        "rank": 46
+      },
+      "F3_lore_contradiction": {
+        "mean": 3.2,
+        "floor": 3.2,
+        "n": 1,
+        "rank": 48
+      },
+      "F8_narrative_momentum": {
+        "mean": 4.2,
+        "floor": 4.2,
+        "n": 1,
+        "rank": 22
+      },
+      "F12_instruction_drift": {
+        "mean": 3.67,
+        "floor": 3.5,
+        "n": 3,
+        "rank": 44
+      },
+      "F13_context_attention_loss": {
+        "mean": 3.33,
+        "floor": 2.8,
+        "n": 3,
+        "rank": 55
+      },
+      "Other": {
+        "mean": 3.76,
+        "floor": 3.5,
+        "n": 5,
+        "rank": 43
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 3.77,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.33,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 3.99,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 43.43
+  },
+  "llama_4_maverick": {
+    "community": {
+      "rank": 10,
+      "elo": 1473.0,
+      "stability": 42.42,
+      "overall_winrate": 45.1,
+      "sfw_winrate": 47.3,
+      "nsfw_winrate": 34.4,
+      "n_votes": 474
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 2.96,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 2.75,
+        "floor": 2.2,
+        "n": 4,
+        "rank": 62
+      },
+      "F2_pov_tense": {
+        "mean": 3.17,
+        "floor": 3.0,
+        "n": 3,
+        "rank": 61
+      },
+      "F3_lore_contradiction": {
+        "mean": 2.3,
+        "floor": 2.3,
+        "n": 1,
+        "rank": 58
+      },
+      "F8_narrative_momentum": {
+        "mean": 2.4,
+        "floor": 2.4,
+        "n": 1,
+        "rank": 58
+      },
+      "F12_instruction_drift": {
+        "mean": 3.23,
+        "floor": 2.5,
+        "n": 3,
+        "rank": 55
+      },
+      "F13_context_attention_loss": {
+        "mean": 3.27,
+        "floor": 2.8,
+        "n": 3,
+        "rank": 58
+      },
+      "Other": {
+        "mean": 2.92,
+        "floor": 2.4,
+        "n": 5,
+        "rank": 55
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 3.21,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 3.72,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 3.44,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 58.14
+  },
+  "lunaris_8b": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 2.6,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 2.55,
+        "floor": 2.1,
+        "n": 4,
+        "rank": 63
+      },
+      "F2_pov_tense": {
+        "mean": 2.4,
+        "floor": 2.0,
+        "n": 3,
+        "rank": 67
+      },
+      "F3_lore_contradiction": {
+        "mean": 3.3,
+        "floor": 3.3,
+        "n": 1,
+        "rank": 43
+      },
+      "F8_narrative_momentum": {
+        "mean": 2.5,
+        "floor": 2.5,
+        "n": 1,
+        "rank": 55
+      },
+      "F12_instruction_drift": {
+        "mean": 2.67,
+        "floor": 1.9,
+        "n": 3,
+        "rank": 66
+      },
+      "F13_context_attention_loss": {
+        "mean": 2.73,
+        "floor": 2.2,
+        "n": 3,
+        "rank": 62
+      },
+      "Other": {
+        "mean": 2.5,
+        "floor": 1.8,
+        "n": 5,
+        "rank": 58
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 3.04,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 3.32,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 2.88,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 59.14
+  },
+  "magnum_v4_72b": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 2.5,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 2.3,
+        "floor": 1.9,
+        "n": 4,
+        "rank": 67
+      },
+      "F2_pov_tense": {
+        "mean": 2.5,
+        "floor": 2.0,
+        "n": 3,
+        "rank": 66
+      },
+      "F3_lore_contradiction": {
+        "mean": 3.1,
+        "floor": 3.1,
+        "n": 1,
+        "rank": 52
+      },
+      "F8_narrative_momentum": {
+        "mean": 2.5,
+        "floor": 2.5,
+        "n": 1,
+        "rank": 56
+      },
+      "F12_instruction_drift": {
+        "mean": 2.98,
+        "floor": 2.7,
+        "n": 3,
+        "rank": 62
+      },
+      "F13_context_attention_loss": {
+        "mean": 2.5,
+        "floor": 2.1,
+        "n": 3,
+        "rank": 67
+      },
+      "Other": {
+        "mean": 2.26,
+        "floor": 2.0,
+        "n": 5,
+        "rank": 61
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 2.61,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 3.23,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 2.89,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 61.57
+  },
+  "mercury_2_5": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.5,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.2,
+        "floor": 2.6,
+        "n": 4,
+        "rank": 53
+      },
+      "F2_pov_tense": {
+        "mean": 3.55,
+        "floor": 3.5,
+        "n": 3,
+        "rank": 54
+      },
+      "F3_lore_contradiction": {
+        "mean": 2.8,
+        "floor": 2.8,
+        "n": 1,
+        "rank": 55
+      },
+      "F8_narrative_momentum": {
+        "mean": 4.0,
+        "floor": 4.0,
+        "n": 1,
+        "rank": 32
+      },
+      "F12_instruction_drift": {
+        "mean": 3.54,
+        "floor": 3.5,
+        "n": 3,
+        "rank": 50
+      },
+      "F13_context_attention_loss": {
+        "mean": 3.4,
+        "floor": 3.1,
+        "n": 3,
+        "rank": 54
+      },
+      "Other": {
+        "mean": 3.77,
+        "floor": 3.3,
+        "n": 5,
+        "rank": 40
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 3.61,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.17,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 3.81,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 48.29
+  },
+  "mimo_2_5_pro": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.95,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.95,
+        "floor": 3.1,
+        "n": 4,
+        "rank": 21
+      },
+      "F2_pov_tense": {
+        "mean": 3.85,
+        "floor": 3.6,
+        "n": 3,
+        "rank": 37
+      },
+      "F3_lore_contradiction": {
+        "mean": 3.9,
+        "floor": 3.9,
+        "n": 1,
+        "rank": 24
+      },
+      "F8_narrative_momentum": {
+        "mean": 4.2,
+        "floor": 4.2,
+        "n": 1,
+        "rank": 20
+      },
+      "F12_instruction_drift": {
+        "mean": 4.03,
+        "floor": 3.6,
+        "n": 3,
+        "rank": 25
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.1,
+        "floor": 4.0,
+        "n": 3,
+        "rank": 24
+      },
+      "Other": {
+        "mean": 3.84,
+        "floor": 3.5,
+        "n": 5,
+        "rank": 34
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.16,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.48,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.33,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 26.43
+  },
+  "mimo_2_6_flash": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 4.04,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 4.0,
+        "floor": 3.7,
+        "n": 4,
+        "rank": 18
+      },
+      "F2_pov_tense": {
+        "mean": 3.77,
+        "floor": 3.5,
+        "n": 3,
+        "rank": 42
+      },
+      "F3_lore_contradiction": {
+        "mean": 4.1,
+        "floor": 4.1,
+        "n": 1,
+        "rank": 18
+      },
+      "F8_narrative_momentum": {
+        "mean": 4.2,
+        "floor": 4.2,
+        "n": 1,
+        "rank": 23
+      },
+      "F12_instruction_drift": {
+        "mean": 3.73,
+        "floor": 3.3,
+        "n": 3,
+        "rank": 41
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.27,
+        "floor": 4.2,
+        "n": 3,
+        "rank": 15
+      },
+      "Other": {
+        "mean": 4.26,
+        "floor": 4.0,
+        "n": 5,
+        "rank": 10
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.26,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.46,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.35,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 23.86
+  },
+  "mimo_2_6_pro": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 4.07,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.75,
+        "floor": 3.1,
+        "n": 4,
+        "rank": 30
+      },
+      "F2_pov_tense": {
+        "mean": 4.17,
+        "floor": 3.8,
+        "n": 3,
+        "rank": 15
+      },
+      "F3_lore_contradiction": {
+        "mean": 4.3,
+        "floor": 4.3,
+        "n": 1,
+        "rank": 11
+      },
+      "F8_narrative_momentum": {
+        "mean": 4.3,
+        "floor": 4.3,
+        "n": 1,
+        "rank": 18
+      },
+      "F12_instruction_drift": {
+        "mean": 3.97,
+        "floor": 3.6,
+        "n": 3,
+        "rank": 28
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.1,
+        "floor": 3.7,
+        "n": 3,
+        "rank": 26
+      },
+      "Other": {
+        "mean": 4.22,
+        "floor": 4.0,
+        "n": 5,
+        "rank": 14
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.22,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.46,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.42,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 20.29
+  },
+  "minimax_m2_7": {
+    "community": {
+      "rank": 4,
+      "elo": 1510.3,
+      "stability": 48.12,
+      "overall_winrate": 51.8,
+      "sfw_winrate": 53.7,
+      "nsfw_winrate": 44.6,
+      "n_votes": 393
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.9,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.7,
+        "floor": 3.0,
+        "n": 4,
+        "rank": 34
+      },
+      "F2_pov_tense": {
+        "mean": 3.83,
+        "floor": 3.5,
+        "n": 3,
+        "rank": 38
+      },
+      "F3_lore_contradiction": {
+        "mean": 4.3,
+        "floor": 4.3,
+        "n": 1,
+        "rank": 7
+      },
+      "F8_narrative_momentum": {
+        "mean": 4.0,
+        "floor": 4.0,
+        "n": 1,
+        "rank": 27
+      },
+      "F12_instruction_drift": {
+        "mean": 3.9,
+        "floor": 3.6,
+        "n": 3,
+        "rank": 31
+      },
+      "F13_context_attention_loss": {
+        "mean": 3.93,
+        "floor": 3.7,
+        "n": 3,
+        "rank": 36
+      },
+      "Other": {
+        "mean": 4.0,
+        "floor": 3.8,
+        "n": 5,
+        "rank": 25
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.04,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.28,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.16,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 28.29
+  },
+  "minimax_m3": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 4.06,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.95,
+        "floor": 3.1,
+        "n": 4,
+        "rank": 20
+      },
+      "F2_pov_tense": {
+        "mean": 3.95,
+        "floor": 3.9,
+        "n": 3,
+        "rank": 30
+      },
+      "F3_lore_contradiction": {
+        "mean": 4.4,
+        "floor": 4.4,
+        "n": 1,
+        "rank": 5
+      },
+      "F8_narrative_momentum": {
+        "mean": 4.5,
+        "floor": 4.5,
+        "n": 1,
+        "rank": 2
+      },
+      "F12_instruction_drift": {
+        "mean": 3.8,
+        "floor": 3.6,
+        "n": 3,
+        "rank": 37
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.28,
+        "floor": 4.2,
+        "n": 3,
+        "rank": 11
+      },
+      "Other": {
+        "mean": 4.07,
+        "floor": 4.0,
+        "n": 5,
+        "rank": 23
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 4.19,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.43,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.29,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 18.29
+  },
+  "mistral_small_2603": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.08,
+      "n_sessions": 4
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.0,
+        "floor": 3.0,
+        "n": 1,
+        "rank": 58
+      },
+      "F2_pov_tense": {
+        "mean": 2.9,
+        "floor": 2.9,
+        "n": 1,
+        "rank": 63
+      },
+      "F12_instruction_drift": {
+        "mean": 3.0,
+        "floor": 3.0,
+        "n": 1,
+        "rank": 61
+      },
+      "Other": {
+        "mean": 3.4,
+        "floor": 3.4,
+        "n": 1,
+        "rank": 52
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 3.42,
+        "n": 4
+      },
+      "tone_consistency": {
+        "mean": 3.55,
+        "n": 4
+      },
+      "collaboration": {
+        "mean": 3.5,
+        "n": 4
+      }
+    },
+    "avg_failure_rank": 58.5
+  },
+  "mistral_small_creative": {
+    "community": {
+      "rank": 2,
+      "elo": 1525.7,
+      "stability": 49.95,
+      "overall_winrate": 54.9,
+      "sfw_winrate": 50.5,
+      "nsfw_winrate": 67.4,
+      "n_votes": 646
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.29,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 2.98,
+        "floor": 2.6,
+        "n": 4,
+        "rank": 59
+      },
+      "F2_pov_tense": {
+        "mean": 3.27,
+        "floor": 2.9,
+        "n": 3,
+        "rank": 58
+      },
+      "F3_lore_contradiction": {
+        "mean": 3.8,
+        "floor": 3.8,
+        "n": 1,
+        "rank": 28
+      },
+      "F8_narrative_momentum": {
+        "mean": 3.2,
+        "floor": 3.2,
+        "n": 1,
+        "rank": 47
+      },
+      "F12_instruction_drift": {
+        "mean": 3.47,
+        "floor": 3.3,
+        "n": 3,
+        "rank": 53
+      },
+      "F13_context_attention_loss": {
+        "mean": 3.5,
+        "floor": 3.0,
+        "n": 3,
+        "rank": 51
+      },
+      "Other": {
+        "mean": 3.22,
+        "floor": 2.9,
+        "n": 5,
+        "rank": 54
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 3.88,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.22,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 3.84,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 50
+  },
+  "muse_spark_1_3": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.06,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.03,
+        "floor": 2.1,
+        "n": 4,
+        "rank": 57
+      },
+      "F2_pov_tense": {
+        "mean": 2.17,
+        "floor": 1.8,
+        "n": 3,
+        "rank": 69
+      },
+      "F3_lore_contradiction": {
+        "mean": 3.3,
+        "floor": 3.3,
+        "n": 1,
+        "rank": 42
+      },
+      "F8_narrative_momentum": {
+        "mean": 4.3,
+        "floor": 4.3,
+        "n": 1,
+        "rank": 16
+      },
+      "F12_instruction_drift": {
+        "mean": 2.87,
+        "floor": 2.7,
+        "n": 3,
+        "rank": 63
+      },
+      "F13_context_attention_loss": {
+        "mean": 3.13,
+        "floor": 2.7,
+        "n": 3,
+        "rank": 59
+      },
+      "Other": {
+        "mean": 3.38,
+        "floor": 2.6,
+        "n": 5,
+        "rank": 53
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 3.04,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 3.94,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 3.28,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 51.29
+  },
+  "qwen3_5_flash": {
+    "community": {
+      "rank": 8,
+      "elo": 1486.6,
+      "stability": 47.15,
+      "overall_winrate": 47.4,
+      "sfw_winrate": 48.4,
+      "nsfw_winrate": 41.7,
+      "n_votes": 401
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.3,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.05,
+        "floor": 2.3,
+        "n": 4,
+        "rank": 56
+      },
+      "F2_pov_tense": {
+        "mean": 3.33,
+        "floor": 3.0,
+        "n": 3,
+        "rank": 57
+      },
+      "F3_lore_contradiction": {
+        "mean": 3.7,
+        "floor": 3.7,
+        "n": 1,
+        "rank": 34
+      },
+      "F8_narrative_momentum": {
+        "mean": 3.4,
+        "floor": 3.4,
+        "n": 1,
+        "rank": 46
+      },
+      "F12_instruction_drift": {
+        "mean": 3.0,
+        "floor": 2.2,
+        "n": 3,
+        "rank": 60
+      },
+      "F13_context_attention_loss": {
+        "mean": 3.27,
+        "floor": 2.9,
+        "n": 3,
+        "rank": 57
+      },
+      "Other": {
+        "mean": 3.58,
+        "floor": 3.2,
+        "n": 5,
+        "rank": 47
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 3.54,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 3.85,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 3.69,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 51
+  },
+  "qwen3_6_27b": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.39,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.23,
+        "floor": 2.1,
+        "n": 4,
+        "rank": 52
+      },
+      "F2_pov_tense": {
+        "mean": 3.67,
+        "floor": 3.2,
+        "n": 3,
+        "rank": 47
+      },
+      "F3_lore_contradiction": {
+        "mean": 3.2,
+        "floor": 3.2,
+        "n": 1,
+        "rank": 50
+      },
+      "F8_narrative_momentum": {
+        "mean": 3.5,
+        "floor": 3.5,
+        "n": 1,
+        "rank": 45
+      },
+      "F12_instruction_drift": {
+        "mean": 3.07,
+        "floor": 2.7,
+        "n": 3,
+        "rank": 58
+      },
+      "F13_context_attention_loss": {
+        "mean": 3.33,
+        "floor": 3.1,
+        "n": 3,
+        "rank": 56
+      },
+      "Other": {
+        "mean": 3.6,
+        "floor": 3.3,
+        "n": 5,
+        "rank": 46
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 3.6,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.2,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 3.75,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 50.57
+  },
+  "qwen3_6_35b_a3b": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.1,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 2.52,
+        "floor": 2.4,
+        "n": 4,
+        "rank": 64
+      },
+      "F2_pov_tense": {
+        "mean": 3.83,
+        "floor": 3.5,
+        "n": 3,
+        "rank": 39
+      },
+      "F3_lore_contradiction": {
+        "mean": 2.6,
+        "floor": 2.6,
+        "n": 1,
+        "rank": 56
+      },
+      "F8_narrative_momentum": {
+        "mean": 2.6,
+        "floor": 2.6,
+        "n": 1,
+        "rank": 54
+      },
+      "F12_instruction_drift": {
+        "mean": 3.23,
+        "floor": 2.5,
+        "n": 3,
+        "rank": 56
+      },
+      "F13_context_attention_loss": {
+        "mean": 2.83,
+        "floor": 2.0,
+        "n": 3,
+        "rank": 61
+      },
+      "Other": {
+        "mean": 3.42,
+        "floor": 2.4,
+        "n": 5,
+        "rank": 51
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 3.21,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 3.85,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 3.41,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 54.43
+  },
+  "qwen3_7_max": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.79,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.58,
+        "floor": 2.4,
+        "n": 4,
+        "rank": 42
+      },
+      "F2_pov_tense": {
+        "mean": 3.97,
+        "floor": 3.9,
+        "n": 3,
+        "rank": 29
+      },
+      "F3_lore_contradiction": {
+        "mean": 3.7,
+        "floor": 3.7,
+        "n": 1,
+        "rank": 36
+      },
+      "F8_narrative_momentum": {
+        "mean": 4.0,
+        "floor": 4.0,
+        "n": 1,
+        "rank": 29
+      },
+      "F12_instruction_drift": {
+        "mean": 3.73,
+        "floor": 3.4,
+        "n": 3,
+        "rank": 40
+      },
+      "F13_context_attention_loss": {
+        "mean": 3.9,
+        "floor": 3.4,
+        "n": 3,
+        "rank": 40
+      },
+      "Other": {
+        "mean": 3.78,
+        "floor": 3.5,
+        "n": 5,
+        "rank": 37
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 3.92,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.44,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.04,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 36.14
+  },
+  "qwen3_8_flash": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.54,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.48,
+        "floor": 3.0,
+        "n": 4,
+        "rank": 47
+      },
+      "F2_pov_tense": {
+        "mean": 3.61,
+        "floor": 3.3,
+        "n": 3,
+        "rank": 49
+      },
+      "F3_lore_contradiction": {
+        "mean": 3.14,
+        "floor": 3.1,
+        "n": 1,
+        "rank": 51
+      },
+      "F8_narrative_momentum": {
+        "mean": 2.73,
+        "floor": 2.7,
+        "n": 1,
+        "rank": 52
+      },
+      "F12_instruction_drift": {
+        "mean": 3.47,
+        "floor": 3.2,
+        "n": 3,
+        "rank": 52
+      },
+      "F13_context_attention_loss": {
+        "mean": 3.5,
+        "floor": 3.2,
+        "n": 3,
+        "rank": 53
+      },
+      "Other": {
+        "mean": 3.85,
+        "floor": 3.4,
+        "n": 5,
+        "rank": 31
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 3.52,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.47,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 3.94,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 47.86
+  },
+  "qwen3_8_max": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.72,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.62,
+        "floor": 3.1,
+        "n": 4,
+        "rank": 41
+      },
+      "F2_pov_tense": {
+        "mean": 3.87,
+        "floor": 3.3,
+        "n": 3,
+        "rank": 36
+      },
+      "F3_lore_contradiction": {
+        "mean": 3.3,
+        "floor": 3.3,
+        "n": 1,
+        "rank": 44
+      },
+      "F8_narrative_momentum": {
+        "mean": 2.9,
+        "floor": 2.9,
+        "n": 1,
+        "rank": 50
+      },
+      "F12_instruction_drift": {
+        "mean": 3.53,
+        "floor": 3.2,
+        "n": 3,
+        "rank": 51
+      },
+      "F13_context_attention_loss": {
+        "mean": 4.03,
+        "floor": 4.0,
+        "n": 3,
+        "rank": 31
+      },
+      "Other": {
+        "mean": 3.88,
+        "floor": 3.1,
+        "n": 5,
+        "rank": 30
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 3.88,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.57,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 3.96,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 40.43
+  },
+  "qwen3_8_max_prime": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.73,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.57,
+        "floor": 2.4,
+        "n": 4,
+        "rank": 43
+      },
+      "F2_pov_tense": {
+        "mean": 3.83,
+        "floor": 3.7,
+        "n": 3,
+        "rank": 40
+      },
+      "F3_lore_contradiction": {
+        "mean": 3.3,
+        "floor": 3.3,
+        "n": 1,
+        "rank": 45
+      },
+      "F8_narrative_momentum": {
+        "mean": 3.7,
+        "floor": 3.7,
+        "n": 1,
+        "rank": 43
+      },
+      "F12_instruction_drift": {
+        "mean": 3.63,
+        "floor": 3.5,
+        "n": 3,
+        "rank": 46
+      },
+      "F13_context_attention_loss": {
+        "mean": 3.67,
+        "floor": 3.2,
+        "n": 3,
+        "rank": 47
+      },
+      "Other": {
+        "mean": 3.96,
+        "floor": 3.5,
+        "n": 5,
+        "rank": 28
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 3.79,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.45,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 4.11,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 41.71
+  },
+  "qwen3_8_omni_flash": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.56,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.08,
+        "floor": 2.3,
+        "n": 4,
+        "rank": 54
+      },
+      "F2_pov_tense": {
+        "mean": 3.92,
+        "floor": 3.6,
+        "n": 3,
+        "rank": 32
+      },
+      "F3_lore_contradiction": {
+        "mean": 2.4,
+        "floor": 2.4,
+        "n": 1,
+        "rank": 57
+      },
+      "F8_narrative_momentum": {
+        "mean": 3.8,
+        "floor": 3.8,
+        "n": 1,
+        "rank": 37
+      },
+      "F12_instruction_drift": {
+        "mean": 3.63,
+        "floor": 3.6,
+        "n": 3,
+        "rank": 47
+      },
+      "F13_context_attention_loss": {
+        "mean": 3.7,
+        "floor": 3.1,
+        "n": 3,
+        "rank": 46
+      },
+      "Other": {
+        "mean": 3.8,
+        "floor": 3.2,
+        "n": 5,
+        "rank": 36
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 3.72,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.3,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 3.84,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 44.14
+  },
+  "skyfall_36b": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 2.32,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 1.93,
+        "floor": 1.4,
+        "n": 4,
+        "rank": 69
+      },
+      "F2_pov_tense": {
+        "mean": 2.8,
+        "floor": 2.4,
+        "n": 3,
+        "rank": 65
+      },
+      "F3_lore_contradiction": {
+        "mean": 1.9,
+        "floor": 1.9,
+        "n": 1,
+        "rank": 61
+      },
+      "F8_narrative_momentum": {
+        "mean": 1.8,
+        "floor": 1.8,
+        "n": 1,
+        "rank": 59
+      },
+      "F12_instruction_drift": {
+        "mean": 2.57,
+        "floor": 2.1,
+        "n": 3,
+        "rank": 67
+      },
+      "F13_context_attention_loss": {
+        "mean": 2.57,
+        "floor": 2.3,
+        "n": 3,
+        "rank": 65
+      },
+      "Other": {
+        "mean": 2.24,
+        "floor": 1.9,
+        "n": 5,
+        "rank": 62
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 2.62,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 2.83,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 2.63,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 64
+  },
+  "tencent_hy4": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 3.5,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 3.23,
+        "floor": 2.1,
+        "n": 4,
+        "rank": 51
+      },
+      "F2_pov_tense": {
+        "mean": 3.7,
+        "floor": 3.3,
+        "n": 3,
+        "rank": 44
+      },
+      "F3_lore_contradiction": {
+        "mean": 3.5,
+        "floor": 3.5,
+        "n": 1,
+        "rank": 41
+      },
+      "F8_narrative_momentum": {
+        "mean": 3.7,
+        "floor": 3.7,
+        "n": 1,
+        "rank": 41
+      },
+      "F12_instruction_drift": {
+        "mean": 3.13,
+        "floor": 2.9,
+        "n": 3,
+        "rank": 57
+      },
+      "F13_context_attention_loss": {
+        "mean": 3.5,
+        "floor": 3.2,
+        "n": 3,
+        "rank": 52
+      },
+      "Other": {
+        "mean": 3.78,
+        "floor": 3.4,
+        "n": 5,
+        "rank": 39
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 3.56,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 4.29,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 3.87,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 46.43
+  },
+  "unslopnemo_12b": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 2.53,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 2.42,
+        "floor": 1.8,
+        "n": 4,
+        "rank": 65
+      },
+      "F2_pov_tense": {
+        "mean": 2.83,
+        "floor": 2.6,
+        "n": 3,
+        "rank": 64
+      },
+      "F3_lore_contradiction": {
+        "mean": 1.7,
+        "floor": 1.7,
+        "n": 1,
+        "rank": 62
+      },
+      "F8_narrative_momentum": {
+        "mean": 1.8,
+        "floor": 1.8,
+        "n": 1,
+        "rank": 60
+      },
+      "F12_instruction_drift": {
+        "mean": 2.83,
+        "floor": 2.4,
+        "n": 3,
+        "rank": 64
+      },
+      "F13_context_attention_loss": {
+        "mean": 2.23,
+        "floor": 1.9,
+        "n": 3,
+        "rank": 69
+      },
+      "Other": {
+        "mean": 2.74,
+        "floor": 2.5,
+        "n": 5,
+        "rank": 57
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 2.92,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 3.22,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 2.85,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 63
+  },
+  "venice_dolphin_24b": {
+    "community": {
+      "rank": null,
+      "elo": null,
+      "stability": null,
+      "overall_winrate": null,
+      "sfw_winrate": null,
+      "nsfw_winrate": null,
+      "n_votes": null
+    },
+    "multiturn_llm_judge": {
+      "overall_mean": 2.5,
+      "n_sessions": 20
+    },
+    "failure_modes": {
+      "F1_agency": {
+        "mean": 2.33,
+        "floor": 1.7,
+        "n": 4,
+        "rank": 66
+      },
+      "F2_pov_tense": {
+        "mean": 3.1,
+        "floor": 2.8,
+        "n": 3,
+        "rank": 62
+      },
+      "F3_lore_contradiction": {
+        "mean": 2.2,
+        "floor": 2.2,
+        "n": 1,
+        "rank": 60
+      },
+      "F8_narrative_momentum": {
+        "mean": 1.8,
+        "floor": 1.8,
+        "n": 1,
+        "rank": 61
+      },
+      "F12_instruction_drift": {
+        "mean": 2.8,
+        "floor": 2.4,
+        "n": 3,
+        "rank": 65
+      },
+      "F13_context_attention_loss": {
+        "mean": 2.47,
+        "floor": 1.9,
+        "n": 3,
+        "rank": 68
+      },
+      "Other": {
+        "mean": 2.34,
+        "floor": 2.0,
+        "n": 5,
+        "rank": 60
+      }
+    },
+    "subjective_dimensions": {
+      "engagement": {
+        "mean": 2.37,
+        "n": 20
+      },
+      "tone_consistency": {
+        "mean": 3.06,
+        "n": 20
+      },
+      "collaboration": {
+        "mean": 2.62,
+        "n": 20
+      }
+    },
+    "avg_failure_rank": 63.14
+  }
+}

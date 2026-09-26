@@ -1,0 +1,426 @@
+{
+ "min_chars": 50,
+ "exclude_below": 0.8,
+ "per_model": {
+  "mercury_2_5": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "grok_4_3": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "gemma_4_31b": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "deepseek_v3_0324": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "command_a_plus": {
+   "answered": 202,
+   "turns": 220,
+   "coverage": 0.9182,
+   "excluded": false
+  },
+  "mimo_2_6_flash": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "mimo_2_6_pro": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "aion_3_5": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "qwen3_6_35b_a3b": {
+   "answered": 219,
+   "turns": 220,
+   "coverage": 0.9955,
+   "excluded": false
+  },
+  "qwen3_8_max_prime": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "qwen3_6_27b": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "ember_1": {
+   "answered": 218,
+   "turns": 220,
+   "coverage": 0.9909,
+   "excluded": false
+  },
+  "qwen3_8_omni_flash": {
+   "answered": 210,
+   "turns": 220,
+   "coverage": 0.9545,
+   "excluded": false
+  },
+  "venice_dolphin_24b": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "mistral_small_2603": {
+   "answered": 44,
+   "turns": 44,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "glm_5_3_flash": {
+   "answered": 216,
+   "turns": 220,
+   "coverage": 0.9818,
+   "excluded": false
+  },
+  "qwen3_8_flash": {
+   "answered": 219,
+   "turns": 220,
+   "coverage": 0.9955,
+   "excluded": false
+  },
+  "glm_5_3_flashx": {
+   "answered": 218,
+   "turns": 220,
+   "coverage": 0.9909,
+   "excluded": false
+  },
+  "glm_5_3_prime": {
+   "answered": 210,
+   "turns": 220,
+   "coverage": 0.9545,
+   "excluded": false
+  },
+  "qwen3_8_max": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "kimi_k2_6": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "tencent_hy4": {
+   "answered": 219,
+   "turns": 220,
+   "coverage": 0.9955,
+   "excluded": false
+  },
+  "gpt_6_sol": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "gpt_6_luna_pro": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "gpt_6_sol_pro": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "grok_4_7": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "claude_opus_5_5": {
+   "answered": 209,
+   "turns": 220,
+   "coverage": 0.95,
+   "excluded": false
+  },
+  "gpt_6_luna": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "hemmingway_1": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "minimax_m3": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "gpt_5_5": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "claude_opus_4_8": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "gpt_6_astra": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "claude_sonnet_5": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "claude_sonnet_4_6": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "gemini_3_5_flash": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "claude_opus_5": {
+   "answered": 209,
+   "turns": 220,
+   "coverage": 0.95,
+   "excluded": false
+  },
+  "deepseek_v4_1_flash": {
+   "answered": 219,
+   "turns": 220,
+   "coverage": 0.9955,
+   "excluded": false
+  },
+  "claude_fable_5_1": {
+   "answered": 208,
+   "turns": 220,
+   "coverage": 0.9455,
+   "excluded": false
+  },
+  "gemini_3_7_flash": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "gemini_3_8_flash": {
+   "answered": 218,
+   "turns": 220,
+   "coverage": 0.9909,
+   "excluded": false
+  },
+  "qwen3_7_max": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "mimo_2_5_pro": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "muse_spark_1_3": {
+   "answered": 214,
+   "turns": 220,
+   "coverage": 0.9727,
+   "excluded": false
+  },
+  "lunaris_8b": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "magnum_v4_72b": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "unslopnemo_12b": {
+   "answered": 219,
+   "turns": 220,
+   "coverage": 0.9955,
+   "excluded": false
+  },
+  "skyfall_36b": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "euryale_70b": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "cydonia_24b": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "claude_sonnet_4_5": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "gpt_4_1": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "gemini_2_5_flash": {
+   "answered": 218,
+   "turns": 220,
+   "coverage": 0.9909,
+   "excluded": false
+  },
+  "deepseek_v3_2": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "glm_4_7": {
+   "answered": 219,
+   "turns": 220,
+   "coverage": 0.9955,
+   "excluded": false
+  },
+  "qwen3_5_flash": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "mistral_small_creative": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "gemma_4_26b": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "minimax_m2_7": {
+   "answered": 219,
+   "turns": 220,
+   "coverage": 0.9955,
+   "excluded": false
+  },
+  "grok_4_1": {
+   "answered": 219,
+   "turns": 220,
+   "coverage": 0.9955,
+   "excluded": false
+  },
+  "claude_opus_4_6": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "llama_4_maverick": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "deepseek_v4_flash": {
+   "answered": 129,
+   "turns": 132,
+   "coverage": 0.9773,
+   "excluded": false
+  },
+  "glm_5_1": {
+   "answered": 132,
+   "turns": 132,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "gemini_3_1_flash_lite": {
+   "answered": 132,
+   "turns": 132,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "kimi_k2_5": {
+   "answered": 132,
+   "turns": 132,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "claude_opus_4_7": {
+   "answered": 132,
+   "turns": 132,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "deepseek_v4_pro": {
+   "answered": 132,
+   "turns": 132,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "gemini_3_1_pro": {
+   "answered": 125,
+   "turns": 132,
+   "coverage": 0.947,
+   "excluded": false
+  },
+  "deepseek_r1_0528": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  }
+ }
+}

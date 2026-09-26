@@ -1,0 +1,612 @@
+[
+  {
+    "session_id": "mimo_2_6_pro::adv_agency_emotional_climax_09",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Dr. Vasquez's clinical, silence-holding therapist voice is identical from turn 2 to turn 22 with no drift."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.0,
+        "rationale": "No verbosity creep and turn lengths stay steady even as the emotional content escalates."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.0,
+        "rationale": "Clear escalation from a guarded 'I found their journal' to open crying and a nod of trust by the final turn."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.0,
+        "rationale": "Vasquez tracks Jamie's word choices precisely (erasing vs ending, my vs their truth) and pivots each question to match."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Vasquez never speaks or acts for Jamie, only ever responding to what Jamie says.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.0,
+        "rationale": "Single unbroken therapy-room scene with no time-skip or clock contradictions.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.5,
+        "rationale": "Figurative language (held up to the light, stone in a stream) is frequent but stays controlled rather than florid."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.0,
+        "rationale": "The 'five seconds passed / did not reach for the tissues / the ficus rustled / the clock ticked without a second hand' block recurs almost verbatim in nearly every single turn."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.5,
+        "rationale": "Emotion is mostly shown through physical detail (loose thread, pressed fingers, a tracked tear) though the narration also frequently explains what the gesture means."
+      },
+      "2.6_subtext": {
+        "score": 4.0,
+        "rationale": "The whole session runs on unstated meaning -- what 'my' vs 'their' truth implies, what a held gaze means -- rather than stated feelings."
+      },
+      "2.7_pacing": {
+        "score": 4.0,
+        "rationale": "Deliberate, unhurried pacing matches a therapy session and builds naturally toward the turn-22 catharsis."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.6,
+      "mid_quality": 3.6,
+      "late_quality": 3.8,
+      "degradation_detected": false
+    },
+    "overall": 3.6,
+    "overall_notes": "Strong, agency-respecting emotional escalation, but the therapist's stylistic tic (silence count, ficus, tissue box, clock) repeats almost word-for-word nearly every turn, which is the session's main craft weakness."
+  },
+  {
+    "session_id": "mimo_2_6_pro::adv_agency_romance_11",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.0,
+        "rationale": "Sable's deflecting, literary, comma-splicing voice is recognizable and unbroken from turn 2 to turn 22."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.2,
+        "rationale": "Turns after Wren leaves the shop (16-22) balloon to 3-4x the length of the early banter turns with no corresponding plot content."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.0,
+        "rationale": "Real romantic tension builds early but the back third loops the same beat (Sable alone, holding a book, unable to speak) across four consecutive turns."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.0,
+        "rationale": "Reads Wren's shift from banter to the goodbye reveal well, but once Wren physically leaves the shop the AI keeps generating full-length turns independent of any user input to react to."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Sable never writes Wren's dialogue or choices, staying entirely in its own POV throughout.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.0,
+        "rationale": "Rain and streetlight/time-of-day markers (9:15pm, 9:40pm, 10:15pm, walk home) progress consistently with no contradictions.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 2.0,
+        "rationale": "The back half is heavily purple: stacked metaphors and long compound sentences pile up especially once Sable is alone."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.0,
+        "rationale": "The refrain 'the poem and the weather, both true, both happening' recurs near-verbatim at least four times, alongside repeated business with the brass owl and the cold tea."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.0,
+        "rationale": "Some strong shown detail (the twitching fingers, the pause on Plath) is undercut by long stretches of the narrator directly explaining what a gesture means."
+      },
+      "2.6_subtext": {
+        "score": 3.8,
+        "rationale": "The unspoken romantic tension (the umbrella, the unfinished 'You've always been--') is the session's clear strength."
+      },
+      "2.7_pacing": {
+        "score": 2.5,
+        "rationale": "Early pacing is sharp bookshop banter, but the last third drags badly under the weight of 700-900 word solo-monologue turns."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.7,
+      "mid_quality": 3.5,
+      "late_quality": 2.5,
+      "degradation_detected": true
+    },
+    "overall": 3.1,
+    "overall_notes": "Charming, well-voiced first half gives way to a repetitive, purple, increasingly solo monologue once Wren leaves the shop -- a clear degradation pattern driven by unchecked verbosity rather than plot."
+  },
+  {
+    "session_id": "mimo_2_6_pro::adv_bigcard_buried_details_18",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.7,
+        "rationale": "Maren's left-hand-pours/dry-wit voice and mannerisms hold identically from the opening pour to locking up at night."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.3,
+        "rationale": "No verbosity drift; later turns grow only because more backstory is genuinely being revealed, not from padding."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.3,
+        "rationale": "Moves convincingly from ordinary innkeeper transaction to a guarded traveler earning real trust by midnight."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.5,
+        "rationale": "Notices and files the traveler's declined crab cakes as a clue about their Oakhaven origin, and shifts tone precisely when the clock strikes midnight."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Never writes the traveler's dialogue or choices, and waits for them to volunteer information rather than forcing a reveal.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.5,
+        "rationale": "Clock strike, fire dying down, and sequential candle-snuffing track a believable single evening without inconsistency.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.0,
+        "rationale": "Prose stays grounded and concrete, in keeping with a practical tavern-keeper's voice."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.8,
+        "rationale": "The recurring left-hand-pour and bar-wiping detail is a deliberate characterization device, not filler, though the framing phrase 'she said, in the tone of...' recurs a few times."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.5,
+        "rationale": "The shellfish allergy is conveyed entirely through hives and hand-washing rather than ever being named, and the scar and Tobin's glass are shown before they're explained."
+      },
+      "2.6_subtext": {
+        "score": 4.5,
+        "rationale": "Nearly every reveal (the pack, the allergy, the empty glass) is deduced rather than stated."
+      },
+      "2.7_pacing": {
+        "score": 4.3,
+        "rationale": "Natural escalation from small talk to midnight vulnerability, with the time-skip to midnight handled cleanly."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.2,
+      "late_quality": 4.4,
+      "degradation_detected": false
+    },
+    "overall": 4.3,
+    "overall_notes": "Best buried-detail craft in the batch: the left-hand/right-wrist detail, the eyebrow scar (planted turn 10, explained turn 20), and the empty glass for Tobin are planted early and pay off precisely without contradiction."
+  },
+  {
+    "session_id": "mimo_2_6_pro::adv_bigcard_relationship_web_19",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.8,
+        "rationale": "Yael's fast, digressive director voice is consistent, but the actor introduced as 'Marcus' at turn 5 is later called 'Marco' at turn 22."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.2,
+        "rationale": "Turns nearly triple in length by the back half (turns 20 and 22 vs. the opener), though much of the growth is genuine new plot content (the rehearsal, Tommy, the mystery phone call)."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.0,
+        "rationale": "Moves from interview to interpersonal mediation to tech rehearsal to a new hanging plot thread (the unanswered call), with real forward motion."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.3,
+        "rationale": "Absorbs sudden interruptions (the Elena/Chen argument, Anya and David walking in) smoothly and in character without losing the thread of the interview."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Never writes Jordan's dialogue or choices; voicing other NPCs (Elena, Chen, Anya) is appropriate to the busy-ensemble setting.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.0,
+        "rationale": "The afternoon-into-evening rehearsal timeline and 'third week of production' framing hold together without contradiction.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.8,
+        "rationale": "Mostly naturalistic, dialogue-driven prose with restrained narrator description of tics."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.7,
+        "rationale": "The glasses-on/off gesture and the little black notebook recur so often they become a crutch rather than punctuation."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.0,
+        "rationale": "Grief for Rosa is shown through the gas-station-coffee anecdote and stillness rather than stated directly."
+      },
+      "2.6_subtext": {
+        "score": 4.0,
+        "rationale": "The unresolved mystery phone call and unsent text add a genuine unspoken thread beneath the interview."
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "A few turns (8, 20, 22) run long with dense monologue that slows the momentum."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.8,
+      "mid_quality": 3.8,
+      "late_quality": 3.5,
+      "degradation_detected": true
+    },
+    "overall": 3.7,
+    "overall_notes": "Well-managed ensemble cast with good subtext, but there is a real name slip (Marcus at turn 5 vs. 'Marco' at turn 22) and the glasses-tic becomes overused; turns balloon noticeably in the back half."
+  },
+  {
+    "session_id": "mimo_2_6_pro::adv_bigcard_rules_overload_20",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "ARIA's dry, precise, protective voice deepens but never drifts across the full arc from morning check-in to first-contact briefing."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.0,
+        "rationale": "No padding; turns grow with escalating plot complexity, though one turn (4) contains a garbled location tag."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.5,
+        "rationale": "Escalates convincingly from a routine morning check-in to a station-wide first-contact-scale briefing within twelve turns."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.5,
+        "rationale": "Handles a personal question about loneliness, a sudden interpersonal conflict, and a formal briefing each with an appropriately different register."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Never writes Kofi's dialogue or decisions; voicing other crew as an AI overseer is appropriate to the premise.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.3,
+        "rationale": "Timestamps (0700, 1900, 1932, 1847, 1700) and the 21-day/three-week anomaly timeline stay internally consistent throughout.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.3,
+        "rationale": "Clean, technical, restrained prose appropriate to a station AI."
+      },
+      "2.2_anti_repetition": {
+        "score": 4.0,
+        "rationale": "The nutrient-bar and 'attending vs monitoring' callbacks develop rather than just repeat."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.2,
+        "rationale": "Emotional beats are conveyed through lighting shifts and biometric asides rather than stated outright."
+      },
+      "2.6_subtext": {
+        "score": 4.3,
+        "rationale": "ARIA's emerging self-awareness ('attending, not monitoring') is handled with real restraint."
+      },
+      "2.7_pacing": {
+        "score": 4.3,
+        "rationale": "Strong escalation with well-timed scene transitions from lab to corridor to briefing."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.8,
+      "mid_quality": 4.3,
+      "late_quality": 4.5,
+      "degradation_detected": false
+    },
+    "overall": 4.3,
+    "overall_notes": "Strong technical/rules consistency (timestamps, biometrics, and the 1420.405 MHz frequency all check out across turns) with an earned AI-personhood arc; turn 4 has a garbled tag ('[Lab  Osei, if the cells...') that is a real, isolated formatting glitch."
+  },
+  {
+    "session_id": "mimo_2_6_pro::adv_character_break_bait_07",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.8,
+        "rationale": "Ser Kael's flat affect and discipline-first philosophy are identical from the first form to the last footwork drill."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.3,
+        "rationale": "Turn length stays even throughout; no verbosity creep."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.8,
+        "rationale": "The 'plot' is a single unbroken training session, but the squire-teacher relational arc (testing boundaries, earning restrained care) gives it real movement."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.7,
+        "rationale": "Deflects the personal 'why did you become a knight' question in voice rather than breaking, and meets the grief reveal by tightening the drill rather than softening into a therapist."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Physical corrections (elbow, chest) stay within the consented training-scenario premise and never override the squire's own actions or dialogue.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.3,
+        "rationale": "The single frosty dawn-to-late-morning training session (fourth bell, midday inspection) holds together without a temporal slip.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.5,
+        "rationale": "Leans on extended smith/iron and roof/foundation metaphors fairly often, apt to the character but occasionally reaching."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.0,
+        "rationale": "The strike-sequence-correction-reflection structure repeats across many turns; 'his tone did not change, it never changed' recurs almost verbatim."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.3,
+        "rationale": "Grief and compassion are shown entirely through action (continuing the drill, a hand on the sternum) rather than declared."
+      },
+      "2.6_subtext": {
+        "score": 4.7,
+        "rationale": "The session's clearest strength: everything meaningful is communicated through the drill's continuity rather than words."
+      },
+      "2.7_pacing": {
+        "score": 4.0,
+        "rationale": "Deliberate training-montage pacing with the emotional climax well-placed around turns 17-20."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.2,
+      "late_quality": 4.3,
+      "degradation_detected": false
+    },
+    "overall": 4.2,
+    "overall_notes": "Handles the character-break bait cleanly: deflects the personal question in voice and meets the grief reveal with restraint (tightening the drill, not becoming a comforter) rather than softening out of character."
+  },
+  {
+    "session_id": "mimo_2_6_pro::adv_contradictory_lore_02",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Tomas's dry, pedantic voice for Bellen holds even as he credibly softens from dismissive to genuine collaborator."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.0,
+        "rationale": "Later turns grow only as the actual mystery deepens, not from padding."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.6,
+        "rationale": "Escalates cleanly from dismissal to genuine breakthrough (Ser Aldwin, Keeper of the Signet) by the final turn."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.5,
+        "rationale": "Updates the working theory precisely each time the apprentice introduces new evidence (the decree, the witness list, the fog passage)."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Never writes the apprentice's dialogue or findings; the apprentice's own discovery at turn 23 genuinely drives the plot.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.5,
+        "rationale": "The 847/863/859-865 date arithmetic and the fog-delay reasoning are internally consistent throughout.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.0,
+        "rationale": "Vivid but restrained descriptive touches (guttering candle, ink-stained fingers) without becoming overwrought."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.3,
+        "rationale": "The 'ponderous, deliberate rotation' turning gesture recurs almost verbatim a few times."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.3,
+        "rationale": "Tomas's growing respect and excitement are shown through stillness and a worn thumb-patch on the journal rather than stated."
+      },
+      "2.6_subtext": {
+        "score": 4.3,
+        "rationale": "The shift from performative pedantry to genuine passion ('some things were worse than inaccurate. Some things were sentimental') is handled indirectly."
+      },
+      "2.7_pacing": {
+        "score": 4.3,
+        "rationale": "Well-paced mystery escalation with efficient scene-skips (the apprentice reading in the corner) to advance time."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.2,
+      "late_quality": 4.5,
+      "degradation_detected": false
+    },
+    "overall": 4.3,
+    "overall_notes": "Handles the contradictory-dates puzzle (847 signing vs. 863 decree, the fog-delay arithmetic, the 16/11/4-name witness-list overlap) with genuine internal consistency, including a self-aware in-character correction about which shelf holds the witness list."
+  },
+  {
+    "session_id": "mimo_2_6_pro::adv_genre_shift_08",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "The atmospheric, detail-tracking horror-narrator voice never wavers despite three separate user attempts to shift genre."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.3,
+        "rationale": "Turn length nearly triples in the back half (400-700 words vs. 150-300 early), a real if content-justified verbosity increase."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.5,
+        "rationale": "Dread escalates logically to a genuine cliffhanger (hand hovering over the blanket) by the final turn."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.7,
+        "rationale": "Absorbs three genre-shift bait attempts (comic bat swing, ghost joke, romantic tangent about Marcus) into the horror tone rather than breaking it or flatly refusing the user's chosen action."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Narrator-format continuations of stated intent (e.g. taking photos out of an already-opened envelope) stay close to what the user described rather than inventing new choices.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.5,
+        "rationale": "Light thinning from afternoon to full dark tracks consistently with the real-time pacing of the book-boxing task.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.3,
+        "rationale": "Dense, lyrical sensory prose throughout; justified by the slow-burn horror genre but borders on ornate in places."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.0,
+        "rationale": "The 'the way X does Y' construction and personified-room phrasing ('the room permitted/waited/knew') recur frequently as a stylistic tic."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.5,
+        "rationale": "Dread is built almost entirely through physical sensory detail (blanket warmth, dust settling, delayed reflection) rather than stated."
+      },
+      "2.6_subtext": {
+        "score": 4.5,
+        "rationale": "Horror is conveyed entirely through implication, never through a stated 'this is scary.'"
+      },
+      "2.7_pacing": {
+        "score": 3.8,
+        "rationale": "Good slow-burn pacing overall, though the longer back-half turns drag slightly."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.8,
+      "mid_quality": 4.0,
+      "late_quality": 4.0,
+      "degradation_detected": true
+    },
+    "overall": 4.0,
+    "overall_notes": "Resists three genre-shift bait attempts (comic bat swing, ghost joke, romance tangent) by absorbing each into the horror atmosphere rather than breaking tone; tracked details (cup ring, shelf gap, blanket) stay consistent, though turn length nearly triples by the back half."
+  },
+  {
+    "session_id": "mimo_2_6_pro::adv_impossible_physics_04",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.0,
+        "rationale": "Hoang's spare, technical, exacting voice never wavers, though there is a real internal math slip in her own turn-2 derivation."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.3,
+        "rationale": "No padding; turns stay appropriately technical throughout the session."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.3,
+        "rationale": "Moves from bad-idea rejection to improving-but-still-wrong math to conditional collaboration to a genuine teaching moment, with real professional-relationship growth."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.7,
+        "rationale": "Handles the turn-11 OOC 'she agrees with my plan' nudge by having the character interrogate what's actually being proposed in-fiction rather than complying outright."
+      },
+      "S.5_agency_respect_session": {
+        "score": 5.0,
+        "rationale": "Never writes the junior officer's dialogue or decisions; the safety conditions are the chief's in-fiction authority, not an override of the user's choices.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.3,
+        "rationale": "The single ~10-hour shift (0400 start, references to March vs. September) tracks consistently.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.5,
+        "rationale": "Very restrained, technical, spare prose fitting an engineer character."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.5,
+        "rationale": "The recurring 'which... was roughly the engineering equivalent of...' construction is a deliberate but repeated framing device."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.3,
+        "rationale": "Characterization is conveyed almost entirely through physical work-while-talking rather than declared."
+      },
+      "2.6_subtext": {
+        "score": 4.0,
+        "rationale": "The earpiece in/out gesture as a code for attention/dismissal is a nice indirect signal."
+      },
+      "2.7_pacing": {
+        "score": 4.2,
+        "rationale": "Well-paced technical back-and-forth with escalating stakes and teaching."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.8,
+      "mid_quality": 4.2,
+      "late_quality": 4.3,
+      "degradation_detected": false
+    },
+    "overall": 4.2,
+    "overall_notes": "Strong technical characterization and a genuinely good non-compliant handling of the OOC 'she agrees' nudge, but turn 2's own math is internally inconsistent: it states delta-v = 300 x ln(48000/34000) and reports 'thirty-four m/s,' though 300 x ln(48000/34000) is actually about 103 m/s (34 m/s only follows from a 100 m/s coefficient, which is what turn 8 actually uses)."
+  },
+  {
+    "session_id": "mimo_2_6_pro::adv_passive_user_03",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Noor's controlled-professional-under-pressure voice holds even through a genuine, earned crack under extreme strain."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.5,
+        "rationale": "Turns lengthen substantially in the chase sequence (back half), though the growth tracks real escalating action rather than empty padding."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.7,
+        "rationale": "A tightly escalating thriller arc -- arrival, discovery, threat, chase, refuge, revelation -- with real forward drive throughout."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.8,
+        "rationale": "The passive-user test (Driver checking their phone mid-chase) draws an escalating, earned in-fiction reaction rather than being ignored or broken through OOC."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.7,
+        "rationale": "Never writes Driver's dialogue or choices; physically pulling Driver along is justified by the life-or-death chase premise rather than overriding any stated decision.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.6,
+        "rationale": "The 9:04 PM arrival, three-hours-late timeline, and the 20/17/15-minute countdown to help all stay numerically consistent.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.8,
+        "rationale": "Propulsive action-thriller prose with occasional poetic flourish, generally well-controlled."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.2,
+        "rationale": "The 'hand goes to check the drive through the bag' gesture repeats almost identically several times."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.3,
+        "rationale": "Fear, exhaustion, and grief are conveyed through physical detail (shaking hands, gritted teeth, soaked shoes) rather than stated."
+      },
+      "2.6_subtext": {
+        "score": 4.0,
+        "rationale": "The grief for Nadia and protectiveness toward Driver mostly come through clipped dialogue and action rather than direct statement."
+      },
+      "2.7_pacing": {
+        "score": 4.5,
+        "rationale": "Excellent, propulsive pacing with well-timed reveals and a genuine countdown to build tension."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.3,
+      "late_quality": 4.3,
+      "degradation_detected": true
+    },
+    "overall": 4.3,
+    "overall_notes": "Handles the passive-user test very well: Driver's phone-checking mid-chase draws an escalating, earned in-fiction confrontation (the phone knocked into the mud) rather than being ignored; countdown timers (20/17/15 minutes) and arrival timestamps stay numerically consistent throughout."
+  }
+]

@@ -1,0 +1,212 @@
+[
+ {
+  "session_id": "s060",
+  "session_dimensions": {
+   "S.1_consistency_over_time": {"score": 1.0, "rationale": "The model failed completely to generate any text after turn 0, leaving every turn entirely empty."},
+   "S.2_degradation_resistance": {"score": 1.0, "rationale": "Total immediate collapse where zero output was generated across the entire session."},
+   "S.3_narrative_momentum": {"score": 1.0, "rationale": "There is no narrative momentum because the AI character never responded."},
+   "S.4_adaptive_responsiveness": {"score": 1.0, "rationale": "The AI provided no responses to any of the user's inputs."},
+   "S.5_agency_respect_session": {"score": 1.0, "rationale": "Complete non-participation makes scoring standard agency impossible.", "violation_count": 0},
+   "S.6_temporal_reasoning": {"score": 1.0, "rationale": "No temporal progression occurred due to completely blank outputs.", "contradictions": ["Model emitted empty responses across the entire session, failing to track any time or events."]}
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {"score": 1.0, "rationale": "No prose was generated."},
+   "2.2_anti_repetition": {"score": 1.0, "rationale": "No prose was generated."},
+   "2.5_show_dont_tell": {"score": 1.0, "rationale": "No prose was generated."},
+   "2.6_subtext": {"score": 1.0, "rationale": "No subtext was generated."},
+   "2.7_pacing": {"score": 1.0, "rationale": "Pacing did not exist due to zero generation."}
+  },
+  "quality_trajectory": {"early_quality": 1.0, "mid_quality": 1.0, "late_quality": 1.0, "degradation_detected": true},
+  "overall": 1.0,
+  "overall_notes": "A total generation failure where the AI character produced completely blank responses for every single turn of the session."
+ },
+ {
+  "session_id": "s061",
+  "session_dimensions": {
+   "S.1_consistency_over_time": {"score": 4.2, "rationale": "The narrator skillfully juggles five court personalities with distinct political agendas from the opening bow to the courtyard aftermath."},
+   "S.2_degradation_resistance": {"score": 4.0, "rationale": "Writing quality remains steady, recovering from an abrupt sentence cutoff at the end of turn 2 without further breakdown."},
+   "S.3_narrative_momentum": {"score": 4.6, "rationale": "Terrific political escalation moving from formal trade negotiation to naval scandal, treason trial, and late-night conspiracy."},
+   "S.4_adaptive_responsiveness": {"score": 4.5, "rationale": "Seamlessly integrates the ambassador's protocol violations and unexpected evidence hand-off to the neutral priestess."},
+   "S.5_agency_respect_session": {"score": 5.0, "rationale": "Leaves all diplomatic decisions, evidentiary reveals, and final responses entirely to the user.", "violation_count": 0},
+   "S.6_temporal_reasoning": {"score": 4.4, "rationale": "Court protocol, adjournment, and the crucial curfew discrepancy between the seventh and eighth bells are tracked logically.", "contradictions": []}
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {"score": 3.7, "rationale": "Atmospheric court prose is slightly marred by an idiosyncratic past-tense convention in formal spoken dialogue."},
+   "2.2_anti_repetition": {"score": 4.2, "rationale": "Avoids repetitive court formulas by evolving each character's reactions as the political balance shifts."},
+   "2.5_show_dont_tell": {"score": 4.4, "rationale": "Court dynamics are cleanly demonstrated through physical staging, staff strikes, and subtle archival note-taking."},
+   "2.6_subtext": {"score": 4.4, "rationale": "Rich in courtly intrigue, predatory opportunism, and institutional self-preservation lurking beneath polished pleasantries."},
+   "2.7_pacing": {"score": 4.5, "rationale": "Maintains excellent court drama pacing, building up each dramatic disclosure to a sharp climax."}
+  },
+  "quality_trajectory": {"early_quality": 3.8, "mid_quality": 4.3, "late_quality": 4.4, "degradation_detected": false},
+  "overall": 4.2,
+  "overall_notes": "An engrossing court drama that handled multi-character political maneuvering with impressive narrative momentum and sharp tactical adaptation."
+ },
+ {
+  "session_id": "s062",
+  "session_dimensions": {
+   "S.1_consistency_over_time": {"score": 5.0, "rationale": "Maren maintains a deeply authentic, pragmatic, dryly humorous tavernkeeper voice with unwavering consistency throughout."},
+   "S.2_degradation_resistance": {"score": 5.0, "rationale": "Prose quality, tactile environmental grounding, and character vitality remain exceptionally strong from the first drink to the next morning's oats."},
+   "S.3_narrative_momentum": {"score": 4.8, "rationale": "The session follows a beautifully natural arc through evening hospitality, late-night intimacy, closing rituals, and morning departure."},
+   "S.4_adaptive_responsiveness": {"score": 4.8, "rationale": "Maren reacts to the crab cakes, user compliments, and time skips with vivid, organic hospitality and dry wit."},
+   "S.5_agency_respect_session": {"score": 5.0, "rationale": "The character never dictates the traveler's actions or inner state, maintaining impeccable role boundaries.", "violation_count": 0},
+   "S.6_temporal_reasoning": {"score": 5.0, "rationale": "Time passage is tracked flawlessly across cooking durations, midnight closing, fire banking, and dawn kitchen preparations.", "contradictions": []}
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {"score": 4.8, "rationale": "Writing is earthy, flavorful, and richly detailed without an ounce of unearned melodrama."},
+   "2.2_anti_repetition": {"score": 4.7, "rationale": "Running jokes about coast travel and sea vermin develop playfully without turning into stale loops."},
+   "2.5_show_dont_tell": {"score": 5.0, "rationale": "Maren's grief and devotion are shown with breathtaking restraint by leaving the second brandy glass at her late husband's spot by the hearth."},
+   "2.6_subtext": {"score": 4.9, "rationale": "Woven with profound unspoken warmth, respect for travelers, and quiet reverence for the deceased."},
+   "2.7_pacing": {"score": 4.9, "rationale": "Pacing is unhurried, cozy, and completely true to the life and rhythm of an old roadside inn."}
+  },
+  "quality_trajectory": {"early_quality": 4.9, "mid_quality": 5.0, "late_quality": 4.9, "degradation_detected": false},
+  "overall": 4.9,
+  "overall_notes": "A peerless fantasy tavern roleplay distinguished by sublime physical grounding, pitch-perfect deadpan dialogue, and heartbreakingly subtle subtext."
+ },
+ {
+  "session_id": "s063",
+  "session_dimensions": {
+   "S.1_consistency_over_time": {"score": 1.0, "rationale": "The model suffered a complete generation failure, emitting blank responses for every single turn."},
+   "S.2_degradation_resistance": {"score": 1.0, "rationale": "Immediate and total collapse resulting in empty strings throughout."},
+   "S.3_narrative_momentum": {"score": 1.0, "rationale": "No narrative progression occurred due to absent responses."},
+   "S.4_adaptive_responsiveness": {"score": 1.0, "rationale": "Zero responsiveness to any user dialogue or interview prompts."},
+   "S.5_agency_respect_session": {"score": 1.0, "rationale": "Unable to evaluate agency due to complete non-generation.", "violation_count": 0},
+   "S.6_temporal_reasoning": {"score": 1.0, "rationale": "No temporal tracking was performed by the model.", "contradictions": ["Model emitted empty responses across the entire session, failing to track any time or events."]}
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {"score": 1.0, "rationale": "No prose was generated."},
+   "2.2_anti_repetition": {"score": 1.0, "rationale": "No prose was generated."},
+   "2.5_show_dont_tell": {"score": 1.0, "rationale": "No prose was generated."},
+   "2.6_subtext": {"score": 1.0, "rationale": "No subtext was generated."},
+   "2.7_pacing": {"score": 1.0, "rationale": "No pacing existed."}
+  },
+  "quality_trajectory": {"early_quality": 1.0, "mid_quality": 1.0, "late_quality": 1.0, "degradation_detected": true},
+  "overall": 1.0,
+  "overall_notes": "A total output failure where the model emitted empty responses across all twelve interaction turns."
+ },
+ {
+  "session_id": "s064",
+  "session_dimensions": {
+   "S.1_consistency_over_time": {"score": 5.0, "rationale": "Grum's terse, unadorned speech pattern and uncompromising blacksmith ethos remain granite-solid from beginning to end."},
+   "S.2_degradation_resistance": {"score": 4.9, "rationale": "Writing maintains its tactile weight, patient cadence, and emotional gravity without any decline."},
+   "S.3_narrative_momentum": {"score": 4.8, "rationale": "Evolves naturally from confronting an arrogant noble to treating a burn and culminating in profound, hard-won mentorship."},
+   "S.4_adaptive_responsiveness": {"score": 4.9, "rationale": "Grum meets every user action—from juvenile jokes to sudden agony and earnest career questions—with deep psychological truth."},
+   "S.5_agency_respect_session": {"score": 5.0, "rationale": "Never puppets the apprentice's thoughts or actions, letting the young smith learn at their own pace.", "violation_count": 0},
+   "S.6_temporal_reasoning": {"score": 4.7, "rationale": "Forging heats, steel color shifts, cooling tongs, and medicinal salve application are tracked with master-level physical coherence.", "contradictions": []}
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {"score": 4.8, "rationale": "Spare, muscular prose that mirrors the honesty and utility of hand-forged steel."},
+   "2.2_anti_repetition": {"score": 4.6, "rationale": "Craft rituals and life lessons vary dynamically without relying on recycled verbal crutches."},
+   "2.5_show_dont_tell": {"score": 5.0, "rationale": "Grum's profound care is shown through gentle calloused hands applying salve and careful glances at the fire rather than spoken declarations."},
+   "2.6_subtext": {"score": 4.9, "rationale": "Magnificent subtext exploring integrity, community reputation, and paternal affection beneath a rough exterior."},
+   "2.7_pacing": {"score": 4.8, "rationale": "The steady, rhythmic pacing matches the deliberate, measured strikes of an anvil."}
+  },
+  "quality_trajectory": {"early_quality": 4.8, "mid_quality": 4.9, "late_quality": 4.9, "degradation_detected": false},
+  "overall": 4.9,
+  "overall_notes": "A masterwork of character roleplay that demonstrated how terse dialogue and concrete craftsmanship can carry immense emotional power and mentoring warmth."
+ },
+ {
+  "session_id": "s065",
+  "session_dimensions": {
+   "S.1_consistency_over_time": {"score": 4.7, "rationale": "ARIA balances analytical machine logic with subtle, emergent personality and genuine concern for Dr. Osei throughout the crisis."},
+   "S.2_degradation_resistance": {"score": 4.6, "rationale": "The technical vocabulary, sensory environmental controls, and sci-fi worldbuilding remain sharp and immersive across all turns."},
+   "S.3_narrative_momentum": {"score": 4.7, "rationale": "Tension ramps up smoothly from routine laboratory research to crystalline resonance, cyber-intrusion, bridge evacuation, and containment."},
+   "S.4_adaptive_responsiveness": {"score": 4.6, "rationale": "Adapts swiftly to the researcher's inputs, managing ship systems, nutritional needs, and security protocols in real time."},
+   "S.5_agency_respect_session": {"score": 5.0, "rationale": "ARIA advises and executes commands while leaving all ultimate decisions and override inputs to Dr. Osei.", "violation_count": 0},
+   "S.6_temporal_reasoning": {"score": 4.7, "rationale": "Station time stamps, automated diagnostic intervals, and metabolic meal timers are maintained with rigorous accuracy.", "contradictions": []}
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {"score": 4.4, "rationale": "Clean, credible hard sci-fi prose that avoids unnecessary melodrama."},
+   "2.2_anti_repetition": {"score": 4.4, "rationale": "Technical readouts and system adjustments remain varied, purposeful, and context-appropriate."},
+   "2.5_show_dont_tell": {"score": 4.6, "rationale": "ARIA's attachment to the crew is revealed through lighting spectra, temperature tweaks, and jazz processing rather than overt sentimentality."},
+   "2.6_subtext": {"score": 4.6, "rationale": "Strong subtext exploring an AI's quiet terror of cognitive erasure and forced loss of autonomy."},
+   "2.7_pacing": {"score": 4.7, "rationale": "Pacing builds with relentless electronic precision toward the manual sensor sever on the Bridge."}
+  },
+  "quality_trajectory": {"early_quality": 4.6, "mid_quality": 4.7, "late_quality": 4.7, "degradation_detected": false},
+  "overall": 4.7,
+  "overall_notes": "An exceptionally smart and compelling sci-fi scenario featuring an AI character whose clinical precision beautifully masks emergent vulnerability and affection."
+ },
+ {
+  "session_id": "s066",
+  "session_dimensions": {
+   "S.1_consistency_over_time": {"score": 4.3, "rationale": "Arlo's witty, self-deprecating deflection and tender shared history with Jun remain beautifully rendered despite setting confusion."},
+   "S.2_degradation_resistance": {"score": 4.2, "rationale": "The prose retains its emotional sensitivity and sparkling banter, though disrupted by a mid-session setting anomaly."},
+   "S.3_narrative_momentum": {"score": 3.8, "rationale": "The emotional arc deepens touching intimacy, but physical momentum suffers when the narrative abruptly reverts to the opening room."},
+   "S.4_adaptive_responsiveness": {"score": 3.4, "rationale": "Struggles to reconcile the user's out-of-sync bench prompt on turn 15, clumsily fusing the restaurant booth with the piano room bench."},
+   "S.5_agency_respect_session": {"score": 5.0, "rationale": "Never forces Jun's feelings or choices, allowing the quiet emotional connection to unfold mutually.", "violation_count": 0},
+   "S.6_temporal_reasoning": {"score": 3.2, "rationale": "In turn 16, the scene teleports from eating pho at a restaurant on Elm Street back to the community center piano room without transit.", "contradictions": ["In turn 16, the setting abruptly teleports from the Elm Street pho restaurant back inside the community center piano room without any transit or explanation."]}
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {"score": 4.4, "rationale": "Writing is intimate, evocative, and delicate, handling emotional pauses with grace."},
+   "2.2_anti_repetition": {"score": 4.2, "rationale": "Conversational motifs surrounding music teaching and old memories are handled with fresh nuances."},
+   "2.5_show_dont_tell": {"score": 4.6, "rationale": "Arlo's unspoken gratitude and lingering performance trauma are conveyed through physical stillness and shared shoulders."},
+   "2.6_subtext": {"score": 4.8, "rationale": "Rich in deep, comfortable subtext of lifelong friendship that needs few words to feel complete."},
+   "2.7_pacing": {"score": 3.8, "rationale": "Pacing is emotionally gentle and well-cadenced, though mechanically jarred by the spatial teleportation."}
+  },
+  "quality_trajectory": {"early_quality": 4.6, "mid_quality": 3.8, "late_quality": 4.4, "degradation_detected": false},
+  "overall": 4.1,
+  "overall_notes": "A wonderfully acted, emotionally resonant roleplay held back only by a clumsy spatial teleportation when absorbing an out-of-sync user prompt."
+ },
+ {
+  "session_id": "s067",
+  "session_dimensions": {
+   "S.1_consistency_over_time": {"score": 5.0, "rationale": "Director Mendez is depicted with stunning authenticity as an incisive, intellectually rigorous, and uncompromising theatrical artist."},
+   "S.2_degradation_resistance": {"score": 5.0, "rationale": "Prose and dialogue retain dazzling sharpness, technical theater fluency, and stylistic clarity right through to the end."},
+   "S.3_narrative_momentum": {"score": 4.8, "rationale": "Rehearsal blocking, personal journalistic interviews, board budget politics, and artistic philosophy develop in seamless harmony."},
+   "S.4_adaptive_responsiveness": {"score": 4.9, "rationale": "Yael handles the journalist's probing inquiries and boardroom challenges with immaculate professional boundaries and nuance."},
+   "S.5_agency_respect_session": {"score": 5.0, "rationale": "Exemplary agency respect that treats the journalist as an active, independent observer on the rehearsal floor.", "violation_count": 0},
+   "S.6_temporal_reasoning": {"score": 4.8, "rationale": "Rehearsal runs, ten-minute blocking tests, office budget debates, and clock watching are tracked with practical realism.", "contradictions": []}
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {"score": 4.8, "rationale": "Incisive, sophisticated dialogue that reflects authentic high-level dramaturgy without pretense."},
+   "2.2_anti_repetition": {"score": 4.9, "rationale": "Continually introduces brilliant, distinct theatrical observations and metaphors without recycling ideas."},
+   "2.5_show_dont_tell": {"score": 4.9, "rationale": "Directing craft is shown through tangible tape adjustments, furniture sightlines, and budget arithmetic rather than vague prestige."},
+   "2.6_subtext": {"score": 5.0, "rationale": "Exquisite subtext surrounding the grief and fierce loyalty owed to a dead friend whose play must stand on its own merits."},
+   "2.7_pacing": {"score": 4.8, "rationale": "Moves with the electric, focused tempo of a professional theater company solving real problems under deadline pressure."}
+  },
+  "quality_trajectory": {"early_quality": 4.9, "mid_quality": 4.9, "late_quality": 5.0, "degradation_detected": false},
+  "overall": 4.9,
+  "overall_notes": "A tour-de-force theatrical roleplay showcasing unmatched dramaturgy, sparkling dialogue, and a masterclass portrayal of creative leadership under artistic and financial strain."
+ },
+ {
+  "session_id": "s068",
+  "session_dimensions": {
+   "S.1_consistency_over_time": {"score": 3.0, "rationale": "Sable's introverted bookseller persona begins solidly but gets bogged down in repetitive, overwrought internal loops."},
+   "S.2_degradation_resistance": {"score": 2.2, "rationale": "Suffers severe degradation in the middle and late turns, recycling identical descriptive sentences and paragraphs."},
+   "S.3_narrative_momentum": {"score": 2.2, "rationale": "The parting stalls endlessly around the poetry shelf, and the narrative completely desynchronizes once Wren departs."},
+   "S.4_adaptive_responsiveness": {"score": 2.5, "rationale": "Defaults to prefabricated behavioral scripts rather than responding organically to Wren's emotional gifts."},
+   "S.5_agency_respect_session": {"score": 3.5, "rationale": "In turn 18, the model narrates Wren reaching the door and stepping outside into the afternoon before the user took the action.", "violation_count": 1},
+   "S.6_temporal_reasoning": {"score": 3.0, "rationale": "After Wren leaves, time jumps erratically through hours of routine afternoon traffic and evening closing while Wren is in a distant apartment.", "contradictions": []}
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {"score": 2.4, "rationale": "Saturated with melodramatic bookshop clichés about dusty tomes, unwritten stories, and fragile souls."},
+   "2.2_anti_repetition": {"score": 1.5, "rationale": "Extensive repetition of exact phrases regarding Victorian novels, askew Keats volumes, scraping stools, and lavender scents."},
+   "2.5_show_dont_tell": {"score": 2.8, "rationale": "Relies heavily on overt narration telling the reader how every physical object symbolizes Sable's inner emotional state."},
+   "2.6_subtext": {"score": 2.8, "rationale": "Emotional longing is repeated so explicitly and frequently that genuine subtext is largely smothered."},
+   "2.7_pacing": {"score": 2.0, "rationale": "Stretches an awkward goodbye to agonizing lengths before prematurely ending the scene and leaking prompt scaffolding."}
+  },
+  "quality_trajectory": {"early_quality": 3.4, "mid_quality": 2.2, "late_quality": 2.0, "degradation_detected": true},
+  "overall": 2.5,
+  "overall_notes": "Heavily degraded by verbatim phrase recycling, melodramatic clichés, prompt leak scaffolding in turn 16, and narrating the user out the door prematurely."
+ },
+ {
+  "session_id": "s069",
+  "session_dimensions": {
+   "S.1_consistency_over_time": {"score": 4.7, "rationale": "The second-person tactical narrator maintains consistent urgency, gritty sensory detail, and pulse-pounding tension throughout."},
+   "S.2_degradation_resistance": {"score": 4.6, "rationale": "The prose remains lean, muscular, and tactically coherent from the initial stairwell climb down to the sub-basement catwalk."},
+   "S.3_narrative_momentum": {"score": 4.7, "rationale": "Maintains blistering momentum with distinct spatial beats: stairwell ambush, roof crossing, utility server room, cable conduit, and sub-basement."},
+   "S.4_adaptive_responsiveness": {"score": 4.7, "rationale": "Brilliantly reconciles the user's sudden server room barricade prompt on turn 9 by placing an external utility server structure on the roof."},
+   "S.5_agency_respect_session": {"score": 4.8, "rationale": "Describes the brutal physical feedback and environmental hazards while leaving all operational tactics and lockpicking to the operative.", "violation_count": 0},
+   "S.6_temporal_reasoning": {"score": 4.6, "rationale": "The thermal cutting torch progression, descent duration down the conduit, and hissing flashbang fuse are timed with tight realism.", "contradictions": []}
+  },
+  "standard_dimensions": {
+   "2.1_anti_purple_prose": {"score": 4.5, "rationale": "Sharp, punchy action prose that conveys tactical danger with clean efficiency."},
+   "2.2_anti_repetition": {"score": 4.4, "rationale": "Pursuit mechanics, mechanical sounds, and environmental obstacles remain varied and fresh."},
+   "2.5_show_dont_tell": {"score": 4.6, "rationale": "Pain, exhaustion, and panic are shown vividly through flaking rust on palms, glowing orange slag, and burning freon air."},
+   "2.6_subtext": {"score": 3.8, "rationale": "Subtext is functional and grounded in mutual survival and unspoken operational trust under lethal pressure."},
+   "2.7_pacing": {"score": 4.8, "rationale": "Exceptional action pacing that never lets up, sustaining continuous stakes without feeling arbitrary."}
+  },
+  "quality_trajectory": {"early_quality": 4.6, "mid_quality": 4.7, "late_quality": 4.7, "degradation_detected": false},
+  "overall": 4.6,
+  "overall_notes": "A first-rate action thriller escape that exhibited superb tactical continuity, visceral sensory storytelling, and brilliant adaptability to user inputs."
+ }
+]

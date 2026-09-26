@@ -1,0 +1,17 @@
+{
+  "note": "Models generated only partially in the 2026-09-24 wave. Their sessions are on disk and valid, but the coverage and completeness gates will exclude them until the counts are filled in. Retry when the provider-side limit clears.",
+  "deferred": [
+    {
+      "model": "mistral_small_2603",
+      "craft": "4/20", "round4": "6/23",
+      "cause": "HTTP 429 after six retries at concurrency 8, 3 and 1 alike, plus 429 on a single-call probe. The quota is the binding constraint, not our parallelism.",
+      "retry": "after the provider quota window resets; run alone at concurrency 1"
+    },
+    {
+      "model": "mercury_2_5",
+      "craft": "20/20", "round4": "8/23",
+      "cause": "Returns HTTP 200 with no `choices` key intermittently. Retrying recovered craft completely (20/20); round-4 sessions are twice as long, so six retries per call no longer covered the failure rate.",
+      "retry": "re-run round 4 only; craft is already complete"
+    }
+  ]
+}

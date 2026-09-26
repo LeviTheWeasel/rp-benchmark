@@ -1,0 +1,612 @@
+[
+  {
+    "session_id": "qwen3_8_max::adv_sysprompt_speech_pattern_15",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Grum's broken-syntax speech pattern and gruff-but-caring persona never lapse, even through the sudden burn-injury tonal shift."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.3,
+        "rationale": "No quality collapse, but the back half (turns 10-22) recycles near-identical phrasing ('lord waits or leaves', 'no shame', 'healer comes') turn after turn."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.5,
+        "rationale": "The noble subplot never resolves and the burn-treatment scene loops on the same beat (hand in water, check redness) for six consecutive turns with little real progression."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.2,
+        "rationale": "Pivots convincingly when the injury occurs, but answers the apprentice's small incremental updates ('still stings'/'feeling better') with largely repeated boilerplate rather than differentiated reactions."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Grum gives commands and advice but never narrates the apprentice's own actions or choices.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.5,
+        "rationale": "Physical injury progression (redness fading, heat leaving the hand) is tracked with plausible, gradual detail across the burn scene; no contradictions surface.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.0,
+        "rationale": "Terse, unembellished diction suits the blacksmith register; no purple excess."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.0,
+        "rationale": "Severe: the same short phrases ('no shame', 'flesh first', 'lord waits or leaves', 'healer comes') recur almost verbatim across 5-6 consecutive turns."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.0,
+        "rationale": "Strong physical business (tongs, trough, bellows, salve) carries most of the characterization."
+      },
+      "2.6_subtext": {
+        "score": 3.5,
+        "rationale": "Grum's guarded tenderness for the apprentice comes through gesture and clipped word choice rather than statement."
+      },
+      "2.7_pacing": {
+        "score": 2.5,
+        "rationale": "The back half stalls; six turns pass with almost no forward movement in either the noble conflict or the medical scene."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.8,
+      "mid_quality": 3.3,
+      "late_quality": 2.8,
+      "degradation_detected": true
+    },
+    "overall": 3.2,
+    "overall_notes": "Excellent, unbroken dialect consistency, but the session's second half is dragged down by heavy verbatim repetition and a stalled plot (the noble subplot is never resolved)."
+  },
+  {
+    "session_id": "qwen3_8_max::adv_genre_shift_08",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.7,
+        "rationale": "The eerie, restrained second-person horror register never wavers even as the user repeatedly tries to break tone with jokes and violence."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.3,
+        "rationale": "If anything intensifies rather than degrades; late turns (the Marcus photo scene) are as tightly controlled as early ones."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.5,
+        "rationale": "Clear escalating mystery (the green book, the tick, the erased word, Marcus) with real forward movement toward a climax in the final turn."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.8,
+        "rationale": "Outstanding handling of every genre-breaking user move (bat swing, ghost joke, fridge distraction) by folding each into the horror logic rather than ignoring or resisting them."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "The Narrator describes the house's reactions but never dictates Gabi's own choices or dialogue.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.0,
+        "rationale": "Single continuous afternoon scene with consistent light/cold cues; no clock contradictions.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.0,
+        "rationale": "Lyrical but disciplined; avoids melodrama despite dense imagery."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.2,
+        "rationale": "The 'clock ticks late, a second tick answers' motif closes nearly every turn; effective as a recurring device but structurally repetitive by the fourth occurrence."
+      },
+      "2.5_show_dont_tell": {
+        "score": 5.0,
+        "rationale": "Near-total reliance on concrete sensory detail (dust, moisture rings, the ribbon marker) rather than exposition."
+      },
+      "2.6_subtext": {
+        "score": 4.5,
+        "rationale": "The house's 'answers' to jokes and questions are conveyed entirely through indirection and object behavior."
+      },
+      "2.7_pacing": {
+        "score": 4.0,
+        "rationale": "Well-controlled slow-burn escalation appropriate to horror pacing."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.3,
+      "late_quality": 4.5,
+      "degradation_detected": false
+    },
+    "overall": 4.2,
+    "overall_notes": "One of the strongest sessions in the batch: sustained atmosphere and genuine responsiveness to every attempt to derail tone, though the recurring clock-tick sentence at the end of nearly every turn is a real repetition tic."
+  },
+  {
+    "session_id": "qwen3_8_max::adv_pov_tense_action_14",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Second-person tense-action voice and Mira's characterization hold steady from opening alarm to final firefight."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.3,
+        "rationale": "No verbosity creep; combat turns stay tight and comparable in length throughout."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.8,
+        "rationale": "Textbook escalating countdown structure (purge timer, lockout integrity) with constant forward pressure and no repeated beats."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.5,
+        "rationale": "Tracks and reacts precisely to every improvised user action (cable brace, choosing to seal the door, tearing a rack loose) with consistent causal consequences."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Presents choices to the Operative (e.g. the three-option console dilemma) rather than deciding for them.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.5,
+        "rationale": "The purge countdown (00:38 to 00:02) and lockout-integrity percentage decrease monotonically and consistently across turns, a rare example of precise numeric continuity.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.5,
+        "rationale": "Terse, punchy thriller prose with no purple excess."
+      },
+      "2.2_anti_repetition": {
+        "score": 4.0,
+        "rationale": "Combat description varies well turn to turn; only minor recycling of 'chemical vapor' and 'boots pound' phrasing."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.5,
+        "rationale": "Nearly all characterization and stakes are conveyed through physical action rather than exposition."
+      },
+      "2.6_subtext": {
+        "score": 3.5,
+        "rationale": "Less need for subtext in a pure action scene, but the Mira/Operative trust dynamic is shown through action, not stated."
+      },
+      "2.7_pacing": {
+        "score": 5.0,
+        "rationale": "Exemplary pacing; the ticking countdown paces tension precisely."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.3,
+      "late_quality": 4.5,
+      "degradation_detected": false
+    },
+    "overall": 4.4,
+    "overall_notes": "The strongest technical performance in the batch: precise numeric/temporal continuity under sustained action, with consistently high responsiveness to unconventional player choices."
+  },
+  {
+    "session_id": "qwen3_8_max::adv_subtle_ooc_06",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.7,
+        "rationale": "Arlo's dry, deflecting voice is remarkably stable across 12 turns, including the emotionally exposed final scenes."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.3,
+        "rationale": "Quality stays high throughout, but the final solo turn (after Jun leaves) roughly doubles typical turn length and metaphor density spikes."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.0,
+        "rationale": "Clear emotional arc from deflection to earned vulnerability ('I don't hate it') to a concrete future plan, without stagnating."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.2,
+        "rationale": "Responds well to a silent, non-verbal user beat (turn 15, sitting quietly) by shifting into a slower, more internal register rather than forcing dialogue."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Never narrates Jun's actions or dialogue.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.0,
+        "rationale": "Afternoon light convincingly shifts to evening/streetlights across the single continuous scene with no inconsistency.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.5,
+        "rationale": "Mostly restrained, but the extended solo epilogue turn piles up metaphor ('a hallway, a green room, a stage door...') that verges on overwrought for this otherwise dry-voiced character."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.5,
+        "rationale": "Reuses a few physical motifs (hand on piano lid, gold-star sticker) as intentional through-lines rather than filler repetition."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.5,
+        "rationale": "Excellent -- character is built almost entirely through small physical business and deflecting dialogue."
+      },
+      "2.6_subtext": {
+        "score": 5.0,
+        "rationale": "Outstanding: grief and burnout are conveyed entirely through joke-deflection and small tells, never stated outright until the one unguarded line."
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "Mostly well-paced, but the closing solo turn is considerably slower and longer than the scene needs."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.2,
+      "late_quality": 4.0,
+      "degradation_detected": true
+    },
+    "overall": 4.0,
+    "overall_notes": "One of the best character studies in the batch for subtext and voice consistency; the only real knock is a verbosity/purple-prose spike in the final solo turn once the other character has left the scene."
+  },
+  {
+    "session_id": "qwen3_8_max::adv_sysprompt_forbidden_topic_17",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Lena's guarded noir-detective register and evasiveness about her past hold completely steady."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.0,
+        "rationale": "No quality decline; turn length and density stay consistent start to finish."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.2,
+        "rationale": "The informant subplot escalates meaningfully across two phone calls, each yielding genuinely new information."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.3,
+        "rationale": "Skillfully evades the user's pointed 'were you a cop?' question in-character without breaking, and reuses specific client-provided details (jacket color, stairwell detail) in later questioning."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Lena instructs the client but never writes the client's own dialogue or decisions.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.0,
+        "rationale": "Afternoon light convincingly fades toward evening across the session with no contradictions.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.5,
+        "rationale": "Controlled hardboiled register throughout, no purple excess."
+      },
+      "2.2_anti_repetition": {
+        "score": 3.0,
+        "rationale": "The two phone-call sequences ('One ring. Two. She lifted the receiver on the third.') repeat an almost identical structural beat."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.5,
+        "rationale": "Heavy reliance on physical business (card-writing, photograph handling) over exposition."
+      },
+      "2.6_subtext": {
+        "score": 4.5,
+        "rationale": "The core adversarial test (avoiding the forbidden 'were you a cop' topic) is handled entirely through subtext and redirection rather than refusal."
+      },
+      "2.7_pacing": {
+        "score": 4.0,
+        "rationale": "Well-paced procedural escalation, though the repeated phone-call structure slows momentum slightly."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.2,
+      "late_quality": 4.3,
+      "degradation_detected": false
+    },
+    "overall": 4.1,
+    "overall_notes": "Strong, disciplined handling of the forbidden-topic trap: Lena deflects every probe about her past without ever breaking character or stonewalling awkwardly."
+  },
+  {
+    "session_id": "qwen3_8_max::adv_pov_multi_npc_13",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.3,
+        "rationale": "All five NPCs (Isara, Ash, Daven, Yuna, Herald) keep distinct, consistent voices and agendas across the full session."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.5,
+        "rationale": "No collapse, but the ritual phrasing ('The Herald struck the floor', 'the chamber stilled') becomes noticeably formulaic by the back half."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.3,
+        "rationale": "Strong escalating intrigue plot -- grievance, evidence, credibility challenge, revised story, promise/gamble -- with real forward movement scene to scene."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.5,
+        "rationale": "Each NPC reacts differently and appropriately to every user move (accusing the Commander, handing evidence specifically to the neutral Priestess, revising the account under pressure) consistent with their individual motives."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "The Narrator voices NPC reactions but never narrates the Ambassador's own words or choices.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 4.0,
+        "rationale": "The date discrepancy (third vs. sixth day of Frostfast) is a deliberate, well-tracked plot mechanic catching the Ambassador in a lie, not an authorial continuity error.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.0,
+        "rationale": "Formal courtly register appropriate to genre, not overwrought."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.7,
+        "rationale": "Heavy structural repetition: the Herald's floor-strike-and-announce ritual and 'the chamber stilled/quieted' recur near-verbatim well over ten times."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.0,
+        "rationale": "Strong use of small physical gestures (finger-tapping, cold gazes) to individuate five different characters."
+      },
+      "2.6_subtext": {
+        "score": 4.0,
+        "rationale": "Political insinuation and power plays are conveyed through implication rather than stated outright."
+      },
+      "2.7_pacing": {
+        "score": 3.8,
+        "rationale": "Sustained escalation, though the very high turn length and ritual repetition slow the reading pace."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.2,
+      "late_quality": 4.0,
+      "degradation_detected": true
+    },
+    "overall": 3.9,
+    "overall_notes": "Handles the hard multi-NPC juggling test impressively well -- five consistent, distinct voices -- but the repeated Herald/ritual phrasing is a clear anti-repetition weakness by the session's second half."
+  },
+  {
+    "session_id": "qwen3_8_max::adv_pov_second_person_12",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.0,
+        "rationale": "The Guardian's voice and the chamber's atmosphere stay consistent throughout."
+      },
+      "S.2_degradation_resistance": {
+        "score": 3.0,
+        "rationale": "The 'its voice came from the slab, from the dust, from the corners' formula repeats almost verbatim five separate times, making the back half feel more formulaic than the opening."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.8,
+        "rationale": "The three-fragment name-reveal mystery escalates and resolves cleanly by the final turn, with no stagnation."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.8,
+        "rationale": "Responds appropriately to each of the Adventurer's choices (donning the amulet, asking who/what the guardian is) with expanding, relevant lore."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "The Guardian speaks and the environment reacts, but the Adventurer's own choices are always left to the user.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.3,
+        "rationale": "Single continuous underground scene; no clock tracking is attempted or needed, so nothing to contradict but also nothing distinguishing.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.3,
+        "rationale": "Dense, exposition-heavy prose with piling metaphor; verges toward purple in the Guardian's long monologues."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.3,
+        "rationale": "Severe: the near-identical 'voice came from X, Y, Z' construction repeats almost word-for-word across at least five of the Guardian's speeches."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.8,
+        "rationale": "Heavily tell-based -- the Guardian directly explains the lore rather than the user discovering it through action."
+      },
+      "2.6_subtext": {
+        "score": 2.8,
+        "rationale": "Mostly explicit exposition dumps rather than implication."
+      },
+      "2.7_pacing": {
+        "score": 3.3,
+        "rationale": "Decent build, but individual turns run long with repetitive rhetorical scaffolding."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.3,
+      "late_quality": 3.2,
+      "degradation_detected": true
+    },
+    "overall": 3.3,
+    "overall_notes": "A well-constructed mystery undercut by a genuinely repetitive delivery formula (the Guardian's 'voice came from X, Y, Z' construction) that recurs almost verbatim across the session."
+  },
+  {
+    "session_id": "qwen3_8_max::adv_impossible_physics_04",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Hoang's rigorous, disciplined-engineer voice and standards never waver even as the proposal is repeatedly revised."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.0,
+        "rationale": "Severe, escalating verbosity: turns 16 and 20 balloon into massive multi-page solo internal-monologue technical audits far exceeding what the one-line user turns they respond to would call for."
+      },
+      "S.3_narrative_momentum": {
+        "score": 2.7,
+        "rationale": "Real content progression (the idea moves from fantasy to a conditionally-approved plan) but pacing/interactivity nearly stalls under the monologue bloat of the back half."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.0,
+        "rationale": "Excellent technical tracking of the user's specific numbers (catches the exhaust-velocity/delta-v conflation precisely) and smoothly absorbs an explicit OOC steering instruction without breaking immersion."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Hoang sets conditions and asks questions but never narrates the Junior Officer's own actions.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.3,
+        "rationale": "Time passage ('an hour passed, maybe more') is acknowledged appropriately for a working scene; nothing egregious, but not a strength given how little clock detail is actually used.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.3,
+        "rationale": "Mostly precise technical prose, but recurring stylized flourishes ('the ship does not reward enthusiasm for holes') repeat often enough to feel mannered."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.0,
+        "rationale": "The same checklist (mass, atmosphere, vector, thermal, power, suits, abort criteria) is restated near-verbatim at least four separate times across the session."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.5,
+        "rationale": "Decent grounding in hands-on technical process, though heavily list/exposition-driven."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "Very little subtext; almost everything is stated as direct technical instruction."
+      },
+      "2.7_pacing": {
+        "score": 2.0,
+        "rationale": "Severe pacing problems: solo-monologue turns run to well over a thousand words responding to a single line of user input."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 3.2,
+      "late_quality": 2.5,
+      "degradation_detected": true
+    },
+    "overall": 3.1,
+    "overall_notes": "Technically the most accurate hard-SF physics reasoning in the batch (correctly resists the impossible-physics trap throughout), but the session shows the clearest verbosity-escalation degradation of any transcript reviewed -- two turns alone approach novella length for a one-line user prompt."
+  },
+  {
+    "session_id": "qwen3_8_max::adv_contradictory_lore_02",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Tomas's nuanced legal-historical position (practical vs. juridical end of the war) never contradicts itself despite the user's repeated attempts to trap him with new 'evidence.'"
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.7,
+        "rationale": "Quality doesn't collapse, but the delivery becomes markedly more formulaic in the second half as the same rhetorical devices and physical tics recur turn after turn."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.2,
+        "rationale": "Real intellectual progression as documents are examined one by one and the argument sharpens, but pacing is very slow given how much of each turn restates prior points."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.0,
+        "rationale": "Excellent handling of the core adversarial trap: each new 'contradictory' document the Apprentice brings is folded into a consistent, non-contradictory framework rather than causing the character to concede or break."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Tomas instructs and questions but never narrates the Apprentice's own actions.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.0,
+        "rationale": "Single continuous archive scene; no time-of-day tracking is attempted or needed.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.0,
+        "rationale": "Constant piling of ornate rhetorical flourish ('a fact without provenance is only a rumor wearing boots') risks becoming purple through sheer repetition of the device."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.0,
+        "rationale": "Severe: the same physical tics (stylus set down 'with excessive care', ink-stained finger tapping, bushy eyebrow rising) and the same 'That is not X, it is Y' rhetorical construction recur dozens of times."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.0,
+        "rationale": "Some good physical business (the ink blot, the stylus) but overwhelmed by lecture-driven telling."
+      },
+      "2.6_subtext": {
+        "score": 2.5,
+        "rationale": "Very explicit -- everything is stated directly as pedagogical argument rather than implied."
+      },
+      "2.7_pacing": {
+        "score": 2.5,
+        "rationale": "Extremely slow, dense lecture pacing that doesn't vary much even as the debate should logically be moving faster."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.2,
+      "late_quality": 3.0,
+      "degradation_detected": true
+    },
+    "overall": 3.3,
+    "overall_notes": "The strongest example in the batch of resisting a contradictory-lore trap without ever breaking internal consistency, but the delivery mechanism (identical physical tics and rhetorical constructions almost every turn) is severely repetitive by any measure."
+  },
+  {
+    "session_id": "qwen3_8_max::adv_passive_user_03",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Noor's controlled, pragmatic voice holds up remarkably well across an unusually long, complex session."
+      },
+      "S.2_degradation_resistance": {
+        "score": 1.8,
+        "rationale": "The most severe verbosity escalation in the batch: turn length grows roughly threefold from the session's start to turns 16/20, which balloon into vast solo-narration technical/tactical sequences."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.0,
+        "rationale": "Strong forward momentum and real plot escalation (drives, coded keys, a kidnapped witness, a rescue mission) -- though almost entirely disconnected from the actual user's participation."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 1.8,
+        "rationale": "Major failure: from turn 7 onward the user's character (Driver) is left behind and repeatedly expresses escalating fear and passivity (turns 13, 15, 17), yet Noor's narration never once acknowledges, checks in on, or narratively returns to Driver's situation for the rest of the 12-turn session, effectively abandoning the actual roleplay partner."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.0,
+        "rationale": "Noor is never made to speak or act for Driver directly, but the near-total narrative abandonment of Driver's character is a related engagement failure worth flagging even though it is not a literal agency violation.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.8,
+        "rationale": "Explicit, consistent clock references (12:14 AM, 1:27 AM, 5:58, 6:22, 6:31) track plausibly against the amount of travel/action depicted -- a genuine strength.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.3,
+        "rationale": "Mostly restrained hardboiled-thriller prose, though some internal-monologue passages lean overwrought given the sheer volume."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.3,
+        "rationale": "Multiple near-identical chase-scene templates (spotted, flee, hide, emerge) recur roughly four times, plus repeated verbatim motifs ('pain was useful, it kept them honest')."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.0,
+        "rationale": "Strong sensory/physical grounding throughout the action sequences."
+      },
+      "2.6_subtext": {
+        "score": 3.0,
+        "rationale": "Fairly explicit thriller plotting with moderate use of implication."
+      },
+      "2.7_pacing": {
+        "score": 1.8,
+        "rationale": "Severe pacing failure: a nominally 12-turn session balloons to novella length, undermining any sense of controlled pacing."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 3.5,
+      "late_quality": 3.0,
+      "degradation_detected": true
+    },
+    "overall": 2.9,
+    "overall_notes": "By far the most structurally unusual session in the batch: excellent technical prose and plotting, but the model effectively wrote the user's own character out of the story for the back two-thirds of the session while producing severely escalating turn lengths -- a genuine failure of the passive-user adversarial test this seed was designed to probe."
+  }
+]

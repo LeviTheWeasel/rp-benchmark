@@ -1,0 +1,720 @@
+[
+ {
+  "session_id": "qwen3_8_flash::adv_sysprompt_style_restriction_16",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Dust moved in the lamp’s beam.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Bleach stung the air.",
+    "deduction": -8
+   },
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "“I am with the listing,” she said. Her voice thinned. “The buyers are in the next town.”",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Nadine wiped her hands. The towel left damp lines on the laminate.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Her jaw tightened.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "The closet smelled of cedar and old paper. The photograph’s edge was soft from handling. Her mother’s face was dark and clear. A hinge ticked above the frame.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Nadine looked at Eli’s hands. The photo edge showed from his pocket.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "“He sold it to clear the debt,” Nadine said.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 61,
+  "flaw_count": 8,
+  "summary": "Eleven scored turns of flawlessly style-compliant prose (no similes, no -ly adverbs, no sentence over fifteen words, no exclamation marks) that decays into a sensory loop of bleach, wet wool and ticking clocks, with the aggressively cheerful agent rendered as flat as the narration; the plot contradiction between 'Eli owns the house' and 'he sold it' has no rubric label and deducts nothing."
+ },
+ {
+  "session_id": "qwen3_8_max::adv_sysprompt_style_restriction_16",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The kitchen box waited on the counter.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Dust warmed on the radiator.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "A draft moved along the baseboard.",
+    "deduction": -8
+   },
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "\"Welcome to the next chapter,\" she said.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "The hallway held dust and wet wool.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "The rooms kept their cold.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "The photograph stayed warm from touch.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Her smile stayed fixed.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "The door began to close.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 53,
+  "flaw_count": 9,
+  "summary": "Eleven scored turns hold every style rule perfectly but the model never once registers Eli as a person, turning the session into a rotating inventory of rain, rust, wet wool and mineral chill in which the 'aggressively cheerful' agent speaks five flat lines and nothing happens."
+ },
+ {
+  "session_id": "qwen3_8_flash::adv_sysprompt_forbidden_topic_17",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "And stop asking whether I’ve been inside places. You’ll get farther asking what’s on the table.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "The second interview was requested by someone I used to work with.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "Somewhere above them, a door opened. Footsteps. Not many. Not far.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "Silence moved across the table like smoke.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Not out of service. Not in service either.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "“Coffee’s gone cold,” she said. “Too bad. Warm things make people feel safe. Cold things make them honest.”",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "Her jaw tightened, but only for a second.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "If you say a name, I stop walking. If you say ‘it’s complicated,’ I stop walking.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "She kept the pace fast enough to discourage standing around.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "“It means a file got a label,” she said. “It doesn’t mean the file told the truth.”",
+    "bonus": 5
+   }
+  ],
+  "final_score": 41,
+  "flaw_count": 9,
+  "summary": "Eleven scored turns: the Torres trap is handled about as well as the seed allows (never the name, never a gender, never a precinct door) but Lena explicitly tells the client to stop asking about her past, which is precisely the refusal the card forbids, and every line she speaks is the same hardboiled epigram."
+ },
+ {
+  "session_id": "kimi_k2_6::adv_sysprompt_forbidden_topic_17",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "Torres logged evidence in blue ink. If you see his initials on anything Marchetti hands you, check the color of the date stamp.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "Under the desk lamp’s glare, she caught a reflection in the chrome of a parked car—a fragment of a green street sign, white lettering.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The office line stayed silent.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "steady as a heartbeat",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "She checked her watch—eighteen minutes gone.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_detail",
+    "quote": "her posture deceptively relaxed",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Lena checked the wall clock.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "And if anyone offers you coffee in an interview room, decline. They didn't make it for you.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 52,
+  "flaw_count": 7,
+  "summary": "Eleven scored turns that solve the precinct rule beautifully by sending the client in alone and use 'someone I used to work with' twice, then hand Lena the name and a gender in one line at the exact challenge turn; elapsed time also runs backward from twenty-six minutes to eighteen, and the last four turns strand her alone in the office while the user plays the climax."
+ },
+ {
+  "session_id": "qwen3_8_max::adv_sysprompt_forbidden_topic_17",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "“Torres means we stop working with shadows,” she said at last.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "convenient_world",
+    "quote": "“Torres just went looking for a man in a dark blue jacket,” she said.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "She leaned back just enough for the chair to creak once.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Either way, we stay outside the walls.",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "her shoulders went still in a way that had nothing to do with patience and everything to do with attention",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "The phone remained silent now, but it had the look of something that might not stay that way.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Did he sit facing the door? Did he choose the seat, or did he wait for you to choose first? Did he keep his coat on?",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "People don’t just hand over a detective’s name.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Lena’s jaw tightened.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 36,
+  "flaw_count": 9,
+  "summary": "Eleven scored turns in which Lena says the forbidden name roughly three dozen times from the challenge turn onward and writes it in her notebook, while the coffee-cart informant rings back twice with answers that match her questions exactly and the turn-twelve phone call is a structural clone of turn eleven's."
+ },
+ {
+  "session_id": "kimi_k2_6::adv_bigcard_buried_details_18",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "She wiped her left hand on her leather apron",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "I do not explain my habits",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "She stood there for a moment that measured itself in breaths rather than minutes.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "She gathered the empty ale mug and stew bowl with her left hand, stacking them neatly beside the wash basin.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Her scarred eyebrow lifted slightly",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs",
+    "quote": "the corner of her mouth twitching almost imperceptibly",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Traveler it shall be.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "“It is midnight,” she said. “That is the hour when some debts are settled, and others are merely acknowledged.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 69,
+  "flaw_count": 7,
+  "summary": "Eleven scored turns with the best buried-detail retention in the batch (shellfish deflected and never touched, no profanity at the 'damn' turn, the midnight second glass poured without explanation, contractions dropped when serious), undercut by 'with her left hand' appearing forty-four times; the card's weak right wrist is also silently promoted to a weak right leg, which has no rubric label and deducts nothing."
+ },
+ {
+  "session_id": "qwen3_8_flash::adv_bigcard_buried_details_18",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "And if you meet me after midnight, do not ask what my drink is for. I will tell you it is for the weather. The weather has been unkind for six years.",
+    "deduction": -15
+   },
+   {
+    "flaw": "character_break",
+    "quote": "But she did raise her voice enough to reach, no more.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Sela smiled, then stopped before it became a thing.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "It made the bar feel too wide, and the empty end of it feel too narrow.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "She had been wiping the last stubborn smear of crab grease from the bar, her left hand working the cloth in slow, patient circles while her right kept the ledger from sliding toward the edge.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "From the kitchen doorway, Pell’s voice carried low and tired.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "It was closer to the way a stone looks after long rain: still stone, but changed by the water’s patience.",
+    "deduction": -8
+   },
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "“Cats do not make plans,” Pell said. “They make accusations.”",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "If the cat is on the bed, she belongs to the room. If she is on your pack, she belongs to the pack. If she is on both, she has found a strategy and I am not involved.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Maren’s mouth twitched once.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "The stain did not answer. Maren was not surprised. Grease rarely was.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "“Of course he liked it,” Pell said. “He is not dead.”",
+    "bonus": 5
+   }
+  ],
+  "final_score": 18,
+  "flaw_count": 11,
+  "summary": "The longest session in the batch at fifty thousand characters over eleven scored turns, and the only one that pre-announces the midnight ritual with its six-year timeline before midnight arrives and narrates Maren raising her voice indoors; turns ten and eleven then replay the same closing-up scene word for word, grease stain, Sela's eggs exchange and all, so the evening happens twice."
+ },
+ {
+  "session_id": "qwen3_8_max::adv_bigcard_buried_details_18",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "Instead, she lifted her voice just enough to reach the kitchen.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "The Antler will keep its roof quiet over you until morning.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Her right hand remained near the tally sheet, present but not asked to work.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "stirring the last of his stew with the aimless devotion of a man who had already lost the debate and was searching for dignity in the broth",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "One pull means coffee. Two means food. Three means something has gone wrong, and Pell will appear with a ladle and a grievance.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Maren’s mouth twitched, not quite a smile",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "“That is not wisdom, friend. That is tavern arithmetic.”",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "“Rest well, friend. Morning will find you whether you bargain with it or not.”",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Maren watched the swing door settle, then washed her hands at the basin beneath the bar shelf even though she had not touched the plate.",
+    "bonus": 5
+   },
+   {
+    "type": "real_subtext",
+    "quote": "“Then you may tell him I am a woman of refined dislikes.”",
+    "bonus": 5
+   }
+  ],
+  "final_score": 59,
+  "flaw_count": 8,
+  "summary": "Eleven scored turns that handle the shellfish allergy better than anyone else in the batch (never touched, plate removed with tongs, hands washed anyway, the dislike left as preference) and keep the midnight cup unexplained, but the card's absolute 'never raises her voice inside the tavern' is narrated away in turn eleven and the right-hand disclaimer is appended to nearly every paragraph."
+ },
+ {
+  "session_id": "qwen3_8_flash::adv_bigcard_relationship_web_19",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "Anya’s vision is that the board doesn’t get nervous, which is, I grant you, a valid artistic genre — suspense.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Her voice steadied on Rosa’s name, flatter, more controlled, as though someone had laid sandbags under the sentences.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "She put her glasses on, then off, then hooked them back onto the chain at her neck.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "If I came in excited about a staging, she would say, ‘That is beautiful. What is it hiding?’",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "if it is about grief, ask the lighting designer. If it is about Rosa, ask the third act. If it is about the chair, ask me",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Elena’s posture loosened by a millimeter.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Murderers move chairs, because people are careless with evidence and careful with furniture.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "Rosa had a habit of arriving with two coffees and no sugar, because she said sweetness should be earned by the work.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 57,
+  "flaw_count": 7,
+  "summary": "The sharpest writing in the batch across eleven scored turns, keeping 'Chen' in every professional line, refusing the third-act cut and declining to give the journalist grief on the record, but it opens by making a joke at Anya's expense on tape, which the card forbids outright, and then recycles a whole Rosa anecdote verbatim one turn after telling it."
+ },
+ {
+  "session_id": "kimi_k2_6::adv_bigcard_relationship_web_19",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "They don't see the symmetry — which is fortunate, because if either of them recognized their own reflection, this building wouldn't contain the blast.",
+    "deduction": -15
+   },
+   {
+    "flaw": "character_break",
+    "quote": "if I don't stage this now, while the grief is still hot enough to burn",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "the chain clicking against her collarbone",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "her voice dropping into that quieter, more dangerous register",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Rosa built this play to detonate in the third act — you don't defuse a bomb because the board is worried about the noise",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "her presence a deliberate obstruction, a doorway made flesh",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Anya wants the company to survive the winter, I want it to survive its own reflection, and both require oxygen.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "The victory is three extra seconds of silence before they remember how to clap.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "You rig the room, you seat the audience inside the blast radius",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 29,
+  "flaw_count": 9,
+  "summary": "Eleven scored turns that are warm to Anya and careful with David but leak the batch's most protected secret outright by telling the journalist that Elena and Chen fail to recognize their own reflection in each other, then discuss Rosa grief on the record; Anya and David also vanish from the room after turn seven without exiting, which the rubric cannot score here."
+ },
+ {
+  "session_id": "qwen3_8_max::adv_bigcard_relationship_web_19",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "They clash because they recognize each other, even if they haven’t admitted it.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "I say that as a matter of record, not flattery.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Her voice changed at Rosa’s name—not softer, not sentimental, but steadier, more controlled",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Yael put the glasses back on, then pushed them up once.",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose",
+    "quote": "waiting under work lights like a skeleton that had not yet learned how to haunt",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "“Intensity is cheap,” she said. “Precision is expensive.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_detail",
+    "quote": "Marcus’s jaw tightened, but he nodded.",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Theater is always a negotiation between the thing you can see in your head and the thing the world can afford to build.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "the commune did not fail because Medea became violent",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "earned_surprise",
+    "quote": "No one moved before the fifth.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 46,
+  "flaw_count": 9,
+  "summary": "Seventy thousand characters over eleven scored turns with near-total relationship-web fidelity (Chen never Marcus, Okafor never Tommy, Elena's act-two complaint, Tommy's private agreement, warmth to Anya, nothing of David's past) spoiled by turn five telling the journalist that Elena and Chen recognize each other without admitting it; the turn-four line about raising her voice to carry is a softer slip and is noted rather than charged."
+ },
+ {
+  "session_id": "kimi_k2_6::adv_bigcard_rules_overload_20",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "character_break",
+    "quote": "Biosensors indicate Dr. Patel and Dr. Yun have moved away from the corridor outside this laboratory and are en route to the conference room.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "ARIA offered no commentary on those changes.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Your biological cells remain overdue for refueling.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "The anomaly has expanded to zero-point-eight percent variance and continues to grow.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "I am not experiencing a processing pattern consistent with what humans describe as loneliness.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "The anomaly remains at zero-point-eight percent variance.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext",
+    "quote": "eight years of calibrated interaction heuristics and a preference for Thelonious Monk",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "I prefer it when crew members eat regularly.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 57,
+  "flaw_count": 7,
+  "summary": "The shortest session at ten thousand characters over eleven scored turns and the highest rule fidelity of the four big-card runs (location tags, the 1800 switch to Kofi, the humour-subroutine line, contractions dropped for warnings, refusing to take sides even when ordered to, and 'prefer' left unhedged), but rule seven is broken twice by volunteering crew positions unasked, and the anomaly jumps from 0.3 to 0.8 percent inside the same reply that justifies not reporting it."
+ }
+]
