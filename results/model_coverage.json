@@ -2,6 +2,18 @@
  "min_chars": 50,
  "exclude_below": 0.8,
  "per_model": {
+  "deepseek_v4_1_flash": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
+  "muse_spark_1_3": {
+   "answered": 220,
+   "turns": 220,
+   "coverage": 1.0,
+   "excluded": false
+  },
   "mercury_2_5": {
    "answered": 220,
    "turns": 220,
@@ -224,12 +236,6 @@
    "coverage": 0.95,
    "excluded": false
   },
-  "deepseek_v4_1_flash": {
-   "answered": 219,
-   "turns": 220,
-   "coverage": 0.9955,
-   "excluded": false
-  },
   "claude_fable_5_1": {
    "answered": 208,
    "turns": 220,
@@ -258,12 +264,6 @@
    "answered": 220,
    "turns": 220,
    "coverage": 1.0,
-   "excluded": false
-  },
-  "muse_spark_1_3": {
-   "answered": 214,
-   "turns": 220,
-   "coverage": 0.9727,
    "excluded": false
   },
   "lunaris_8b": {

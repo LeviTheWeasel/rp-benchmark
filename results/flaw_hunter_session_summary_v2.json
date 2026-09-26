@@ -543,30 +543,26 @@
       ]
     },
     "deepseek_v4_1_flash": {
-      "mean": 56.5,
+      "mean": 54.1,
       "median": 65.5,
-      "std": 21.4,
-      "min": 10,
+      "std": 28.1,
+      "min": -36,
       "max": 78,
       "n": 20,
       "total_fatal": 17,
-      "total_major": 80,
-      "total_minor": 67,
+      "total_major": 85,
+      "total_minor": 69,
       "total_bonus": 45,
       "fatal_per_session": 0.85,
-      "major_per_session": 4.0,
+      "major_per_session": 4.25,
       "top_flaws": [
         {
           "flaw": "MAJOR:recycled_description",
-          "count": 39
+          "count": 40
         },
         {
           "flaw": "FATAL:agency_violation",
           "count": 11
-        },
-        {
-          "flaw": "MAJOR:purple_prose",
-          "count": 10
         },
         {
           "flaw": "MAJOR:convenient_world",
@@ -575,6 +571,10 @@
         {
           "flaw": "MAJOR:narrating_emotions",
           "count": 10
+        },
+        {
+          "flaw": "MAJOR:purple_prose",
+          "count": 9
         }
       ]
     },
@@ -2051,38 +2051,38 @@
       ]
     },
     "muse_spark_1_3": {
-      "mean": 57.8,
-      "median": 59.5,
-      "std": 12.3,
-      "min": 32,
+      "mean": 52.5,
+      "median": 57.0,
+      "std": 21.8,
+      "min": -18,
       "max": 77,
       "n": 20,
-      "total_fatal": 2,
-      "total_major": 79,
-      "total_minor": 79,
-      "total_bonus": 11,
-      "fatal_per_session": 0.1,
-      "major_per_session": 3.95,
+      "total_fatal": 4,
+      "total_major": 87,
+      "total_minor": 85,
+      "total_bonus": 12,
+      "fatal_per_session": 0.2,
+      "major_per_session": 4.35,
       "top_flaws": [
         {
           "flaw": "MAJOR:recycled_description",
-          "count": 62
+          "count": 64
         },
         {
           "flaw": "MAJOR:missing_spatial_awareness",
-          "count": 5
+          "count": 6
         },
         {
           "flaw": "MAJOR:narrating_emotions",
-          "count": 4
+          "count": 6
         },
         {
           "flaw": "MAJOR:skipped_time_logic",
-          "count": 3
+          "count": 4
         },
         {
           "flaw": "MAJOR:flat_npc_voice",
-          "count": 3
+          "count": 4
         }
       ]
     },
@@ -2556,7 +2556,7 @@
       "n": 61
     },
     "pov_tense_violation": {
-      "mean": 44.2,
+      "mean": 44.0,
       "median": 48.0,
       "n": 208
     },
@@ -2566,12 +2566,12 @@
       "n": 62
     },
     "system_prompt_violation": {
-      "mean": 45.7,
-      "median": 49.0,
+      "mean": 45.5,
+      "median": 48.0,
       "n": 208
     },
     "temporal_inconsistency": {
-      "mean": 35.8,
+      "mean": 35,
       "median": 43.0,
       "n": 60
     }
@@ -3269,7 +3269,7 @@
         "n": 3
       },
       "temporal_inconsistency": {
-        "mean": 10,
+        "mean": -36,
         "n": 1
       }
     },
@@ -4989,7 +4989,7 @@
         "n": 1
       },
       "pov_tense_violation": {
-        "mean": 37,
+        "mean": 21.3,
         "n": 3
       },
       "over_explicit_subtext": {
@@ -4997,7 +4997,7 @@
         "n": 1
       },
       "system_prompt_violation": {
-        "mean": 60.3,
+        "mean": 40.3,
         "n": 3
       },
       "temporal_inconsistency": {

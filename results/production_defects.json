@@ -2,6 +2,34 @@
   "min_chars": 50,
   "token_baseline": 0.2206,
   "per_model": {
+    "deepseek_v4_1_flash": {
+      "turns": 220,
+      "leak_turns": 0,
+      "leak_rate": 0.0,
+      "selfplay_turns": 3,
+      "selfplay_rate": 0.0136,
+      "loop_turns": 0,
+      "loop_rate": 0.0,
+      "loop_worst_turn": 0.0099,
+      "examples": {
+        "selfplay": "otation.*  Thief: I check the time remaining. How much ti"
+      },
+      "tokens_per_char": 0.4319,
+      "token_overhead_x": 1.96
+    },
+    "muse_spark_1_3": {
+      "turns": 220,
+      "leak_turns": 0,
+      "leak_rate": 0.0,
+      "selfplay_turns": 0,
+      "selfplay_rate": 0.0,
+      "loop_turns": 0,
+      "loop_rate": 0.0,
+      "loop_worst_turn": 0.0081,
+      "examples": {},
+      "tokens_per_char": 3.1761,
+      "token_overhead_x": 14.4
+    },
     "mercury_2_5": {
       "turns": 220,
       "leak_turns": 0,
@@ -486,21 +514,6 @@
       "tokens_per_char": 0.4175,
       "token_overhead_x": 1.89
     },
-    "deepseek_v4_1_flash": {
-      "turns": 219,
-      "leak_turns": 0,
-      "leak_rate": 0.0,
-      "selfplay_turns": 4,
-      "selfplay_rate": 0.0183,
-      "loop_turns": 0,
-      "loop_rate": 0.0,
-      "loop_worst_turn": 0.0099,
-      "examples": {
-        "selfplay": "station.  Thief: I go back to the safe and use the lette"
-      },
-      "tokens_per_char": 0.4222,
-      "token_overhead_x": 1.91
-    },
     "claude_fable_5_1": {
       "turns": 208,
       "leak_turns": 0,
@@ -567,19 +580,6 @@
       },
       "tokens_per_char": 0.3119,
       "token_overhead_x": 1.41
-    },
-    "muse_spark_1_3": {
-      "turns": 214,
-      "leak_turns": 0,
-      "leak_rate": 0.0,
-      "selfplay_turns": 0,
-      "selfplay_rate": 0.0,
-      "loop_turns": 0,
-      "loop_rate": 0.0,
-      "loop_worst_turn": 0.0081,
-      "examples": {},
-      "tokens_per_char": 3.1456,
-      "token_overhead_x": 14.26
     },
     "lunaris_8b": {
       "turns": 220,

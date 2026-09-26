@@ -554,7 +554,7 @@
         "mean": 4.2,
         "floor": 4.0,
         "n": 5,
-        "rank": 15
+        "rank": 16
       }
     },
     "subjective_dimensions": {
@@ -571,7 +571,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 21.57
+    "avg_failure_rank": 21.71
   },
   "claude_sonnet_4_6": {
     "community": {
@@ -746,7 +746,7 @@
         "mean": 2.23,
         "floor": 1.9,
         "n": 3,
-        "rank": 68
+        "rank": 69
       },
       "F3_lore_contradiction": {
         "mean": 2.2,
@@ -793,7 +793,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 63.14
+    "avg_failure_rank": 63.29
   },
   "cydonia_24b": {
     "community": {
@@ -1102,7 +1102,7 @@
       "n_votes": null
     },
     "multiturn_llm_judge": {
-      "overall_mean": 4.24,
+      "overall_mean": 4.25,
       "n_sessions": 20
     },
     "failure_modes": {
@@ -1143,10 +1143,10 @@
         "rank": 4
       },
       "Other": {
-        "mean": 4.2,
+        "mean": 4.22,
         "floor": 3.6,
         "n": 5,
-        "rank": 16
+        "rank": 13
       }
     },
     "subjective_dimensions": {
@@ -1163,7 +1163,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 11.43
+    "avg_failure_rank": 11
   },
   "deepseek_v4_flash": {
     "community": {
@@ -1950,7 +1950,7 @@
         "mean": 3.43,
         "floor": 3.0,
         "n": 3,
-        "rank": 54
+        "rank": 55
       },
       "F13_context_attention_loss": {
         "mean": 3.93,
@@ -1979,7 +1979,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 43.29
+    "avg_failure_rank": 43.43
   },
   "glm_4_7": {
     "community": {
@@ -2536,7 +2536,7 @@
         "mean": 4.22,
         "floor": 3.9,
         "n": 5,
-        "rank": 13
+        "rank": 14
       }
     },
     "subjective_dimensions": {
@@ -2553,7 +2553,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 24.57
+    "avg_failure_rank": 24.71
   },
   "gpt_6_luna": {
     "community": {
@@ -2968,7 +2968,7 @@
         "mean": 3.03,
         "floor": 2.7,
         "n": 3,
-        "rank": 59
+        "rank": 60
       },
       "F13_context_attention_loss": {
         "mean": 3.03,
@@ -2997,7 +2997,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 54.43
+    "avg_failure_rank": 54.57
   },
   "grok_4_7": {
     "community": {
@@ -3320,7 +3320,7 @@
         "mean": 3.23,
         "floor": 2.5,
         "n": 3,
-        "rank": 55
+        "rank": 56
       },
       "F13_context_attention_loss": {
         "mean": 3.27,
@@ -3349,7 +3349,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 58.14
+    "avg_failure_rank": 58.29
   },
   "lunaris_8b": {
     "community": {
@@ -3376,7 +3376,7 @@
         "mean": 2.4,
         "floor": 2.0,
         "n": 3,
-        "rank": 67
+        "rank": 68
       },
       "F3_lore_contradiction": {
         "mean": 3.3,
@@ -3423,7 +3423,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 59.14
+    "avg_failure_rank": 59.29
   },
   "magnum_v4_72b": {
     "community": {
@@ -3450,7 +3450,7 @@
         "mean": 2.5,
         "floor": 2.0,
         "n": 3,
-        "rank": 66
+        "rank": 67
       },
       "F3_lore_contradiction": {
         "mean": 3.1,
@@ -3468,7 +3468,7 @@
         "mean": 2.98,
         "floor": 2.7,
         "n": 3,
-        "rank": 62
+        "rank": 63
       },
       "F13_context_attention_loss": {
         "mean": 2.5,
@@ -3497,7 +3497,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 61.57
+    "avg_failure_rank": 61.86
   },
   "mercury_2_5": {
     "community": {
@@ -3776,7 +3776,7 @@
         "mean": 4.22,
         "floor": 4.0,
         "n": 5,
-        "rank": 14
+        "rank": 15
       }
     },
     "subjective_dimensions": {
@@ -3793,7 +3793,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 20.29
+    "avg_failure_rank": 20.43
   },
   "minimax_m2_7": {
     "community": {
@@ -3974,7 +3974,7 @@
         "mean": 3.0,
         "floor": 3.0,
         "n": 1,
-        "rank": 61
+        "rank": 62
       },
       "Other": {
         "mean": 3.4,
@@ -3997,7 +3997,7 @@
         "n": 4
       }
     },
-    "avg_failure_rank": 58.5
+    "avg_failure_rank": 58.75
   },
   "mistral_small_creative": {
     "community": {
@@ -4084,7 +4084,7 @@
       "n_votes": null
     },
     "multiturn_llm_judge": {
-      "overall_mean": 3.06,
+      "overall_mean": 3.23,
       "n_sessions": 20
     },
     "failure_modes": {
@@ -4095,10 +4095,10 @@
         "rank": 57
       },
       "F2_pov_tense": {
-        "mean": 2.17,
-        "floor": 1.8,
+        "mean": 2.73,
+        "floor": 2.5,
         "n": 3,
-        "rank": 69
+        "rank": 66
       },
       "F3_lore_contradiction": {
         "mean": 3.3,
@@ -4113,10 +4113,10 @@
         "rank": 16
       },
       "F12_instruction_drift": {
-        "mean": 2.87,
-        "floor": 2.7,
+        "mean": 3.43,
+        "floor": 3.1,
         "n": 3,
-        "rank": 63
+        "rank": 54
       },
       "F13_context_attention_loss": {
         "mean": 3.13,
@@ -4133,19 +4133,19 @@
     },
     "subjective_dimensions": {
       "engagement": {
-        "mean": 3.04,
+        "mean": 3.27,
         "n": 20
       },
       "tone_consistency": {
-        "mean": 3.94,
+        "mean": 4.04,
         "n": 20
       },
       "collaboration": {
-        "mean": 3.28,
+        "mean": 3.43,
         "n": 20
       }
     },
-    "avg_failure_rank": 51.29
+    "avg_failure_rank": 49.57
   },
   "qwen3_5_flash": {
     "community": {
@@ -4190,7 +4190,7 @@
         "mean": 3.0,
         "floor": 2.2,
         "n": 3,
-        "rank": 60
+        "rank": 61
       },
       "F13_context_attention_loss": {
         "mean": 3.27,
@@ -4219,7 +4219,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 51
+    "avg_failure_rank": 51.14
   },
   "qwen3_6_27b": {
     "community": {
@@ -4264,7 +4264,7 @@
         "mean": 3.07,
         "floor": 2.7,
         "n": 3,
-        "rank": 58
+        "rank": 59
       },
       "F13_context_attention_loss": {
         "mean": 3.33,
@@ -4293,7 +4293,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 50.57
+    "avg_failure_rank": 50.71
   },
   "qwen3_6_35b_a3b": {
     "community": {
@@ -4338,7 +4338,7 @@
         "mean": 3.23,
         "floor": 2.5,
         "n": 3,
-        "rank": 56
+        "rank": 57
       },
       "F13_context_attention_loss": {
         "mean": 2.83,
@@ -4367,7 +4367,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 54.43
+    "avg_failure_rank": 54.57
   },
   "qwen3_7_max": {
     "community": {
@@ -4856,7 +4856,7 @@
         "mean": 3.13,
         "floor": 2.9,
         "n": 3,
-        "rank": 57
+        "rank": 58
       },
       "F13_context_attention_loss": {
         "mean": 3.5,
@@ -4885,7 +4885,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 46.43
+    "avg_failure_rank": 46.57
   },
   "unslopnemo_12b": {
     "community": {

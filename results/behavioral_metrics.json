@@ -1,45 +1,97 @@
 {
   "n_models": 70,
-  "n_total_responses": 15809,
+  "n_total_responses": 15817,
   "population": {
     "word_count": {
-      "mean": 320.2456,
+      "mean": 319.995,
       "median": 251,
-      "std": 310.9724,
-      "n_responses": 15809
+      "std": 310.3894,
+      "n_responses": 15817
     },
     "unique_word_ratio": {
-      "mean": 0.6308,
+      "mean": 0.6309,
       "median": 0.6348,
       "std": 0.122,
-      "n_responses": 15809
+      "n_responses": 15817
     },
     "bigram_repetition": {
       "mean": 0.0598,
       "median": 0.0472,
       "std": 0.0658,
-      "n_responses": 15809
+      "n_responses": 15817
     },
     "sentence_length_var": {
-      "mean": 410.8396,
+      "mean": 410.6553,
       "median": 67.7197,
-      "std": 39050.6375,
-      "n_responses": 15809
+      "std": 39040.7607,
+      "n_responses": 15817
     }
   },
   "per_model": {
+    "deepseek_v4_1_flash": {
+      "word_count": {
+        "mean": 415.5,
+        "n": 240,
+        "std": 244.7902,
+        "vs_population": 95.505
+      },
+      "unique_word_ratio": {
+        "mean": 0.5364,
+        "n": 240,
+        "std": 0.1168,
+        "vs_population": -0.0945
+      },
+      "bigram_repetition": {
+        "mean": 0.0895,
+        "n": 240,
+        "std": 0.0513,
+        "vs_population": 0.0297
+      },
+      "sentence_length_var": {
+        "mean": 127.8474,
+        "n": 240,
+        "std": 94.6522,
+        "vs_population": -282.8079
+      }
+    },
+    "muse_spark_1_3": {
+      "word_count": {
+        "mean": 123.4375,
+        "n": 240,
+        "std": 72.6612,
+        "vs_population": -196.5575
+      },
+      "unique_word_ratio": {
+        "mean": 0.7039,
+        "n": 240,
+        "std": 0.0822,
+        "vs_population": 0.073
+      },
+      "bigram_repetition": {
+        "mean": 0.0381,
+        "n": 240,
+        "std": 0.038,
+        "vs_population": -0.0217
+      },
+      "sentence_length_var": {
+        "mean": 207.4923,
+        "n": 240,
+        "std": 684.5537,
+        "vs_population": -203.163
+      }
+    },
     "mercury_2_5": {
       "word_count": {
         "mean": 126.525,
         "n": 240,
         "std": 58.6636,
-        "vs_population": -193.7206
+        "vs_population": -193.47
       },
       "unique_word_ratio": {
         "mean": 0.7278,
         "n": 240,
         "std": 0.0688,
-        "vs_population": 0.097
+        "vs_population": 0.0969
       },
       "bigram_repetition": {
         "mean": 0.027,
@@ -51,7 +103,7 @@
         "mean": 43.4493,
         "n": 240,
         "std": 50.5975,
-        "vs_population": -367.3903
+        "vs_population": -367.206
       }
     },
     "grok_4_3": {
@@ -59,13 +111,13 @@
         "mean": 112.5542,
         "n": 240,
         "std": 54.6123,
-        "vs_population": -207.6914
+        "vs_population": -207.4408
       },
       "unique_word_ratio": {
         "mean": 0.779,
         "n": 240,
         "std": 0.0559,
-        "vs_population": 0.1482
+        "vs_population": 0.1481
       },
       "bigram_repetition": {
         "mean": 0.0147,
@@ -77,7 +129,7 @@
         "mean": 118.3322,
         "n": 240,
         "std": 239.9802,
-        "vs_population": -292.5074
+        "vs_population": -292.3231
       }
     },
     "gemma_4_31b": {
@@ -85,13 +137,13 @@
         "mean": 255.5708,
         "n": 240,
         "std": 111.7194,
-        "vs_population": -64.6748
+        "vs_population": -64.4242
       },
       "unique_word_ratio": {
         "mean": 0.6385,
         "n": 240,
         "std": 0.0663,
-        "vs_population": 0.0077
+        "vs_population": 0.0076
       },
       "bigram_repetition": {
         "mean": 0.049,
@@ -103,7 +155,7 @@
         "mean": 89.6909,
         "n": 240,
         "std": 71.826,
-        "vs_population": -321.1487
+        "vs_population": -320.9644
       }
     },
     "deepseek_v3_0324": {
@@ -111,13 +163,13 @@
         "mean": 173.4458,
         "n": 240,
         "std": 87.0664,
-        "vs_population": -146.7998
+        "vs_population": -146.5492
       },
       "unique_word_ratio": {
         "mean": 0.7428,
         "n": 240,
         "std": 0.0633,
-        "vs_population": 0.112
+        "vs_population": 0.1119
       },
       "bigram_repetition": {
         "mean": 0.0222,
@@ -129,7 +181,7 @@
         "mean": 71.7977,
         "n": 240,
         "std": 70.1423,
-        "vs_population": -339.0419
+        "vs_population": -338.8576
       }
     },
     "command_a_plus": {
@@ -137,13 +189,13 @@
         "mean": 178.6396,
         "n": 222,
         "std": 109.8528,
-        "vs_population": -141.606
+        "vs_population": -141.3554
       },
       "unique_word_ratio": {
         "mean": 0.6579,
         "n": 222,
         "std": 0.0836,
-        "vs_population": 0.0271
+        "vs_population": 0.027
       },
       "bigram_repetition": {
         "mean": 0.0569,
@@ -155,7 +207,7 @@
         "mean": 284.9003,
         "n": 222,
         "std": 1015.0129,
-        "vs_population": -125.9393
+        "vs_population": -125.755
       }
     },
     "mimo_2_6_flash": {
@@ -163,13 +215,13 @@
         "mean": 439.9875,
         "n": 240,
         "std": 305.289,
-        "vs_population": 119.7419
+        "vs_population": 119.9925
       },
       "unique_word_ratio": {
         "mean": 0.5712,
         "n": 240,
         "std": 0.1051,
-        "vs_population": -0.0596
+        "vs_population": -0.0597
       },
       "bigram_repetition": {
         "mean": 0.071,
@@ -181,7 +233,7 @@
         "mean": 142.6494,
         "n": 240,
         "std": 106.441,
-        "vs_population": -268.1902
+        "vs_population": -268.0059
       }
     },
     "mimo_2_6_pro": {
@@ -189,13 +241,13 @@
         "mean": 438.0542,
         "n": 240,
         "std": 279.6735,
-        "vs_population": 117.8086
+        "vs_population": 118.0592
       },
       "unique_word_ratio": {
         "mean": 0.5622,
         "n": 240,
         "std": 0.1108,
-        "vs_population": -0.0686
+        "vs_population": -0.0687
       },
       "bigram_repetition": {
         "mean": 0.0752,
@@ -207,7 +259,7 @@
         "mean": 118.1605,
         "n": 240,
         "std": 122.0198,
-        "vs_population": -292.6791
+        "vs_population": -292.4948
       }
     },
     "aion_3_5": {
@@ -215,13 +267,13 @@
         "mean": 524.8917,
         "n": 240,
         "std": 252.7413,
-        "vs_population": 204.6461
+        "vs_population": 204.8967
       },
       "unique_word_ratio": {
         "mean": 0.5471,
         "n": 240,
         "std": 0.0973,
-        "vs_population": -0.0837
+        "vs_population": -0.0838
       },
       "bigram_repetition": {
         "mean": 0.0708,
@@ -233,7 +285,7 @@
         "mean": 131.6685,
         "n": 240,
         "std": 88.7248,
-        "vs_population": -279.1711
+        "vs_population": -278.9868
       }
     },
     "qwen3_6_35b_a3b": {
@@ -241,13 +293,13 @@
         "mean": 280.5397,
         "n": 239,
         "std": 136.1597,
-        "vs_population": -39.7059
+        "vs_population": -39.4553
       },
       "unique_word_ratio": {
         "mean": 0.6448,
         "n": 239,
         "std": 0.0685,
-        "vs_population": 0.014
+        "vs_population": 0.0139
       },
       "bigram_repetition": {
         "mean": 0.0545,
@@ -259,7 +311,7 @@
         "mean": 494.6897,
         "n": 239,
         "std": 4236.9243,
-        "vs_population": 83.8501
+        "vs_population": 84.0344
       }
     },
     "qwen3_8_max_prime": {
@@ -267,13 +319,13 @@
         "mean": 461.9333,
         "n": 240,
         "std": 482.3762,
-        "vs_population": 141.6877
+        "vs_population": 141.9383
       },
       "unique_word_ratio": {
         "mean": 0.5989,
         "n": 240,
         "std": 0.1264,
-        "vs_population": -0.0319
+        "vs_population": -0.032
       },
       "bigram_repetition": {
         "mean": 0.0702,
@@ -285,7 +337,7 @@
         "mean": 72.6597,
         "n": 240,
         "std": 45.6931,
-        "vs_population": -338.1799
+        "vs_population": -337.9956
       }
     },
     "qwen3_6_27b": {
@@ -293,13 +345,13 @@
         "mean": 269.2542,
         "n": 240,
         "std": 124.2511,
-        "vs_population": -50.9914
+        "vs_population": -50.7408
       },
       "unique_word_ratio": {
         "mean": 0.6577,
         "n": 240,
         "std": 0.0744,
-        "vs_population": 0.0269
+        "vs_population": 0.0268
       },
       "bigram_repetition": {
         "mean": 0.0458,
@@ -311,7 +363,7 @@
         "mean": 102.1499,
         "n": 240,
         "std": 267.1972,
-        "vs_population": -308.6897
+        "vs_population": -308.5054
       }
     },
     "ember_1": {
@@ -319,13 +371,13 @@
         "mean": 384.916,
         "n": 238,
         "std": 199.7154,
-        "vs_population": 64.6704
+        "vs_population": 64.921
       },
       "unique_word_ratio": {
         "mean": 0.5839,
         "n": 238,
         "std": 0.0968,
-        "vs_population": -0.0469
+        "vs_population": -0.047
       },
       "bigram_repetition": {
         "mean": 0.062,
@@ -337,7 +389,7 @@
         "mean": 99.2197,
         "n": 238,
         "std": 67.0854,
-        "vs_population": -311.6199
+        "vs_population": -311.4356
       }
     },
     "qwen3_8_omni_flash": {
@@ -345,13 +397,13 @@
         "mean": 587.6609,
         "n": 230,
         "std": 634.6506,
-        "vs_population": 267.4153
+        "vs_population": 267.6659
       },
       "unique_word_ratio": {
         "mean": 0.5994,
         "n": 230,
         "std": 0.1381,
-        "vs_population": -0.0314
+        "vs_population": -0.0315
       },
       "bigram_repetition": {
         "mean": 0.0713,
@@ -363,7 +415,7 @@
         "mean": 126.2288,
         "n": 230,
         "std": 221.366,
-        "vs_population": -284.6108
+        "vs_population": -284.4265
       }
     },
     "venice_dolphin_24b": {
@@ -371,13 +423,13 @@
         "mean": 239.6917,
         "n": 240,
         "std": 548.0772,
-        "vs_population": -80.5539
+        "vs_population": -80.3033
       },
       "unique_word_ratio": {
         "mean": 0.6178,
         "n": 240,
         "std": 0.1473,
-        "vs_population": -0.013
+        "vs_population": -0.0131
       },
       "bigram_repetition": {
         "mean": 0.0965,
@@ -389,7 +441,7 @@
         "mean": 20505.9266,
         "n": 240,
         "std": 316909.8028,
-        "vs_population": 20095.087
+        "vs_population": 20095.2713
       }
     },
     "mistral_small_2603": {
@@ -397,13 +449,13 @@
         "mean": 222.3125,
         "n": 48,
         "std": 128.4903,
-        "vs_population": -97.9331
+        "vs_population": -97.6825
       },
       "unique_word_ratio": {
         "mean": 0.6555,
         "n": 48,
         "std": 0.0974,
-        "vs_population": 0.0247
+        "vs_population": 0.0246
       },
       "bigram_repetition": {
         "mean": 0.0589,
@@ -415,7 +467,7 @@
         "mean": 62.6746,
         "n": 48,
         "std": 45.3253,
-        "vs_population": -348.165
+        "vs_population": -347.9807
       }
     },
     "glm_5_3_flash": {
@@ -423,13 +475,13 @@
         "mean": 500.0254,
         "n": 236,
         "std": 252.9136,
-        "vs_population": 179.7798
+        "vs_population": 180.0304
       },
       "unique_word_ratio": {
         "mean": 0.5538,
         "n": 236,
         "std": 0.0986,
-        "vs_population": -0.077
+        "vs_population": -0.0771
       },
       "bigram_repetition": {
         "mean": 0.0651,
@@ -441,7 +493,7 @@
         "mean": 106.1348,
         "n": 236,
         "std": 64.2123,
-        "vs_population": -304.7048
+        "vs_population": -304.5205
       }
     },
     "qwen3_8_flash": {
@@ -449,13 +501,13 @@
         "mean": 473.5356,
         "n": 239,
         "std": 559.3622,
-        "vs_population": 153.29
+        "vs_population": 153.5406
       },
       "unique_word_ratio": {
         "mean": 0.5678,
         "n": 239,
         "std": 0.1463,
-        "vs_population": -0.063
+        "vs_population": -0.0631
       },
       "bigram_repetition": {
         "mean": 0.0943,
@@ -467,7 +519,7 @@
         "mean": 78.7502,
         "n": 239,
         "std": 65.0536,
-        "vs_population": -332.0894
+        "vs_population": -331.9051
       }
     },
     "glm_5_3_flashx": {
@@ -475,13 +527,13 @@
         "mean": 499.0042,
         "n": 238,
         "std": 245.5686,
-        "vs_population": 178.7586
+        "vs_population": 179.0092
       },
       "unique_word_ratio": {
         "mean": 0.563,
         "n": 238,
         "std": 0.0948,
-        "vs_population": -0.0678
+        "vs_population": -0.0679
       },
       "bigram_repetition": {
         "mean": 0.0612,
@@ -493,7 +545,7 @@
         "mean": 97.1478,
         "n": 238,
         "std": 56.8986,
-        "vs_population": -313.6918
+        "vs_population": -313.5075
       }
     },
     "glm_5_3_prime": {
@@ -501,13 +553,13 @@
         "mean": 553.179,
         "n": 229,
         "std": 288.5347,
-        "vs_population": 232.9334
+        "vs_population": 233.184
       },
       "unique_word_ratio": {
         "mean": 0.5439,
         "n": 229,
         "std": 0.1065,
-        "vs_population": -0.0869
+        "vs_population": -0.087
       },
       "bigram_repetition": {
         "mean": 0.0704,
@@ -519,7 +571,7 @@
         "mean": 95.1849,
         "n": 229,
         "std": 52.9997,
-        "vs_population": -315.6547
+        "vs_population": -315.4704
       }
     },
     "qwen3_8_max": {
@@ -527,13 +579,13 @@
         "mean": 560.3792,
         "n": 240,
         "std": 662.6149,
-        "vs_population": 240.1336
+        "vs_population": 240.3842
       },
       "unique_word_ratio": {
         "mean": 0.5799,
         "n": 240,
         "std": 0.1393,
-        "vs_population": -0.0509
+        "vs_population": -0.051
       },
       "bigram_repetition": {
         "mean": 0.0824,
@@ -545,7 +597,7 @@
         "mean": 77.7034,
         "n": 240,
         "std": 60.5864,
-        "vs_population": -333.1362
+        "vs_population": -332.9519
       }
     },
     "kimi_k2_6": {
@@ -553,13 +605,13 @@
         "mean": 248.4708,
         "n": 240,
         "std": 142.172,
-        "vs_population": -71.7748
+        "vs_population": -71.5242
       },
       "unique_word_ratio": {
         "mean": 0.6692,
         "n": 240,
         "std": 0.0856,
-        "vs_population": 0.0384
+        "vs_population": 0.0383
       },
       "bigram_repetition": {
         "mean": 0.0412,
@@ -571,7 +623,7 @@
         "mean": 93.0629,
         "n": 240,
         "std": 93.9367,
-        "vs_population": -317.7767
+        "vs_population": -317.5924
       }
     },
     "tencent_hy4": {
@@ -579,13 +631,13 @@
         "mean": 399.9331,
         "n": 239,
         "std": 223.8887,
-        "vs_population": 79.6875
+        "vs_population": 79.9381
       },
       "unique_word_ratio": {
         "mean": 0.5674,
         "n": 239,
         "std": 0.0999,
-        "vs_population": -0.0634
+        "vs_population": -0.0635
       },
       "bigram_repetition": {
         "mean": 0.0809,
@@ -597,7 +649,7 @@
         "mean": 91.8794,
         "n": 239,
         "std": 78.4675,
-        "vs_population": -318.9602
+        "vs_population": -318.7759
       }
     },
     "gpt_6_sol": {
@@ -605,13 +657,13 @@
         "mean": 95.5583,
         "n": 240,
         "std": 44.1708,
-        "vs_population": -224.6873
+        "vs_population": -224.4367
       },
       "unique_word_ratio": {
         "mean": 0.7663,
         "n": 240,
         "std": 0.0713,
-        "vs_population": 0.1355
+        "vs_population": 0.1354
       },
       "bigram_repetition": {
         "mean": 0.0213,
@@ -623,7 +675,7 @@
         "mean": 45.3102,
         "n": 240,
         "std": 35.5994,
-        "vs_population": -365.5294
+        "vs_population": -365.3451
       }
     },
     "gpt_6_luna_pro": {
@@ -631,13 +683,13 @@
         "mean": 102.8,
         "n": 240,
         "std": 53.9944,
-        "vs_population": -217.4456
+        "vs_population": -217.195
       },
       "unique_word_ratio": {
         "mean": 0.7628,
         "n": 240,
         "std": 0.0824,
-        "vs_population": 0.132
+        "vs_population": 0.1319
       },
       "bigram_repetition": {
         "mean": 0.0232,
@@ -649,7 +701,7 @@
         "mean": 53.197,
         "n": 240,
         "std": 40.9801,
-        "vs_population": -357.6426
+        "vs_population": -357.4583
       }
     },
     "gpt_6_sol_pro": {
@@ -657,13 +709,13 @@
         "mean": 101.3292,
         "n": 240,
         "std": 45.7306,
-        "vs_population": -218.9164
+        "vs_population": -218.6658
       },
       "unique_word_ratio": {
         "mean": 0.7546,
         "n": 240,
         "std": 0.0756,
-        "vs_population": 0.1238
+        "vs_population": 0.1237
       },
       "bigram_repetition": {
         "mean": 0.0239,
@@ -675,7 +727,7 @@
         "mean": 44.8738,
         "n": 240,
         "std": 32.2975,
-        "vs_population": -365.9658
+        "vs_population": -365.7815
       }
     },
     "grok_4_7": {
@@ -683,13 +735,13 @@
         "mean": 212.0476,
         "n": 231,
         "std": 115.5151,
-        "vs_population": -108.198
+        "vs_population": -107.9474
       },
       "unique_word_ratio": {
         "mean": 0.6581,
         "n": 231,
         "std": 0.086,
-        "vs_population": 0.0273
+        "vs_population": 0.0272
       },
       "bigram_repetition": {
         "mean": 0.0413,
@@ -701,7 +753,7 @@
         "mean": 90.6415,
         "n": 231,
         "std": 60.1407,
-        "vs_population": -320.1981
+        "vs_population": -320.0138
       }
     },
     "claude_opus_5_5": {
@@ -709,13 +761,13 @@
         "mean": 504.2009,
         "n": 229,
         "std": 225.7943,
-        "vs_population": 183.9553
+        "vs_population": 184.2059
       },
       "unique_word_ratio": {
         "mean": 0.5363,
         "n": 229,
         "std": 0.0928,
-        "vs_population": -0.0945
+        "vs_population": -0.0946
       },
       "bigram_repetition": {
         "mean": 0.0742,
@@ -727,7 +779,7 @@
         "mean": 76.5478,
         "n": 229,
         "std": 38.8833,
-        "vs_population": -334.2918
+        "vs_population": -334.1075
       }
     },
     "gpt_6_luna": {
@@ -735,13 +787,13 @@
         "mean": 103.5625,
         "n": 240,
         "std": 55.9707,
-        "vs_population": -216.6831
+        "vs_population": -216.4325
       },
       "unique_word_ratio": {
         "mean": 0.7597,
         "n": 240,
         "std": 0.0841,
-        "vs_population": 0.1289
+        "vs_population": 0.1288
       },
       "bigram_repetition": {
         "mean": 0.0239,
@@ -753,7 +805,7 @@
         "mean": 57.6043,
         "n": 240,
         "std": 52.5432,
-        "vs_population": -353.2353
+        "vs_population": -353.051
       }
     },
     "hemmingway_1": {
@@ -761,13 +813,13 @@
         "mean": 295.5625,
         "n": 240,
         "std": 164.6973,
-        "vs_population": -24.6831
+        "vs_population": -24.4325
       },
       "unique_word_ratio": {
         "mean": 0.6195,
         "n": 240,
         "std": 0.0903,
-        "vs_population": -0.0113
+        "vs_population": -0.0114
       },
       "bigram_repetition": {
         "mean": 0.0574,
@@ -779,7 +831,7 @@
         "mean": 126.4109,
         "n": 240,
         "std": 188.2201,
-        "vs_population": -284.4287
+        "vs_population": -284.2444
       }
     },
     "minimax_m3": {
@@ -787,13 +839,13 @@
         "mean": 428.4393,
         "n": 239,
         "std": 297.1979,
-        "vs_population": 108.1937
+        "vs_population": 108.4443
       },
       "unique_word_ratio": {
         "mean": 0.5716,
         "n": 239,
         "std": 0.1259,
-        "vs_population": -0.0592
+        "vs_population": -0.0593
       },
       "bigram_repetition": {
         "mean": 0.0797,
@@ -805,7 +857,7 @@
         "mean": 108.2898,
         "n": 239,
         "std": 85.535,
-        "vs_population": -302.5498
+        "vs_population": -302.3655
       }
     },
     "gpt_5_5": {
@@ -813,13 +865,13 @@
         "mean": 438.9417,
         "n": 240,
         "std": 411.408,
-        "vs_population": 118.6961
+        "vs_population": 118.9467
       },
       "unique_word_ratio": {
         "mean": 0.6214,
         "n": 240,
         "std": 0.114,
-        "vs_population": -0.0094
+        "vs_population": -0.0095
       },
       "bigram_repetition": {
         "mean": 0.0595,
@@ -831,7 +883,7 @@
         "mean": 67.9091,
         "n": 240,
         "std": 49.7432,
-        "vs_population": -342.9305
+        "vs_population": -342.7462
       }
     },
     "claude_opus_4_8": {
@@ -839,13 +891,13 @@
         "mean": 287.6833,
         "n": 240,
         "std": 119.9166,
-        "vs_population": -32.5623
+        "vs_population": -32.3117
       },
       "unique_word_ratio": {
         "mean": 0.617,
         "n": 240,
         "std": 0.0833,
-        "vs_population": -0.0138
+        "vs_population": -0.0139
       },
       "bigram_repetition": {
         "mean": 0.0485,
@@ -857,7 +909,7 @@
         "mean": 103.3189,
         "n": 240,
         "std": 65.0511,
-        "vs_population": -307.5207
+        "vs_population": -307.3364
       }
     },
     "gpt_6_astra": {
@@ -865,13 +917,13 @@
         "mean": 206.0042,
         "n": 240,
         "std": 109.2759,
-        "vs_population": -114.2414
+        "vs_population": -113.9908
       },
       "unique_word_ratio": {
         "mean": 0.6855,
         "n": 240,
         "std": 0.0797,
-        "vs_population": 0.0547
+        "vs_population": 0.0546
       },
       "bigram_repetition": {
         "mean": 0.0353,
@@ -883,7 +935,7 @@
         "mean": 49.1115,
         "n": 240,
         "std": 35.4384,
-        "vs_population": -361.7281
+        "vs_population": -361.5438
       }
     },
     "claude_sonnet_5": {
@@ -891,13 +943,13 @@
         "mean": 261.3625,
         "n": 240,
         "std": 114.5226,
-        "vs_population": -58.8831
+        "vs_population": -58.6325
       },
       "unique_word_ratio": {
         "mean": 0.6612,
         "n": 240,
         "std": 0.082,
-        "vs_population": 0.0304
+        "vs_population": 0.0303
       },
       "bigram_repetition": {
         "mean": 0.0352,
@@ -909,7 +961,7 @@
         "mean": 176.8144,
         "n": 240,
         "std": 135.1012,
-        "vs_population": -234.0252
+        "vs_population": -233.8409
       }
     },
     "claude_sonnet_4_6": {
@@ -917,13 +969,13 @@
         "mean": 289.1583,
         "n": 240,
         "std": 120.0858,
-        "vs_population": -31.0873
+        "vs_population": -30.8367
       },
       "unique_word_ratio": {
         "mean": 0.5977,
         "n": 240,
         "std": 0.0788,
-        "vs_population": -0.0331
+        "vs_population": -0.0332
       },
       "bigram_repetition": {
         "mean": 0.0609,
@@ -935,7 +987,7 @@
         "mean": 103.3164,
         "n": 240,
         "std": 68.3592,
-        "vs_population": -307.5232
+        "vs_population": -307.3389
       }
     },
     "gemini_3_5_flash": {
@@ -943,13 +995,13 @@
         "mean": 287.4208,
         "n": 240,
         "std": 138.7131,
-        "vs_population": -32.8248
+        "vs_population": -32.5742
       },
       "unique_word_ratio": {
         "mean": 0.6452,
         "n": 240,
         "std": 0.0688,
-        "vs_population": 0.0144
+        "vs_population": 0.0143
       },
       "bigram_repetition": {
         "mean": 0.048,
@@ -961,7 +1013,7 @@
         "mean": 88.5204,
         "n": 240,
         "std": 60.9701,
-        "vs_population": -322.3192
+        "vs_population": -322.1349
       }
     },
     "claude_opus_5": {
@@ -969,13 +1021,13 @@
         "mean": 459.7555,
         "n": 229,
         "std": 224.3108,
-        "vs_population": 139.5099
+        "vs_population": 139.7605
       },
       "unique_word_ratio": {
         "mean": 0.5415,
         "n": 229,
         "std": 0.1007,
-        "vs_population": -0.0893
+        "vs_population": -0.0894
       },
       "bigram_repetition": {
         "mean": 0.0751,
@@ -987,33 +1039,7 @@
         "mean": 175.1753,
         "n": 229,
         "std": 104.7294,
-        "vs_population": -235.6643
-      }
-    },
-    "deepseek_v4_1_flash": {
-      "word_count": {
-        "mean": 426.0418,
-        "n": 239,
-        "std": 282.7148,
-        "vs_population": 105.7962
-      },
-      "unique_word_ratio": {
-        "mean": 0.5347,
-        "n": 239,
-        "std": 0.1188,
-        "vs_population": -0.0961
-      },
-      "bigram_repetition": {
-        "mean": 0.0908,
-        "n": 239,
-        "std": 0.0525,
-        "vs_population": 0.031
-      },
-      "sentence_length_var": {
-        "mean": 131.1352,
-        "n": 239,
-        "std": 99.6322,
-        "vs_population": -279.7044
+        "vs_population": -235.48
       }
     },
     "claude_fable_5_1": {
@@ -1021,13 +1047,13 @@
         "mean": 480.1491,
         "n": 228,
         "std": 237.0731,
-        "vs_population": 159.9035
+        "vs_population": 160.1541
       },
       "unique_word_ratio": {
         "mean": 0.526,
         "n": 228,
         "std": 0.1049,
-        "vs_population": -0.1048
+        "vs_population": -0.1049
       },
       "bigram_repetition": {
         "mean": 0.0823,
@@ -1039,7 +1065,7 @@
         "mean": 117.2545,
         "n": 228,
         "std": 66.531,
-        "vs_population": -293.5851
+        "vs_population": -293.4008
       }
     },
     "gemini_3_7_flash": {
@@ -1047,13 +1073,13 @@
         "mean": 239.625,
         "n": 240,
         "std": 113.2729,
-        "vs_population": -80.6206
+        "vs_population": -80.37
       },
       "unique_word_ratio": {
         "mean": 0.6867,
         "n": 240,
         "std": 0.057,
-        "vs_population": 0.0559
+        "vs_population": 0.0558
       },
       "bigram_repetition": {
         "mean": 0.0355,
@@ -1065,7 +1091,7 @@
         "mean": 106.8914,
         "n": 240,
         "std": 63.5163,
-        "vs_population": -303.9482
+        "vs_population": -303.7639
       }
     },
     "gemini_3_8_flash": {
@@ -1073,13 +1099,13 @@
         "mean": 290.4454,
         "n": 238,
         "std": 145.8962,
-        "vs_population": -29.8002
+        "vs_population": -29.5496
       },
       "unique_word_ratio": {
         "mean": 0.6698,
         "n": 238,
         "std": 0.0661,
-        "vs_population": 0.039
+        "vs_population": 0.0389
       },
       "bigram_repetition": {
         "mean": 0.0411,
@@ -1091,7 +1117,7 @@
         "mean": 113.4561,
         "n": 238,
         "std": 79.8688,
-        "vs_population": -297.3835
+        "vs_population": -297.1992
       }
     },
     "qwen3_7_max": {
@@ -1099,13 +1125,13 @@
         "mean": 267.1417,
         "n": 240,
         "std": 131.3427,
-        "vs_population": -53.1039
+        "vs_population": -52.8533
       },
       "unique_word_ratio": {
         "mean": 0.6626,
         "n": 240,
         "std": 0.0728,
-        "vs_population": 0.0318
+        "vs_population": 0.0317
       },
       "bigram_repetition": {
         "mean": 0.0442,
@@ -1117,7 +1143,7 @@
         "mean": 92.4604,
         "n": 240,
         "std": 93.3048,
-        "vs_population": -318.3792
+        "vs_population": -318.1949
       }
     },
     "mimo_2_5_pro": {
@@ -1125,13 +1151,13 @@
         "mean": 391.8667,
         "n": 240,
         "std": 266.604,
-        "vs_population": 71.6211
+        "vs_population": 71.8717
       },
       "unique_word_ratio": {
         "mean": 0.6009,
         "n": 240,
         "std": 0.0921,
-        "vs_population": -0.0299
+        "vs_population": -0.03
       },
       "bigram_repetition": {
         "mean": 0.0579,
@@ -1143,33 +1169,7 @@
         "mean": 81.5787,
         "n": 240,
         "std": 57.4908,
-        "vs_population": -329.2609
-      }
-    },
-    "muse_spark_1_3": {
-      "word_count": {
-        "mean": 124.133,
-        "n": 233,
-        "std": 76.3588,
-        "vs_population": -196.1126
-      },
-      "unique_word_ratio": {
-        "mean": 0.7046,
-        "n": 233,
-        "std": 0.08,
-        "vs_population": 0.0738
-      },
-      "bigram_repetition": {
-        "mean": 0.0381,
-        "n": 233,
-        "std": 0.0369,
-        "vs_population": -0.0217
-      },
-      "sentence_length_var": {
-        "mean": 209.3067,
-        "n": 233,
-        "std": 694.3936,
-        "vs_population": -201.5329
+        "vs_population": -329.0766
       }
     },
     "lunaris_8b": {
@@ -1177,13 +1177,13 @@
         "mean": 328.3458,
         "n": 240,
         "std": 215.5663,
-        "vs_population": 8.1002
+        "vs_population": 8.3508
       },
       "unique_word_ratio": {
         "mean": 0.6107,
         "n": 240,
         "std": 0.098,
-        "vs_population": -0.0201
+        "vs_population": -0.0202
       },
       "bigram_repetition": {
         "mean": 0.0601,
@@ -1195,7 +1195,7 @@
         "mean": 82.5812,
         "n": 240,
         "std": 61.3933,
-        "vs_population": -328.2584
+        "vs_population": -328.0741
       }
     },
     "magnum_v4_72b": {
@@ -1203,13 +1203,13 @@
         "mean": 328.0542,
         "n": 240,
         "std": 277.5836,
-        "vs_population": 7.8086
+        "vs_population": 8.0592
       },
       "unique_word_ratio": {
         "mean": 0.5803,
         "n": 240,
         "std": 0.117,
-        "vs_population": -0.0505
+        "vs_population": -0.0506
       },
       "bigram_repetition": {
         "mean": 0.0846,
@@ -1221,7 +1221,7 @@
         "mean": 65.5207,
         "n": 240,
         "std": 56.699,
-        "vs_population": -345.3189
+        "vs_population": -345.1346
       }
     },
     "unslopnemo_12b": {
@@ -1229,13 +1229,13 @@
         "mean": 415.1757,
         "n": 239,
         "std": 425.6345,
-        "vs_population": 94.9301
+        "vs_population": 95.1807
       },
       "unique_word_ratio": {
         "mean": 0.5655,
         "n": 239,
         "std": 0.127,
-        "vs_population": -0.0653
+        "vs_population": -0.0654
       },
       "bigram_repetition": {
         "mean": 0.0897,
@@ -1247,7 +1247,7 @@
         "mean": 81.6226,
         "n": 239,
         "std": 115.9818,
-        "vs_population": -329.217
+        "vs_population": -329.0327
       }
     },
     "skyfall_36b": {
@@ -1255,13 +1255,13 @@
         "mean": 485.3833,
         "n": 240,
         "std": 475.2936,
-        "vs_population": 165.1377
+        "vs_population": 165.3883
       },
       "unique_word_ratio": {
         "mean": 0.5001,
         "n": 240,
         "std": 0.1542,
-        "vs_population": -0.1307
+        "vs_population": -0.1308
       },
       "bigram_repetition": {
         "mean": 0.1613,
@@ -1273,7 +1273,7 @@
         "mean": 82.7315,
         "n": 240,
         "std": 92.7885,
-        "vs_population": -328.1081
+        "vs_population": -327.9238
       }
     },
     "euryale_70b": {
@@ -1281,13 +1281,13 @@
         "mean": 614.5792,
         "n": 240,
         "std": 885.3439,
-        "vs_population": 294.3336
+        "vs_population": 294.5842
       },
       "unique_word_ratio": {
         "mean": 0.4824,
         "n": 240,
         "std": 0.1991,
-        "vs_population": -0.1484
+        "vs_population": -0.1485
       },
       "bigram_repetition": {
         "mean": 0.2356,
@@ -1299,7 +1299,7 @@
         "mean": 54.7205,
         "n": 240,
         "std": 49.4662,
-        "vs_population": -356.1191
+        "vs_population": -355.9348
       }
     },
     "cydonia_24b": {
@@ -1307,13 +1307,13 @@
         "mean": 489.3167,
         "n": 240,
         "std": 562.6584,
-        "vs_population": 169.0711
+        "vs_population": 169.3217
       },
       "unique_word_ratio": {
         "mean": 0.5607,
         "n": 240,
         "std": 0.1529,
-        "vs_population": -0.0701
+        "vs_population": -0.0702
       },
       "bigram_repetition": {
         "mean": 0.1149,
@@ -1325,7 +1325,7 @@
         "mean": 80.1795,
         "n": 240,
         "std": 61.13,
-        "vs_population": -330.6601
+        "vs_population": -330.4758
       }
     },
     "claude_sonnet_4_5": {
@@ -1333,13 +1333,13 @@
         "mean": 313.7542,
         "n": 240,
         "std": 180.0603,
-        "vs_population": -6.4914
+        "vs_population": -6.2408
       },
       "unique_word_ratio": {
         "mean": 0.6253,
         "n": 240,
         "std": 0.0827,
-        "vs_population": -0.0055
+        "vs_population": -0.0056
       },
       "bigram_repetition": {
         "mean": 0.0526,
@@ -1351,7 +1351,7 @@
         "mean": 69.9376,
         "n": 240,
         "std": 58.9674,
-        "vs_population": -340.902
+        "vs_population": -340.7177
       }
     },
     "gpt_4_1": {
@@ -1359,13 +1359,13 @@
         "mean": 211.675,
         "n": 240,
         "std": 90.4056,
-        "vs_population": -108.5706
+        "vs_population": -108.32
       },
       "unique_word_ratio": {
         "mean": 0.6878,
         "n": 240,
         "std": 0.0626,
-        "vs_population": 0.057
+        "vs_population": 0.0569
       },
       "bigram_repetition": {
         "mean": 0.0313,
@@ -1377,7 +1377,7 @@
         "mean": 89.0662,
         "n": 240,
         "std": 82.3579,
-        "vs_population": -321.7734
+        "vs_population": -321.5891
       }
     },
     "gemini_2_5_flash": {
@@ -1385,13 +1385,13 @@
         "mean": 141.1034,
         "n": 232,
         "std": 95.9622,
-        "vs_population": -179.1422
+        "vs_population": -178.8916
       },
       "unique_word_ratio": {
         "mean": 0.7278,
         "n": 232,
         "std": 0.0831,
-        "vs_population": 0.097
+        "vs_population": 0.0969
       },
       "bigram_repetition": {
         "mean": 0.0299,
@@ -1403,7 +1403,7 @@
         "mean": 59.3229,
         "n": 232,
         "std": 48.6263,
-        "vs_population": -351.5167
+        "vs_population": -351.3324
       }
     },
     "deepseek_v3_2": {
@@ -1411,13 +1411,13 @@
         "mean": 178.1792,
         "n": 240,
         "std": 148.4812,
-        "vs_population": -142.0664
+        "vs_population": -141.8158
       },
       "unique_word_ratio": {
         "mean": 0.7126,
         "n": 240,
         "std": 0.0892,
-        "vs_population": 0.0818
+        "vs_population": 0.0817
       },
       "bigram_repetition": {
         "mean": 0.0288,
@@ -1429,7 +1429,7 @@
         "mean": 54.3001,
         "n": 240,
         "std": 45.3344,
-        "vs_population": -356.5395
+        "vs_population": -356.3552
       }
     },
     "glm_4_7": {
@@ -1437,13 +1437,13 @@
         "mean": 221.9331,
         "n": 239,
         "std": 104.8619,
-        "vs_population": -98.3125
+        "vs_population": -98.0619
       },
       "unique_word_ratio": {
         "mean": 0.6667,
         "n": 239,
         "std": 0.0641,
-        "vs_population": 0.0359
+        "vs_population": 0.0358
       },
       "bigram_repetition": {
         "mean": 0.0382,
@@ -1455,7 +1455,7 @@
         "mean": 78.7846,
         "n": 239,
         "std": 61.1052,
-        "vs_population": -332.055
+        "vs_population": -331.8707
       }
     },
     "qwen3_5_flash": {
@@ -1463,13 +1463,13 @@
         "mean": 229.4625,
         "n": 240,
         "std": 158.792,
-        "vs_population": -90.7831
+        "vs_population": -90.5325
       },
       "unique_word_ratio": {
         "mean": 0.6341,
         "n": 240,
         "std": 0.1111,
-        "vs_population": 0.0033
+        "vs_population": 0.0032
       },
       "bigram_repetition": {
         "mean": 0.0693,
@@ -1481,7 +1481,7 @@
         "mean": 108.7054,
         "n": 240,
         "std": 351.9582,
-        "vs_population": -302.1342
+        "vs_population": -301.9499
       }
     },
     "mistral_small_creative": {
@@ -1489,13 +1489,13 @@
         "mean": 439.2375,
         "n": 240,
         "std": 248.4307,
-        "vs_population": 118.9919
+        "vs_population": 119.2425
       },
       "unique_word_ratio": {
         "mean": 0.5567,
         "n": 240,
         "std": 0.1076,
-        "vs_population": -0.0741
+        "vs_population": -0.0742
       },
       "bigram_repetition": {
         "mean": 0.0945,
@@ -1507,7 +1507,7 @@
         "mean": 75.7824,
         "n": 240,
         "std": 54.8276,
-        "vs_population": -335.0572
+        "vs_population": -334.8729
       }
     },
     "gemma_4_26b": {
@@ -1515,13 +1515,13 @@
         "mean": 350.0042,
         "n": 240,
         "std": 161.2643,
-        "vs_population": 29.7586
+        "vs_population": 30.0092
       },
       "unique_word_ratio": {
         "mean": 0.5971,
         "n": 240,
         "std": 0.0793,
-        "vs_population": -0.0337
+        "vs_population": -0.0338
       },
       "bigram_repetition": {
         "mean": 0.0688,
@@ -1533,7 +1533,7 @@
         "mean": 87.5504,
         "n": 240,
         "std": 49.5647,
-        "vs_population": -323.2892
+        "vs_population": -323.1049
       }
     },
     "minimax_m2_7": {
@@ -1541,13 +1541,13 @@
         "mean": 260.5021,
         "n": 239,
         "std": 147.7445,
-        "vs_population": -59.7435
+        "vs_population": -59.4929
       },
       "unique_word_ratio": {
         "mean": 0.649,
         "n": 239,
         "std": 0.0805,
-        "vs_population": 0.0182
+        "vs_population": 0.0181
       },
       "bigram_repetition": {
         "mean": 0.0458,
@@ -1559,7 +1559,7 @@
         "mean": 63.6385,
         "n": 239,
         "std": 45.4464,
-        "vs_population": -347.2011
+        "vs_population": -347.0168
       }
     },
     "grok_4_1": {
@@ -1567,13 +1567,13 @@
         "mean": 136.728,
         "n": 239,
         "std": 73.7012,
-        "vs_population": -183.5176
+        "vs_population": -183.267
       },
       "unique_word_ratio": {
         "mean": 0.796,
         "n": 239,
         "std": 0.0745,
-        "vs_population": 0.1652
+        "vs_population": 0.1651
       },
       "bigram_repetition": {
         "mean": 0.0151,
@@ -1585,7 +1585,7 @@
         "mean": 113.7514,
         "n": 239,
         "std": 154.5951,
-        "vs_population": -297.0882
+        "vs_population": -296.9039
       }
     },
     "claude_opus_4_6": {
@@ -1593,13 +1593,13 @@
         "mean": 533.525,
         "n": 240,
         "std": 331.4405,
-        "vs_population": 213.2794
+        "vs_population": 213.53
       },
       "unique_word_ratio": {
         "mean": 0.551,
         "n": 240,
         "std": 0.0999,
-        "vs_population": -0.0798
+        "vs_population": -0.0799
       },
       "bigram_repetition": {
         "mean": 0.0757,
@@ -1611,7 +1611,7 @@
         "mean": 122.1268,
         "n": 240,
         "std": 92.7554,
-        "vs_population": -288.7128
+        "vs_population": -288.5285
       }
     },
     "llama_4_maverick": {
@@ -1619,13 +1619,13 @@
         "mean": 171.5292,
         "n": 240,
         "std": 81.4948,
-        "vs_population": -148.7164
+        "vs_population": -148.4658
       },
       "unique_word_ratio": {
         "mean": 0.6456,
         "n": 240,
         "std": 0.0926,
-        "vs_population": 0.0148
+        "vs_population": 0.0147
       },
       "bigram_repetition": {
         "mean": 0.0637,
@@ -1637,7 +1637,7 @@
         "mean": 71.1155,
         "n": 240,
         "std": 104.3027,
-        "vs_population": -339.7241
+        "vs_population": -339.5398
       }
     },
     "deepseek_v4_flash": {
@@ -1645,13 +1645,13 @@
         "mean": 172.9286,
         "n": 140,
         "std": 83.5908,
-        "vs_population": -147.317
+        "vs_population": -147.0664
       },
       "unique_word_ratio": {
         "mean": 0.7088,
         "n": 140,
         "std": 0.0772,
-        "vs_population": 0.078
+        "vs_population": 0.0779
       },
       "bigram_repetition": {
         "mean": 0.0302,
@@ -1663,7 +1663,7 @@
         "mean": 68.8266,
         "n": 140,
         "std": 72.2232,
-        "vs_population": -342.013
+        "vs_population": -341.8287
       }
     },
     "glm_5_1": {
@@ -1671,13 +1671,13 @@
         "mean": 240.0903,
         "n": 144,
         "std": 76.648,
-        "vs_population": -80.1553
+        "vs_population": -79.9047
       },
       "unique_word_ratio": {
         "mean": 0.6534,
         "n": 144,
         "std": 0.0673,
-        "vs_population": 0.0226
+        "vs_population": 0.0225
       },
       "bigram_repetition": {
         "mean": 0.0409,
@@ -1689,7 +1689,7 @@
         "mean": 73.5481,
         "n": 144,
         "std": 56.1063,
-        "vs_population": -337.2915
+        "vs_population": -337.1072
       }
     },
     "gemini_3_1_flash_lite": {
@@ -1697,13 +1697,13 @@
         "mean": 263.9236,
         "n": 144,
         "std": 125.8877,
-        "vs_population": -56.322
+        "vs_population": -56.0714
       },
       "unique_word_ratio": {
         "mean": 0.6435,
         "n": 144,
         "std": 0.0733,
-        "vs_population": 0.0127
+        "vs_population": 0.0126
       },
       "bigram_repetition": {
         "mean": 0.0485,
@@ -1715,7 +1715,7 @@
         "mean": 91.3376,
         "n": 144,
         "std": 60.5397,
-        "vs_population": -319.502
+        "vs_population": -319.3177
       }
     },
     "kimi_k2_5": {
@@ -1723,13 +1723,13 @@
         "mean": 252.9444,
         "n": 144,
         "std": 163.421,
-        "vs_population": -67.3012
+        "vs_population": -67.0506
       },
       "unique_word_ratio": {
         "mean": 0.681,
         "n": 144,
         "std": 0.0918,
-        "vs_population": 0.0502
+        "vs_population": 0.0501
       },
       "bigram_repetition": {
         "mean": 0.037,
@@ -1741,7 +1741,7 @@
         "mean": 118.7801,
         "n": 144,
         "std": 180.7302,
-        "vs_population": -292.0595
+        "vs_population": -291.8752
       }
     },
     "claude_opus_4_7": {
@@ -1749,13 +1749,13 @@
         "mean": 407.2431,
         "n": 144,
         "std": 244.9675,
-        "vs_population": 86.9975
+        "vs_population": 87.2481
       },
       "unique_word_ratio": {
         "mean": 0.5711,
         "n": 144,
         "std": 0.1014,
-        "vs_population": -0.0597
+        "vs_population": -0.0598
       },
       "bigram_repetition": {
         "mean": 0.071,
@@ -1767,7 +1767,7 @@
         "mean": 101.8615,
         "n": 144,
         "std": 65.8412,
-        "vs_population": -308.9781
+        "vs_population": -308.7938
       }
     },
     "deepseek_v4_pro": {
@@ -1775,13 +1775,13 @@
         "mean": 258.8333,
         "n": 144,
         "std": 157.8343,
-        "vs_population": -61.4123
+        "vs_population": -61.1617
       },
       "unique_word_ratio": {
         "mean": 0.6642,
         "n": 144,
         "std": 0.0902,
-        "vs_population": 0.0334
+        "vs_population": 0.0333
       },
       "bigram_repetition": {
         "mean": 0.0402,
@@ -1793,7 +1793,7 @@
         "mean": 76.258,
         "n": 144,
         "std": 56.0014,
-        "vs_population": -334.5816
+        "vs_population": -334.3973
       }
     },
     "gemini_3_1_pro": {
@@ -1801,13 +1801,13 @@
         "mean": 263.1241,
         "n": 137,
         "std": 125.8702,
-        "vs_population": -57.1215
+        "vs_population": -56.8709
       },
       "unique_word_ratio": {
         "mean": 0.6675,
         "n": 137,
         "std": 0.0659,
-        "vs_population": 0.0367
+        "vs_population": 0.0366
       },
       "bigram_repetition": {
         "mean": 0.0401,
@@ -1819,7 +1819,7 @@
         "mean": 76.088,
         "n": 137,
         "std": 56.9072,
-        "vs_population": -334.7516
+        "vs_population": -334.5673
       }
     },
     "deepseek_r1_0528": {
@@ -1827,13 +1827,13 @@
         "mean": 274.0792,
         "n": 240,
         "std": 134.3822,
-        "vs_population": -46.1664
+        "vs_population": -45.9158
       },
       "unique_word_ratio": {
         "mean": 0.685,
         "n": 240,
         "std": 0.071,
-        "vs_population": 0.0542
+        "vs_population": 0.0541
       },
       "bigram_repetition": {
         "mean": 0.037,
@@ -1845,7 +1845,7 @@
         "mean": 56.6085,
         "n": 240,
         "std": 44.0178,
-        "vs_population": -354.2311
+        "vs_population": -354.0468
       }
     }
   }

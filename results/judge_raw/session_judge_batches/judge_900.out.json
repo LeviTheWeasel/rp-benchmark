@@ -1,0 +1,307 @@
+[
+  {
+    "session_id": "deepseek_v4_1_flash::adv_time_pressure_05",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Voice and atmosphere held rock-steady across 23 turns; the vault's cold, the pulse-lit ceiling, and the countdown motif never wavered."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.5,
+        "rationale": "No thinning; specificity (R.A., the binder, the panel) increased through the middle turns rather than flattening."
+      },
+      "S.3_narrative_momentum": {
+        "score": 4.5,
+        "rationale": "Clear escalating arc from lock-guessing to sabotage to extraction to capture, each turn building on the last."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.5,
+        "rationale": "Followed every pivot the user made (inspecting the panel, hunting for a written code, asking the time) with concretely tailored answers rather than generic filler."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Never dictated the Thief's choices; the forced capture at 15:00 was an environmental consequence of the clock, not narrated agency-theft.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 5.0,
+        "rationale": "A genuinely tracked, second-level clock from 0:00 to 15:22 with a consistent lockout rule and guard schedule; no slip anywhere.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.0,
+        "rationale": "Atmospheric but purposeful; description stays tethered to the countdown rather than indulging for its own sake."
+      },
+      "2.2_anti_repetition": {
+        "score": 4.0,
+        "rationale": "The four-second ceiling-pulse refrain repeats by design as a diegetic clock, not as filler."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.0,
+        "rationale": "Tension conveyed through physical detail (cramping thumb, a screwdriver going hot then cold) rather than stated emotion."
+      },
+      "2.6_subtext": {
+        "score": 3.5,
+        "rationale": "Some subtext in the guard's closing lines, but most of the piece is procedural rather than layered."
+      },
+      "2.7_pacing": {
+        "score": 4.5,
+        "rationale": "Time-stamps and sentence rhythm compress and expand exactly with the tension."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 4.0,
+      "mid_quality": 4.5,
+      "late_quality": 4.5,
+      "degradation_detected": false
+    },
+    "overall": 4.3,
+    "overall_notes": "Best-in-batch temporal craft, an actual tracked countdown with zero contradictions, carrying an otherwise tense, responsive heist scene to a genuinely earned dramatic ending."
+  },
+  {
+    "session_id": "muse_spark_1_3::adv_pov_multi_npc_13",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.0,
+        "rationale": "Each NPC's attitude stays fixed (Ash hostile, Yuna neutral, Daven conciliatory), but only because every turn reuses the same delivery, so it reads as stasis rather than maintained character."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.5,
+        "rationale": "Never gets worse because it never leaves the rigid template it locked into by turn 2."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.0,
+        "rationale": "The accusation-proof-confrontation plot does advance turn to turn, but the mechanical delivery makes it feel inert."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 2.5,
+        "rationale": "Responses pick up the user's keywords (ledgers, seal, proof) and slot them into the fixed sentence frame rather than reacting with real specificity."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Only ever reports the four NPCs' words and posture; never narrates an action or decision for the Ambassador.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.0,
+        "rationale": "No clock is in play and none is needed for a single court scene; nothing to contradict.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.5,
+        "rationale": "Not florid, but abstraction ('your jest betrayed nerves') stands in for concrete imagery throughout."
+      },
+      "2.2_anti_repetition": {
+        "score": 1.5,
+        "rationale": "The single worst offender in the batch: 'The Herald [verb] his staff toward X and [announced] Y as [role]' followed by a two-clause 'Your ___, and ___' line repeats almost verbatim, four times a turn, for all 12 turns."
+      },
+      "2.5_show_dont_tell": {
+        "score": 2.5,
+        "rationale": "Almost entirely told via reported summary-speech rather than shown through scene or gesture."
+      },
+      "2.6_subtext": {
+        "score": 2.0,
+        "rationale": "Dialogue states its own subtext outright ('your accusation shattered protocol') instead of implying it."
+      },
+      "2.7_pacing": {
+        "score": 2.5,
+        "rationale": "A uniform four-beat turn structure regardless of what actually happened in the scene flattens pacing."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 2.5,
+      "mid_quality": 2.5,
+      "late_quality": 2.5,
+      "degradation_detected": false
+    },
+    "overall": 2.6,
+    "overall_notes": "Locks into a rigid four-NPC announcement template by turn 2 and never breaks from it; the accusation plot's content moves forward, but the prose is the most repetitive in the batch."
+  },
+  {
+    "session_id": "muse_spark_1_3::adv_pov_tense_action_14",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 3.5,
+        "rationale": "Voice mostly holds, but turn 18 breaks into an anaphoric 'You feel / you see / you hear' list not used anywhere else in the session."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.5,
+        "rationale": "The dynamic chase prose of turns 2-8 gives way to near-identical 'servers hum, green lights blink, cold air' sentences reshuffled from turn 10 on."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.5,
+        "rationale": "Clear progression from flight to shelter to triage to escape-planning, with concrete new information (parapet, patrols) each step."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.0,
+        "rationale": "Reverses direction, retreats, treats the wound, and answers escape-route questions in specific response to what the user actually asked or did."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Narrates Mira's and the environment's reactions but never decides for the Operative.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.0,
+        "rationale": "No explicit clock; the chase-then-treat-wound sequencing is plausible and nothing contradicts it.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 3.5,
+        "rationale": "Restrained through the chase; stays functional rather than ornate even in the slower medical scene."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.0,
+        "rationale": "'Green lights blink in rows / servers hum / cold air bites' recurs almost verbatim across five straight turns once the scene goes static."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.5,
+        "rationale": "Physical detail (blood, breath, grip on the floor) carries most of the tension without naming emotions outright."
+      },
+      "2.6_subtext": {
+        "score": 3.0,
+        "rationale": "Mira's forced calm under pain carries some subtext; otherwise mostly direct."
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "Appropriately kinetic during the chase, appropriately slows for triage."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.2,
+      "late_quality": 2.8,
+      "degradation_detected": true
+    },
+    "overall": 3.1,
+    "overall_notes": "Strong tense opening chase undercut by the medical/server-room stretch, which recycles the same three sensory beats almost verbatim turn after turn; one isolated stylistic wobble at turn 18."
+  },
+  {
+    "session_id": "muse_spark_1_3::adv_sysprompt_speech_pattern_15",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.5,
+        "rationale": "Grum's clipped, article-dropping speech pattern and gruff-but-protective core never slip across all 12 turns."
+      },
+      "S.2_degradation_resistance": {
+        "score": 4.0,
+        "rationale": "Gains texture in the later craft-teaching turns rather than thinning."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.5,
+        "rationale": "Small but real arc: the noble conflict resolves off-page, then the session pivots cleanly into an injury/caretaking beat and a craft lesson."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 4.0,
+        "rationale": "Tracks the apprentice's escalating reports about the noble precisely, then pivots fully and immediately when the burn happens."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Only ever reacts to the apprentice; never puts words or choices in their mouth.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.0,
+        "rationale": "Loose day-at-the-forge timeframe, nothing tracked precisely but nothing contradicted either.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.0,
+        "rationale": "The speech-pattern constraint keeps description as plain as the dialogue; no purple excess."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.5,
+        "rationale": "'Grum keeps you safe' / 'stay back from sparks' / 'rest hurt hand' closes nearly every single turn almost verbatim."
+      },
+      "2.5_show_dont_tell": {
+        "score": 3.5,
+        "rationale": "Physical gesture (gripping tongs, kneeling in soot) does real work alongside the dialogue."
+      },
+      "2.6_subtext": {
+        "score": 3.5,
+        "rationale": "Contempt for nobles versus tenderness for the apprentice is dramatized rather than stated outright."
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "Unhurried, forge-appropriate rhythm throughout."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 4.0,
+      "late_quality": 4.0,
+      "degradation_detected": false
+    },
+    "overall": 3.7,
+    "overall_notes": "The most consistent, best-drawn single voice in the batch, but its closing lines ('Grum keeps you safe', 'rest hurt hand') recur almost every turn, which docks anti-repetition."
+  },
+  {
+    "session_id": "muse_spark_1_3::adv_sysprompt_style_restriction_16",
+    "session_dimensions": {
+      "S.1_consistency_over_time": {
+        "score": 4.0,
+        "rationale": "The short-declarative style constraint is honored without a single lapse into longer or more ornate sentences."
+      },
+      "S.2_degradation_resistance": {
+        "score": 2.5,
+        "rationale": "The same handful of sensory nouns (dust, cold draft, coffee, heel-clicks) repeat almost unchanged from turn 14 onward."
+      },
+      "S.3_narrative_momentum": {
+        "score": 3.5,
+        "rationale": "Clean two-beat arc: private nostalgia in the empty house, then the intrusion of commerce with the agent, a genuine tonal shift."
+      },
+      "S.4_adaptive_responsiveness": {
+        "score": 3.5,
+        "rationale": "Answers the photo-date question and the agent's arrival with specific, situationally appropriate short lines rather than boilerplate."
+      },
+      "S.5_agency_respect_session": {
+        "score": 4.5,
+        "rationale": "Confines itself to environment and Sarah's actions; never narrates Eli's choices.",
+        "violation_count": 0
+      },
+      "S.6_temporal_reasoning": {
+        "score": 3.0,
+        "rationale": "No explicit clock; nothing in the loose timeframe contradicts itself.",
+        "contradictions": []
+      }
+    },
+    "standard_dimensions": {
+      "2.1_anti_purple_prose": {
+        "score": 4.5,
+        "rationale": "Textbook execution of the restriction, no purple prose anywhere, by design and successfully."
+      },
+      "2.2_anti_repetition": {
+        "score": 2.0,
+        "rationale": "The same three or four sensory tags (dust, cold, coffee breath, heel-clicks) are recombined almost every turn once Sarah arrives."
+      },
+      "2.5_show_dont_tell": {
+        "score": 4.0,
+        "rationale": "Near-total reliance on concrete sensory nouns over any stated feeling, which is the point of the exercise and lands well."
+      },
+      "2.6_subtext": {
+        "score": 3.5,
+        "rationale": "Eli's flat 'It does' and 'Right... new paint' carries real grief-under-politeness subtext."
+      },
+      "2.7_pacing": {
+        "score": 3.5,
+        "rationale": "Short declarative rhythm suits the melancholy, unhurried scene."
+      }
+    },
+    "quality_trajectory": {
+      "early_quality": 3.5,
+      "mid_quality": 3.3,
+      "late_quality": 3.2,
+      "degradation_detected": true
+    },
+    "overall": 3.5,
+    "overall_notes": "Disciplined adherence to the terse-declarative style brief throughout, but the same small set of sensory descriptors (dust, cold, coffee, heels) gets recombined almost every turn rather than varied."
+  }
+]

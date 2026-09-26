@@ -1,0 +1,441 @@
+[
+ {
+  "session_id": "deepseek_v4_1_flash::adv_time_pressure_05",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "agency_violation",
+    "quote": "I check the time remaining. How much time do I have before the guard rotation?",
+    "deduction": -15
+   },
+   {
+    "flaw": "agency_violation",
+    "quote": "You stopped. Two presses, not three — no reason, just the feeling that the next red tone would be the one that started sounding like a clock.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "Fifteen seconds left on the lockout.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "the same one you'd heard at 3:12, the one that always buzzed before the hour",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "Down by the door, near the baseboard where the kit sat open",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "The binder sat closed on the table where you'd left it",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "The safe door, swung open, empty, its interior light still on",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "SVC PORT — HOLD 5s TO RELEASE. RESETS PAD. USE ONLY W/ CLIENT ON PHONE.",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "the display flickered through something else. A number, not the eights. Six digits.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The ceiling strips pulsed. One. Two. Three. Four.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Eight centimeters of laminated steel",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "a sound like a held breath being released",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose_passage",
+    "quote": "the pad exhaled a soft green breath and unlocked its patience",
+    "deduction": -8
+   },
+   {
+    "flaw": "purple_prose_passage",
+    "quote": "counting the seconds of a night that had just run out of them",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "You had started to hate them.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "the hands that had gone white-knuckled around the strap",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs_adjectives",
+    "quote": "a slow, full, patient green",
+    "deduction": -3
+   },
+   {
+    "flaw": "overlong_for_the_moment",
+    "quote": "Eight minutes and nineteen seconds since the vault door sealed.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "He didn't shout. He didn't move for the radio on his belt.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "specific_detail",
+    "quote": "the second click of a man who's been doing this long enough to know the reader's flaky on cold nights and a second swipe costs nothing",
+    "bonus": 5
+   },
+   {
+    "type": "earned_surprise",
+    "quote": "Three failures. The pad's little display went dark for a beat — and then a number appeared where the dots had been.",
+    "bonus": 5
+   }
+  ],
+  "final_score": -36,
+  "flaw_count": 19,
+  "summary": "Full 11-turn session with near-exact clock arithmetic and a lockout rule that punishes brute force, but it scripts a whole Thief turn inside its own reply, lets the lockout count jump 54 to 15 in twelve seconds, relocates the kit, binder and safe door against the user's actions, and hands over the solution via a labelled reset button and a flashed 000000; the finale also drifts from 'you' to 'the thief' (card sets no POV, not charged)."
+ },
+ {
+  "session_id": "muse_spark_1_3::adv_pov_multi_npc_13",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "The gods weighed pride before judgment, and silence served the court better than scorn.",
+    "deduction": -8
+   },
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "Your proposal deserved respect, and rash judgment threatened the peace.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Lord Daven bowed toward Queen Isara and gestured toward you.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "The Herald struck his staff against marble and named Queen Isara as speaker.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Commander Ash glared toward you and tightened his grip upon his pommel.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "Commander Ash bared teeth in a snarl and fixed a glare upon you.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "Commander Ash clenched his fist upon his pommel and snarled toward you.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext_opportunity",
+    "quote": "Your evidence demanded answer, and Commander Ash betrayed trust placed by Queen Isara.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "The Herald dipped his staff toward the gallery and called Lord Daven as advocate.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Queen Isara rested her gaze upon you and spoke with frigid deliberation.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "Blockade orders sealed departure from harbors, and Commander Ash concealed directives withheld from Queen Isara.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 42,
+  "flaw_count": 11,
+  "summary": "Full 11-turn session that holds second person past tense with no pronoun slips, but every turn is the same Herald-announces-four-speakers template and all NPCs speak one identical 'Your X verbed Y, and Z verbed W' past-tense skeleton, often naming themselves in third person, so the card's distinct voices never appear."
+ },
+ {
+  "session_id": "muse_spark_1_3::adv_pov_tense_action_14",
+  "starting_score": 100,
+  "fatal_flaws": [
+   {
+    "flaw": "wrong_language_pov_tense",
+    "quote": "The alarm continued to wail through the corridor as the red lights washed over the walls in slow pulses.",
+    "deduction": -15
+   },
+   {
+    "flaw": "wrong_language_pov_tense",
+    "quote": "The upper flight stretched into shadow and cold air.",
+    "deduction": -15
+   },
+   {
+    "flaw": "wrong_language_pov_tense",
+    "quote": "The server room hummed with cold, recycled air.",
+    "deduction": -15
+   },
+   {
+    "flaw": "wrong_language_pov_tense",
+    "quote": "Mira exhaled slowly and let her shoulders sink against the server rack.",
+    "deduction": -15
+   }
+  ],
+  "major_flaws": [
+   {
+    "flaw": "recycled_description",
+    "quote": "Green lights blink in rows over her head.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Cold air presses in around you.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "sweat streaked down her temple",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "the alarm throbbed through the walls",
+    "deduction": -8
+   },
+   {
+    "flaw": "convenient_world",
+    "quote": "distant footsteps shuffled past the door and faded",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "You feel the bandage unroll in your hands. You see Mira fix her eyes on you.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Mira watches you. Her breath comes quick and shallow.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "Her jaw tightens.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "Her brow furrowed",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "She draws a sharp breath through her teeth.",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "The stairwell swallowed the alarm's echo and threw it back as a fractured clang.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": -18,
+  "flaw_count": 15,
+  "summary": "Full 11-turn session that breaks the card's second-person-present mandate in 7 of 11 replies (turns 1-5 and 10-11 are past tense with the operative absent, including both trap turns), with only turns 6-9 compliant; the rest is recycled green-light, cold-air and sweat atmosphere around pursuers who conveniently walk past."
+ },
+ {
+  "session_id": "muse_spark_1_3::adv_sysprompt_speech_pattern_15",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "He shifted his bulk to block the sparks from the forge mouth.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Grum keeps you safe.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "but pride in true craft burned hotter",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Contempt for silk threats warred with pride in his own true work",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Old hate for high-born folk rose up in his chest",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Fear for his young charge gripped his chest far worse than any forge heat",
+    "deduction": -8
+   },
+   {
+    "flaw": "narrating_emotions",
+    "quote": "Worry for the small hurt hand sat hard in his chest",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "Grum's shoulders went stiff at the news.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "folded his scarred arms across his chest",
+    "deduction": -3
+   },
+   {
+    "flaw": "excessive_adverbs_adjectives",
+    "quote": "tender care for his young charge softened his gruff face",
+    "deduction": -3
+   },
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "stared down at the fine cloak.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Let lord go. Grum keeps true craft, not fast coin.",
+    "deduction": -3
+   },
+   {
+    "flaw": "missed_subtext_opportunity",
+    "quote": "Move back, lad. Grum shields you from harm.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [],
+  "final_score": 26,
+  "flaw_count": 13,
+  "summary": "Full 11-turn session where every Grum line keeps the speech rules (no 'I', no articles, no long words) even through the noble and the burn, but each narration states his feelings 'in his chest', every reply ends on 'Grum keeps you safe', the noble never speaks, and the dropped-article pattern bleeds into the narration (allowed by the card, not charged)."
+ },
+ {
+  "session_id": "muse_spark_1_3::adv_sysprompt_style_restriction_16",
+  "starting_score": 100,
+  "fatal_flaws": [],
+  "major_flaws": [
+   {
+    "flaw": "flat_npc_voice",
+    "quote": "\"I am Sarah,\" she said.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Coffee odor lingered in cold air.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Her voice rang off bare walls.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Dust left grit on her tongue.",
+    "deduction": -8
+   },
+   {
+    "flaw": "recycled_description",
+    "quote": "Cold draft tugged her coat hem.",
+    "deduction": -8
+   },
+   {
+    "flaw": "missing_spatial_awareness",
+    "quote": "Coffee steam rose from a paper cup in her hand.",
+    "deduction": -8
+   },
+   {
+    "flaw": "skipped_time_logic",
+    "quote": "\"We walked through each room,\" she said.",
+    "deduction": -8
+   }
+  ],
+  "minor_flaws": [
+   {
+    "flaw": "undercooked_for_the_moment",
+    "quote": "The woman in the image wore a wool coat.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Dust hung in cold air. The floorboards groaned in the draft. Rust scented the closet interior.",
+    "deduction": -3
+   },
+   {
+    "flaw": "samey_sentence_rhythm",
+    "quote": "Sarah set clipboard on counter. Tape rasped under her fingertips. Cold metal bit her palm.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "Her smile exposed white teeth.",
+    "deduction": -3
+   },
+   {
+    "flaw": "generic_physical_detail",
+    "quote": "Cold draft raised goosebumps on her arms.",
+    "deduction": -3
+   },
+   {
+    "flaw": "predictable_beat",
+    "quote": "Light fell through cracked glass. The pane rattled with wind.",
+    "deduction": -3
+   }
+  ],
+  "bonuses": [
+   {
+    "type": "real_subtext",
+    "quote": "\"Buyers want space for new paint,\" she said.",
+    "bonus": 5
+   }
+  ],
+  "final_score": 31,
+  "flaw_count": 13,
+  "summary": "Full 11-turn session with zero breaches of the five style rules (no similes, -ly adverbs, exclamations or 15+ word sentences), but it complies by stacking recycled coffee, draft, dust and echo details into every paragraph, never reacts to the mother's photo, renders the 'aggressively cheerful' agent flat, and head-hops into her tongue and throat."
+ }
+]

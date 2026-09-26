@@ -28,6 +28,8 @@ Usage:
   python3 run_craft_baseline.py --dry-run
   python3 run_craft_baseline.py --concurrency 8
   python3 run_craft_baseline.py --resume results/craft_baseline_X.json
+  python3 run_craft_baseline.py --no-judge --concurrency 5 \
+      --pairs muse_spark_1_3::adv_pov_multi_npc_13 deepseek_v4_1_flash::adv_time_pressure_05
 """
 import argparse, json, threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -82,6 +84,14 @@ def main():
     ap.add_argument("--todo", action="store_true",
                     help="run every TEST_MODELS entry with no flaw-hunter "
                          "rows yet, i.e. everything still uncarded")
+    # Repair runs re-generate single sessions, not whole models. The
+    # 2026-09-21 wave ran under the old 4096-token cap and five sessions came
+    # back with empty turns that had burnt the whole budget on reasoning;
+    # re-running the two models in full would re-pay for 35 sessions that
+    # are fine. The new file is dated later, so newest-wins in every
+    # consumer picks these copies over the broken ones.
+    ap.add_argument("--pairs", nargs="+", metavar="MODEL::SEED",
+                    help="run only these (model, seed) sessions")
     ap.add_argument("--resume")
     ap.add_argument("--dry-run", action="store_true")
     # Judging moved to subscription subagents (export_session_judge_batches ->
@@ -92,6 +102,16 @@ def main():
     ap.add_argument("--no-judge", action="store_true",
                     help="generate only; judge later on subscription")
     args = ap.parse_args()
+
+    pairs = None
+    if args.pairs:
+        if args.models or args.todo:
+            raise SystemExit("--pairs picks its own models; drop --models/--todo")
+        bad = [p for p in args.pairs if p.count("::") != 1]
+        if bad:
+            raise SystemExit("--pairs wants MODEL::SEED, got %s" % bad)
+        pairs = {tuple(p.split("::")) for p in args.pairs}
+        args.models = sorted({m for m, _ in pairs})
 
     if args.todo:
         carded = set()
@@ -127,6 +147,12 @@ def main():
 
     seeds = load_seeds(adversarial=True)
     work = [(s, mk) for s in seeds for mk in args.models]
+    if pairs is not None:
+        missing = pairs - {(mk, s["id"]) for s, mk in work}
+        if missing:
+            raise SystemExit("no such adversarial seed for: %s"
+                             % sorted("%s::%s" % p for p in missing))
+        work = [(s, mk) for s, mk in work if (mk, s["id"]) in pairs]
 
     out, path = None, None
     if args.resume:
@@ -165,6 +191,8 @@ def main():
                           "generation_config": dict(GENERATION_CONFIG),
                           "seed_count": len(seeds), "nsfw": False},
                "sessions": []}
+        if pairs is not None:
+            out["config"]["pairs"] = sorted("%s::%s" % p for p in pairs)
         RESULTS_DIR.mkdir(exist_ok=True)
         path = RESULTS_DIR / ("craft_baseline_%s.json" % rid)
 
