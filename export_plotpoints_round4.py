@@ -1535,7 +1535,7 @@ def build_across_table(cont):
         "band_rule": ("mean over the %d core seeds, plus or minus half the 95%% "
                       "seed-bootstrap interval; a band, never a rank" % len(core)),
         "core_seeds": "%s to %s" % (core[0], core[-1]),
-        "r3_refusal": ("Round 03's refusal %% is Round 03's own instrument (a "
+        "r3_refusal": ("Round 03's refusal % is Round 03's own instrument (a "
                        "judge flag per session) and is not comparable with J."),
         "note": ("Round 04 changed the instruments, not the models. The old judge "
                  "re-scored every Round 04 transcript so the Round 02 and 03 line "
