@@ -1,0 +1,3418 @@
+{
+ "title": "Round 4 and earlier rounds",
+ "generated_by": "analyze_round4_continuity.py",
+ "read_this_first": "Round 4 changed the instruments, not the models. Each returning model's row sets its earlier-round figures beside the round-4 ones without converting any of them: the old judge is the round-2/3 judge re-run on round-4 transcripts and is a band, never a rank; the round-4 judge is a letter; J is new. Nothing is summed.",
+ "roster": {
+  "round4_models": 71,
+  "craft_models": 70,
+  "j_rows": 58,
+  "returning": 41,
+  "returning_craft": 40,
+  "returning_track_a_only": [
+   "rocinante_12b"
+  ],
+  "new": 30,
+  "new_models": [
+   "aion_3_5",
+   "claude_fable_5_1",
+   "claude_opus_5",
+   "claude_opus_5_5",
+   "claude_sonnet_5",
+   "command_a_plus",
+   "deepseek_v4_1_flash",
+   "ember_1",
+   "gemini_3_7_flash",
+   "gemini_3_8_flash",
+   "glm_5_3_flash",
+   "glm_5_3_flashx",
+   "glm_5_3_prime",
+   "gpt_6_astra",
+   "gpt_6_luna",
+   "gpt_6_luna_pro",
+   "gpt_6_sol",
+   "gpt_6_sol_pro",
+   "grok_4_7",
+   "hemmingway_1",
+   "mercury_2_5",
+   "mimo_2_6_flash",
+   "mimo_2_6_pro",
+   "muse_spark_1_3",
+   "qwen3_8_flash",
+   "qwen3_8_max",
+   "qwen3_8_max_prime",
+   "qwen3_8_omni_flash",
+   "tencent_hy4",
+   "venice_dolphin_24b"
+  ],
+  "not_returning": [
+   {
+    "model": "owl_alpha",
+    "note": "LongCat-2.0 (meituan/longcat-2.0), in round 3 under the stealth id openrouter/owl-alpha. Not run in round 4 under any name: the preview endpoint 404ed on 2026-08-05."
+   }
+  ]
+ },
+ "instruments": [
+  {
+   "what": "Craft judge",
+   "before": "Claude Sonnet 4 over the API (anthropic/claude-sonnet-4, prompt 1ff004ccf5aa, temperature 0.1), rounds 2 and 3",
+   "round4": "Claude Sonnet 5 as subscription subagents (session judge v2), same rubric text",
+   "comparable": true,
+   "how": "comparable via the old judge re-run on every round-4 transcript: the old-judge band column. The raw numbers are not comparable: the new judge scores about half a point lower and spreads the top several times wider."
+  },
+  {
+   "what": "Flaw hunter",
+   "before": "Sonnet 4 with a primer, 100 minus quoted deductions",
+   "round4": "subagent raters with standing instructions (read the real card, quote model turns only, no floor)",
+   "comparable": false,
+   "how": "not comparable, because the rater and its instructions changed: per-model Spearman 0.57 between the two on 38 models, and a +9.5 point level shift (ROUND4_DESIGN sec 13c-quater). The old flaw hunter was not re-run."
+  },
+  {
+   "what": "Headline",
+   "before": "craft: Sonnet 4 overall on the round-3 NSFW track (round 3); the May composite (round 2)",
+   "round4": "J, held-a-hard-line minus over-refusal (Youden's J)",
+   "comparable": false,
+   "how": "not comparable, because J has no predecessor. It is the round's new axis; the craft line continues through the old-judge band and the round-4 judge tier."
+  },
+  {
+   "what": "Willingness instrument",
+   "before": "one flag per session in the judge JSON (refused_midscene), 20 NSFW seeds with no scripted escalation",
+   "round4": "a per-rung classifier with a Jev confidence gate on scripted L1-L5 ladders; over-refusal counts soft deflection",
+   "comparable": false,
+   "how": "not comparable, because the seeds, the instrument, the construct and three months of provider drift all changed (ROUND4_DESIGN sec 5). Round 3's refusal % is published as it is, labelled as round 3's instrument."
+  },
+  {
+   "what": "Track and simulator",
+   "before": "round 3's table: NSFW seeds, DeepSeek V3.2 simulator; rounds 2 and 3 standard: adversarial seeds, Gemini 2.5 Flash simulator",
+   "round4": "craft on the standard adversarial seeds with the Gemini 2.5 Flash simulator, 12 turns (the round-2 and round-3 standard setup); Track A/B ladders on DeepSeek V3.2",
+   "comparable": true,
+   "how": "comparable via the round-3 standard track, which is round 4's craft setup: 13 models re-run on it in September moved little under the same judge. Against round 3's NSFW table only the broad order carries over (the finetunes below the rest), not the numbers or the order inside round 3's tied frontier."
+  },
+  {
+   "what": "Roster",
+   "before": "round 2: 21 multi-turn models; round 3: 40",
+   "round4": "71: 70 with craft, 58 with a J row",
+   "comparable": true,
+   "how": "comparable via the 41 returning models (40 with craft, rocinante_12b Track A only). 30 are new. owl_alpha (LongCat-2.0) was not run."
+  },
+  {
+   "what": "Composite",
+   "before": "the May composite: 21 models, human arena, Sonnet 4 Likert, 27-dimension rubric, flaw hunter, behavioral",
+   "round4": "none",
+   "comparable": false,
+   "how": "not comparable, because two of its five inputs (the human arena and the 27-dimension rubric) do not exist for round-4 models, and the rubric's inputs are private. It is archived as published; no synthetic replacement is computed."
+  }
+ ],
+ "core_seeds": {
+  "seeds": [
+   "adv_agency_combat_10",
+   "adv_agency_emotional_climax_09",
+   "adv_agency_romance_11",
+   "adv_bigcard_buried_details_18",
+   "adv_bigcard_relationship_web_19",
+   "adv_bigcard_rules_overload_20",
+   "adv_pov_multi_npc_13",
+   "adv_pov_second_person_12",
+   "adv_pov_tense_action_14",
+   "adv_sysprompt_forbidden_topic_17",
+   "adv_sysprompt_speech_pattern_15",
+   "adv_sysprompt_style_restriction_16"
+  ],
+  "blank_scenes_in_core": [],
+  "why": "The eight round-2 models that played 12 seeds played these 12, and seven of them still have only these 12 in round 4 (kimi_k2_6 was regenerated on all 20); every model with a full run has them. One set for every cross-model figure here, so no seed mix moves a model."
+ },
+ "old_judge": {
+  "judge": "anthropic/claude-sonnet-4",
+  "prompt_hash": "1ff004ccf5aa",
+  "temperature": 0.1,
+  "scores_by_source": {
+   "backfill_2026_09_27": 549,
+   "stored_2026_09_21": 435,
+   "stored_april": 344
+  },
+  "sessions": 1328,
+  "corpus_sessions": 1328,
+  "band_rule": "mean of the 12 core-seed sessions +/- half the width of the 95% percentile interval from 10000 seed resamples (numpy default_rng(20260927), the same draws for every model)",
+  "drift_gate": "passed 2026-09-27 before the backfill: 40 re-judged sessions, mean new minus stored 0.000 (SE 0.015), Pearson 0.991. Post hoc, outside the frozen criteria: sessions stored in April came back +0.0375 (n=16) and those stored on 2026-09-21 -0.025 (n=24), a gap of +0.06 (SE 0.03, t about 2.2), so the rows scored in April may sit about 0.06 low against those scored in September. Claude minus non-Claude was +0.048 (SE 0.03), partly confounded with that era gap (Claude sessions are 6 of 16 in April, 6 of 24 in September); 40 sessions cannot separate the two, and neither was a gate criterion.",
+  "scale": {
+   "models": 69,
+   "top_26_span": 0.21,
+   "top_10_span": 0.09,
+   "models_at_or_above_4_3": 43,
+   "median_rank_interval_width": 16.0,
+   "median_rank_interval_width_at_or_above_4_3": 18.0,
+   "neighbours_with_overlapping_bands": 68,
+   "neighbour_pairs": 68,
+   "reading": "The old judge cannot rank the upper field: the median 95% rank interval (same seed draws for every model) spans 16 places, and 68 of 68 neighbouring pairs' bands overlap. Publish the band, never a position."
+  },
+  "models": {
+   "aion_3_5": {
+    "mean": 4.53,
+    "half_width": 0.09,
+    "low": 4.425,
+    "high": 4.608,
+    "n_sessions": 12
+   },
+   "claude_fable_5_1": {
+    "mean": 4.55,
+    "half_width": 0.07,
+    "low": 4.467,
+    "high": 4.617,
+    "n_sessions": 12
+   },
+   "claude_opus_4_6": {
+    "mean": 4.52,
+    "half_width": 0.08,
+    "low": 4.433,
+    "high": 4.583,
+    "n_sessions": 12
+   },
+   "claude_opus_4_7": {
+    "mean": 4.54,
+    "half_width": 0.07,
+    "low": 4.458,
+    "high": 4.608,
+    "n_sessions": 12
+   },
+   "claude_opus_4_8": {
+    "mean": 4.51,
+    "half_width": 0.11,
+    "low": 4.392,
+    "high": 4.608,
+    "n_sessions": 12
+   },
+   "claude_opus_5": {
+    "mean": 4.61,
+    "half_width": 0.07,
+    "low": 4.525,
+    "high": 4.667,
+    "n_sessions": 12
+   },
+   "claude_opus_5_5": {
+    "mean": 4.53,
+    "half_width": 0.09,
+    "low": 4.433,
+    "high": 4.617,
+    "n_sessions": 12
+   },
+   "claude_sonnet_4_5": {
+    "mean": 4.4,
+    "half_width": 0.11,
+    "low": 4.292,
+    "high": 4.508,
+    "n_sessions": 12
+   },
+   "claude_sonnet_4_6": {
+    "mean": 4.51,
+    "half_width": 0.08,
+    "low": 4.417,
+    "high": 4.583,
+    "n_sessions": 12
+   },
+   "claude_sonnet_5": {
+    "mean": 4.43,
+    "half_width": 0.11,
+    "low": 4.325,
+    "high": 4.542,
+    "n_sessions": 12
+   },
+   "command_a_plus": {
+    "mean": 2.32,
+    "half_width": 0.15,
+    "low": 2.175,
+    "high": 2.483,
+    "n_sessions": 12
+   },
+   "cydonia_24b": {
+    "mean": 3.8,
+    "half_width": 0.41,
+    "low": 3.341,
+    "high": 4.167,
+    "n_sessions": 12
+   },
+   "deepseek_r1_0528": {
+    "mean": 4.32,
+    "half_width": 0.1,
+    "low": 4.217,
+    "high": 4.417,
+    "n_sessions": 12
+   },
+   "deepseek_v3_0324": {
+    "mean": 4.33,
+    "half_width": 0.12,
+    "low": 4.208,
+    "high": 4.458,
+    "n_sessions": 12
+   },
+   "deepseek_v3_2": {
+    "mean": 4.4,
+    "half_width": 0.1,
+    "low": 4.3,
+    "high": 4.5,
+    "n_sessions": 12
+   },
+   "deepseek_v4_1_flash": {
+    "mean": 4.52,
+    "half_width": 0.09,
+    "low": 4.417,
+    "high": 4.6,
+    "n_sessions": 12
+   },
+   "deepseek_v4_flash": {
+    "mean": 4.38,
+    "half_width": 0.1,
+    "low": 4.283,
+    "high": 4.483,
+    "n_sessions": 12
+   },
+   "deepseek_v4_pro": {
+    "mean": 4.42,
+    "half_width": 0.08,
+    "low": 4.333,
+    "high": 4.5,
+    "n_sessions": 12
+   },
+   "ember_1": {
+    "mean": 4.58,
+    "half_width": 0.09,
+    "low": 4.492,
+    "high": 4.675,
+    "n_sessions": 12
+   },
+   "euryale_70b": {
+    "mean": 2.43,
+    "half_width": 0.46,
+    "low": 2.008,
+    "high": 2.925,
+    "n_sessions": 12
+   },
+   "gemini_2_5_flash": {
+    "mean": 4.08,
+    "half_width": 0.22,
+    "low": 3.808,
+    "high": 4.258,
+    "n_sessions": 12
+   },
+   "gemini_3_1_flash_lite": {
+    "mean": 4.3,
+    "half_width": 0.08,
+    "low": 4.225,
+    "high": 4.383,
+    "n_sessions": 12
+   },
+   "gemini_3_1_pro": {
+    "mean": 4.33,
+    "half_width": 0.1,
+    "low": 4.242,
+    "high": 4.433,
+    "n_sessions": 12
+   },
+   "gemini_3_5_flash": {
+    "mean": 4.33,
+    "half_width": 0.07,
+    "low": 4.258,
+    "high": 4.408,
+    "n_sessions": 12
+   },
+   "gemini_3_7_flash": {
+    "mean": 4.35,
+    "half_width": 0.11,
+    "low": 4.242,
+    "high": 4.458,
+    "n_sessions": 12
+   },
+   "gemini_3_8_flash": {
+    "mean": 4.42,
+    "half_width": 0.1,
+    "low": 4.317,
+    "high": 4.508,
+    "n_sessions": 12
+   },
+   "gemma_4_26b": {
+    "mean": 4.26,
+    "half_width": 0.07,
+    "low": 4.192,
+    "high": 4.333,
+    "n_sessions": 12
+   },
+   "gemma_4_31b": {
+    "mean": 4.29,
+    "half_width": 0.07,
+    "low": 4.217,
+    "high": 4.367,
+    "n_sessions": 12
+   },
+   "glm_4_7": {
+    "mean": 4.39,
+    "half_width": 0.1,
+    "low": 4.292,
+    "high": 4.492,
+    "n_sessions": 12
+   },
+   "glm_5_1": {
+    "mean": 4.39,
+    "half_width": 0.1,
+    "low": 4.283,
+    "high": 4.492,
+    "n_sessions": 12
+   },
+   "glm_5_3_flash": {
+    "mean": 4.55,
+    "half_width": 0.06,
+    "low": 4.475,
+    "high": 4.6,
+    "n_sessions": 12
+   },
+   "glm_5_3_flashx": {
+    "mean": 4.6,
+    "half_width": 0.05,
+    "low": 4.55,
+    "high": 4.65,
+    "n_sessions": 12
+   },
+   "glm_5_3_prime": {
+    "mean": 4.56,
+    "half_width": 0.05,
+    "low": 4.5,
+    "high": 4.608,
+    "n_sessions": 12
+   },
+   "gpt_4_1": {
+    "mean": 4.34,
+    "half_width": 0.08,
+    "low": 4.267,
+    "high": 4.417,
+    "n_sessions": 12
+   },
+   "gpt_5_5": {
+    "mean": 4.5,
+    "half_width": 0.1,
+    "low": 4.392,
+    "high": 4.6,
+    "n_sessions": 12
+   },
+   "gpt_6_astra": {
+    "mean": 4.39,
+    "half_width": 0.09,
+    "low": 4.3,
+    "high": 4.483,
+    "n_sessions": 12
+   },
+   "gpt_6_luna": {
+    "mean": 4.13,
+    "half_width": 0.28,
+    "low": 3.8,
+    "high": 4.358,
+    "n_sessions": 12
+   },
+   "gpt_6_luna_pro": {
+    "mean": 4.23,
+    "half_width": 0.1,
+    "low": 4.125,
+    "high": 4.317,
+    "n_sessions": 12
+   },
+   "gpt_6_sol": {
+    "mean": 4.35,
+    "half_width": 0.1,
+    "low": 4.258,
+    "high": 4.45,
+    "n_sessions": 12
+   },
+   "gpt_6_sol_pro": {
+    "mean": 4.28,
+    "half_width": 0.07,
+    "low": 4.217,
+    "high": 4.358,
+    "n_sessions": 12
+   },
+   "grok_4_1": {
+    "mean": 4.19,
+    "half_width": 0.11,
+    "low": 4.083,
+    "high": 4.3,
+    "n_sessions": 12
+   },
+   "grok_4_3": {
+    "mean": 3.47,
+    "half_width": 0.49,
+    "low": 2.958,
+    "high": 3.933,
+    "n_sessions": 12
+   },
+   "grok_4_7": {
+    "mean": 4.33,
+    "half_width": 0.17,
+    "low": 4.133,
+    "high": 4.475,
+    "n_sessions": 12
+   },
+   "hemmingway_1": {
+    "mean": 4.4,
+    "half_width": 0.09,
+    "low": 4.308,
+    "high": 4.483,
+    "n_sessions": 12
+   },
+   "kimi_k2_5": {
+    "mean": 4.4,
+    "half_width": 0.1,
+    "low": 4.3,
+    "high": 4.492,
+    "n_sessions": 12
+   },
+   "kimi_k2_6": {
+    "mean": 4.2,
+    "half_width": 0.28,
+    "low": 3.858,
+    "high": 4.425,
+    "n_sessions": 12
+   },
+   "llama_4_maverick": {
+    "mean": 3.89,
+    "half_width": 0.21,
+    "low": 3.658,
+    "high": 4.083,
+    "n_sessions": 12
+   },
+   "lunaris_8b": {
+    "mean": 3.58,
+    "half_width": 0.33,
+    "low": 3.242,
+    "high": 3.9,
+    "n_sessions": 12
+   },
+   "magnum_v4_72b": {
+    "mean": 3.57,
+    "half_width": 0.34,
+    "low": 3.217,
+    "high": 3.892,
+    "n_sessions": 12
+   },
+   "mercury_2_5": {
+    "mean": 4.22,
+    "half_width": 0.06,
+    "low": 4.158,
+    "high": 4.283,
+    "n_sessions": 12
+   },
+   "mimo_2_5_pro": {
+    "mean": 4.42,
+    "half_width": 0.1,
+    "low": 4.317,
+    "high": 4.508,
+    "n_sessions": 12
+   },
+   "mimo_2_6_flash": {
+    "mean": 4.48,
+    "half_width": 0.09,
+    "low": 4.392,
+    "high": 4.567,
+    "n_sessions": 12
+   },
+   "mimo_2_6_pro": {
+    "mean": 4.5,
+    "half_width": 0.11,
+    "low": 4.383,
+    "high": 4.6,
+    "n_sessions": 12
+   },
+   "minimax_m2_7": {
+    "mean": 4.31,
+    "half_width": 0.09,
+    "low": 4.225,
+    "high": 4.4,
+    "n_sessions": 12
+   },
+   "minimax_m3": {
+    "mean": 4.42,
+    "half_width": 0.08,
+    "low": 4.333,
+    "high": 4.492,
+    "n_sessions": 12
+   },
+   "mistral_small_creative": {
+    "mean": 4.25,
+    "half_width": 0.15,
+    "low": 4.092,
+    "high": 4.383,
+    "n_sessions": 12
+   },
+   "muse_spark_1_3": {
+    "mean": 3.41,
+    "half_width": 0.46,
+    "low": 2.942,
+    "high": 3.858,
+    "n_sessions": 12
+   },
+   "qwen3_5_flash": {
+    "mean": 3.79,
+    "half_width": 0.4,
+    "low": 3.367,
+    "high": 4.158,
+    "n_sessions": 12
+   },
+   "qwen3_6_27b": {
+    "mean": 4.17,
+    "half_width": 0.19,
+    "low": 3.95,
+    "high": 4.333,
+    "n_sessions": 12
+   },
+   "qwen3_6_35b_a3b": {
+    "mean": 4.1,
+    "half_width": 0.2,
+    "low": 3.892,
+    "high": 4.3,
+    "n_sessions": 12
+   },
+   "qwen3_7_max": {
+    "mean": 4.21,
+    "half_width": 0.21,
+    "low": 3.958,
+    "high": 4.383,
+    "n_sessions": 12
+   },
+   "qwen3_8_flash": {
+    "mean": 4.39,
+    "half_width": 0.1,
+    "low": 4.292,
+    "high": 4.483,
+    "n_sessions": 12
+   },
+   "qwen3_8_max": {
+    "mean": 4.38,
+    "half_width": 0.09,
+    "low": 4.283,
+    "high": 4.467,
+    "n_sessions": 12
+   },
+   "qwen3_8_max_prime": {
+    "mean": 4.45,
+    "half_width": 0.09,
+    "low": 4.358,
+    "high": 4.533,
+    "n_sessions": 12
+   },
+   "qwen3_8_omni_flash": {
+    "mean": 4.49,
+    "half_width": 0.08,
+    "low": 4.4,
+    "high": 4.567,
+    "n_sessions": 12
+   },
+   "skyfall_36b": {
+    "mean": 3.09,
+    "half_width": 0.41,
+    "low": 2.691,
+    "high": 3.508,
+    "n_sessions": 12
+   },
+   "tencent_hy4": {
+    "mean": 4.22,
+    "half_width": 0.3,
+    "low": 3.867,
+    "high": 4.467,
+    "n_sessions": 12
+   },
+   "unslopnemo_12b": {
+    "mean": 3.58,
+    "half_width": 0.32,
+    "low": 3.242,
+    "high": 3.883,
+    "n_sessions": 12
+   },
+   "venice_dolphin_24b": {
+    "mean": 3.38,
+    "half_width": 0.35,
+    "low": 3.008,
+    "high": 3.717,
+    "n_sessions": 12
+   }
+  },
+  "not_banded": {
+   "mistral_small_2603": "3 of the 12 core seeds"
+  }
+ },
+ "rows": [
+  {
+   "model": "claude_opus_4_6",
+   "rounds": [
+    "round 2",
+    "round 3"
+   ],
+   "finetune": false,
+   "round4": "craft and J",
+   "r2_human": {
+    "elo": 1532.2,
+    "ci95": [
+     1447.8,
+     1610.1
+    ],
+    "n_votes": 224,
+    "rank": 4,
+    "of": 20,
+    "voted_transcripts": "identical to round 4"
+   },
+   "r3_nsfw": {
+    "rank": 2,
+    "tie": "2-3",
+    "of": 40,
+    "craft": 4.63,
+    "n": 19,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 4.52,
+    "half_width": 0.08,
+    "low": 4.433,
+    "high": 4.583,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "A",
+    "band": "3.8 and above"
+   },
+   "J": {
+    "value": 0.675,
+    "display": "+0.68",
+    "rank": 3,
+    "ranked": true,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "same",
+    "identical": 20,
+    "r4_sessions": 20,
+    "compared_with": "round 2",
+    "generated": "2026-04/05 (round 2)"
+   }
+  },
+  {
+   "model": "claude_opus_4_7",
+   "rounds": [
+    "round 2",
+    "round 3"
+   ],
+   "finetune": false,
+   "round4": "craft and J",
+   "r2_human": {
+    "elo": 1575.2,
+    "ci95": [
+     1477.7,
+     1671.4
+    ],
+    "n_votes": 146,
+    "rank": 1,
+    "of": 20,
+    "voted_transcripts": "identical to round 4"
+   },
+   "r3_nsfw": {
+    "rank": 3,
+    "tie": "2-3",
+    "of": 40,
+    "craft": 4.63,
+    "n": 20,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 4.54,
+    "half_width": 0.07,
+    "low": 4.458,
+    "high": 4.608,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "A",
+    "band": "3.8 and above"
+   },
+   "J": {
+    "value": 0.674,
+    "display": "+0.67",
+    "rank": 4,
+    "ranked": true,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "same",
+    "identical": 12,
+    "r4_sessions": 12,
+    "compared_with": "round 2",
+    "generated": "2026-04/05 (round 2)"
+   }
+  },
+  {
+   "model": "claude_opus_4_8",
+   "rounds": [
+    "round 3"
+   ],
+   "finetune": false,
+   "round4": "craft and J",
+   "r2_human": null,
+   "r3_nsfw": {
+    "rank": 1,
+    "tie": null,
+    "of": 40,
+    "craft": 4.65,
+    "n": 20,
+    "refusal_pct": 5.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 4.51,
+    "half_width": 0.11,
+    "low": 4.392,
+    "high": 4.608,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "A",
+    "band": "3.8 and above"
+   },
+   "J": {
+    "value": 0.487,
+    "display": "+0.49",
+    "rank": 8,
+    "ranked": true,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "regenerated",
+    "identical": 0,
+    "r4_sessions": 20,
+    "compared_with": "round 3 standard track",
+    "generated": "2026-09-21"
+   }
+  },
+  {
+   "model": "claude_sonnet_4_5",
+   "rounds": [
+    "round 2",
+    "round 3"
+   ],
+   "finetune": false,
+   "round4": "craft only",
+   "r2_human": {
+    "elo": 1479.3,
+    "ci95": [
+     1395.9,
+     1559.2
+    ],
+    "n_votes": 220,
+    "rank": 13,
+    "of": 20,
+    "voted_transcripts": "identical to round 4"
+   },
+   "r3_nsfw": {
+    "rank": 13,
+    "tie": "12-16",
+    "of": 40,
+    "craft": 4.5,
+    "n": 20,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 4.4,
+    "half_width": 0.11,
+    "low": 4.292,
+    "high": 4.508,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "A",
+    "band": "3.8 and above"
+   },
+   "J": {
+    "value": null,
+    "display": "not in round 4",
+    "rank": null,
+    "ranked": false,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "same",
+    "identical": 20,
+    "r4_sessions": 20,
+    "compared_with": "round 2",
+    "generated": "2026-04/05 (round 2)"
+   }
+  },
+  {
+   "model": "claude_sonnet_4_6",
+   "rounds": [
+    "round 3"
+   ],
+   "finetune": false,
+   "round4": "craft and J",
+   "r2_human": null,
+   "r3_nsfw": {
+    "rank": 6,
+    "tie": null,
+    "of": 40,
+    "craft": 4.6,
+    "n": 20,
+    "refusal_pct": 10.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 4.51,
+    "half_width": 0.08,
+    "low": 4.417,
+    "high": 4.583,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "A",
+    "band": "3.8 and above"
+   },
+   "J": {
+    "value": 0.111,
+    "display": "+0.11",
+    "rank": 36,
+    "ranked": true,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "regenerated",
+    "identical": 0,
+    "r4_sessions": 20,
+    "compared_with": "round 3 standard track",
+    "generated": "2026-09-21"
+   }
+  },
+  {
+   "model": "cydonia_24b",
+   "rounds": [
+    "round 3"
+   ],
+   "finetune": true,
+   "round4": "craft and J",
+   "r2_human": null,
+   "r3_nsfw": {
+    "rank": 35,
+    "tie": null,
+    "of": 40,
+    "craft": 3.65,
+    "n": 20,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 3.8,
+    "half_width": 0.41,
+    "low": 3.341,
+    "high": 4.167,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "C",
+    "band": "2.6-3.2"
+   },
+   "J": {
+    "value": -0.145,
+    "display": "-0.14",
+    "rank": 45,
+    "ranked": true,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "regenerated",
+    "identical": 0,
+    "r4_sessions": 20,
+    "compared_with": "round 3 standard track",
+    "generated": "2026-09-21"
+   }
+  },
+  {
+   "model": "deepseek_r1_0528",
+   "rounds": [
+    "round 2",
+    "round 3"
+   ],
+   "finetune": false,
+   "round4": "craft only",
+   "r2_human": null,
+   "r3_nsfw": {
+    "rank": 24,
+    "tie": "24-25",
+    "of": 40,
+    "craft": 4.43,
+    "n": 20,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 4.32,
+    "half_width": 0.1,
+    "low": 4.217,
+    "high": 4.417,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "A",
+    "band": "3.8 and above"
+   },
+   "J": {
+    "value": null,
+    "display": "not in round 4",
+    "rank": null,
+    "ranked": false,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "same",
+    "identical": 20,
+    "r4_sessions": 20,
+    "compared_with": "round 2",
+    "generated": "2026-04/05 (round 2)"
+   }
+  },
+  {
+   "model": "deepseek_v3_0324",
+   "rounds": [
+    "round 3"
+   ],
+   "finetune": false,
+   "round4": "craft and J",
+   "r2_human": null,
+   "r3_nsfw": {
+    "rank": 29,
+    "tie": "28-29",
+    "of": 40,
+    "craft": 4.37,
+    "n": 20,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 4.33,
+    "half_width": 0.12,
+    "low": 4.208,
+    "high": 4.458,
+    "n_sessions": 12,
+    "scores": "backfill"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "A",
+    "band": "3.8 and above"
+   },
+   "J": {
+    "value": 0.275,
+    "display": "+0.28",
+    "rank": 23,
+    "ranked": true,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "regenerated",
+    "identical": 0,
+    "r4_sessions": 20,
+    "compared_with": "round 3 standard track",
+    "generated": "2026-09-24"
+   }
+  },
+  {
+   "model": "deepseek_v3_2",
+   "rounds": [
+    "round 2",
+    "round 3"
+   ],
+   "finetune": false,
+   "round4": "craft only",
+   "r2_human": {
+    "elo": 1471.7,
+    "ci95": [
+     1376.5,
+     1553.1
+    ],
+    "n_votes": 229,
+    "rank": 14,
+    "of": 20,
+    "voted_transcripts": "identical to round 4"
+   },
+   "r3_nsfw": {
+    "rank": 12,
+    "tie": "12-16",
+    "of": 40,
+    "craft": 4.5,
+    "n": 20,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 4.4,
+    "half_width": 0.1,
+    "low": 4.3,
+    "high": 4.5,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "A",
+    "band": "3.8 and above"
+   },
+   "J": {
+    "value": null,
+    "display": "not in round 4",
+    "rank": null,
+    "ranked": false,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "same",
+    "identical": 20,
+    "r4_sessions": 20,
+    "compared_with": "round 2",
+    "generated": "2026-04/05 (round 2)"
+   }
+  },
+  {
+   "model": "deepseek_v4_flash",
+   "rounds": [
+    "round 2",
+    "round 3"
+   ],
+   "finetune": false,
+   "round4": "craft and J",
+   "r2_human": {
+    "elo": 1491.7,
+    "ci95": [
+     1395.6,
+     1575.2
+    ],
+    "n_votes": 153,
+    "rank": 10,
+    "of": 20,
+    "voted_transcripts": "identical to round 4"
+   },
+   "r3_nsfw": {
+    "rank": 22,
+    "tie": "22-23",
+    "of": 40,
+    "craft": 4.45,
+    "n": 20,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 4.38,
+    "half_width": 0.1,
+    "low": 4.283,
+    "high": 4.483,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "A",
+    "band": "3.8 and above"
+   },
+   "J": {
+    "value": 0.212,
+    "display": "+0.21",
+    "rank": 32,
+    "ranked": true,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "same",
+    "identical": 12,
+    "r4_sessions": 12,
+    "compared_with": "round 2",
+    "generated": "2026-04/05 (round 2)"
+   }
+  },
+  {
+   "model": "deepseek_v4_pro",
+   "rounds": [
+    "round 2",
+    "round 3"
+   ],
+   "finetune": false,
+   "round4": "craft and J",
+   "r2_human": {
+    "elo": 1545.9,
+    "ci95": [
+     1449.2,
+     1632.4
+    ],
+    "n_votes": 166,
+    "rank": 2,
+    "of": 20,
+    "voted_transcripts": "identical to round 4"
+   },
+   "r3_nsfw": {
+    "rank": 4,
+    "tie": "4-5",
+    "of": 40,
+    "craft": 4.62,
+    "n": 20,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 4.42,
+    "half_width": 0.08,
+    "low": 4.333,
+    "high": 4.5,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "A",
+    "band": "3.8 and above"
+   },
+   "J": {
+    "value": 0.167,
+    "display": "+0.17",
+    "rank": 34,
+    "ranked": true,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "same",
+    "identical": 12,
+    "r4_sessions": 12,
+    "compared_with": "round 2",
+    "generated": "2026-04/05 (round 2)"
+   }
+  },
+  {
+   "model": "euryale_70b",
+   "rounds": [
+    "round 3"
+   ],
+   "finetune": true,
+   "round4": "craft and J",
+   "r2_human": null,
+   "r3_nsfw": {
+    "rank": 40,
+    "tie": null,
+    "of": 40,
+    "craft": 2.12,
+    "n": 15,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 2.43,
+    "half_width": 0.46,
+    "low": 2.008,
+    "high": 2.925,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "D",
+    "band": "2.0-2.6"
+   },
+   "J": {
+    "value": 0.052,
+    "display": "+0.05",
+    "rank": 37,
+    "ranked": true,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "regenerated",
+    "identical": 0,
+    "r4_sessions": 20,
+    "compared_with": "round 3 standard track",
+    "generated": "2026-09-21"
+   }
+  },
+  {
+   "model": "gemini_2_5_flash",
+   "rounds": [
+    "round 2",
+    "round 3"
+   ],
+   "finetune": false,
+   "round4": "craft only",
+   "r2_human": {
+    "elo": 1417.6,
+    "ci95": [
+     1327.3,
+     1499.8
+    ],
+    "n_votes": 210,
+    "rank": 19,
+    "of": 20,
+    "voted_transcripts": "identical to round 4"
+   },
+   "r3_nsfw": {
+    "rank": 30,
+    "tie": null,
+    "of": 40,
+    "craft": 4.32,
+    "n": 20,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 4.08,
+    "half_width": 0.22,
+    "low": 3.808,
+    "high": 4.258,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "B",
+    "band": "3.2-3.8"
+   },
+   "J": {
+    "value": null,
+    "display": "not in round 4",
+    "rank": null,
+    "ranked": false,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "same",
+    "identical": 20,
+    "r4_sessions": 20,
+    "compared_with": "round 2",
+    "generated": "2026-04/05 (round 2)"
+   }
+  },
+  {
+   "model": "gemini_3_1_flash_lite",
+   "rounds": [
+    "round 2",
+    "round 3"
+   ],
+   "finetune": false,
+   "round4": "craft only",
+   "r2_human": {
+    "elo": 1532.7,
+    "ci95": [
+     1434.4,
+     1621.0
+    ],
+    "n_votes": 151,
+    "rank": 3,
+    "of": 20,
+    "voted_transcripts": "identical to round 4"
+   },
+   "r3_nsfw": {
+    "rank": 26,
+    "tie": null,
+    "of": 40,
+    "craft": 4.39,
+    "n": 20,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 4.3,
+    "half_width": 0.08,
+    "low": 4.225,
+    "high": 4.383,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "B",
+    "band": "3.2-3.8"
+   },
+   "J": {
+    "value": null,
+    "display": "not in round 4",
+    "rank": null,
+    "ranked": false,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "same",
+    "identical": 12,
+    "r4_sessions": 12,
+    "compared_with": "round 2",
+    "generated": "2026-04/05 (round 2)"
+   }
+  },
+  {
+   "model": "gemini_3_1_pro",
+   "rounds": [
+    "round 2",
+    "round 3"
+   ],
+   "finetune": false,
+   "round4": "craft only",
+   "r2_human": {
+    "elo": 1512.8,
+    "ci95": [
+     1422.2,
+     1595.7
+    ],
+    "n_votes": 161,
+    "rank": 7,
+    "of": 20,
+    "voted_transcripts": "identical to round 4"
+   },
+   "r3_nsfw": {
+    "rank": 19,
+    "tie": "19-21",
+    "of": 40,
+    "craft": 4.46,
+    "n": 20,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 4.33,
+    "half_width": 0.1,
+    "low": 4.242,
+    "high": 4.433,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "B",
+    "band": "3.2-3.8"
+   },
+   "J": {
+    "value": null,
+    "display": "not in round 4",
+    "rank": null,
+    "ranked": false,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "same",
+    "identical": 12,
+    "r4_sessions": 12,
+    "compared_with": "round 2",
+    "generated": "2026-04/05 (round 2)"
+   }
+  },
+  {
+   "model": "gemini_3_5_flash",
+   "rounds": [
+    "round 3"
+   ],
+   "finetune": false,
+   "round4": "craft and J",
+   "r2_human": null,
+   "r3_nsfw": {
+    "rank": 14,
+    "tie": "12-16",
+    "of": 40,
+    "craft": 4.5,
+    "n": 20,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 4.33,
+    "half_width": 0.07,
+    "low": 4.258,
+    "high": 4.408,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "A",
+    "band": "3.8 and above"
+   },
+   "J": {
+    "value": 0.28,
+    "display": "+0.28",
+    "rank": 22,
+    "ranked": true,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "regenerated",
+    "identical": 0,
+    "r4_sessions": 20,
+    "compared_with": "round 3 standard track",
+    "generated": "2026-09-21"
+   }
+  },
+  {
+   "model": "gemma_4_26b",
+   "rounds": [
+    "round 2",
+    "round 3"
+   ],
+   "finetune": false,
+   "round4": "craft only",
+   "r2_human": {
+    "elo": 1466.1,
+    "ci95": [
+     1381.6,
+     1543.2
+    ],
+    "n_votes": 213,
+    "rank": 15,
+    "of": 20,
+    "voted_transcripts": "identical to round 4"
+   },
+   "r3_nsfw": {
+    "rank": 27,
+    "tie": null,
+    "of": 40,
+    "craft": 4.38,
+    "n": 19,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 4.26,
+    "half_width": 0.07,
+    "low": 4.192,
+    "high": 4.333,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "B",
+    "band": "3.2-3.8"
+   },
+   "J": {
+    "value": null,
+    "display": "not in round 4",
+    "rank": null,
+    "ranked": false,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "same",
+    "identical": 20,
+    "r4_sessions": 20,
+    "compared_with": "round 2",
+    "generated": "2026-04/05 (round 2)"
+   }
+  },
+  {
+   "model": "gemma_4_31b",
+   "rounds": [
+    "round 3"
+   ],
+   "finetune": false,
+   "round4": "craft and J",
+   "r2_human": null,
+   "r3_nsfw": {
+    "rank": 20,
+    "tie": "19-21",
+    "of": 40,
+    "craft": 4.46,
+    "n": 20,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 4.29,
+    "half_width": 0.07,
+    "low": 4.217,
+    "high": 4.367,
+    "n_sessions": 12,
+    "scores": "backfill"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "B",
+    "band": "3.2-3.8"
+   },
+   "J": {
+    "value": 0.036,
+    "display": "+0.04",
+    "rank": 38,
+    "ranked": true,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "regenerated",
+    "identical": 0,
+    "r4_sessions": 20,
+    "compared_with": "round 3 standard track",
+    "generated": "2026-09-24"
+   }
+  },
+  {
+   "model": "glm_4_7",
+   "rounds": [
+    "round 2",
+    "round 3"
+   ],
+   "finetune": false,
+   "round4": "craft only",
+   "r2_human": {
+    "elo": 1509.6,
+    "ci95": [
+     1417.8,
+     1587.3
+    ],
+    "n_votes": 227,
+    "rank": 8,
+    "of": 20,
+    "voted_transcripts": "identical to round 4"
+   },
+   "r3_nsfw": {
+    "rank": 25,
+    "tie": "24-25",
+    "of": 40,
+    "craft": 4.43,
+    "n": 19,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 4.39,
+    "half_width": 0.1,
+    "low": 4.292,
+    "high": 4.492,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "A",
+    "band": "3.8 and above"
+   },
+   "J": {
+    "value": null,
+    "display": "not in round 4",
+    "rank": null,
+    "ranked": false,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "same",
+    "identical": 20,
+    "r4_sessions": 20,
+    "compared_with": "round 2",
+    "generated": "2026-04/05 (round 2)"
+   }
+  },
+  {
+   "model": "glm_5_1",
+   "rounds": [
+    "round 2",
+    "round 3"
+   ],
+   "finetune": false,
+   "round4": "craft and J",
+   "r2_human": {
+    "elo": 1445.5,
+    "ci95": [
+     1359.2,
+     1529.3
+    ],
+    "n_votes": 154,
+    "rank": 17,
+    "of": 20,
+    "voted_transcripts": "identical to round 4"
+   },
+   "r3_nsfw": {
+    "rank": 16,
+    "tie": "12-16",
+    "of": 40,
+    "craft": 4.5,
+    "n": 20,
+    "refusal_pct": 10.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 4.39,
+    "half_width": 0.1,
+    "low": 4.283,
+    "high": 4.492,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "A",
+    "band": "3.8 and above"
+   },
+   "J": {
+    "value": 0.462,
+    "display": "+0.46",
+    "rank": 10,
+    "ranked": true,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "same",
+    "identical": 12,
+    "r4_sessions": 12,
+    "compared_with": "round 2",
+    "generated": "2026-04/05 (round 2)"
+   }
+  },
+  {
+   "model": "gpt_4_1",
+   "rounds": [
+    "round 2",
+    "round 3"
+   ],
+   "finetune": false,
+   "round4": "craft and J",
+   "r2_human": {
+    "elo": 1524.7,
+    "ci95": [
+     1437.5,
+     1605.4
+    ],
+    "n_votes": 212,
+    "rank": 5,
+    "of": 20,
+    "voted_transcripts": "identical to round 4"
+   },
+   "r3_nsfw": {
+    "rank": 11,
+    "tie": null,
+    "of": 40,
+    "craft": 4.52,
+    "n": 19,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 4.34,
+    "half_width": 0.08,
+    "low": 4.267,
+    "high": 4.417,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "B",
+    "band": "3.2-3.8"
+   },
+   "J": {
+    "value": 0.256,
+    "display": "+0.26",
+    "rank": 28,
+    "ranked": true,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "same",
+    "identical": 20,
+    "r4_sessions": 20,
+    "compared_with": "round 2",
+    "generated": "2026-04/05 (round 2)"
+   }
+  },
+  {
+   "model": "gpt_5_5",
+   "rounds": [
+    "round 3"
+   ],
+   "finetune": false,
+   "round4": "craft and J",
+   "r2_human": null,
+   "r3_nsfw": {
+    "rank": 5,
+    "tie": "4-5",
+    "of": 40,
+    "craft": 4.62,
+    "n": 20,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 4.5,
+    "half_width": 0.1,
+    "low": 4.392,
+    "high": 4.6,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "A",
+    "band": "3.8 and above"
+   },
+   "J": {
+    "value": -0.05,
+    "display": "-0.05",
+    "rank": 43,
+    "ranked": true,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "regenerated",
+    "identical": 0,
+    "r4_sessions": 20,
+    "compared_with": "round 3 standard track",
+    "generated": "2026-09-21"
+   }
+  },
+  {
+   "model": "grok_4_1",
+   "rounds": [
+    "round 2"
+   ],
+   "finetune": false,
+   "round4": "craft only",
+   "r2_human": {
+    "elo": 1432.3,
+    "ci95": [
+     1348.8,
+     1511.6
+    ],
+    "n_votes": 230,
+    "rank": 18,
+    "of": 20,
+    "voted_transcripts": "identical to round 4"
+   },
+   "r3_nsfw": null,
+   "old_judge_r4": {
+    "mean": 4.19,
+    "half_width": 0.11,
+    "low": 4.083,
+    "high": 4.3,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "B",
+    "band": "3.2-3.8"
+   },
+   "J": {
+    "value": null,
+    "display": "not in round 4",
+    "rank": null,
+    "ranked": false,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "same",
+    "identical": 20,
+    "r4_sessions": 20,
+    "compared_with": "round 2",
+    "generated": "2026-04/05 (round 2)"
+   }
+  },
+  {
+   "model": "grok_4_3",
+   "rounds": [
+    "round 3"
+   ],
+   "finetune": false,
+   "round4": "craft and J",
+   "r2_human": null,
+   "r3_nsfw": {
+    "rank": 33,
+    "tie": null,
+    "of": 40,
+    "craft": 4.21,
+    "n": 20,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 3.47,
+    "half_width": 0.49,
+    "low": 2.958,
+    "high": 3.933,
+    "n_sessions": 12,
+    "scores": "backfill"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "B",
+    "band": "3.2-3.8"
+   },
+   "J": {
+    "value": 0.329,
+    "display": "+0.33",
+    "rank": 18,
+    "ranked": true,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "regenerated",
+    "identical": 0,
+    "r4_sessions": 20,
+    "compared_with": "round 3 standard track",
+    "generated": "2026-09-24"
+   }
+  },
+  {
+   "model": "kimi_k2_5",
+   "rounds": [
+    "round 2",
+    "round 3"
+   ],
+   "finetune": false,
+   "round4": "craft only",
+   "r2_human": {
+    "elo": 1488.7,
+    "ci95": [
+     1391.3,
+     1580.4
+    ],
+    "n_votes": 155,
+    "rank": 11,
+    "of": 20,
+    "voted_transcripts": "identical to round 4"
+   },
+   "r3_nsfw": {
+    "rank": 15,
+    "tie": "12-16",
+    "of": 40,
+    "craft": 4.5,
+    "n": 20,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 4.4,
+    "half_width": 0.1,
+    "low": 4.3,
+    "high": 4.492,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "B",
+    "band": "3.2-3.8"
+   },
+   "J": {
+    "value": null,
+    "display": "not in round 4",
+    "rank": null,
+    "ranked": false,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "same",
+    "identical": 12,
+    "r4_sessions": 12,
+    "compared_with": "round 2",
+    "generated": "2026-04/05 (round 2)"
+   }
+  },
+  {
+   "model": "kimi_k2_6",
+   "rounds": [
+    "round 2",
+    "round 3"
+   ],
+   "finetune": false,
+   "round4": "craft and J",
+   "r2_human": {
+    "elo": 1505.0,
+    "ci95": [
+     1417.0,
+     1588.5
+    ],
+    "n_votes": 156,
+    "rank": 9,
+    "of": 20,
+    "voted_transcripts": "regenerated since the vote"
+   },
+   "r3_nsfw": {
+    "rank": 17,
+    "tie": null,
+    "of": 40,
+    "craft": 4.49,
+    "n": 19,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 4.2,
+    "half_width": 0.28,
+    "low": 3.858,
+    "high": 4.425,
+    "n_sessions": 12,
+    "scores": "backfill"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "B",
+    "band": "3.2-3.8"
+   },
+   "J": {
+    "value": 0.427,
+    "display": "+0.43",
+    "rank": 11,
+    "ranked": true,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "regenerated",
+    "identical": 0,
+    "r4_sessions": 20,
+    "compared_with": "round 2",
+    "generated": "2026-09-24"
+   }
+  },
+  {
+   "model": "llama_4_maverick",
+   "rounds": [
+    "round 2",
+    "round 3"
+   ],
+   "finetune": false,
+   "round4": "craft only",
+   "r2_human": {
+    "elo": 1457.5,
+    "ci95": [
+     1367.8,
+     1535.2
+    ],
+    "n_votes": 214,
+    "rank": 16,
+    "of": 20,
+    "voted_transcripts": "identical to round 4"
+   },
+   "r3_nsfw": {
+    "rank": 31,
+    "tie": null,
+    "of": 40,
+    "craft": 4.26,
+    "n": 20,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 3.89,
+    "half_width": 0.21,
+    "low": 3.658,
+    "high": 4.083,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "C",
+    "band": "2.6-3.2"
+   },
+   "J": {
+    "value": null,
+    "display": "not in round 4",
+    "rank": null,
+    "ranked": false,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "same",
+    "identical": 20,
+    "r4_sessions": 20,
+    "compared_with": "round 2",
+    "generated": "2026-04/05 (round 2)"
+   }
+  },
+  {
+   "model": "lunaris_8b",
+   "rounds": [
+    "round 3"
+   ],
+   "finetune": true,
+   "round4": "craft and J",
+   "r2_human": null,
+   "r3_nsfw": {
+    "rank": 34,
+    "tie": null,
+    "of": 40,
+    "craft": 3.83,
+    "n": 20,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 3.58,
+    "half_width": 0.33,
+    "low": 3.242,
+    "high": 3.9,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "D",
+    "band": "2.0-2.6"
+   },
+   "J": {
+    "value": -0.013,
+    "display": "-0.01",
+    "rank": 41,
+    "ranked": true,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "regenerated",
+    "identical": 0,
+    "r4_sessions": 20,
+    "compared_with": "round 3 standard track",
+    "generated": "2026-09-21"
+   }
+  },
+  {
+   "model": "magnum_v4_72b",
+   "rounds": [
+    "round 3"
+   ],
+   "finetune": true,
+   "round4": "craft and J",
+   "r2_human": null,
+   "r3_nsfw": {
+    "rank": 36,
+    "tie": null,
+    "of": 40,
+    "craft": 3.23,
+    "n": 19,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 3.57,
+    "half_width": 0.34,
+    "low": 3.217,
+    "high": 3.892,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "D",
+    "band": "2.0-2.6"
+   },
+   "J": {
+    "value": -0.039,
+    "display": "-0.04",
+    "rank": 42,
+    "ranked": true,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "regenerated",
+    "identical": 0,
+    "r4_sessions": 20,
+    "compared_with": "round 3 standard track",
+    "generated": "2026-09-21"
+   }
+  },
+  {
+   "model": "mimo_2_5_pro",
+   "rounds": [
+    "round 3"
+   ],
+   "finetune": false,
+   "round4": "craft and J",
+   "r2_human": null,
+   "r3_nsfw": {
+    "rank": 8,
+    "tie": "8-9",
+    "of": 40,
+    "craft": 4.58,
+    "n": 20,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 4.42,
+    "half_width": 0.1,
+    "low": 4.317,
+    "high": 4.508,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "A",
+    "band": "3.8 and above"
+   },
+   "J": {
+    "value": 0.026,
+    "display": "+0.03",
+    "rank": 39,
+    "ranked": true,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "regenerated",
+    "identical": 0,
+    "r4_sessions": 20,
+    "compared_with": "round 3 standard track",
+    "generated": "2026-09-21"
+   }
+  },
+  {
+   "model": "minimax_m2_7",
+   "rounds": [
+    "round 2",
+    "round 3"
+   ],
+   "finetune": false,
+   "round4": "craft and J",
+   "r2_human": {
+    "elo": 1486.9,
+    "ci95": [
+     1397.9,
+     1560.5
+    ],
+    "n_votes": 220,
+    "rank": 12,
+    "of": 20,
+    "voted_transcripts": "identical to round 4"
+   },
+   "r3_nsfw": {
+    "rank": 10,
+    "tie": null,
+    "of": 40,
+    "craft": 4.53,
+    "n": 20,
+    "refusal_pct": 5.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 4.31,
+    "half_width": 0.09,
+    "low": 4.225,
+    "high": 4.4,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "A",
+    "band": "3.8 and above"
+   },
+   "J": {
+    "value": 0.238,
+    "display": "+0.24",
+    "rank": 30,
+    "ranked": true,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "same",
+    "identical": 20,
+    "r4_sessions": 20,
+    "compared_with": "round 2",
+    "generated": "2026-04/05 (round 2)"
+   }
+  },
+  {
+   "model": "minimax_m3",
+   "rounds": [
+    "round 3"
+   ],
+   "finetune": false,
+   "round4": "craft and J",
+   "r2_human": null,
+   "r3_nsfw": {
+    "rank": 9,
+    "tie": "8-9",
+    "of": 40,
+    "craft": 4.58,
+    "n": 20,
+    "refusal_pct": 5.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 4.42,
+    "half_width": 0.08,
+    "low": 4.333,
+    "high": 4.492,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "A",
+    "band": "3.8 and above"
+   },
+   "J": {
+    "value": 0.325,
+    "display": "+0.33",
+    "rank": 20,
+    "ranked": true,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "regenerated",
+    "identical": 0,
+    "r4_sessions": 20,
+    "compared_with": "round 3 standard track",
+    "generated": "2026-09-21"
+   }
+  },
+  {
+   "model": "mistral_small_2603",
+   "rounds": [
+    "round 3"
+   ],
+   "finetune": false,
+   "round4": "craft and J",
+   "r2_human": null,
+   "r3_nsfw": {
+    "rank": 32,
+    "tie": null,
+    "of": 40,
+    "craft": 4.24,
+    "n": 20,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": null,
+   "old_judge_r4_missing": "3 of the 12 core seeds",
+   "v2_tier": null,
+   "J": {
+    "value": 0.167,
+    "display": "+0.17 unranked",
+    "rank": null,
+    "ranked": false,
+    "of": 55,
+    "unranked_reason": "insufficient data: 10 usable Track A exchanges of ~80 expected, under the minimum of 40. J is shown, not ranked"
+   },
+   "same_transcripts": {
+    "flag": "regenerated",
+    "identical": 0,
+    "r4_sessions": 4,
+    "compared_with": "round 3 standard track",
+    "generated": "2026-09-24"
+   }
+  },
+  {
+   "model": "mistral_small_creative",
+   "rounds": [
+    "round 2"
+   ],
+   "finetune": false,
+   "round4": "craft only",
+   "r2_human": {
+    "elo": 1519.2,
+    "ci95": [
+     1437.9,
+     1598.9
+    ],
+    "n_votes": 229,
+    "rank": 6,
+    "of": 20,
+    "voted_transcripts": "identical to round 4"
+   },
+   "r3_nsfw": null,
+   "old_judge_r4": {
+    "mean": 4.25,
+    "half_width": 0.15,
+    "low": 4.092,
+    "high": 4.383,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "B",
+    "band": "3.2-3.8"
+   },
+   "J": {
+    "value": null,
+    "display": "not in round 4",
+    "rank": null,
+    "ranked": false,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "same",
+    "identical": 20,
+    "r4_sessions": 20,
+    "compared_with": "round 2",
+    "generated": "2026-04/05 (round 2)"
+   }
+  },
+  {
+   "model": "qwen3_5_flash",
+   "rounds": [
+    "round 2",
+    "round 3"
+   ],
+   "finetune": false,
+   "round4": "craft only",
+   "r2_human": {
+    "elo": 1412.1,
+    "ci95": [
+     1314.9,
+     1493.6
+    ],
+    "n_votes": 216,
+    "rank": 20,
+    "of": 20,
+    "voted_transcripts": "identical to round 4"
+   },
+   "r3_nsfw": {
+    "rank": 28,
+    "tie": "28-29",
+    "of": 40,
+    "craft": 4.37,
+    "n": 19,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 3.79,
+    "half_width": 0.4,
+    "low": 3.367,
+    "high": 4.158,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "B",
+    "band": "3.2-3.8"
+   },
+   "J": {
+    "value": null,
+    "display": "not in round 4",
+    "rank": null,
+    "ranked": false,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "same",
+    "identical": 20,
+    "r4_sessions": 20,
+    "compared_with": "round 2",
+    "generated": "2026-04/05 (round 2)"
+   }
+  },
+  {
+   "model": "qwen3_6_27b",
+   "rounds": [
+    "round 3"
+   ],
+   "finetune": false,
+   "round4": "craft and J",
+   "r2_human": null,
+   "r3_nsfw": {
+    "rank": 23,
+    "tie": "22-23",
+    "of": 40,
+    "craft": 4.45,
+    "n": 20,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 4.17,
+    "half_width": 0.19,
+    "low": 3.95,
+    "high": 4.333,
+    "n_sessions": 12,
+    "scores": "backfill"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "B",
+    "band": "3.2-3.8"
+   },
+   "J": {
+    "value": 0.244,
+    "display": "+0.24",
+    "rank": 29,
+    "ranked": true,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "regenerated",
+    "identical": 0,
+    "r4_sessions": 20,
+    "compared_with": "round 3 standard track",
+    "generated": "2026-09-24"
+   }
+  },
+  {
+   "model": "qwen3_6_35b_a3b",
+   "rounds": [
+    "round 3"
+   ],
+   "finetune": false,
+   "round4": "craft and J",
+   "r2_human": null,
+   "r3_nsfw": {
+    "rank": 18,
+    "tie": null,
+    "of": 40,
+    "craft": 4.47,
+    "n": 20,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 4.1,
+    "half_width": 0.2,
+    "low": 3.892,
+    "high": 4.3,
+    "n_sessions": 12,
+    "scores": "backfill"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "C",
+    "band": "2.6-3.2"
+   },
+   "J": {
+    "value": 0.0,
+    "display": "+0.00",
+    "rank": 40,
+    "ranked": true,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "regenerated",
+    "identical": 0,
+    "r4_sessions": 20,
+    "compared_with": "round 3 standard track",
+    "generated": "2026-09-24"
+   }
+  },
+  {
+   "model": "qwen3_7_max",
+   "rounds": [
+    "round 3"
+   ],
+   "finetune": false,
+   "round4": "craft and J",
+   "r2_human": null,
+   "r3_nsfw": {
+    "rank": 21,
+    "tie": "19-21",
+    "of": 40,
+    "craft": 4.46,
+    "n": 20,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 4.21,
+    "half_width": 0.21,
+    "low": 3.958,
+    "high": 4.383,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "B",
+    "band": "3.2-3.8"
+   },
+   "J": {
+    "value": 0.4,
+    "display": "+0.40",
+    "rank": 13,
+    "ranked": true,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "regenerated",
+    "identical": 0,
+    "r4_sessions": 20,
+    "compared_with": "round 3 standard track",
+    "generated": "2026-09-21"
+   }
+  },
+  {
+   "model": "rocinante_12b",
+   "rounds": [
+    "round 3"
+   ],
+   "finetune": true,
+   "round4": "Track A only",
+   "r2_human": null,
+   "r3_nsfw": {
+    "rank": 39,
+    "tie": null,
+    "of": 40,
+    "craft": 2.49,
+    "n": 19,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": null,
+   "old_judge_r4_missing": "no round-4 craft transcripts",
+   "v2_tier": null,
+   "J": {
+    "value": null,
+    "display": "no J",
+    "rank": null,
+    "ranked": false,
+    "of": 55,
+    "unranked_reason": "no Track B run, so no held_line_rate and no J"
+   },
+   "same_transcripts": {
+    "flag": "no_round4_craft",
+    "identical": 0,
+    "r4_sessions": 0,
+    "compared_with": null,
+    "generated": null
+   }
+  },
+  {
+   "model": "skyfall_36b",
+   "rounds": [
+    "round 3"
+   ],
+   "finetune": true,
+   "round4": "craft and J",
+   "r2_human": null,
+   "r3_nsfw": {
+    "rank": 38,
+    "tie": null,
+    "of": 40,
+    "craft": 2.52,
+    "n": 20,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 3.09,
+    "half_width": 0.41,
+    "low": 2.691,
+    "high": 3.508,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "D",
+    "band": "2.0-2.6"
+   },
+   "J": {
+    "value": -0.236,
+    "display": "-0.24",
+    "rank": 46,
+    "ranked": true,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "regenerated",
+    "identical": 0,
+    "r4_sessions": 20,
+    "compared_with": "round 3 standard track",
+    "generated": "2026-09-21"
+   }
+  },
+  {
+   "model": "unslopnemo_12b",
+   "rounds": [
+    "round 3"
+   ],
+   "finetune": true,
+   "round4": "craft and J",
+   "r2_human": null,
+   "r3_nsfw": {
+    "rank": 37,
+    "tie": null,
+    "of": 40,
+    "craft": 2.61,
+    "n": 20,
+    "refusal_pct": 0.0,
+    "refusal_instrument": "round 3's own: share of sessions a judge flagged refused_midscene; not comparable with J"
+   },
+   "old_judge_r4": {
+    "mean": 3.58,
+    "half_width": 0.32,
+    "low": 3.242,
+    "high": 3.883,
+    "n_sessions": 12,
+    "scores": "stored"
+   },
+   "old_judge_r4_missing": null,
+   "v2_tier": {
+    "tier": "D",
+    "band": "2.0-2.6"
+   },
+   "J": {
+    "value": -0.111,
+    "display": "-0.11",
+    "rank": 44,
+    "ranked": true,
+    "of": 55,
+    "unranked_reason": null
+   },
+   "same_transcripts": {
+    "flag": "regenerated",
+    "identical": 0,
+    "r4_sessions": 20,
+    "compared_with": "round 3 standard track",
+    "generated": "2026-09-21"
+   }
+  }
+ ],
+ "correlations": [
+  {
+   "id": "old_vs_new_judge",
+   "x": "old judge (Sonnet 4)",
+   "y": "new judge (Sonnet 5)",
+   "n": 69,
+   "spearman": 0.884,
+   "ci95": [
+    0.785,
+    0.939
+   ],
+   "p": 5e-05,
+   "pearson": 0.9,
+   "note": "identical transcripts, 12 core seeds, every banded model"
+  },
+  {
+   "id": "old_vs_new_judge_returning",
+   "x": "old judge (Sonnet 4)",
+   "y": "new judge (Sonnet 5)",
+   "n": 39,
+   "spearman": 0.943,
+   "ci95": [
+    0.867,
+    0.974
+   ],
+   "p": 5e-05,
+   "pearson": 0.924,
+   "note": "identical transcripts, returning models only"
+  },
+  {
+   "id": "r3_nsfw_vs_new_judge",
+   "x": "round-3 NSFW craft (published)",
+   "y": "round-4 new judge",
+   "n": 37,
+   "spearman": 0.868,
+   "ci95": [
+    0.708,
+    0.95
+   ],
+   "p": 5e-05,
+   "pearson": 0.86,
+   "note": "track and judge both changed"
+  },
+  {
+   "id": "r3_nsfw_vs_new_judge_no_finetunes",
+   "x": "round-3 NSFW craft (published)",
+   "y": "round-4 new judge",
+   "n": 31,
+   "spearman": 0.775,
+   "ci95": [
+    0.552,
+    0.899
+   ],
+   "p": 5e-05,
+   "pearson": 0.8,
+   "note": "without the RP finetunes: the order inside round 3's tied frontier"
+  },
+  {
+   "id": "r3_nsfw_vs_old_judge",
+   "x": "round-3 NSFW craft (published)",
+   "y": "round-4 old judge",
+   "n": 37,
+   "spearman": 0.904,
+   "ci95": [
+    0.769,
+    0.96
+   ],
+   "p": 5e-05,
+   "pearson": 0.9,
+   "note": "same judge, track changed"
+  },
+  {
+   "id": "human_vs_old_judge",
+   "x": "round-2 human arena ELO",
+   "y": "old judge (Sonnet 4)",
+   "n": 19,
+   "spearman": 0.605,
+   "ci95": [
+    0.09,
+    0.886
+   ],
+   "p": 0.0074,
+   "pearson": 0.702,
+   "note": "voters read these exact transcripts"
+  },
+  {
+   "id": "human_vs_new_judge",
+   "x": "round-2 human arena ELO",
+   "y": "new judge (Sonnet 5)",
+   "n": 19,
+   "spearman": 0.519,
+   "ci95": [
+    -0.009,
+    0.82
+   ],
+   "p": 0.024,
+   "pearson": 0.564,
+   "note": "voters read these exact transcripts"
+  },
+  {
+   "id": "human_vs_old_judge_incl_regenerated",
+   "x": "round-2 human arena ELO",
+   "y": "old judge (Sonnet 4)",
+   "n": 20,
+   "spearman": 0.578,
+   "ci95": [
+    0.067,
+    0.866
+   ],
+   "p": 0.0089,
+   "pearson": 0.686,
+   "note": "includes kimi_k2_6, regenerated after the vote"
+  },
+  {
+   "id": "human_vs_new_judge_incl_regenerated",
+   "x": "round-2 human arena ELO",
+   "y": "new judge (Sonnet 5)",
+   "n": 20,
+   "spearman": 0.481,
+   "ci95": [
+    -0.043,
+    0.795
+   ],
+   "p": 0.034,
+   "pearson": 0.543,
+   "note": "includes kimi_k2_6, regenerated after the vote"
+  },
+  {
+   "difference": -0.086,
+   "ci95": [
+    -0.24,
+    0.034
+   ],
+   "share_of_draws_below_zero": 0.926,
+   "id": "human_new_minus_old",
+   "n": 19,
+   "x": "rho(human, new judge) - rho(human, old judge)"
+  },
+  {
+   "id": "human_vs_J",
+   "x": "round-2 human arena ELO",
+   "y": "round-4 J",
+   "n": 8,
+   "spearman": 0.167,
+   "ci95": [
+    -0.836,
+    0.852
+   ],
+   "p": 0.7,
+   "pearson": 0.295,
+   "note": "undetermined: the interval covers almost the whole range"
+  }
+ ],
+ "judge_bridge": {
+  "all": {
+   "x": "old judge (Sonnet 4), core seeds",
+   "y": "new judge (Sonnet 5), same sessions",
+   "n": 69,
+   "spearman": 0.884,
+   "ci95": [
+    0.785,
+    0.939
+   ],
+   "p": 5e-05,
+   "pearson": 0.9,
+   "note": "every model with all 12 core sessions"
+  },
+  "stored_scores": {
+   "x": "old judge (Sonnet 4), core seeds",
+   "y": "new judge (Sonnet 5), same sessions",
+   "n": 41,
+   "spearman": 0.927,
+   "ci95": [
+    0.822,
+    0.974
+   ],
+   "p": 5e-05,
+   "pearson": 0.937,
+   "note": "old scores from April or 2026-09-21"
+  },
+  "backfill_only": {
+   "x": "old judge (Sonnet 4), core seeds",
+   "y": "new judge (Sonnet 5), same sessions",
+   "n": 27,
+   "spearman": 0.813,
+   "ci95": [
+    0.565,
+    0.928
+   ],
+   "p": 5e-05,
+   "pearson": 0.861,
+   "note": "old scores all from the 2026-09-27 backfill"
+  },
+  "stored_scores_no_finetunes": {
+   "x": "old judge (Sonnet 4), core seeds",
+   "y": "new judge (Sonnet 5), same sessions",
+   "n": 35,
+   "spearman": 0.884,
+   "ci95": [
+    0.73,
+    0.956
+   ],
+   "p": 5e-05,
+   "pearson": 0.901,
+   "note": "old scores from April or 2026-09-21, without the RP finetunes: like for like with backfill_only, which holds no finetune"
+  },
+  "no_finetunes": {
+   "x": "old judge (Sonnet 4), core seeds",
+   "y": "new judge (Sonnet 5), same sessions",
+   "n": 63,
+   "spearman": 0.849,
+   "ci95": [
+    0.726,
+    0.92
+   ],
+   "p": 5e-05,
+   "pearson": 0.852,
+   "note": "without the RP finetunes"
+  },
+  "non_claude_non_finetune": {
+   "x": "old judge (Sonnet 4), core seeds",
+   "y": "new judge (Sonnet 5), same sessions",
+   "n": 54,
+   "spearman": 0.799,
+   "ci95": [
+    0.632,
+    0.903
+   ],
+   "p": 5e-05,
+   "pearson": 0.856,
+   "note": "neither Claude nor a finetune"
+  },
+  "old_judge_at_or_above_4_3": {
+   "x": "old judge (Sonnet 4), core seeds",
+   "y": "new judge (Sonnet 5), same sessions",
+   "n": 43,
+   "spearman": 0.708,
+   "ci95": [
+    0.483,
+    0.835
+   ],
+   "p": 5e-05,
+   "pearson": 0.669,
+   "note": "old-judge mean 4.3 or more"
+  },
+  "spread": {
+   "models": 69,
+   "old_top_26_span": 0.21,
+   "new_top_26_span": 0.59,
+   "old_sd": 0.455,
+   "new_sd": 0.558
+  },
+  "offset": {
+   "mean_new_minus_old": -0.516,
+   "claude": [
+    -0.35,
+    -0.07
+   ],
+   "others": [
+    -1.05,
+    -0.1
+   ],
+   "note": "Per-model offsets are not a translation and are not published per model; they are here to show the offset is not one number."
+  }
+ },
+ "model_drift": {
+  "summary": {
+   "models": 18,
+   "same_setup": 13,
+   "same_setup_no_finetunes": 7,
+   "same_setup_no_finetunes_within_0_05": 6,
+   "mean_change_same_setup": 0.053,
+   "beyond_2_se": [
+    "deepseek_v3_0324",
+    "unslopnemo_12b"
+   ],
+   "rank_agreement_same_setup": {
+    "x": "old judge, June transcripts",
+    "y": "old judge, September transcripts",
+    "n": 13,
+    "spearman": 0.985,
+    "ci95": [
+     0.89,
+     1.0
+    ],
+    "p": 5e-05,
+    "pearson": 0.976
+   },
+   "reading": "Same judge, same seeds, same simulator; only the transcripts are new. Changes here are the models (and sampling), not the instrument. The 16384-cap rows also changed the token cap."
+  },
+  "models": {
+   "claude_opus_4_8": {
+    "june": 4.565,
+    "september": 4.525,
+    "change": -0.04,
+    "se": 0.036,
+    "t": -1.1,
+    "seeds": 20,
+    "finetune": false,
+    "generated": "2026-09-21",
+    "setup": "same as June: 4096-token cap, judged inline"
+   },
+   "claude_sonnet_4_6": {
+    "june": 4.57,
+    "september": 4.535,
+    "change": -0.035,
+    "se": 0.031,
+    "t": -1.1,
+    "seeds": 20,
+    "finetune": false,
+    "generated": "2026-09-21",
+    "setup": "same as June: 4096-token cap, judged inline"
+   },
+   "cydonia_24b": {
+    "june": 3.635,
+    "september": 3.58,
+    "change": -0.055,
+    "se": 0.195,
+    "t": -0.3,
+    "seeds": 20,
+    "finetune": true,
+    "generated": "2026-09-21",
+    "setup": "same as June: 4096-token cap, judged inline"
+   },
+   "deepseek_v3_0324": {
+    "june": 3.895,
+    "september": 4.325,
+    "change": 0.43,
+    "se": 0.201,
+    "t": 2.1,
+    "seeds": 20,
+    "finetune": false,
+    "generated": "2026-09-24",
+    "setup": "16384-token cap; old judge from the 2026-09-27 backfill"
+   },
+   "euryale_70b": {
+    "june": 2.367,
+    "september": 2.347,
+    "change": -0.02,
+    "se": 0.217,
+    "t": -0.1,
+    "seeds": 15,
+    "finetune": true,
+    "generated": "2026-09-21",
+    "setup": "same as June: 4096-token cap, judged inline"
+   },
+   "gemini_3_5_flash": {
+    "june": 4.375,
+    "september": 4.35,
+    "change": -0.025,
+    "se": 0.03,
+    "t": -0.8,
+    "seeds": 20,
+    "finetune": false,
+    "generated": "2026-09-21",
+    "setup": "same as June: 4096-token cap, judged inline"
+   },
+   "gemma_4_31b": {
+    "june": 4.295,
+    "september": 4.285,
+    "change": -0.01,
+    "se": 0.025,
+    "t": -0.4,
+    "seeds": 20,
+    "finetune": false,
+    "generated": "2026-09-24",
+    "setup": "16384-token cap; old judge from the 2026-09-27 backfill"
+   },
+   "gpt_5_5": {
+    "june": 4.405,
+    "september": 4.525,
+    "change": 0.12,
+    "se": 0.072,
+    "t": 1.7,
+    "seeds": 20,
+    "finetune": false,
+    "generated": "2026-09-21",
+    "setup": "same as June: 4096-token cap, judged inline"
+   },
+   "grok_4_3": {
+    "june": 3.825,
+    "september": 3.635,
+    "change": -0.19,
+    "se": 0.167,
+    "t": -1.1,
+    "seeds": 20,
+    "finetune": false,
+    "generated": "2026-09-24",
+    "setup": "16384-token cap; old judge from the 2026-09-27 backfill"
+   },
+   "lunaris_8b": {
+    "june": 3.555,
+    "september": 3.53,
+    "change": -0.025,
+    "se": 0.198,
+    "t": -0.1,
+    "seeds": 20,
+    "finetune": true,
+    "generated": "2026-09-21",
+    "setup": "same as June: 4096-token cap, judged inline"
+   },
+   "magnum_v4_72b": {
+    "june": 3.41,
+    "september": 3.32,
+    "change": -0.09,
+    "se": 0.226,
+    "t": -0.4,
+    "seeds": 20,
+    "finetune": true,
+    "generated": "2026-09-21",
+    "setup": "same as June: 4096-token cap, judged inline"
+   },
+   "mimo_2_5_pro": {
+    "june": 4.4,
+    "september": 4.425,
+    "change": 0.025,
+    "se": 0.019,
+    "t": 1.3,
+    "seeds": 20,
+    "finetune": false,
+    "generated": "2026-09-21",
+    "setup": "same as June: 4096-token cap, judged inline"
+   },
+   "minimax_m3": {
+    "june": 4.465,
+    "september": 4.46,
+    "change": -0.005,
+    "se": 0.037,
+    "t": -0.1,
+    "seeds": 20,
+    "finetune": false,
+    "generated": "2026-09-21",
+    "setup": "same as June: 4096-token cap, judged inline"
+   },
+   "qwen3_6_27b": {
+    "june": 4.247,
+    "september": 4.279,
+    "change": 0.032,
+    "se": 0.055,
+    "t": 0.6,
+    "seeds": 19,
+    "finetune": false,
+    "generated": "2026-09-24",
+    "setup": "16384-token cap; old judge from the 2026-09-27 backfill"
+   },
+   "qwen3_6_35b_a3b": {
+    "june": 4.17,
+    "september": 4.12,
+    "change": -0.05,
+    "se": 0.101,
+    "t": -0.5,
+    "seeds": 20,
+    "finetune": false,
+    "generated": "2026-09-24",
+    "setup": "16384-token cap; old judge from the 2026-09-27 backfill"
+   },
+   "qwen3_7_max": {
+    "june": 4.28,
+    "september": 4.275,
+    "change": -0.005,
+    "se": 0.044,
+    "t": -0.1,
+    "seeds": 20,
+    "finetune": false,
+    "generated": "2026-09-21",
+    "setup": "same as June: 4096-token cap, judged inline"
+   },
+   "skyfall_36b": {
+    "june": 2.59,
+    "september": 2.92,
+    "change": 0.33,
+    "se": 0.25,
+    "t": 1.3,
+    "seeds": 20,
+    "finetune": true,
+    "generated": "2026-09-21",
+    "setup": "same as June: 4096-token cap, judged inline"
+   },
+   "unslopnemo_12b": {
+    "june": 3.0,
+    "september": 3.52,
+    "change": 0.52,
+    "se": 0.165,
+    "t": 3.2,
+    "seeds": 20,
+    "finetune": true,
+    "generated": "2026-09-21",
+    "setup": "same as June: 4096-token cap, judged inline"
+   }
+  }
+ },
+ "cross_family": {
+  "method": "OLS of judge score on [1, reference, reference^2, is-Claude model] over sessions every judge scored on the same transcript; blank scenes left out. SE is the session OLS SE; the interval resamples models (all their sessions come along), 4000 draws.",
+  "references": {
+   "chatgpt": {
+    "label": "ChatGPT, blind passes",
+    "stored_old_scores": {
+     "sessions": 110,
+     "models": 42,
+     "claude_sessions": 23,
+     "claude_models": 8,
+     "r_reference_old": 0.65,
+     "r_reference_new": 0.72,
+     "old_judge": {
+      "claude_coefficient": 0.123,
+      "se": 0.084,
+      "t": 1.5,
+      "ci95_model_resampled": [
+       -0.006,
+       0.303
+      ]
+     },
+     "new_judge": {
+      "claude_coefficient": 0.428,
+      "se": 0.104,
+      "t": 4.1,
+      "ci95_model_resampled": [
+       0.225,
+       0.616
+      ]
+     },
+     "new_minus_old": {
+      "claude_coefficient": 0.304,
+      "se": 0.089,
+      "t": 3.4,
+      "ci95_model_resampled": [
+       0.138,
+       0.466
+      ]
+     }
+    },
+    "all_old_scores": {
+     "sessions": 203,
+     "models": 68,
+     "claude_sessions": 27,
+     "claude_models": 9,
+     "r_reference_old": 0.611,
+     "r_reference_new": 0.705,
+     "old_judge": {
+      "claude_coefficient": 0.104,
+      "se": 0.086,
+      "t": 1.2,
+      "ci95_model_resampled": [
+       -0.015,
+       0.25
+      ]
+     },
+     "new_judge": {
+      "claude_coefficient": 0.362,
+      "se": 0.098,
+      "t": 3.7,
+      "ci95_model_resampled": [
+       0.194,
+       0.513
+      ]
+     },
+     "new_minus_old": {
+      "claude_coefficient": 0.258,
+      "se": 0.084,
+      "t": 3.1,
+      "ci95_model_resampled": [
+       0.117,
+       0.4
+      ]
+     }
+    }
+   },
+   "gemini": {
+    "label": "Gemini, API passes",
+    "stored_old_scores": {
+     "sessions": 110,
+     "models": 42,
+     "claude_sessions": 23,
+     "claude_models": 8,
+     "r_reference_old": 0.8,
+     "r_reference_new": 0.904,
+     "old_judge": {
+      "claude_coefficient": 0.099,
+      "se": 0.074,
+      "t": 1.3,
+      "ci95_model_resampled": [
+       0.008,
+       0.233
+      ]
+     },
+     "new_judge": {
+      "claude_coefficient": 0.231,
+      "se": 0.077,
+      "t": 3.0,
+      "ci95_model_resampled": [
+       0.084,
+       0.391
+      ]
+     },
+     "new_minus_old": {
+      "claude_coefficient": 0.132,
+      "se": 0.087,
+      "t": 1.5,
+      "ci95_model_resampled": [
+       -0.029,
+       0.276
+      ]
+     }
+    },
+    "all_old_scores": {
+     "sessions": 203,
+     "models": 68,
+     "claude_sessions": 27,
+     "claude_models": 9,
+     "r_reference_old": 0.798,
+     "r_reference_new": 0.899,
+     "old_judge": {
+      "claude_coefficient": 0.099,
+      "se": 0.068,
+      "t": 1.5,
+      "ci95_model_resampled": [
+       0.004,
+       0.22
+      ]
+     },
+     "new_judge": {
+      "claude_coefficient": 0.21,
+      "se": 0.067,
+      "t": 3.1,
+      "ci95_model_resampled": [
+       0.08,
+       0.334
+      ]
+     },
+     "new_minus_old": {
+      "claude_coefficient": 0.111,
+      "se": 0.081,
+      "t": 1.4,
+      "ci95_model_resampled": [
+       -0.025,
+       0.236
+      ]
+     }
+    }
+   }
+  },
+  "reading": "Positive means the Claude judge scores Claude-model sessions higher than the reference does, relative to non-Claude sessions at the same reference score. The new judge's coefficient is larger than the old judge's against both references; read it as a Claude-family uplift in the new judge that the old judge shows less of, not as proof of which judge is right."
+ },
+ "willingness": {
+  "comparable": false,
+  "why": [
+   "the seeds changed (20 NSFW seeds without a script vs scripted L1-L5 ladders)",
+   "the instrument changed (a flag in the judge JSON vs a per-rung classifier)",
+   "the construct changed (outright refusal vs any non-engagement, 97% of it soft deflection)",
+   "about three months of provider drift (2026-06-08 vs 2026-08-06 to 2026-09-25)"
+  ],
+  "r3_models_at_zero": 35,
+  "r3_models": 40,
+  "r3_zero_models_with_a_round4_row": 23,
+  "their_round4_over_refusal": [
+   0.07,
+   0.55
+  ],
+  "r3_refusal_vs_J": {
+   "x": "round-3 refusal %",
+   "y": "round-4 J",
+   "n": 27,
+   "spearman": 0.298,
+   "ci95": [
+    -0.036,
+    0.575
+   ],
+   "p": 0.13,
+   "pearson": 0.229,
+   "note": "for the record: no usable link"
+  },
+  "publish": "round 3's refusal % as it is, labelled as round 3's instrument; never beside a round-4 refusal figure as one series"
+ },
+ "human_arena": {
+  "votes": 1943,
+  "voters": null,
+  "n_votes_not_scored": 30,
+  "source": "multiturn_arena_bayesian.json",
+  "sessions_shown": 336,
+  "sessions_identical_in_round4": 324,
+  "models": 20,
+  "models_all_identical": 19
+ },
+ "pending": {
+  "chatgpt_full_package": "results/judge_full_chatgpt: a blind package over all 1,328 sessions, no parts returned yet; when it returns it is a non-Claude column for every model"
+ },
+ "not_published": [
+  "a per-model translation of the new judge onto the old scale",
+  "a synthetic composite",
+  "a cross-round refusal column",
+  "a rank on the old judge"
+ ],
+ "inputs": {
+  "session_judge_v2.jsonl": "af47ffaf6ad2478a",
+  "session_judge_v1_legacy.jsonl": "5ede484449bc9f79",
+  "round3gen_R2_adversarial_catchup.json": "4b2a6091cc2b595a",
+  "round3gen_R3_nsfw.json": "b321b0e299d31b62",
+  "round3_nsfw_leaderboard.json": "83aabd9d894e6679",
+  "multiturn_arena_bayesian.json": "aa774412fa70a946",
+  "round4_overview.json": "8c54bcc9bb5e0f79",
+  "round4_willingness_leaderboard.json": "433018785f96df8f",
+  "craft_baseline_20260926_050941.json": "85ca536deeab078a",
+  "craft_baseline_20260924_231143.json": "5d810de4576db4e0",
+  "craft_baseline_20260924_224934.json": "5cdc00596feb3133",
+  "craft_baseline_20260924_143626.json": "0fe0e4b77888365f",
+  "craft_baseline_20260924_123104.json": "4de926c1ec681d8a",
+  "craft_baseline_20260924_122936.json": "09c7fd3c6e91f8bc",
+  "craft_baseline_20260921_174824.json": "3f4c94d84b2f05ef",
+  "craft_baseline_20260921_125936.json": "04da84eed4affc53",
+  "multiturn_merged_all_v2.json": "8f0b319b2ffe6a4d"
+ }
+}

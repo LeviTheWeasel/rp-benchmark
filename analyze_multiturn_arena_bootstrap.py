@@ -70,15 +70,22 @@ def fit_bt(votes_a, votes_b, votes_o, n_models, sigma=PRIOR_SIGMA):
 
 
 def main():
-    raw = []
-    with open("data/multiturn_arena_votes.jsonl") as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
-            raw.append(json.loads(line))
+    # The same scored set as the MCMC analyzer, so the two stay comparable.
+    from analyze_multiturn_arena import load_rows
+    raw = load_rows()
 
     print(f"Loaded {len(raw)} multi-turn arena votes")
+    # Resampling needs a voter per vote. The public round CSV has no voter
+    # ids and the repo stores none raw (data/multiturn_arena_votes.README.md);
+    # grouping on a missing id would make the whole file one "voter" and
+    # print CIs that look valid. HMAC pseudonyms are enough.
+    missing = sum(1 for v in raw if not v.get("voter_id"))
+    if missing:
+        raise SystemExit(
+            f"{missing} of {len(raw)} votes carry no voter_id; the "
+            "voter-clustered bootstrap cannot run. results/"
+            "multiturn_arena_bootstrap.json still describes the 1,262-vote "
+            "pull of 2026-06-04.")
 
     # Group votes by voter for cluster-resampling
     by_voter = defaultdict(list)

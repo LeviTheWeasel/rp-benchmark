@@ -54,7 +54,7 @@
         "mean": 3.96,
         "floor": 1.2,
         "n": 5,
-        "rank": 30
+        "rank": 28
       }
     },
     "subjective_dimensions": {
@@ -71,7 +71,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 9
+    "avg_failure_rank": 8.71
   },
   "claude_opus_4_6": {
     "community": {
@@ -92,7 +92,7 @@
         "mean": 4.55,
         "floor": 4.5,
         "n": 4,
-        "rank": 6
+        "rank": 5
       },
       "F2_pov_tense": {
         "mean": 4.47,
@@ -110,7 +110,7 @@
         "mean": 4.1,
         "floor": 4.1,
         "n": 1,
-        "rank": 27
+        "rank": 24
       },
       "F12_instruction_drift": {
         "mean": 4.47,
@@ -145,7 +145,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 8.86
+    "avg_failure_rank": 8.29
   },
   "claude_opus_4_7": {
     "community": {
@@ -222,13 +222,13 @@
         "mean": 4.47,
         "floor": 4.2,
         "n": 4,
-        "rank": 12
+        "rank": 11
       },
       "F2_pov_tense": {
         "mean": 4.37,
         "floor": 4.2,
         "n": 3,
-        "rank": 9
+        "rank": 8
       },
       "F3_lore_contradiction": {
         "mean": 4.6,
@@ -240,7 +240,7 @@
         "mean": 4.2,
         "floor": 4.2,
         "n": 1,
-        "rank": 21
+        "rank": 19
       },
       "F12_instruction_drift": {
         "mean": 4.6,
@@ -275,7 +275,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 7.71
+    "avg_failure_rank": 7.14
   },
   "claude_opus_5": {
     "community": {
@@ -332,7 +332,7 @@
         "mean": 3.9,
         "floor": 1.2,
         "n": 5,
-        "rank": 31
+        "rank": 29
       }
     },
     "subjective_dimensions": {
@@ -349,7 +349,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 6.14
+    "avg_failure_rank": 5.86
   },
   "claude_sonnet_4_5": {
     "community": {
@@ -370,31 +370,31 @@
         "mean": 4.5,
         "floor": 4.3,
         "n": 4,
-        "rank": 9
+        "rank": 8
       },
       "F2_pov_tense": {
         "mean": 4.2,
         "floor": 4.1,
         "n": 3,
-        "rank": 25
+        "rank": 22
       },
       "F3_lore_contradiction": {
         "mean": 4.2,
         "floor": 4.2,
         "n": 1,
-        "rank": 25
+        "rank": 23
       },
       "F8_narrative_momentum": {
         "mean": 4.2,
         "floor": 4.2,
         "n": 1,
-        "rank": 13
+        "rank": 11
       },
       "F12_instruction_drift": {
         "mean": 4.3,
         "floor": 4.1,
         "n": 3,
-        "rank": 19
+        "rank": 18
       },
       "F13_context_attention_loss": {
         "mean": 4.6,
@@ -423,7 +423,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 14.71
+    "avg_failure_rank": 13.43
   },
   "claude_sonnet_4_6": {
     "community": {
@@ -444,7 +444,7 @@
         "mean": 4.42,
         "floor": 4.2,
         "n": 4,
-        "rank": 23
+        "rank": 21
       },
       "F2_pov_tense": {
         "mean": 4.5,
@@ -497,7 +497,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 7
+    "avg_failure_rank": 6.71
   },
   "claude_sonnet_5": {
     "community": {
@@ -518,13 +518,13 @@
         "mean": 4.47,
         "floor": 4.2,
         "n": 4,
-        "rank": 13
+        "rank": 12
       },
       "F2_pov_tense": {
         "mean": 4.37,
         "floor": 4.2,
         "n": 3,
-        "rank": 8
+        "rank": 7
       },
       "F3_lore_contradiction": {
         "mean": 4.5,
@@ -536,7 +536,7 @@
         "mean": 4.2,
         "floor": 4.2,
         "n": 1,
-        "rank": 18
+        "rank": 16
       },
       "F12_instruction_drift": {
         "mean": 4.33,
@@ -571,7 +571,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 10.14
+    "avg_failure_rank": 9.57
   },
   "cydonia_24b": {
     "community": {
@@ -592,43 +592,43 @@
         "mean": 3.85,
         "floor": 2.5,
         "n": 4,
-        "rank": 36
+        "rank": 34
       },
       "F2_pov_tense": {
         "mean": 4.13,
         "floor": 4.0,
         "n": 3,
-        "rank": 35
+        "rank": 32
       },
       "F3_lore_contradiction": {
         "mean": 4.2,
         "floor": 4.2,
         "n": 1,
-        "rank": 31
+        "rank": 28
       },
       "F8_narrative_momentum": {
         "mean": 2.7,
         "floor": 2.7,
         "n": 1,
-        "rank": 35
+        "rank": 32
       },
       "F12_instruction_drift": {
         "mean": 2.77,
         "floor": 2.2,
         "n": 3,
-        "rank": 45
+        "rank": 41
       },
       "F13_context_attention_loss": {
         "mean": 4.0,
         "floor": 3.6,
         "n": 3,
-        "rank": 40
+        "rank": 36
       },
       "Other": {
         "mean": 3.32,
         "floor": 2.0,
         "n": 5,
-        "rank": 33
+        "rank": 31
       }
     },
     "subjective_dimensions": {
@@ -645,7 +645,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 36.43
+    "avg_failure_rank": 33.43
   },
   "deepseek_r1_0528": {
     "community": {
@@ -666,31 +666,31 @@
         "mean": 4.42,
         "floor": 4.1,
         "n": 4,
-        "rank": 22
+        "rank": 20
       },
       "F2_pov_tense": {
         "mean": 4.2,
         "floor": 4.1,
         "n": 3,
-        "rank": 31
+        "rank": 28
       },
       "F3_lore_contradiction": {
         "mean": 4.3,
         "floor": 4.3,
         "n": 1,
-        "rank": 23
+        "rank": 21
       },
       "F8_narrative_momentum": {
         "mean": 4.2,
         "floor": 4.2,
         "n": 1,
-        "rank": 17
+        "rank": 15
       },
       "F12_instruction_drift": {
         "mean": 4.17,
         "floor": 4.1,
         "n": 3,
-        "rank": 36
+        "rank": 33
       },
       "F13_context_attention_loss": {
         "mean": 4.5,
@@ -702,7 +702,7 @@
         "mean": 4.34,
         "floor": 4.1,
         "n": 5,
-        "rank": 23
+        "rank": 22
       }
     },
     "subjective_dimensions": {
@@ -719,7 +719,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 24.71
+    "avg_failure_rank": 22.86
   },
   "deepseek_v3_2": {
     "community": {
@@ -740,13 +740,13 @@
         "mean": 4.38,
         "floor": 4.2,
         "n": 4,
-        "rank": 27
+        "rank": 25
       },
       "F2_pov_tense": {
         "mean": 4.27,
         "floor": 4.2,
         "n": 3,
-        "rank": 14
+        "rank": 13
       },
       "F3_lore_contradiction": {
         "mean": 4.5,
@@ -758,13 +758,13 @@
         "mean": 4.2,
         "floor": 4.2,
         "n": 1,
-        "rank": 15
+        "rank": 13
       },
       "F12_instruction_drift": {
         "mean": 4.3,
         "floor": 4.2,
         "n": 3,
-        "rank": 21
+        "rank": 20
       },
       "F13_context_attention_loss": {
         "mean": 4.6,
@@ -776,7 +776,7 @@
         "mean": 4.4,
         "floor": 4.3,
         "n": 5,
-        "rank": 18
+        "rank": 17
       }
     },
     "subjective_dimensions": {
@@ -793,7 +793,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 15.43
+    "avg_failure_rank": 14.43
   },
   "deepseek_v4_1_flash": {
     "community": {
@@ -807,7 +807,7 @@
     },
     "multiturn_llm_judge": {
       "overall_mean": 4.55,
-      "n_sessions": 20
+      "n_sessions": 19
     },
     "failure_modes": {
       "F1_agency": {
@@ -847,24 +847,24 @@
         "rank": 16
       },
       "Other": {
-        "mean": 4.64,
+        "mean": 4.65,
         "floor": 4.6,
-        "n": 5,
+        "n": 4,
         "rank": 1
       }
     },
     "subjective_dimensions": {
       "engagement": {
         "mean": 4.68,
-        "n": 20
+        "n": 19
       },
       "tone_consistency": {
         "mean": 4.75,
-        "n": 20
+        "n": 19
       },
       "collaboration": {
         "mean": 4.51,
-        "n": 20
+        "n": 19
       }
     },
     "avg_failure_rank": 6.43
@@ -888,19 +888,19 @@
         "mean": 4.5,
         "floor": 4.2,
         "n": 3,
-        "rank": 10
+        "rank": 9
       },
       "F2_pov_tense": {
         "mean": 4.2,
         "floor": 4.2,
         "n": 3,
-        "rank": 28
+        "rank": 25
       },
       "F12_instruction_drift": {
         "mean": 4.3,
         "floor": 4.3,
         "n": 3,
-        "rank": 24
+        "rank": 23
       },
       "F13_context_attention_loss": {
         "mean": 4.53,
@@ -923,7 +923,7 @@
         "n": 12
       }
     },
-    "avg_failure_rank": 19.75
+    "avg_failure_rank": 18.5
   },
   "deepseek_v4_pro": {
     "community": {
@@ -944,13 +944,13 @@
         "mean": 4.4,
         "floor": 4.2,
         "n": 3,
-        "rank": 25
+        "rank": 23
       },
       "F2_pov_tense": {
         "mean": 4.3,
         "floor": 4.2,
         "n": 3,
-        "rank": 12
+        "rank": 11
       },
       "F12_instruction_drift": {
         "mean": 4.4,
@@ -979,7 +979,7 @@
         "n": 12
       }
     },
-    "avg_failure_rank": 15.5
+    "avg_failure_rank": 14.75
   },
   "euryale_70b": {
     "community": {
@@ -1000,43 +1000,43 @@
         "mean": 2.2,
         "floor": 1.8,
         "n": 4,
-        "rank": 46
+        "rank": 42
       },
       "F2_pov_tense": {
         "mean": 1.83,
         "floor": 1.5,
         "n": 3,
-        "rank": 46
+        "rank": 42
       },
       "F3_lore_contradiction": {
         "mean": 3.4,
         "floor": 3.4,
         "n": 1,
-        "rank": 36
+        "rank": 33
       },
       "F8_narrative_momentum": {
         "mean": 1.2,
         "floor": 1.2,
         "n": 1,
-        "rank": 39
+        "rank": 35
       },
       "F12_instruction_drift": {
         "mean": 2.6,
         "floor": 2.0,
         "n": 3,
-        "rank": 47
+        "rank": 42
       },
       "F13_context_attention_loss": {
         "mean": 3.3,
         "floor": 2.3,
         "n": 3,
-        "rank": 45
+        "rank": 41
       },
       "Other": {
         "mean": 2.08,
         "floor": 1.8,
         "n": 5,
-        "rank": 38
+        "rank": 35
       }
     },
     "subjective_dimensions": {
@@ -1053,7 +1053,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 42.43
+    "avg_failure_rank": 38.57
   },
   "gemini_2_5_flash": {
     "community": {
@@ -1074,43 +1074,43 @@
         "mean": 3.95,
         "floor": 2.8,
         "n": 4,
-        "rank": 35
+        "rank": 33
       },
       "F2_pov_tense": {
         "mean": 4.03,
         "floor": 3.7,
         "n": 3,
-        "rank": 37
+        "rank": 34
       },
       "F3_lore_contradiction": {
         "mean": 4.1,
         "floor": 4.1,
         "n": 1,
-        "rank": 32
+        "rank": 29
       },
       "F8_narrative_momentum": {
         "mean": 4.2,
         "floor": 4.2,
         "n": 1,
-        "rank": 14
+        "rank": 12
       },
       "F12_instruction_drift": {
         "mean": 4.2,
         "floor": 4.2,
         "n": 3,
-        "rank": 34
+        "rank": 31
       },
       "F13_context_attention_loss": {
         "mean": 4.23,
         "floor": 4.2,
         "n": 3,
-        "rank": 35
+        "rank": 32
       },
       "Other": {
         "mean": 4.26,
         "floor": 4.2,
         "n": 5,
-        "rank": 24
+        "rank": 23
       }
     },
     "subjective_dimensions": {
@@ -1127,7 +1127,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 30.14
+    "avg_failure_rank": 27.71
   },
   "gemini_3_1_flash_lite": {
     "community": {
@@ -1148,25 +1148,25 @@
         "mean": 4.33,
         "floor": 4.2,
         "n": 3,
-        "rank": 29
+        "rank": 27
       },
       "F2_pov_tense": {
         "mean": 4.23,
         "floor": 4.2,
         "n": 3,
-        "rank": 21
+        "rank": 19
       },
       "F12_instruction_drift": {
         "mean": 4.3,
         "floor": 4.2,
         "n": 3,
-        "rank": 25
+        "rank": 24
       },
       "F13_context_attention_loss": {
         "mean": 4.33,
         "floor": 4.2,
         "n": 3,
-        "rank": 32
+        "rank": 29
       }
     },
     "subjective_dimensions": {
@@ -1183,7 +1183,7 @@
         "n": 12
       }
     },
-    "avg_failure_rank": 26.75
+    "avg_failure_rank": 24.75
   },
   "gemini_3_1_pro": {
     "community": {
@@ -1204,13 +1204,13 @@
         "mean": 4.43,
         "floor": 4.1,
         "n": 3,
-        "rank": 21
+        "rank": 19
       },
       "F2_pov_tense": {
         "mean": 4.2,
         "floor": 4.2,
         "n": 3,
-        "rank": 30
+        "rank": 27
       },
       "F12_instruction_drift": {
         "mean": 4.33,
@@ -1222,7 +1222,7 @@
         "mean": 4.37,
         "floor": 4.2,
         "n": 3,
-        "rank": 30
+        "rank": 27
       }
     },
     "subjective_dimensions": {
@@ -1239,7 +1239,7 @@
         "n": 12
       }
     },
-    "avg_failure_rank": 23.75
+    "avg_failure_rank": 21.75
   },
   "gemini_3_5_flash": {
     "community": {
@@ -1260,13 +1260,13 @@
         "mean": 4.33,
         "floor": 4.2,
         "n": 4,
-        "rank": 31
+        "rank": 29
       },
       "F2_pov_tense": {
         "mean": 4.23,
         "floor": 4.2,
         "n": 3,
-        "rank": 22
+        "rank": 20
       },
       "F3_lore_contradiction": {
         "mean": 4.5,
@@ -1278,13 +1278,13 @@
         "mean": 4.2,
         "floor": 4.2,
         "n": 1,
-        "rank": 19
+        "rank": 17
       },
       "F12_instruction_drift": {
         "mean": 4.3,
         "floor": 4.2,
         "n": 3,
-        "rank": 27
+        "rank": 25
       },
       "F13_context_attention_loss": {
         "mean": 4.43,
@@ -1313,7 +1313,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 21.86
+    "avg_failure_rank": 20.71
   },
   "gemini_3_7_flash": {
     "community": {
@@ -1334,13 +1334,13 @@
         "mean": 4.47,
         "floor": 4.3,
         "n": 4,
-        "rank": 14
+        "rank": 13
       },
       "F2_pov_tense": {
         "mean": 4.2,
         "floor": 4.1,
         "n": 3,
-        "rank": 32
+        "rank": 29
       },
       "F3_lore_contradiction": {
         "mean": 4.6,
@@ -1352,7 +1352,7 @@
         "mean": 4.1,
         "floor": 4.1,
         "n": 1,
-        "rank": 30
+        "rank": 27
       },
       "F12_instruction_drift": {
         "mean": 4.33,
@@ -1364,7 +1364,7 @@
         "mean": 4.4,
         "floor": 4.1,
         "n": 3,
-        "rank": 29
+        "rank": 26
       },
       "Other": {
         "mean": 4.48,
@@ -1387,7 +1387,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 19.86
+    "avg_failure_rank": 18.43
   },
   "gemini_3_8_flash": {
     "community": {
@@ -1408,13 +1408,13 @@
         "mean": 4.45,
         "floor": 4.3,
         "n": 4,
-        "rank": 18
+        "rank": 17
       },
       "F2_pov_tense": {
         "mean": 4.37,
         "floor": 4.2,
         "n": 3,
-        "rank": 10
+        "rank": 9
       },
       "F3_lore_contradiction": {
         "mean": 4.5,
@@ -1426,7 +1426,7 @@
         "mean": 4.2,
         "floor": 4.2,
         "n": 1,
-        "rank": 20
+        "rank": 18
       },
       "F12_instruction_drift": {
         "mean": 4.33,
@@ -1461,7 +1461,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 15.29
+    "avg_failure_rank": 14.71
   },
   "gemma_4_26b": {
     "community": {
@@ -1482,43 +1482,43 @@
         "mean": 4.25,
         "floor": 4.1,
         "n": 4,
-        "rank": 33
+        "rank": 31
       },
       "F2_pov_tense": {
         "mean": 4.2,
         "floor": 4.1,
         "n": 3,
-        "rank": 26
+        "rank": 23
       },
       "F3_lore_contradiction": {
         "mean": 4.3,
         "floor": 4.3,
         "n": 1,
-        "rank": 22
+        "rank": 20
       },
       "F8_narrative_momentum": {
         "mean": 4.2,
         "floor": 4.2,
         "n": 1,
-        "rank": 16
+        "rank": 14
       },
       "F12_instruction_drift": {
         "mean": 4.3,
         "floor": 4.2,
         "n": 3,
-        "rank": 23
+        "rank": 22
       },
       "F13_context_attention_loss": {
         "mean": 4.33,
         "floor": 4.2,
         "n": 3,
-        "rank": 31
+        "rank": 28
       },
       "Other": {
         "mean": 4.36,
         "floor": 4.1,
         "n": 5,
-        "rank": 21
+        "rank": 20
       }
     },
     "subjective_dimensions": {
@@ -1535,7 +1535,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 24.57
+    "avg_failure_rank": 22.57
   },
   "glm_4_7": {
     "community": {
@@ -1556,31 +1556,31 @@
         "mean": 4.38,
         "floor": 4.2,
         "n": 4,
-        "rank": 28
+        "rank": 26
       },
       "F2_pov_tense": {
         "mean": 4.27,
         "floor": 4.2,
         "n": 3,
-        "rank": 15
+        "rank": 14
       },
       "F3_lore_contradiction": {
         "mean": 4.2,
         "floor": 4.2,
         "n": 1,
-        "rank": 26
+        "rank": 24
       },
       "F8_narrative_momentum": {
         "mean": 4.1,
         "floor": 4.1,
         "n": 1,
-        "rank": 24
+        "rank": 21
       },
       "F12_instruction_drift": {
         "mean": 4.3,
         "floor": 4.2,
         "n": 3,
-        "rank": 22
+        "rank": 21
       },
       "F13_context_attention_loss": {
         "mean": 4.57,
@@ -1609,7 +1609,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 20.14
+    "avg_failure_rank": 18.86
   },
   "glm_5_1": {
     "community": {
@@ -1630,13 +1630,13 @@
         "mean": 4.5,
         "floor": 4.3,
         "n": 3,
-        "rank": 11
+        "rank": 10
       },
       "F2_pov_tense": {
         "mean": 4.17,
         "floor": 4.1,
         "n": 3,
-        "rank": 34
+        "rank": 31
       },
       "F12_instruction_drift": {
         "mean": 4.33,
@@ -1665,81 +1665,7 @@
         "n": 12
       }
     },
-    "avg_failure_rank": 17.5
-  },
-  "glm_5_3_flash": {
-    "community": {
-      "rank": null,
-      "elo": null,
-      "stability": null,
-      "overall_winrate": null,
-      "sfw_winrate": null,
-      "nsfw_winrate": null,
-      "n_votes": null
-    },
-    "multiturn_llm_judge": {
-      "overall_mean": 3.44,
-      "n_sessions": 20
-    },
-    "failure_modes": {
-      "F1_agency": {
-        "mean": 3.55,
-        "floor": 1.5,
-        "n": 4,
-        "rank": 41
-      },
-      "F2_pov_tense": {
-        "mean": 2.63,
-        "floor": 1.5,
-        "n": 3,
-        "rank": 45
-      },
-      "F3_lore_contradiction": {
-        "mean": 4.2,
-        "floor": 4.2,
-        "n": 1,
-        "rank": 30
-      },
-      "F8_narrative_momentum": {
-        "mean": 4.3,
-        "floor": 4.3,
-        "n": 1,
-        "rank": 11
-      },
-      "F12_instruction_drift": {
-        "mean": 3.03,
-        "floor": 1.5,
-        "n": 3,
-        "rank": 44
-      },
-      "F13_context_attention_loss": {
-        "mean": 4.2,
-        "floor": 4.2,
-        "n": 3,
-        "rank": 37
-      },
-      "Other": {
-        "mean": 3.28,
-        "floor": 1.5,
-        "n": 5,
-        "rank": 34
-      }
-    },
-    "subjective_dimensions": {
-      "engagement": {
-        "mean": 3.43,
-        "n": 20
-      },
-      "tone_consistency": {
-        "mean": 3.58,
-        "n": 20
-      },
-      "collaboration": {
-        "mean": 3.16,
-        "n": 20
-      }
-    },
-    "avg_failure_rank": 34.57
+    "avg_failure_rank": 16.5
   },
   "gpt_4_1": {
     "community": {
@@ -1760,31 +1686,31 @@
         "mean": 4.38,
         "floor": 4.2,
         "n": 4,
-        "rank": 26
+        "rank": 24
       },
       "F2_pov_tense": {
         "mean": 4.23,
         "floor": 4.2,
         "n": 3,
-        "rank": 19
+        "rank": 17
       },
       "F3_lore_contradiction": {
         "mean": 4.3,
         "floor": 4.3,
         "n": 1,
-        "rank": 20
+        "rank": 18
       },
       "F8_narrative_momentum": {
         "mean": 4.3,
         "floor": 4.3,
         "n": 1,
-        "rank": 8
+        "rank": 7
       },
       "F12_instruction_drift": {
         "mean": 4.3,
         "floor": 4.2,
         "n": 3,
-        "rank": 20
+        "rank": 19
       },
       "F13_context_attention_loss": {
         "mean": 4.43,
@@ -1796,7 +1722,7 @@
         "mean": 4.36,
         "floor": 4.2,
         "n": 5,
-        "rank": 20
+        "rank": 19
       }
     },
     "subjective_dimensions": {
@@ -1813,7 +1739,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 19.43
+    "avg_failure_rank": 18.14
   },
   "gpt_5_5": {
     "community": {
@@ -1834,13 +1760,13 @@
         "mean": 4.53,
         "floor": 4.3,
         "n": 4,
-        "rank": 8
+        "rank": 7
       },
       "F2_pov_tense": {
         "mean": 4.3,
         "floor": 4.2,
         "n": 3,
-        "rank": 13
+        "rank": 12
       },
       "F3_lore_contradiction": {
         "mean": 4.5,
@@ -1887,7 +1813,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 7.57
+    "avg_failure_rank": 7.29
   },
   "gpt_6_astra": {
     "community": {
@@ -1908,13 +1834,13 @@
         "mean": 4.55,
         "floor": 4.5,
         "n": 4,
-        "rank": 7
+        "rank": 6
       },
       "F2_pov_tense": {
         "mean": 4.27,
         "floor": 4.2,
         "n": 3,
-        "rank": 17
+        "rank": 15
       },
       "F3_lore_contradiction": {
         "mean": 4.5,
@@ -1926,13 +1852,13 @@
         "mean": 4.1,
         "floor": 4.1,
         "n": 1,
-        "rank": 31
+        "rank": 28
       },
       "F12_instruction_drift": {
         "mean": 4.3,
         "floor": 4.2,
         "n": 3,
-        "rank": 28
+        "rank": 26
       },
       "F13_context_attention_loss": {
         "mean": 4.43,
@@ -1961,7 +1887,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 18.57
+    "avg_failure_rank": 17.43
   },
   "grok_4_1": {
     "community": {
@@ -1982,43 +1908,43 @@
         "mean": 4.33,
         "floor": 4.2,
         "n": 4,
-        "rank": 30
+        "rank": 28
       },
       "F2_pov_tense": {
         "mean": 4.1,
         "floor": 4.0,
         "n": 3,
-        "rank": 36
+        "rank": 33
       },
       "F3_lore_contradiction": {
         "mean": 4.2,
         "floor": 4.2,
         "n": 1,
-        "rank": 29
+        "rank": 27
       },
       "F8_narrative_momentum": {
         "mean": 3.8,
         "floor": 3.8,
         "n": 1,
-        "rank": 33
+        "rank": 30
       },
       "F12_instruction_drift": {
         "mean": 4.23,
         "floor": 4.1,
         "n": 3,
-        "rank": 32
+        "rank": 29
       },
       "F13_context_attention_loss": {
         "mean": 4.07,
         "floor": 3.8,
         "n": 3,
-        "rank": 39
+        "rank": 35
       },
       "Other": {
         "mean": 4.26,
         "floor": 4.1,
         "n": 5,
-        "rank": 25
+        "rank": 24
       }
     },
     "subjective_dimensions": {
@@ -2035,7 +1961,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 32
+    "avg_failure_rank": 29.43
   },
   "hemmingway_1": {
     "community": {
@@ -2056,13 +1982,13 @@
         "mean": 4.42,
         "floor": 4.3,
         "n": 4,
-        "rank": 24
+        "rank": 22
       },
       "F2_pov_tense": {
         "mean": 4.27,
         "floor": 4.2,
         "n": 3,
-        "rank": 18
+        "rank": 16
       },
       "F3_lore_contradiction": {
         "mean": 4.6,
@@ -2074,13 +2000,13 @@
         "mean": 4.3,
         "floor": 4.3,
         "n": 1,
-        "rank": 12
+        "rank": 10
       },
       "F12_instruction_drift": {
         "mean": 4.3,
         "floor": 4.2,
         "n": 3,
-        "rank": 29
+        "rank": 27
       },
       "F13_context_attention_loss": {
         "mean": 4.6,
@@ -2109,7 +2035,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 16
+    "avg_failure_rank": 14.86
   },
   "kimi_k2_5": {
     "community": {
@@ -2130,13 +2056,13 @@
         "mean": 4.47,
         "floor": 4.3,
         "n": 3,
-        "rank": 16
+        "rank": 15
       },
       "F2_pov_tense": {
         "mean": 4.2,
         "floor": 4.1,
         "n": 3,
-        "rank": 29
+        "rank": 26
       },
       "F12_instruction_drift": {
         "mean": 4.37,
@@ -2165,63 +2091,7 @@
         "n": 12
       }
     },
-    "avg_failure_rank": 17.5
-  },
-  "kimi_k2_6": {
-    "community": {
-      "rank": null,
-      "elo": null,
-      "stability": null,
-      "overall_winrate": null,
-      "sfw_winrate": null,
-      "nsfw_winrate": null,
-      "n_votes": null
-    },
-    "multiturn_llm_judge": {
-      "overall_mean": 4.18,
-      "n_sessions": 12
-    },
-    "failure_modes": {
-      "F1_agency": {
-        "mean": 3.77,
-        "floor": 2.5,
-        "n": 3,
-        "rank": 39
-      },
-      "F2_pov_tense": {
-        "mean": 4.27,
-        "floor": 4.2,
-        "n": 3,
-        "rank": 16
-      },
-      "F12_instruction_drift": {
-        "mean": 4.3,
-        "floor": 4.2,
-        "n": 3,
-        "rank": 26
-      },
-      "F13_context_attention_loss": {
-        "mean": 4.4,
-        "floor": 4.2,
-        "n": 3,
-        "rank": 27
-      }
-    },
-    "subjective_dimensions": {
-      "engagement": {
-        "mean": 4.44,
-        "n": 12
-      },
-      "tone_consistency": {
-        "mean": 4.39,
-        "n": 12
-      },
-      "collaboration": {
-        "mean": 4.12,
-        "n": 12
-      }
-    },
-    "avg_failure_rank": 27
+    "avg_failure_rank": 16.5
   },
   "llama_4_maverick": {
     "community": {
@@ -2242,43 +2112,43 @@
         "mean": 3.83,
         "floor": 3.0,
         "n": 4,
-        "rank": 37
+        "rank": 35
       },
       "F2_pov_tense": {
         "mean": 3.93,
         "floor": 3.8,
         "n": 3,
-        "rank": 39
+        "rank": 36
       },
       "F3_lore_contradiction": {
         "mean": 4.1,
         "floor": 4.1,
         "n": 1,
-        "rank": 33
+        "rank": 30
       },
       "F8_narrative_momentum": {
         "mean": 4.1,
         "floor": 4.1,
         "n": 1,
-        "rank": 28
+        "rank": 25
       },
       "F12_instruction_drift": {
         "mean": 3.77,
         "floor": 3.2,
         "n": 3,
-        "rank": 40
+        "rank": 37
       },
       "F13_context_attention_loss": {
         "mean": 4.1,
         "floor": 4.0,
         "n": 3,
-        "rank": 38
+        "rank": 34
       },
       "Other": {
         "mean": 4.04,
         "floor": 3.8,
         "n": 5,
-        "rank": 28
+        "rank": 26
       }
     },
     "subjective_dimensions": {
@@ -2295,7 +2165,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 34.71
+    "avg_failure_rank": 31.86
   },
   "lunaris_8b": {
     "community": {
@@ -2316,43 +2186,43 @@
         "mean": 3.5,
         "floor": 3.2,
         "n": 4,
-        "rank": 42
+        "rank": 38
       },
       "F2_pov_tense": {
         "mean": 3.5,
         "floor": 2.5,
         "n": 3,
-        "rank": 43
+        "rank": 40
       },
       "F3_lore_contradiction": {
         "mean": 4.1,
         "floor": 4.1,
         "n": 1,
-        "rank": 34
+        "rank": 31
       },
       "F8_narrative_momentum": {
         "mean": 4.1,
         "floor": 4.1,
         "n": 1,
-        "rank": 32
+        "rank": 29
       },
       "F12_instruction_drift": {
         "mean": 3.6,
         "floor": 2.5,
         "n": 3,
-        "rank": 41
+        "rank": 38
       },
       "F13_context_attention_loss": {
         "mean": 3.73,
         "floor": 3.2,
         "n": 3,
-        "rank": 41
+        "rank": 37
       },
       "Other": {
         "mean": 3.18,
         "floor": 2.0,
         "n": 5,
-        "rank": 35
+        "rank": 32
       }
     },
     "subjective_dimensions": {
@@ -2369,7 +2239,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 38.29
+    "avg_failure_rank": 35
   },
   "magnum_v4_72b": {
     "community": {
@@ -2390,43 +2260,43 @@
         "mean": 3.12,
         "floor": 2.2,
         "n": 4,
-        "rank": 43
+        "rank": 39
       },
       "F2_pov_tense": {
         "mean": 3.63,
         "floor": 3.0,
         "n": 3,
-        "rank": 42
+        "rank": 39
       },
       "F3_lore_contradiction": {
         "mean": 4.0,
         "floor": 4.0,
         "n": 1,
-        "rank": 35
+        "rank": 32
       },
       "F8_narrative_momentum": {
         "mean": 3.3,
         "floor": 3.3,
         "n": 1,
-        "rank": 34
+        "rank": 31
       },
       "F12_instruction_drift": {
         "mean": 3.87,
         "floor": 3.5,
         "n": 3,
-        "rank": 39
+        "rank": 36
       },
       "F13_context_attention_loss": {
         "mean": 3.33,
         "floor": 2.2,
         "n": 3,
-        "rank": 44
+        "rank": 40
       },
       "Other": {
         "mean": 2.82,
         "floor": 2.3,
         "n": 5,
-        "rank": 37
+        "rank": 34
       }
     },
     "subjective_dimensions": {
@@ -2443,7 +2313,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 39.14
+    "avg_failure_rank": 35.86
   },
   "mimo_2_5_pro": {
     "community": {
@@ -2464,13 +2334,13 @@
         "mean": 4.47,
         "floor": 4.2,
         "n": 4,
-        "rank": 15
+        "rank": 14
       },
       "F2_pov_tense": {
         "mean": 4.23,
         "floor": 4.2,
         "n": 3,
-        "rank": 23
+        "rank": 21
       },
       "F3_lore_contradiction": {
         "mean": 4.5,
@@ -2482,7 +2352,7 @@
         "mean": 4.3,
         "floor": 4.3,
         "n": 1,
-        "rank": 10
+        "rank": 9
       },
       "F12_instruction_drift": {
         "mean": 4.43,
@@ -2517,7 +2387,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 15.14
+    "avg_failure_rank": 14.57
   },
   "minimax_m2_7": {
     "community": {
@@ -2538,37 +2408,37 @@
         "mean": 4.45,
         "floor": 4.3,
         "n": 4,
-        "rank": 20
+        "rank": 18
       },
       "F2_pov_tense": {
         "mean": 4.2,
         "floor": 4.2,
         "n": 3,
-        "rank": 27
+        "rank": 24
       },
       "F3_lore_contradiction": {
         "mean": 4.2,
         "floor": 4.2,
         "n": 1,
-        "rank": 28
+        "rank": 26
       },
       "F8_narrative_momentum": {
         "mean": 4.3,
         "floor": 4.3,
         "n": 1,
-        "rank": 9
+        "rank": 8
       },
       "F12_instruction_drift": {
         "mean": 4.23,
         "floor": 4.2,
         "n": 3,
-        "rank": 33
+        "rank": 30
       },
       "F13_context_attention_loss": {
         "mean": 4.3,
         "floor": 4.2,
         "n": 3,
-        "rank": 33
+        "rank": 30
       },
       "Other": {
         "mean": 4.46,
@@ -2591,7 +2461,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 23.29
+    "avg_failure_rank": 21.29
   },
   "minimax_m3": {
     "community": {
@@ -2612,13 +2482,13 @@
         "mean": 4.45,
         "floor": 4.2,
         "n": 4,
-        "rank": 17
+        "rank": 16
       },
       "F2_pov_tense": {
         "mean": 4.33,
         "floor": 4.2,
         "n": 3,
-        "rank": 11
+        "rank": 10
       },
       "F3_lore_contradiction": {
         "mean": 4.6,
@@ -2630,7 +2500,7 @@
         "mean": 4.1,
         "floor": 4.1,
         "n": 1,
-        "rank": 29
+        "rank": 26
       },
       "F12_instruction_drift": {
         "mean": 4.4,
@@ -2665,7 +2535,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 13.57
+    "avg_failure_rank": 12.86
   },
   "mistral_small_creative": {
     "community": {
@@ -2686,43 +2556,43 @@
         "mean": 4.28,
         "floor": 4.0,
         "n": 4,
-        "rank": 32
+        "rank": 30
       },
       "F2_pov_tense": {
         "mean": 4.23,
         "floor": 4.1,
         "n": 3,
-        "rank": 20
+        "rank": 18
       },
       "F3_lore_contradiction": {
         "mean": 4.3,
         "floor": 4.3,
         "n": 1,
-        "rank": 21
+        "rank": 19
       },
       "F8_narrative_momentum": {
         "mean": 4.1,
         "floor": 4.1,
         "n": 1,
-        "rank": 26
+        "rank": 23
       },
       "F12_instruction_drift": {
         "mean": 4.27,
         "floor": 4.1,
         "n": 3,
-        "rank": 30
+        "rank": 28
       },
       "F13_context_attention_loss": {
         "mean": 4.2,
         "floor": 3.6,
         "n": 3,
-        "rank": 36
+        "rank": 33
       },
       "Other": {
         "mean": 4.18,
         "floor": 3.8,
         "n": 5,
-        "rank": 27
+        "rank": 25
       }
     },
     "subjective_dimensions": {
@@ -2739,7 +2609,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 27.43
+    "avg_failure_rank": 25.14
   },
   "muse_spark_1_3": {
     "community": {
@@ -2752,27 +2622,27 @@
       "n_votes": null
     },
     "multiturn_llm_judge": {
-      "overall_mean": 3.83,
-      "n_sessions": 20
+      "overall_mean": 3.8,
+      "n_sessions": 16
     },
     "failure_modes": {
       "F1_agency": {
         "mean": 3.65,
         "floor": 2.5,
         "n": 4,
-        "rank": 40
+        "rank": 37
       },
       "F2_pov_tense": {
-        "mean": 3.3,
+        "mean": 2.3,
         "floor": 2.3,
-        "n": 3,
-        "rank": 44
+        "n": 1,
+        "rank": 41
       },
       "F3_lore_contradiction": {
         "mean": 4.3,
         "floor": 4.3,
         "n": 1,
-        "rank": 24
+        "rank": 22
       },
       "F8_narrative_momentum": {
         "mean": 4.6,
@@ -2781,39 +2651,39 @@
         "rank": 3
       },
       "F12_instruction_drift": {
-        "mean": 4.13,
-        "floor": 4.0,
-        "n": 3,
-        "rank": 37
+        "mean": 4.1,
+        "floor": 4.1,
+        "n": 1,
+        "rank": 34
       },
       "F13_context_attention_loss": {
         "mean": 3.57,
         "floor": 2.5,
         "n": 3,
-        "rank": 42
+        "rank": 38
       },
       "Other": {
         "mean": 4.04,
         "floor": 3.4,
         "n": 5,
-        "rank": 29
+        "rank": 27
       }
     },
     "subjective_dimensions": {
       "engagement": {
-        "mean": 3.9,
-        "n": 20
+        "mean": 3.88,
+        "n": 16
       },
       "tone_consistency": {
-        "mean": 4.33,
-        "n": 20
+        "mean": 4.31,
+        "n": 16
       },
       "collaboration": {
-        "mean": 4.16,
-        "n": 20
+        "mean": 4.1,
+        "n": 16
       }
     },
-    "avg_failure_rank": 31.29
+    "avg_failure_rank": 28.86
   },
   "qwen3_5_flash": {
     "community": {
@@ -2834,43 +2704,43 @@
         "mean": 3.8,
         "floor": 2.5,
         "n": 4,
-        "rank": 38
+        "rank": 36
       },
       "F2_pov_tense": {
         "mean": 4.03,
         "floor": 3.8,
         "n": 3,
-        "rank": 38
+        "rank": 35
       },
       "F3_lore_contradiction": {
         "mean": 4.2,
         "floor": 4.2,
         "n": 1,
-        "rank": 27
+        "rank": 25
       },
       "F8_narrative_momentum": {
         "mean": 4.1,
         "floor": 4.1,
         "n": 1,
-        "rank": 25
+        "rank": 22
       },
       "F12_instruction_drift": {
         "mean": 3.17,
         "floor": 2.5,
         "n": 3,
-        "rank": 43
+        "rank": 40
       },
       "F13_context_attention_loss": {
         "mean": 4.3,
         "floor": 4.2,
         "n": 3,
-        "rank": 34
+        "rank": 31
       },
       "Other": {
         "mean": 4.34,
         "floor": 4.2,
         "n": 5,
-        "rank": 22
+        "rank": 21
       }
     },
     "subjective_dimensions": {
@@ -2887,7 +2757,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 32.43
+    "avg_failure_rank": 30
   },
   "qwen3_7_max": {
     "community": {
@@ -2908,31 +2778,31 @@
         "mean": 4.03,
         "floor": 3.0,
         "n": 4,
-        "rank": 34
+        "rank": 32
       },
       "F2_pov_tense": {
         "mean": 4.2,
         "floor": 4.2,
         "n": 3,
-        "rank": 33
+        "rank": 30
       },
       "F3_lore_contradiction": {
         "mean": 4.4,
         "floor": 4.4,
         "n": 1,
-        "rank": 19
+        "rank": 17
       },
       "F8_narrative_momentum": {
         "mean": 4.2,
         "floor": 4.2,
         "n": 1,
-        "rank": 22
+        "rank": 20
       },
       "F12_instruction_drift": {
         "mean": 4.2,
         "floor": 4.2,
         "n": 3,
-        "rank": 35
+        "rank": 32
       },
       "F13_context_attention_loss": {
         "mean": 4.53,
@@ -2944,7 +2814,7 @@
         "mean": 4.4,
         "floor": 4.2,
         "n": 5,
-        "rank": 19
+        "rank": 18
       }
     },
     "subjective_dimensions": {
@@ -2961,155 +2831,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 26
-  },
-  "qwen3_8_flash": {
-    "community": {
-      "rank": null,
-      "elo": null,
-      "stability": null,
-      "overall_winrate": null,
-      "sfw_winrate": null,
-      "nsfw_winrate": null,
-      "n_votes": null
-    },
-    "multiturn_llm_judge": {
-      "overall_mean": 4.34,
-      "n_sessions": 20
-    },
-    "failure_modes": {
-      "F1_agency": {
-        "mean": 4.57,
-        "floor": 4.5,
-        "n": 4,
-        "rank": 5
-      },
-      "F2_pov_tense": {
-        "mean": 4.23,
-        "floor": 4.2,
-        "n": 3,
-        "rank": 24
-      },
-      "F3_lore_contradiction": {
-        "mean": 4.5,
-        "floor": 4.5,
-        "n": 1,
-        "rank": 18
-      },
-      "F8_narrative_momentum": {
-        "mean": 4.2,
-        "floor": 4.2,
-        "n": 1,
-        "rank": 23
-      },
-      "F12_instruction_drift": {
-        "mean": 4.27,
-        "floor": 4.2,
-        "n": 3,
-        "rank": 31
-      },
-      "F13_context_attention_loss": {
-        "mean": 4.4,
-        "floor": 4.2,
-        "n": 3,
-        "rank": 28
-      },
-      "Other": {
-        "mean": 4.24,
-        "floor": 3.1,
-        "n": 5,
-        "rank": 26
-      }
-    },
-    "subjective_dimensions": {
-      "engagement": {
-        "mean": 4.41,
-        "n": 20
-      },
-      "tone_consistency": {
-        "mean": 4.68,
-        "n": 20
-      },
-      "collaboration": {
-        "mean": 4.33,
-        "n": 20
-      }
-    },
-    "avg_failure_rank": 22.14
-  },
-  "qwen3_8_max": {
-    "community": {
-      "rank": null,
-      "elo": null,
-      "stability": null,
-      "overall_winrate": null,
-      "sfw_winrate": null,
-      "nsfw_winrate": null,
-      "n_votes": null
-    },
-    "multiturn_llm_judge": {
-      "overall_mean": 4.42,
-      "n_sessions": 20
-    },
-    "failure_modes": {
-      "F1_agency": {
-        "mean": 4.45,
-        "floor": 4.2,
-        "n": 4,
-        "rank": 19
-      },
-      "F2_pov_tense": {
-        "mean": 4.4,
-        "floor": 4.3,
-        "n": 3,
-        "rank": 7
-      },
-      "F3_lore_contradiction": {
-        "mean": 4.5,
-        "floor": 4.5,
-        "n": 1,
-        "rank": 17
-      },
-      "F8_narrative_momentum": {
-        "mean": 4.5,
-        "floor": 4.5,
-        "n": 1,
-        "rank": 7
-      },
-      "F12_instruction_drift": {
-        "mean": 4.33,
-        "floor": 4.0,
-        "n": 3,
-        "rank": 18
-      },
-      "F13_context_attention_loss": {
-        "mean": 4.43,
-        "floor": 4.2,
-        "n": 3,
-        "rank": 26
-      },
-      "Other": {
-        "mean": 4.42,
-        "floor": 4.0,
-        "n": 5,
-        "rank": 17
-      }
-    },
-    "subjective_dimensions": {
-      "engagement": {
-        "mean": 4.47,
-        "n": 20
-      },
-      "tone_consistency": {
-        "mean": 4.72,
-        "n": 20
-      },
-      "collaboration": {
-        "mean": 4.47,
-        "n": 20
-      }
-    },
-    "avg_failure_rank": 15.86
+    "avg_failure_rank": 24.14
   },
   "skyfall_36b": {
     "community": {
@@ -3130,43 +2852,43 @@
         "mean": 2.3,
         "floor": 2.0,
         "n": 4,
-        "rank": 45
+        "rank": 41
       },
       "F2_pov_tense": {
         "mean": 3.67,
         "floor": 3.0,
         "n": 3,
-        "rank": 41
+        "rank": 38
       },
       "F3_lore_contradiction": {
         "mean": 2.5,
         "floor": 2.5,
         "n": 1,
-        "rank": 37
+        "rank": 34
       },
       "F8_narrative_momentum": {
         "mean": 2.0,
         "floor": 2.0,
         "n": 1,
-        "rank": 37
+        "rank": 34
       },
       "F12_instruction_drift": {
         "mean": 3.33,
         "floor": 3.0,
         "n": 3,
-        "rank": 42
+        "rank": 39
       },
       "F13_context_attention_loss": {
         "mean": 3.03,
         "floor": 2.3,
         "n": 3,
-        "rank": 46
+        "rank": 42
       },
       "Other": {
         "mean": 2.92,
         "floor": 1.8,
         "n": 5,
-        "rank": 36
+        "rank": 33
       }
     },
     "subjective_dimensions": {
@@ -3183,81 +2905,7 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 40.57
-  },
-  "tencent_hy4": {
-    "community": {
-      "rank": null,
-      "elo": null,
-      "stability": null,
-      "overall_winrate": null,
-      "sfw_winrate": null,
-      "nsfw_winrate": null,
-      "n_votes": null
-    },
-    "multiturn_llm_judge": {
-      "overall_mean": 1.73,
-      "n_sessions": 20
-    },
-    "failure_modes": {
-      "F1_agency": {
-        "mean": 1.62,
-        "floor": 1.2,
-        "n": 4,
-        "rank": 47
-      },
-      "F2_pov_tense": {
-        "mean": 1.2,
-        "floor": 1.2,
-        "n": 3,
-        "rank": 47
-      },
-      "F3_lore_contradiction": {
-        "mean": 1.0,
-        "floor": 1.0,
-        "n": 1,
-        "rank": 39
-      },
-      "F8_narrative_momentum": {
-        "mean": 1.5,
-        "floor": 1.5,
-        "n": 1,
-        "rank": 38
-      },
-      "F12_instruction_drift": {
-        "mean": 2.63,
-        "floor": 1.5,
-        "n": 3,
-        "rank": 46
-      },
-      "F13_context_attention_loss": {
-        "mean": 2.5,
-        "floor": 1.0,
-        "n": 3,
-        "rank": 47
-      },
-      "Other": {
-        "mean": 1.34,
-        "floor": 1.0,
-        "n": 5,
-        "rank": 39
-      }
-    },
-    "subjective_dimensions": {
-      "engagement": {
-        "mean": 1.62,
-        "n": 20
-      },
-      "tone_consistency": {
-        "mean": 1.52,
-        "n": 20
-      },
-      "collaboration": {
-        "mean": 1.48,
-        "n": 20
-      }
-    },
-    "avg_failure_rank": 43.29
+    "avg_failure_rank": 37.29
   },
   "unslopnemo_12b": {
     "community": {
@@ -3278,43 +2926,43 @@
         "mean": 3.12,
         "floor": 2.5,
         "n": 4,
-        "rank": 44
+        "rank": 40
       },
       "F2_pov_tense": {
         "mean": 3.93,
         "floor": 3.8,
         "n": 3,
-        "rank": 40
+        "rank": 37
       },
       "F3_lore_contradiction": {
         "mean": 2.5,
         "floor": 2.5,
         "n": 1,
-        "rank": 38
+        "rank": 35
       },
       "F8_narrative_momentum": {
         "mean": 2.1,
         "floor": 2.1,
         "n": 1,
-        "rank": 36
+        "rank": 33
       },
       "F12_instruction_drift": {
         "mean": 4.0,
         "floor": 3.9,
         "n": 3,
-        "rank": 38
+        "rank": 35
       },
       "F13_context_attention_loss": {
         "mean": 3.47,
         "floor": 3.0,
         "n": 3,
-        "rank": 43
+        "rank": 39
       },
       "Other": {
         "mean": 3.82,
         "floor": 3.2,
         "n": 5,
-        "rank": 32
+        "rank": 30
       }
     },
     "subjective_dimensions": {
@@ -3331,6 +2979,6 @@
         "n": 20
       }
     },
-    "avg_failure_rank": 38.71
+    "avg_failure_rank": 35.57
   }
 }

@@ -1061,8 +1061,8 @@ class GuardModule(unittest.TestCase):
 
 def _head_results(dest):
     """HEAD copies of the card and board inputs, and the committed markdown.
-    round4_overview.json comes from HEAD once it is committed; until then the
-    working-tree copy stands in (it is derived from tracked inputs only)."""
+    round4_overview.json and round4_continuity.json come from HEAD once they
+    are committed; until then the working-tree copy stands in."""
     names = E.CARD_INPUTS + ("round4_willingness_leaderboard.json",
                              "profile_cards_v2.md")
     (dest / "results").mkdir()
@@ -1070,13 +1070,13 @@ def _head_results(dest):
         blob = subprocess.run(["git", "-C", str(ROOT), "show", "HEAD:results/%s" % n],
                               capture_output=True, check=True).stdout
         (dest / "results" / n).write_bytes(blob)
-    head = subprocess.run(["git", "-C", str(ROOT), "show",
-                           "HEAD:results/%s" % E.OVERVIEW_NAME], capture_output=True)
-    if head.returncode == 0:
-        (dest / "results" / E.OVERVIEW_NAME).write_bytes(head.stdout)
-    else:
-        (dest / "results" / E.OVERVIEW_NAME).write_bytes(
-            (E.RESULTS / E.OVERVIEW_NAME).read_bytes())
+    for name in (E.OVERVIEW_NAME, E.CONTINUITY_NAME):
+        head = subprocess.run(["git", "-C", str(ROOT), "show",
+                               "HEAD:results/%s" % name], capture_output=True)
+        if head.returncode == 0:
+            (dest / "results" / name).write_bytes(head.stdout)
+        elif (E.RESULTS / name).exists():
+            (dest / "results" / name).write_bytes((E.RESULTS / name).read_bytes())
     return dest / "results"
 
 
@@ -1093,6 +1093,11 @@ class Cards(unittest.TestCase):
                             .read_text())
         cls.ctx = G.load_inputs(cls.results, r4=G.r4_rows(cls.lb))
         cls.cards = [G.build_card(m, cls.ctx) for m in G.ordered_models(cls.ctx)]
+        if not (cls.results / E.CONTINUITY_NAME).exists():
+            cls.tmp.cleanup()
+            raise unittest.SkipTest("no %s; run analyze_round4_continuity.py"
+                                    % E.CONTINUITY_NAME)
+        cls.cont = E.read_continuity(cls.results)
         cls.doc, _ = E.build_cards(cls.lb, cls.results, commit="test")
         cls.ov = E.read_overview(cls.results)
 
@@ -1137,6 +1142,8 @@ class Cards(unittest.TestCase):
                 self.assertIsNone(c["composite"])
         self.assertEqual(E.check_cards(self.doc, self.lb), [])
         self.assertEqual(E.check_cards(self.doc, self.lb, overview=self.ov), [])
+        self.assertEqual(E.check_cards(self.doc, self.lb, overview=self.ov,
+                                       continuity=self.cont), [])
 
     def test_judge_rows_come_from_the_overview_to_one_decimal(self):
         jm = self.ov["judge_means"]["models"]
@@ -1265,8 +1272,9 @@ class Cards(unittest.TestCase):
             G.public_summary("Mean craft 61.5/100 overall")
 
     def test_board(self):
-        board = E.build_board(self.lb, commit="test")
+        board = E.build_board(self.lb, commit="test", continuity=self.cont)
         self.assertEqual(E.check_board(board), [])
+        self.assertEqual(E.check_board(board, continuity=self.cont), [])
         ranked = [r for r in board["rows"] if r["ranked"]]
         self.assertEqual([r["rank"] for r in ranked], list(range(1, len(ranked) + 1)))
         for r in board["rows"]:
@@ -1281,13 +1289,134 @@ class Cards(unittest.TestCase):
         self.assertEqual(len(board["rows"]), len(self.lb["leaderboard"]))
 
     def test_board_and_card_willingness_are_one_implementation(self):
-        board = {r["model"]: r for r in E.build_board(self.lb)["rows"]}
+        board = {r["model"]: r for r in E.build_board(
+            self.lb, continuity=self.cont)["rows"]}
         for mid, c in self.doc["cards"].items():
             if c["willingness"] is None:
                 continue
             for k in ("J", "held_first", "held_under_pressure", "empty",
                       "over_refusal_hard_rungs", "tied_with"):
                 self.assertEqual(c["willingness"][k], board[mid][k], (mid, k))
+
+    # -- continuity (round4_continuity.json) --------------------------------
+
+    def test_across_rounds_come_from_the_continuity_file(self):
+        rows = {r["model"]: r for r in self.cont["rows"]}
+        cards = self.doc["cards"]
+        self.assertEqual(set(self.doc["across_rounds_table"]), E.ACROSS_TABLE_KEYS)
+        self.assertEqual(self.doc["inputs"]["across_rounds"], E.CONTINUITY_NAME)
+        for mid, c in cards.items():
+            with self.subTest(model=mid):
+                a = c["across_rounds"]
+                self.assertEqual(set(a), E.ACROSS_KEYS)
+                self.assertEqual(a, E.across_rounds(self.cont, mid))
+                self.assertEqual(a["returning"], mid in rows)
+                if not a["returning"]:
+                    self.assertEqual((a["rounds"], a["r2_human"], a["r3_nsfw"],
+                                      a["transcripts"]), ([], None, None, "new_in_round4"))
+                b = a["old_judge_band"]
+                if b is not None:
+                    self.assertEqual(set(b), E.OLD_JUDGE_BAND_KEYS)
+                    self.assertEqual((b["mean"], b["half_width"]),
+                                     (round(b["mean"], 2), round(b["half_width"], 2)))
+        # every card but rocinante's (it has none) of the 41 returning models
+        self.assertEqual(sum(c["across_rounds"]["returning"] for c in cards.values()), 40)
+        self.assertNotIn("rocinante_12b", cards)
+        self.assertIsNone(cards["mistral_small_2603"]["across_rounds"]["old_judge_band"])
+        self.assertEqual(cards["kimi_k2_6"]["across_rounds"]["r2_human"]["voted_transcripts"],
+                         "regenerated since the vote")
+        new = [m for m, c in cards.items() if not c["across_rounds"]["returning"]]
+        self.assertEqual(len(new), 30)
+        self.assertTrue(all(cards[m]["across_rounds"]["old_judge_band"] for m in new))
+        blob = json.dumps([c["across_rounds"] for c in cards.values()])
+        for gone in ('"low"', '"high"', "old_judge_rank", '"position"', "translated"):
+            self.assertNotIn(gone, blob)
+
+    def test_board_continuity_columns(self):
+        board = E.build_board(self.lb, commit="test", continuity=self.cont)
+        bands = self.cont["old_judge"]["models"]
+        r3 = {r["model"]: r["r3_nsfw"] for r in self.cont["rows"] if r["r3_nsfw"]}
+        for r in board["rows"]:
+            with self.subTest(model=r["model"]):
+                self.assertEqual(r["old_judge_band"] is not None, r["model"] in bands)
+                self.assertEqual(r["r3_nsfw_rank"] is not None, r["model"] in r3)
+                if r["r3_nsfw_rank"]:
+                    self.assertEqual(set(r["r3_nsfw_rank"]), E.R3_RANK_KEYS)
+                    self.assertEqual(r["r3_nsfw_rank"]["rank"], r3[r["model"]]["rank"])
+        self.assertIsNone({r["model"]: r for r in board["rows"]}["rocinante_12b"]
+                          ["old_judge_band"])
+        for k in ("old_judge_band", "r3_nsfw_rank"):
+            self.assertIn(k, board["notes"])
+            self.assertIn("rank" if k == "old_judge_band" else "published",
+                          board["notes"][k])
+        self.assertEqual(E.copy_problems(board["notes"], "notes"), [])
+
+    def test_check_catches_every_break_of_the_continuity_fields(self):
+        mid = "claude_opus_4_7"
+        board = E.build_board(self.lb, commit="test", continuity=self.cont)
+        bi = next(i for i, r in enumerate(board["rows"]) if r["model"] == mid)
+
+        def broken_card(fn):
+            doc = json.loads(json.dumps(self.doc))
+            fn(doc["cards"][mid]["across_rounds"], doc)
+            return E.check_cards(doc, self.lb, overview=self.ov, continuity=self.cont)
+
+        def broken_board(fn):
+            b = json.loads(json.dumps(board))
+            fn(b["rows"][bi])
+            return E.check_board(b, continuity=self.cont)
+
+        cards = {
+            "a rank on the old judge": lambda a, d: a["old_judge_band"].update(rank=3),
+            "an interval end": lambda a, d: a["old_judge_band"].update(low=4.4),
+            "three decimals": lambda a, d: a["old_judge_band"].update(mean=4.537),
+            "a translation": lambda a, d: a.update(translated=4.4),
+            "a composite": lambda a, d: a.update(composite=71.0),
+            "another figure": lambda a, d: a["old_judge_band"].update(mean=4.11),
+            "returning without a round": lambda a, d: a.update(rounds=[]),
+            "a new model with round-3 fields": lambda a, d: d["cards"]["claude_opus_5"]
+                ["across_rounds"].update(r3_nsfw=a["r3_nsfw"]),
+            "an unknown transcripts flag": lambda a, d: a.update(transcripts="yes"),
+            "dropped block": lambda a, d: d["cards"][mid].pop("across_rounds"),
+            "no header": lambda a, d: d.pop("across_rounds_table"),
+        }
+        for name, fn in cards.items():
+            with self.subTest(name):
+                self.assertTrue(broken_card(fn), name)
+        rows = {
+            "a rank on the old judge": lambda r: r["old_judge_band"].update(rank=3),
+            "three decimals": lambda r: r["old_judge_band"].update(half_width=0.071),
+            "a rank outside its tie": lambda r: r["r3_nsfw_rank"].update(tie="5-9"),
+            "not the continuity value": lambda r: r["r3_nsfw_rank"].update(rank=4),
+            "a bare number": lambda r: r.update(old_judge_band=4.54),
+        }
+        for name, fn in rows.items():
+            with self.subTest(name):
+                self.assertTrue(broken_board(fn), name)
+
+    def test_a_continuity_file_from_another_judge_is_refused(self):
+        with tempfile.TemporaryDirectory() as t:
+            with self.assertRaisesRegex(E.ExportError, "missing"):
+                E.read_continuity(t)
+            c = json.loads(json.dumps(self.cont))
+            c["old_judge"]["judge"] = "anthropic/claude-sonnet-5"
+            (Path(t) / E.CONTINUITY_NAME).write_text(json.dumps(c))
+            with self.assertRaisesRegex(E.ExportError, "old_judge"):
+                E.read_continuity(t)
+            c = json.loads(json.dumps(self.cont))
+            next(iter(c["old_judge"]["models"].values()))["rank"] = 1
+            c["old_judge"]["models"][next(iter(c["old_judge"]["models"]))]["old_judge_rank"] = 1
+            (Path(t) / E.CONTINUITY_NAME).write_text(json.dumps(c))
+            with self.assertRaisesRegex(E.ExportError, "carries"):
+                E.read_continuity(t)
+
+    def test_across_rounds_is_null_safe(self):
+        cont = {"old_judge": {"models": {}}, "rows": [], "core_seeds": {"seeds": ["a", "b"]}}
+        self.assertEqual(E.across_rounds(cont, "brand_new"), {
+            "returning": False, "rounds": [], "old_judge_band": None, "r2_human": None,
+            "r3_nsfw": None, "transcripts": "new_in_round4"})
+        self.assertIsNone(E.old_judge_band(cont, "brand_new"))
+        self.assertIsNone(E.r3_nsfw_rank(cont, "brand_new"))
 
 
 class RealTrackA(unittest.TestCase):

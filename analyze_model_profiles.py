@@ -77,6 +77,23 @@ def _load_v2_judge():
     return out
 
 
+def _session_sources():
+    """Newest craft run first, then the rounds-1-3 corpus.
+
+    The same order export_session_judge_batches.py and transcript_hash.py
+    read, so "the current transcript of a session" means one thing
+    everywhere: a repair re-run supersedes the copy it repairs.
+    """
+    import glob as _g
+    out = sorted(_g.glob("results/craft_baseline_*.json"), reverse=True)
+    out.append("results/multiturn_merged_all_v2.json")
+    return [p for p in out if Path(p).exists()]
+
+
+def _sid(s):
+    return "%s::%s" % (s.get("test_model"), s.get("seed_id"))
+
+
 def main():
     import argparse
     ap = argparse.ArgumentParser()
@@ -90,17 +107,34 @@ def main():
         print("Judge: subagent-sonnet-5  (%d sessions scored)" % len(V2))
         if not V2:
             raise SystemExit("results/session_judge_v2.jsonl is empty or absent")
-    merged = json.load(open("results/multiturn_merged_all_v2.json"))
     # The 2026-09-21 craft baseline lives in its own files rather than being
     # merged into v2: the earlier rounds stay byte-identical, so their published
     # numbers remain reproducible.
     # Globbed, not a dated list: a new craft-baseline run would otherwise land
     # on disk and never reach the profiles, leaving the new models silently
     # absent from a file that looks complete.
-    import glob as _g
-    for extra in sorted(_g.glob("results/craft_baseline_*.json")):
-        if Path(extra).exists():
-            merged["sessions"] += json.load(open(extra))["sessions"]
+    loaded = {p: json.loads(Path(p).read_text())["sessions"]
+              for p in _session_sources()}
+    # Which copy of a session counts: the newest source wins, same rule as the
+    # session judge's exporter. This used to be "first found while reading
+    # oldest to newest", so the Sonnet-4 profiles of models whose transcripts
+    # were regenerated (kimi_k2_6, glm_5_3_flash, tencent_hy4, qwen3_8_flash,
+    # qwen3_8_max, and single seeds of muse_spark_1_3 / deepseek_v4_1_flash)
+    # averaged scores of transcripts that no longer exist. A current copy with
+    # no Sonnet-4 verdict now counts as unscored; it never falls back to the
+    # superseded copy's verdict.
+    current = {}
+    for p in _session_sources():
+        for s in loaded[p]:
+            if "error" in s or "dialogue" not in s:
+                continue
+            current.setdefault(_sid(s), s)
+    # Walk sessions in the old oldest-first order anyway. Per-mode ranks break
+    # exact ties by the order models first appear, and the published v2
+    # profiles (and the cards built on them) depend on that order.
+    merged = {"sessions": []}
+    for p in reversed(_session_sources()):
+        merged["sessions"] += loaded[p]
     comm = json.load(open("results/community_arena_2000.json"))
     comm_by_model = {e["model"]: e for e in comm["leaderboard"]}
 
@@ -123,10 +157,13 @@ def main():
     # unharmed -- but n doubles, and n is what the per-model gates read.
     seen_sessions = set()
     for s in merged["sessions"]:
-        sid = "%s::%s" % (s.get("test_model"), s.get("seed_id"))
+        sid = _sid(s)
         if sid in seen_sessions:
             continue
         seen_sessions.add(sid)
+        s = current.get(sid)
+        if s is None:
+            continue            # every copy errored; nothing was judged
         v2 = V2.get(sid)
         if v2 is not None:
             # The v2 file stores session_dimensions flat ({dim: number}); the

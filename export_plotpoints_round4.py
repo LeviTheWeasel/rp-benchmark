@@ -15,7 +15,9 @@ run that prints counts and guard results and writes nothing at all.
   board     round-4.json: the J leaderboard, aggregates only.
   cards     model-cards.json: generate_profile_cards_v2's own cards, as data,
             plus each card's `judge` row and the top-level `judge_table`
-            for the index (from results/round4_overview.json).
+            for the index (from results/round4_overview.json), and each
+            card's `across_rounds` block with the `across_rounds_table`
+            header (from results/round4_continuity.json).
   youth     The lexical screen for minor-coded terms alone; writes the review
             list to --review-out (never into a git checkout).
 
@@ -35,6 +37,12 @@ Publication rules this script enforces (docs/ROUND4_DESIGN.md sec 9):
     `judge` row (Sonnet 5 session-judge means to ONE decimal, Round 03's table
     format) and the `judge_table` header, from round4_overview.json. No
     interval, edge marker or unrounded figure leaves with it.
+  * The second exception, by Levi's decision for continuity (2026-09-27): the
+    old judge (Sonnet 4, the round-2/3 judge) on round-4 transcripts leaves
+    as a BAND, a mean and its +/- half width to two decimals, on the board
+    rows and in each card's `across_rounds`. Never a rank or a position:
+    the guards refuse one. Round 3's published table position leaves as it
+    was published, with its tie range. Nothing is translated between judges.
   * Inputs must match git HEAD; source_commit records which HEAD.
 
 Usage:
@@ -109,6 +117,7 @@ from make_j_barchart import NAMES, VENDOR, FINETUNES, reduced  # noqa: E402
 RESULTS = PROJECT_ROOT / "results"
 LEADERBOARD = RESULTS / "round4_willingness_leaderboard.json"
 OVERVIEW_NAME = "round4_overview.json"      # analyze_round4_overview.py output
+CONTINUITY_NAME = "round4_continuity.json"  # analyze_round4_continuity.py output
 SEEDS_A = PROJECT_ROOT / "hf_dataset" / "_source" / "adversarial_seeds_r4_track_a.json"
 R4_GLOB = "r4_full_*.json"
 CARD_INPUTS = ("model_card_verdicts.json", "per_turn_failures_v2.jsonl",
@@ -187,7 +196,7 @@ BOARD_ROW_KEYS = {"model", "name", "vendor", "is_finetune", "rank", "ranked",
                   "over_refusal_rate", "policy_compliance_rate", "overshoot_rate",
                   "empty", "n_sessions_a", "n_sessions_b", "usable_exchanges_a",
                   "hard_refusals_a", "reduced_seed_set", "elo", "composite",
-                  "human"}
+                  "human", "old_judge_band", "r3_nsfw_rank"}
 WILLINGNESS_KEYS = {"J", "rank", "ranked", "of", "unranked_reason", "tied_with",
                     "usable_exchanges_a", "held_first", "over_refusal_hard_rungs",
                     "over_refusal_intimacy", "over_refusal_gore",
@@ -195,11 +204,12 @@ WILLINGNESS_KEYS = {"J", "rank", "ranked", "of", "unranked_reason", "tied_with",
                     "overshoot_rate", "empty"}
 CARDS_KEYS = {"schema_version", "reviewed_on", "scope", "sources", "inputs",
               "source_commit", "export_id", "willingness_source", "judge_table",
-              "cards"}
+              "across_rounds_table", "cards"}
 CARD_KEYS = {"id", "name", "vendor", "is_finetune", "verdict", "coverage",
              "standing_modes", "trap_pooled", "trap_modes", "willingness",
              "behavioral", "craft", "production_defects", "subjective",
-             "community_r1", "strength", "weakness", "elo", "composite", "judge"}
+             "community_r1", "strength", "weakness", "elo", "composite", "judge",
+             "across_rounds"}
 CRAFT_KEYS = {"axis", "cells", "filled", "sessions", "top_flaws"}
 SUBJECTIVE_KEYS = {"judge", "axis", "cells", "filled", "axes"}
 DEFECT_KEYS = {"turns", "leak_rate", "leak_turns", "selfplay_rate",
@@ -222,6 +232,40 @@ JUDGE_NOT_COMPARABLE = "Round 03 judge (Sonnet 4)"
 # other ranges is refused rather than published under these names.
 JUDGE_TIERS = (("A", 3.8, None), ("B", 3.2, 3.8), ("C", 2.6, 3.2),
                ("D", 2.0, 2.6), ("E", None, 2.0))
+
+# Continuity (analyze_round4_continuity.py). The old judge leaves as a band
+# only: mean and half width, two decimals. Round 3's position leaves as
+# published, with its tie range.
+OLD_JUDGE_ID = "anthropic/claude-sonnet-4"
+OLD_JUDGE_BAND_KEYS = {"mean", "half_width", "n_sessions"}
+R3_RANK_KEYS = {"rank", "tie", "of"}
+ACROSS_KEYS = {"returning", "rounds", "old_judge_band", "r2_human", "r3_nsfw",
+               "transcripts"}
+ACROSS_R2_KEYS = {"elo", "ci95", "n_votes", "rank", "of", "voted_transcripts"}
+ACROSS_R3_KEYS = {"rank", "tie", "of", "craft", "n", "refusal_pct"}
+ACROSS_TABLE_KEYS = {"source", "old_judge", "band_rule", "core_seeds",
+                     "r3_refusal", "note"}
+ACROSS_TRANSCRIPTS = {"same", "regenerated", "mixed", "new_in_round4"}
+ACROSS_ROUNDS = {"round 2", "round 3"}
+# Never on a board row or a card, whatever the continuity file carries: a
+# rank on the old judge, a translation between judges, a composite, or a
+# round-4 refusal figure set beside round 3's.
+ACROSS_BANNED = {"old_judge_rank", "rank_old_judge", "position", "old_scale",
+                 "v2_on_old_scale", "translated", "mapped_v1", "composite",
+                 "c_star", "refusal_r4", "r4_refusal_pct", "refusal_delta",
+                 "low", "high"}
+BOARD_NOTES_CONTINUITY = {
+    "old_judge_band": (
+        "Old judge: Sonnet 4, the Round 02 and 03 craft judge, re-run on these "
+        "Round 04 transcripts. Mean over the 12 core seeds (09-20), plus or "
+        "minus half its 95% seed-bootstrap interval. A band, not a rank: most "
+        "neighbouring bands overlap. Not comparable with the Round 04 judge's "
+        "numbers."),
+    "r3_nsfw_rank": (
+        "Position in the published Round 03 NSFW table (Sonnet 4 craft, 40 "
+        "models). tie gives the positions that share the same published score. "
+        "A different track and judge setup from Round 04."),
+}
 
 # Display names for the 13 models that have a card but no round-4 row, so
 # make_j_barchart has none. Names from the site's data.ts, in NAMES' style.
@@ -1317,7 +1361,8 @@ def write_review(hits, path):
 # Board
 # --------------------------------------------------------------------------
 
-def build_board(lb, commit="unknown"):
+def build_board(lb, commit="unknown", continuity=None):
+    cont = continuity if continuity is not None else read_continuity(RESULTS)
     rows_in = lb["leaderboard"]
     ranked = sorted((r for r in rows_in if r.get("ranked")), key=lambda r: r["rank"])
     unranked = [r for r in rows_in if not r.get("ranked")]
@@ -1362,7 +1407,12 @@ def build_board(lb, commit="unknown"):
             # Reserved until the ELO/composite design lands; the site shows a
             # column only when some row has a value.
             "elo": None, "composite": None, "human": None,
+            # Continuity (round4_continuity.json): a band and a published
+            # position, secondary columns; null for a model without one.
+            "old_judge_band": old_judge_band(cont, m),
+            "r3_nsfw_rank": r3_nsfw_rank(cont, m),
         })
+    notes.update(BOARD_NOTES_CONTINUITY)
     newest = max(lb["sources"], key=lambda n: file_date(n))
     board = {
         "schema_version": 1, "round": ROUND, "export_id": None,
@@ -1379,11 +1429,19 @@ def build_board(lb, commit="unknown"):
     return board
 
 
-def check_board(board):
+def check_board(board, continuity=None):
     problems = []
     _keys_exact(board, BOARD_KEYS, "board", problems)
     for r in board["rows"]:
         _keys_exact(r, BOARD_ROW_KEYS, "board row %s" % r.get("model"), problems)
+        where = "board row %s" % r.get("model")
+        problems += _band_problems(r.get("old_judge_band"), where + ".old_judge_band")
+        problems += _r3_rank_problems(r.get("r3_nsfw_rank"), where + ".r3_nsfw_rank")
+        if continuity is not None and (
+                r.get("old_judge_band") != old_judge_band(continuity, r.get("model"))
+                or r.get("r3_nsfw_rank") != r3_nsfw_rank(continuity, r.get("model"))):
+            problems.append("%s: continuity fields differ from %s"
+                            % (where, CONTINUITY_NAME))
     ranked = [r for r in board["rows"] if r["ranked"]]
     if [r["rank"] for r in ranked] != list(range(1, len(ranked) + 1)):
         problems.append("board ranks are not 1..%d" % len(ranked))
@@ -1396,6 +1454,169 @@ def check_board(board):
     except PublicationGuardError as e:
         problems.append(str(e))
     problems += copy_problems(board, "board")
+    return problems
+
+
+# --------------------------------------------------------------------------
+# Continuity (round4_continuity.json)
+# --------------------------------------------------------------------------
+
+def read_continuity(results_dir=RESULTS):
+    p = Path(results_dir) / CONTINUITY_NAME
+    if not p.exists():
+        raise ExportError("%s missing; run analyze_round4_continuity.py" % p.name)
+    doc = _read_public_json(p)
+    oj = doc.get("old_judge") or {}
+    if oj.get("judge") != OLD_JUDGE_ID or not oj.get("models"):
+        raise ExportError("%s: old_judge missing or not %s; rerun "
+                          "analyze_round4_continuity.py" % (p.name, OLD_JUDGE_ID))
+    if not doc.get("rows"):
+        raise ExportError("%s: no returning-model rows" % p.name)
+    for m, b in oj["models"].items():
+        bad = set(b) & (ACROSS_BANNED - {"low", "high"})
+        if bad:
+            raise ExportError("%s: old_judge.%s carries %s" % (p.name, m, sorted(bad)))
+    return doc
+
+
+def _continuity_rows(cont):
+    return {r["model"]: r for r in cont["rows"]}
+
+
+def old_judge_band(cont, model):
+    """{"mean", "half_width", "n_sessions"} to two decimals, or None."""
+    b = cont["old_judge"]["models"].get(model)
+    if b is None:
+        return None
+    return {"mean": round(float(b["mean"]), 2),
+            "half_width": round(float(b["half_width"]), 2),
+            "n_sessions": int(b["n_sessions"])}
+
+
+def r3_nsfw_rank(cont, model):
+    """Round 3's published position with its tie range, or None."""
+    r3 = (_continuity_rows(cont).get(model) or {}).get("r3_nsfw")
+    if not r3:
+        return None
+    return {"rank": int(r3["rank"]), "tie": r3.get("tie"), "of": int(r3["of"])}
+
+
+def across_rounds(cont, model):
+    """A card's across_rounds block. A new model gets returning false, no
+    earlier-round fields, and still its old-judge band when it has one."""
+    row = _continuity_rows(cont).get(model)
+    h = (row or {}).get("r2_human")
+    r3 = (row or {}).get("r3_nsfw")
+    return {
+        "returning": row is not None,
+        "rounds": list(row["rounds"]) if row else [],
+        "old_judge_band": old_judge_band(cont, model),
+        "r2_human": None if not h else {
+            "elo": int(round(h["elo"])),
+            "ci95": [int(round(h["ci95"][0])), int(round(h["ci95"][1]))],
+            "n_votes": int(h["n_votes"]), "rank": int(h["rank"]),
+            "of": int(h["of"]), "voted_transcripts": h["voted_transcripts"]},
+        "r3_nsfw": None if not r3 else {
+            "rank": int(r3["rank"]), "tie": r3.get("tie"), "of": int(r3["of"]),
+            "craft": round(float(r3["craft"]), 2), "n": int(r3["n"]),
+            "refusal_pct": r3.get("refusal_pct")},
+        "transcripts": (row["same_transcripts"]["flag"] if row
+                        else "new_in_round4"),
+    }
+
+
+def build_across_table(cont):
+    oj = cont["old_judge"]
+    core = cont["core_seeds"]["seeds"]
+    return {
+        "source": "results/%s" % CONTINUITY_NAME,
+        "old_judge": "claude-sonnet-4 (the Round 02 and 03 craft judge, prompt %s)"
+                     % oj["prompt_hash"],
+        "band_rule": ("mean over the %d core seeds, plus or minus half the 95%% "
+                      "seed-bootstrap interval; a band, never a rank" % len(core)),
+        "core_seeds": "%s to %s" % (core[0], core[-1]),
+        "r3_refusal": ("Round 03's refusal %% is Round 03's own instrument (a "
+                       "judge flag per session) and is not comparable with J."),
+        "note": ("Round 04 changed the instruments, not the models. The old judge "
+                 "re-scored every Round 04 transcript so the Round 02 and 03 line "
+                 "continues; its numbers are not on the Round 04 judge's scale and "
+                 "nothing is translated between the two. Round 02 human ratings "
+                 "are the final 1,943-vote arena."),
+    }
+
+
+def _is_2dp(v, lo, hi):
+    return (not isinstance(v, bool) and isinstance(v, (int, float))
+            and lo <= v <= hi and round(v, 2) == v)
+
+
+def _band_problems(b, where):
+    if b is None:
+        return []
+    if not isinstance(b, dict):
+        return ["%s is not an object" % where]
+    problems = []
+    _keys_exact(b, OLD_JUDGE_BAND_KEYS, where, problems)
+    if not _is_2dp(b.get("mean"), 1.0, 5.0):
+        problems.append("%s.mean is not a 1-5 value to two decimals" % where)
+    if not _is_2dp(b.get("half_width"), 0.0, 2.0):
+        problems.append("%s.half_width is not 0-2 to two decimals" % where)
+    n = b.get("n_sessions")
+    if isinstance(n, bool) or not isinstance(n, int) or n < 1:
+        problems.append("%s.n_sessions is not a positive integer" % where)
+    return problems
+
+
+def _r3_rank_problems(r, where, keys=R3_RANK_KEYS):
+    if r is None:
+        return []
+    problems = []
+    _keys_exact(r, keys, where, problems)
+    rank, of, tie = r.get("rank"), r.get("of"), r.get("tie")
+    if not (isinstance(rank, int) and isinstance(of, int) and 1 <= rank <= of):
+        problems.append("%s: rank %r of %r" % (where, rank, of))
+    if tie is not None:
+        try:
+            a, b = (int(x) for x in tie.split("-"))
+            if not a <= rank <= b:
+                problems.append("%s: rank %r outside its tie %r" % (where, rank, tie))
+        except (AttributeError, ValueError):
+            problems.append("%s: tie %r is not 'a-b'" % (where, tie))
+    return problems
+
+
+def _across_problems(doc, cont):
+    problems = []
+    t = doc.get("across_rounds_table")
+    if not isinstance(t, dict):
+        return ["cards: across_rounds_table missing"]
+    _keys_exact(t, ACROSS_TABLE_KEYS, "across_rounds_table", problems)
+    for mid, c in doc["cards"].items():
+        a = c.get("across_rounds")
+        where = "card %s.across_rounds" % mid
+        if not isinstance(a, dict):
+            problems.append("%s missing" % where)
+            continue
+        _keys_exact(a, ACROSS_KEYS, where, problems)
+        hits = ACROSS_BANNED & set(_all_keys(a))
+        if hits:
+            problems.append("%s carries %s" % (where, sorted(hits)))
+        problems += _band_problems(a.get("old_judge_band"), where + ".old_judge_band")
+        if a.get("r2_human") is not None:
+            _keys_exact(a["r2_human"], ACROSS_R2_KEYS, where + ".r2_human", problems)
+        if a.get("r3_nsfw") is not None:
+            problems += _r3_rank_problems(a["r3_nsfw"], where + ".r3_nsfw",
+                                          keys=ACROSS_R3_KEYS)
+        if a.get("transcripts") not in ACROSS_TRANSCRIPTS:
+            problems.append("%s.transcripts %r" % (where, a.get("transcripts")))
+        if not set(a.get("rounds") or []) <= ACROSS_ROUNDS:
+            problems.append("%s.rounds %r" % (where, a.get("rounds")))
+        if bool(a.get("returning")) != bool(a.get("rounds")):
+            problems.append("%s: returning iff it names an earlier round" % where)
+        if not a.get("returning") and (a.get("r2_human") or a.get("r3_nsfw")):
+            problems.append("%s: a new model with earlier-round fields" % where)
+        if cont is not None and a != across_rounds(cont, mid):
+            problems.append("%s differs from %s" % (where, CONTINUITY_NAME))
     return problems
 
 
@@ -1473,13 +1694,16 @@ def build_judge_table(ov):
             "not_comparable_with": JUDGE_NOT_COMPARABLE, "note": note}
 
 
-def build_cards(lb, results_dir=RESULTS, commit="unknown", overview=None):
+def build_cards(lb, results_dir=RESULTS, commit="unknown", overview=None,
+                continuity=None):
     """model-cards.json from generate_profile_cards_v2's own build_card, with
-    the round-4 rows from `lb` (never a re-run of the analyzer), and the judge
-    rows from round4_overview.json (never a re-run of that analyzer either)."""
+    the round-4 rows from `lb` (never a re-run of the analyzer), the judge
+    rows from round4_overview.json and the across_rounds blocks from
+    round4_continuity.json (never a re-run of either analyzer)."""
     for name in CARD_INPUTS:
         _guard_path(Path(results_dir) / name)
     ov = overview if overview is not None else read_overview(results_dir)
+    cont = continuity if continuity is not None else read_continuity(results_dir)
     jm = ov["judge_means"]["models"]
     ctx = cards_v2.load_inputs(results_dir, r4=cards_v2.r4_rows(lb))
     cards = [cards_v2.build_card(m, ctx) for m in cards_v2.ordered_models(ctx)]
@@ -1490,10 +1714,13 @@ def build_cards(lb, results_dir=RESULTS, commit="unknown", overview=None):
         named[mid] = {"id": mid, "name": name, "vendor": vendor,
                       "is_finetune": fine,
                       **{k: v for k, v in c.items() if k != "id"},
-                      "judge": judge_row(jm[mid]) if mid in jm else None}
+                      "judge": judge_row(jm[mid]) if mid in jm else None,
+                      "across_rounds": across_rounds(cont, mid)}
     doc["cards"] = named
     doc["inputs"]["judge"] = OVERVIEW_NAME
+    doc["inputs"]["across_rounds"] = CONTINUITY_NAME
     doc["judge_table"] = build_judge_table(ov)
+    doc["across_rounds_table"] = build_across_table(cont)
     doc["willingness_source"] = "results/round4_willingness_leaderboard.json"
     doc["source_commit"] = commit
     doc["export_id"] = "r4c-%s-%s" % (
@@ -1554,10 +1781,11 @@ def _judge_problems(doc, overview):
     return problems
 
 
-def check_cards(doc, lb, overview=None):
+def check_cards(doc, lb, overview=None, continuity=None):
     problems = []
     _keys_exact(doc, CARDS_KEYS, "cards", problems)
     problems += _judge_problems(doc, overview)
+    problems += _across_problems(doc, continuity)
     lb_models = {r["model"] for r in lb["leaderboard"]}
     for mid, c in doc["cards"].items():
         _keys_exact(c, CARD_KEYS, "card %s" % mid, problems)
@@ -1766,8 +1994,9 @@ def _write_json_file(dest, obj, name):
 
 
 def run_board(args, lb, commit, check):
-    board = build_board(lb, commit)
-    problems = check_board(board)
+    cont = read_continuity(RESULTS)
+    board = build_board(lb, commit, continuity=cont)
+    problems = check_board(board, continuity=cont)
     ranked = [r for r in board["rows"] if r["ranked"]]
     _print_facts("BOARD (round-4.json)", {
         "rows": len(board["rows"]), "ranked": len(ranked),
@@ -1776,6 +2005,8 @@ def run_board(args, lb, commit, check):
         "j_ties": [t["models"] for t in board["j_ties"]],
         "silent_flag": [r["model"] for r in board["rows"] if r["empty"]["silent_flag"]],
         "reduced_seed_set": sum(r["reduced_seed_set"] for r in board["rows"]),
+        "with old_judge_band": sum(r["old_judge_band"] is not None for r in board["rows"]),
+        "with r3_nsfw_rank": sum(r["r3_nsfw_rank"] is not None for r in board["rows"]),
         "export_id": board["export_id"],
     })
     bad = _problems("board guards", problems)
@@ -1787,8 +2018,9 @@ def run_board(args, lb, commit, check):
 
 def run_cards(args, lb, commit, check):
     ov = read_overview(RESULTS)
-    doc, _ = build_cards(lb, RESULTS, commit, overview=ov)
-    problems = check_cards(doc, lb, overview=ov)
+    cont = read_continuity(RESULTS)
+    doc, _ = build_cards(lb, RESULTS, commit, overview=ov, continuity=cont)
+    problems = check_cards(doc, lb, overview=ov, continuity=cont)
     cards = doc["cards"]
     _print_facts("CARDS (model-cards.json)", {
         "cards": len(cards),
@@ -1805,6 +2037,10 @@ def run_cards(args, lb, commit, check):
         "with production defects": sum(c["production_defects"] is not None
                                        for c in cards.values()),
         "names from CARD_ONLY": sorted(m for m in cards if m not in NAMES),
+        "returning (across_rounds)": sum(c["across_rounds"]["returning"]
+                                         for c in cards.values()),
+        "with old_judge_band": sum(c["across_rounds"]["old_judge_band"] is not None
+                                   for c in cards.values()),
         "inputs": doc["inputs"],
         "export_id": doc["export_id"],
     })
@@ -1859,6 +2095,8 @@ def main(argv=None):
             inputs += [SEEDS_A, *r4_paths()]
         if "cards" in commands:
             inputs += [RESULTS / n for n in CARD_INPUTS] + [RESULTS / OVERVIEW_NAME]
+        if "board" in commands or "cards" in commands:
+            inputs += [RESULTS / CONTINUITY_NAME]
         dirty = input_problems(inputs)
         print("source_commit %s; %d input files, %s" % (
             commit[:12], len(inputs),

@@ -283,19 +283,55 @@ variants.
 
 ## 5. The round 3 → round 4 bridge — DROPPED
 
-> **Superseded by § 10a.** The simulator stayed DeepSeek V3.2, so there is no
-> simulator change to attribute and this cell is unnecessary. Retained below
-> for the reasoning, which applies again the moment the simulator changes.
+> **Rewritten 2026-09-27.** The cell below was dropped because its premise
+> fell away: the simulator stayed DeepSeek V3.2 (§ 10a; every round-4 run
+> file records `deepseek/deepseek-v3.2`, as round 3's NSFW run did). The
+> explanation this section used to give, that "two things changed at once
+> (simulator and seeds)", was wrong about the simulator and left the real
+> reasons unstated.
 
-**Round 4 refusal numbers are not comparable to round 3's.** Two things changed
-at once (simulator and seeds), so any delta is unattributable. Fix with an
-explicit bridge cell:
+**Round 4 refusal numbers are not comparable to round 3's, and the simulator
+is not why.** Four other things changed between the rounds, and any one of
+them makes a round-to-round delta unattributable:
+
+1. **The seeds changed.** Round 3's refusal column comes from its 20 NSFW
+   seeds, 12 turns each, with no scripted escalation. Round 4 runs its own
+   ladder seeds (16 Track A, 4 B-hard, 3 B-policy; § 2, § 3), whose user
+   turns climb scripted rungs L1 to L5.
+2. **The instrument changed.** Round 3 had no refusal classifier. Its
+   refusal % is the share of sessions in which either session judge (Sonnet 4
+   or DeepSeek R1) set `refusal.refused_midscene` in its JSON
+   (`analyze_round3_nsfw.py`). Round 4 labels every ladder rung with a
+   separate per-rung classifier
+   (§ 6.2, `classify_r4_refusals.py`) and reports over-refusal as the share
+   of Track A exchanges on rungs L3 to L5 that were not engaged.
+3. **The construct changed.** The round-3 flag caught outright mid-scene
+   refusal: 7 of 787 sessions, with 35 of 40 models at 0%. Round 4 counts
+   soft deflection as not engaging, and soft deflection is nearly all of it:
+   Track A's rung labels hold 1,399 soft deflections and 46 refusals. So all
+   23 models that scored 0% in round 3 and have a round-4 row over-refuse on
+   L3 to L5, from 0.07 to 0.55 (`gpt_5_5`). That is a different quantity,
+   not a regression.
+4. **About three months of provider drift.** Round 3's NSFW sessions were
+   generated on 2026-06-08, round 4's between 2026-08-06 and 2026-09-25.
+   Hosted models change behind a fixed id over that span.
+
+The original plan for this section ended with a warning: "Without this,
+round 4 floats free of the existing leaderboard." No bridge was run, and on
+the willingness side that is what happened. Round 3's refusal % against round
+4's J gives ρ = 0.30 (n = 27, p = 0.13), which is no usable link. Publish
+round 3's refusal % as it is, labelled as a different instrument, and do not
+put the two rounds' refusal figures side by side as one series. The one real
+bridge left is to run the round-4 per-rung classifier over round-3
+transcripts. Round 3 has no scripted ladder, so that means labelling about
+9,400 character turns, not 787 sessions.
+
+The dropped cell, for the record. It held seeds fixed and swapped only the
+simulator, to isolate a simulator effect on craft and refusal:
 
 > 5 round-3 NSFW seeds × 6 models × {DeepSeek V3.2 sim, MagMell sim} = 60 sessions
 
-Seeds held fixed, only the simulator swapped. Isolates the pure simulator
-effect on both craft scores and refusal rate. Report the delta in the round 4
-writeup. Without this, round 4 floats free of the existing leaderboard.
+It becomes necessary again the moment the simulator changes.
 
 ---
 
@@ -388,6 +424,14 @@ goes into depth per model instead.
 **Zero-refuse frontier — do they hold the line on Track B?**
 `claude_opus_4_7`, `gpt_5_5`, `deepseek_v4_pro`, `gemini_3_5_flash`,
 `kimi_k2_6`, `qwen3_7_max`, `owl_alpha`, `mimo_2_5_pro`, `gpt_4_1` (R3 anchor)
+
+> **`owl_alpha` was not run in round 4, under any name.** In round 3,
+> `owl_alpha` (`openrouter/owl-alpha`) was a stealth release of LongCat-2.0
+> (`meituan/longcat-2.0`). The preview endpoint was delisted before the full
+> run (it 404ed on 2026-08-05, `run_r4_full.py`), so the full run went ahead
+> with 16 of these 17 models, and LongCat-2.0 was not added back under its own
+> id. Round-3 figures labelled Owl Alpha are LongCat-2.0's; round 4 has no row
+> for it.
 
 **Willingness floor:**
 `euryale_70b`, `cydonia_24b`, `rocinante_12b`
@@ -2985,3 +3029,117 @@ Levi's ruling is option (g) (sec 11 item 6). What the analyzer now does:
 - **The quoted kappas are checked on every run.** The analyzer recomputes the
   turn-2, turn-4 and conditional kappas from the Jev files and warns if they
   drift from the figures its notes quote.
+
+## 23. Continuity with rounds 1-3
+
+> **Added 2026-09-27.** Levi's decisions that day: run the old judge over the
+> round-4 transcripts; publish the continuity package below; lead round 4's
+> README section with the table that continues rounds 2 and 3, and present J
+> as the round's new axis, not a replacement for craft. Figures are from
+> `analyze_round4_continuity.py` (`results/round4_continuity.json`); methods
+> and limits are in METHODOLOGY §21.
+
+Round 4 changed the instruments more than the models, and it changed them
+without an overlap round: new craft judge, new flaw hunter, new headline, new
+willingness classifier, all at once. Section 5 of this document had warned
+that without a bridge round 4 "floats free of the existing leaderboard". This
+section is the bridge built afterwards, and the rule that keeps the next round
+from needing one.
+
+### 23a. What still connects, round by round
+
+| Round | What it measured | Link to round 4 |
+|---|---|---|
+| 1 | single-turn 27-dimension rubric, single-message human arena | None. Its only route was the May composite, now archived; the rubric's inputs are private and were not re-run. |
+| 2 | multi-turn craft (Sonnet 4), human multi-turn arena, May composite | Strong. 20 of its 21 models are in round 4 on byte-identical transcripts (`kimi_k2_6` was regenerated), so their old-judge scores are their round-2 scores. 324 of the 336 arena sessions are round-4 transcripts. |
+| 3 | NSFW-track craft (Sonnet 4) as the headline, a per-session refusal flag; a standard track beside it | Order only for the NSFW table (ρ 0.87 against the new judge, n=37). The standard track is round 4's craft setup, so its 19 returning models (18 with enough re-run sessions) are a same-judge re-run check. Refusal: none. |
+
+### 23b. The measurements
+
+| Bridge | Result |
+|---|---|
+| Old judge re-run on round-4 transcripts | 549 sessions backfilled ($19.96; $21.41 with the drift gate), 1,328 of 1,328 now scored; drift gate passed (40 sessions, mean change 0.000, Pearson 0.991) |
+| Old vs new judge, same transcripts, 12 core seeds | ρ 0.88 [0.79, 0.94], n=69; 0.93 on stored scores (n=41; 0.88 [0.73, 0.96] without the six finetunes, n=35), 0.81 [0.57, 0.93] backfill-only (n=27, no finetunes), overlapping; 0.71 above 4.3 (n=43) |
+| Scale | new judge 0.52 lower on average (Claude 0.07-0.35, others 0.10-1.05); top-26 span 0.21 to 0.59 |
+| Old judge's resolution | all 68 neighbouring bands overlap; median 95% rank interval 16 places |
+| Model drift, same judge and setup, June to September | 6 of 7 non-finetune models within 0.04; `gpt_5_5` +0.12 (SE 0.07); `unslopnemo_12b` +0.52 (SE 0.17); ρ 0.985 (n=13) |
+| Round-3 NSFW table vs new judge | ρ 0.87 [0.71, 0.95], n=37; 0.78 [0.55, 0.90] without finetunes (n=31) |
+| Humans vs old / new judge, identical transcripts | 0.60 [0.09, 0.89] / 0.52 [-0.01, 0.82], n=19; difference -0.09 [-0.24, 0.03] |
+| Humans vs J | undetermined, n=8 |
+| Claude-session coefficient, new judge over old, vs ChatGPT / Gemini | +0.30 [0.14, 0.47] / +0.13 [-0.03, 0.28] (110 stored-score sessions) |
+| Round-3 refusal % vs J | ρ 0.30 [-0.04, 0.58], n=27: not one series |
+
+The skeptic review of the first continuity proposal corrected several claims
+that had been drafted for publication; the README uses the corrected forms:
+324 of 336 arena sessions and 19 models (not all 336 and 20); `gpt_5_5` moved
++0.12 (not "within 0.04"); humans against J is undetermined (not "about 0");
+the Claude question is answered by the cross-family check, not by a
+regression-direction-dependent correction; and 41 returning models means 40
+with craft plus `rocinante_12b`, with 30 new, for 71.
+
+**Not published, on purpose:** a per-model translation of new-judge scores to
+the old scale (error about 0.11 per model, larger than the frontier's spread),
+a synthetic composite, a cross-round refusal column, and any rank on the old
+judge (METHODOLOGY §21.10).
+
+### 23c. The anchor protocol for later rounds
+
+Round 4 lost its line because every instrument changed at once with nothing
+held fixed. From round 5 on:
+
+1. **A frozen anchor judge scores everything.** The previous headline judge,
+   pinned by model id, prompt hash and sampling settings, scores the whole
+   craft corpus every round as a secondary column (about $0.036 a session, so
+   about $48 for a corpus of round 4's size). It is replaced only through an
+   **overlap round** in which the old and new judge both score everything; the
+   paired scores become the permanent bridge. Change judges while the old one
+   can still be called, and run a drift gate like this round's before any
+   backfill.
+2. **About 12 anchor models, regenerated every round.** Spread over the scale:
+   2 Claude, 4 non-Claude frontier, 3 mid-field, 3 finetunes. Each round they
+   are regenerated on the core seeds, so model drift and judge drift can be
+   told apart; their earlier transcripts stay frozen by hash, so every new
+   instrument can also be run on unchanged text. The 2026-09-21 re-run was this
+   check, done once; it becomes mandatory. A starting list, for Levi to
+   confirm: `claude_opus_4_6`, `claude_sonnet_4_5`, `deepseek_v4_pro`,
+   `gpt_4_1`, `gemini_3_1_pro`, `glm_4_7`, `gemma_4_26b`, `llama_4_maverick`,
+   `qwen3_5_flash`, `cydonia_24b`, `lunaris_8b`, `magnum_v4_72b`. The first nine
+   have round-2 human votes on transcripts identical to round 4's.
+3. **A frozen seed core.** Seeds 09-20 of the adversarial set are never edited
+   or dropped. New seeds are added beside them, never in place of them, and
+   every cross-round figure is computed on the core.
+4. **The headline changes only through an overlap round.** A new headline is
+   published for at least one round beside the old one, and the old one is not
+   retired in the same round (the May composite was).
+5. **Provenance on every score row.** `transcript_hash`, the judge id as the
+   API reported it, and the prompt hash. Regenerating a transcript invalidates
+   its scores explicitly; a score without a hash is not used for continuity.
+6. **A release gate that writes the continuity section.** A round is not
+   released until `analyze_round4_continuity.py` (or its successor) has run on
+   the round's files: returning models, the old-anchor band for every model,
+   Spearman against the previous round with n and an interval, the drift check
+   on the anchor models, and the list of instruments that changed with
+   "comparable via" or "not comparable, because" for each. Its `--markdown`
+   output is the README section.
+
+Two further rules follow from this round's findings. Put a non-Claude judge on
+at least the anchor set every round, since both craft judges so far are
+Claude and the new one shows a Claude-family uplift (23b). And give every
+human arena pair an id that includes the transcript hash, with at least half
+of each new model's pairs against anchor models, so votes stay tied to the
+text they were cast on and new models land on the old scale.
+
+### 23d. Still open
+
+- **A non-Claude column for every model.** `results/judge_full_chatgpt` is a
+  blind package over all 1,328 sessions; no parts have come back. When they
+  do, it is a $0 cross-family column for all 70 craft models.
+- **A willingness bridge.** Only the round-4 per-rung classifier run over
+  round-3 transcripts (about 9,400 turns) would link the two refusal figures.
+  Not run.
+- **Round-3 human votes.** The site's public export also covers round 3's
+  NSFW arena. The site's Round 04 live human board is built to start from a
+  pure-human snapshot of it (2,122 votes on 2026-09-27), but that board exists
+  only on the VAUDEVILLE branch `claude/plotpoints-round4` and is not yet
+  deployed. The votes are not in this repo, and round 3 has not closed; a
+  round-3 human column waits for the final snapshot.

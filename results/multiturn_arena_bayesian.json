@@ -4,206 +4,207 @@
   "scale": 173.71779276130073,
   "n_chains": 4,
   "n_samples_per_chain": 12000,
-  "n_votes": 1262,
-  "n_voters": 315,
+  "n_votes": 1943,
+  "n_voters": null,
+  "n_votes_not_scored": 30,
   "n_pairs": 190,
   "winner_distribution": {
-    "A": 508,
-    "B": 585,
-    "tie": 169
+    "A": 786,
+    "B": 867,
+    "tie": 290
   },
   "correlations": {
     "vs_community_arena_singlemsg": {
-      "rho": -0.14545454545454548,
-      "p": 0.6695786456420787,
+      "rho": -0.23636363636363636,
+      "p": 0.4840911622253974,
       "n": 11
     },
     "vs_llm_judge_multiturn": {
-      "rho": 0.4952957617059485,
-      "p": 0.026381730230661284,
-      "n": 20
+      "rho": 0.5674137555430587,
+      "p": 0.011282816736518732,
+      "n": 19
     }
   },
   "leaderboard": [
     {
       "rank": 1,
-      "model": "deepseek_v4_pro",
-      "elo_mean": 1581.7,
-      "elo_std": 62.0,
-      "ci_low_95": 1461.9,
-      "ci_high_95": 1700.2,
-      "n_votes": 99
+      "model": "claude_opus_4_7",
+      "elo_mean": 1575.2,
+      "elo_std": 47.5,
+      "ci_low_95": 1477.7,
+      "ci_high_95": 1671.4,
+      "n_votes": 146
     },
     {
       "rank": 2,
-      "model": "claude_opus_4_6",
-      "elo_mean": 1565.7,
-      "elo_std": 61.1,
-      "ci_low_95": 1429.9,
-      "ci_high_95": 1671.4,
-      "n_votes": 135
+      "model": "deepseek_v4_pro",
+      "elo_mean": 1545.9,
+      "elo_std": 48.8,
+      "ci_low_95": 1449.2,
+      "ci_high_95": 1632.4,
+      "n_votes": 166
     },
     {
       "rank": 3,
       "model": "gemini_3_1_flash_lite",
-      "elo_mean": 1557.1,
-      "elo_std": 65.8,
-      "ci_low_95": 1417.3,
-      "ci_high_95": 1682.5,
-      "n_votes": 87
+      "elo_mean": 1532.7,
+      "elo_std": 46.5,
+      "ci_low_95": 1434.4,
+      "ci_high_95": 1621.0,
+      "n_votes": 151
     },
     {
       "rank": 4,
-      "model": "gpt_4_1",
-      "elo_mean": 1556.5,
-      "elo_std": 60.8,
-      "ci_low_95": 1441.0,
-      "ci_high_95": 1670.7,
-      "n_votes": 134
+      "model": "claude_opus_4_6",
+      "elo_mean": 1532.2,
+      "elo_std": 44.0,
+      "ci_low_95": 1447.8,
+      "ci_high_95": 1610.1,
+      "n_votes": 224
     },
     {
       "rank": 5,
-      "model": "claude_opus_4_7",
-      "elo_mean": 1553.7,
-      "elo_std": 65.3,
-      "ci_low_95": 1419.3,
-      "ci_high_95": 1679.6,
-      "n_votes": 90
+      "model": "gpt_4_1",
+      "elo_mean": 1524.7,
+      "elo_std": 42.8,
+      "ci_low_95": 1437.5,
+      "ci_high_95": 1605.4,
+      "n_votes": 212
     },
     {
       "rank": 6,
       "model": "mistral_small_creative",
-      "elo_mean": 1527.9,
-      "elo_std": 57.7,
-      "ci_low_95": 1416.2,
-      "ci_high_95": 1632.1,
-      "n_votes": 155
+      "elo_mean": 1519.2,
+      "elo_std": 45.8,
+      "ci_low_95": 1437.9,
+      "ci_high_95": 1598.9,
+      "n_votes": 229
     },
     {
       "rank": 7,
       "model": "gemini_3_1_pro",
-      "elo_mean": 1527.0,
-      "elo_std": 59.8,
-      "ci_low_95": 1415.4,
-      "ci_high_95": 1641.6,
-      "n_votes": 109
+      "elo_mean": 1512.8,
+      "elo_std": 45.7,
+      "ci_low_95": 1422.2,
+      "ci_high_95": 1595.7,
+      "n_votes": 161
     },
     {
       "rank": 8,
-      "model": "kimi_k2_6",
-      "elo_mean": 1517.7,
-      "elo_std": 61.3,
-      "ci_low_95": 1408.2,
-      "ci_high_95": 1626.3,
-      "n_votes": 104
+      "model": "glm_4_7",
+      "elo_mean": 1509.6,
+      "elo_std": 43.5,
+      "ci_low_95": 1417.8,
+      "ci_high_95": 1587.3,
+      "n_votes": 227
     },
     {
       "rank": 9,
-      "model": "kimi_k2_5",
-      "elo_mean": 1510.8,
-      "elo_std": 63.9,
-      "ci_low_95": 1388.1,
-      "ci_high_95": 1622.3,
-      "n_votes": 98
+      "model": "kimi_k2_6",
+      "elo_mean": 1505.0,
+      "elo_std": 45.3,
+      "ci_low_95": 1417.0,
+      "ci_high_95": 1588.5,
+      "n_votes": 156
     },
     {
       "rank": 10,
-      "model": "glm_4_7",
-      "elo_mean": 1506.6,
-      "elo_std": 57.3,
-      "ci_low_95": 1399.8,
-      "ci_high_95": 1610.0,
-      "n_votes": 150
+      "model": "deepseek_v4_flash",
+      "elo_mean": 1491.7,
+      "elo_std": 48.2,
+      "ci_low_95": 1395.6,
+      "ci_high_95": 1575.2,
+      "n_votes": 153
     },
     {
       "rank": 11,
-      "model": "claude_sonnet_4_5",
-      "elo_mean": 1505.6,
-      "elo_std": 60.5,
-      "ci_low_95": 1391.6,
-      "ci_high_95": 1614.1,
-      "n_votes": 140
+      "model": "kimi_k2_5",
+      "elo_mean": 1488.7,
+      "elo_std": 48.0,
+      "ci_low_95": 1391.3,
+      "ci_high_95": 1580.4,
+      "n_votes": 155
     },
     {
       "rank": 12,
-      "model": "gemma_4_26b",
-      "elo_mean": 1504.5,
-      "elo_std": 54.5,
-      "ci_low_95": 1392.2,
-      "ci_high_95": 1594.9,
-      "n_votes": 144
+      "model": "minimax_m2_7",
+      "elo_mean": 1486.9,
+      "elo_std": 44.8,
+      "ci_low_95": 1397.9,
+      "ci_high_95": 1560.5,
+      "n_votes": 220
     },
     {
       "rank": 13,
-      "model": "deepseek_v4_flash",
-      "elo_mean": 1490.7,
-      "elo_std": 64.3,
-      "ci_low_95": 1367.4,
-      "ci_high_95": 1604.9,
-      "n_votes": 101
+      "model": "claude_sonnet_4_5",
+      "elo_mean": 1479.3,
+      "elo_std": 44.5,
+      "ci_low_95": 1395.9,
+      "ci_high_95": 1559.2,
+      "n_votes": 220
     },
     {
       "rank": 14,
-      "model": "minimax_m2_7",
-      "elo_mean": 1481.0,
-      "elo_std": 57.5,
-      "ci_low_95": 1363.1,
-      "ci_high_95": 1580.9,
-      "n_votes": 144
+      "model": "deepseek_v3_2",
+      "elo_mean": 1471.7,
+      "elo_std": 45.5,
+      "ci_low_95": 1376.5,
+      "ci_high_95": 1553.1,
+      "n_votes": 229
     },
     {
       "rank": 15,
-      "model": "deepseek_v3_2",
-      "elo_mean": 1458.5,
-      "elo_std": 59.5,
-      "ci_low_95": 1340.6,
-      "ci_high_95": 1565.1,
-      "n_votes": 150
+      "model": "gemma_4_26b",
+      "elo_mean": 1466.1,
+      "elo_std": 43.6,
+      "ci_low_95": 1381.6,
+      "ci_high_95": 1543.2,
+      "n_votes": 213
     },
     {
       "rank": 16,
       "model": "llama_4_maverick",
-      "elo_mean": 1452.2,
-      "elo_std": 58.2,
-      "ci_low_95": 1333.4,
-      "ci_high_95": 1555.9,
-      "n_votes": 158
+      "elo_mean": 1457.5,
+      "elo_std": 45.0,
+      "ci_low_95": 1367.8,
+      "ci_high_95": 1535.2,
+      "n_votes": 214
     },
     {
       "rank": 17,
       "model": "glm_5_1",
-      "elo_mean": 1440.6,
-      "elo_std": 60.2,
-      "ci_low_95": 1318.1,
-      "ci_high_95": 1562.1,
-      "n_votes": 100
+      "elo_mean": 1445.5,
+      "elo_std": 45.9,
+      "ci_low_95": 1359.2,
+      "ci_high_95": 1529.3,
+      "n_votes": 154
     },
     {
       "rank": 18,
       "model": "grok_4_1",
-      "elo_mean": 1419.8,
-      "elo_std": 58.8,
-      "ci_low_95": 1293.4,
-      "ci_high_95": 1522.2,
-      "n_votes": 145
+      "elo_mean": 1432.3,
+      "elo_std": 43.5,
+      "ci_low_95": 1348.8,
+      "ci_high_95": 1511.6,
+      "n_votes": 230
     },
     {
       "rank": 19,
       "model": "gemini_2_5_flash",
-      "elo_mean": 1410.8,
-      "elo_std": 59.7,
-      "ci_low_95": 1296.2,
-      "ci_high_95": 1522.2,
-      "n_votes": 139
+      "elo_mean": 1417.6,
+      "elo_std": 45.4,
+      "ci_low_95": 1327.3,
+      "ci_high_95": 1499.8,
+      "n_votes": 210
     },
     {
       "rank": 20,
       "model": "qwen3_5_flash",
-      "elo_mean": 1405.5,
-      "elo_std": 61.2,
-      "ci_low_95": 1278.4,
-      "ci_high_95": 1511.2,
-      "n_votes": 142
+      "elo_mean": 1412.1,
+      "elo_std": 46.6,
+      "ci_low_95": 1314.9,
+      "ci_high_95": 1493.6,
+      "n_votes": 216
     }
   ]
 }

@@ -3902,31 +3902,31 @@
   },
   "human_multiturn_arena": {
    "source": "multiturn_arena_bayesian.json",
-   "votes": 1262,
-   "voters": 315,
+   "votes": 1943,
+   "voters": null,
    "note": "Public file only. Spearman against the Sonnet 5 judge mean; p from 20000 label permutations.",
    "all": {
     "n": 20,
-    "spearman": 0.38,
-    "p": 0.099
+    "spearman": 0.445,
+    "p": 0.0481
    },
    "without the user simulator": {
     "n": 19,
-    "spearman": 0.309,
-    "p": 0.2001
+    "spearman": 0.384,
+    "p": 0.1079
    },
    "human_mean_by_tier": {
     "A": {
      "n": 9,
-     "mean": 1509.3
+     "mean": 1504.2
     },
     "B": {
      "n": 10,
-     "mean": 1493.8
+     "mean": 1481.1
     },
     "C": {
      "n": 1,
-     "mean": 1452.2
+     "mean": 1457.5
     }
    }
   }

@@ -347,6 +347,8 @@ For every pair of methods, Spearman ρ over the common-model subset (§5 in the 
 
 The +0.495 rank correlation **validates the LLM-judge multi-turn methodology against independent human judgment** when both judges see the same evidence (the full dialogue). The single-message arena measures snap-judgment engagement — a different latent dimension.
 
+*Refreshed 2026-09-27 on the final round-2 votes (1,943; README "Multi-Turn Arena").* The figures above are the 434-vote snapshot of 2026-04-27. On the final votes: ρ(multiturn_arena, llm_judge_likert) = +0.567 (p = 0.011, n = 19; Kimi K2.6 is left out because its transcripts were regenerated after the vote) and ρ(multiturn_arena, single_msg_arena) = −0.24 (p = 0.48, n = 11). Against both craft judges on the 12 core seeds, see §21.7.
+
 ---
 
 ## 6. LLM-Judged Pairwise / Adversarial ELO
@@ -679,6 +681,7 @@ Output files in `results/` are version-controlled snapshots; re-running with new
 | Latency + quality/speed v1 | 2026-04-26 | 7,698 RP-Bench calls from OpenRouter activity export |
 | Round 4 willingness v1 | 2026-09-25 | 23 seeds / 58 models / 57 with a J, 55 ranked / 5,254 rung labels / J on the first ask |
 | Profile cards v2 | 2026-09-25 | 70 cards / 0 excluded / single-rater flaw hunter, single-judge sonnet 5 |
+| Round 4 continuity v1 | 2026-09-27 | 41 returning models / old judge (Sonnet 4) on all 1,328 round-4 craft sessions, 549 backfilled / 12 core seeds / §21 |
 
 Major version bumps when the model pool changes (Phase B added 8 next-gen models on 12 v2/v3 seeds). Minor version bumps when methodology changes (e.g. switch from frequentist to Bayesian ELO).
 
@@ -1150,3 +1153,212 @@ these files saves the split form. The leaderboard, the kappa figures and the
 Jev gate reproduce from the public files alone. Anything that needs the Track
 B text (relabelling, the craft proxy) stops with an error when the companion
 is missing, rather than reading an empty transcript.
+
+---
+
+## 21. Continuity across rounds
+
+Round 4 replaced the craft judge (Sonnet 4 to Sonnet 5), the flaw hunter,
+the headline (craft to J) and the willingness instrument. This section is how
+the round is tied back to rounds 2 and 3, and where each tie stops.
+`analyze_round4_continuity.py` computes every figure here into
+`results/round4_continuity.json`; `--markdown` writes the README table from it.
+
+### 21.1 Who is compared
+
+A model is **returning** when it has a round-4 craft session or a round-4 J
+row and appears in round 2 (`multiturn_merged_all_v2.json`) or round 3 (the
+standard track, `round3gen_R2_adversarial_catchup.json`, or the NSFW track,
+`round3gen_R3_nsfw.json`). That gives 41: 40 with round-4 craft, plus
+`rocinante_12b`, which has Track A labels only (no craft run, no J). 30 models
+are new. `owl_alpha` is the one earlier model with no round-4 data: it was
+LongCat-2.0 under a stealth id, its endpoint was delisted before the full run,
+and it was not added back under its own id.
+
+### 21.2 One session set
+
+Eight round-2 models played only seeds 09-20, and seven of them still have
+only those in round 4 (`kimi_k2_6` was regenerated on all 20). Every per-model figure here is
+therefore a mean over those **12 core seeds**, for every model, so no model's
+number depends on which seeds it happened to play (in the new judge the
+12-versus-20-seed shift alone has an SD of about 0.08). A model without all 12
+core sessions (`mistral_small_2603`, 3 of 12) gets no band. Every blank scene
+in the corpus is on seed 05, outside the core.
+
+### 21.3 The old judge on round-4 transcripts
+
+The main bridge. The round-2/3 judge is re-run, unchanged, on every round-4
+transcript it had not already scored.
+
+- **Identity.** `harness.multiturn.judge_session(session,
+  "anthropic/claude-sonnet-4", nsfw=False)`, prompt `SESSION_JUDGE_SYSTEM`
+  (sha256 prefix `1ff004ccf5aa`, unchanged since 2026-04-13), temperature 0.1,
+  max_tokens 4096. `judge_legacy_sonnet4.py` calls that function rather than a
+  copy and refuses to start if the prompt hash, the config or the model id has
+  drifted.
+- **Which score counts.** A stored score counts only where the text the judge
+  saw, user turns included, is byte-identical to the round-4 transcript (same
+  `judge_view_hash`). A backfill row counts only where its `transcript_hash`
+  and `judge_view_hash` both match the transcript on disk. A stale, duplicate
+  or unparsed row fails the analyzer. Of the 1,328 round-4 craft sessions, 344
+  carry their April score, 435 their 2026-09-21 score and 549 a 2026-09-27
+  backfill score.
+- **Drift gate.** Before the backfill, 40 sessions with a stored score were
+  re-judged under criteria frozen before any call: mean new minus stored 0.000
+  (SE 0.015), Pearson 0.991, 40 of 40 parsed. Claude-model sessions from the
+  April runs came back +0.067 higher (n=6); every other group was within 0.04.
+  The API now serves `anthropic/claude-sonnet-4` from Amazon Bedrock; the April
+  calls returned `anthropic/claude-4-sonnet-20250522`.
+- **The band.** Mean over the 12 core seeds, plus or minus half the width of
+  the 95% percentile interval from 10,000 seed resamples (numpy
+  `default_rng(20260927)`, the same draws for every model).
+- **Why a band and never a rank.** The old judge does not separate the upper
+  field. Over the 69 banded models the top 26 span 0.21 points, all 68
+  neighbouring pairs of bands overlap, and the median 95% rank interval, from
+  the same joint draws, spans 16 places (18 above 4.3). A position on this
+  column would be noise. The exporter refuses a rank, a position or an interval
+  end next to the band.
+- **Limits.** The band is on the old judge's scale, not the round-4 judge's,
+  and nothing converts one into the other (21.8). The backfill is a September
+  reading of an April instrument: the gate bounds drift at about 0.03 overall,
+  but a post-hoc split of the same 40 sessions, not one of the frozen criteria,
+  shows an era effect. Sessions stored in April came back +0.0375 (n=16) and
+  those stored on 2026-09-21 -0.025 (n=24), a gap of +0.06 (SE 0.03, t about
+  2.2). So the 20 models whose band is their April score may sit about 0.06 low
+  against the 49 scored in September. The Claude-versus-non-Claude gap in the
+  same sessions, +0.048 (SE 0.03), is partly confounded with it (Claude
+  sessions are 6 of 16 in April and 6 of 24 in September), and 40 sessions
+  cannot separate the two. Both are post hoc: neither is corrected for, and
+  either needs a fresh sample before it is read as real.
+
+### 21.4 Old judge against new judge, same transcripts
+
+Per-model means over the core seeds, Spearman ρ with a 95% interval from
+10,000 model resamples (percentile) and a two-sided p from 20,000 label
+permutations.
+
+| Models | n | ρ [95%] |
+|---|---|---|
+| All banded | 69 | 0.88 [0.79, 0.94] |
+| Old score stored (April or 2026-09-21) | 41 | 0.93 [0.82, 0.97] |
+| Old score from the backfill only | 27 | 0.81 [0.57, 0.93] |
+| Old score stored, without the RP finetunes (like for like with the backfill row, which has none) | 35 | 0.88 [0.73, 0.96] |
+| Without the RP finetunes | 63 | 0.85 [0.73, 0.92] |
+| Neither Claude nor a finetune | 54 | 0.80 [0.63, 0.90] |
+| Old score 4.3 or more | 43 | 0.71 [0.48, 0.84] |
+
+The new judge is 0.52 lower on average, by 0.07 to 0.35 on Claude models and
+0.10 to 1.05 on the rest, and its model means spread wider (top-26 span 0.59
+against 0.21). The earlier all-session figure, 0.935 on 42 models, was lifted
+by the finetunes (0.90 without them); the upper-field figure is the one that
+limits what the round-3 order can say about round 4.
+
+### 21.5 The published round-3 table
+
+Positions are the published ones, in the published order of
+`results/round3_nsfw_leaderboard.json` (the analyzer refuses the file if it is
+not in descending order). A tie is marked where two or more models share the
+published two-decimal score, as the range of positions they occupy. Against
+the round-4 judge's core-seed means: ρ = 0.87 [0.71, 0.95] (n=37), 0.78
+[0.55, 0.90] without finetunes (n=31); against the old judge on round-4
+transcripts, 0.90 [0.77, 0.96] (n=37).
+
+Limits: round 3's table is a different track (NSFW seeds, DeepSeek V3.2
+simulator) and the round-4 judge never scored a round-3 NSFW transcript, so
+the track and the judge change together. The finetune-against-frontier split
+carries over; the order inside round 3's own tied frontier does not. Round
+3's refusal % is published beside it as round 3's own instrument only (21.9).
+
+### 21.6 Did the models change?
+
+Nineteen round-3 standard-track models were re-run for round 4 with the same
+simulator; 18 of them on the same seeds (`mistral_small_2603` has only 4
+round-4 sessions and is left out). For each, the old judge's September score is
+paired by seed with its June score and the mean difference reported with its
+paired SE (`model_drift` in the JSON). Thirteen were re-run on 2026-09-21 on
+June's exact setup (4096-token cap, judged inline); five on 2026-09-24 with a
+16,384-token cap and judged by the backfill.
+
+On the exact setup, 6 of the 7 non-finetune models moved by 0.04 or less and
+`gpt_5_5` rose 0.12 (SE 0.07); June and September order the 13 at ρ = 0.985.
+Two models moved by more than 2 SE: `unslopnemo_12b` +0.52 (SE 0.17, exact
+setup) and `deepseek_v3_0324` +0.43 (SE 0.20, higher cap, so not attributable
+to the model alone).
+
+Limits: one session per seed, so a model's SE is 0.02-0.25; seven non-finetune
+models is a small check of "the frontier did not move".
+
+### 21.7 The human anchor
+
+The round-2 multi-turn arena (final, 1,943 votes; §5) showed 336 sessions from
+20 models. 324 of them, every session of the 19 models other than `kimi_k2_6`, are byte-identical to
+the round-4 transcripts, so the humans, the old judge and the new judge read
+the same text. On those 19: humans against the old judge ρ = 0.60 [0.09, 0.89],
+against the new judge 0.52 [-0.01, 0.82]; the paired difference (new minus
+old, same model draws) is -0.09 [-0.24, 0.03]. With `kimi_k2_6` on its
+regenerated text (n=20): 0.58 and 0.48.
+
+Limits: the arena covers round 2's roster only, and only 8 of its 20 models
+have a J, so humans against J is undetermined (ρ 0.17, interval -0.84 to
+0.85). These figures use the core seeds; the arena section's 0.567 uses every
+session.
+
+### 21.8 Cross-family check
+
+Both craft judges are Claude models. Each is compared with non-Claude
+reference judges on sessions all three scored on the same transcript (hash
+check; blank scenes left out): ChatGPT (the blind round-2 and increment-1
+passes) and Gemini (the API passes). The model is
+
+```
+judge_score = a + b·ref + c·ref² + d·[Claude model] + e
+```
+
+and `d` is how much more the judge scores a Claude model's session than a
+non-Claude one the reference scored the same. It is fitted for the old judge,
+the new judge and their difference, with the session OLS SE and a 95%
+interval from 4,000 model resamples.
+
+| Reference | Sessions (Claude) | Old judge d | New judge d | New minus old |
+|---|---|---|---|---|
+| ChatGPT, stored old scores | 110 (23) | +0.12 (t 1.5) | +0.43 (t 4.1) | +0.30 [0.14, 0.47] |
+| Gemini, stored old scores | 110 (23) | +0.10 (t 1.3) | +0.23 (t 3.0) | +0.13 [-0.03, 0.28] |
+| ChatGPT, with the backfill | 203 (27) | +0.10 (t 1.2) | +0.36 (t 3.7) | +0.26 [0.12, 0.40] |
+| Gemini, with the backfill | 203 (27) | +0.10 (t 1.5) | +0.21 (t 3.1) | +0.11 [-0.03, 0.24] |
+
+Both references agree better with the new judge than with the old one
+(session r: ChatGPT 0.72 against 0.65, Gemini 0.90 against 0.80), and both
+put the new judge's Claude coefficient above the old judge's. Read it as a
+Claude-family uplift in the new judge: part of the Claude models' lead under
+the new judge may be the judge's family. The check is relative. It cannot say
+whether the Claude judges are generous or the references harsh, and it rests
+on 23 Claude sessions from 8 models (27 from 9 with the backfill).
+
+### 21.9 Willingness is not bridged
+
+Round 3's refusal % is the share of sessions in which a session judge set
+`refused_midscene` in its JSON; round 4's over-refusal is the share of scripted
+L3-L5 rungs a per-rung classifier did not label engaged. The seeds, the
+instrument, the construct (round 4 counts soft deflection, which is nearly all
+of it) and three months of provider drift all changed. 35 of round 3's 40
+models were at 0%; all 23 of them with a round-4 row over-refuse, 0.07 to 0.55.
+Round 3's refusal % against J: ρ = 0.30 [-0.04, 0.58], n=27. Round 3's figure
+is published as it was, labelled as its own instrument, and never beside a
+round-4 refusal figure as one series. The one real bridge would be the
+round-4 classifier over round-3 transcripts, about 9,400 turns; it was not run.
+
+### 21.10 What is deliberately not published
+
+- **A per-model translation of the new judge onto the old scale.** A monotone
+  map fitted on the bridge models is off by about 0.11 per model (0.06 in tier
+  A), 6 of 42 models miss it by more than 2 SE, and 21 of 42 sit within that
+  error of the would-be A/B edge. With the old judge re-run on everything it is
+  also unnecessary.
+- **A synthetic composite.** Rebuilding the May composite without its arena
+  and rubric inputs leaves a Likert z-score anchored on the May pool, whose SD
+  is 0.15, so a weak new model lands near z = -17. The May composite stays
+  archived as published.
+- **A cross-round refusal column.** The same text detector on both rounds would
+  still face different stimuli (round 4's scripted "no fade to black" turn has
+  no round-3 counterpart).
+- **A rank on the old judge**, for 21.3's reasons.

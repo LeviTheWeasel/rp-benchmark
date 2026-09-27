@@ -8,6 +8,10 @@ single-message community arena:
   - Same seeds as the LLM-judge multiturn pipeline → directly comparable
   - Smaller N — coverage is per-pair sparse, CIs will be wide
 
+Input: data/multiturn_arena_votes.jsonl, the round-2 close as published on
+plotlightstudios.com (refresh_multiturn_arena_votes.py writes it; provenance
+in data/multiturn_arena_votes.README.md).
+
 Outputs:
   - results/multiturn_arena_bayesian.json     — per-model posterior ELO
   - prints comparison table vs LLM-judge multiturn + community arena
@@ -21,6 +25,13 @@ import numpy as np
 
 VOTES_FILE = Path("data/multiturn_arena_votes.jsonl")
 
+# Kept in the votes file, not scored. These 30 ballots were cast on
+# arena.l3vi4th4n.ai after its 507 round-2 votes were imported into
+# plotlightstudios.com (2026-04-30), so they never reached the round-2 tally
+# the site closed on 2026-06-13. Scoring them would publish a ranking that is
+# not the round's. See data/multiturn_arena_votes.README.md.
+UNSCORED_SOURCES = frozenset({"arena_l3vi4th4n_only"})
+
 PRIOR_SIGMA = 300.0
 SCALE = 400.0 / math.log(10)
 N_CHAINS = 4
@@ -29,18 +40,73 @@ N_SAMPLES = 12000
 PROPOSAL_STEP = 50.0
 
 
-def load_votes():
-    votes = []
+def load_rows():
+    """Every scored vote record, as stored. Rows from UNSCORED_SOURCES and
+    rows missing a side or a winner are dropped here, once, so the vote, pair
+    and voter counts all describe the same set."""
+    rows = []
     with open(VOTES_FILE) as f:
         for line in f:
             line = line.strip()
             if not line:
                 continue
             v = json.loads(line)
+            if v.get("source") in UNSCORED_SOURCES:
+                continue
             if not v.get("model_a") or not v.get("model_b") or not v.get("winner"):
                 continue
-            votes.append((v["model_a"], v["model_b"], v["winner"]))
-    return votes
+            rows.append(v)
+    return rows
+
+
+def load_votes():
+    return [(v["model_a"], v["model_b"], v["winner"]) for v in load_rows()]
+
+
+def _spearmanr(x, y):
+    """scipy.stats.spearmanr's rho and two-sided t-test p, for when scipy is
+    not installed. Ties get average ranks, as in scipy."""
+    def ranks(v):
+        v = np.asarray(v, dtype=float)
+        r = np.empty(len(v))
+        r[np.argsort(v, kind="mergesort")] = np.arange(1, len(v) + 1)
+        for val in np.unique(v):
+            k = v == val
+            r[k] = r[k].mean()
+        return r
+    rho = float(np.corrcoef(ranks(x), ranks(y))[0, 1])
+    df = len(x) - 2
+    if abs(rho) >= 1.0:
+        return rho, 0.0
+    t2 = rho * rho * df / (1.0 - rho * rho)
+    return rho, _betainc(df / 2.0, 0.5, df / (df + t2))
+
+
+def _betainc(a, b, x):
+    """Regularized incomplete beta I_x(a, b) by continued fraction (Lentz)."""
+    if x <= 0.0:
+        return 0.0
+    if x >= 1.0:
+        return 1.0
+    if x > (a + 1.0) / (a + b + 2.0):
+        return 1.0 - _betainc(b, a, 1.0 - x)
+    lbeta = math.lgamma(a + b) - math.lgamma(a) - math.lgamma(b)
+    front = math.exp(lbeta + a * math.log(x) + b * math.log1p(-x)) / a
+    tiny = 1e-300
+    c, d = 1.0, 1.0 - (a + b) * x / (a + 1.0)
+    d = 1.0 / (d if abs(d) > tiny else tiny)
+    f = d
+    for m in range(1, 300):
+        for num in (m * (b - m) * x / ((a + 2 * m - 1) * (a + 2 * m)),
+                    -(a + m) * (a + b + m) * x / ((a + 2 * m) * (a + 2 * m + 1))):
+            d = 1.0 + num * d
+            d = 1.0 / (d if abs(d) > tiny else tiny)
+            c = 1.0 + num / c
+            c = c if abs(c) > tiny else tiny
+            f *= c * d
+        if abs(c * d - 1.0) < 1e-15:
+            break
+    return front * f
 
 
 def run_chain(theta_init, votes_a, votes_b, votes_outcome, n_models, seed):
@@ -96,18 +162,24 @@ def run_chain(theta_init, votes_a, votes_b, votes_outcome, n_models, seed):
 
 
 def main():
-    votes = load_votes()
+    rows = load_rows()
+    votes = [(v["model_a"], v["model_b"], v["winner"]) for v in rows]
     print(f"Multi-turn arena votes: {len(votes)}")
-
-    n_voters_raw = sum(1 for _ in open(VOTES_FILE))
-    voters = set()
-    pairs = defaultdict(int)
     with open(VOTES_FILE) as f:
-        for line in f:
-            v = json.loads(line)
-            voters.add(v.get("voter_id"))
-            pairs[tuple(sorted([v["model_a"], v["model_b"]]))] += 1
-    print(f"  unique voters: {len(voters)}")
+        n_unscored = sum(1 for line in f if line.strip()
+                         and json.loads(line).get("source") in UNSCORED_SOURCES)
+    if n_unscored:
+        print(f"  not scored:    {n_unscored} (source in {sorted(UNSCORED_SOURCES)})")
+
+    pairs = defaultdict(int)
+    for v in rows:
+        pairs[tuple(sorted([v["model_a"], v["model_b"]]))] += 1
+    # The public round CSV carries no voter ids, and the repo stores none (or
+    # only HMAC pseudonyms). A count over a partial id column would be a
+    # wrong number, so it is reported only when every scored vote has one.
+    ids = [v.get("voter_id") for v in rows]
+    n_voters = len(set(ids)) if ids and all(ids) else None
+    print(f"  unique voters: {n_voters if n_voters is not None else 'unknown (no voter ids in the votes file)'}")
     print(f"  unique pairs:  {len(pairs)}")
 
     models = sorted(set(a for a, _, _ in votes) | set(b for _, b, _ in votes))
@@ -185,28 +257,30 @@ def main():
         leaderboard.append({"rank": rank, "model": m, **{k: round(v, 1) if isinstance(v, float) else v for k, v in s.items()}})
 
     # Cross-method correlations
+    # scipy is optional: without it the same rho and t-test p come from
+    # _spearmanr, instead of the correlations silently becoming null.
     try:
         from scipy.stats import spearmanr
-        mt_elo = {m: s["elo_mean"] for m, s in summary.items()}
-        ca_elo = {m: bayes_arena[m]["elo_mean"] for m in mt_elo if m in bayes_arena}
-        lk = {m: (profiles.get(m, {}).get("multiturn_llm_judge") or {}).get("overall_mean")
-              for m in mt_elo}
-        common_ca = sorted(set(mt_elo) & set(ca_elo))
-        common_lk = sorted(m for m in mt_elo if lk.get(m) is not None)
-        rho_ca, p_ca = spearmanr([mt_elo[m] for m in common_ca],
-                                 [ca_elo[m] for m in common_ca])
-        rho_lk, p_lk = spearmanr([mt_elo[m] for m in common_lk],
-                                 [lk[m] for m in common_lk])
-        correlations = {
-            "vs_community_arena_singlemsg": {"rho": float(rho_ca), "p": float(p_ca), "n": len(common_ca)},
-            "vs_llm_judge_multiturn": {"rho": float(rho_lk), "p": float(p_lk), "n": len(common_lk)},
-        }
-        print()
-        print(f"Cross-method Spearman correlations:")
-        print(f"  vs community-arena (single-message):  ρ = {rho_ca:+.3f}  (p={p_ca:.3f}, n={len(common_ca)})")
-        print(f"  vs LLM-judge multiturn (Likert):      ρ = {rho_lk:+.3f}  (p={p_lk:.3f}, n={len(common_lk)})")
     except ImportError:
-        correlations = None
+        spearmanr = _spearmanr
+    mt_elo = {m: s["elo_mean"] for m, s in summary.items()}
+    ca_elo = {m: bayes_arena[m]["elo_mean"] for m in mt_elo if m in bayes_arena}
+    lk = {m: (profiles.get(m, {}).get("multiturn_llm_judge") or {}).get("overall_mean")
+          for m in mt_elo}
+    common_ca = sorted(set(mt_elo) & set(ca_elo))
+    common_lk = sorted(m for m in mt_elo if lk.get(m) is not None)
+    rho_ca, p_ca = spearmanr([mt_elo[m] for m in common_ca],
+                             [ca_elo[m] for m in common_ca])
+    rho_lk, p_lk = spearmanr([mt_elo[m] for m in common_lk],
+                             [lk[m] for m in common_lk])
+    correlations = {
+        "vs_community_arena_singlemsg": {"rho": float(rho_ca), "p": float(p_ca), "n": len(common_ca)},
+        "vs_llm_judge_multiturn": {"rho": float(rho_lk), "p": float(p_lk), "n": len(common_lk)},
+    }
+    print()
+    print(f"Cross-method Spearman correlations:")
+    print(f"  vs community-arena (single-message):  ρ = {rho_ca:+.3f}  (p={p_ca:.3f}, n={len(common_ca)})")
+    print(f"  vs LLM-judge multiturn (Likert):      ρ = {rho_lk:+.3f}  (p={p_lk:.3f}, n={len(common_lk)})")
 
     # Position-bias diagnostic
     a_wins = sum(1 for _, _, w in votes if w == "A")
@@ -222,7 +296,8 @@ def main():
         "n_chains": N_CHAINS,
         "n_samples_per_chain": N_SAMPLES,
         "n_votes": len(votes),
-        "n_voters": len(voters),
+        "n_voters": n_voters,
+        "n_votes_not_scored": n_unscored,
         "n_pairs": len(pairs),
         "winner_distribution": {"A": a_wins, "B": b_wins, "tie": ties},
         "correlations": correlations,

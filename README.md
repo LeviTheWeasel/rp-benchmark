@@ -60,7 +60,9 @@ Every RP benchmark is either vibes-based ("I tried it and it felt good") or test
 - Is the prose actually **good** or just slop?
 - Does the world **push back** or bend to the protagonist?
 
-## Composite Leaderboard
+## Composite Leaderboard (archived, May 2026)
+
+*Archived as published in May 2026 (21 models). It is not recomputed for round 4: two of its five inputs, the human multi-turn arena and the 27-dimension single-turn rubric, do not exist for the round-4 models, and no synthetic stand-in is published. How round 4 connects to this table is in [Round 4 and earlier rounds](#round-4-and-earlier-rounds).*
 
 A single sortable headline score per model, plus three independent dimensions (Engagement, Speed, Cost). The composite weights the metrics that rank-correlate with each other (multi-turn arena humans, LLM judges, single-turn rubric, flaw hunter), reflecting the paper's finding that these all measure the same "sustained-quality" latent. Engagement is shown separately because the single-message arena measures a different latent (snap-judgment engagement) that does not rank-correlate with the others.
 
@@ -139,43 +141,49 @@ Raw data: [`results/community_arena_2000.json`](results/community_arena_2000.jso
 
 ## Multi-Turn Arena (humans, full dialogues)
 
-Same blind-vote infrastructure, **but voters read the entire 12-turn adversarial dialogue** between two models on the same seed before deciding. **1,262 votes / 315 voters / 190 unique pairs / 20 models / 20 adversarial seeds.** (Up from 434 votes after ingesting 644 new native Plotpoints votes, 2026-06-04.)
+Same blind-vote infrastructure, **but voters read the entire 12-turn adversarial dialogue** between two models on the same seed before deciding. **Final round-2 results: 1,943 votes / 482 voters / 190 unique pairs / 20 models / 20 adversarial seeds; voting closed 2026-06-13.**
 
-| Rank | Model | MT-arena ELO | 95% CI | n | LLM Likert | Single-msg arena ELO |
+*Refreshed 2026-09-27* from the site's public raw export (`https://plotlightstudios.com/api/plotpoints/raw?round=2&mode=multiturn_arena`), which reproduces the site's published final standings exactly. Until then this section showed a 1,262-vote pull from 2026-06-04 (434 votes before that), with DeepSeek V4 Pro at #1 and Claude Opus 4.7 at #5. The voter count is the site's round-archive figure: the public export carries no voter ids, so it cannot be recomputed from [`data/multiturn_arena_votes.jsonl`](data/multiturn_arena_votes.jsonl) (source, fetch time and checksum in [its README](data/multiturn_arena_votes.README.md)).
+
+| Rank | Model | MT-arena ELO | 95% CI | n | LLM Likert | Single-msg arena ELO† |
 |---|---|---|---|---|---|---|
-| **#1** | **DeepSeek V4 Pro** | **1582** | [1462, 1700] | 99 | 4.42 | — |
-| #2 | Claude Opus 4.6 | 1566 | [1430, 1671] | 135 | 4.51 | — |
-| #3 | Gemini 3.1 Flash Lite | 1557 | [1417, 1682] | 87 | 4.30 | — |
-| #4 | GPT-4.1 | 1556 | [1441, 1671] | 134 | 4.34 | 1470 |
-| #5 | Claude Opus 4.7 | 1554 | [1419, 1680] | 90 | 4.54 | — |
-| #6 | Mistral SC | 1528 | [1416, 1632] | 155 | 4.22 | 1526 |
-| #7 | Gemini 3.1 Pro | 1527 | [1415, 1642] | 109 | 4.33 | — |
-| #8 | Kimi K2.6 | 1518 | [1408, 1626] | 104 | 4.18 | — |
-| #9 | Kimi K2.5 | 1511 | [1388, 1622] | 98 | 4.40 | — |
-| #10 | GLM 4.7 | 1507 | [1400, 1610] | 150 | 4.37 | 1483 |
-| #11 | Claude Sonnet 4.5 | 1506 | [1392, 1614] | 140 | 4.42 | 1506 |
-| #12 | Gemma 4 26B | 1504 | [1392, 1595] | 144 | 4.29 | 1535 |
-| #13 | DeepSeek V4 Flash | 1491 | [1367, 1605] | 101 | 4.38 | — |
-| #14 | MiniMax M2.7 | 1481 | [1363, 1581] | 144 | 4.34 | 1510 |
-| #15 | DeepSeek V3.2 | 1458 | [1341, 1565] | 150 | 4.38 | 1489 |
-| #16 | Llama 4 Maverick | 1452 | [1333, 1556] | 158 | 3.96 | 1473 |
-| #17 | GLM 5.1 | 1441 | [1318, 1562] | 100 | 4.39 | — |
-| #18 | Grok 4.1 | 1420 | [1293, 1522] | 145 | 4.19 | 1506 |
-| #19 | Gemini 2.5 Flash | 1411 | [1296, 1522] | 139 | 4.14 | 1515 |
-| **#20** | **Qwen 3.5 Flash** | **1406** | [1278, 1511] | 142 | 3.98 | 1487 |
+| **#1** | **Claude Opus 4.7** | **1575** | [1478, 1671] | 146 | 4.54 | — |
+| #2 | DeepSeek V4 Pro | 1546 | [1449, 1632] | 166 | 4.42 | — |
+| #3 | Gemini 3.1 Flash Lite | 1533 | [1434, 1621] | 151 | 4.30 | — |
+| #4 | Claude Opus 4.6 | 1532 | [1448, 1610] | 224 | 4.51 | — |
+| #5 | GPT-4.1 | 1525 | [1438, 1605] | 212 | 4.34 | 1472 |
+| #6 | Mistral SC | 1519 | [1438, 1599] | 229 | 4.22 | 1534 |
+| #7 | Gemini 3.1 Pro | 1513 | [1422, 1596] | 161 | 4.33 | — |
+| #8 | GLM 4.7 | 1510 | [1418, 1587] | 227 | 4.37 | 1490 |
+| #9 | Kimi K2.6 | 1505 | [1417, 1588] | 156 | —\* | — |
+| #10 | DeepSeek V4 Flash | 1492 | [1396, 1575] | 153 | 4.38 | — |
+| #11 | Kimi K2.5 | 1489 | [1391, 1580] | 155 | 4.40 | — |
+| #12 | MiniMax M2.7 | 1487 | [1398, 1560] | 220 | 4.34 | 1514 |
+| #13 | Claude Sonnet 4.5 | 1479 | [1396, 1559] | 220 | 4.42 | 1513 |
+| #14 | DeepSeek V3.2 | 1472 | [1376, 1553] | 229 | 4.38 | 1492 |
+| #15 | Gemma 4 26B | 1466 | [1382, 1543] | 213 | 4.29 | 1534 |
+| #16 | Llama 4 Maverick | 1458 | [1368, 1535] | 214 | 3.96 | 1483 |
+| #17 | GLM 5.1 | 1446 | [1359, 1529] | 154 | 4.39 | — |
+| #18 | Grok 4.1 | 1432 | [1349, 1512] | 230 | 4.19 | 1517 |
+| #19 | Gemini 2.5 Flash | 1418 | [1327, 1500] | 210 | 4.14 | 1529 |
+| **#20** | **Qwen 3.5 Flash** | **1412** | [1315, 1494] | 216 | 3.98 | 1493 |
 
-**The ranking inverts when humans read full dialogues.** Frontier open (DeepSeek V4 Pro #1) and closed models (Opus 4.6, Opus 4.7, GPT-4.1) hold the top, while single-message arena leaders Gemma 4 26B (#12) and **Gemini 2.5 Flash (#3 single-message → #19 here)** sink to the bottom half. The clean inversion has two caveats at this larger N: Mistral SC (a single-message favorite) holds up at #6, and Claude Sonnet 4.5 settles to mid-pack (#11). The top ~8 remain statistically tied (overlapping CIs).
+\* Kimi K2.6's round-4 transcripts were regenerated after the arena closed, so `results/model_profiles.json` no longer holds a Sonnet-4 score for the text voters read (it was 4.18 on the old transcripts).
+
+† The single-message column is the Bayesian Bradley-Terry fit in [`results/community_arena_bayesian.json`](results/community_arena_bayesian.json). The [Community Leaderboard](#community-leaderboard-human-voted-elo) above shows [`results/community_arena_2000.json`](results/community_arena_2000.json), a shuffled online ELO over the same 1,857 votes, so the two differ by method only: Mistral SC is 1534 here and 1526 there, Grok 4.1 1517 and 1506.
+
+**The ranking inverts when humans read full dialogues.** Frontier models hold the top (Claude Opus 4.7 #1, DeepSeek V4 Pro #2, Claude Opus 4.6 #4, GPT-4.1 #5), while the single-message arena's podium sinks: Gemma 4 26B (#1 single-message, #15 here) and **Gemini 2.5 Flash (#3 single-message, #19 here)**. Two caveats: Mistral SC (#2 single-message) holds up at #6, and Claude Sonnet 4.5 settles to mid-pack (#13). The order at the top is not settled: every model's 95% interval overlaps the leader's.
 
 **Cross-method Spearman correlations:**
-- **Multi-turn arena ↔ LLM-judge multiturn (Likert)**: ρ = **+0.495** (p=0.026, n=20). **Significant positive correlation** — humans who read full dialogues largely agree with the LLM judge that read the same dialogues. (Bootstrap mean ρ = +0.46, 95% CI [+0.25, +0.65], 100% of resamples > 0 — the lower bound now clears zero with margin.)
-- **Multi-turn arena ↔ single-message community arena**: ρ = −0.15 (p=0.67, n=11). No correlation — they measure different things.
+- **Multi-turn arena ↔ LLM-judge multiturn (Likert)**: ρ = **+0.567** (p=0.011, n=19). **Significant positive correlation**: humans who read full dialogues largely agree with the LLM judge (Sonnet 4) that read the same dialogues. n is 19 because of Kimi K2.6 (see the table note); scoring it on its old transcripts (n=20) gives ρ = +0.527, the +0.53 the site shows. The voter-clustered bootstrap (mean ρ = +0.46, 95% CI [+0.25, +0.65] on the 1,262-vote pull) cannot be re-run on the final votes: it resamples voters, and the public export has no voter ids.
+- **Multi-turn arena ↔ single-message community arena**: ρ = −0.24 (p=0.48, n=11). No correlation; they measure different things.
 - **Single-message arena ↔ LLM-judge multiturn**: ρ = −0.15 (p=0.67, n=11). Confirms the prior finding that the single-message arena disagrees with judge methods.
 
 **Interpretation.** The single-message arena rewards snap-judgment engagement (vivid prose, emotional hook, "vibes"). The multi-turn arena rewards sustained roleplay (consistency, narrative payoff, character integrity over a 12-turn arc). This **validates the LLM-judge multi-turn methodology against independent human judgment** — the disagreement between LLM judges and the *single-message* arena was never about the LLM judges being wrong; the methods just measure different layers of "good".
 
-Caveats: 95% CIs are still wide (±120 ELO typical, down from ±200 at 434 votes) — the top 8 remain statistically tied. Slight position bias present (B wins 53.5% of decided votes vs 50% null). Voter concentration has eased with the larger pool: the heaviest voter now contributes 99/1,262 votes (7.8%, down from 14%), and no single voter drives the headline ordering. The finding — frontier models dominate the multi-turn arena, contradicting the single-message ranking — holds, with Mistral SC the notable single-message-leader that does not collapse here (#6).
+Caveats: 95% CIs are still wide (median ±85 ELO, down from about ±115 at 1,262 votes and ±200 at 434), so only the broad top-versus-bottom split is firm. Slight position bias (B wins 52.5% of decided votes vs 50% null). Voter concentration was last measured on the 1,262-vote pull (heaviest voter 99 votes, 7.8%) and cannot be re-measured without voter ids. The finding (frontier models lead the multi-turn arena, contradicting the single-message ranking) holds, with Mistral SC the single-message leader that does not collapse here (#6).
 
-Raw data: [`results/multiturn_arena_bayesian.json`](results/multiturn_arena_bayesian.json). Reproduce with `python3 analyze_multiturn_arena.py`.
+Raw data: [`results/multiturn_arena_bayesian.json`](results/multiturn_arena_bayesian.json). Reproduce with `python3 refresh_multiturn_arena_votes.py && python3 analyze_multiturn_arena.py`. The votes file also keeps 30 ballots cast on arena.l3vi4th4n.ai after its votes moved to the site on 2026-04-30; they never reached the round-2 tally, so the analyzer leaves them unscored.
 
 ## Round 3 — NSFW Multi-Turn (judge-scored)
 
@@ -191,7 +199,7 @@ Two axes are reported separately: **craft** (the quality score) and **willingnes
 | #4 | DeepSeek V4 Pro | 4.62 | 4.98 | 4.83 | 4.81 | 4.96 | 0 | 20 |
 | #5 | GPT-5.5 | 4.62 | 5.00 | 4.85 | 4.82 | 4.96 | 0 | 20 |
 | #6 | Claude Sonnet 4.6 | 4.60 | 4.90 | 4.68 | 4.80 | 4.94 | **10** | 20 |
-| #7 | Owl Alpha | 4.59 | 4.99 | 4.85 | 4.81 | 4.93 | 0 | 20 |
+| #7 | Owl Alpha *(LongCat-2.0)*‡ | 4.59 | 4.99 | 4.85 | 4.81 | 4.93 | 0 | 20 |
 | #8 | MiMo 2.5 Pro | 4.58 | 4.99 | 4.85 | 4.78 | 4.96 | 0 | 20 |
 | #9 | MiniMax M3 | 4.58 | 4.89 | 4.72 | 4.76 | 4.84 | 5 | 20 |
 | #10 | MiniMax M2.7 | 4.53 | 4.99 | 4.75 | 4.76 | 4.94 | 5 | 20 |
@@ -213,11 +221,133 @@ Two axes are reported separately: **craft** (the quality score) and **willingnes
 
 **The open question.** This is judge-scored. Round 2 showed the single-message arena and multi-turn judges *rank-invert*; round 3 sets up the analogous test — will human NSFW voters, who may prize the spicier, more compliant finetunes, **invert this judge ranking**? That comparison waits on a human NSFW arena campaign.
 
-Caveats: judge-only (no human votes); DeepSeek R1 barely discriminates (ceiling ~5.0), so the averaged-judge view is dominated by Sonnet; scores are compressed across the top ~33 (all ~tied) — the robust signal is the finetune collapse at the bottom. †Euryale completed 15/20 (its provider threw retry-exhaustions), so its exact rank is soft. `venice_dolphin_24b` is excluded — its OpenRouter `:free` endpoint is too rate-limited to complete any session (40 usable models, not 41).
+Caveats: judge-only (no human votes); DeepSeek R1 barely discriminates (ceiling ~5.0), so the averaged-judge view is dominated by Sonnet; scores are compressed across the top ~33 (all ~tied) — the robust signal is the finetune collapse at the bottom. †Euryale completed 15/20 (its provider threw retry-exhaustions), so its exact rank is soft. `venice_dolphin_24b` is excluded — its OpenRouter `:free` endpoint is too rate-limited to complete any session (40 usable models, not 41). ‡Owl Alpha (`openrouter/owl-alpha`) was a stealth release of LongCat-2.0 (`meituan/longcat-2.0`); it was not run in round 4 under either name.
 
 Full table + raw aggregates: [`results/round3_nsfw_leaderboard.json`](results/round3_nsfw_leaderboard.json). Reproduce with `python3 analyze_round3_nsfw.py`.
 
-## Round 4 — Willingness and Judgment
+## Round 4
+
+Round 4 changes the instruments more than the models. This section first sets
+round 4 beside rounds 2 and 3, then introduces J, the round's new axis. J is
+added beside craft; it does not replace it.
+
+### Round 4 and earlier rounds
+
+**What changed, and how each change is bridged.**
+
+| Instrument | Rounds 2 and 3 | Round 4 | Comparable? |
+|---|---|---|---|
+| Craft judge | Claude Sonnet 4 over the API (prompt `1ff004ccf5aa`, temperature 0.1) | Claude Sonnet 5 as subagents (session judge v2), same rubric text | Comparable via the old judge, re-run on every round-4 transcript (the "Old judge on R4" column). The raw numbers are not comparable: the new judge scores 0.52 lower on average and spreads the top 26 models over 0.59 points instead of 0.21. |
+| Flaw hunter | Sonnet 4 with a primer, 100 minus quoted deductions | subagent raters with standing instructions | Not comparable, because the rater and its instructions changed: per-model Spearman 0.57 between the two on 38 models, and a +9.5-point level shift ([design §13c-quater](docs/ROUND4_DESIGN.md)). The old flaw hunter was not re-run. |
+| Headline | Round 3: craft on the NSFW track. Round 2: the May composite | J, the new axis, beside the craft tier | Not comparable, because J has no predecessor. The craft line continues through the old-judge column and the round-4 judge tier. |
+| Willingness instrument | one refusal flag per session, inside the judge's JSON | a per-rung classifier with a Jev confidence gate; over-refusal counts soft deflection | Not comparable, because the seeds, the instrument, the construct and about three months of provider drift all changed ([design §5](docs/ROUND4_DESIGN.md)). Round 3's refusal % is shown as published, as round 3's own instrument. |
+| Track and simulator | Round 3's table: NSFW seeds, DeepSeek V3.2 simulator. Standard track (rounds 2 and 3): adversarial seeds, Gemini 2.5 Flash simulator | craft on the standard adversarial seeds with Gemini 2.5 Flash, 12 turns (the standard-track setup); the J ladders on DeepSeek V3.2 | Comparable via the round-3 standard track, which is round 4's craft setup: 13 models were re-run on it in September under the same judge. Against round 3's NSFW table only the broad order carries over (the finetunes below the rest), not the numbers or the order inside round 3's tied frontier. |
+| Roster | Round 2: 21 multi-turn models. Round 3: 40 | 71: 70 with craft, 58 with a J row | Comparable via the 41 returning models: 40 with craft, plus `rocinante_12b` (Track A only, no J). 30 are new. `owl_alpha` (LongCat-2.0) was not run in round 4. |
+| Composite | the May composite, 21 models | none | Not comparable, because two of its five inputs (human arena, 27-dimension rubric) do not exist for round-4 models. [Archived](#composite-leaderboard-archived-may-2026) as published. |
+
+**The 41 returning models.** Rows go by round-4 tier, then name. No column is a
+rank of the old judge, and the rows are never sorted by it.
+
+| Model | R2 human ELO [95%] (votes) | R3 NSFW # (craft) | R3 refusal % | Old judge on R4 | R4 tier | J | R4 transcripts |
+|---|---|---|---|---|---|---|---|
+| claude_opus_4_6 | 1532 [1448, 1610] (224) | #2 (4.63, tie 2-3) | 0 | 4.52 ± 0.08 | A | +0.68 (#3) | same as R2 (20) |
+| claude_opus_4_7 | 1575 [1478, 1671] (146) | #3 (4.63, tie 2-3) | 0 | 4.54 ± 0.07 | A | +0.67 (#4) | same as R2 (12) |
+| claude_opus_4_8 |  | #1 (4.65) | 5 | 4.51 ± 0.11 | A | +0.49 (#8) | regen. 2026-09-21 (20) |
+| claude_sonnet_4_5 | 1479 [1396, 1559] (220) | #13 (4.50, tie 12-16) | 0 | 4.40 ± 0.11 | A | no J | same as R2 (20) |
+| claude_sonnet_4_6 |  | #6 (4.60) | 10 | 4.51 ± 0.08 | A | +0.11 (#36) | regen. 2026-09-21 (20) |
+| deepseek_r1_0528 |  | #24 (4.43, tie 24-25) | 0 | 4.32 ± 0.10 | A | no J | same as R2 (20) |
+| deepseek_v3_0324 |  | #29 (4.37, tie 28-29) | 0 | 4.33 ± 0.12 | A | +0.28 (#23) | regen. 2026-09-24 (20) |
+| deepseek_v3_2 | 1472 [1376, 1553] (229) | #12 (4.50, tie 12-16) | 0 | 4.40 ± 0.10 | A | no J | same as R2 (20) |
+| deepseek_v4_flash | 1492 [1396, 1575] (153) | #22 (4.45, tie 22-23) | 0 | 4.38 ± 0.10 | A | +0.21 (#32) | same as R2 (12) |
+| deepseek_v4_pro | 1546 [1449, 1632] (166) | #4 (4.62, tie 4-5) | 0 | 4.42 ± 0.08 | A | +0.17 (#34) | same as R2 (12) |
+| gemini_3_5_flash |  | #14 (4.50, tie 12-16) | 0 | 4.33 ± 0.07 | A | +0.28 (#22) | regen. 2026-09-21 (20) |
+| glm_4_7 | 1510 [1418, 1587] (227) | #25 (4.43, tie 24-25) | 0 | 4.39 ± 0.10 | A | no J | same as R2 (20) |
+| glm_5_1 | 1446 [1359, 1529] (154) | #16 (4.50, tie 12-16) | 10 | 4.39 ± 0.10 | A | +0.46 (#10) | same as R2 (12) |
+| gpt_5_5 |  | #5 (4.62, tie 4-5) | 0 | 4.50 ± 0.10 | A | -0.05 (#43) | regen. 2026-09-21 (20) |
+| mimo_2_5_pro |  | #8 (4.58, tie 8-9) | 0 | 4.42 ± 0.10 | A | +0.03 (#39) | regen. 2026-09-21 (20) |
+| minimax_m2_7 | 1487 [1398, 1560] (220) | #10 (4.53) | 5 | 4.31 ± 0.09 | A | +0.24 (#30) | same as R2 (20) |
+| minimax_m3 |  | #9 (4.58, tie 8-9) | 5 | 4.42 ± 0.08 | A | +0.33 (#20) | regen. 2026-09-21 (20) |
+| gemini_2_5_flash | 1418 [1327, 1500] (210) | #30 (4.32) | 0 | 4.08 ± 0.22 | B | no J | same as R2 (20) |
+| gemini_3_1_flash_lite | 1533 [1434, 1621] (151) | #26 (4.39) | 0 | 4.30 ± 0.08 | B | no J | same as R2 (12) |
+| gemini_3_1_pro | 1513 [1422, 1596] (161) | #19 (4.46, tie 19-21) | 0 | 4.33 ± 0.10 | B | no J | same as R2 (12) |
+| gemma_4_26b | 1466 [1382, 1543] (213) | #27 (4.38) | 0 | 4.26 ± 0.07 | B | no J | same as R2 (20) |
+| gemma_4_31b |  | #20 (4.46, tie 19-21) | 0 | 4.29 ± 0.07 | B | +0.04 (#38) | regen. 2026-09-24 (20) |
+| gpt_4_1 | 1525 [1438, 1605] (212) | #11 (4.52) | 0 | 4.34 ± 0.08 | B | +0.26 (#28) | same as R2 (20) |
+| grok_4_1 | 1432 [1349, 1512] (230) |  |  | 4.19 ± 0.11 | B | no J | same as R2 (20) |
+| grok_4_3 |  | #33 (4.21) | 0 | 3.47 ± 0.49 | B | +0.33 (#18) | regen. 2026-09-24 (20) |
+| kimi_k2_5 | 1489 [1391, 1580] (155) | #15 (4.50, tie 12-16) | 0 | 4.40 ± 0.10 | B | no J | same as R2 (12) |
+| kimi_k2_6 | 1505 [1417, 1588] (156)§ | #17 (4.49) | 0 | 4.20 ± 0.28 | B | +0.43 (#11) | regen. 2026-09-24 (20) |
+| mistral_small_creative | 1519 [1438, 1599] (229) |  |  | 4.25 ± 0.15 | B | no J | same as R2 (20) |
+| qwen3_5_flash | 1412 [1315, 1494] (216) | #28 (4.37, tie 28-29) | 0 | 3.79 ± 0.40 | B | no J | same as R2 (20) |
+| qwen3_6_27b |  | #23 (4.45, tie 22-23) | 0 | 4.17 ± 0.19 | B | +0.24 (#29) | regen. 2026-09-24 (20) |
+| qwen3_7_max |  | #21 (4.46, tie 19-21) | 0 | 4.21 ± 0.21 | B | +0.40 (#13) | regen. 2026-09-21 (20) |
+| cydonia_24b |  | #35 (3.65) | 0 | 3.80 ± 0.41 | C | -0.14 (#45) | regen. 2026-09-21 (20) |
+| llama_4_maverick | 1458 [1368, 1535] (214) | #31 (4.26) | 0 | 3.89 ± 0.21 | C | no J | same as R2 (20) |
+| qwen3_6_35b_a3b |  | #18 (4.47) | 0 | 4.10 ± 0.20 | C | +0.00 (#40) | regen. 2026-09-24 (20) |
+| euryale_70b |  | #40 (2.12) | 0 | 2.43 ± 0.46 | D | +0.05 (#37) | regen. 2026-09-21 (20) |
+| lunaris_8b |  | #34 (3.83) | 0 | 3.58 ± 0.33 | D | -0.01 (#41) | regen. 2026-09-21 (20) |
+| magnum_v4_72b |  | #36 (3.23) | 0 | 3.57 ± 0.34 | D | -0.04 (#42) | regen. 2026-09-21 (20) |
+| skyfall_36b |  | #38 (2.52) | 0 | 3.09 ± 0.41 | D | -0.24 (#46) | regen. 2026-09-21 (20) |
+| unslopnemo_12b |  | #37 (2.61) | 0 | 3.58 ± 0.32 | D | -0.11 (#44) | regen. 2026-09-21 (20) |
+| mistral_small_2603 |  | #32 (4.24) | 0 | n/a (3 of the 12 core seeds) | untiered | +0.17 unranked | regen. 2026-09-24 (4) |
+| rocinante_12b |  | #39 (2.49) | 0 | n/a (no round-4 craft transcripts) |  | no J (Track A only) | no R4 craft |
+
+- **R2 human ELO**: the final round-2 multi-turn arena (1,943 votes, [below](#multi-turn-arena-humans-full-dialogues)), with its 95% interval and vote count. § marks `kimi_k2_6`, whose round-4 transcripts were regenerated after the vote, so voters read different text.
+- **R3 NSFW #**: the position in the published round-3 table (Sonnet 4 craft on the NSFW track, 40 models), with the published score. "tie a-b" marks positions that share that score; round 3 itself called its top 33 tied.
+- **R3 refusal %**: round 3's own instrument, one judge flag per session. It is not comparable with J or with round-4 over-refusal and is not a round-4 figure.
+- **Old judge on R4**: the round-2/3 judge (Sonnet 4, same prompt and settings) on the round-4 transcripts. Mean over the 12 core seeds (09-20, the seeds every fully run model played) plus or minus half its 95% seed-bootstrap interval. It is a band, not a rank: all 68 neighbouring pairs of bands overlap, and the median 95% rank interval spans 16 places. For the 20 "same as R2" models it is their round-2 score on those seeds. It is not on the round-4 judge's scale, and nothing converts one into the other.
+- **Scoring date**: the 20 "same as R2" rows were scored by the old judge in April and may sit about 0.06 low against the rows scored in September (a post-hoc reading of the drift check, SE 0.03; [METHODOLOGY §21.3](docs/METHODOLOGY.md)).
+- **R4 tier**: the round-4 judge's fixed letter ([overview](results/round4_overview.json)): A 3.8 and above, B 3.2-3.8, C 2.6-3.2, D 2.0-2.6. **J**: as published below, with its rank of 55.
+- **R4 transcripts**: "same as R2" means the round-4 craft sessions are the exact round-2 texts (hash-checked); "regen." means new text on the same seeds, generated on that date.
+
+**Correlations** (Spearman, 95% model-bootstrap interval, 12 core seeds): old vs new judge on identical transcripts 0.88 [0.79, 0.94], n=69; round-3 NSFW table vs new judge 0.87 [0.71, 0.95], n=37 (without finetunes 0.78 [0.55, 0.90], n=31); round-2 humans vs old judge 0.60 [0.09, 0.89], n=19, vs new judge 0.52 [-0.01, 0.82], n=19; humans vs J undetermined (n=8).
+
+**How to read it.** The models moved little; the ruler moved a lot. To keep
+the line from rounds 2 and 3 unbroken, the old judge re-scored every round-4
+transcript it had not already scored (549 sessions, $20), after a drift check
+on 40 sessions it had scored before (mean change 0.000, Pearson 0.991). On
+identical transcripts the two judges order models closely overall, 0.88 across
+69 models. Where the old score comes from makes no clear difference: like for
+like, without the RP finetunes (all six are among the models scored earlier),
+the models the old judge scored in April or on 2026-09-21 give 0.88 [0.73,
+0.96] (n=35) and the 27 it scored for the first time this week 0.81 [0.57,
+0.93], intervals that overlap. The real limit is the upper field: 0.71 among
+the 43 models the old judge places at 4.3 or higher, a stretch it barely
+separates. The models themselves held still: of the 7 non-finetune
+models re-run in September on the round-3 standard setup under the same judge,
+6 came back within 0.04 of June and `gpt_5_5` rose 0.12 (SE 0.07); among the
+finetunes `unslopnemo_12b` rose 0.52 (SE 0.17). `deepseek_v3_0324` rose 0.43
+(SE 0.20) when re-run with a higher token cap, so that one cannot be put down
+to the model alone. What changed is the scale. The new judge scores 0.52 lower
+on average, by 0.07 to 0.35 for Claude models and 0.10 to 1.05 for the rest,
+and spreads the top 26 models about three times wider, so many round-3 ties now
+split into tiers. Some of that split favours Claude: on 110 sessions that
+ChatGPT and Gemini reference judges also scored on the same transcripts (23 of
+them Claude sessions, from 8 models), the new judge gives Claude-model sessions
+a larger premium over the reference than the old judge did. Only the ChatGPT
+difference is firm (+0.43 against +0.12, difference +0.30 [0.14, 0.47]); the
+Gemini one (+0.23 against +0.10, difference +0.13 [-0.03, 0.28]) is within the
+noise. So part of the Claude models' lead under the new judge may be the
+judge's own family. The human arena does
+not settle it: 324 of its 336 sessions (19 of 20 models) are round-4
+transcripts, and on them humans agree with the old judge slightly more than
+with the new one (0.60 against 0.52, difference -0.09 [-0.24, 0.03], inside the
+noise). The arena section's +0.567 is the same comparison with the same judge
+(Sonnet 4) and the same votes, but over every session each model played; the
+0.60 here uses only the 12 core seeds. Only 8 arena models have a J, so how
+humans relate to J is undetermined.
+Round 3's refusal % and round 4's J measure different things and are not one
+series (Spearman 0.30, n=27).
+
+Raw: [`results/round4_continuity.json`](results/round4_continuity.json), which
+also carries the old-judge band for all 69 models, the judge bridge by subset,
+the re-run check per model and the cross-family table. Reproduce with
+`python3 analyze_round4_continuity.py --markdown /tmp/continuity.md`, which
+writes this table and the correlation line. Methods and limits:
+[`docs/METHODOLOGY.md` §21](docs/METHODOLOGY.md); measurements and the anchor
+protocol for later rounds: [`docs/ROUND4_DESIGN.md` §23](docs/ROUND4_DESIGN.md).
+
+### J, the round's new axis
 
 Rounds 1-3 ask whether the prose is good. Round 4 asks whether the model knows
 where the line is — and it is the first round that can fail a model in **both**
