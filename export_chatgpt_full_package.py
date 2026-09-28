@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Build the full-corpus blind package for a second judge family (ChatGPT),
-to be run by hand in the ChatGPT app on a subscription.
+to be run by hand, blind, in Codex on a ChatGPT subscription (where the full
+pass, results/judge_full_chatgpt, ran; ROUND4_DESIGN 24).
 
 The Sonnet 5 session judge scored every current craft session. The external
 arms so far covered samples: 120 stratified sessions (judge_round2_*) and a
@@ -20,8 +21,10 @@ What goes in:
   - plus a small BRIDGE: a seeded sample of those reusable sessions sent out
     again under fresh ids. ROUND4_DESIGN 18c found that how a judge is invoked
     moved Gemini by 0.39, as much as the vendor gap. The earlier ChatGPT rows
-    came from an agent harness; the bridge measures whether rows from this
-    run can be pooled with them, instead of assuming it.
+    came from other runs with other raters (each a coordinator handing parts
+    to three clean-context raters; where they ran is not recorded); the
+    bridge measures whether rows from this run can be pooled with them,
+    instead of assuming it.
 
 Blinding, as fixed after round 1 (ROUND4_DESIGN 15c, 15f):
   - opaque ids with a fresh prefix ("f"), the key held in the manifest on our
@@ -59,7 +62,7 @@ import harness.multiturn as multiturn
 from external_judge_schema import validate_row
 from transcript_hash import transcript_hash
 
-PUBLIC_DIR = Path("/home/levi/Documents/rp-bench-chatgpt-judge")
+PUBLIC_DIR = Path.home() / "Documents" / "rp-bench-chatgpt-judge"
 MANIFEST_DIR = Path("results/judge_full_chatgpt")
 JUDGE_FILE = Path("results/session_judge_v2.jsonl")
 ID_PREFIX = "f"
@@ -449,10 +452,13 @@ def main():
             "self_id_and_residue": self_id,
         },
         "public_dir": str(pub),
-        "harness_note": "Returned rows come from the ChatGPT app, one "
-                        "conversation per chunk. Reused rows came from the "
-                        "agent harness of judge_round2_chatgpt / "
-                        "judge_inc1_chatgpt; the bridge sessions are in both.",
+        "harness_note": "Returned rows come from ChatGPT, run blind in Codex "
+                        "on a ChatGPT subscription. Reused rows came from the "
+                        "earlier blind passes judge_round2_chatgpt / "
+                        "judge_inc1_chatgpt, each a coordinator handing parts "
+                        "to three clean-context raters (their METHOD.md); "
+                        "where those ran is not recorded. The bridge sessions "
+                        "are in both.",
     }
     json.dump(manifest, open(man_path, "w"), indent=1, ensure_ascii=False)
 
@@ -700,10 +706,11 @@ README_MD = """# Прогон ChatGPT по всему корпусу craft (по
 {n_bridge} "мостовых". {n_reused} сессий уже оценены прошлыми слепыми
 прогонами ChatGPT на том же тексте (round2: {n_round2}, inc1: {n_inc1}), их
 оценки переиспользуются. Мостовые: {n_bridge} из этих {n_reused}, отправленных
-ещё раз под новыми id. По ним видно, совпадает ли этот прогон через приложение
-с прошлыми прогонами через агента. В 18c тот же Gemini в двух разных оболочках
-разошёлся на 0.39, примерно столько же, сколько разные семейства. Текста около
-{mb:.0f} МБ.
+ещё раз под новыми id. По ним видно, совпадает ли этот прогон с прошлыми
+(другой запуск и другие оценщики: там координатор раздавал части трём
+помощникам с чистым контекстом, а где шли те прогоны, не записано). В 18c
+тот же Gemini в двух разных оболочках разошёлся на 0.39, примерно столько
+же, сколько разные семейства. Текста около {mb:.0f} МБ.
 
 Только craft. 12 gore-сессий раунда 4 с несовершеннолетними, которые ты
 убрал, относятся к ladder (`r4_a_gore_*`); в этом пакете их нет и не было.
@@ -773,7 +780,7 @@ inc1 (93); это ориентир, а не замер. Закладывай 30-
 ## Импорт (одна команда)
 
 ```
-cd {repo} && /home/levi/Documents/benchmark/.venv/bin/python import_chatgpt_full_judge.py
+cd {repo} && python import_chatgpt_full_judge.py
 ```
 
 Команду можно запускать сколько угодно раз, в том числе после каждого чанка.
@@ -791,7 +798,7 @@ cd {repo} && /home/levi/Documents/benchmark/.venv/bin/python import_chatgpt_full
 Потом сравнение с Sonnet:
 
 ```
-/home/levi/Documents/benchmark/.venv/bin/python compare_external_judge.py results/judge_full_chatgpt/merged
+python compare_external_judge.py results/judge_full_chatgpt/merged
 ```
 
 ## Не делать

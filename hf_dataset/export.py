@@ -819,6 +819,7 @@ def export_round4_seeds():
 # -----------------------------------------------------------------------------
 
 OVERVIEW_JUDGE = "subagent-sonnet-5"
+OVERVIEW_SECOND_JUDGE = "chatgpt"
 CONTINUITY_OLD_JUDGE = "anthropic/claude-sonnet-4"
 # Parquet column -> round4_overview.json judge_means key. Values as the JSON
 # publishes them: the model + seed fit the tier is set on, and the plain mean.
@@ -866,6 +867,16 @@ def _overview_row(r, listed_as, jm, reason=None):
     for col, key in OVERVIEW_JUDGE_MEANS:
         row[col] = m.get(key)
         row[col + "_plain"] = m.get(key + "_plain")
+    # The second judge family's column (ChatGPT, every session): its mean on
+    # the overview's basis, its letter on the same fixed ranges (raw), and
+    # whether the letter depends on the judge once its scale offset is
+    # removed. The offset-adjusted letter stays in the source repo.
+    cj = (r.get("cross_judges") or {}).get(OVERVIEW_SECOND_JUDGE) or {}
+    row.update({
+        "chatgpt_overall": cj.get("mean"),
+        "chatgpt_tier": cj.get("tier"),
+        "tier_depends_on_judge": cj.get("tier_depends_on_judge"),
+    })
     row.update({
         "J": j.get("value"),
         "J_display": j.get("display"),

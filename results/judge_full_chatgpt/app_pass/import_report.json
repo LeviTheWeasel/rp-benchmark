@@ -1,0 +1,70 @@
+{
+ "returned_dir": "~/Documents/rp-bench-chatgpt-judge/returned",
+ "files": [
+  "chunk_01.out.json",
+  "chunk_02.out.json",
+  "chunk_03.out.json",
+  "chunk_04.out.json",
+  "chunk_05.out.json",
+  "chunk_06.out.json",
+  "chunk_07.out.json",
+  "chunk_08.out.json",
+  "chunk_09.out.json",
+  "chunk_10.out.json",
+  "chunk_11.out.json"
+ ],
+ "accepted": 1149,
+ "chunks": {
+  "01": {
+   "expected": 110,
+   "accepted": 110
+  },
+  "02": {
+   "expected": 110,
+   "accepted": 110
+  },
+  "03": {
+   "expected": 110,
+   "accepted": 110
+  },
+  "04": {
+   "expected": 110,
+   "accepted": 110
+  },
+  "05": {
+   "expected": 110,
+   "accepted": 110
+  },
+  "06": {
+   "expected": 100,
+   "accepted": 100
+  },
+  "07": {
+   "expected": 100,
+   "accepted": 100
+  },
+  "08": {
+   "expected": 100,
+   "accepted": 100
+  },
+  "09": {
+   "expected": 100,
+   "accepted": 100
+  },
+  "10": {
+   "expected": 100,
+   "accepted": 100
+  },
+  "11": {
+   "expected": 99,
+   "accepted": 99
+  }
+ },
+ "problems": {},
+ "coverage": {
+  "covered": 1328,
+  "corpus": 1328,
+  "missing_by_model": {}
+ },
+ "bridge_pairs": 24
+}

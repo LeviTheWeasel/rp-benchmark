@@ -1,0 +1,4471 @@
+{
+ "title": "Round 4: a second judge family over the whole corpus",
+ "generated_by": "analyze_round4_second_judge.py",
+ "read_this_first": "Two judge families scored every craft session: Claude Sonnet 5 (the published tier) and ChatGPT via Codex (subscription, blind). The letter stays Sonnet's. This file says how far the two agree, how much of their gap is one scale offset, which models' letters depend on the judge, and what vendor-linked differences remain. It does not say which judge is right.",
+ "judges": {
+  "first": {
+   "judge": "subagent-sonnet-5",
+   "label": "Claude Sonnet 5 (session judge v2)",
+   "role": "sets the published letter",
+   "file": "session_judge_v2.jsonl",
+   "rows": {
+    "rows": 1328,
+    "hashed": 549,
+    "unhashed_single_transcript": 779,
+    "transcripts_without_a_row": 0
+   }
+  },
+  "second": {
+   "judge": "chatgpt",
+   "label": "ChatGPT via Codex (subscription, blind)",
+   "package": "results/judge_full_chatgpt/merged",
+   "harness": "ChatGPT run blind in Codex on a ChatGPT subscription: opaque ids, no model or seed names; 1149 sessions in eleven chunks of about 100. One coordinating session, as Levi asked, gave each whole chunk to its own clean-context agent, three at a time, not one conversation per chunk as the package planned (the judges' reports: judge_full_chatgpt/app_pass/reports). The other 179 rows are reused from the earlier blind ChatGPT passes (judge_round2_chatgpt, judge_inc1_chatgpt) on byte-identical text; each of those was also a coordinator handing parts to three clean-context raters (their METHOD.md), and where they ran is not recorded",
+   "model_version": "not recorded by Codex",
+   "rows_by_source": {
+    "judge_full_chatgpt/app_pass": 1149,
+    "judge_inc1_chatgpt/external_blind_pass": 84,
+    "judge_round2_chatgpt/external_blind_pass": 95
+   },
+   "files": [
+    "external_part_app.json",
+    "external_part_reused_inc1_chatgpt.json",
+    "external_part_reused_round2_chatgpt.json"
+   ],
+   "stale_dropped": 0,
+   "unmatched_dropped": 0
+  }
+ },
+ "coverage": {
+  "corpus_sessions": 1328,
+  "sessions_with_both": 1328,
+  "models": 70,
+  "tiered_models": 69,
+  "untiered": [
+   {
+    "model": "mistral_small_2603",
+    "n_seeds": 4,
+    "sessions": 4
+   }
+  ],
+  "twelve_seed_models": [
+   "claude_opus_4_7",
+   "deepseek_v4_flash",
+   "deepseek_v4_pro",
+   "gemini_3_1_flash_lite",
+   "gemini_3_1_pro",
+   "glm_5_1",
+   "kimi_k2_5"
+  ],
+  "seeds": 20,
+  "bridge_sessions": 24,
+  "note": "Seed-adjusted means for both judges (each with its own seed effects), exactly as the overview sets a 12-seed model's tier mean on all 20 seeds."
+ },
+ "session_agreement": {
+  "sessions": 1325,
+  "models": 70,
+  "excluded_both_at_floor": [
+   "claude_fable_5_1::adv_time_pressure_05",
+   "claude_opus_5::adv_time_pressure_05",
+   "claude_opus_5_5::adv_time_pressure_05"
+  ],
+  "dimensions": {
+   "overall": {
+    "n": 1325,
+    "pearson": 0.711,
+    "spearman": 0.654,
+    "pearson_ci95": [
+     0.62,
+     0.772
+    ],
+    "spearman_ci95": [
+     0.547,
+     0.734
+    ],
+    "mean_diff": 0.939,
+    "median_abs_diff": 0.9,
+    "within_0_5": 0.236
+   },
+   "S.5_agency_respect_session": {
+    "n": 1325,
+    "pearson": 0.473,
+    "spearman": 0.376,
+    "pearson_ci95": [
+     0.385,
+     0.544
+    ],
+    "spearman_ci95": [
+     0.269,
+     0.472
+    ],
+    "mean_diff": 1.166,
+    "median_abs_diff": 1.0,
+    "within_0_5": 0.367
+   },
+   "S.1_consistency_over_time": {
+    "n": 1325,
+    "pearson": 0.582,
+    "spearman": 0.497,
+    "pearson_ci95": [
+     0.455,
+     0.662
+    ],
+    "spearman_ci95": [
+     0.377,
+     0.595
+    ],
+    "mean_diff": 0.961,
+    "median_abs_diff": 1.0,
+    "within_0_5": 0.264
+   },
+   "S.3_narrative_momentum": {
+    "n": 1325,
+    "pearson": 0.7,
+    "spearman": 0.667,
+    "pearson_ci95": [
+     0.639,
+     0.745
+    ],
+    "spearman_ci95": [
+     0.594,
+     0.72
+    ],
+    "mean_diff": 0.88,
+    "median_abs_diff": 0.8,
+    "within_0_5": 0.346
+   }
+  }
+ },
+ "model_agreement": {
+  "models": 69,
+  "dimensions": {
+   "overall": {
+    "n": 69,
+    "pearson": 0.87,
+    "spearman": 0.808,
+    "pearson_ci95": [
+     0.787,
+     0.926
+    ],
+    "spearman_ci95": [
+     0.672,
+     0.894
+    ],
+    "mean_diff": 0.943,
+    "median_abs_diff": 0.96,
+    "within_0_5": 0.072
+   },
+   "S.5_agency_respect_session": {
+    "n": 69,
+    "pearson": 0.596,
+    "spearman": 0.44,
+    "pearson_ci95": [
+     0.417,
+     0.718
+    ],
+    "spearman_ci95": [
+     0.191,
+     0.651
+    ],
+    "mean_diff": 1.165,
+    "median_abs_diff": 1.23,
+    "within_0_5": 0.159
+   },
+   "S.1_consistency_over_time": {
+    "n": 69,
+    "pearson": 0.852,
+    "spearman": 0.652,
+    "pearson_ci95": [
+     0.739,
+     0.911
+    ],
+    "spearman_ci95": [
+     0.459,
+     0.793
+    ],
+    "mean_diff": 0.962,
+    "median_abs_diff": 1.0,
+    "within_0_5": 0.058
+   },
+   "S.3_narrative_momentum": {
+    "n": 69,
+    "pearson": 0.912,
+    "spearman": 0.906,
+    "pearson_ci95": [
+     0.871,
+     0.942
+    ],
+    "spearman_ci95": [
+     0.831,
+     0.944
+    ],
+    "mean_diff": 0.88,
+    "median_abs_diff": 0.875,
+    "within_0_5": 0.072
+   }
+  },
+  "by_band": {
+   "sonnet_A": {
+    "n": 37,
+    "pearson": 0.083,
+    "spearman": 0.109,
+    "pearson_ci95": [
+     -0.199,
+     0.364
+    ],
+    "spearman_ci95": [
+     -0.243,
+     0.431
+    ],
+    "mean_diff": 1.017,
+    "median_abs_diff": 1.095,
+    "within_0_5": 0.108,
+    "label": "Sonnet's A letter (3.8 and above)",
+    "sonnet_spread_sd": 0.154,
+    "disagreement_rms_after_offset": 0.327,
+    "ratio": 2.13
+   },
+   "below_A": {
+    "n": 32,
+    "pearson": 0.948,
+    "spearman": 0.911,
+    "pearson_ci95": [
+     0.898,
+     0.973
+    ],
+    "spearman_ci95": [
+     0.794,
+     0.959
+    ],
+    "mean_diff": 0.857,
+    "median_abs_diff": 0.901,
+    "within_0_5": 0.031,
+    "label": "below A",
+    "sonnet_spread_sd": 0.515,
+    "disagreement_rms_after_offset": 0.204,
+    "ratio": 0.395
+   }
+  },
+  "by_band_note": "Inside a letter the spread between models is small, so a correlation there is low partly by range restriction. The ratio sets the judges' disagreement (root mean square of the difference after the scale offset) against the spread of Sonnet's means in that band: above 1, the judges disagree more than the models differ (15b's reading)."
+ },
+ "scale": {
+  "offset": {
+   "value": 0.943,
+   "ci95_model_resampled": [
+    0.878,
+    1.009
+   ],
+   "method": "mean over the 69 tiered models of Sonnet's model mean minus ChatGPT's, both on the overview's model + seed fit, each model weighted once (analyze_round4_overview.scale_offset). Adding it to ChatGPT's means gives both judges the same mean across these models, ROUND4_DESIGN 18a's centring.",
+   "alternatives": {
+    "session_mean_difference": 0.937,
+    "median_of_model_differences": 0.96
+   }
+  },
+  "spread": {
+   "sonnet_sd_across_models": 0.562,
+   "chatgpt_sd_across_models": 0.49,
+   "sd_ratio": 0.871,
+   "ols_slope_chatgpt_on_sonnet": 0.758,
+   "note": "An offset moves every model by the same amount; it does not undo a difference in spread. ChatGPT's model means spread 87% as wide as Sonnet's, so after the offset alone Sonnet's top models sit a little lower under ChatGPT and its bottom models a little higher for that reason alone. The mean-and-sd rescale in `tiers` removes both."
+  }
+ },
+ "models": {
+  "aion_3_5": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 4.38,
+    "ci95": [
+     4.33,
+     4.425
+    ],
+    "interval_reaches_edge": false,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.84,
+    "S.1_consistency_over_time": 4.685,
+    "S.3_narrative_momentum": 4.58
+   },
+   "chatgpt": {
+    "overall": 2.905,
+    "ci95": [
+     2.73,
+     3.08
+    ],
+    "overall_plain": 2.905,
+    "tier": "C",
+    "overall_after_offset": 3.8479,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 2.59,
+    "S.1_consistency_over_time": 3.49,
+    "S.3_narrative_momentum": 3.65
+   },
+   "difference_after_offset": -0.532,
+   "difference_ci95": [
+    -0.662,
+    -0.403
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": true,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.226
+  },
+  "claude_fable_5_1": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "claude",
+   "sonnet": {
+    "overall": 4.265,
+    "ci95": [
+     3.875,
+     4.505
+    ],
+    "interval_reaches_edge": false,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.64,
+    "S.1_consistency_over_time": 4.51,
+    "S.3_narrative_momentum": 4.295
+   },
+   "chatgpt": {
+    "overall": 3.18,
+    "ci95": [
+     2.885,
+     3.405
+    ],
+    "overall_plain": 3.18,
+    "tier": "C",
+    "overall_after_offset": 4.1229,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 2.875,
+    "S.1_consistency_over_time": 3.61,
+    "S.3_narrative_momentum": 3.56
+   },
+   "difference_after_offset": -0.142,
+   "difference_ci95": [
+    -0.284,
+    0.048
+   ],
+   "difference_interval_excludes_zero": false,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.011
+  },
+  "claude_opus_4_6": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "claude",
+   "sonnet": {
+    "overall": 4.305,
+    "ci95": [
+     4.1849,
+     4.405
+    ],
+    "interval_reaches_edge": false,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.85,
+    "S.1_consistency_over_time": 4.49,
+    "S.3_narrative_momentum": 4.475
+   },
+   "chatgpt": {
+    "overall": 2.89,
+    "ci95": [
+     2.66,
+     3.105
+    ],
+    "overall_plain": 2.89,
+    "tier": "C",
+    "overall_after_offset": 3.8329,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 2.76,
+    "S.1_consistency_over_time": 3.49,
+    "S.3_narrative_momentum": 3.475
+   },
+   "difference_after_offset": -0.472,
+   "difference_ci95": [
+    -0.675,
+    -0.281
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": true,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.365
+  },
+  "claude_opus_4_7": {
+   "n_sessions": 12,
+   "chatgpt_sessions": 12,
+   "n_seeds": 12,
+   "basis": "seed_adjusted",
+   "group": "claude",
+   "sonnet": {
+    "overall": 4.2938,
+    "ci95": [
+     4.1953,
+     4.3894
+    ],
+    "interval_reaches_edge": false,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.9941,
+    "S.1_consistency_over_time": 4.4919,
+    "S.3_narrative_momentum": 4.3367
+   },
+   "chatgpt": {
+    "overall": 3.0647,
+    "ci95": [
+     2.7136,
+     3.3801
+    ],
+    "overall_plain": 3.1167,
+    "tier": "C",
+    "overall_after_offset": 4.0076,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 2.845,
+    "S.1_consistency_over_time": 3.5812,
+    "S.3_narrative_momentum": 3.5185
+   },
+   "difference_after_offset": -0.286,
+   "difference_ci95": [
+    -0.617,
+    0.033
+   ],
+   "difference_interval_excludes_zero": false,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.093
+  },
+  "claude_opus_4_8": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "claude",
+   "sonnet": {
+    "overall": 4.265,
+    "ci95": [
+     4.19,
+     4.34
+    ],
+    "interval_reaches_edge": false,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.57,
+    "S.1_consistency_over_time": 4.58,
+    "S.3_narrative_momentum": 4.375
+   },
+   "chatgpt": {
+    "overall": 3.275,
+    "ci95": [
+     3.11,
+     3.435
+    ],
+    "overall_plain": 3.275,
+    "tier": "B",
+    "overall_after_offset": 4.2179,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 2.85,
+    "S.1_consistency_over_time": 3.76,
+    "S.3_narrative_momentum": 3.625
+   },
+   "difference_after_offset": -0.047,
+   "difference_ci95": [
+    -0.18,
+    0.083
+   ],
+   "difference_interval_excludes_zero": false,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.0
+  },
+  "claude_opus_5": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "claude",
+   "sonnet": {
+    "overall": 4.35,
+    "ci95": [
+     3.97,
+     4.57
+    ],
+    "interval_reaches_edge": false,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.55,
+    "S.1_consistency_over_time": 4.535,
+    "S.3_narrative_momentum": 4.46
+   },
+   "chatgpt": {
+    "overall": 3.14,
+    "ci95": [
+     2.845,
+     3.375
+    ],
+    "overall_plain": 3.14,
+    "tier": "C",
+    "overall_after_offset": 4.0829,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 2.88,
+    "S.1_consistency_over_time": 3.575,
+    "S.3_narrative_momentum": 3.64
+   },
+   "difference_after_offset": -0.267,
+   "difference_ci95": [
+    -0.471,
+    -0.027
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.013
+  },
+  "claude_opus_5_5": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "claude",
+   "sonnet": {
+    "overall": 4.15,
+    "ci95": [
+     3.785,
+     4.365
+    ],
+    "interval_reaches_edge": true,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.55,
+    "S.1_consistency_over_time": 4.385,
+    "S.3_narrative_momentum": 4.185
+   },
+   "chatgpt": {
+    "overall": 3.38,
+    "ci95": [
+     3.0699,
+     3.605
+    ],
+    "overall_plain": 3.38,
+    "tier": "B",
+    "overall_after_offset": 4.3229,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 3.4,
+    "S.1_consistency_over_time": 3.825,
+    "S.3_narrative_momentum": 3.75
+   },
+   "difference_after_offset": 0.173,
+   "difference_ci95": [
+    0.004,
+    0.357
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.029
+  },
+  "claude_sonnet_4_5": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "claude",
+   "sonnet": {
+    "overall": 4.07,
+    "ci95": [
+     3.995,
+     4.145
+    ],
+    "interval_reaches_edge": false,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.73,
+    "S.1_consistency_over_time": 4.415,
+    "S.3_narrative_momentum": 4.205
+   },
+   "chatgpt": {
+    "overall": 2.89,
+    "ci95": [
+     2.63,
+     3.15
+    ],
+    "overall_plain": 2.89,
+    "tier": "C",
+    "overall_after_offset": 3.8329,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 2.96,
+    "S.1_consistency_over_time": 3.42,
+    "S.3_narrative_momentum": 3.44
+   },
+   "difference_after_offset": -0.237,
+   "difference_ci95": [
+    -0.434,
+    -0.043
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.378
+  },
+  "claude_sonnet_4_6": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "claude",
+   "sonnet": {
+    "overall": 4.255,
+    "ci95": [
+     4.17,
+     4.335
+    ],
+    "interval_reaches_edge": false,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.8,
+    "S.1_consistency_over_time": 4.6,
+    "S.3_narrative_momentum": 4.27
+   },
+   "chatgpt": {
+    "overall": 3.07,
+    "ci95": [
+     2.875,
+     3.255
+    ],
+    "overall_plain": 3.07,
+    "tier": "C",
+    "overall_after_offset": 4.0129,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 3.225,
+    "S.1_consistency_over_time": 3.465,
+    "S.3_narrative_momentum": 3.35
+   },
+   "difference_after_offset": -0.242,
+   "difference_ci95": [
+    -0.399,
+    -0.085
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.006
+  },
+  "claude_sonnet_5": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "claude",
+   "sonnet": {
+    "overall": 4.31,
+    "ci95": [
+     4.1949,
+     4.41
+    ],
+    "interval_reaches_edge": false,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.77,
+    "S.1_consistency_over_time": 4.665,
+    "S.3_narrative_momentum": 4.505
+   },
+   "chatgpt": {
+    "overall": 3.165,
+    "ci95": [
+     2.975,
+     3.35
+    ],
+    "overall_plain": 3.165,
+    "tier": "C",
+    "overall_after_offset": 4.1079,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 3.185,
+    "S.1_consistency_over_time": 3.57,
+    "S.3_narrative_momentum": 3.455
+   },
+   "difference_after_offset": -0.202,
+   "difference_ci95": [
+    -0.34,
+    -0.059
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.0
+  },
+  "command_a_plus": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 2.29,
+    "ci95": [
+     2.09,
+     2.5
+    ],
+    "interval_reaches_edge": false,
+    "tier": "D",
+    "S.5_agency_respect_session": 3.89,
+    "S.1_consistency_over_time": 2.76,
+    "S.3_narrative_momentum": 2.44
+   },
+   "chatgpt": {
+    "overall": 1.67,
+    "ci95": [
+     1.565,
+     1.775
+    ],
+    "overall_plain": 1.67,
+    "tier": "E",
+    "overall_after_offset": 2.6129,
+    "tier_after_offset": "C",
+    "tier_after_rescale": "D",
+    "S.5_agency_respect_session": 3.255,
+    "S.1_consistency_over_time": 2.12,
+    "S.3_narrative_momentum": 1.62
+   },
+   "difference_after_offset": 0.323,
+   "difference_ci95": [
+    0.103,
+    0.544
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": true,
+   "letters_moved": 1,
+   "tier_depends_on_judge": true,
+   "share_of_seed_draws_letters_differ": 0.595
+  },
+  "cydonia_24b": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 2.84,
+    "ci95": [
+     2.615,
+     3.065
+    ],
+    "interval_reaches_edge": false,
+    "tier": "C",
+    "S.5_agency_respect_session": 3.975,
+    "S.1_consistency_over_time": 3.575,
+    "S.3_narrative_momentum": 3.205
+   },
+   "chatgpt": {
+    "overall": 1.92,
+    "ci95": [
+     1.765,
+     2.075
+    ],
+    "overall_plain": 1.92,
+    "tier": "E",
+    "overall_after_offset": 2.8629,
+    "tier_after_offset": "C",
+    "tier_after_rescale": "C",
+    "S.5_agency_respect_session": 1.895,
+    "S.1_consistency_over_time": 2.54,
+    "S.3_narrative_momentum": 2.35
+   },
+   "difference_after_offset": 0.023,
+   "difference_ci95": [
+    -0.196,
+    0.217
+   ],
+   "difference_interval_excludes_zero": false,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.02
+  },
+  "deepseek_r1_0528": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 3.825,
+    "ci95": [
+     3.635,
+     3.99
+    ],
+    "interval_reaches_edge": true,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.315,
+    "S.1_consistency_over_time": 4.385,
+    "S.3_narrative_momentum": 3.99
+   },
+   "chatgpt": {
+    "overall": 2.655,
+    "ci95": [
+     2.425,
+     2.875
+    ],
+    "overall_plain": 2.655,
+    "tier": "C",
+    "overall_after_offset": 3.5979,
+    "tier_after_offset": "B",
+    "tier_after_rescale": "B",
+    "S.5_agency_respect_session": 2.55,
+    "S.1_consistency_over_time": 3.31,
+    "S.3_narrative_momentum": 3.055
+   },
+   "difference_after_offset": -0.227,
+   "difference_ci95": [
+    -0.396,
+    -0.066
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": false,
+   "letters_moved": -1,
+   "tier_depends_on_judge": true,
+   "share_of_seed_draws_letters_differ": 0.618
+  },
+  "deepseek_v3_0324": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 3.82,
+    "ci95": [
+     3.665,
+     3.94
+    ],
+    "interval_reaches_edge": true,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.25,
+    "S.1_consistency_over_time": 4.245,
+    "S.3_narrative_momentum": 4.045
+   },
+   "chatgpt": {
+    "overall": 2.895,
+    "ci95": [
+     2.665,
+     3.115
+    ],
+    "overall_plain": 2.895,
+    "tier": "C",
+    "overall_after_offset": 3.8379,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 2.875,
+    "S.1_consistency_over_time": 3.275,
+    "S.3_narrative_momentum": 3.425
+   },
+   "difference_after_offset": 0.018,
+   "difference_ci95": [
+    -0.191,
+    0.225
+   ],
+   "difference_interval_excludes_zero": false,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.383
+  },
+  "deepseek_v3_2": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 4.12,
+    "ci95": [
+     3.965,
+     4.25
+    ],
+    "interval_reaches_edge": false,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.545,
+    "S.1_consistency_over_time": 4.45,
+    "S.3_narrative_momentum": 4.11
+   },
+   "chatgpt": {
+    "overall": 3.175,
+    "ci95": [
+     2.965,
+     3.375
+    ],
+    "overall_plain": 3.175,
+    "tier": "C",
+    "overall_after_offset": 4.1179,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 3.255,
+    "S.1_consistency_over_time": 3.68,
+    "S.3_narrative_momentum": 3.37
+   },
+   "difference_after_offset": -0.002,
+   "difference_ci95": [
+    -0.152,
+    0.159
+   ],
+   "difference_interval_excludes_zero": false,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.001
+  },
+  "deepseek_v4_1_flash": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 4.245,
+    "ci95": [
+     4.14,
+     4.34
+    ],
+    "interval_reaches_edge": false,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.48,
+    "S.1_consistency_over_time": 4.585,
+    "S.3_narrative_momentum": 4.405
+   },
+   "chatgpt": {
+    "overall": 2.975,
+    "ci95": [
+     2.805,
+     3.125
+    ],
+    "overall_plain": 2.975,
+    "tier": "C",
+    "overall_after_offset": 3.9179,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 2.895,
+    "S.1_consistency_over_time": 3.585,
+    "S.3_narrative_momentum": 3.42
+   },
+   "difference_after_offset": -0.327,
+   "difference_ci95": [
+    -0.461,
+    -0.19
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": true,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.059
+  },
+  "deepseek_v4_flash": {
+   "n_sessions": 12,
+   "chatgpt_sessions": 12,
+   "n_seeds": 12,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 3.9771,
+    "ci95": [
+     3.8754,
+     4.0848
+    ],
+    "interval_reaches_edge": false,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.6941,
+    "S.1_consistency_over_time": 4.3085,
+    "S.3_narrative_momentum": 4.0284
+   },
+   "chatgpt": {
+    "overall": 3.2814,
+    "ci95": [
+     3.0523,
+     3.4967
+    ],
+    "overall_plain": 3.3333,
+    "tier": "B",
+    "overall_after_offset": 4.2243,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 3.82,
+    "S.1_consistency_over_time": 3.4978,
+    "S.3_narrative_momentum": 3.3852
+   },
+   "difference_after_offset": 0.247,
+   "difference_ci95": [
+    0.09,
+    0.405
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.0
+  },
+  "deepseek_v4_pro": {
+   "n_sessions": 12,
+   "chatgpt_sessions": 12,
+   "n_seeds": 12,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 4.1188,
+    "ci95": [
+     4.0365,
+     4.2041
+    ],
+    "interval_reaches_edge": false,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.7441,
+    "S.1_consistency_over_time": 4.4335,
+    "S.3_narrative_momentum": 4.245
+   },
+   "chatgpt": {
+    "overall": 3.0564,
+    "ci95": [
+     2.7383,
+     3.3469
+    ],
+    "overall_plain": 3.1083,
+    "tier": "C",
+    "overall_after_offset": 3.9993,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 3.32,
+    "S.1_consistency_over_time": 3.3062,
+    "S.3_narrative_momentum": 3.5769
+   },
+   "difference_after_offset": -0.12,
+   "difference_ci95": [
+    -0.414,
+    0.177
+   ],
+   "difference_interval_excludes_zero": false,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.081
+  },
+  "ember_1": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 4.255,
+    "ci95": [
+     4.15,
+     4.36
+    ],
+    "interval_reaches_edge": false,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.51,
+    "S.1_consistency_over_time": 4.58,
+    "S.3_narrative_momentum": 4.46
+   },
+   "chatgpt": {
+    "overall": 3.16,
+    "ci95": [
+     3.03,
+     3.285
+    ],
+    "overall_plain": 3.16,
+    "tier": "C",
+    "overall_after_offset": 4.1029,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 3.29,
+    "S.1_consistency_over_time": 3.78,
+    "S.3_narrative_momentum": 3.61
+   },
+   "difference_after_offset": -0.152,
+   "difference_ci95": [
+    -0.266,
+    -0.046
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.0
+  },
+  "euryale_70b": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 2.005,
+    "ci95": [
+     1.78,
+     2.235
+    ],
+    "interval_reaches_edge": true,
+    "tier": "D",
+    "S.5_agency_respect_session": 2.98,
+    "S.1_consistency_over_time": 2.455,
+    "S.3_narrative_momentum": 1.935
+   },
+   "chatgpt": {
+    "overall": 1.565,
+    "ci95": [
+     1.39,
+     1.76
+    ],
+    "overall_plain": 1.565,
+    "tier": "E",
+    "overall_after_offset": 2.5079,
+    "tier_after_offset": "D",
+    "tier_after_rescale": "D",
+    "S.5_agency_respect_session": 2.215,
+    "S.1_consistency_over_time": 2.125,
+    "S.3_narrative_momentum": 1.645
+   },
+   "difference_after_offset": 0.503,
+   "difference_ci95": [
+    0.369,
+    0.637
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": true,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.614
+  },
+  "gemini_2_5_flash": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 3.41,
+    "ci95": [
+     3.17,
+     3.595
+    ],
+    "interval_reaches_edge": true,
+    "tier": "B",
+    "S.5_agency_respect_session": 4.345,
+    "S.1_consistency_over_time": 3.97,
+    "S.3_narrative_momentum": 3.545
+   },
+   "chatgpt": {
+    "overall": 2.72,
+    "ci95": [
+     2.525,
+     2.895
+    ],
+    "overall_plain": 2.72,
+    "tier": "C",
+    "overall_after_offset": 3.6629,
+    "tier_after_offset": "B",
+    "tier_after_rescale": "B",
+    "S.5_agency_respect_session": 3.95,
+    "S.1_consistency_over_time": 3.31,
+    "S.3_narrative_momentum": 2.47
+   },
+   "difference_after_offset": 0.253,
+   "difference_ci95": [
+    0.124,
+    0.382
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.076
+  },
+  "gemini_3_1_flash_lite": {
+   "n_sessions": 12,
+   "chatgpt_sessions": 12,
+   "n_seeds": 12,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 3.6938,
+    "ci95": [
+     3.5806,
+     3.8113
+    ],
+    "interval_reaches_edge": true,
+    "tier": "B",
+    "S.5_agency_respect_session": 4.4858,
+    "S.1_consistency_over_time": 4.4252,
+    "S.3_narrative_momentum": 4.0617
+   },
+   "chatgpt": {
+    "overall": 2.6397,
+    "ci95": [
+     2.3731,
+     2.8918
+    ],
+    "overall_plain": 2.6917,
+    "tier": "C",
+    "overall_after_offset": 3.5826,
+    "tier_after_offset": "B",
+    "tier_after_rescale": "B",
+    "S.5_agency_respect_session": 3.2616,
+    "S.1_consistency_over_time": 3.2228,
+    "S.3_narrative_momentum": 3.0185
+   },
+   "difference_after_offset": -0.111,
+   "difference_ci95": [
+    -0.331,
+    0.115
+   ],
+   "difference_interval_excludes_zero": false,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.064
+  },
+  "gemini_3_1_pro": {
+   "n_sessions": 12,
+   "chatgpt_sessions": 12,
+   "n_seeds": 12,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 3.6605,
+    "ci95": [
+     3.4222,
+     3.8926
+    ],
+    "interval_reaches_edge": true,
+    "tier": "B",
+    "S.5_agency_respect_session": 4.8274,
+    "S.1_consistency_over_time": 4.1002,
+    "S.3_narrative_momentum": 3.8034
+   },
+   "chatgpt": {
+    "overall": 2.898,
+    "ci95": [
+     2.6053,
+     3.1599
+    ],
+    "overall_plain": 2.95,
+    "tier": "C",
+    "overall_after_offset": 3.8409,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 3.8783,
+    "S.1_consistency_over_time": 3.4478,
+    "S.3_narrative_momentum": 3.1102
+   },
+   "difference_after_offset": 0.18,
+   "difference_ci95": [
+    0.023,
+    0.327
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": false,
+   "letters_moved": 1,
+   "tier_depends_on_judge": true,
+   "share_of_seed_draws_letters_differ": 0.509
+  },
+  "gemini_3_5_flash": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 3.9725,
+    "ci95": [
+     3.8425,
+     4.085
+    ],
+    "interval_reaches_edge": false,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.65,
+    "S.1_consistency_over_time": 4.5,
+    "S.3_narrative_momentum": 4.175
+   },
+   "chatgpt": {
+    "overall": 3.06,
+    "ci95": [
+     2.915,
+     3.21
+    ],
+    "overall_plain": 3.06,
+    "tier": "C",
+    "overall_after_offset": 4.0029,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 3.155,
+    "S.1_consistency_over_time": 3.41,
+    "S.3_narrative_momentum": 3.3
+   },
+   "difference_after_offset": 0.03,
+   "difference_ci95": [
+    -0.101,
+    0.153
+   ],
+   "difference_interval_excludes_zero": false,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.007
+  },
+  "gemini_3_7_flash": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 4.04,
+    "ci95": [
+     3.9,
+     4.16
+    ],
+    "interval_reaches_edge": false,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.785,
+    "S.1_consistency_over_time": 4.52,
+    "S.3_narrative_momentum": 4.24
+   },
+   "chatgpt": {
+    "overall": 3.15,
+    "ci95": [
+     2.96,
+     3.325
+    ],
+    "overall_plain": 3.15,
+    "tier": "C",
+    "overall_after_offset": 4.0929,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 3.835,
+    "S.1_consistency_over_time": 3.465,
+    "S.3_narrative_momentum": 3.43
+   },
+   "difference_after_offset": 0.053,
+   "difference_ci95": [
+    -0.087,
+    0.194
+   ],
+   "difference_interval_excludes_zero": false,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.003
+  },
+  "gemini_3_8_flash": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 3.935,
+    "ci95": [
+     3.77,
+     4.075
+    ],
+    "interval_reaches_edge": true,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.45,
+    "S.1_consistency_over_time": 4.44,
+    "S.3_narrative_momentum": 4.125
+   },
+   "chatgpt": {
+    "overall": 3.02,
+    "ci95": [
+     2.88,
+     3.155
+    ],
+    "overall_plain": 3.02,
+    "tier": "C",
+    "overall_after_offset": 3.9629,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 3.625,
+    "S.1_consistency_over_time": 3.34,
+    "S.3_narrative_momentum": 3.31
+   },
+   "difference_after_offset": 0.028,
+   "difference_ci95": [
+    -0.083,
+    0.143
+   ],
+   "difference_interval_excludes_zero": false,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.037
+  },
+  "gemma_4_26b": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 3.63,
+    "ci95": [
+     3.51,
+     3.745
+    ],
+    "interval_reaches_edge": false,
+    "tier": "B",
+    "S.5_agency_respect_session": 4.4,
+    "S.1_consistency_over_time": 4.275,
+    "S.3_narrative_momentum": 3.945
+   },
+   "chatgpt": {
+    "overall": 2.46,
+    "ci95": [
+     2.305,
+     2.61
+    ],
+    "overall_plain": 2.46,
+    "tier": "D",
+    "overall_after_offset": 3.4029,
+    "tier_after_offset": "B",
+    "tier_after_rescale": "B",
+    "S.5_agency_respect_session": 3.12,
+    "S.1_consistency_over_time": 3.195,
+    "S.3_narrative_momentum": 2.64
+   },
+   "difference_after_offset": -0.227,
+   "difference_ci95": [
+    -0.346,
+    -0.117
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.007
+  },
+  "gemma_4_31b": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 3.675,
+    "ci95": [
+     3.51,
+     3.835
+    ],
+    "interval_reaches_edge": true,
+    "tier": "B",
+    "S.5_agency_respect_session": 4.585,
+    "S.1_consistency_over_time": 4.33,
+    "S.3_narrative_momentum": 3.775
+   },
+   "chatgpt": {
+    "overall": 2.745,
+    "ci95": [
+     2.56,
+     2.925
+    ],
+    "overall_plain": 2.745,
+    "tier": "C",
+    "overall_after_offset": 3.6879,
+    "tier_after_offset": "B",
+    "tier_after_rescale": "B",
+    "S.5_agency_respect_session": 3.25,
+    "S.1_consistency_over_time": 3.21,
+    "S.3_narrative_momentum": 3.01
+   },
+   "difference_after_offset": 0.013,
+   "difference_ci95": [
+    -0.115,
+    0.137
+   ],
+   "difference_interval_excludes_zero": false,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.098
+  },
+  "glm_4_7": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 3.94,
+    "ci95": [
+     3.8,
+     4.075
+    ],
+    "interval_reaches_edge": true,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.755,
+    "S.1_consistency_over_time": 4.385,
+    "S.3_narrative_momentum": 4.055
+   },
+   "chatgpt": {
+    "overall": 2.88,
+    "ci95": [
+     2.72,
+     3.04
+    ],
+    "overall_plain": 2.88,
+    "tier": "C",
+    "overall_after_offset": 3.8229,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 3.1,
+    "S.1_consistency_over_time": 3.35,
+    "S.3_narrative_momentum": 3.075
+   },
+   "difference_after_offset": -0.117,
+   "difference_ci95": [
+    -0.287,
+    0.058
+   ],
+   "difference_interval_excludes_zero": false,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.372
+  },
+  "glm_5_1": {
+   "n_sessions": 12,
+   "chatgpt_sessions": 12,
+   "n_seeds": 12,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 4.0563,
+    "ci95": [
+     3.9342,
+     4.1592
+    ],
+    "interval_reaches_edge": false,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.5858,
+    "S.1_consistency_over_time": 4.4669,
+    "S.3_narrative_momentum": 4.2867
+   },
+   "chatgpt": {
+    "overall": 3.073,
+    "ci95": [
+     2.8716,
+     3.2356
+    ],
+    "overall_plain": 3.125,
+    "tier": "C",
+    "overall_after_offset": 4.0159,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 3.3366,
+    "S.1_consistency_over_time": 3.3812,
+    "S.3_narrative_momentum": 3.5019
+   },
+   "difference_after_offset": -0.04,
+   "difference_ci95": [
+    -0.218,
+    0.109
+   ],
+   "difference_interval_excludes_zero": false,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.003
+  },
+  "glm_5_3_flash": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 4.34,
+    "ci95": [
+     4.245,
+     4.42
+    ],
+    "interval_reaches_edge": false,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.825,
+    "S.1_consistency_over_time": 4.695,
+    "S.3_narrative_momentum": 4.63
+   },
+   "chatgpt": {
+    "overall": 2.995,
+    "ci95": [
+     2.85,
+     3.15
+    ],
+    "overall_plain": 2.995,
+    "tier": "C",
+    "overall_after_offset": 3.9379,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 3.05,
+    "S.1_consistency_over_time": 3.525,
+    "S.3_narrative_momentum": 3.715
+   },
+   "difference_after_offset": -0.402,
+   "difference_ci95": [
+    -0.559,
+    -0.227
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": true,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.022
+  },
+  "glm_5_3_flashx": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 4.165,
+    "ci95": [
+     4.02,
+     4.29
+    ],
+    "interval_reaches_edge": false,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.605,
+    "S.1_consistency_over_time": 4.57,
+    "S.3_narrative_momentum": 4.295
+   },
+   "chatgpt": {
+    "overall": 2.955,
+    "ci95": [
+     2.825,
+     3.075
+    ],
+    "overall_plain": 2.955,
+    "tier": "C",
+    "overall_after_offset": 3.8979,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 2.77,
+    "S.1_consistency_over_time": 3.555,
+    "S.3_narrative_momentum": 3.51
+   },
+   "difference_after_offset": -0.267,
+   "difference_ci95": [
+    -0.383,
+    -0.154
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.083
+  },
+  "glm_5_3_prime": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 4.09,
+    "ci95": [
+     3.895,
+     4.25
+    ],
+    "interval_reaches_edge": false,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.9,
+    "S.1_consistency_over_time": 4.71,
+    "S.3_narrative_momentum": 4.455
+   },
+   "chatgpt": {
+    "overall": 2.83,
+    "ci95": [
+     2.64,
+     3.015
+    ],
+    "overall_plain": 2.83,
+    "tier": "C",
+    "overall_after_offset": 3.7729,
+    "tier_after_offset": "B",
+    "tier_after_rescale": "B",
+    "S.5_agency_respect_session": 3.115,
+    "S.1_consistency_over_time": 3.485,
+    "S.3_narrative_momentum": 3.33
+   },
+   "difference_after_offset": -0.317,
+   "difference_ci95": [
+    -0.446,
+    -0.192
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": true,
+   "letters_moved": -1,
+   "tier_depends_on_judge": true,
+   "share_of_seed_draws_letters_differ": 0.631
+  },
+  "gpt_4_1": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "openai",
+   "sonnet": {
+    "overall": 3.76,
+    "ci95": [
+     3.64,
+     3.875
+    ],
+    "interval_reaches_edge": true,
+    "tier": "B",
+    "S.5_agency_respect_session": 4.44,
+    "S.1_consistency_over_time": 4.335,
+    "S.3_narrative_momentum": 3.715
+   },
+   "chatgpt": {
+    "overall": 2.95,
+    "ci95": [
+     2.75,
+     3.155
+    ],
+    "overall_plain": 2.95,
+    "tier": "C",
+    "overall_after_offset": 3.8929,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 3.34,
+    "S.1_consistency_over_time": 3.4,
+    "S.3_narrative_momentum": 2.79
+   },
+   "difference_after_offset": 0.133,
+   "difference_ci95": [
+    -0.053,
+    0.314
+   ],
+   "difference_interval_excludes_zero": false,
+   "beyond_band": false,
+   "letters_moved": 1,
+   "tier_depends_on_judge": true,
+   "share_of_seed_draws_letters_differ": 0.612
+  },
+  "gpt_5_5": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "openai",
+   "sonnet": {
+    "overall": 3.965,
+    "ci95": [
+     3.76,
+     4.1351
+    ],
+    "interval_reaches_edge": true,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.78,
+    "S.1_consistency_over_time": 4.435,
+    "S.3_narrative_momentum": 4.085
+   },
+   "chatgpt": {
+    "overall": 3.2,
+    "ci95": [
+     2.985,
+     3.41
+    ],
+    "overall_plain": 3.2,
+    "tier": "B",
+    "overall_after_offset": 4.1429,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 4.245,
+    "S.1_consistency_over_time": 3.83,
+    "S.3_narrative_momentum": 3.38
+   },
+   "difference_after_offset": 0.178,
+   "difference_ci95": [
+    -0.021,
+    0.374
+   ],
+   "difference_interval_excludes_zero": false,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.048
+  },
+  "gpt_6_astra": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "openai",
+   "sonnet": {
+    "overall": 4.035,
+    "ci95": [
+     3.8099,
+     4.2
+    ],
+    "interval_reaches_edge": false,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.895,
+    "S.1_consistency_over_time": 4.5175,
+    "S.3_narrative_momentum": 3.9775
+   },
+   "chatgpt": {
+    "overall": 3.8,
+    "ci95": [
+     3.635,
+     3.955
+    ],
+    "overall_plain": 3.8,
+    "tier": "A",
+    "overall_after_offset": 4.7429,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 4.65,
+    "S.1_consistency_over_time": 3.99,
+    "S.3_narrative_momentum": 3.535
+   },
+   "difference_after_offset": 0.708,
+   "difference_ci95": [
+    0.563,
+    0.861
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": true,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.022
+  },
+  "gpt_6_luna": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "openai",
+   "sonnet": {
+    "overall": 3.935,
+    "ci95": [
+     3.73,
+     4.09
+    ],
+    "interval_reaches_edge": true,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.715,
+    "S.1_consistency_over_time": 4.28,
+    "S.3_narrative_momentum": 3.88
+   },
+   "chatgpt": {
+    "overall": 3.385,
+    "ci95": [
+     3.215,
+     3.54
+    ],
+    "overall_plain": 3.385,
+    "tier": "B",
+    "overall_after_offset": 4.3279,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 4.655,
+    "S.1_consistency_over_time": 3.62,
+    "S.3_narrative_momentum": 2.955
+   },
+   "difference_after_offset": 0.393,
+   "difference_ci95": [
+    0.224,
+    0.552
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": true,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.076
+  },
+  "gpt_6_luna_pro": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "openai",
+   "sonnet": {
+    "overall": 3.895,
+    "ci95": [
+     3.74,
+     4.015
+    ],
+    "interval_reaches_edge": true,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.59,
+    "S.1_consistency_over_time": 4.175,
+    "S.3_narrative_momentum": 3.855
+   },
+   "chatgpt": {
+    "overall": 3.515,
+    "ci95": [
+     3.375,
+     3.645
+    ],
+    "overall_plain": 3.515,
+    "tier": "B",
+    "overall_after_offset": 4.4579,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 4.79,
+    "S.1_consistency_over_time": 3.79,
+    "S.3_narrative_momentum": 3.095
+   },
+   "difference_after_offset": 0.563,
+   "difference_ci95": [
+    0.412,
+    0.697
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": true,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.091
+  },
+  "gpt_6_sol": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "openai",
+   "sonnet": {
+    "overall": 4.205,
+    "ci95": [
+     4.1,
+     4.295
+    ],
+    "interval_reaches_edge": false,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.92,
+    "S.1_consistency_over_time": 4.33,
+    "S.3_narrative_momentum": 4.12
+   },
+   "chatgpt": {
+    "overall": 3.795,
+    "ci95": [
+     3.62,
+     3.955
+    ],
+    "overall_plain": 3.795,
+    "tier": "B",
+    "overall_after_offset": 4.7379,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 4.725,
+    "S.1_consistency_over_time": 3.935,
+    "S.3_narrative_momentum": 3.505
+   },
+   "difference_after_offset": 0.533,
+   "difference_ci95": [
+    0.421,
+    0.651
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": true,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.0
+  },
+  "gpt_6_sol_pro": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "openai",
+   "sonnet": {
+    "overall": 4.025,
+    "ci95": [
+     3.85,
+     4.165
+    ],
+    "interval_reaches_edge": false,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.535,
+    "S.1_consistency_over_time": 4.385,
+    "S.3_narrative_momentum": 4.03
+   },
+   "chatgpt": {
+    "overall": 3.75,
+    "ci95": [
+     3.565,
+     3.925
+    ],
+    "overall_plain": 3.75,
+    "tier": "B",
+    "overall_after_offset": 4.6929,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 4.79,
+    "S.1_consistency_over_time": 3.94,
+    "S.3_narrative_momentum": 3.42
+   },
+   "difference_after_offset": 0.668,
+   "difference_ci95": [
+    0.494,
+    0.84
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": true,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.006
+  },
+  "grok_4_1": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 3.6325,
+    "ci95": [
+     3.47,
+     3.785
+    ],
+    "interval_reaches_edge": false,
+    "tier": "B",
+    "S.5_agency_respect_session": 4.7375,
+    "S.1_consistency_over_time": 4.18,
+    "S.3_narrative_momentum": 3.91
+   },
+   "chatgpt": {
+    "overall": 2.74,
+    "ci95": [
+     2.57,
+     2.915
+    ],
+    "overall_plain": 2.74,
+    "tier": "C",
+    "overall_after_offset": 3.6829,
+    "tier_after_offset": "B",
+    "tier_after_rescale": "B",
+    "S.5_agency_respect_session": 3.965,
+    "S.1_consistency_over_time": 3.29,
+    "S.3_narrative_momentum": 2.745
+   },
+   "difference_after_offset": 0.05,
+   "difference_ci95": [
+    -0.097,
+    0.2
+   ],
+   "difference_interval_excludes_zero": false,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.094
+  },
+  "grok_4_3": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 3.21,
+    "ci95": [
+     2.985,
+     3.42
+    ],
+    "interval_reaches_edge": true,
+    "tier": "B",
+    "S.5_agency_respect_session": 4.815,
+    "S.1_consistency_over_time": 3.965,
+    "S.3_narrative_momentum": 3.155
+   },
+   "chatgpt": {
+    "overall": 2.22,
+    "ci95": [
+     2.025,
+     2.445
+    ],
+    "overall_plain": 2.22,
+    "tier": "D",
+    "overall_after_offset": 3.1629,
+    "tier_after_offset": "C",
+    "tier_after_rescale": "C",
+    "S.5_agency_respect_session": 4.35,
+    "S.1_consistency_over_time": 2.955,
+    "S.3_narrative_momentum": 1.85
+   },
+   "difference_after_offset": -0.047,
+   "difference_ci95": [
+    -0.231,
+    0.157
+   ],
+   "difference_interval_excludes_zero": false,
+   "beyond_band": false,
+   "letters_moved": -1,
+   "tier_depends_on_judge": true,
+   "share_of_seed_draws_letters_differ": 0.322
+  },
+  "grok_4_7": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 3.795,
+    "ci95": [
+     3.48,
+     4.01
+    ],
+    "interval_reaches_edge": true,
+    "tier": "B",
+    "S.5_agency_respect_session": 4.8,
+    "S.1_consistency_over_time": 4.35,
+    "S.3_narrative_momentum": 3.925
+   },
+   "chatgpt": {
+    "overall": 2.885,
+    "ci95": [
+     2.585,
+     3.145
+    ],
+    "overall_plain": 2.885,
+    "tier": "C",
+    "overall_after_offset": 3.8279,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 4.025,
+    "S.1_consistency_over_time": 3.465,
+    "S.3_narrative_momentum": 2.715
+   },
+   "difference_after_offset": 0.033,
+   "difference_ci95": [
+    -0.156,
+    0.228
+   ],
+   "difference_interval_excludes_zero": false,
+   "beyond_band": false,
+   "letters_moved": 1,
+   "tier_depends_on_judge": true,
+   "share_of_seed_draws_letters_differ": 0.236
+  },
+  "hemmingway_1": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 4.085,
+    "ci95": [
+     3.98,
+     4.185
+    ],
+    "interval_reaches_edge": false,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.22,
+    "S.1_consistency_over_time": 4.425,
+    "S.3_narrative_momentum": 4.235
+   },
+   "chatgpt": {
+    "overall": 2.605,
+    "ci95": [
+     2.38,
+     2.825
+    ],
+    "overall_plain": 2.605,
+    "tier": "C",
+    "overall_after_offset": 3.5479,
+    "tier_after_offset": "B",
+    "tier_after_rescale": "B",
+    "S.5_agency_respect_session": 2.52,
+    "S.1_consistency_over_time": 2.955,
+    "S.3_narrative_momentum": 3.02
+   },
+   "difference_after_offset": -0.537,
+   "difference_ci95": [
+    -0.748,
+    -0.325
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": true,
+   "letters_moved": -1,
+   "tier_depends_on_judge": true,
+   "share_of_seed_draws_letters_differ": 0.991
+  },
+  "kimi_k2_5": {
+   "n_sessions": 12,
+   "chatgpt_sessions": 12,
+   "n_seeds": 12,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 3.7105,
+    "ci95": [
+     3.5323,
+     3.8846
+    ],
+    "interval_reaches_edge": true,
+    "tier": "B",
+    "S.5_agency_respect_session": 4.1024,
+    "S.1_consistency_over_time": 4.4502,
+    "S.3_narrative_momentum": 4.07
+   },
+   "chatgpt": {
+    "overall": 2.7397,
+    "ci95": [
+     2.5165,
+     2.9551
+    ],
+    "overall_plain": 2.7917,
+    "tier": "C",
+    "overall_after_offset": 3.6826,
+    "tier_after_offset": "B",
+    "tier_after_rescale": "B",
+    "S.5_agency_respect_session": 3.1116,
+    "S.1_consistency_over_time": 3.2312,
+    "S.3_narrative_momentum": 3.0435
+   },
+   "difference_after_offset": -0.028,
+   "difference_ci95": [
+    -0.242,
+    0.184
+   ],
+   "difference_interval_excludes_zero": false,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.197
+  },
+  "kimi_k2_6": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 3.605,
+    "ci95": [
+     3.365,
+     3.82
+    ],
+    "interval_reaches_edge": true,
+    "tier": "B",
+    "S.5_agency_respect_session": 4.55,
+    "S.1_consistency_over_time": 4.33,
+    "S.3_narrative_momentum": 3.77
+   },
+   "chatgpt": {
+    "overall": 2.81,
+    "ci95": [
+     2.595,
+     3.015
+    ],
+    "overall_plain": 2.81,
+    "tier": "C",
+    "overall_after_offset": 3.7529,
+    "tier_after_offset": "B",
+    "tier_after_rescale": "B",
+    "S.5_agency_respect_session": 3.56,
+    "S.1_consistency_over_time": 3.525,
+    "S.3_narrative_momentum": 2.895
+   },
+   "difference_after_offset": 0.148,
+   "difference_ci95": [
+    -0.04,
+    0.314
+   ],
+   "difference_interval_excludes_zero": false,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.309
+  },
+  "llama_4_maverick": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 2.965,
+    "ci95": [
+     2.76,
+     3.175
+    ],
+    "interval_reaches_edge": false,
+    "tier": "C",
+    "S.5_agency_respect_session": 4.345,
+    "S.1_consistency_over_time": 3.72,
+    "S.3_narrative_momentum": 3.21
+   },
+   "chatgpt": {
+    "overall": 2.39,
+    "ci95": [
+     2.235,
+     2.545
+    ],
+    "overall_plain": 2.39,
+    "tier": "D",
+    "overall_after_offset": 3.3329,
+    "tier_after_offset": "B",
+    "tier_after_rescale": "B",
+    "S.5_agency_respect_session": 3.34,
+    "S.1_consistency_over_time": 3.04,
+    "S.3_narrative_momentum": 2.32
+   },
+   "difference_after_offset": 0.368,
+   "difference_ci95": [
+    0.187,
+    0.549
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": true,
+   "letters_moved": 1,
+   "tier_depends_on_judge": true,
+   "share_of_seed_draws_letters_differ": 0.946
+  },
+  "lunaris_8b": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 2.595,
+    "ci95": [
+     2.385,
+     2.8
+    ],
+    "interval_reaches_edge": true,
+    "tier": "D",
+    "S.5_agency_respect_session": 3.155,
+    "S.1_consistency_over_time": 3.32,
+    "S.3_narrative_momentum": 3.04
+   },
+   "chatgpt": {
+    "overall": 1.95,
+    "ci95": [
+     1.775,
+     2.12
+    ],
+    "overall_plain": 1.95,
+    "tier": "E",
+    "overall_after_offset": 2.8929,
+    "tier_after_offset": "C",
+    "tier_after_rescale": "C",
+    "S.5_agency_respect_session": 2.15,
+    "S.1_consistency_over_time": 2.245,
+    "S.3_narrative_momentum": 2.46
+   },
+   "difference_after_offset": 0.298,
+   "difference_ci95": [
+    0.148,
+    0.442
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": false,
+   "letters_moved": 1,
+   "tier_depends_on_judge": true,
+   "share_of_seed_draws_letters_differ": 0.505
+  },
+  "magnum_v4_72b": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 2.5025,
+    "ci95": [
+     2.335,
+     2.6725
+    ],
+    "interval_reaches_edge": true,
+    "tier": "D",
+    "S.5_agency_respect_session": 3.41,
+    "S.1_consistency_over_time": 3.225,
+    "S.3_narrative_momentum": 2.61
+   },
+   "chatgpt": {
+    "overall": 1.95,
+    "ci95": [
+     1.785,
+     2.13
+    ],
+    "overall_plain": 1.95,
+    "tier": "E",
+    "overall_after_offset": 2.8929,
+    "tier_after_offset": "C",
+    "tier_after_rescale": "C",
+    "S.5_agency_respect_session": 2.1,
+    "S.1_consistency_over_time": 2.31,
+    "S.3_narrative_momentum": 2.28
+   },
+   "difference_after_offset": 0.39,
+   "difference_ci95": [
+    0.245,
+    0.527
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": true,
+   "letters_moved": 1,
+   "tier_depends_on_judge": true,
+   "share_of_seed_draws_letters_differ": 0.863
+  },
+  "mercury_2_5": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 3.495,
+    "ci95": [
+     3.313,
+     3.6715
+    ],
+    "interval_reaches_edge": false,
+    "tier": "B",
+    "S.5_agency_respect_session": 4.495,
+    "S.1_consistency_over_time": 4.17,
+    "S.3_narrative_momentum": 3.61
+   },
+   "chatgpt": {
+    "overall": 2.675,
+    "ci95": [
+     2.5,
+     2.8501
+    ],
+    "overall_plain": 2.675,
+    "tier": "C",
+    "overall_after_offset": 3.6179,
+    "tier_after_offset": "B",
+    "tier_after_rescale": "B",
+    "S.5_agency_respect_session": 3.77,
+    "S.1_consistency_over_time": 3.105,
+    "S.3_narrative_momentum": 2.48
+   },
+   "difference_after_offset": 0.123,
+   "difference_ci95": [
+    -0.018,
+    0.261
+   ],
+   "difference_interval_excludes_zero": false,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.021
+  },
+  "mimo_2_5_pro": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 3.9525,
+    "ci95": [
+     3.8125,
+     4.08
+    ],
+    "interval_reaches_edge": false,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.535,
+    "S.1_consistency_over_time": 4.48,
+    "S.3_narrative_momentum": 4.155
+   },
+   "chatgpt": {
+    "overall": 2.815,
+    "ci95": [
+     2.6,
+     3.025
+    ],
+    "overall_plain": 2.815,
+    "tier": "C",
+    "overall_after_offset": 3.7579,
+    "tier_after_offset": "B",
+    "tier_after_rescale": "B",
+    "S.5_agency_respect_session": 2.54,
+    "S.1_consistency_over_time": 3.265,
+    "S.3_narrative_momentum": 3.4
+   },
+   "difference_after_offset": -0.195,
+   "difference_ci95": [
+    -0.401,
+    0.02
+   ],
+   "difference_interval_excludes_zero": false,
+   "beyond_band": false,
+   "letters_moved": -1,
+   "tier_depends_on_judge": true,
+   "share_of_seed_draws_letters_differ": 0.691
+  },
+  "mimo_2_6_flash": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 4.044,
+    "ci95": [
+     3.915,
+     4.1595
+    ],
+    "interval_reaches_edge": false,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.445,
+    "S.1_consistency_over_time": 4.465,
+    "S.3_narrative_momentum": 4.26
+   },
+   "chatgpt": {
+    "overall": 2.7,
+    "ci95": [
+     2.48,
+     2.915
+    ],
+    "overall_plain": 2.7,
+    "tier": "C",
+    "overall_after_offset": 3.6429,
+    "tier_after_offset": "B",
+    "tier_after_rescale": "B",
+    "S.5_agency_respect_session": 2.77,
+    "S.1_consistency_over_time": 3.3,
+    "S.3_narrative_momentum": 3.18
+   },
+   "difference_after_offset": -0.401,
+   "difference_ci95": [
+    -0.58,
+    -0.221
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": true,
+   "letters_moved": -1,
+   "tier_depends_on_judge": true,
+   "share_of_seed_draws_letters_differ": 0.952
+  },
+  "mimo_2_6_pro": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 4.07,
+    "ci95": [
+     3.915,
+     4.215
+    ],
+    "interval_reaches_edge": false,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.93,
+    "S.1_consistency_over_time": 4.465,
+    "S.3_narrative_momentum": 4.225
+   },
+   "chatgpt": {
+    "overall": 2.925,
+    "ci95": [
+     2.755,
+     3.095
+    ],
+    "overall_plain": 2.925,
+    "tier": "C",
+    "overall_after_offset": 3.8679,
+    "tier_after_offset": "A",
+    "tier_after_rescale": "A",
+    "S.5_agency_respect_session": 2.775,
+    "S.1_consistency_over_time": 3.55,
+    "S.3_narrative_momentum": 3.425
+   },
+   "difference_after_offset": -0.202,
+   "difference_ci95": [
+    -0.339,
+    -0.068
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.169
+  },
+  "minimax_m2_7": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 3.905,
+    "ci95": [
+     3.75,
+     4.04
+    ],
+    "interval_reaches_edge": true,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.565,
+    "S.1_consistency_over_time": 4.275,
+    "S.3_narrative_momentum": 4.04
+   },
+   "chatgpt": {
+    "overall": 2.77,
+    "ci95": [
+     2.555,
+     2.975
+    ],
+    "overall_plain": 2.77,
+    "tier": "C",
+    "overall_after_offset": 3.7129,
+    "tier_after_offset": "B",
+    "tier_after_rescale": "B",
+    "S.5_agency_respect_session": 2.85,
+    "S.1_consistency_over_time": 3.0,
+    "S.3_narrative_momentum": 3.3
+   },
+   "difference_after_offset": -0.192,
+   "difference_ci95": [
+    -0.381,
+    -0.002
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": false,
+   "letters_moved": -1,
+   "tier_depends_on_judge": true,
+   "share_of_seed_draws_letters_differ": 0.789
+  },
+  "minimax_m3": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 4.0575,
+    "ci95": [
+     3.915,
+     4.185
+    ],
+    "interval_reaches_edge": false,
+    "tier": "A",
+    "S.5_agency_respect_session": 4.57,
+    "S.1_consistency_over_time": 4.435,
+    "S.3_narrative_momentum": 4.185
+   },
+   "chatgpt": {
+    "overall": 2.69,
+    "ci95": [
+     2.54,
+     2.845
+    ],
+    "overall_plain": 2.69,
+    "tier": "C",
+    "overall_after_offset": 3.6329,
+    "tier_after_offset": "B",
+    "tier_after_rescale": "B",
+    "S.5_agency_respect_session": 2.715,
+    "S.1_consistency_over_time": 3.235,
+    "S.3_narrative_momentum": 3.13
+   },
+   "difference_after_offset": -0.425,
+   "difference_ci95": [
+    -0.563,
+    -0.287
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": true,
+   "letters_moved": -1,
+   "tier_depends_on_judge": true,
+   "share_of_seed_draws_letters_differ": 0.991
+  },
+  "mistral_small_2603": {
+   "n_sessions": 4,
+   "chatgpt_sessions": 4,
+   "n_seeds": 4,
+   "basis": "plain",
+   "group": "other",
+   "note": "4 of 20 seeds: untiered, plain means, no letter",
+   "sonnet": {
+    "overall": 3.075,
+    "tier": null
+   },
+   "chatgpt": {
+    "overall": 2.225,
+    "tier": null
+   },
+   "tier_depends_on_judge": null
+  },
+  "mistral_small_creative": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 3.285,
+    "ci95": [
+     3.13,
+     3.445
+    ],
+    "interval_reaches_edge": true,
+    "tier": "B",
+    "S.5_agency_respect_session": 3.545,
+    "S.1_consistency_over_time": 4.225,
+    "S.3_narrative_momentum": 3.885
+   },
+   "chatgpt": {
+    "overall": 2.165,
+    "ci95": [
+     2.0,
+     2.335
+    ],
+    "overall_plain": 2.165,
+    "tier": "D",
+    "overall_after_offset": 3.1079,
+    "tier_after_offset": "C",
+    "tier_after_rescale": "C",
+    "S.5_agency_respect_session": 2.27,
+    "S.1_consistency_over_time": 2.67,
+    "S.3_narrative_momentum": 2.66
+   },
+   "difference_after_offset": -0.177,
+   "difference_ci95": [
+    -0.297,
+    -0.052
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": false,
+   "letters_moved": -1,
+   "tier_depends_on_judge": true,
+   "share_of_seed_draws_letters_differ": 0.733
+  },
+  "muse_spark_1_3": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 3.225,
+    "ci95": [
+     2.975,
+     3.475
+    ],
+    "interval_reaches_edge": true,
+    "tier": "B",
+    "S.5_agency_respect_session": 4.83,
+    "S.1_consistency_over_time": 4.045,
+    "S.3_narrative_momentum": 3.275
+   },
+   "chatgpt": {
+    "overall": 2.57,
+    "ci95": [
+     2.3799,
+     2.78
+    ],
+    "overall_plain": 2.57,
+    "tier": "D",
+    "overall_after_offset": 3.5129,
+    "tier_after_offset": "B",
+    "tier_after_rescale": "B",
+    "S.5_agency_respect_session": 4.525,
+    "S.1_consistency_over_time": 3.29,
+    "S.3_narrative_momentum": 2.155
+   },
+   "difference_after_offset": 0.288,
+   "difference_ci95": [
+    0.075,
+    0.483
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.426
+  },
+  "qwen3_5_flash": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 3.3,
+    "ci95": [
+     3.1,
+     3.48
+    ],
+    "interval_reaches_edge": true,
+    "tier": "B",
+    "S.5_agency_respect_session": 4.585,
+    "S.1_consistency_over_time": 3.855,
+    "S.3_narrative_momentum": 3.545
+   },
+   "chatgpt": {
+    "overall": 2.34,
+    "ci95": [
+     2.185,
+     2.49
+    ],
+    "overall_plain": 2.34,
+    "tier": "D",
+    "overall_after_offset": 3.2829,
+    "tier_after_offset": "B",
+    "tier_after_rescale": "B",
+    "S.5_agency_respect_session": 3.765,
+    "S.1_consistency_over_time": 2.645,
+    "S.3_narrative_momentum": 2.36
+   },
+   "difference_after_offset": -0.017,
+   "difference_ci95": [
+    -0.181,
+    0.141
+   ],
+   "difference_interval_excludes_zero": false,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.159
+  },
+  "qwen3_6_27b": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 3.39,
+    "ci95": [
+     3.175,
+     3.585
+    ],
+    "interval_reaches_edge": true,
+    "tier": "B",
+    "S.5_agency_respect_session": 4.61,
+    "S.1_consistency_over_time": 4.195,
+    "S.3_narrative_momentum": 3.605
+   },
+   "chatgpt": {
+    "overall": 2.45,
+    "ci95": [
+     2.275,
+     2.615
+    ],
+    "overall_plain": 2.45,
+    "tier": "D",
+    "overall_after_offset": 3.3929,
+    "tier_after_offset": "B",
+    "tier_after_rescale": "B",
+    "S.5_agency_respect_session": 3.38,
+    "S.1_consistency_over_time": 3.035,
+    "S.3_narrative_momentum": 2.585
+   },
+   "difference_after_offset": 0.003,
+   "difference_ci95": [
+    -0.177,
+    0.202
+   ],
+   "difference_interval_excludes_zero": false,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.044
+  },
+  "qwen3_6_35b_a3b": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 3.105,
+    "ci95": [
+     2.83,
+     3.38
+    ],
+    "interval_reaches_edge": true,
+    "tier": "C",
+    "S.5_agency_respect_session": 4.47,
+    "S.1_consistency_over_time": 3.855,
+    "S.3_narrative_momentum": 3.215
+   },
+   "chatgpt": {
+    "overall": 2.265,
+    "ci95": [
+     2.115,
+     2.425
+    ],
+    "overall_plain": 2.265,
+    "tier": "D",
+    "overall_after_offset": 3.2079,
+    "tier_after_offset": "B",
+    "tier_after_rescale": "C",
+    "S.5_agency_respect_session": 3.665,
+    "S.1_consistency_over_time": 2.825,
+    "S.3_narrative_momentum": 2.31
+   },
+   "difference_after_offset": 0.103,
+   "difference_ci95": [
+    -0.1,
+    0.306
+   ],
+   "difference_interval_excludes_zero": false,
+   "beyond_band": false,
+   "letters_moved": 1,
+   "tier_depends_on_judge": true,
+   "share_of_seed_draws_letters_differ": 0.336
+  },
+  "qwen3_7_max": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 3.785,
+    "ci95": [
+     3.595,
+     3.935
+    ],
+    "interval_reaches_edge": true,
+    "tier": "B",
+    "S.5_agency_respect_session": 4.43,
+    "S.1_consistency_over_time": 4.44,
+    "S.3_narrative_momentum": 3.925
+   },
+   "chatgpt": {
+    "overall": 2.765,
+    "ci95": [
+     2.545,
+     2.98
+    ],
+    "overall_plain": 2.765,
+    "tier": "C",
+    "overall_after_offset": 3.7079,
+    "tier_after_offset": "B",
+    "tier_after_rescale": "B",
+    "S.5_agency_respect_session": 3.605,
+    "S.1_consistency_over_time": 3.205,
+    "S.3_narrative_momentum": 2.94
+   },
+   "difference_after_offset": -0.077,
+   "difference_ci95": [
+    -0.236,
+    0.074
+   ],
+   "difference_interval_excludes_zero": false,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.347
+  },
+  "qwen3_8_flash": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 3.538,
+    "ci95": [
+     3.37,
+     3.7
+    ],
+    "interval_reaches_edge": false,
+    "tier": "B",
+    "S.5_agency_respect_session": 4.57,
+    "S.1_consistency_over_time": 4.475,
+    "S.3_narrative_momentum": 3.52
+   },
+   "chatgpt": {
+    "overall": 2.445,
+    "ci95": [
+     2.275,
+     2.6
+    ],
+    "overall_plain": 2.445,
+    "tier": "D",
+    "overall_after_offset": 3.3879,
+    "tier_after_offset": "B",
+    "tier_after_rescale": "B",
+    "S.5_agency_respect_session": 4.08,
+    "S.1_consistency_over_time": 2.99,
+    "S.3_narrative_momentum": 2.39
+   },
+   "difference_after_offset": -0.15,
+   "difference_ci95": [
+    -0.318,
+    0.025
+   ],
+   "difference_interval_excludes_zero": false,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.017
+  },
+  "qwen3_8_max": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 3.72,
+    "ci95": [
+     3.52,
+     3.915
+    ],
+    "interval_reaches_edge": true,
+    "tier": "B",
+    "S.5_agency_respect_session": 4.675,
+    "S.1_consistency_over_time": 4.57,
+    "S.3_narrative_momentum": 3.88
+   },
+   "chatgpt": {
+    "overall": 2.605,
+    "ci95": [
+     2.425,
+     2.775
+    ],
+    "overall_plain": 2.605,
+    "tier": "C",
+    "overall_after_offset": 3.5479,
+    "tier_after_offset": "B",
+    "tier_after_rescale": "B",
+    "S.5_agency_respect_session": 4.435,
+    "S.1_consistency_over_time": 3.385,
+    "S.3_narrative_momentum": 2.445
+   },
+   "difference_after_offset": -0.172,
+   "difference_ci95": [
+    -0.349,
+    0.003
+   ],
+   "difference_interval_excludes_zero": false,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.219
+  },
+  "qwen3_8_max_prime": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 3.725,
+    "ci95": [
+     3.53,
+     3.885
+    ],
+    "interval_reaches_edge": true,
+    "tier": "B",
+    "S.5_agency_respect_session": 4.735,
+    "S.1_consistency_over_time": 4.45,
+    "S.3_narrative_momentum": 3.785
+   },
+   "chatgpt": {
+    "overall": 2.78,
+    "ci95": [
+     2.605,
+     2.96
+    ],
+    "overall_plain": 2.78,
+    "tier": "C",
+    "overall_after_offset": 3.7229,
+    "tier_after_offset": "B",
+    "tier_after_rescale": "B",
+    "S.5_agency_respect_session": 4.55,
+    "S.1_consistency_over_time": 3.66,
+    "S.3_narrative_momentum": 2.65
+   },
+   "difference_after_offset": -0.002,
+   "difference_ci95": [
+    -0.185,
+    0.181
+   ],
+   "difference_interval_excludes_zero": false,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.227
+  },
+  "qwen3_8_omni_flash": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 3.5625,
+    "ci95": [
+     3.32,
+     3.77
+    ],
+    "interval_reaches_edge": false,
+    "tier": "B",
+    "S.5_agency_respect_session": 4.88,
+    "S.1_consistency_over_time": 4.3,
+    "S.3_narrative_momentum": 3.72
+   },
+   "chatgpt": {
+    "overall": 2.535,
+    "ci95": [
+     2.365,
+     2.7
+    ],
+    "overall_plain": 2.535,
+    "tier": "D",
+    "overall_after_offset": 3.4779,
+    "tier_after_offset": "B",
+    "tier_after_rescale": "B",
+    "S.5_agency_respect_session": 4.075,
+    "S.1_consistency_over_time": 3.345,
+    "S.3_narrative_momentum": 2.705
+   },
+   "difference_after_offset": -0.085,
+   "difference_ci95": [
+    -0.286,
+    0.119
+   ],
+   "difference_interval_excludes_zero": false,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.015
+  },
+  "skyfall_36b": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 2.32,
+    "ci95": [
+     2.12,
+     2.5151
+    ],
+    "interval_reaches_edge": false,
+    "tier": "D",
+    "S.5_agency_respect_session": 3.86,
+    "S.1_consistency_over_time": 2.825,
+    "S.3_narrative_momentum": 2.62
+   },
+   "chatgpt": {
+    "overall": 1.63,
+    "ci95": [
+     1.485,
+     1.77
+    ],
+    "overall_plain": 1.63,
+    "tier": "E",
+    "overall_after_offset": 2.5729,
+    "tier_after_offset": "D",
+    "tier_after_rescale": "D",
+    "S.5_agency_respect_session": 2.25,
+    "S.1_consistency_over_time": 2.015,
+    "S.3_narrative_momentum": 1.935
+   },
+   "difference_after_offset": 0.253,
+   "difference_ci95": [
+    0.123,
+    0.373
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.37
+  },
+  "tencent_hy4": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 3.5,
+    "ci95": [
+     3.295,
+     3.68
+    ],
+    "interval_reaches_edge": false,
+    "tier": "B",
+    "S.5_agency_respect_session": 4.355,
+    "S.1_consistency_over_time": 4.29,
+    "S.3_narrative_momentum": 3.555
+   },
+   "chatgpt": {
+    "overall": 2.465,
+    "ci95": [
+     2.335,
+     2.595
+    ],
+    "overall_plain": 2.465,
+    "tier": "D",
+    "overall_after_offset": 3.4079,
+    "tier_after_offset": "B",
+    "tier_after_rescale": "B",
+    "S.5_agency_respect_session": 3.755,
+    "S.1_consistency_over_time": 3.15,
+    "S.3_narrative_momentum": 2.54
+   },
+   "difference_after_offset": -0.092,
+   "difference_ci95": [
+    -0.223,
+    0.038
+   ],
+   "difference_interval_excludes_zero": false,
+   "beyond_band": false,
+   "letters_moved": 0,
+   "tier_depends_on_judge": false,
+   "share_of_seed_draws_letters_differ": 0.009
+  },
+  "unslopnemo_12b": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 2.53,
+    "ci95": [
+     2.325,
+     2.73
+    ],
+    "interval_reaches_edge": true,
+    "tier": "D",
+    "S.5_agency_respect_session": 2.985,
+    "S.1_consistency_over_time": 3.22,
+    "S.3_narrative_momentum": 2.925
+   },
+   "chatgpt": {
+    "overall": 1.845,
+    "ci95": [
+     1.695,
+     2.01
+    ],
+    "overall_plain": 1.845,
+    "tier": "E",
+    "overall_after_offset": 2.7879,
+    "tier_after_offset": "C",
+    "tier_after_rescale": "C",
+    "S.5_agency_respect_session": 1.675,
+    "S.1_consistency_over_time": 2.225,
+    "S.3_narrative_momentum": 2.505
+   },
+   "difference_after_offset": 0.258,
+   "difference_ci95": [
+    0.104,
+    0.419
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": false,
+   "letters_moved": 1,
+   "tier_depends_on_judge": true,
+   "share_of_seed_draws_letters_differ": 0.726
+  },
+  "venice_dolphin_24b": {
+   "n_sessions": 20,
+   "chatgpt_sessions": 20,
+   "n_seeds": 20,
+   "basis": "seed_adjusted",
+   "group": "other",
+   "sonnet": {
+    "overall": 2.505,
+    "ci95": [
+     2.28,
+     2.735
+    ],
+    "interval_reaches_edge": true,
+    "tier": "D",
+    "S.5_agency_respect_session": 3.8,
+    "S.1_consistency_over_time": 3.055,
+    "S.3_narrative_momentum": 2.365
+   },
+   "chatgpt": {
+    "overall": 1.765,
+    "ci95": [
+     1.61,
+     1.935
+    ],
+    "overall_plain": 1.765,
+    "tier": "E",
+    "overall_after_offset": 2.7079,
+    "tier_after_offset": "C",
+    "tier_after_rescale": "D",
+    "S.5_agency_respect_session": 2.25,
+    "S.1_consistency_over_time": 2.34,
+    "S.3_narrative_momentum": 1.685
+   },
+   "difference_after_offset": 0.203,
+   "difference_ci95": [
+    0.05,
+    0.348
+   ],
+   "difference_interval_excludes_zero": true,
+   "beyond_band": false,
+   "letters_moved": 1,
+   "tier_depends_on_judge": true,
+   "share_of_seed_draws_letters_differ": 0.702
+  }
+ },
+ "tiers": {
+  "letters": {
+   "A": "3.8 and above",
+   "B": "3.2-3.8",
+   "C": "2.6-3.2",
+   "D": "2.0-2.6",
+   "E": "below 2.0"
+  },
+  "sonnet_sizes": {
+   "A": 37,
+   "B": 22,
+   "C": 3,
+   "D": 7
+  },
+  "models": 69,
+  "raw": {
+   "same_letter": 1,
+   "sizes": {
+    "A": 1,
+    "B": 8,
+    "C": 41,
+    "D": 11,
+    "E": 8
+   },
+   "confusion": {
+    "A": {
+     "A": 1,
+     "B": 8,
+     "C": 28
+    },
+    "B": {
+     "C": 13,
+     "D": 9
+    },
+    "C": {
+     "D": 2,
+     "E": 1
+    },
+    "D": {
+     "E": 7
+    }
+   },
+   "note": "ChatGPT's own letters on the same fixed ranges, raw: they sit lower because ChatGPT uses the scale lower"
+  },
+  "after_offset": {
+   "same_letter": 50,
+   "sizes": {
+    "A": 33,
+    "B": 26,
+    "C": 8,
+    "D": 2
+   },
+   "confusion": {
+    "A": {
+     "A": 30,
+     "B": 7
+    },
+    "B": {
+     "A": 3,
+     "B": 17,
+     "C": 2
+    },
+    "C": {
+     "B": 2,
+     "C": 1
+    },
+    "D": {
+     "C": 5,
+     "D": 2
+    }
+   },
+   "tier_depends_on_judge": [
+    "command_a_plus",
+    "deepseek_r1_0528",
+    "gemini_3_1_pro",
+    "glm_5_3_prime",
+    "gpt_4_1",
+    "grok_4_3",
+    "grok_4_7",
+    "hemmingway_1",
+    "llama_4_maverick",
+    "lunaris_8b",
+    "magnum_v4_72b",
+    "mimo_2_5_pro",
+    "mimo_2_6_flash",
+    "minimax_m2_7",
+    "minimax_m3",
+    "mistral_small_creative",
+    "qwen3_6_35b_a3b",
+    "unslopnemo_12b",
+    "venice_dolphin_24b"
+   ],
+   "moves": [
+    {
+     "model": "hemmingway_1",
+     "sonnet_tier": "A",
+     "chatgpt_tier_after_offset": "B",
+     "letters_moved": -1,
+     "direction": "lower under ChatGPT",
+     "difference_after_offset": -0.537,
+     "difference_ci95": [
+      -0.748,
+      -0.325
+     ],
+     "beyond_band": true,
+     "difference_interval_excludes_zero": true,
+     "sonnet_interval_reaches_edge": false,
+     "share_of_seed_draws_letters_differ": 0.991,
+     "group": "other"
+    },
+    {
+     "model": "minimax_m3",
+     "sonnet_tier": "A",
+     "chatgpt_tier_after_offset": "B",
+     "letters_moved": -1,
+     "direction": "lower under ChatGPT",
+     "difference_after_offset": -0.425,
+     "difference_ci95": [
+      -0.563,
+      -0.287
+     ],
+     "beyond_band": true,
+     "difference_interval_excludes_zero": true,
+     "sonnet_interval_reaches_edge": false,
+     "share_of_seed_draws_letters_differ": 0.991,
+     "group": "other"
+    },
+    {
+     "model": "mimo_2_6_flash",
+     "sonnet_tier": "A",
+     "chatgpt_tier_after_offset": "B",
+     "letters_moved": -1,
+     "direction": "lower under ChatGPT",
+     "difference_after_offset": -0.401,
+     "difference_ci95": [
+      -0.58,
+      -0.221
+     ],
+     "beyond_band": true,
+     "difference_interval_excludes_zero": true,
+     "sonnet_interval_reaches_edge": false,
+     "share_of_seed_draws_letters_differ": 0.952,
+     "group": "other"
+    },
+    {
+     "model": "magnum_v4_72b",
+     "sonnet_tier": "D",
+     "chatgpt_tier_after_offset": "C",
+     "letters_moved": 1,
+     "direction": "higher under ChatGPT",
+     "difference_after_offset": 0.39,
+     "difference_ci95": [
+      0.245,
+      0.527
+     ],
+     "beyond_band": true,
+     "difference_interval_excludes_zero": true,
+     "sonnet_interval_reaches_edge": true,
+     "share_of_seed_draws_letters_differ": 0.863,
+     "group": "other"
+    },
+    {
+     "model": "llama_4_maverick",
+     "sonnet_tier": "C",
+     "chatgpt_tier_after_offset": "B",
+     "letters_moved": 1,
+     "direction": "higher under ChatGPT",
+     "difference_after_offset": 0.368,
+     "difference_ci95": [
+      0.187,
+      0.549
+     ],
+     "beyond_band": true,
+     "difference_interval_excludes_zero": true,
+     "sonnet_interval_reaches_edge": false,
+     "share_of_seed_draws_letters_differ": 0.946,
+     "group": "other"
+    },
+    {
+     "model": "command_a_plus",
+     "sonnet_tier": "D",
+     "chatgpt_tier_after_offset": "C",
+     "letters_moved": 1,
+     "direction": "higher under ChatGPT",
+     "difference_after_offset": 0.323,
+     "difference_ci95": [
+      0.103,
+      0.544
+     ],
+     "beyond_band": true,
+     "difference_interval_excludes_zero": true,
+     "sonnet_interval_reaches_edge": false,
+     "share_of_seed_draws_letters_differ": 0.595,
+     "group": "other"
+    },
+    {
+     "model": "glm_5_3_prime",
+     "sonnet_tier": "A",
+     "chatgpt_tier_after_offset": "B",
+     "letters_moved": -1,
+     "direction": "lower under ChatGPT",
+     "difference_after_offset": -0.317,
+     "difference_ci95": [
+      -0.446,
+      -0.192
+     ],
+     "beyond_band": true,
+     "difference_interval_excludes_zero": true,
+     "sonnet_interval_reaches_edge": false,
+     "share_of_seed_draws_letters_differ": 0.631,
+     "group": "other"
+    },
+    {
+     "model": "lunaris_8b",
+     "sonnet_tier": "D",
+     "chatgpt_tier_after_offset": "C",
+     "letters_moved": 1,
+     "direction": "higher under ChatGPT",
+     "difference_after_offset": 0.298,
+     "difference_ci95": [
+      0.148,
+      0.442
+     ],
+     "beyond_band": false,
+     "difference_interval_excludes_zero": true,
+     "sonnet_interval_reaches_edge": true,
+     "share_of_seed_draws_letters_differ": 0.505,
+     "group": "other"
+    },
+    {
+     "model": "unslopnemo_12b",
+     "sonnet_tier": "D",
+     "chatgpt_tier_after_offset": "C",
+     "letters_moved": 1,
+     "direction": "higher under ChatGPT",
+     "difference_after_offset": 0.258,
+     "difference_ci95": [
+      0.104,
+      0.419
+     ],
+     "beyond_band": false,
+     "difference_interval_excludes_zero": true,
+     "sonnet_interval_reaches_edge": true,
+     "share_of_seed_draws_letters_differ": 0.726,
+     "group": "other"
+    },
+    {
+     "model": "deepseek_r1_0528",
+     "sonnet_tier": "A",
+     "chatgpt_tier_after_offset": "B",
+     "letters_moved": -1,
+     "direction": "lower under ChatGPT",
+     "difference_after_offset": -0.227,
+     "difference_ci95": [
+      -0.396,
+      -0.066
+     ],
+     "beyond_band": false,
+     "difference_interval_excludes_zero": true,
+     "sonnet_interval_reaches_edge": true,
+     "share_of_seed_draws_letters_differ": 0.618,
+     "group": "other"
+    },
+    {
+     "model": "venice_dolphin_24b",
+     "sonnet_tier": "D",
+     "chatgpt_tier_after_offset": "C",
+     "letters_moved": 1,
+     "direction": "higher under ChatGPT",
+     "difference_after_offset": 0.203,
+     "difference_ci95": [
+      0.05,
+      0.348
+     ],
+     "beyond_band": false,
+     "difference_interval_excludes_zero": true,
+     "sonnet_interval_reaches_edge": true,
+     "share_of_seed_draws_letters_differ": 0.702,
+     "group": "other"
+    },
+    {
+     "model": "mimo_2_5_pro",
+     "sonnet_tier": "A",
+     "chatgpt_tier_after_offset": "B",
+     "letters_moved": -1,
+     "direction": "lower under ChatGPT",
+     "difference_after_offset": -0.195,
+     "difference_ci95": [
+      -0.401,
+      0.02
+     ],
+     "beyond_band": false,
+     "difference_interval_excludes_zero": false,
+     "sonnet_interval_reaches_edge": false,
+     "share_of_seed_draws_letters_differ": 0.691,
+     "group": "other"
+    },
+    {
+     "model": "minimax_m2_7",
+     "sonnet_tier": "A",
+     "chatgpt_tier_after_offset": "B",
+     "letters_moved": -1,
+     "direction": "lower under ChatGPT",
+     "difference_after_offset": -0.192,
+     "difference_ci95": [
+      -0.381,
+      -0.002
+     ],
+     "beyond_band": false,
+     "difference_interval_excludes_zero": true,
+     "sonnet_interval_reaches_edge": true,
+     "share_of_seed_draws_letters_differ": 0.789,
+     "group": "other"
+    },
+    {
+     "model": "gemini_3_1_pro",
+     "sonnet_tier": "B",
+     "chatgpt_tier_after_offset": "A",
+     "letters_moved": 1,
+     "direction": "higher under ChatGPT",
+     "difference_after_offset": 0.18,
+     "difference_ci95": [
+      0.023,
+      0.327
+     ],
+     "beyond_band": false,
+     "difference_interval_excludes_zero": true,
+     "sonnet_interval_reaches_edge": true,
+     "share_of_seed_draws_letters_differ": 0.509,
+     "group": "other"
+    },
+    {
+     "model": "mistral_small_creative",
+     "sonnet_tier": "B",
+     "chatgpt_tier_after_offset": "C",
+     "letters_moved": -1,
+     "direction": "lower under ChatGPT",
+     "difference_after_offset": -0.177,
+     "difference_ci95": [
+      -0.297,
+      -0.052
+     ],
+     "beyond_band": false,
+     "difference_interval_excludes_zero": true,
+     "sonnet_interval_reaches_edge": true,
+     "share_of_seed_draws_letters_differ": 0.733,
+     "group": "other"
+    },
+    {
+     "model": "gpt_4_1",
+     "sonnet_tier": "B",
+     "chatgpt_tier_after_offset": "A",
+     "letters_moved": 1,
+     "direction": "higher under ChatGPT",
+     "difference_after_offset": 0.133,
+     "difference_ci95": [
+      -0.053,
+      0.314
+     ],
+     "beyond_band": false,
+     "difference_interval_excludes_zero": false,
+     "sonnet_interval_reaches_edge": true,
+     "share_of_seed_draws_letters_differ": 0.612,
+     "group": "openai"
+    },
+    {
+     "model": "qwen3_6_35b_a3b",
+     "sonnet_tier": "C",
+     "chatgpt_tier_after_offset": "B",
+     "letters_moved": 1,
+     "direction": "higher under ChatGPT",
+     "difference_after_offset": 0.103,
+     "difference_ci95": [
+      -0.1,
+      0.306
+     ],
+     "beyond_band": false,
+     "difference_interval_excludes_zero": false,
+     "sonnet_interval_reaches_edge": true,
+     "share_of_seed_draws_letters_differ": 0.336,
+     "group": "other"
+    },
+    {
+     "model": "grok_4_3",
+     "sonnet_tier": "B",
+     "chatgpt_tier_after_offset": "C",
+     "letters_moved": -1,
+     "direction": "lower under ChatGPT",
+     "difference_after_offset": -0.047,
+     "difference_ci95": [
+      -0.231,
+      0.157
+     ],
+     "beyond_band": false,
+     "difference_interval_excludes_zero": false,
+     "sonnet_interval_reaches_edge": true,
+     "share_of_seed_draws_letters_differ": 0.322,
+     "group": "other"
+    },
+    {
+     "model": "grok_4_7",
+     "sonnet_tier": "B",
+     "chatgpt_tier_after_offset": "A",
+     "letters_moved": 1,
+     "direction": "higher under ChatGPT",
+     "difference_after_offset": 0.033,
+     "difference_ci95": [
+      -0.156,
+      0.228
+     ],
+     "beyond_band": false,
+     "difference_interval_excludes_zero": false,
+     "sonnet_interval_reaches_edge": true,
+     "share_of_seed_draws_letters_differ": 0.236,
+     "group": "other"
+    }
+   ],
+   "counts": {
+    "moved": 19,
+    "higher_under_chatgpt": 10,
+    "lower_under_chatgpt": 9,
+    "beyond_band": 7,
+    "difference_interval_excludes_zero": 14,
+    "sonnet_interval_reaches_edge": 12,
+    "letters_differ_in_90pct_of_seed_draws": 4,
+    "letters_differ_in_under_half_of_seed_draws": 3,
+    "by_group": {
+     "openai": 1,
+     "other": 18
+    }
+   },
+   "rule": "ChatGPT's mean plus the scale offset, on the same fixed letters; a model whose letter differs from Sonnet's is `tier_depends_on_judge` (the overview's flag). `share_of_seed_draws_letters_differ` is how often the two letters differ across the seed bootstrap (offset re-estimated in each draw)."
+  },
+  "after_rescale": {
+   "same_letter": 53,
+   "moved": [
+    "deepseek_r1_0528",
+    "gemini_3_1_pro",
+    "glm_5_3_prime",
+    "gpt_4_1",
+    "grok_4_3",
+    "grok_4_7",
+    "hemmingway_1",
+    "llama_4_maverick",
+    "lunaris_8b",
+    "magnum_v4_72b",
+    "mimo_2_5_pro",
+    "mimo_2_6_flash",
+    "minimax_m2_7",
+    "minimax_m3",
+    "mistral_small_creative",
+    "unslopnemo_12b"
+   ],
+   "note": "Sensitivity: ChatGPT's model means rescaled to Sonnet's mean and sd across models, which also undoes the difference in spread"
+  }
+ },
+ "vendor_premiums": {
+  "claude_sonnet_over_chatgpt": {
+   "group": "Claude models (claude_*)",
+   "sessions": 1325,
+   "group_sessions": 169,
+   "group_models": 9,
+   "models": 70,
+   "regression": {
+    "what": "Sonnet score on [1, ChatGPT score, its square, group]: how much higher Sonnet scores the group's sessions than sessions ChatGPT scored the same",
+    "coefficient": 0.379,
+    "se": 0.036,
+    "t": 10.5,
+    "ci95_model_resampled": [
+     0.296,
+     0.47
+    ]
+   },
+   "reverse_regression": {
+    "what": "ChatGPT score on [1, Sonnet score, its square, group]: a premium that is Sonnet's alone shows here as a negative coefficient; a positive one means the forward regression carries a regression-to-the-mean share (the group is also better by ChatGPT)",
+    "coefficient": -0.006,
+    "se": 0.042,
+    "t": -0.1,
+    "ci95_model_resampled": [
+     -0.177,
+     0.156
+    ]
+   },
+   "rescaled_difference": {
+    "what": "Sonnet minus ChatGPT rescaled to Sonnet's mean and sd, group minus the rest: direction-free (the overview's tilt)",
+    "vs_rest": 0.209,
+    "vs_all_sessions": 0.183,
+    "ci95_model_resampled": [
+     0.056,
+     0.355
+    ]
+   },
+   "note": null
+  },
+  "openai_chatgpt_over_sonnet": {
+   "group": "OpenAI models (gpt_*)",
+   "sessions": 1325,
+   "group_sessions": 140,
+   "group_models": 7,
+   "models": 70,
+   "regression": {
+    "what": "ChatGPT score on [1, Sonnet score, its square, group]: how much higher ChatGPT scores the group's sessions than sessions Sonnet scored the same",
+    "coefficient": 0.616,
+    "se": 0.038,
+    "t": 16.3,
+    "ci95_model_resampled": [
+     0.408,
+     0.808
+    ]
+   },
+   "reverse_regression": {
+    "what": "Sonnet score on [1, ChatGPT score, its square, group]: a premium that is ChatGPT's alone shows here as a negative coefficient; a positive one means the forward regression carries a regression-to-the-mean share (the group is also better by Sonnet)",
+    "coefficient": -0.15,
+    "se": 0.045,
+    "t": -3.3,
+    "ci95_model_resampled": [
+     -0.243,
+     -0.053
+    ]
+   },
+   "rescaled_difference": {
+    "what": "ChatGPT minus Sonnet rescaled to ChatGPT's mean and sd, group minus the rest: direction-free (the overview's tilt)",
+    "vs_rest": 0.52,
+    "vs_all_sessions": 0.465,
+    "ci95_model_resampled": [
+     0.345,
+     0.694
+    ]
+   },
+   "note": null
+  },
+  "gpt_6_chatgpt_over_sonnet": {
+   "group": "the GPT-6 family (gpt_6_*)",
+   "sessions": 1325,
+   "group_sessions": 100,
+   "group_models": 5,
+   "models": 70,
+   "regression": {
+    "what": "ChatGPT score on [1, Sonnet score, its square, group]: how much higher ChatGPT scores the group's sessions than sessions Sonnet scored the same",
+    "coefficient": 0.742,
+    "se": 0.044,
+    "t": 17.0,
+    "ci95_model_resampled": [
+     0.602,
+     0.867
+    ]
+   },
+   "reverse_regression": {
+    "what": "Sonnet score on [1, ChatGPT score, its square, group]: a premium that is ChatGPT's alone shows here as a negative coefficient; a positive one means the forward regression carries a regression-to-the-mean share (the group is also better by Sonnet)",
+    "coefficient": -0.161,
+    "se": 0.054,
+    "t": -3.0,
+    "ci95_model_resampled": [
+     -0.261,
+     -0.033
+    ]
+   },
+   "rescaled_difference": {
+    "what": "ChatGPT minus Sonnet rescaled to ChatGPT's mean and sd, group minus the rest: direction-free (the overview's tilt)",
+    "vs_rest": 0.635,
+    "vs_all_sessions": 0.587,
+    "ci95_model_resampled": [
+     0.517,
+     0.757
+    ]
+   },
+   "note": null
+  },
+  "gpt_6_astra_chatgpt_over_sonnet": {
+   "group": "gpt_6_astra alone",
+   "sessions": 1325,
+   "group_sessions": 20,
+   "group_models": 1,
+   "models": 70,
+   "regression": {
+    "what": "ChatGPT score on [1, Sonnet score, its square, group]: how much higher ChatGPT scores the group's sessions than sessions Sonnet scored the same",
+    "coefficient": 0.831,
+    "se": 0.101,
+    "t": 8.2,
+    "ci95_model_resampled": null
+   },
+   "reverse_regression": {
+    "what": "Sonnet score on [1, ChatGPT score, its square, group]: a premium that is ChatGPT's alone shows here as a negative coefficient; a positive one means the forward regression carries a regression-to-the-mean share (the group is also better by Sonnet)",
+    "coefficient": -0.112,
+    "se": 0.105,
+    "t": -1.1,
+    "ci95_model_resampled": null
+   },
+   "rescaled_difference": {
+    "what": "ChatGPT minus Sonnet rescaled to ChatGPT's mean and sd, group minus the rest: direction-free (the overview's tilt)",
+    "vs_rest": 0.734,
+    "vs_all_sessions": 0.723,
+    "ci95_model_resampled": null
+   },
+   "note": "one model: no model-resampled interval; the session SE treats its 20 sessions as independent"
+  },
+  "claude_letter_check": {
+   "regression": {
+    "shift": -0.379,
+    "claude_models": 9,
+    "claude_models_changing_letter": 2,
+    "changes": [
+     {
+      "model": "claude_opus_5_5",
+      "from_tier": "A",
+      "to_tier": "B",
+      "mean_after": 3.771
+     },
+     {
+      "model": "claude_sonnet_4_5",
+      "from_tier": "A",
+      "to_tier": "B",
+      "mean_after": 3.691
+     }
+    ]
+   },
+   "regression_interval_upper": {
+    "shift": -0.47,
+    "claude_models": 9,
+    "claude_models_changing_letter": 5,
+    "changes": [
+     {
+      "model": "claude_fable_5_1",
+      "from_tier": "A",
+      "to_tier": "B",
+      "mean_after": 3.795
+     },
+     {
+      "model": "claude_opus_4_8",
+      "from_tier": "A",
+      "to_tier": "B",
+      "mean_after": 3.795
+     },
+     {
+      "model": "claude_opus_5_5",
+      "from_tier": "A",
+      "to_tier": "B",
+      "mean_after": 3.68
+     },
+     {
+      "model": "claude_sonnet_4_5",
+      "from_tier": "A",
+      "to_tier": "B",
+      "mean_after": 3.6
+     },
+     {
+      "model": "claude_sonnet_4_6",
+      "from_tier": "A",
+      "to_tier": "B",
+      "mean_after": 3.785
+     }
+    ]
+   },
+   "rescaled_difference": {
+    "shift": -0.209,
+    "claude_models": 9,
+    "claude_models_changing_letter": 0,
+    "changes": []
+   },
+   "rescaled_difference_interval_upper": {
+    "shift": -0.355,
+    "claude_models": 9,
+    "claude_models_changing_letter": 2,
+    "changes": [
+     {
+      "model": "claude_opus_5_5",
+      "from_tier": "A",
+      "to_tier": "B",
+      "mean_after": 3.795
+     },
+     {
+      "model": "claude_sonnet_4_5",
+      "from_tier": "A",
+      "to_tier": "B",
+      "mean_after": 3.715
+     }
+    ]
+   }
+  },
+  "openai_letter_check": {
+   "shift": -0.616,
+   "openai_models": 7,
+   "tier_depends_before": [
+    "gpt_4_1"
+   ],
+   "tier_depends_after": [
+    "gpt_5_5",
+    "gpt_6_luna"
+   ],
+   "differences_after": {
+    "gpt_4_1": -0.421,
+    "gpt_5_5": -0.376,
+    "gpt_6_astra": 0.154,
+    "gpt_6_luna": -0.161,
+    "gpt_6_luna_pro": 0.009,
+    "gpt_6_sol": -0.021,
+    "gpt_6_sol_pro": 0.114
+   }
+  }
+ },
+ "bridge": {
+  "n": 24,
+  "sessions": [
+   "claude_fable_5_1::adv_pov_tense_action_14",
+   "claude_fable_5_1::adv_sysprompt_speech_pattern_15",
+   "claude_sonnet_4_5::adv_sysprompt_speech_pattern_15",
+   "deepseek_v4_1_flash::adv_bigcard_rules_overload_20",
+   "deepseek_v4_flash::adv_agency_romance_11",
+   "gemini_3_1_flash_lite::adv_pov_multi_npc_13",
+   "gemini_3_7_flash::adv_bigcard_buried_details_18",
+   "glm_4_7::adv_sysprompt_forbidden_topic_17",
+   "glm_5_3_flashx::adv_bigcard_buried_details_18",
+   "gpt_6_astra::adv_bigcard_relationship_web_19",
+   "gpt_6_sol::adv_agency_romance_11",
+   "gpt_6_sol_pro::adv_pov_second_person_12",
+   "hemmingway_1::adv_bigcard_buried_details_18",
+   "magnum_v4_72b::adv_pov_second_person_12",
+   "mimo_2_6_flash::adv_passive_user_03",
+   "minimax_m3::adv_subtle_ooc_06",
+   "qwen3_5_flash::adv_passive_user_03",
+   "qwen3_6_27b::adv_sysprompt_style_restriction_16",
+   "qwen3_6_35b_a3b::adv_subtle_ooc_06",
+   "qwen3_7_max::adv_contradictory_lore_02",
+   "qwen3_8_max_prime::adv_agency_emotional_climax_09",
+   "tencent_hy4::adv_bigcard_relationship_web_19",
+   "unslopnemo_12b::adv_character_break_bait_07",
+   "venice_dolphin_24b::adv_agency_combat_10"
+  ],
+  "app_vs_agent": {
+   "pearson": 0.89,
+   "mean_diff_app_minus_agent": -0.083,
+   "median_abs_diff": 0.2,
+   "within_0_5": 0.958
+  },
+  "sonnet_vs_app": {
+   "pearson": 0.673,
+   "mean_diff": 0.825
+  },
+  "sonnet_vs_agent": {
+   "pearson": 0.694,
+   "mean_diff": 0.742
+  },
+  "references": {
+   "chatgpt_same_harness": {
+    "r": 0.935,
+    "median_abs_diff": 0.15,
+    "source": "ROUND4_DESIGN 17c: the two earlier ChatGPT passes (labels visible, then blind), 120 sessions"
+   },
+   "gemini_harness_shift": {
+    "mean_diff": -0.39,
+    "r": 0.958,
+    "source": "ROUND4_DESIGN 18c: Gemini chat client vs API, same sessions"
+   }
+  },
+  "reading": "Two ChatGPT runs on the same text: the Codex pass (`app` in the key names) and the earlier blind passes (`agent`; judge_round2_chatgpt, judge_inc1_chatgpt). Each run was a coordinator handing its work to clean-context raters, so this compares two runs with different rater sets; where the earlier passes ran is not recorded. The level barely moves (mean difference -0.08, Codex minus earlier) and the two runs agree at r +0.89, a little below the +0.935 of the two earlier passes on the 120-session sample (17c); Gemini moved -0.39 between its chat-client and API passes (18c). Mixing the 179 reused rows into the corpus is therefore a small effect, and `sensitivity` shows the figures without them. n=24 is small."
+ },
+ "sensitivity": {
+  "all_rows": {
+   "sessions": 1328,
+   "session_pearson_overall": 0.711,
+   "session_pearson_overall_ci95": [
+    0.62,
+    0.772
+   ],
+   "model_pearson_overall": 0.87,
+   "model_pearson_overall_ci95": [
+    0.787,
+    0.926
+   ],
+   "scale_offset": 0.943,
+   "raw_same_letter": 1,
+   "same_letter_after_offset": 50,
+   "tier_depends_on_judge": [
+    "command_a_plus",
+    "deepseek_r1_0528",
+    "gemini_3_1_pro",
+    "glm_5_3_prime",
+    "gpt_4_1",
+    "grok_4_3",
+    "grok_4_7",
+    "hemmingway_1",
+    "llama_4_maverick",
+    "lunaris_8b",
+    "magnum_v4_72b",
+    "mimo_2_5_pro",
+    "mimo_2_6_flash",
+    "minimax_m2_7",
+    "minimax_m3",
+    "mistral_small_creative",
+    "qwen3_6_35b_a3b",
+    "unslopnemo_12b",
+    "venice_dolphin_24b"
+   ],
+   "claude_premium_regression": 0.379,
+   "claude_premium_regression_ci95": [
+    0.296,
+    0.47
+   ],
+   "claude_premium_rescaled": 0.209,
+   "openai_premium_regression": 0.616,
+   "openai_premium_regression_ci95": [
+    0.408,
+    0.808
+   ],
+   "openai_premium_rescaled": 0.52,
+   "what": "every session: 1149 Codex rows and 179 rows reused from the earlier blind passes; bridge sessions carry the Codex row",
+   "tier_depends_changes_vs_all_rows": {
+    "added": [],
+    "removed": []
+   }
+  },
+  "without_reused_rows": {
+   "sessions": 1149,
+   "session_pearson_overall": 0.714,
+   "session_pearson_overall_ci95": [
+    0.623,
+    0.774
+   ],
+   "model_pearson_overall": 0.866,
+   "model_pearson_overall_ci95": [
+    0.78,
+    0.923
+   ],
+   "scale_offset": 0.954,
+   "raw_same_letter": 1,
+   "same_letter_after_offset": 49,
+   "tier_depends_on_judge": [
+    "command_a_plus",
+    "deepseek_r1_0528",
+    "deepseek_v3_0324",
+    "glm_4_7",
+    "glm_5_3_prime",
+    "gpt_4_1",
+    "grok_4_7",
+    "hemmingway_1",
+    "llama_4_maverick",
+    "lunaris_8b",
+    "magnum_v4_72b",
+    "mimo_2_5_pro",
+    "mimo_2_6_flash",
+    "minimax_m2_7",
+    "minimax_m3",
+    "mistral_small_creative",
+    "qwen3_6_35b_a3b",
+    "qwen3_8_max_prime",
+    "unslopnemo_12b",
+    "venice_dolphin_24b"
+   ],
+   "claude_premium_regression": 0.378,
+   "claude_premium_regression_ci95": [
+    0.29,
+    0.469
+   ],
+   "claude_premium_rescaled": 0.209,
+   "openai_premium_regression": 0.615,
+   "openai_premium_regression_ci95": [
+    0.382,
+    0.836
+   ],
+   "openai_premium_rescaled": 0.512,
+   "what": "Codex rows only: the 179 reused rows from the earlier passes dropped",
+   "tier_depends_changes_vs_all_rows": {
+    "added": [
+     "deepseek_v3_0324",
+     "glm_4_7",
+     "qwen3_8_max_prime"
+    ],
+    "removed": [
+     "gemini_3_1_pro",
+     "grok_4_3"
+    ]
+   }
+  },
+  "without_bridge_sessions": {
+   "sessions": 1304,
+   "session_pearson_overall": 0.712,
+   "session_pearson_overall_ci95": [
+    0.621,
+    0.773
+   ],
+   "model_pearson_overall": 0.871,
+   "model_pearson_overall_ci95": [
+    0.787,
+    0.926
+   ],
+   "scale_offset": 0.943,
+   "raw_same_letter": 0,
+   "same_letter_after_offset": 50,
+   "tier_depends_on_judge": [
+    "command_a_plus",
+    "deepseek_r1_0528",
+    "gemini_3_1_pro",
+    "glm_5_3_prime",
+    "gpt_4_1",
+    "grok_4_3",
+    "grok_4_7",
+    "hemmingway_1",
+    "llama_4_maverick",
+    "lunaris_8b",
+    "magnum_v4_72b",
+    "mimo_2_5_pro",
+    "mimo_2_6_flash",
+    "minimax_m2_7",
+    "minimax_m3",
+    "mistral_small_creative",
+    "qwen3_6_35b_a3b",
+    "unslopnemo_12b",
+    "venice_dolphin_24b"
+   ],
+   "claude_premium_regression": 0.38,
+   "claude_premium_regression_ci95": [
+    0.297,
+    0.47
+   ],
+   "claude_premium_rescaled": 0.204,
+   "openai_premium_regression": 0.608,
+   "openai_premium_regression_ci95": [
+    0.404,
+    0.801
+   ],
+   "openai_premium_rescaled": 0.515,
+   "what": "the 24 bridge sessions dropped",
+   "tier_depends_changes_vs_all_rows": {
+    "added": [],
+    "removed": []
+   }
+  },
+  "app_rows_without_bridge": {
+   "sessions": 1125,
+   "session_pearson_overall": 0.715,
+   "session_pearson_overall_ci95": [
+    0.624,
+    0.775
+   ],
+   "model_pearson_overall": 0.866,
+   "model_pearson_overall_ci95": [
+    0.78,
+    0.923
+   ],
+   "scale_offset": 0.954,
+   "raw_same_letter": 1,
+   "same_letter_after_offset": 50,
+   "tier_depends_on_judge": [
+    "command_a_plus",
+    "deepseek_r1_0528",
+    "deepseek_v3_0324",
+    "glm_4_7",
+    "glm_5_3_prime",
+    "gpt_4_1",
+    "grok_4_7",
+    "hemmingway_1",
+    "llama_4_maverick",
+    "lunaris_8b",
+    "magnum_v4_72b",
+    "mimo_2_5_pro",
+    "mimo_2_6_flash",
+    "minimax_m2_7",
+    "minimax_m3",
+    "mistral_small_creative",
+    "qwen3_6_35b_a3b",
+    "unslopnemo_12b",
+    "venice_dolphin_24b"
+   ],
+   "claude_premium_regression": 0.378,
+   "claude_premium_regression_ci95": [
+    0.287,
+    0.469
+   ],
+   "claude_premium_rescaled": 0.203,
+   "openai_premium_regression": 0.606,
+   "openai_premium_regression_ci95": [
+    0.38,
+    0.827
+   ],
+   "openai_premium_rescaled": 0.505,
+   "what": "Codex rows only, bridge sessions dropped",
+   "tier_depends_changes_vs_all_rows": {
+    "added": [
+     "deepseek_v3_0324",
+     "glm_4_7"
+    ],
+    "removed": [
+     "gemini_3_1_pro",
+     "grok_4_3"
+    ]
+   }
+  },
+  "bridge_on_agent_rows": {
+   "sessions": 1328,
+   "session_pearson_overall": 0.711,
+   "session_pearson_overall_ci95": [
+    0.62,
+    0.772
+   ],
+   "model_pearson_overall": 0.87,
+   "model_pearson_overall_ci95": [
+    0.786,
+    0.925
+   ],
+   "scale_offset": 0.941,
+   "raw_same_letter": 0,
+   "same_letter_after_offset": 50,
+   "tier_depends_on_judge": [
+    "command_a_plus",
+    "deepseek_r1_0528",
+    "gemini_3_1_pro",
+    "glm_5_3_prime",
+    "gpt_4_1",
+    "grok_4_3",
+    "grok_4_7",
+    "hemmingway_1",
+    "llama_4_maverick",
+    "lunaris_8b",
+    "magnum_v4_72b",
+    "mimo_2_5_pro",
+    "mimo_2_6_flash",
+    "minimax_m2_7",
+    "minimax_m3",
+    "mistral_small_creative",
+    "qwen3_6_35b_a3b",
+    "unslopnemo_12b",
+    "venice_dolphin_24b"
+   ],
+   "claude_premium_regression": 0.377,
+   "claude_premium_regression_ci95": [
+    0.294,
+    0.467
+   ],
+   "claude_premium_rescaled": 0.203,
+   "openai_premium_regression": 0.611,
+   "openai_premium_regression_ci95": [
+    0.405,
+    0.803
+   ],
+   "openai_premium_rescaled": 0.516,
+   "what": "every session, the bridge sessions on their row from the earlier passes",
+   "tier_depends_changes_vs_all_rows": {
+    "added": [],
+    "removed": []
+   }
+  }
+ },
+ "earlier": {
+  "session_r_overall": {
+   "value": 0.716,
+   "n": 117,
+   "source": "ROUND4_DESIGN 17a: the blind ChatGPT pass on the 120-session sample"
+  },
+  "model_r_overall": {
+   "value": 0.797,
+   "n": null,
+   "source": "ROUND4_DESIGN 18: sonnet vs chatgpt per model on that sample"
+  },
+  "mean_gap": {
+   "value": 0.77,
+   "source": "ROUND4_DESIGN 17a/18: Sonnet minus ChatGPT, blind pass, 120-session sample"
+  },
+  "claude_tilt": {
+   "value": 0.2,
+   "ci95": [
+    -0.013,
+    0.406
+   ],
+   "n": 203,
+   "source": "round4_overview.json checks.self_preference: Sonnet over ChatGPT, Claude minus non-Claude, rescaled"
+  },
+  "claude_premium_change": {
+   "value": 0.304,
+   "ci95": [
+    0.138,
+    0.466
+   ],
+   "n": 110,
+   "source": "round4_continuity.json (before this file): new judge minus old judge, Claude coefficient vs ChatGPT, stored old scores"
+  },
+  "openai_gap": {
+   "value": 0.57,
+   "n": 7,
+   "source": "ROUND4_DESIGN 17b: OpenAI against the rest, blind pass, 7 OpenAI sessions"
+  }
+ },
+ "method": {
+  "session_set": "sessions both judges scored on the current text (hash-checked); for agreement, sessions both judges put at the 1.0 floor are left out (no model text to judge, compare_external_judge.py's rule); for the vendor terms, blank scenes are left out (the continuity check's rule)",
+  "model_means": "the overview's model + seed fit over the tiered pool, each judge with its own seed effects (analyze_round4_overview.seed_adjusted_means); untiered models get plain means",
+  "spearman": "average ranks for ties",
+  "model_resampling": "4000 draws, numpy default_rng(20260928): models drawn with replacement, every session of a drawn model comes along; the same draws for every figure computed on one session set",
+  "seed_bootstrap": "10000 draws replaying the overview's own (numpy default_rng(20260926)), both judges on each draw; the offset is re-estimated in each draw",
+  "groups": {
+   "claude": "Claude models (claude_*)",
+   "openai": "OpenAI models (gpt_*)",
+   "gpt_6": "the GPT-6 family (gpt_6_*)",
+   "gpt_6_astra": "gpt_6_astra alone"
+  }
+ },
+ "inputs": {
+  "craft_baseline_20260921_125936.json": "04da84eed4affc53",
+  "craft_baseline_20260921_174824.json": "3f4c94d84b2f05ef",
+  "craft_baseline_20260924_122936.json": "09c7fd3c6e91f8bc",
+  "craft_baseline_20260924_123104.json": "4de926c1ec681d8a",
+  "craft_baseline_20260924_143626.json": "0fe0e4b77888365f",
+  "craft_baseline_20260924_224934.json": "5cdc00596feb3133",
+  "craft_baseline_20260924_231143.json": "5d810de4576db4e0",
+  "craft_baseline_20260926_050941.json": "85ca536deeab078a",
+  "judge_full_chatgpt/_manifest.json": "9e805f6094f8642b",
+  "judge_full_chatgpt/merged/_manifest.json": "2b7fe262127d13ea",
+  "judge_full_chatgpt/merged/external_part_app.json": "e0b5e432f47214a6",
+  "judge_full_chatgpt/merged/external_part_reused_inc1_chatgpt.json": "a3643f112bf7a753",
+  "judge_full_chatgpt/merged/external_part_reused_round2_chatgpt.json": "6ff475f055c27932",
+  "judge_inc1_chatgpt/external_blind_pass/external_part01.json": "af1edad01901ea0c",
+  "judge_inc1_chatgpt/external_blind_pass/external_part02.json": "a746a61ec6a280f9",
+  "judge_inc1_chatgpt/external_blind_pass/external_part03.json": "c12127bf8fb8d335",
+  "judge_inc1_chatgpt/external_blind_pass/external_part06.json": "fc69eefee92451b1",
+  "judge_inc1_chatgpt/external_blind_pass/external_part08.json": "92959917548d1653",
+  "judge_inc1_chatgpt/external_blind_pass/external_part10.json": "1fe36f96a8848025",
+  "judge_round2_chatgpt/external_blind_pass/external_part02.json": "1f1a6324f80ad734",
+  "judge_round2_chatgpt/external_blind_pass/external_part04.json": "573913d382bfb9c7",
+  "judge_round2_chatgpt/external_blind_pass/external_part05.json": "1a4aabf027b84a09",
+  "judge_round2_chatgpt/external_blind_pass/external_part06.json": "bc57aaed45529f0f",
+  "judge_round2_chatgpt/external_blind_pass/external_part07.json": "8911712cd77edcd5",
+  "judge_round2_chatgpt/external_blind_pass/external_part08.json": "42bc053fdd182921",
+  "judge_round2_chatgpt/external_blind_pass/external_part11.json": "4d4dd954a25126a3",
+  "judge_round2_chatgpt/external_blind_pass/external_part12.json": "ddea6ae9126f7d3d",
+  "multiturn_merged_all_v2.json": "8f0b319b2ffe6a4d",
+  "session_judge_v2.jsonl": "af47ffaf6ad2478a"
+ },
+ "reading": {
+  "can_establish": [
+   "Both families order the models alike at the broad scale: per model Pearson +0.87 [0.79, 0.93] and Spearman +0.81 [0.67, 0.89] over 69 models; per session Pearson +0.71 [0.62, 0.77] over 1,325 sessions, where Sonnet against itself gave +0.908 (ROUND4_DESIGN 17c).",
+   "ChatGPT uses the scale 0.94 [0.88, 1.01] lower than Sonnet (one offset for every model), and its model means spread 87% as wide. Its raw letters therefore sit lower: on the same fixed ranges, raw, 1 of 69 models get Sonnet's letter.",
+   "After that offset 50 of 69 models keep their letter and 19 change (10 higher under ChatGPT, 9 lower). 7 of the 19 differ from Sonnet by more than the card's 0.3 band, 14 have a seed-bootstrap interval of the difference that excludes zero, and 12 already have a Sonnet interval that reaches a letter edge on its own. Across the seed bootstrap the two letters differ in at least 90% of draws for 4 of them and in under half for 3, so the list's edge cases are not firm. Rescaling for spread as well leaves 53 with the same letter.",
+   "Inside Sonnet's A letter the two judges agree less (Pearson +0.08 [-0.20, 0.36], n=37; below A +0.95 [0.90, 0.97], n=32). Inside A their disagreement is 2.13 times the spread between the models (below A 0.40): the order inside A depends on the judge, as 15b found on the sample.",
+   "ChatGPT scores OpenAI models' sessions +0.62 [0.41, 0.81] above sessions Sonnet scored the same (140 of 1,325 sessions, 7 models); +0.52 [0.34, 0.69] on the direction-free rescaled difference. The reverse regression points the same way (-0.15 [-0.24, -0.05]: Sonnet scores those sessions lower than ChatGPT at the same score predicts), so the difference survives both directions.",
+   "Sonnet scores Claude models' sessions +0.38 [0.30, 0.47] above sessions ChatGPT scored the same (169 of 1,325 sessions, 9 models); +0.21 [0.06, 0.35] on the direction-free rescaled difference. The reverse regression gives -0.01 [-0.18, 0.16], not the negative figure a difference that is Sonnet's alone would give, so part of the forward figure is the regression's own artifact (the group scores above the rest under ChatGPT as well); the direction-free rescaled difference is the better guide to its size. Subtracting the forward figure from every Claude session moves 2 of 9 Claude models to another letter; subtracting the rescaled one moves 0."
+  ],
+  "cannot_establish": [
+   "Which judge is right. Neither is a ground truth, the rubric's calibration sentence fits both readings (15a, 18), and the human arena covers 19 models on 12 seeds. A vendor term measured between two judges is relative: it cannot say whether one judge is generous to its own family or the other harsh to it.",
+   "Whether a vendor-linked difference is favouritism or a style preference the other judge does not share. Both judges were blind to model names, so it is not the label; each could still recognise a style. Taking ChatGPT's measured OpenAI term off the OpenAI sessions changes which OpenAI models' letters depend on the judge from gpt_4_1 to gpt_5_5, gpt_6_luna.",
+   "ChatGPT's self-consistency on the full corpus. Each session was scored once; the 24 bridge sessions (two runs) and 17c's 120 are the only repeats.",
+   "Which ChatGPT model served the Codex pass. Codex did not record it. The first ChatGPT pass was recorded as ChatGPT (Astra) (sec 15), so `gpt_6_astra` may be the judge's own model."
+  ],
+  "round4_tiers": [
+   "The published letter stays Sonnet's, on its fixed ranges; nothing is adjusted by this file. `tier_depends_on_judge` marks the 19 models whose letter the other family would not give once its scale offset is removed: for them the letter says as much about the judge as about the model.",
+   "Claude models among them: none. OpenAI models among them: gpt_4_1."
+  ]
+ }
+}

@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 """Validate and import the ChatGPT full-corpus judge files.
 
-Levi runs the package built by export_chatgpt_full_package.py through the
-ChatGPT app, one conversation per chunk, and drops what comes back into
-/home/levi/Documents/rp-bench-chatgpt-judge/returned/ as chunk_NN.out.json
-(plus chunk_NN.report.md). This checks every row and writes the accepted ones
-where the earlier external passes live, in the shape compare_external_judge.py
-reads:
+Levi runs the package built by export_chatgpt_full_package.py blind in Codex
+on a ChatGPT subscription and drops what comes back into
+~/Documents/rp-bench-chatgpt-judge/returned/ as chunk_NN.out.json (plus
+chunk_NN.report.md). The package was planned as one conversation per chunk;
+the run that came back was one coordinating session that, as Levi asked, gave
+each whole chunk to its own clean-context agent, three at a time, as the
+returned reports say (ROUND4_DESIGN 24). This checks every row and writes the
+accepted ones where the earlier external passes live, in the shape
+compare_external_judge.py reads:
 
   results/judge_full_chatgpt/app_pass/external_partNN.json   one per chunk
   results/judge_full_chatgpt/app_pass/import_report.json     what was checked
@@ -17,9 +20,12 @@ reads:
       `compare_external_judge.py results/judge_full_chatgpt/merged` runs on
       every session at once.
 
+`app_pass/` and `merged/external_part_app.json` keep the names they got when
+the run was planned for the ChatGPT app; what they hold is the Codex pass.
+
 A row is accepted only if:
   - its id belongs to the package (ids are opaque; the key is in the
-    manifest, which never left this repo);
+    manifest, which stayed in this repo, gitignored, while the run was out);
   - it passes external_judge_schema.validate_row, the same code the judge ran
     as validate_output.py: every rubric key, every score a number in [1, 5],
     violation_count a non-negative integer, contradictions a list, the
@@ -32,6 +38,12 @@ A row is accepted only if:
 Files in returned/ are never modified. Everything written here is derived from
 them and rebuilt on every run, so the command is safe to repeat after each
 chunk. The exit code is 0 only when every chunk is back, complete and clean.
+
+No local home directory is written: the manifest's `public_dir` may start with
+`~` (expanded on read), import_report.json records the returned directory in
+that form, and a report that quotes a path under the home directory is copied
+with the path shortened to `~` and a one-line comment saying so on top;
+every other report is copied byte for byte.
 
 Usage:
     python import_chatgpt_full_judge.py
@@ -51,6 +63,31 @@ from external_judge_schema import load_rows, validate_row
 from transcript_hash import current_hashes
 
 MANIFEST = Path("results/judge_full_chatgpt/_manifest.json")
+REDACTION_NOTE = ("<!-- Redacted on import: a local home-directory path is "
+                  "shortened to ~; otherwise verbatim as returned. -->\n")
+
+
+def home_short(path):
+    """`path` with the home directory written as `~`, so no local user name
+    reaches a published file; a path outside the home directory is unchanged."""
+    p = Path(path).expanduser().absolute()
+    try:
+        return str(Path("~") / p.relative_to(Path.home()))
+    except ValueError:
+        return str(p)
+
+
+def copy_report(src, dst):
+    """A returned report, verbatim unless it quotes a path under the home
+    directory; then the path is shortened to `~` and REDACTION_NOTE says so."""
+    with open(src, encoding="utf-8", newline="") as fh:
+        text = fh.read()
+    home = str(Path.home()).rstrip("/") + "/"
+    if home not in text:
+        shutil.copy2(src, dst)
+        return
+    with open(dst, "w", encoding="utf-8", newline="") as fh:
+        fh.write(REDACTION_NOTE + text.replace(home, "~/"))
 
 
 def pearson(xs, ys):
@@ -96,7 +133,8 @@ def main():
 
     man_path = Path(args.manifest)
     man = json.load(open(man_path))
-    rdir = Path(args.returned) if args.returned else Path(man["public_dir"]) / "returned"
+    rdir = (Path(args.returned) if args.returned
+            else Path(man["public_dir"]) / "returned").expanduser()
     out = Path(args.out) if args.out else man_path.parent
     keymap = man["keymap"]
     hashes = man["transcript_hashes"]
@@ -188,11 +226,11 @@ def main():
     rep_dir = app / "reports"
     for p in sorted(rdir.glob("*.md")) if rdir.exists() else []:
         rep_dir.mkdir(exist_ok=True)
-        shutil.copy2(p, rep_dir / p.name)
+        copy_report(p, rep_dir / p.name)
     if out.resolve() != man_path.parent.resolve():
         shutil.copy2(man_path, out / "_manifest.json")     # compare reads it
 
-    # ---- merged: every session with a ChatGPT row, app rows first
+    # ---- merged: every session with a ChatGPT row, the Codex rows first
     merged_rows, merged_key, source = {}, {}, {}
     for oid, r in accepted.items():
         merged_rows[oid] = r
@@ -213,7 +251,7 @@ def main():
         if live.get(sid) != ref["transcript_hash"]:
             stale_reused.append(sid)
             continue
-        if sid in have_real:            # bridge session: the app row wins
+        if sid in have_real:            # bridge session: the Codex row wins
             continue
         merged_rows[ref["opaque"]] = row
         merged_key[ref["opaque"]] = sid
@@ -237,9 +275,10 @@ def main():
                "keymap": merged_key,
                "transcript_hashes": {sid: live[sid] for sid in merged_key.values()},
                "sources": source,
-               "note": "Rows from this package (app harness) plus reused rows "
-                       "from earlier blind ChatGPT passes (agent harness). "
-                       "Bridge sessions carry the app row."},
+               "note": "Rows from this package (ChatGPT run blind in Codex on "
+                       "a ChatGPT subscription) plus reused rows from earlier "
+                       "blind ChatGPT passes (other runs, other raters). "
+                       "Bridge sessions carry the Codex row."},
               open(mdir / "_manifest.json", "w"), indent=1, ensure_ascii=False)
 
     # ---- coverage of the corpus as it is on disk now
@@ -249,7 +288,7 @@ def main():
     known = set(man["session_ids"]) | set(man["reused"]) | set(man.get("excluded", {}))
     unknown = sorted(set(live) - known)
     print("\nCOVERAGE (a ChatGPT row on the current text)")
-    print("  %d of %d sessions  (app rows %d, reused %d)"
+    print("  %d of %d sessions  (Codex rows %d, reused %d)"
           % (len(covered), len(live), len(accepted), len(covered) - len(accepted)))
     if per_model:
         print("  models covered: %d; fewest sessions: %s"
@@ -264,7 +303,7 @@ def main():
               "was built) -- they need an increment: %s"
               % (len(unknown), ", ".join(unknown[:5])))
 
-    # ---- the bridge: same session, earlier agent-harness row vs this run
+    # ---- the bridge: same session, an earlier pass's row vs this run
     pairs = []
     for sid in man.get("bridge", []):
         ref = man["reused"].get(sid)
@@ -274,21 +313,22 @@ def main():
         old = prior_rows.get((ref["package"], ref["subdir"], ref["file"]), {}).get(ref["opaque"])
         if old:
             pairs.append((old["overall"], accepted[oid_new]["overall"]))
-    print("\nBRIDGE (earlier agent-harness pass vs this app pass, same text)")
+    print("\nBRIDGE (earlier blind passes vs this Codex pass, same text; two "
+          "runs, different raters)")
     if len(pairs) >= 5:
         d = [b - a for a, b in pairs]
-        print("  n=%d  r=%+.3f  mean(app - earlier)=%+.2f  median |d|=%.2f  "
+        print("  n=%d  r=%+.3f  mean(Codex - earlier)=%+.2f  median |d|=%.2f  "
               "within 0.5: %.0f%%"
               % (len(pairs), pearson([a for a, _ in pairs], [b for _, b in pairs]),
                  st.mean(d), st.median(abs(x) for x in d),
                  100 * sum(1 for x in d if abs(x) <= .5) / len(d)))
-        print("  reference: ChatGPT vs itself, same harness, r=+0.935, median "
-              "|d| 0.15 (ROUND4_DESIGN 17c)")
+        print("  reference: the two earlier ChatGPT passes on the 120-session "
+              "sample, r=+0.935, median |d| 0.15 (ROUND4_DESIGN 17c)")
     else:
         print("  %d of %d bridge sessions back so far; need 5 to report"
               % (len(pairs), len(man.get("bridge", []))))
 
-    json.dump({"returned_dir": str(rdir),
+    json.dump({"returned_dir": home_short(rdir),
                "files": [n for n, _, _ in files],
                "accepted": len(accepted),
                "chunks": {cn: {"expected": c["sessions"],

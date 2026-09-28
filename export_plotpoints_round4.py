@@ -36,7 +36,11 @@ Publication rules this script enforces (docs/ROUND4_DESIGN.md sec 9):
     The one exception, by Levi's decision for the cards index: each card's
     `judge` row (Sonnet 5 session-judge means to ONE decimal, Round 03's table
     format) and the `judge_table` header, from round4_overview.json. No
-    interval, edge marker or unrounded figure leaves with it.
+    interval, edge marker or unrounded figure leaves with it. The row also
+    carries the second judge family's column from the same file: ChatGPT's
+    mean (one decimal, rounded down), its letter on the same fixed ranges
+    (raw) and `tier_depends_on_judge`; the header names the second judge and
+    its scale offset. Its offset-adjusted letter and intervals do not leave.
   * The second exception, by Levi's decision for continuity (2026-09-27): the
     old judge (Sonnet 4, the round-2/3 judge) on round-4 transcripts leaves
     as a BAND, a mean and its +/- half width to two decimals, on the board
@@ -222,12 +226,21 @@ JUDGE_COLUMNS = (("overall", "overall"),
                  ("consistency", "S.1_consistency_over_time"),
                  ("momentum", "S.3_narrative_momentum"))
 JUDGE_KEYS = {"tier", "overall", "agency", "consistency", "momentum",
-              "n_sessions", "n_seeds", "note"}
-JUDGE_TABLE_KEYS = {"judge", "scale", "bands", "not_comparable_with", "note"}
+              "n_sessions", "n_seeds", "note",
+              "chatgpt_overall", "chatgpt_tier", "tier_depends_on_judge"}
+JUDGE_TABLE_KEYS = {"judge", "scale", "bands", "not_comparable_with", "note",
+                    "second_judge", "scale_offset"}
 JUDGE_BAND_KEYS = {"tier", "lower", "upper", "label"}
 JUDGE_SOURCE = "subagent-sonnet-5"           # the judge name in judge_means
 JUDGE_LABEL = "claude-sonnet-5 (session judge v2)"
 JUDGE_NOT_COMPARABLE = "Round 03 judge (Sonnet 4)"
+# The second judge family (analyze_round4_overview.py's `chatgpt` column, every
+# session). Each card carries its mean (one decimal, rounded down like the
+# others), its letter on the same fixed ranges, raw, and whether the letter
+# depends on the judge once its scale offset is removed. The offset-adjusted
+# letter, the intervals and the vendor checks stay in round4_second_judge.json.
+SECOND_JUDGE = "chatgpt"
+SECOND_JUDGE_LABEL = "ChatGPT via Codex (subscription, blind)"
 # The frozen letters (analyze_round4_overview.TIERS); an overview with any
 # other ranges is refused rather than published under these names.
 JUDGE_TIERS = (("A", 3.8, None), ("B", 3.2, 3.8), ("C", 2.6, 3.2),
@@ -1645,14 +1658,62 @@ def read_overview(results_dir=RESULTS):
     if got != [tuple(t) for t in JUDGE_TIERS]:
         raise ExportError("%s: tier ranges %s are not the frozen letters %s"
                           % (p.name, got, list(JUDGE_TIERS)))
+    second_judge_problems = _second_judge_input_problems(ov)
+    if second_judge_problems:
+        raise ExportError("%s: the second judge's column is missing or incomplete "
+                          "(rerun analyze_round4_overview.py, whose default is "
+                          "chatgpt=results/judge_full_chatgpt/merged): %s"
+                          % (p.name, "; ".join(second_judge_problems[:5])))
     return ov
 
 
-def judge_row(entry):
-    """A card's judge row: one decimal, no interval, no edge marker."""
+def second_judge_rows(ov):
+    """{model: the overview row's cross_judges.chatgpt}, tiered and untiered."""
+    out = {}
+    for r in list(ov.get("rows") or []) + list(ov.get("unranked") or []):
+        c = (r.get("cross_judges") or {}).get(SECOND_JUDGE)
+        if c is not None:
+            out[r["model"]] = c
+    return out
+
+
+def _second_judge_input_problems(ov):
+    """Every model in judge_means needs a ChatGPT mean; a tiered one also its
+    raw letter and the tier_depends_on_judge flag."""
+    top = (ov.get("cross_judges") or {}).get(SECOND_JUDGE)
+    if not top:
+        return ["no cross_judges.%s" % SECOND_JUDGE]
+    out = []
+    if top.get("label") != SECOND_JUDGE_LABEL:
+        out.append("label %r, expected %r" % (top.get("label"), SECOND_JUDGE_LABEL))
+    off = (top.get("scale_offset") or {}).get("value")
+    if isinstance(off, bool) or not isinstance(off, (int, float)):
+        out.append("no scale_offset")
+    rows = second_judge_rows(ov)
+    for m, e in sorted(ov["judge_means"]["models"].items()):
+        c = rows.get(m)
+        if c is None or not isinstance(c.get("mean"), (int, float)):
+            out.append("%s: no ChatGPT mean" % m)
+        elif e.get("tier") and (c.get("tier") is None
+                                or not isinstance(c.get("tier_depends_on_judge"), bool)):
+            out.append("%s: tiered, but no ChatGPT letter or flag" % m)
+    return out
+
+
+def judge_row(entry, second=None):
+    """A card's judge row: one decimal, no interval, no edge marker. `second`
+    is the overview's ChatGPT cell for the model: its mean to one decimal,
+    rounded down like the others, its raw letter, and whether the letter
+    depends on the judge (None for an untiered model)."""
     out = {k: one_decimal(entry[src]) for k, src in JUDGE_COLUMNS}
     out.update(tier=entry["tier"], n_sessions=int(entry["n_sessions"]),
                n_seeds=int(entry["n_seeds"]), note=entry["note"])
+    second = second or {}
+    mean = second.get("mean")
+    out.update(chatgpt_overall=None if mean is None else one_decimal(mean),
+               chatgpt_tier=second.get("tier") if entry["tier"] else None,
+               tier_depends_on_judge=(second.get("tier_depends_on_judge")
+                                      if entry["tier"] else None))
     return out
 
 
@@ -1688,10 +1749,23 @@ def build_judge_table(ov):
                                       "is" if len(untiered) == 1 else "are"))
     note += (" Not comparable with Round 03's numbers, which came from a different "
              "judge (Sonnet 4).")
+    top = ov["cross_judges"][SECOND_JUDGE]
+    off = float(top["scale_offset"]["value"])
+    depends = len(top.get("tier_depends_on_judge") or [])
+    note += (" Second judge: %s scored the same %s sessions, blind to the model "
+             "names. Its column is its mean on the same basis, rounded down to one "
+             "decimal, and its letter on the same fixed ranges. It scores %.2f lower "
+             "on average across the tiered models, so its letters sit lower for that "
+             "reason alone. Tier depends on judge marks the %s whose letter "
+             "changes once that offset is removed: the Sonnet 5 letter shown is one "
+             "judge's reading, and neither judge is shown to be the right one."
+             % (SECOND_JUDGE_LABEL, format(int(top["sessions"]), ","), off,
+                _count(depends, "tiered model", "tiered models").lower()))
     return {"judge": JUDGE_LABEL, "scale": "1-5",
             "bands": [{k: r[k] for k in ("tier", "lower", "upper", "label")}
                       for r in ov["bands"]["ranges"]],
-            "not_comparable_with": JUDGE_NOT_COMPARABLE, "note": note}
+            "not_comparable_with": JUDGE_NOT_COMPARABLE, "note": note,
+            "second_judge": SECOND_JUDGE_LABEL, "scale_offset": round(off, 2)}
 
 
 def build_cards(lb, results_dir=RESULTS, commit="unknown", overview=None,
@@ -1705,6 +1779,7 @@ def build_cards(lb, results_dir=RESULTS, commit="unknown", overview=None,
     ov = overview if overview is not None else read_overview(results_dir)
     cont = continuity if continuity is not None else read_continuity(results_dir)
     jm = ov["judge_means"]["models"]
+    second = second_judge_rows(ov)
     ctx = cards_v2.load_inputs(results_dir, r4=cards_v2.r4_rows(lb))
     cards = [cards_v2.build_card(m, ctx) for m in cards_v2.ordered_models(ctx)]
     doc = cards_v2.cards_document(cards, ctx)
@@ -1714,7 +1789,7 @@ def build_cards(lb, results_dir=RESULTS, commit="unknown", overview=None,
         named[mid] = {"id": mid, "name": name, "vendor": vendor,
                       "is_finetune": fine,
                       **{k: v for k, v in c.items() if k != "id"},
-                      "judge": judge_row(jm[mid]) if mid in jm else None,
+                      "judge": judge_row(jm[mid], second.get(mid)) if mid in jm else None,
                       "across_rounds": across_rounds(cont, mid)}
     doc["cards"] = named
     doc["inputs"]["judge"] = OVERVIEW_NAME
@@ -1742,6 +1817,14 @@ def _judge_problems(doc, overview):
     if (t.get("judge"), t.get("scale"), t.get("not_comparable_with")) != (
             JUDGE_LABEL, "1-5", JUDGE_NOT_COMPARABLE):
         problems.append("judge_table: judge/scale/not_comparable_with changed")
+    if t.get("second_judge") != SECOND_JUDGE_LABEL:
+        problems.append("judge_table: second_judge is %r, not %r"
+                        % (t.get("second_judge"), SECOND_JUDGE_LABEL))
+    off = t.get("scale_offset")
+    if (isinstance(off, bool) or not isinstance(off, (int, float))
+            or not 0.0 <= off <= 4.0 or off != round(off, 2)):
+        problems.append("judge_table: scale_offset %r is not a 0-4 value to two "
+                        "decimals" % (off,))
     bands = t.get("bands") or []
     for b in bands:
         _keys_exact(b, JUDGE_BAND_KEYS, "judge_table band %s" % b.get("tier"), problems)
@@ -1750,6 +1833,7 @@ def _judge_problems(doc, overview):
         problems.append("judge_table: bands are not the frozen letters")
     letters = {x[0] for x in JUDGE_TIERS}
     jm = (overview or {}).get("judge_means", {}).get("models")
+    second = second_judge_rows(overview) if overview else {}
     for mid, c in doc["cards"].items():
         j = c.get("judge")
         if jm is not None and (j is not None) != (mid in jm):
@@ -1771,9 +1855,25 @@ def _judge_problems(doc, overview):
             problems.append("%s.tier %r is not a fixed letter" % (where, j["tier"]))
         if (j.get("tier") is None) != bool(j.get("note")):
             problems.append("%s: an untiered row needs a note, a tiered one none" % where)
-        if jm is not None and mid in jm and j != judge_row(jm[mid]):
+        v = j.get("chatgpt_overall")
+        if (isinstance(v, bool) or not isinstance(v, (int, float))
+                or not 1.0 <= v <= 5.0 or v != one_decimal(v)):
+            problems.append("%s.chatgpt_overall is not a 1-5 value to one decimal: %r"
+                            % (where, v))
+        if j.get("tier") is None:
+            if j.get("chatgpt_tier") is not None or j.get("tier_depends_on_judge") is not None:
+                problems.append("%s: an untiered row carries a ChatGPT letter or flag"
+                                % where)
+        else:
+            if j.get("chatgpt_tier") not in letters:
+                problems.append("%s.chatgpt_tier %r is not a fixed letter"
+                                % (where, j.get("chatgpt_tier")))
+            if not isinstance(j.get("tier_depends_on_judge"), bool):
+                problems.append("%s.tier_depends_on_judge is not true or false" % where)
+        if jm is not None and mid in jm and j != judge_row(jm[mid], second.get(mid)):
             problems.append("%s differs from round4_overview.json" % where)
-    banned = {"edge", "edge_marked", "edge_models", "spans", "mean_lo", "mean_hi"}
+    banned = {"edge", "edge_marked", "edge_models", "spans", "mean_lo", "mean_hi",
+              "difference", "flag", "tier_after_offset", "overall_after_offset"}
     hits = banned & (set(_all_keys(t)) | {k for c in doc["cards"].values()
                                           for k in _all_keys(c.get("judge") or {})})
     if hits:
@@ -2030,6 +2130,10 @@ def run_cards(args, lb, commit, check):
         "judge rows without a tier": [(m, c["judge"]["note"]) for m, c in cards.items()
                                       if c["judge"] and not c["judge"]["tier"]],
         "no judge row": sorted(m for m, c in cards.items() if c["judge"] is None),
+        "second judge": "%s, scale offset %s" % (doc["judge_table"]["second_judge"],
+                                                 doc["judge_table"]["scale_offset"]),
+        "tier depends on judge": sorted(m for m, c in cards.items()
+                                        if c["judge"] and c["judge"]["tier_depends_on_judge"]),
         "judge models without a card": sorted(set(ov["judge_means"]["models"]) - set(cards)),
         "with willingness": sum(c["willingness"] is not None for c in cards.values()),
         "with craft band": sum(c["craft"] is not None for c in cards.values()),

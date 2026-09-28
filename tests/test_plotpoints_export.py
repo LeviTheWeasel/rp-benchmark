@@ -1061,8 +1061,9 @@ class GuardModule(unittest.TestCase):
 
 def _head_results(dest):
     """HEAD copies of the card and board inputs, and the committed markdown.
-    round4_overview.json and round4_continuity.json come from HEAD once they
-    are committed; until then the working-tree copy stands in."""
+    round4_overview.json and round4_continuity.json are the analyzers' output:
+    the working-tree copy (what the export publishes once it is committed),
+    HEAD's when there is none."""
     names = E.CARD_INPUTS + ("round4_willingness_leaderboard.json",
                              "profile_cards_v2.md")
     (dest / "results").mkdir()
@@ -1071,12 +1072,13 @@ def _head_results(dest):
                               capture_output=True, check=True).stdout
         (dest / "results" / n).write_bytes(blob)
     for name in (E.OVERVIEW_NAME, E.CONTINUITY_NAME):
+        if (E.RESULTS / name).exists():
+            (dest / "results" / name).write_bytes((E.RESULTS / name).read_bytes())
+            continue
         head = subprocess.run(["git", "-C", str(ROOT), "show",
                                "HEAD:results/%s" % name], capture_output=True)
         if head.returncode == 0:
             (dest / "results" / name).write_bytes(head.stdout)
-        elif (E.RESULTS / name).exists():
-            (dest / "results" / name).write_bytes((E.RESULTS / name).read_bytes())
     return dest / "results"
 
 
@@ -1169,6 +1171,80 @@ class Cards(unittest.TestCase):
                            "j": [c["judge"] for c in cards.values()]})
         for gone in ('"edge', '"spans"', "mean_lo", "mean_hi", "_plain"):
             self.assertNotIn(gone, blob)
+
+    def test_judge_rows_carry_the_second_judge_from_the_overview(self):
+        rows = E.second_judge_rows(self.ov)
+        top = self.ov["cross_judges"]["chatgpt"]
+        for mid, c in self.doc["cards"].items():
+            j = c["judge"]
+            if j is None:
+                continue
+            with self.subTest(model=mid):
+                cell = rows[mid]
+                self.assertEqual(j["chatgpt_overall"], E.one_decimal(cell["mean"]))
+                self.assertLessEqual(j["chatgpt_overall"], cell["mean"] + 1e-9)
+                self.assertLess(cell["mean"] - j["chatgpt_overall"], 0.1)
+                if j["tier"] is None:
+                    self.assertIsNone(j["chatgpt_tier"])
+                    self.assertIsNone(j["tier_depends_on_judge"])
+                else:
+                    self.assertEqual(j["chatgpt_tier"], cell["tier"])
+                    self.assertIs(j["tier_depends_on_judge"], cell["tier_depends_on_judge"])
+                    self.assertEqual(j["tier_depends_on_judge"],
+                                     mid in top["tier_depends_on_judge"])
+        t = self.doc["judge_table"]
+        self.assertEqual(t["second_judge"], "ChatGPT via Codex (subscription, blind)")
+        self.assertEqual(t["scale_offset"], round(top["scale_offset"]["value"], 2))
+        self.assertIn("Second judge: ChatGPT via Codex (subscription, blind)", t["note"])
+        self.assertIn("neither judge is shown to be the right one", t["note"])
+        blob = json.dumps([c["judge"] for c in self.doc["cards"].values()])
+        for gone in ('"difference"', '"flag"', "tier_after_offset", "overall_after_offset"):
+            self.assertNotIn(gone, blob)
+
+    def test_check_catches_every_break_of_the_second_judge(self):
+        mid = next(m for m, c in self.doc["cards"].items() if c["judge"] and c["judge"]["tier"])
+        untiered = next((m for m, c in self.doc["cards"].items()
+                         if c["judge"] and not c["judge"]["tier"]), None)
+
+        def broken(fn):
+            doc = json.loads(json.dumps(self.doc))
+            fn(doc)
+            return E.check_cards(doc, self.lb, overview=self.ov)
+
+        cases = {
+            "two decimals": lambda d: d["cards"][mid]["judge"].update(chatgpt_overall=2.85),
+            "rounded up": lambda d: d["cards"][mid]["judge"].update(
+                chatgpt_overall=round(d["cards"][mid]["judge"]["chatgpt_overall"] + 0.1, 1)),
+            "no letter": lambda d: d["cards"][mid]["judge"].update(chatgpt_tier=None),
+            "a letter outside the five": lambda d: d["cards"][mid]["judge"].update(chatgpt_tier="F"),
+            "flag not a bool": lambda d: d["cards"][mid]["judge"].update(tier_depends_on_judge="yes"),
+            "flag flipped": lambda d: d["cards"][mid]["judge"].update(
+                tier_depends_on_judge=not d["cards"][mid]["judge"]["tier_depends_on_judge"]),
+            "the offset-adjusted letter leaks": lambda d: d["cards"][mid]["judge"].update(
+                tier_after_offset="A"),
+            "no second judge in the header": lambda d: d["judge_table"].pop("second_judge"),
+            "another second judge": lambda d: d["judge_table"].update(second_judge="Gemini"),
+            "offset to three decimals": lambda d: d["judge_table"].update(scale_offset=0.943),
+        }
+        if untiered:
+            cases["an untiered row with a letter"] = (
+                lambda d: d["cards"][untiered]["judge"].update(chatgpt_tier="C"))
+        for name, fn in cases.items():
+            with self.subTest(name):
+                self.assertTrue(broken(fn), name)
+
+    def test_an_overview_without_the_second_judge_is_refused(self):
+        with tempfile.TemporaryDirectory() as t:
+            ov = json.loads(json.dumps(self.ov))
+            ov["cross_judges"] = {}
+            (Path(t) / E.OVERVIEW_NAME).write_text(json.dumps(ov))
+            with self.assertRaisesRegex(E.ExportError, "second judge"):
+                E.read_overview(t)
+            ov = json.loads(json.dumps(self.ov))
+            ov["rows"][0]["cross_judges"] = {}
+            (Path(t) / E.OVERVIEW_NAME).write_text(json.dumps(ov))
+            with self.assertRaisesRegex(E.ExportError, "no ChatGPT mean"):
+                E.read_overview(t)
 
     def test_roster_snapshot_2026_09_26(self):
         """The roster Levi signed off on; update when a model is added."""

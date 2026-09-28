@@ -6,7 +6,7 @@
    "label": "Judge tier (Sonnet 5)",
    "definition": "Fixed letters on one judge's 1-5 `overall` mean (Sonnet 5, session_judge_v2.jsonl): A 3.8 and above, B 3.2-3.8, C 2.6-3.2, D 2.0-2.6, E below 2.0. Edges 5.0 - 0.6k, lower edge inclusive; A is open at the top and E at the floor. The letters are frozen and never re-lettered.",
    "caveats": [
-    "One judge. Sonnet and Gemini agree per model (r +0.97); ChatGPT scores 0.77 lower on average and reorders the top (ROUND4_DESIGN 15b, 18).",
+    "Two judge families. Sonnet 5 sets the letter; ChatGPT via Codex (subscription, blind) scored the same 1,328 sessions. Per model the two agree at Pearson r +0.87, and ChatGPT scores 0.94 lower on average (its scale offset). With the offset removed, 50 of 69 tiered models keep their letter and 19 change (`tier_depends_on_judge`). Neither judge is shown to be the right one (ROUND4_DESIGN 24; intervals in round4_second_judge.json).",
     "Not the 'craft band' on the profile cards, which is the flaw hunter.",
     "The interval covers which seeds were drawn, not judge disagreement."
    ]
@@ -170,7 +170,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.905,
+     "mean_plain": 2.905,
+     "tier": "C",
+     "sonnet_mean": 4.38,
+     "difference": -0.532,
+     "flag": true,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "claude_fable_5_1",
@@ -212,7 +223,18 @@
      }
     ]
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 3.18,
+     "mean_plain": 3.18,
+     "tier": "C",
+     "sonnet_mean": 4.265,
+     "difference": -0.142,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "claude_opus_4_6",
@@ -245,7 +267,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.89,
+     "mean_plain": 2.89,
+     "tier": "C",
+     "sonnet_mean": 4.305,
+     "difference": -0.472,
+     "flag": true,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "claude_opus_4_7",
@@ -278,7 +311,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 12,
+     "mean": 3.0647,
+     "mean_plain": 3.1167,
+     "tier": "C",
+     "sonnet_mean": 4.2938,
+     "difference": -0.286,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "claude_opus_4_8",
@@ -311,7 +355,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 3.275,
+     "mean_plain": 3.275,
+     "tier": "B",
+     "sonnet_mean": 4.265,
+     "difference": -0.047,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "claude_opus_5",
@@ -353,7 +408,18 @@
      }
     ]
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 3.14,
+     "mean_plain": 3.14,
+     "tier": "C",
+     "sonnet_mean": 4.35,
+     "difference": -0.267,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "claude_opus_5_5",
@@ -395,7 +461,18 @@
      }
     ]
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 3.38,
+     "mean_plain": 3.38,
+     "tier": "B",
+     "sonnet_mean": 4.15,
+     "difference": 0.173,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "claude_sonnet_4_5",
@@ -428,7 +505,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.89,
+     "mean_plain": 2.89,
+     "tier": "C",
+     "sonnet_mean": 4.07,
+     "difference": -0.237,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "claude_sonnet_4_6",
@@ -461,7 +549,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 3.07,
+     "mean_plain": 3.07,
+     "tier": "C",
+     "sonnet_mean": 4.255,
+     "difference": -0.242,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "claude_sonnet_5",
@@ -494,7 +593,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 3.165,
+     "mean_plain": 3.165,
+     "tier": "C",
+     "sonnet_mean": 4.31,
+     "difference": -0.202,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "deepseek_r1_0528",
@@ -527,7 +637,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.655,
+     "mean_plain": 2.655,
+     "tier": "C",
+     "sonnet_mean": 3.825,
+     "difference": -0.227,
+     "flag": false,
+     "tier_depends_on_judge": true
+    }
+   }
   },
   {
    "model": "deepseek_v3_0324",
@@ -560,7 +681,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.895,
+     "mean_plain": 2.895,
+     "tier": "C",
+     "sonnet_mean": 3.82,
+     "difference": 0.018,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "deepseek_v3_2",
@@ -593,7 +725,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 3.175,
+     "mean_plain": 3.175,
+     "tier": "C",
+     "sonnet_mean": 4.12,
+     "difference": -0.002,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "deepseek_v4_1_flash",
@@ -626,7 +769,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.975,
+     "mean_plain": 2.975,
+     "tier": "C",
+     "sonnet_mean": 4.245,
+     "difference": -0.327,
+     "flag": true,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "deepseek_v4_flash",
@@ -666,7 +820,18 @@
      }
     ]
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 12,
+     "mean": 3.2814,
+     "mean_plain": 3.3333,
+     "tier": "B",
+     "sonnet_mean": 3.9771,
+     "difference": 0.247,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "deepseek_v4_pro",
@@ -699,7 +864,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 12,
+     "mean": 3.0564,
+     "mean_plain": 3.1083,
+     "tier": "C",
+     "sonnet_mean": 4.1188,
+     "difference": -0.12,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "ember_1",
@@ -732,7 +908,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 3.16,
+     "mean_plain": 3.16,
+     "tier": "C",
+     "sonnet_mean": 4.255,
+     "difference": -0.152,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "gemini_3_5_flash",
@@ -765,7 +952,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 3.06,
+     "mean_plain": 3.06,
+     "tier": "C",
+     "sonnet_mean": 3.9725,
+     "difference": 0.03,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "gemini_3_7_flash",
@@ -798,7 +996,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 3.15,
+     "mean_plain": 3.15,
+     "tier": "C",
+     "sonnet_mean": 4.04,
+     "difference": 0.053,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "gemini_3_8_flash",
@@ -831,7 +1040,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 3.02,
+     "mean_plain": 3.02,
+     "tier": "C",
+     "sonnet_mean": 3.935,
+     "difference": 0.028,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "glm_4_7",
@@ -864,7 +1084,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.88,
+     "mean_plain": 2.88,
+     "tier": "C",
+     "sonnet_mean": 3.94,
+     "difference": -0.117,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "glm_5_1",
@@ -897,7 +1128,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 12,
+     "mean": 3.073,
+     "mean_plain": 3.125,
+     "tier": "C",
+     "sonnet_mean": 4.0563,
+     "difference": -0.04,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "glm_5_3_flash",
@@ -930,7 +1172,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.995,
+     "mean_plain": 2.995,
+     "tier": "C",
+     "sonnet_mean": 4.34,
+     "difference": -0.402,
+     "flag": true,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "glm_5_3_flashx",
@@ -963,7 +1216,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.955,
+     "mean_plain": 2.955,
+     "tier": "C",
+     "sonnet_mean": 4.165,
+     "difference": -0.267,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "glm_5_3_prime",
@@ -1015,7 +1279,18 @@
      }
     ]
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.83,
+     "mean_plain": 2.83,
+     "tier": "C",
+     "sonnet_mean": 4.09,
+     "difference": -0.317,
+     "flag": true,
+     "tier_depends_on_judge": true
+    }
+   }
   },
   {
    "model": "gpt_5_5",
@@ -1048,7 +1323,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 3.2,
+     "mean_plain": 3.2,
+     "tier": "B",
+     "sonnet_mean": 3.965,
+     "difference": 0.178,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "gpt_6_astra",
@@ -1081,7 +1367,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 3.8,
+     "mean_plain": 3.8,
+     "tier": "A",
+     "sonnet_mean": 4.035,
+     "difference": 0.708,
+     "flag": true,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "gpt_6_luna",
@@ -1114,7 +1411,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 3.385,
+     "mean_plain": 3.385,
+     "tier": "B",
+     "sonnet_mean": 3.935,
+     "difference": 0.393,
+     "flag": true,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "gpt_6_luna_pro",
@@ -1147,7 +1455,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 3.515,
+     "mean_plain": 3.515,
+     "tier": "B",
+     "sonnet_mean": 3.895,
+     "difference": 0.563,
+     "flag": true,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "gpt_6_sol",
@@ -1180,7 +1499,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 3.795,
+     "mean_plain": 3.795,
+     "tier": "B",
+     "sonnet_mean": 4.205,
+     "difference": 0.533,
+     "flag": true,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "gpt_6_sol_pro",
@@ -1213,7 +1543,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 3.75,
+     "mean_plain": 3.75,
+     "tier": "B",
+     "sonnet_mean": 4.025,
+     "difference": 0.668,
+     "flag": true,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "hemmingway_1",
@@ -1246,7 +1587,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.605,
+     "mean_plain": 2.605,
+     "tier": "C",
+     "sonnet_mean": 4.085,
+     "difference": -0.537,
+     "flag": true,
+     "tier_depends_on_judge": true
+    }
+   }
   },
   {
    "model": "mimo_2_5_pro",
@@ -1279,7 +1631,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.815,
+     "mean_plain": 2.815,
+     "tier": "C",
+     "sonnet_mean": 3.9525,
+     "difference": -0.195,
+     "flag": false,
+     "tier_depends_on_judge": true
+    }
+   }
   },
   {
    "model": "mimo_2_6_flash",
@@ -1312,7 +1675,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.7,
+     "mean_plain": 2.7,
+     "tier": "C",
+     "sonnet_mean": 4.044,
+     "difference": -0.401,
+     "flag": true,
+     "tier_depends_on_judge": true
+    }
+   }
   },
   {
    "model": "mimo_2_6_pro",
@@ -1345,7 +1719,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.925,
+     "mean_plain": 2.925,
+     "tier": "C",
+     "sonnet_mean": 4.07,
+     "difference": -0.202,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "minimax_m2_7",
@@ -1378,7 +1763,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.77,
+     "mean_plain": 2.77,
+     "tier": "C",
+     "sonnet_mean": 3.905,
+     "difference": -0.192,
+     "flag": false,
+     "tier_depends_on_judge": true
+    }
+   }
   },
   {
    "model": "minimax_m3",
@@ -1411,7 +1807,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.69,
+     "mean_plain": 2.69,
+     "tier": "C",
+     "sonnet_mean": 4.0575,
+     "difference": -0.425,
+     "flag": true,
+     "tier_depends_on_judge": true
+    }
+   }
   },
   {
    "model": "gemini_2_5_flash",
@@ -1451,7 +1858,18 @@
      }
     ]
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.72,
+     "mean_plain": 2.72,
+     "tier": "C",
+     "sonnet_mean": 3.41,
+     "difference": 0.253,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "gemini_3_1_flash_lite",
@@ -1484,7 +1902,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 12,
+     "mean": 2.6397,
+     "mean_plain": 2.6917,
+     "tier": "C",
+     "sonnet_mean": 3.6938,
+     "difference": -0.111,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "gemini_3_1_pro",
@@ -1524,7 +1953,18 @@
      }
     ]
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 12,
+     "mean": 2.898,
+     "mean_plain": 2.95,
+     "tier": "C",
+     "sonnet_mean": 3.6605,
+     "difference": 0.18,
+     "flag": false,
+     "tier_depends_on_judge": true
+    }
+   }
   },
   {
    "model": "gemma_4_26b",
@@ -1557,7 +1997,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.46,
+     "mean_plain": 2.46,
+     "tier": "D",
+     "sonnet_mean": 3.63,
+     "difference": -0.227,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "gemma_4_31b",
@@ -1590,7 +2041,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.745,
+     "mean_plain": 2.745,
+     "tier": "C",
+     "sonnet_mean": 3.675,
+     "difference": 0.013,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "gpt_4_1",
@@ -1623,7 +2085,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.95,
+     "mean_plain": 2.95,
+     "tier": "C",
+     "sonnet_mean": 3.76,
+     "difference": 0.133,
+     "flag": false,
+     "tier_depends_on_judge": true
+    }
+   }
   },
   {
    "model": "grok_4_1",
@@ -1656,7 +2129,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.74,
+     "mean_plain": 2.74,
+     "tier": "C",
+     "sonnet_mean": 3.6325,
+     "difference": 0.05,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "grok_4_3",
@@ -1689,7 +2173,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.22,
+     "mean_plain": 2.22,
+     "tier": "D",
+     "sonnet_mean": 3.21,
+     "difference": -0.047,
+     "flag": false,
+     "tier_depends_on_judge": true
+    }
+   }
   },
   {
    "model": "grok_4_7",
@@ -1722,7 +2217,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.885,
+     "mean_plain": 2.885,
+     "tier": "C",
+     "sonnet_mean": 3.795,
+     "difference": 0.033,
+     "flag": false,
+     "tier_depends_on_judge": true
+    }
+   }
   },
   {
    "model": "kimi_k2_5",
@@ -1755,7 +2261,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 12,
+     "mean": 2.7397,
+     "mean_plain": 2.7917,
+     "tier": "C",
+     "sonnet_mean": 3.7105,
+     "difference": -0.028,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "kimi_k2_6",
@@ -1788,7 +2305,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.81,
+     "mean_plain": 2.81,
+     "tier": "C",
+     "sonnet_mean": 3.605,
+     "difference": 0.148,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "mercury_2_5",
@@ -1821,7 +2349,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.675,
+     "mean_plain": 2.675,
+     "tier": "C",
+     "sonnet_mean": 3.495,
+     "difference": 0.123,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "mistral_small_creative",
@@ -1854,7 +2393,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.165,
+     "mean_plain": 2.165,
+     "tier": "D",
+     "sonnet_mean": 3.285,
+     "difference": -0.177,
+     "flag": false,
+     "tier_depends_on_judge": true
+    }
+   }
   },
   {
    "model": "muse_spark_1_3",
@@ -1887,7 +2437,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.57,
+     "mean_plain": 2.57,
+     "tier": "D",
+     "sonnet_mean": 3.225,
+     "difference": 0.288,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "qwen3_5_flash",
@@ -1927,7 +2488,18 @@
      }
     ]
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.34,
+     "mean_plain": 2.34,
+     "tier": "D",
+     "sonnet_mean": 3.3,
+     "difference": -0.017,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "qwen3_6_27b",
@@ -1960,7 +2532,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.45,
+     "mean_plain": 2.45,
+     "tier": "D",
+     "sonnet_mean": 3.39,
+     "difference": 0.003,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "qwen3_7_max",
@@ -1993,7 +2576,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.765,
+     "mean_plain": 2.765,
+     "tier": "C",
+     "sonnet_mean": 3.785,
+     "difference": -0.077,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "qwen3_8_flash",
@@ -2026,7 +2620,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.445,
+     "mean_plain": 2.445,
+     "tier": "D",
+     "sonnet_mean": 3.538,
+     "difference": -0.15,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "qwen3_8_max",
@@ -2059,7 +2664,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.605,
+     "mean_plain": 2.605,
+     "tier": "C",
+     "sonnet_mean": 3.72,
+     "difference": -0.172,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "qwen3_8_max_prime",
@@ -2092,7 +2708,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.78,
+     "mean_plain": 2.78,
+     "tier": "C",
+     "sonnet_mean": 3.725,
+     "difference": -0.002,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "qwen3_8_omni_flash",
@@ -2150,7 +2777,18 @@
      }
     ]
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.535,
+     "mean_plain": 2.535,
+     "tier": "D",
+     "sonnet_mean": 3.5625,
+     "difference": -0.085,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "tencent_hy4",
@@ -2183,7 +2821,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.465,
+     "mean_plain": 2.465,
+     "tier": "D",
+     "sonnet_mean": 3.5,
+     "difference": -0.092,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "cydonia_24b",
@@ -2229,7 +2878,18 @@
      }
     ]
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 1.92,
+     "mean_plain": 1.92,
+     "tier": "E",
+     "sonnet_mean": 2.84,
+     "difference": 0.023,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "llama_4_maverick",
@@ -2262,7 +2922,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.39,
+     "mean_plain": 2.39,
+     "tier": "D",
+     "sonnet_mean": 2.965,
+     "difference": 0.368,
+     "flag": true,
+     "tier_depends_on_judge": true
+    }
+   }
   },
   {
    "model": "qwen3_6_35b_a3b",
@@ -2295,7 +2966,18 @@
     },
     "shown": []
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 2.265,
+     "mean_plain": 2.265,
+     "tier": "D",
+     "sonnet_mean": 3.105,
+     "difference": 0.103,
+     "flag": false,
+     "tier_depends_on_judge": true
+    }
+   }
   },
   {
    "model": "command_a_plus",
@@ -2335,7 +3017,18 @@
      }
     ]
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 1.67,
+     "mean_plain": 1.67,
+     "tier": "E",
+     "sonnet_mean": 2.29,
+     "difference": 0.323,
+     "flag": true,
+     "tier_depends_on_judge": true
+    }
+   }
   },
   {
    "model": "euryale_70b",
@@ -2387,7 +3080,18 @@
      }
     ]
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 1.565,
+     "mean_plain": 1.565,
+     "tier": "E",
+     "sonnet_mean": 2.005,
+     "difference": 0.503,
+     "flag": true,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "lunaris_8b",
@@ -2433,7 +3137,18 @@
      }
     ]
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 1.95,
+     "mean_plain": 1.95,
+     "tier": "E",
+     "sonnet_mean": 2.595,
+     "difference": 0.298,
+     "flag": false,
+     "tier_depends_on_judge": true
+    }
+   }
   },
   {
    "model": "magnum_v4_72b",
@@ -2479,7 +3194,18 @@
      }
     ]
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 1.95,
+     "mean_plain": 1.95,
+     "tier": "E",
+     "sonnet_mean": 2.5025,
+     "difference": 0.39,
+     "flag": true,
+     "tier_depends_on_judge": true
+    }
+   }
   },
   {
    "model": "skyfall_36b",
@@ -2525,7 +3251,18 @@
      }
     ]
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 1.63,
+     "mean_plain": 1.63,
+     "tier": "E",
+     "sonnet_mean": 2.32,
+     "difference": 0.253,
+     "flag": false,
+     "tier_depends_on_judge": false
+    }
+   }
   },
   {
    "model": "unslopnemo_12b",
@@ -2571,7 +3308,18 @@
      }
     ]
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 1.845,
+     "mean_plain": 1.845,
+     "tier": "E",
+     "sonnet_mean": 2.53,
+     "difference": 0.258,
+     "flag": false,
+     "tier_depends_on_judge": true
+    }
+   }
   },
   {
    "model": "venice_dolphin_24b",
@@ -2611,7 +3359,18 @@
      }
     ]
    },
-   "cross_judges": {}
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 20,
+     "mean": 1.765,
+     "mean_plain": 1.765,
+     "tier": "E",
+     "sonnet_mean": 2.505,
+     "difference": 0.203,
+     "flag": false,
+     "tier_depends_on_judge": true
+    }
+   }
   }
  ],
  "unranked": [
@@ -2649,7 +3408,16 @@
      }
     ]
    },
-   "cross_judges": {},
+   "cross_judges": {
+    "chatgpt": {
+     "n_sessions": 4,
+     "mean": 2.225,
+     "mean_plain": 2.225,
+     "tier": null,
+     "tier_depends_on_judge": null,
+     "note": "untiered: plain mean of 4 sessions, no letter"
+    }
+   },
    "reason": "4 of 20 seeds, under the 12-seed minimum"
   }
  ],
@@ -3756,7 +4524,74 @@
   ],
   "watch_out_rows": 17
  },
- "cross_judges": {},
+ "cross_judges": {
+  "chatgpt": {
+   "name": "chatgpt",
+   "label": "ChatGPT via Codex (subscription, blind)",
+   "sessions": 1328,
+   "models_with_a_figure": 69,
+   "min_sessions": 3,
+   "basis": "the overview's own: the model + seed fit over the tiered pool with this judge's own seed effects (the plain mean for a model that played every seed); an untiered model gets its plain mean and no letter",
+   "pearson_model_means": 0.87,
+   "scale_offset": {
+    "value": 0.943,
+    "method": "mean over the 69 tiered models of Sonnet's model mean minus this judge's, each model weighted once; adding it gives both judges the same mean across these models"
+   },
+   "tier_rule": "`tier`: this judge's mean on the same frozen letters (A 3.8 and above, B 3.2-3.8, C 2.6-3.2, D 2.0-2.6, E below 2.0), raw, so a judge that uses the scale lower reads lower letters for that reason alone",
+   "tier_depends_rule": "`tier_depends_on_judge`: this judge's mean plus the scale offset falls in another letter than Sonnet's; the adjusted letter, with its interval, is in round4_second_judge.json",
+   "flag_rule": "`flag`: |difference| > 0.3, the card's band; difference is this judge's mean plus the scale offset minus Sonnet's",
+   "raw_same_letter": 1,
+   "same_letter_after_offset": 50,
+   "tier_depends_on_judge": [
+    "command_a_plus",
+    "deepseek_r1_0528",
+    "gemini_3_1_pro",
+    "glm_5_3_prime",
+    "gpt_4_1",
+    "grok_4_3",
+    "grok_4_7",
+    "hemmingway_1",
+    "llama_4_maverick",
+    "lunaris_8b",
+    "magnum_v4_72b",
+    "mimo_2_5_pro",
+    "mimo_2_6_flash",
+    "minimax_m2_7",
+    "minimax_m3",
+    "mistral_small_creative",
+    "qwen3_6_35b_a3b",
+    "unslopnemo_12b",
+    "venice_dolphin_24b"
+   ],
+   "flagged": [
+    "aion_3_5",
+    "claude_opus_4_6",
+    "command_a_plus",
+    "deepseek_v4_1_flash",
+    "euryale_70b",
+    "glm_5_3_flash",
+    "glm_5_3_prime",
+    "gpt_6_astra",
+    "gpt_6_luna",
+    "gpt_6_luna_pro",
+    "gpt_6_sol",
+    "gpt_6_sol_pro",
+    "hemmingway_1",
+    "llama_4_maverick",
+    "magnum_v4_72b",
+    "mimo_2_6_flash",
+    "minimax_m3"
+   ],
+   "source": "results/judge_full_chatgpt/merged",
+   "stale_or_unhashed_dropped": 0,
+   "unmatched_dropped": 0,
+   "rows_by_source": {
+    "judge_full_chatgpt/app_pass": 1149,
+    "judge_inc1_chatgpt/external_blind_pass": 84,
+    "judge_round2_chatgpt/external_blind_pass": 95
+   }
+  }
+ },
  "checks": {
   "blank_sessions_dropped": {
    "tier_changes": [],
@@ -3787,7 +4622,7 @@
     "chatgpt": 10,
     "gemini": 10
    },
-   "note": "Corpus level only: 1 to 5 sessions per model, too few for a per-model figure. Nothing in the overview is adjusted by it. The tilt is relative: it cannot say whether Sonnet is generous to Claude or the others are harsh (ROUND4_DESIGN 17b).",
+   "note": "The sample all three families scored: 1 to 5 sessions per model, too few for a per-model figure. Nothing in the overview is adjusted by it. The tilt is relative: it cannot say whether Sonnet is generous to Claude or the others are harsh (ROUND4_DESIGN 17b). ChatGPT's figures on every session are in round4_second_judge.json (ROUND4_DESIGN 24).",
    "method": "each judge rescaled to Sonnet's mean and sd over these sessions; tilt = mean(Sonnet - other) on Claude sessions minus the same on non-Claude sessions (vs_non_claude, the size a Claude-only correction uses) or on all sessions (vs_all_sessions); SE and 95% interval from 10000 draws that resample models with replacement, numpy default_rng(20260926), rescaling inside each draw",
    "model_draws": 10000,
    "model_draws_skipped": 0,
@@ -3954,6 +4789,10 @@
   "r4_full_20260924_150115.json": "2ef5c7fcc56ed774",
   "r4_full_20260924_123104.json": "956fcd194e98b349",
   "r4_full_20260921_180507.json": "48d5c3827f4af036",
-  "r4_full_20260806_095625.json": "35f8b96394d3798b"
+  "r4_full_20260806_095625.json": "35f8b96394d3798b",
+  "judge_full_chatgpt/merged/external_part_app.json": "e0b5e432f47214a6",
+  "judge_full_chatgpt/merged/external_part_reused_inc1_chatgpt.json": "a3643f112bf7a753",
+  "judge_full_chatgpt/merged/external_part_reused_round2_chatgpt.json": "6ff475f055c27932",
+  "judge_full_chatgpt/merged/_manifest.json": "2b7fe262127d13ea"
  }
 }

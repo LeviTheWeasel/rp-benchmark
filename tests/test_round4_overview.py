@@ -480,10 +480,84 @@ class Columns(unittest.TestCase):
             _, base = O.build(root, boot=5)
             _, ov = O.build(root, boot=5, cross=[("second", str(cross))])
             self.assertEqual(set(base), set(ov))
-            self.assertEqual(ov["cross_judges"]["second"]["flagged"], ["m_mid"])
+            top = ov["cross_judges"]["second"]
+            self.assertEqual(top["flagged"], ["m_mid"])
+            # offset: 0.8 for every model, less m_mid's 0.6 spread over 4 models
+            self.assertAlmostEqual(top["scale_offset"]["value"], 0.8 - 0.6 / 4, places=3)
             row = next(r for r in ov["rows"] if r["model"] == "m_mid")
-            self.assertTrue(row["cross_judges"]["second"]["flag"])
+            c = row["cross_judges"]["second"]
+            self.assertTrue(c["flag"])
+            self.assertAlmostEqual(c["difference"], 0.6 - 0.6 / 4, places=3)
+            self.assertEqual(c["tier"], O.tier_letter(c["mean"]))
+            self.assertFalse(c["tier_depends_on_judge"])     # 3.9 is A either way
+            self.assertEqual(top["tier_depends_on_judge"], [])
+            short = next(r for r in ov["unranked"] if r["model"] == "m_short")
+            sc = short["cross_judges"]["second"]
+            self.assertIsNone(sc["tier"])
+            self.assertIsNone(sc["tier_depends_on_judge"])
+            self.assertEqual(sc["n_sessions"], 4)
             self.assertIn("Second judge (second)", O.render_markdown(ov))
+            self.assertEqual(base["columns"]["judge_tier"]["caveats"][0], O.ONE_JUDGE_CAVEAT)
+
+    def test_a_letter_that_depends_on_the_judge_is_marked(self):
+        with tempfile.TemporaryDirectory() as t:
+            corpus = Corpus(Path(t) / "results")
+            root = corpus.write()
+            cross = Path(t) / "second.jsonl"
+            with open(cross, "w") as fh:
+                for r in corpus.rows:
+                    shift = 0.6 if r["model"] == "m_low" else 0.0
+                    fh.write(json.dumps({"session_id": r["session_id"],
+                                         "overall": r["overall"] - 0.8 + shift,
+                                         "transcript_hash": r["transcript_hash"]}) + "\n")
+            _, ov = O.build(root, boot=5, cross=[("chatgpt", str(cross))])
+            top = ov["cross_judges"]["chatgpt"]
+            # offset 0.8 - 0.6/4 = 0.65. m_low: Sonnet 3.4 (B), the other judge
+            # after the offset 3.85 (A). m_mid: Sonnet 3.9 (A), after the offset
+            # 3.75 (B): the offset that lifts m_low is paid for by the others.
+            self.assertEqual(top["tier_depends_on_judge"], ["m_low", "m_mid"])
+            self.assertEqual(top["same_letter_after_offset"], top["models_with_a_figure"] - 2)
+            row = next(r for r in ov["rows"] if r["model"] == "m_low")
+            self.assertTrue(row["cross_judges"]["chatgpt"]["tier_depends_on_judge"])
+            self.assertEqual(row["judge_tier"]["tier"], "B")      # the letter is Sonnet's
+            md = O.render_markdown(ov)
+            self.assertIn("tier depends on judge", md)
+            cav = ov["columns"]["judge_tier"]["caveats"][0]
+            self.assertIn("Two judge families", cav)
+            self.assertIn("ChatGPT via Codex (subscription, blind)", cav)
+
+    def test_the_full_chatgpt_pass_is_the_default_column(self):
+        with tempfile.TemporaryDirectory() as t:
+            corpus = Corpus(Path(t) / "results")
+            root = corpus.write()
+            pkg = root / O.DEFAULT_CROSS
+            pkg.mkdir(parents=True)
+            keymap = {"x%03d" % i: r["session_id"] for i, r in enumerate(corpus.rows)}
+            write_json({"keymap": keymap,
+                        "transcript_hashes": {r["session_id"]: r["transcript_hash"]
+                                              for r in corpus.rows},
+                        "sources": {k: "judge_full_chatgpt/app_pass" for k in keymap}},
+                       pkg / "_manifest.json")
+            write_json([{"session_id": k, "overall": 2.5} for k in keymap],
+                       pkg / "external_part_app.json")
+            code, _, _ = quiet_main(["--results", str(root), "--boot", "5"])
+            self.assertEqual(code, 0)
+            ov = json.loads((root / O.OUT_OVERVIEW).read_text())
+            self.assertEqual(set(ov["cross_judges"]), {"chatgpt"})
+            self.assertEqual(ov["cross_judges"]["chatgpt"]["rows_by_source"],
+                             {"judge_full_chatgpt/app_pass": len(corpus.rows)})
+            self.assertIn("judge_full_chatgpt/merged/_manifest.json", ov["inputs"])
+            code, _, _ = quiet_main(["--results", str(root), "--boot", "5",
+                                     "--no-cross-judge"])
+            self.assertEqual(code, 0)
+            ov = json.loads((root / O.OUT_OVERVIEW).read_text())
+            self.assertEqual(ov["cross_judges"], {})
+
+    def test_scale_offset_weighs_each_model_once(self):
+        self.assertAlmostEqual(O.scale_offset({"a": 4.0, "b": 3.0}, {"a": 3.0, "b": 2.5}), 0.75)
+        self.assertAlmostEqual(O.scale_offset({"a": 4.0, "b": 3.0, "c": 1.0},
+                                              {"a": 3.0, "b": 2.5}), 0.75)
+        self.assertIsNone(O.scale_offset({"a": 4.0}, {"b": 3.0}))
 
 
 def r4_session(model, seed, track, labels, error=False):

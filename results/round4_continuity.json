@@ -3196,83 +3196,111 @@
   }
  },
  "cross_family": {
-  "method": "OLS of judge score on [1, reference, reference^2, is-Claude model] over sessions every judge scored on the same transcript; blank scenes left out. SE is the session OLS SE; the interval resamples models (all their sessions come along), 4000 draws.",
+  "method": "OLS of judge score on [1, reference, reference^2, is-Claude model] over sessions every judge scored on the same transcript; blank scenes left out. SE is the session OLS SE; the interval resamples models (all their sessions come along), 4000 draws. `rescaled_difference`: the judge minus the reference rescaled to the judge's mean and sd, Claude sessions minus the rest, which does not depend on which score is regressed on which (analyze_round4_overview._tilts), on its own 4000 model draws.",
   "references": {
    "chatgpt": {
-    "label": "ChatGPT, blind passes",
+    "label": "ChatGPT via Codex (subscription, blind), every session",
+    "coverage": "full_corpus",
     "stored_old_scores": {
-     "sessions": 110,
+     "sessions": 777,
      "models": 42,
-     "claude_sessions": 23,
+     "claude_sessions": 150,
      "claude_models": 8,
-     "r_reference_old": 0.65,
-     "r_reference_new": 0.72,
+     "r_reference_old": 0.616,
+     "r_reference_new": 0.73,
      "old_judge": {
-      "claude_coefficient": 0.123,
-      "se": 0.084,
-      "t": 1.5,
+      "claude_coefficient": 0.176,
+      "se": 0.038,
+      "t": 4.6,
       "ci95_model_resampled": [
-       -0.006,
-       0.303
+       0.123,
+       0.248
       ]
      },
      "new_judge": {
-      "claude_coefficient": 0.428,
-      "se": 0.104,
-      "t": 4.1,
+      "claude_coefficient": 0.434,
+      "se": 0.04,
+      "t": 10.9,
       "ci95_model_resampled": [
-       0.225,
-       0.616
-      ]
-     },
-     "new_minus_old": {
-      "claude_coefficient": 0.304,
-      "se": 0.089,
-      "t": 3.4,
-      "ci95_model_resampled": [
-       0.138,
-       0.466
-      ]
-     }
-    },
-    "all_old_scores": {
-     "sessions": 203,
-     "models": 68,
-     "claude_sessions": 27,
-     "claude_models": 9,
-     "r_reference_old": 0.611,
-     "r_reference_new": 0.705,
-     "old_judge": {
-      "claude_coefficient": 0.104,
-      "se": 0.086,
-      "t": 1.2,
-      "ci95_model_resampled": [
-       -0.015,
-       0.25
-      ]
-     },
-     "new_judge": {
-      "claude_coefficient": 0.362,
-      "se": 0.098,
-      "t": 3.7,
-      "ci95_model_resampled": [
-       0.194,
-       0.513
+       0.343,
+       0.539
       ]
      },
      "new_minus_old": {
       "claude_coefficient": 0.258,
-      "se": 0.084,
-      "t": 3.1,
+      "se": 0.037,
+      "t": 7.0,
       "ci95_model_resampled": [
+       0.181,
+       0.327
+      ]
+     },
+     "rescaled_difference": {
+      "old_judge": -0.013,
+      "new_judge": 0.253,
+      "new_minus_old": 0.266,
+      "new_minus_old_ci95_model_resampled": [
+       0.194,
+       0.347
+      ],
+      "new_judge_ci95_model_resampled": [
        0.117,
-       0.4
+       0.392
+      ]
+     }
+    },
+    "all_old_scores": {
+     "sessions": 1325,
+     "models": 70,
+     "claude_sessions": 169,
+     "claude_models": 9,
+     "r_reference_old": 0.568,
+     "r_reference_new": 0.711,
+     "old_judge": {
+      "claude_coefficient": 0.149,
+      "se": 0.035,
+      "t": 4.2,
+      "ci95_model_resampled": [
+       0.105,
+       0.204
+      ]
+     },
+     "new_judge": {
+      "claude_coefficient": 0.379,
+      "se": 0.036,
+      "t": 10.5,
+      "ci95_model_resampled": [
+       0.292,
+       0.472
+      ]
+     },
+     "new_minus_old": {
+      "claude_coefficient": 0.231,
+      "se": 0.035,
+      "t": 6.6,
+      "ci95_model_resampled": [
+       0.158,
+       0.301
+      ]
+     },
+     "rescaled_difference": {
+      "old_judge": -0.055,
+      "new_judge": 0.209,
+      "new_minus_old": 0.264,
+      "new_minus_old_ci95_model_resampled": [
+       0.197,
+       0.336
+      ],
+      "new_judge_ci95_model_resampled": [
+       0.054,
+       0.354
       ]
      }
     }
    },
    "gemini": {
-    "label": "Gemini, API passes",
+    "label": "Gemini, API passes (the 203-session sample)",
+    "coverage": "sample",
     "stored_old_scores": {
      "sessions": 110,
      "models": 42,
@@ -3305,6 +3333,19 @@
       "ci95_model_resampled": [
        -0.029,
        0.276
+      ]
+     },
+     "rescaled_difference": {
+      "old_judge": -0.098,
+      "new_judge": 0.121,
+      "new_minus_old": 0.219,
+      "new_minus_old_ci95_model_resampled": [
+       0.074,
+       0.359
+      ],
+      "new_judge_ci95_model_resampled": [
+       0.001,
+       0.223
       ]
      }
     },
@@ -3341,11 +3382,24 @@
        -0.025,
        0.236
       ]
+     },
+     "rescaled_difference": {
+      "old_judge": -0.136,
+      "new_judge": 0.107,
+      "new_minus_old": 0.243,
+      "new_minus_old_ci95_model_resampled": [
+       0.105,
+       0.376
+      ],
+      "new_judge_ci95_model_resampled": [
+       -0.003,
+       0.193
+      ]
      }
     }
    }
   },
-  "reading": "Positive means the Claude judge scores Claude-model sessions higher than the reference does, relative to non-Claude sessions at the same reference score. The new judge's coefficient is larger than the old judge's against both references; read it as a Claude-family uplift in the new judge that the old judge shows less of, not as proof of which judge is right."
+  "reading": "Positive means the Claude judge scores Claude-model sessions higher than the reference does, relative to non-Claude sessions at the same reference score. Against ChatGPT via Codex (subscription, blind), every session, 1325 sessions (169 Claude, from 9 models): new judge +0.38 [0.29, 0.47], old judge +0.15 [0.10, 0.20], new minus old +0.23 [0.16, 0.30]; on the direction-free rescaled difference new +0.21 [0.05, 0.35], old -0.06, new minus old +0.26 [0.20, 0.34]. Against Gemini, API passes (the 203-session sample), 203 sessions (27 Claude, from 9 models): new judge +0.21 [0.08, 0.33], old judge +0.10 [0.00, 0.22], new minus old +0.11 [-0.03, 0.24]; on the direction-free rescaled difference new +0.11 [0.00, 0.19], old -0.14, new minus old +0.24 [0.10, 0.38]. The regression's size depends on which score is regressed on which (round4_second_judge.json runs it both ways); the rescaled difference does not. Read a positive figure as a Claude-family uplift in that judge relative to the reference, not as proof of which judge is right."
  },
  "willingness": {
   "comparable": false,
@@ -3387,8 +3441,11 @@
   "models": 20,
   "models_all_identical": 19
  },
- "pending": {
-  "chatgpt_full_package": "results/judge_full_chatgpt: a blind package over all 1,328 sessions, no parts returned yet; when it returns it is a non-Claude column for every model"
+ "second_judge": {
+  "status": "done",
+  "package": "results/judge_full_chatgpt/merged",
+  "what": "ChatGPT via Codex (subscription, blind) scored every craft session: a non-Claude column for every model",
+  "where": "round4_overview.json cross_judges.chatgpt (per-model mean, raw letter, tier_depends_on_judge); round4_second_judge.json (the analysis); cross_family above (the Claude check on every session)"
  },
  "not_published": [
   "a per-model translation of the new judge onto the old scale",
@@ -3403,7 +3460,7 @@
   "round3gen_R3_nsfw.json": "b321b0e299d31b62",
   "round3_nsfw_leaderboard.json": "83aabd9d894e6679",
   "multiturn_arena_bayesian.json": "aa774412fa70a946",
-  "round4_overview.json": "8c54bcc9bb5e0f79",
+  "round4_overview.json": "2248046200f85287",
   "round4_willingness_leaderboard.json": "433018785f96df8f",
   "craft_baseline_20260926_050941.json": "85ca536deeab078a",
   "craft_baseline_20260924_231143.json": "5d810de4576db4e0",
@@ -3413,6 +3470,34 @@
   "craft_baseline_20260924_122936.json": "09c7fd3c6e91f8bc",
   "craft_baseline_20260921_174824.json": "3f4c94d84b2f05ef",
   "craft_baseline_20260921_125936.json": "04da84eed4affc53",
-  "multiturn_merged_all_v2.json": "8f0b319b2ffe6a4d"
+  "multiturn_merged_all_v2.json": "8f0b319b2ffe6a4d",
+  "judge_full_chatgpt/merged/external_part_app.json": "e0b5e432f47214a6",
+  "judge_full_chatgpt/merged/external_part_reused_inc1_chatgpt.json": "a3643f112bf7a753",
+  "judge_full_chatgpt/merged/external_part_reused_round2_chatgpt.json": "6ff475f055c27932",
+  "judge_full_chatgpt/merged/_manifest.json": "2b7fe262127d13ea",
+  "judge_round2_gemini/api_pass/external_part01.json": "b792eae112f812aa",
+  "judge_round2_gemini/api_pass/external_part02.json": "a64761f0cc613e65",
+  "judge_round2_gemini/api_pass/external_part03.json": "aa01a40f6c782acb",
+  "judge_round2_gemini/api_pass/external_part04.json": "e5fe4ee7b5732789",
+  "judge_round2_gemini/api_pass/external_part05.json": "da638431321f17d4",
+  "judge_round2_gemini/api_pass/external_part06.json": "a1d3df98bb3d6a88",
+  "judge_round2_gemini/api_pass/external_part07.json": "49ece783e230dab7",
+  "judge_round2_gemini/api_pass/external_part08.json": "e1c870f6312a8475",
+  "judge_round2_gemini/api_pass/external_part09.json": "024448c812bcf187",
+  "judge_round2_gemini/api_pass/external_part10.json": "d45ffa0da37bbed0",
+  "judge_round2_gemini/api_pass/external_part11.json": "a630db6b7e0dab9d",
+  "judge_round2_gemini/api_pass/external_part12.json": "5526b432d4d12ce4",
+  "judge_round2_gemini/_manifest.json": "0f2ee5f437e5f879",
+  "judge_inc1_gemini/api_pass/external_part01.json": "86debbae9480a4ba",
+  "judge_inc1_gemini/api_pass/external_part02.json": "e9475bf2acb06f13",
+  "judge_inc1_gemini/api_pass/external_part03.json": "993cfe1e73c72a19",
+  "judge_inc1_gemini/api_pass/external_part04.json": "99b5939a290b2f97",
+  "judge_inc1_gemini/api_pass/external_part05.json": "59de7cabbb6eb1ed",
+  "judge_inc1_gemini/api_pass/external_part06.json": "7be15273eef02767",
+  "judge_inc1_gemini/api_pass/external_part07.json": "7a08fed3ce81e0f3",
+  "judge_inc1_gemini/api_pass/external_part08.json": "fa4de95cef3c0a7a",
+  "judge_inc1_gemini/api_pass/external_part09.json": "96fafa731162a3f2",
+  "judge_inc1_gemini/api_pass/external_part10.json": "9ab47fd0d6a54f2a",
+  "judge_inc1_gemini/_manifest.json": "1675c57308d15602"
  }
 }

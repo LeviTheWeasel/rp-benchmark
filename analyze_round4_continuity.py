@@ -32,7 +32,8 @@ does not, in results/round4_continuity.json:
   model_drift     round-3 standard (June) vs round 4 (September): same seeds,
                   same simulator, same old judge, regenerated transcripts
   cross_family    how much more each Claude judge scores Claude-model sessions
-                  than a ChatGPT or Gemini reference does, same transcripts
+                  than a ChatGPT or Gemini reference does, same transcripts:
+                  ChatGPT on every session, Gemini on the 203-session sample
   willingness     why round 3's refusal % and J are not one series
 
 What it will not write, by decision (docs/ROUND4_DESIGN.md sec 23): no
@@ -59,7 +60,8 @@ Inputs, read-only:
     results/multiturn_arena_bayesian.json   round-2 human arena, final
     results/round4_overview.json            v2 tiers and J cells
     results/round4_willingness_leaderboard.json   J ranks
-    results/judge_{round2,inc1}_{chatgpt,gemini}/  cross-family references
+    results/judge_full_chatgpt/merged/      cross-family reference, every session
+    results/judge_{round2,inc1}_gemini/     cross-family reference, the sample
 
 Old-judge scores count only on an identical judging task: a stored score
 where judge_legacy_sonnet4.load_corpus finds the same judge_view_hash, or a
@@ -110,10 +112,15 @@ J_FILE = "round4_willingness_leaderboard.json"
 V2_FILE = "session_judge_v2.jsonl"
 LEGACY_FILE = "session_judge_v1_legacy.jsonl"
 
-# Blind passes only: the not-blind ChatGPT package 1 is left out.
+# Blind passes only: the not-blind ChatGPT package 1 is left out. ChatGPT is
+# the full-corpus pass (every session: the Codex rows plus the reused rows of
+# the earlier blind passes on identical text); Gemini exists only on the
+# sample all three families scored, and is labelled so.
 REFERENCES = {
-    "chatgpt": ("ChatGPT, blind passes", OV.THREE_FAMILY["chatgpt"]),
-    "gemini": ("Gemini, API passes", OV.THREE_FAMILY["gemini"]),
+    "chatgpt": ("ChatGPT via Codex (subscription, blind), every session",
+                [("judge_full_chatgpt", "merged")], "full_corpus"),
+    "gemini": ("Gemini, API passes (the 203-session sample)",
+               OV.THREE_FAMILY["gemini"], "sample"),
 }
 
 # Round 3's roster note and the owl_alpha decision (2026-09-27).
@@ -594,18 +601,48 @@ def ols_claude(y, ref, claude):
     return float(beta[3]), float(np.sqrt(cov[3, 3]))
 
 
+def rescaled_tilts(y, ref, claude, models, B, rng_seed):
+    """Direction-free check beside the regression: the judge minus the
+    reference rescaled to the judge's mean and sd, Claude sessions minus the
+    rest (the overview's tilt, analyze_round4_overview._tilts). Point estimate
+    and a model-resampled 95% interval; y may be several judges (rows), all on
+    the same draws."""
+    roster = sorted(set(models))
+    midx = np.array([roster.index(m) for m in models])
+    rng = np.random.default_rng(rng_seed)
+    counts = np.stack([np.bincount(rng.integers(0, len(roster), len(roster)),
+                                   minlength=len(roster)) for _ in range(B)])
+    W = counts[:, midx].astype(float)
+    ok = ((W * claude).sum(1) > 0) & ((W * ~claude).sum(1) > 0)
+    W = W[ok]
+    one = np.ones((1, len(ref)))
+    pts, draws = [], []
+    for v in y:
+        pts.append(float(OV._tilts(v, ref, claude, one)[1][0]))
+        draws.append(OV._tilts(v, ref, claude, W)[1])
+    return pts, draws
+
+
 def cross_family(results, canon, v1, v2, v1_src, rng_seed=RNG_SEED, B=None):
     """Claude-session coefficient of each Claude judge over a non-Claude
     reference, controlling for the reference score and its square, on
-    hash-identical transcripts (skeptic's table, recomputed)."""
+    hash-identical transcripts (skeptic's table, recomputed), with the
+    direction-free rescaled difference beside it.
+
+    ChatGPT is the full-corpus pass (every session); Gemini exists only on the
+    sample all three families scored and is labelled as that sample."""
     B = XFAM_BOOT if B is None else B
     out = dict(method="OLS of judge score on [1, reference, reference^2, is-Claude "
                       "model] over sessions every judge scored on the same "
                       "transcript; blank scenes left out. SE is the session OLS "
                       "SE; the interval resamples models (all their sessions come "
-                      "along), %d draws." % B,
+                      "along), %d draws. `rescaled_difference`: the judge minus the "
+                      "reference rescaled to the judge's mean and sd, Claude "
+                      "sessions minus the rest, which does not depend on which "
+                      "score is regressed on which (analyze_round4_overview._tilts), "
+                      "on its own %d model draws." % (B, B),
                references={})
-    for fam, (label, parts) in REFERENCES.items():
+    for fam, (label, parts, coverage) in REFERENCES.items():
         got = {}
         for pkg, sub in parts:
             d = Path(results) / pkg / sub
@@ -615,9 +652,10 @@ def cross_family(results, canon, v1, v2, v1_src, rng_seed=RNG_SEED, B=None):
             s, _ = OV.load_external_scores(d, canon)
             got.update(s)
         if got is None:
-            out["references"][fam] = dict(label=label, skipped="package missing")
+            out["references"][fam] = dict(label=label, coverage=coverage,
+                                          skipped="package missing")
             continue
-        fam_out = dict(label=label)
+        fam_out = dict(label=label, coverage=coverage)
         for scope, keep in (("stored_old_scores", lambda sid: v1_src[sid] != "backfill_2026_09_27"),
                             ("all_old_scores", lambda sid: True)):
             sids = sorted(sid for sid in got if sid in v1 and sid in v2
@@ -656,16 +694,70 @@ def cross_family(results, canon, v1, v2, v1_src, rng_seed=RNG_SEED, B=None):
                                    t=round(coef / se, 1),
                                    ci95_model_resampled=[round(float(lo), 3),
                                                          round(float(hi), 3)])
+            (t_old, t_new), (d_old, d_new) = rescaled_tilts([a, b], ref, cl, models,
+                                                            B, rng_seed)
+            block["rescaled_difference"] = dict(
+                old_judge=round(t_old, 3), new_judge=round(t_new, 3),
+                new_minus_old=round(t_new - t_old, 3),
+                new_minus_old_ci95_model_resampled=[
+                    round(float(v), 3) for v in np.percentile(d_new - d_old, [2.5, 97.5])],
+                new_judge_ci95_model_resampled=[
+                    round(float(v), 3) for v in np.percentile(d_new, [2.5, 97.5])])
             fam_out[scope] = block
         out["references"][fam] = fam_out
-    out["reading"] = ("Positive means the Claude judge scores Claude-model sessions "
-                      "higher than the reference does, relative to non-Claude "
-                      "sessions at the same reference score. The new judge's "
-                      "coefficient is larger than the old judge's against both "
-                      "references; read it as a Claude-family uplift in the new "
-                      "judge that the old judge shows less of, not as proof of "
-                      "which judge is right.")
+    out["reading"] = cross_family_reading(out["references"])
     return out
+
+
+def reference_files(results):
+    """The cross-family reference files, relative to results/, for `inputs`."""
+    out = []
+    for _, parts, _ in REFERENCES.values():
+        for pkg, sub in parts:
+            d = Path(results) / pkg / sub
+            man = d / "_manifest.json"
+            if not man.exists():
+                man = d.parent / "_manifest.json"
+            for f in sorted(d.glob("external_part*.json")) + ([man] if man.exists() else []):
+                out.append(str(f.relative_to(results)))
+    return out
+
+
+def cross_family_reading(refs):
+    """The block in words, from its own numbers."""
+    def f2(x):
+        return ("%+.2f" % x).replace("-0.00", "+0.00")
+
+    def iv(x):
+        return ("[%.2f, %.2f]" % tuple(x)).replace("-0.00", "0.00")
+    parts = ["Positive means the Claude judge scores Claude-model sessions higher "
+             "than the reference does, relative to non-Claude sessions at the same "
+             "reference score."]
+    for fam, r in refs.items():
+        b = r.get("all_old_scores") or {}
+        if "new_judge" not in b:
+            continue
+        rd = b["rescaled_difference"]
+        parts.append(
+            "Against %s, %d sessions (%d Claude, from %d models): new judge %s %s, "
+            "old judge %s %s, new minus old %s %s; on the direction-free rescaled "
+            "difference new %s %s, old %s, new minus old %s %s."
+            % (r["label"], b["sessions"], b["claude_sessions"], b["claude_models"],
+               f2(b["new_judge"]["claude_coefficient"]),
+               iv(b["new_judge"]["ci95_model_resampled"]),
+               f2(b["old_judge"]["claude_coefficient"]),
+               iv(b["old_judge"]["ci95_model_resampled"]),
+               f2(b["new_minus_old"]["claude_coefficient"]),
+               iv(b["new_minus_old"]["ci95_model_resampled"]),
+               f2(rd["new_judge"]), iv(rd["new_judge_ci95_model_resampled"]),
+               f2(rd["old_judge"]), f2(rd["new_minus_old"]),
+               iv(rd["new_minus_old_ci95_model_resampled"])))
+    parts.append("The regression's size depends on which score is regressed on "
+                 "which (round4_second_judge.json runs it both ways); the rescaled "
+                 "difference does not. Read a positive figure as a Claude-family "
+                 "uplift in that judge relative to the reference, not as proof of "
+                 "which judge is right.")
+    return " ".join(parts)
 
 
 def willingness_block(r3t, jfile):
@@ -938,17 +1030,22 @@ def build(results, rng_seed=RNG_SEED, boot=BOOT):
         cross_family=cross_family(results, canon, v1, v2, v1_src, rng_seed=rng_seed),
         willingness=willingness_block(r3t, jfile),
         human_arena=hum_meta,
-        pending=dict(
-            chatgpt_full_package=("results/judge_full_chatgpt: a blind package over "
-                                  "all 1,328 sessions, no parts returned yet; when "
-                                  "it returns it is a non-Claude column for every "
-                                  "model")),
+        second_judge=dict(
+            status="done",
+            package="results/judge_full_chatgpt/merged",
+            what="ChatGPT via Codex (subscription, blind) scored every craft session: a "
+                 "non-Claude column for every model",
+            where="round4_overview.json cross_judges.chatgpt (per-model mean, raw "
+                  "letter, tier_depends_on_judge); round4_second_judge.json (the "
+                  "analysis); cross_family above (the Claude check on every "
+                  "session)"),
         not_published=["a per-model translation of the new judge onto the old scale",
                        "a synthetic composite", "a cross-round refusal column",
                        "a rank on the old judge"],
         inputs={name: OV.sha(results / name) for name in (
             V2_FILE, LEGACY_FILE, R3_STANDARD, R3_NSFW, R3_TABLE, ARENA, OVERVIEW,
-            J_FILE, *[os.path.basename(p) for p in OV.session_sources(results)])
+            J_FILE, *[os.path.basename(p) for p in OV.session_sources(results)],
+            *reference_files(results))
             if (results / name).exists()},
     )
     hits = list(forbidden_hits(out))

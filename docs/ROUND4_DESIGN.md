@@ -2020,6 +2020,10 @@ On the rubric's own terms it is the stricter judge that is following the text.
 
 ### 15b. What that does to the leaderboard
 
+> Re-measured on every session in §24d: inside the A letter the two judges'
+> model means correlate at +0.08 (37 models), and their disagreement is 2.13
+> times the spread between models.
+
 Per-model agreement over 24 models looks reassuring at r = +0.889 — until it
 is split:
 
@@ -2326,6 +2330,10 @@ real, fixing it was right, and it was not the explanation for anything.
 
 ### 17b. The brand effect survived blinding, so it is not the label
 
+> On every session (§24e): ChatGPT scores OpenAI models' sessions +0.62
+> [0.41, 0.81] above sessions Sonnet scored the same, on 140 sessions from 7
+> models.
+
 | vendor | n | pass 1 gap | pass 2 gap |
 |---|---|---|---|
 | OpenAI | 7 | +0.37 | +0.23 |
@@ -2370,6 +2378,9 @@ both edges of it are somebody's reproducible answer.
 
 
 ## 18. Three families — Sonnet and Gemini agree, ChatGPT is the outlier
+
+> ChatGPT's side of this is re-measured on every session in §24; Gemini's
+> exists only on this sample.
 
 Gemini 3.7 Flash judged the same 120 sessions, giving three families on one
 sample. 117 comparable after dropping three that force every judge to the
@@ -3066,7 +3077,7 @@ from needing one.
 | Round-3 NSFW table vs new judge | ρ 0.87 [0.71, 0.95], n=37; 0.78 [0.55, 0.90] without finetunes (n=31) |
 | Humans vs old / new judge, identical transcripts | 0.60 [0.09, 0.89] / 0.52 [-0.01, 0.82], n=19; difference -0.09 [-0.24, 0.03] |
 | Humans vs J | undetermined, n=8 |
-| Claude-session coefficient, new judge over old, vs ChatGPT / Gemini | +0.30 [0.14, 0.47] / +0.13 [-0.03, 0.28] (110 stored-score sessions) |
+| Claude-session coefficient, new judge over old, vs ChatGPT / Gemini | ChatGPT on every session (1,325): +0.23 [0.16, 0.30], direction-free +0.26 [0.20, 0.34]. Gemini, 203-session sample only: +0.11 [-0.03, 0.24], direction-free +0.24 [0.10, 0.38] (§24f; the first reading, on 110 sessions, was +0.30 [0.14, 0.47] / +0.13 [-0.03, 0.28]) |
 | Round-3 refusal % vs J | ρ 0.30 [-0.04, 0.58], n=27: not one series |
 
 The skeptic review of the first continuity proposal corrected several claims
@@ -3131,9 +3142,10 @@ text they were cast on and new models land on the old scale.
 
 ### 23d. Still open
 
-- **A non-Claude column for every model.** `results/judge_full_chatgpt` is a
-  blind package over all 1,328 sessions; no parts have come back. When they
-  do, it is a $0 cross-family column for all 70 craft models.
+- **Done (E2, 2026-09-28): a non-Claude column for every model.** ChatGPT,
+  run blind in Codex on a ChatGPT subscription, scored all 1,328 craft
+  sessions (`results/judge_full_chatgpt`, $0). It is a column in the overview and on
+  the cards, and §24 is what it says.
 - **A willingness bridge.** Only the round-4 per-rung classifier run over
   round-3 transcripts (about 9,400 turns) would link the two refusal figures.
   Not run.
@@ -3143,3 +3155,266 @@ text they were cast on and new models land on the old scale.
   only on the VAUDEVILLE branch `claude/plotpoints-round4` and is not yet
   deployed. The votes are not in this repo, and round 3 has not closed; a
   round-3 human column waits for the final snapshot.
+
+
+## 24. A second judge family over the whole corpus
+
+> **Added 2026-09-28.** Levi's decision E2 (before publishing the tiers, have a
+> judge of another family score every session, rather than publish them on a
+> single judge from the same vendor as nine of the models, with a caveat) is
+> done. ChatGPT, run blind in Codex on a ChatGPT subscription, scored all
+> 1,328 craft sessions. Figures are from `analyze_round4_second_judge.py`
+> (`results/round4_second_judge.json`), the overview's `chatgpt` column
+> (`results/round4_overview.json`) and the continuity file's `cross_family`.
+
+The package was the blind one §15f describes, at full size: opaque ids, a
+shuffled order, eleven chunks of about 100 sessions, with `validate_output.py`
+inside each zip. It was planned as one ChatGPT conversation per chunk, and it
+did not run that way. The eleven returned reports
+(`results/judge_full_chatgpt/app_pass/reports/`; the directory keeps the name
+it got when the run was planned for the ChatGPT app) describe one coordinating
+session that drew one seed for the whole run (13988562299819289817), used it
+to shuffle the order the chunks were launched in, and, as Levi asked, gave
+each whole chunk to its own clean-context agent, three at a time. Each agent
+scored every part of its chunk alone. The reports also disclose:
+
+- **Interruptions.** A usage-limit stop in chunks 01, 09 and 10, and context
+  compactions in 01, 02, 03, 08 and 11. Each judge says it resumed from its
+  own saved rows and notes.
+- **An earlier pass on part 01.** The coordinator had scored part 01 of chunk
+  01 itself before handing the chunks out. The chunk 01 judge says it never
+  saw that pass. Those ten rows were not returned or imported, and the
+  returned rows differ from them on every session.
+- **A shared workspace.** The agents worked in one workspace, which chunk
+  06's judge notes "could contain other work". Every judge says it consulted
+  no other chunk or judge.
+- **A late fix.** Chunk 09's first validation found 13 rows without their
+  standard dimensions; the judge re-read those sessions and scored them
+  before returning the file.
+
+Several reports call one agent per chunk a deviation from TASK.md, whose
+random assignment is for parts when a chunk is split; no chunk was split. The
+independence of the eleven judges rests on their own reports.
+
+What this does not change: the importer's checks are on the rows, not on how
+they were produced. All 1,149 rows came back and passed them (schema, keymap,
+transcript hash) with no problem. The other 179 sessions already had a blind
+ChatGPT row on byte-identical text from the earlier blind passes of §17 and
+the increment (95 from `judge_round2_chatgpt`, 84 from `judge_inc1_chatgpt`),
+and those rows are reused. 24 sessions were scored in both, as a bridge
+(24a). Its r +0.890 stands as measured. The earlier passes were also a
+coordinator handing parts to three clean-context raters (their `METHOD.md`),
+and where they ran is not recorded, so the bridge compares two runs with
+different sets of raters, not two ways of invoking the judge. What it does
+change: ChatGPT's column is eleven raters, one per chunk, and they do not
+calibrate identically. The session mean gap to Sonnet
+runs from 0.75 to 1.13 by chunk, about twice the spread sampling alone gives.
+Every chunk is a random slice of the shuffled order, with Claude and OpenAI
+sessions in all eleven, so that is noise spread over every model rather than
+a vendor pattern: centring each chunk on the common gap leaves the offset at
+0.943 and the same 19 letters depending on the judge, and moves the per-model
+r from +0.870 to +0.871. Codex did not record which model served the
+coordinator or the agents.
+
+Everything below uses the overview's own basis: the model + seed fit for each
+judge with its own seed effects, so the seven 12-seed models are set on all 20
+seeds the way their letter is. Intervals resample models (every session of a
+drawn model comes along) unless they are called seed intervals, which replay
+the overview's own seed draws.
+
+### 24a. A second run barely moves ChatGPT
+
+On the 24 bridge sessions the Codex pass and the earlier blind passes agree
+at r = +0.890, mean difference -0.08 (Codex minus earlier), median |d| 0.20,
+96% within 0.5. Each side was a coordinator handing work to clean-context
+raters: eleven agents, one per chunk, in the Codex pass, and three raters in
+each earlier pass (their `METHOD.md`, which does not say where those passes
+ran). So this compares two runs with different sets of raters, not two ways
+of invoking the judge.
+The two earlier passes against each other on the 120-session sample gave
++0.935 and 0.15 (17c); Gemini moved 0.39 between its chat-client and API
+passes (18c). So mixing the two runs is a small effect, and the sensitivity
+checks agree: dropping the 179 reused rows moves the offset from 0.943 to
+0.954 and the per-model r from +0.870 to +0.866, and changes the list of
+letters that depend on the judge only at its edges (below). Scoring the
+bridge sessions on their rows from the earlier passes instead changes nothing
+that is reported.
+
+### 24b. Agreement on every session
+
+| Dimension | per session (n=1,325) r [95%] | ρ | per model (n=69) r [95%] | ρ [95%] |
+|---|---|---|---|---|
+| overall | +0.71 [0.62, 0.77] | +0.65 | **+0.87 [0.79, 0.93]** | +0.81 [0.67, 0.89] |
+| S.3 momentum | +0.70 [0.64, 0.75] | +0.67 | +0.91 [0.87, 0.94] | +0.91 [0.83, 0.94] |
+| S.1 consistency | +0.58 [0.46, 0.66] | +0.50 | +0.85 [0.74, 0.91] | +0.65 [0.46, 0.79] |
+| S.5 agency | +0.47 [0.39, 0.54] | +0.38 | +0.60 [0.42, 0.72] | +0.44 [0.19, 0.65] |
+
+Three sessions both judges put at the 1.0 floor are left out, as in §15. The
+session figure matches the sample's (+0.716 on 117, §17a). The per-model one is
+higher than the sample's +0.797 because each model now has all its sessions
+rather than 1 to 5. S.5 agency is the weakest: the rubric never defines the
+unit of an agency violation, and the judges resolve that differently (§15d).
+
+### 24c. One offset, and 19 letters that move
+
+ChatGPT scores **0.94 [0.88, 1.01] lower** than Sonnet: the mean over the 69
+tiered models of Sonnet's model mean minus ChatGPT's, each model once. The
+session-level mean difference is 0.94 and the median model difference 0.96, so
+the estimate does not depend on the weighting. Its model means spread 87% as
+wide as Sonnet's, a mild compression beside the offset.
+
+On the same fixed ranges, raw, ChatGPT's letters sit lower: 1 A, 8 B, 41 C,
+11 D, 8 E, and **1 of 69 models keeps its letter.** That is the offset, not a
+disagreement about models. With the offset removed, **50 of 69 keep their
+letter and 19 change**, one letter each, 10 upward and 9 downward under
+ChatGPT. The overview marks them `tier_depends_on_judge`.
+
+| Model | Sonnet | ChatGPT after offset | difference [seed 95%] | letters differ in |
+|---|---|---|---|---|
+| `hemmingway_1` | A | B | -0.54 [-0.75, -0.33] | 99% of seed draws |
+| `minimax_m3` | A | B | -0.43 [-0.56, -0.29] | 99% |
+| `mimo_2_6_flash` | A | B | -0.40 [-0.58, -0.22] | 95% |
+| `magnum_v4_72b` | D | C | +0.39 [0.25, 0.53] | 86% |
+| `llama_4_maverick` | C | B | +0.37 [0.19, 0.55] | 95% |
+| `command_a_plus` | D | C | +0.32 [0.10, 0.54] | 60% |
+| `glm_5_3_prime` | A | B | -0.32 [-0.45, -0.19] | 63% |
+| `lunaris_8b` | D | C | +0.30 [0.15, 0.44] | 51% |
+| `unslopnemo_12b` | D | C | +0.26 [0.10, 0.42] | 73% |
+| `deepseek_r1_0528` | A | B | -0.23 [-0.40, -0.07] | 62% |
+| `venice_dolphin_24b` | D | C | +0.20 [0.05, 0.35] | 70% |
+| `mimo_2_5_pro` | A | B | -0.20 [-0.40, 0.02] | 69% |
+| `minimax_m2_7` | A | B | -0.19 [-0.38, -0.00] | 79% |
+| `gemini_3_1_pro` | B | A | +0.18 [0.02, 0.33] | 51% |
+| `mistral_small_creative` | B | C | -0.18 [-0.30, -0.05] | 73% |
+| `gpt_4_1` | B | A | +0.13 [-0.05, 0.31] | 61% |
+| `qwen3_6_35b_a3b` | C | B | +0.10 [-0.10, 0.31] | 34% |
+| `grok_4_3` | B | C | -0.05 [-0.23, 0.16] | 32% |
+| `grok_4_7` | B | A | +0.03 [-0.16, 0.23] | 24% |
+
+Read the list with its firmness. 7 of the 19 differ from Sonnet by more than
+the card's 0.3 band; 14 have a seed interval of the difference that excludes
+zero; 12 already have a Sonnet interval that reaches a letter edge on its own
+(the overview's edge mark); the letters differ in at least 90% of seed draws
+for 4 and in under half for 3. The flag is decided on the point estimates
+alone, so it also misses the reverse case: `euryale_70b` (letters differ in
+61% of seed draws, more than for 7 of the 19 flagged) and `muse_spark_1_3`
+(43%) are unflagged. The list moves at its edges with the data: on
+the Codex rows alone it gains `deepseek_v3_0324`, `glm_4_7` and
+`qwen3_8_max_prime` and loses `gemini_3_1_pro` and `grok_4_3`. Part of the
+upward moves at the bottom is the compression, not a view about those models:
+rescaling ChatGPT to Sonnet's mean and spread instead of the offset alone
+keeps 53 letters, not 50, and the three it no longer moves are
+`command_a_plus` and `venice_dolphin_24b` (D) and `qwen3_6_35b_a3b` (C).
+
+### 24d. Inside A, the order depends on the judge
+
+| | models | r [95%] | disagreement / spread |
+|---|---|---|---|
+| Sonnet's A (3.8 and above) | 37 | **+0.08 [-0.20, 0.36]** | **2.13** |
+| below A | 32 | +0.95 [0.90, 0.97] | 0.40 |
+
+The ratio sets the root mean square of the difference after the offset (0.33
+inside A) against the spread of Sonnet's model means there (sd 0.15). §15b
+found 1.28 inside the top band on 14 models; on every session it is 2.13.
+Inside A the two judges' orders are barely related, and their disagreement is twice
+the difference between the models. The letters separate A from what is below
+it; they say nothing about order inside A, and the overview claims none (rows
+inside a letter are alphabetical).
+
+### 24e. Vendor terms, both ways
+
+The skeptic's regression (§23b) puts one judge's score on the other's score,
+its square and a vendor term. It depends on which score is regressed on which,
+so it is run both ways, beside the direction-free rescaled difference the
+overview uses (§18a's centring, with the spread matched too).
+
+| Term | sessions (models) | regression | reverse regression | rescaled difference |
+|---|---|---|---|---|
+| Sonnet over ChatGPT, Claude models | 169 (9) | +0.38 [0.30, 0.47] | -0.01 [-0.18, 0.16] | **+0.21 [0.06, 0.35]** |
+| ChatGPT over Sonnet, OpenAI models | 140 (7) | +0.62 [0.41, 0.81] | -0.15 [-0.24, -0.05] | **+0.52 [0.34, 0.69]** |
+| ChatGPT over Sonnet, GPT-6 family | 100 (5) | +0.74 [0.60, 0.87] | -0.16 [-0.26, -0.03] | +0.64 [0.52, 0.76] |
+| ChatGPT over Sonnet, `gpt_6_astra` | 20 (1) | +0.83 (session SE 0.10) | -0.11 | +0.73 |
+
+A term that belongs to one judge should come back negative in the reverse
+regression. **The OpenAI term does**: ChatGPT scores OpenAI models' sessions
+about half a point above sessions Sonnet scored the same (forward regression
+and rescaled difference), and the sign holds in every direction the data can
+be read. §17b saw +0.57 on 7 sessions; this is 140. It is concentrated in
+the GPT-6 family: the four largest ChatGPT-over-Sonnet differences of all 69
+models, after the offset, are `gpt_6_astra` +0.71 [0.56, 0.86],
+`gpt_6_sol_pro` +0.67, `gpt_6_luna_pro` +0.56 and `gpt_6_sol` +0.53
+(`gpt_6_luna` +0.39; `gpt_5_5` +0.18 and `gpt_4_1` +0.13). The judge was blind,
+so this is not the label. If the Codex run used GPT-6 Astra, as the first
+ChatGPT pass was recorded (§15), `gpt_6_astra` is the model judging its own
+sessions, and it is the one ChatGPT favours most; Codex did not record the
+model, so that is a possibility, not a finding.
+
+**The Claude term is smaller and its size depends on the method.** The
+reverse regression is about zero, not negative, so part of the forward +0.38 is
+the regression's own artifact (Claude sessions score above the rest under
+ChatGPT too). The direction-free figure, +0.21 [0.06, 0.35], is the same as
+the sample's +0.20 (203 sessions) with an interval that now excludes zero.
+After the offset, 8 of the 9 Claude models sit lower under ChatGPT than under
+Sonnet (by 0.05 to 0.47; `claude_opus_5_5` sits 0.17 higher), and none of them
+is in the `tier_depends_on_judge` list. Taking +0.21 off every Claude session
+moves no Claude model's letter; taking the interval's upper end (0.355) off
+moves `claude_opus_5_5` and `claude_sonnet_4_5` from A to B, as does the
+forward +0.38.
+
+The OpenAI term does not lift a published letter (the letter is Sonnet's), but
+it does decide the OpenAI flags: taking ChatGPT's +0.62 off the OpenAI sessions
+clears `gpt_4_1`'s flag (B under Sonnet, A under ChatGPT) and flags `gpt_5_5`
+and `gpt_6_luna` instead, because the term is an average over a family whose
+older models ChatGPT does not favour. It also raises the offset, which is
+fitted over all 69 models, from 0.943 to 1.005, and that changes 5 flags on
+other models: `kimi_k2_6` and `skyfall_36b` are added, `glm_5_3_prime`,
+`grok_4_3` and `mimo_2_5_pro` removed; the count stays at 19. Both vendor
+terms sit inside the offset: fitted on the 53 models that are neither Claude
+nor OpenAI, it is 0.970, and the count stays at 19 with `skyfall_36b` in
+place of `glm_5_3_prime`.
+
+### 24f. The old judge, the new judge and Claude, on every session
+
+§23b's check, re-run with ChatGPT on every session (`round4_continuity.json`
+`cross_family`):
+
+| Reference | sessions (Claude) | old judge | new judge | new minus old | rescaled: new minus old |
+|---|---|---|---|---|---|
+| ChatGPT, every session | 1,325 (169) | +0.15 [0.10, 0.20] | +0.38 [0.29, 0.47] | +0.23 [0.16, 0.30] | +0.26 [0.20, 0.34] |
+| ChatGPT, stored old scores | 777 (150) | +0.18 [0.12, 0.25] | +0.43 [0.34, 0.54] | +0.26 [0.18, 0.33] | +0.27 [0.19, 0.35] |
+| Gemini, 203-session sample | 203 (27) | +0.10 [0.00, 0.22] | +0.21 [0.08, 0.33] | +0.11 [-0.03, 0.24] | +0.24 [0.10, 0.38] |
+
+On the direction-free measure the old judge (Sonnet 4) has no Claude term
+against ChatGPT (-0.06) and the new judge has +0.21; the change, about +0.25,
+is firm on every session and, rescaled, against Gemini's sample too. The
+reading of §23b stands with its interval narrowed: part of the Claude models'
+lead under the new judge may be the new judge's family.
+
+### 24g. What the whole corpus can and cannot establish
+
+It can establish what the sample could not: a per-model figure from a second
+family for every model, with its interval; that most of the gap between the
+two judges is one offset; which letters depend on the judge and how firmly;
+and the vendor terms, measured both ways with model-resampled intervals.
+
+It cannot establish which judge is right. There is no ground truth. The
+rubric's calibration sentence ("most decent models land 2.5-4.0") fits
+ChatGPT's lower scale (§15a), while on the 203-session sample Sonnet agrees
+with Gemini and ChatGPT is the outlier (§18); a full Gemini pass would be
+needed to see whether that holds on every session. The human arena covers 19
+models on the 12 core seeds and does not separate the two Claude judges
+(§23b), let alone these two families. A vendor term measured between two
+judges is relative: it cannot say whether one judge is generous to its own
+family or the other harsh to it. Both judges were blind to model names, so
+neither term is the label; either could be a style one family recognises and
+likes. ChatGPT scored each session once, so apart from the 24 bridge sessions
+and §17c's 120 there is no measure of its repeatability on this corpus. And
+the model behind the Codex run is not recorded.
+
+So the published letter stays Sonnet's, on its fixed ranges, and nothing is
+adjusted. The overview and the cards now carry ChatGPT's mean, its raw letter
+and `tier_depends_on_judge`; the offset-adjusted letter, the intervals and the
+vendor terms stay in `round4_second_judge.json`. The keymap
+(`results/judge_full_chatgpt/_manifest.json`) is no longer gitignored, since
+the run is imported and it lets anyone re-check the import; the HF exports
+still refuse it.

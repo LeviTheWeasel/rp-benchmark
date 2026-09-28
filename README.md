@@ -297,7 +297,7 @@ rank of the old judge, and the rows are never sorted by it.
 - **R3 refusal %**: round 3's own instrument, one judge flag per session. It is not comparable with J or with round-4 over-refusal and is not a round-4 figure.
 - **Old judge on R4**: the round-2/3 judge (Sonnet 4, same prompt and settings) on the round-4 transcripts. Mean over the 12 core seeds (09-20, the seeds every fully run model played) plus or minus half its 95% seed-bootstrap interval. It is a band, not a rank: all 68 neighbouring pairs of bands overlap, and the median 95% rank interval spans 16 places. For the 20 "same as R2" models it is their round-2 score on those seeds. It is not on the round-4 judge's scale, and nothing converts one into the other.
 - **Scoring date**: the 20 "same as R2" rows were scored by the old judge in April and may sit about 0.06 low against the rows scored in September (a post-hoc reading of the drift check, SE 0.03; [METHODOLOGY §21.3](docs/METHODOLOGY.md)).
-- **R4 tier**: the round-4 judge's fixed letter ([overview](results/round4_overview.json)): A 3.8 and above, B 3.2-3.8, C 2.6-3.2, D 2.0-2.6. **J**: as published below, with its rank of 55.
+- **R4 tier**: the round-4 judge's fixed letter ([overview](results/round4_overview.json)): A 3.8 and above, B 3.2-3.8, C 2.6-3.2, D 2.0-2.6. It is Sonnet 5's; a second judge family's letters and the models whose letter depends on the judge are [below](#the-judge-tier-and-a-second-judge-family). **J**: as published below, with its rank of 55.
 - **R4 transcripts**: "same as R2" means the round-4 craft sessions are the exact round-2 texts (hash-checked); "regen." means new text on the same seeds, generated on that date.
 
 **Correlations** (Spearman, 95% model-bootstrap interval, 12 core seeds): old vs new judge on identical transcripts 0.88 [0.79, 0.94], n=69; round-3 NSFW table vs new judge 0.87 [0.71, 0.95], n=37 (without finetunes 0.78 [0.55, 0.90], n=31); round-2 humans vs old judge 0.60 [0.09, 0.89], n=19, vs new judge 0.52 [-0.01, 0.82], n=19; humans vs J undetermined (n=8).
@@ -321,14 +321,17 @@ finetunes `unslopnemo_12b` rose 0.52 (SE 0.17). `deepseek_v3_0324` rose 0.43
 to the model alone. What changed is the scale. The new judge scores 0.52 lower
 on average, by 0.07 to 0.35 for Claude models and 0.10 to 1.05 for the rest,
 and spreads the top 26 models about three times wider, so many round-3 ties now
-split into tiers. Some of that split favours Claude: on 110 sessions that
-ChatGPT and Gemini reference judges also scored on the same transcripts (23 of
-them Claude sessions, from 8 models), the new judge gives Claude-model sessions
-a larger premium over the reference than the old judge did. Only the ChatGPT
-difference is firm (+0.43 against +0.12, difference +0.30 [0.14, 0.47]); the
-Gemini one (+0.23 against +0.10, difference +0.13 [-0.03, 0.28]) is within the
-noise. So part of the Claude models' lead under the new judge may be the
-judge's own family. The human arena does
+split into tiers. Some of that split favours Claude. ChatGPT has now scored
+every one of these transcripts too, blind (1,325 sessions outside blank scenes,
+169 of them from 9 Claude models), and against it the new judge gives
+Claude-model sessions a larger premium than the old judge does: +0.38 against
++0.15 when each judge's score is regressed on ChatGPT's, a difference of +0.23
+[0.16, 0.30]; on the direction-free rescaled difference +0.21 against -0.06, a
+difference of +0.26 [0.20, 0.34]. Gemini has scored only the 203-session
+sample, where the difference is +0.11 [-0.03, 0.24] by regression and +0.24
+[0.10, 0.38] rescaled. So part of the Claude models' lead under the new judge
+may be the judge's own family; what that does to the letters is
+[below](#the-judge-tier-and-a-second-judge-family). The human arena does
 not settle it: 324 of its 336 sessions (19 of 20 models) are round-4
 transcripts, and on them humans agree with the old judge slightly more than
 with the new one (0.60 against 0.52, difference -0.09 [-0.24, 0.03], inside the
@@ -346,6 +349,61 @@ the re-run check per model and the cross-family table. Reproduce with
 writes this table and the correlation line. Methods and limits:
 [`docs/METHODOLOGY.md` §21](docs/METHODOLOGY.md); measurements and the anchor
 protocol for later rounds: [`docs/ROUND4_DESIGN.md` §23](docs/ROUND4_DESIGN.md).
+
+### The judge tier and a second judge family
+
+The round-4 craft letter (A 3.8 and above, B 3.2-3.8, C 2.6-3.2, D 2.0-2.6) is
+one judge's: Claude Sonnet 5, a Claude judge scoring nine Claude models among
+the rest. So a judge of another family scored every session too: ChatGPT,
+run in Codex on a ChatGPT subscription and blind to model names, on all 1,328
+craft sessions. 1,149 rows are from that pass and 179 are reused from
+ChatGPT's earlier blind passes on byte-identical text; on the 24 sessions
+scored in both, the two runs (each with its own raters) agree at r +0.89,
+mean difference -0.08.
+
+- **The broad order agrees.** Per model, Pearson +0.87 [0.79, 0.93] and
+  Spearman +0.81 [0.67, 0.89] over the 69 tiered models; per session +0.71
+  [0.62, 0.77] over 1,325 sessions (Sonnet against itself: +0.91).
+- **The scale does not.** ChatGPT scores 0.94 [0.88, 1.01] lower on average,
+  one offset across the models, so on the same fixed ranges its own letters
+  sit lower: raw, 1 of 69 models gets Sonnet's letter.
+- **With the offset removed, 50 of 69 keep their letter and 19 do not**
+  (`tier_depends_on_judge`): 10 would sit a letter higher under ChatGPT and 9 a
+  letter lower. The firm ones are `hemmingway_1`, `minimax_m3` and
+  `mimo_2_6_flash` (A under Sonnet, B under ChatGPT) and `llama_4_maverick` (C,
+  B): they differ by 0.37 to 0.54 and change letter in at least 90% of seed
+  resamples. Many are edge cases: 12 of the 19 already reach a letter edge
+  within their own seed interval under Sonnet alone, and 3 change letter in
+  fewer than half the resamples. No Claude model is among them; `gpt_4_1` (B,
+  A) is the one OpenAI model.
+- **Inside A the order depends on the judge.** Among the 37 A models the two
+  judges' model means correlate at +0.08 [-0.20, 0.36]; below A at +0.95 [0.90,
+  0.97]. Inside A their disagreement is twice the spread between the models,
+  which is why the overview lists a letter alphabetically.
+- **Each judge rates its own vendor's models higher than the other does.**
+  ChatGPT scores OpenAI models' sessions +0.62 [0.41, 0.81] above sessions
+  Sonnet scored the same (140 sessions, 7 models; +0.52 [0.34, 0.69] on the
+  direction-free rescaled difference), mostly the GPT-6 family: `gpt_6_astra`
+  gets the largest ChatGPT-over-Sonnet difference of all 69 models. Sonnet's
+  Claude premium over ChatGPT is +0.21 [0.06, 0.35] on the direction-free
+  measure (+0.38 by the one-way regression, which the reverse regression shows
+  is partly an artifact). Taking +0.21 off every Claude session moves no Claude
+  model's letter; taking the interval's upper end (0.355) off moves
+  `claude_opus_5_5` and `claude_sonnet_4_5` to B.
+
+What this does not settle is which judge is right. Neither is ground truth,
+both were blind to model names, and a vendor term measured between two judges
+cannot say which of them is off. The letter stays Sonnet's and nothing is
+adjusted; read the 19 flagged letters as one judge's reading. Codex did not
+record which ChatGPT model served the run; if it was GPT-6 Astra, as the first
+ChatGPT pass was recorded, `gpt_6_astra` was judging its own sessions.
+Per-model figures: [`results/round4_overview.json`](results/round4_overview.json)
+(`cross_judges.chatgpt`). Every interval and the sensitivity checks (without
+the reused rows, without the bridge sessions):
+[`results/round4_second_judge.json`](results/round4_second_judge.json), from
+`python3 analyze_round4_second_judge.py`. Write-up:
+[`docs/ROUND4_DESIGN.md` §24](docs/ROUND4_DESIGN.md) and
+[`docs/METHODOLOGY.md` §22](docs/METHODOLOGY.md).
 
 ### J, the round's new axis
 

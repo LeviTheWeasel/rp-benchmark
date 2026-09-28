@@ -10,6 +10,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
+import numpy as np
+
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
@@ -372,6 +374,59 @@ class FailClosed(unittest.TestCase):
         self.assertIn("backfill_2026_09_27", set(src.values()))
 
 
+class CrossFamily(unittest.TestCase):
+    """cross_family on a hand-built corpus: ChatGPT from the full-corpus
+    package, Gemini missing (skipped, labelled as the sample)."""
+
+    def test_references_are_the_full_chatgpt_pass_and_the_gemini_sample(self):
+        label, parts, cov = C.REFERENCES["chatgpt"]
+        self.assertEqual(parts, [("judge_full_chatgpt", "merged")])
+        self.assertEqual(cov, "full_corpus")
+        glabel, gparts, gcov = C.REFERENCES["gemini"]
+        self.assertEqual(gparts, OV.THREE_FAMILY["gemini"])
+        self.assertEqual(gcov, "sample")
+        self.assertIn("203-session sample", glabel)
+
+    @_small
+    def test_a_planted_claude_uplift_in_the_new_judge_is_recovered(self):
+        models = ["claude_x", "claude_y"] + ["m_%d" % i for i in range(6)]
+        canon, v1, v2, src, ref = {}, {}, {}, {}, {}
+        rng = np.random.default_rng(5)
+        for m in models:
+            for k in range(8):
+                sid = "%s::adv_case_%02d" % (m, k)
+                q = 2.0 + 2.5 * rng.random()
+                canon[sid] = {"model": m, "blank_scene": False, "hash": "h%s" % sid}
+                ref[sid] = round(q, 2)
+                v1[sid] = round(q + 0.3 + 0.05 * rng.standard_normal(), 3)
+                v2[sid] = round(v1[sid] + (0.3 if m.startswith("claude_") else 0.0), 3)
+                src[sid] = "stored_april"
+        with tempfile.TemporaryDirectory() as t:
+            res = Path(t) / "results"
+            pkg = res / "judge_full_chatgpt" / "merged"
+            pkg.mkdir(parents=True)
+            keymap = {"o%03d" % i: sid for i, sid in enumerate(sorted(ref))}
+            _dump(pkg / "_manifest.json", {
+                "keymap": keymap,
+                "transcript_hashes": {sid: canon[sid]["hash"] for sid in ref}})
+            _dump(pkg / "external_part_app.json",
+                  [{"session_id": o, "overall": ref[sid]} for o, sid in keymap.items()])
+            out = C.cross_family(res, canon, v1, v2, src, B=200)
+        cg = out["references"]["chatgpt"]
+        self.assertEqual(cg["coverage"], "full_corpus")
+        b = cg["all_old_scores"]
+        self.assertEqual(b["sessions"], len(ref))
+        self.assertAlmostEqual(b["new_minus_old"]["claude_coefficient"], 0.3, places=2)
+        self.assertLess(abs(b["old_judge"]["claude_coefficient"]), 0.1)
+        rd = b["rescaled_difference"]
+        self.assertGreater(rd["new_minus_old"], 0.15)
+        lo, hi = rd["new_minus_old_ci95_model_resampled"]
+        self.assertLessEqual(lo, rd["new_minus_old"])
+        self.assertGreaterEqual(hi, rd["new_minus_old"])
+        self.assertEqual(out["references"]["gemini"]["skipped"], "package missing")
+        self.assertIn("rescaled difference", out["reading"])
+
+
 class RealFile(unittest.TestCase):
     """The committed results/round4_continuity.json, read only (no rebuild)."""
 
@@ -404,6 +459,19 @@ class RealFile(unittest.TestCase):
                 self.assertEqual(OV.sha(ROOT / "results" / name), h,
                                  "%s changed since round4_continuity.json was built; "
                                  "rerun analyze_round4_continuity.py" % name)
+
+    def test_cross_family_uses_every_session_for_chatgpt(self):
+        cf = self.doc["cross_family"]["references"]
+        cg = cf["chatgpt"]
+        self.assertEqual(cg["coverage"], "full_corpus")
+        self.assertIn("every session", cg["label"])
+        n = cg["all_old_scores"]["sessions"]
+        self.assertGreaterEqual(n, self.doc["old_judge"]["corpus_sessions"] - 5)
+        self.assertIn("rescaled_difference", cg["all_old_scores"])
+        self.assertEqual(cf["gemini"]["coverage"], "sample")
+        self.assertIn("203-session sample", cf["gemini"]["label"])
+        self.assertNotIn("pending", self.doc)
+        self.assertEqual(self.doc["second_judge"]["status"], "done")
 
     def test_every_old_judge_score_is_on_the_current_text(self):
         oj = self.doc["old_judge"]

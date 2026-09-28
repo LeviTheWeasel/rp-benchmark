@@ -68,6 +68,8 @@ results/**/.*.tmp
 .codex/
 .mcp.json
 
-# Blind-judge keymaps stay local until the judge run is back and imported,
-# so a browsing judge cannot de-blind itself from the public repo.
-results/judge_full_chatgpt/_manifest.json
+# Blind-judge keymaps stay local while a judge run is out, so a browsing judge
+# cannot de-blind itself from the public repo: list a pending package's
+# _manifest.json here and drop the line once its run is imported.
+# results/judge_full_chatgpt/_manifest.json was imported on 2026-09-28 and is
+# no longer ignored; publication_guards.py still keeps it out of the HF dataset.

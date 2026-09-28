@@ -23,9 +23,13 @@ for an export that wants HMAC-SHA256(secret, voter_id) instead, with the
 secret from PLOTPOINTS_VOTER_HMAC_SECRET and no default.
 
 Blind-judge keymaps: results/judge_full_chatgpt/_manifest.json maps the
-package's opaque session ids back to real sessions and models. It stays local
-(.gitignore) so a browsing judge cannot de-blind itself; _guard_path refuses it
-by path and _guard_keymap refuses its content under any other name.
+package's opaque session ids back to real sessions and models. It stayed local
+(.gitignore) while the run was out, so a browsing judge could not de-blind
+itself. The run is imported (2026-09-28), so the keymap may live on GitHub,
+where it lets anyone re-check the import; it has no use in the dataset, so the
+HF exports still refuse it: _guard_path by path (any _manifest.json under a
+judge_full_chatgpt directory, merged/ included) and _guard_keymap by content
+under any other name.
 """
 import hashlib
 import hmac
@@ -79,9 +83,10 @@ def voter_pseudonym(secret: bytes, voter_id) -> str:
                     hashlib.sha256).hexdigest()
 
 
-# Blind-judge packages whose _manifest.json (the id keymap) is local-only
-# (.gitignore). The other manifests under results/judge_*/ are tracked: their
-# runs are back and imported.
+# Blind-judge packages whose _manifest.json (the id keymap) never goes into an
+# HF export. judge_full_chatgpt's run is imported and its keymap is no longer
+# gitignored (GitHub only); the older manifests under results/judge_*/ were
+# never refused.
 BLIND_KEYMAP_DIRS = ("judge_full_chatgpt",)
 KEYMAP_NAME = "_manifest.json"
 _HEX = frozenset("0123456789abcdef")
@@ -98,8 +103,8 @@ def _guard_path(path: Path):
             % p)
     if name == KEYMAP_NAME and set(p.parts) & set(BLIND_KEYMAP_DIRS):
         raise PublicationGuardError(
-            "refusing %s: blind-judge keymap, local-only until the judge run is "
-            "imported (.gitignore)" % p)
+            "refusing %s: blind-judge keymap; it stays on GitHub and out of the "
+            "HF dataset" % p)
 
 
 def _guard_keymap(obj, where: str, path: str = "$"):

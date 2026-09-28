@@ -9,7 +9,7 @@ The guard tests need only the standard library. The export tests need pyarrow
 and are skipped without it; run them under an interpreter that has it, as a
 script (that venv has its own `tests` package, which shadows this directory
 under -m unittest):
-    /home/levi/ml/.venv/bin/python tests/test_hf_round4_export.py
+    ~/ml/.venv/bin/python tests/test_hf_round4_export.py
 The overview and continuity tests read the tracked results/round4_*.json and
 the tracked README.md; the network is always a fake.
 """
@@ -70,8 +70,8 @@ class KeymapGuard(unittest.TestCase):
             PG._read_public_json(missing)          # not FileNotFoundError
 
     def test_tracked_manifests_and_public_files_pass(self):
-        # Manifests of imported runs are tracked in the repo; only the pending
-        # package's keymap is local-only.
+        # Manifests of imported runs are tracked in the repo and pass; only
+        # judge_full_chatgpt's keymap is refused from the dataset.
         for p in (RESULTS / "judge_inc1_gemini" / "_manifest.json",
                   RESULTS / "external_judge_package" / "_manifest.json",
                   RESULTS / "judge_full_chatgpt" / "TASK.md",
@@ -95,15 +95,24 @@ class KeymapGuard(unittest.TestCase):
         with self.assertRaises(PG.PublicationGuardError):
             PG._guard_keymap(doc, "anything.json")
 
-    def test_the_keymap_stays_gitignored(self):
-        lines = (ROOT / ".gitignore").read_text().splitlines()
-        self.assertIn("results/judge_full_chatgpt/_manifest.json", lines)
+    def test_the_imported_keymap_is_not_gitignored_but_stays_out_of_hf(self):
+        # The run is imported (2026-09-28): the keymap may go to GitHub, where
+        # it lets anyone re-check the import, but never into the dataset.
+        rules = [line.strip() for line in (ROOT / ".gitignore").read_text().splitlines()
+                 if line.strip() and not line.lstrip().startswith("#")]
+        self.assertNotIn("results/judge_full_chatgpt/_manifest.json", rules)
+        self.assertFalse([r for r in rules if "judge_full_chatgpt" in r])
+        for p in (KEYMAP, RESULTS / "judge_full_chatgpt" / "merged" / "_manifest.json"):
+            with self.subTest(p=p):
+                with self.assertRaisesRegex(PG.PublicationGuardError, "keymap"):
+                    PG._guard_path(p)
 
 
 class PublishedJson(unittest.TestCase):
     def test_published_round4_json_carries_no_keymap_or_track_b(self):
         for name in ("round4_overview.json", "round4_continuity.json",
-                     "round4_judge_elo.json", "multiturn_arena_bayesian.json"):
+                     "round4_judge_elo.json", "multiturn_arena_bayesian.json",
+                     "round4_second_judge.json"):
             with self.subTest(name=name):
                 doc = _load(name)
                 PG._guard_keymap(doc, name)
@@ -275,6 +284,21 @@ class Overview(_OutDir):
                 self.assertGreaterEqual(r["judge_overall"], band["lower"] or 0)
                 if band["upper"] is not None:
                     self.assertLess(r["judge_overall"], band["upper"])
+
+    def test_the_second_judge_column_as_published(self):
+        src = {r["model"]: r for r in self.ov["rows"] + self.ov["unranked"]}
+        for r in self.built:
+            c = ((src.get(r["model"]) or {}).get("cross_judges") or {}).get("chatgpt")
+            with self.subTest(model=r["model"]):
+                if c is None:
+                    self.assertIsNone(r["chatgpt_overall"])
+                    continue
+                self.assertEqual(r["chatgpt_overall"], c["mean"])
+                self.assertEqual(r["chatgpt_tier"], c["tier"])
+                self.assertEqual(r["tier_depends_on_judge"], c["tier_depends_on_judge"])
+                if r["listed_as"] != "tiered":
+                    self.assertIsNone(r["chatgpt_tier"])
+        self.assertNotIn("tier_after_offset", set(self.built[0]))
 
     def test_J_matches_the_willingness_leaderboard(self):
         lb = {r["model"]: r for r in

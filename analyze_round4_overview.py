@@ -43,6 +43,9 @@ Inputs, all read-only:
                                          model the silent-refusal rule flags
     results/multiturn_arena_bayesian.json          human check only
     results/judge_{round2,inc1}_{chatgpt,gemini}/  three-family check only
+                                         (the 203-session sample)
+    results/judge_full_chatgpt/merged/   the second judge's column (ChatGPT,
+                                         every session), unless --no-cross-judge
 
 Fails closed, writing nothing, when a judge row's transcript hash does not
 match the transcript on disk, when an unhashed row's session has more than one
@@ -51,14 +54,21 @@ duplicate row, on a row with no transcript, on a second judge name in the
 file, when production_defects.json does not describe the same corpus, or when
 the Track A rung recount does not reproduce the published empty rate.
 
-A second judge (the pending ChatGPT cross-check) plugs in with
-`--cross-judge NAME=PATH`. Its per-model means land in each row's
-`cross_judges` and in the top-level `cross_judges`; nothing else changes shape.
+A second judge plugs in with `--cross-judge NAME=PATH`; by default the
+ChatGPT full-corpus pass (results/judge_full_chatgpt/merged) is the `chatgpt`
+column. Its per-model mean (the same model + seed fit, with its own seed
+effects), its letter on the same frozen ranges (raw), its difference from
+Sonnet after its global scale offset, and `tier_depends_on_judge` land in each
+row's `cross_judges`; the offset and the counts in the top-level
+`cross_judges`. Nothing else changes shape, and no letter is set by it. The
+offset-adjusted letter, the intervals and the vendor checks are in
+round4_second_judge.json (analyze_round4_second_judge.py).
 
 Usage:
     python3 analyze_round4_overview.py                 # B=10000 bootstrap
     python3 analyze_round4_overview.py --boot 2000 --markdown /tmp/table.md
     python3 analyze_round4_overview.py --cross-judge chatgpt=PATH
+    python3 analyze_round4_overview.py --no-cross-judge
 """
 import argparse
 import glob
@@ -117,6 +127,11 @@ SILENT_RUNG_SLOPE = 0.25
 
 CROSS_MIN_SESSIONS = 3
 CROSS_FLAG = 0.3                 # the card's +/-0.3 band
+# The second judge's full-corpus pass (ChatGPT via Codex on a subscription,
+# blind; the Codex rows plus the reused rows of the earlier blind ChatGPT
+# passes on identical text), relative to --results. main() uses it as
+# chatgpt=... when no --cross-judge is given.
+DEFAULT_CROSS = "judge_full_chatgpt/merged"
 
 THREE_FAMILY = {                 # corpus-level check only
     "chatgpt": [("judge_round2_chatgpt", "external_blind_pass"),
@@ -721,40 +736,162 @@ def load_external_scores(path, canon):
     return out, dict(stale_or_unhashed_dropped=stale, unmatched_dropped=unknown)
 
 
-def cross_judge_block(name, scores, meta, sonnet, pool):
-    """Per-model means for a second judge, set on Sonnet's scale across models.
+def package_inputs(path, results):
+    """sha of a second judge's files, keyed by their path under results/ when
+    they are there (by name otherwise)."""
+    p = Path(path)
+    files = [p] if p.is_file() else sorted(p.glob("external_part*.json"))
+    if p.is_dir():
+        man = p / "_manifest.json"
+        files.append(man if man.exists() else p.parent / "_manifest.json")
+    out = {}
+    for f in files:
+        if not f.exists():
+            continue
+        try:
+            key = str(f.resolve().relative_to(Path(results).resolve()))
+        except ValueError:
+            key = f.name
+        out[key] = sha(f)
+    return out
 
-    Each judge's model means (on the sessions both scored) are standardised
-    across models to Sonnet's mean and sd, so the flag reads relative position
-    and not the judge's use of the scale (18a: two thirds of the raw spread is
-    scale). A model moved by more than the card's 0.3 band is flagged.
+
+def package_sources(path, scores):
+    """How many of the matched sessions each source of a merged package holds
+    (its _manifest.json `sources`: opaque id -> the pass the row came from).
+    Empty for a JSONL or a package without `sources`."""
+    p = Path(path)
+    man = p / "_manifest.json"
+    if not p.is_dir() or not man.exists():
+        return {}
+    m = read_json(man)
+    keymap, src = m.get("keymap") or {}, m.get("sources") or {}
+    return dict(sorted(Counter(src[o] for o, sid in keymap.items()
+                               if o in src and sid in scores).items()))
+
+
+def scale_offset(sonnet_means, other_means, models=None):
+    """The other judge's global scale offset: the mean, over models, of
+    Sonnet's model mean minus the other judge's, each model weighted once.
+    Adding it to the other judge's means gives both judges the same mean
+    across these models (ROUND4_DESIGN 18a's centring), leaving only relative
+    position. One number for every model: it does not undo a difference in
+    spread (15a, 18a), which the second-judge analysis reports beside it."""
+    ms = sorted(set(sonnet_means) & set(other_means)) if models is None else list(models)
+    if not ms:
+        return None
+    return float(np.mean([sonnet_means[m] - other_means[m] for m in ms]))
+
+
+def other_judge_rows(scores, rows, dim="overall"):
+    """A second judge's scores in the shape build_matrix reads, on the Sonnet
+    rows' model and seed (the ids name the same sessions). `scores` maps a
+    session id to a number, or to a dict of dimension -> number."""
+    out = []
+    for r in rows:
+        v = scores.get(r["session_id"])
+        if isinstance(v, dict):
+            v = v.get(dim)
+        if v is None:
+            continue
+        row = dict(session_id=r["session_id"], model=r["model"], seed=r["seed"])
+        if dim == "overall":
+            row["overall"] = float(v)
+        else:
+            row["session_dimensions"] = {dim: float(v)}
+        out.append(row)
+    return out
+
+
+def other_judge_means(scores, rows, pool, dim="overall"):
+    """Per-model means of a second judge on the overview's own basis: the
+    model + seed fit (seed_adjusted_means) over the tiered pool, with the
+    second judge's own seed effects, and plain means for every model.
+    Returns ({model: seed-adjusted mean}, {model: plain mean}, {model: n})."""
+    crow = other_judge_rows(scores, rows, dim)
+    p2, _, _, XC, perc = build_matrix(crow, pool=pool, dim=dim)
+    adj = dict(zip(p2, (float(v) for v in seed_adjusted_means(XC)))) if p2 else {}
+    plain = {m: float(np.mean(list(v.values()))) for m, v in perc.items()}
+    return adj, plain, dict(Counter(r["model"] for r in crow))
+
+
+CROSS_LABELS = {"chatgpt": "ChatGPT via Codex (subscription, blind)"}
+
+
+def cross_judge_block(name, scores, meta, rows, pool, means, tiers):
+    """A second judge's column: its per-model mean on the overview's own
+    basis, its letter on the same fixed ranges, and whether the letter depends
+    on the judge.
+
+    `mean` is the model + seed fit over the tiered pool (the plain mean for a
+    model that played every seed), built exactly as Sonnet's tier mean is.
+    `tier` is that mean on the frozen letters, raw: a judge that uses the
+    scale lower gets lower letters for that reason alone. `difference` is the
+    mean plus the judge's global scale offset (scale_offset) minus Sonnet's;
+    `tier_depends_on_judge` is True when the offset-adjusted mean falls in
+    another letter than Sonnet's (the adjusted letter itself is in
+    round4_second_judge.json), and `flag` when |difference| exceeds the
+    card's 0.3 band.
     """
-    per = defaultdict(list)
-    for sid, v in scores.items():
-        if sid in sonnet and sonnet[sid][0] in pool:
-            per[sonnet[sid][0]].append((v, sonnet[sid][1]))
-    ok = sorted(m for m, v in per.items() if len(v) >= CROSS_MIN_SESSIONS)
-    rows = {}
-    if len(ok) >= 3:
-        cm = np.array([np.mean([a for a, _ in per[m]]) for m in ok])
-        sm = np.array([np.mean([b for _, b in per[m]]) for m in ok])
-        z = (cm - cm.mean()) / (cm.std() or 1.0) * sm.std() + sm.mean()
-        for i, m in enumerate(ok):
-            diff = float(z[i] - sm[i])
-            rows[m] = dict(n_sessions=len(per[m]), mean=round(float(cm[i]), 3),
-                           sonnet_mean_same_sessions=round(float(sm[i]), 3),
-                           on_sonnet_scale=round(float(z[i]), 3),
-                           difference=round(diff, 3), flag=abs(diff) > CROSS_FLAG)
-    for m, v in per.items():
-        if m not in rows:
-            rows[m] = dict(n_sessions=len(v), note="fewer than %d sessions: no per-model "
-                                                   "figure" % CROSS_MIN_SESSIONS)
-    top = dict(name=name, sessions=sum(len(v) for v in per.values()),
-               models_with_a_figure=len(ok), min_sessions=CROSS_MIN_SESSIONS,
-               flag_rule="|difference| > %.1f after setting both judges' model means on "
-                         "Sonnet's mean and sd across these models" % CROSS_FLAG,
-               flagged=sorted(m for m, r in rows.items() if r.get("flag")), **meta)
-    return top, rows
+    adj, plain, n = other_judge_means(scores, rows, pool)
+    ok = sorted(m for m in pool if m in adj and n.get(m, 0) >= CROSS_MIN_SESSIONS)
+    offset = scale_offset(means, adj, ok) if len(ok) >= 3 else None
+    out = {}
+    for m in ok:
+        diff = after = None
+        if offset is not None:
+            diff = adj[m] + offset - means[m]
+            after = tier_letter(adj[m] + offset)
+        out[m] = dict(n_sessions=n[m], mean=round(adj[m], 4),
+                      mean_plain=round(plain[m], 4), tier=tier_letter(adj[m]),
+                      sonnet_mean=round(float(means[m]), 4),
+                      difference=None if diff is None else round(float(diff), 3),
+                      flag=None if diff is None else bool(abs(diff) > CROSS_FLAG),
+                      tier_depends_on_judge=(None if after is None
+                                             else after != tiers[m]["tier"]))
+    for m in sorted(n):
+        if m in out:
+            continue
+        if m in pool:
+            out[m] = dict(n_sessions=n[m], note="fewer than %d sessions: no per-model "
+                                                "figure" % CROSS_MIN_SESSIONS)
+        else:
+            out[m] = dict(n_sessions=n[m], mean=round(plain[m], 4),
+                          mean_plain=round(plain[m], 4), tier=None,
+                          tier_depends_on_judge=None,
+                          note="untiered: plain mean of %d session%s, no letter"
+                               % (n[m], "" if n[m] == 1 else "s"))
+    depends = sorted(m for m in ok if out[m]["tier_depends_on_judge"])
+    r = (float(np.corrcoef([means[m] for m in ok], [adj[m] for m in ok])[0, 1])
+         if len(ok) >= 3 else None)
+    top = dict(
+        name=name, label=CROSS_LABELS.get(name, name),
+        sessions=sum(n.values()), models_with_a_figure=len(ok),
+        min_sessions=CROSS_MIN_SESSIONS,
+        basis="the overview's own: the model + seed fit over the tiered pool with "
+              "this judge's own seed effects (the plain mean for a model that "
+              "played every seed); an untiered model gets its plain mean and no "
+              "letter",
+        pearson_model_means=None if r is None else round(r, 3),
+        scale_offset=None if offset is None else dict(
+            value=round(offset, 3),
+            method="mean over the %d tiered models of Sonnet's model mean minus this "
+                   "judge's, each model weighted once; adding it gives both judges "
+                   "the same mean across these models" % len(ok)),
+        tier_rule="`tier`: this judge's mean on the same frozen letters (%s), raw, "
+                  "so a judge that uses the scale lower reads lower letters for that "
+                  "reason alone" % ", ".join("%s %s" % (L, tier_label(L))
+                                             for L, _, _ in TIERS),
+        tier_depends_rule="`tier_depends_on_judge`: this judge's mean plus the scale "
+                          "offset falls in another letter than Sonnet's; the adjusted "
+                          "letter, with its interval, is in round4_second_judge.json",
+        flag_rule="`flag`: |difference| > %.1f, the card's band; difference is this "
+                  "judge's mean plus the scale offset minus Sonnet's" % CROSS_FLAG,
+        raw_same_letter=sum(1 for m in ok if out[m]["tier"] == tiers[m]["tier"]),
+        same_letter_after_offset=len(ok) - len(depends),
+        tier_depends_on_judge=depends,
+        flagged=sorted(m for m in ok if out[m]["flag"]), **meta)
+    return top, out
 
 
 # --------------------------------------------------------------------- checks
@@ -822,10 +959,12 @@ def three_family_check(results, canon, sonnet, draws=MODEL_BOOT, rng_seed=RNG_SE
                claude_sessions=int(claude.sum()),
                claude_models=len({m for m in models if m.startswith("claude_")}),
                stale_or_unhashed_dropped={f: judges[f][1]["stale_or_unhashed_dropped"] for f in judges},
-               note="Corpus level only: %d to %d sessions per model, too few for a "
-                    "per-model figure. Nothing in the overview is adjusted by it. The "
-                    "tilt is relative: it cannot say whether Sonnet is generous to "
-                    "Claude or the others are harsh (ROUND4_DESIGN 17b)."
+               note="The sample all three families scored: %d to %d sessions per "
+                    "model, too few for a per-model figure. Nothing in the overview "
+                    "is adjusted by it. The tilt is relative: it cannot say whether "
+                    "Sonnet is generous to Claude or the others are harsh "
+                    "(ROUND4_DESIGN 17b). ChatGPT's figures on every session are in "
+                    "round4_second_judge.json (ROUND4_DESIGN 24)."
                     % (min(per_model.values()), max(per_model.values())),
                method="each judge rescaled to Sonnet's mean and sd over these "
                       "sessions; tilt = mean(Sonnet - other) on Claude sessions "
@@ -896,6 +1035,38 @@ def tier_shift_check(rows, drop_ids, pool, base_tiers, shift=None):
 def sha(path):
     with open(path, "rb") as fh:
         return hashlib.sha256(fh.read()).hexdigest()[:16]
+
+
+def display_path(path):
+    """A path as the JSON records it: relative to the repo when inside it, so
+    no local directory name is published."""
+    p = Path(path).resolve()
+    try:
+        return str(p.relative_to(ROOT))
+    except ValueError:
+        return str(path)
+
+
+ONE_JUDGE_CAVEAT = ("One judge. Sonnet and Gemini agree per model (r +0.97); ChatGPT "
+                    "scores 0.77 lower on average and reorders the top (ROUND4_DESIGN "
+                    "15b, 18).")
+
+
+def judge_caveat(cross_top):
+    """The tier column's first caveat: the second judge's result when the
+    ChatGPT column is present, the sample-based one-judge caveat when not."""
+    c = cross_top.get("chatgpt")
+    if not c or not c.get("scale_offset"):
+        return ONE_JUDGE_CAVEAT
+    return ("Two judge families. Sonnet 5 sets the letter; %s scored the same %s "
+            "sessions. Per model the two agree at Pearson r %+.2f, and ChatGPT "
+            "scores %.2f lower on average (its scale offset). With the offset "
+            "removed, %d of %d tiered models keep their letter and %d change "
+            "(`tier_depends_on_judge`). Neither judge is shown to be the right one "
+            "(ROUND4_DESIGN 24; intervals in round4_second_judge.json)."
+            % (c["label"], format(c["sessions"], ","), c["pearson_model_means"],
+               c["scale_offset"]["value"], c["same_letter_after_offset"],
+               c["models_with_a_figure"], len(c["tier_depends_on_judge"])))
 
 
 def judge_means_block(rows, pool, short, per, seeds, tiers):
@@ -1056,11 +1227,15 @@ def build(results, boot=BOOT_DEFAULT, rng_seed=RNG_SEED, cross=()):
         inputs=inputs)
 
     # ---- round4_overview.json
-    cross_top, cross_rows = {}, defaultdict(dict)
+    cross_top, cross_rows, cross_inputs = {}, defaultdict(dict), {}
     for name, path in cross:
+        cross_inputs.update(package_inputs(path, results))
         scores, meta_c = load_external_scores(path, canon)
-        top, per_model = cross_judge_block(name, scores, dict(source=str(path), **meta_c),
-                                           sonnet, set(pool))
+        meta_c = dict(source=display_path(path), **meta_c)
+        srcs = package_sources(path, scores)
+        if srcs:
+            meta_c["rows_by_source"] = srcs
+        top, per_model = cross_judge_block(name, scores, meta_c, rows, pool, means, tiers)
         cross_top[name] = top
         for m, r in per_model.items():
             cross_rows[m][name] = r
@@ -1135,9 +1310,7 @@ def build(results, boot=BOOT_DEFAULT, rng_seed=RNG_SEED, cross=()):
                            "letters are frozen and never re-lettered." % (
                                ", ".join("%s %s" % kv for kv in meta["letters"].items()),
                                BAND_TOP, BAND_WIDTH),
-                caveats=["One judge. Sonnet and Gemini agree per model (r +0.97); "
-                         "ChatGPT scores 0.77 lower on average and reorders the top "
-                         "(ROUND4_DESIGN 15b, 18).",
+                caveats=[judge_caveat(cross_top),
                          "Not the 'craft band' on the profile cards, which is the flaw "
                          "hunter.",
                          "The interval covers which seeds were drawn, not judge "
@@ -1208,19 +1381,23 @@ def build(results, boot=BOOT_DEFAULT, rng_seed=RNG_SEED, cross=()):
             claude_shift_by_measured_tilt=claude_shift,
             human_multiturn_arena=human_check(results, means, tiers)),
         judge_elo=dict(file=OUT_ELO, note="ELO and rank range live there only"),
-        inputs=inputs)
+        inputs=dict(inputs, **cross_inputs))
     return elo_doc, overview
 
 
 # ---------------------------------------------------------------------- render
 
 def _cross_cell(r, name):
+    """The second judge's raw letter; "tier depends on judge" when its
+    offset-adjusted mean falls in another letter than Sonnet's."""
     c = (r.get("cross_judges") or {}).get(name)
     if not c:
         return "-"
-    if "difference" not in c:
+    if "tier" not in c:
         return "- (%d sessions)" % c["n_sessions"]
-    return ("moves %+.2f" % c["difference"]) if c["flag"] else "within 0.3"
+    if c["tier"] is None:
+        return "untiered"
+    return c["tier"] + ("; tier depends on judge" if c.get("tier_depends_on_judge") else "")
 
 
 def render_markdown(ov):
@@ -1245,7 +1422,7 @@ def render_markdown(ov):
     for r in ov["unranked"]:
         cells = ["unranked", "`%s` (%s)" % (r["model"], r["reason"]), r["J"]["display"],
                  "; ".join(w["text"] for w in r["watch_out"]["shown"])]
-        lines.append("| %s |" % " | ".join(cells + ["-" for _ in names]))
+        lines.append("| %s |" % " | ".join(cells + [_cross_cell(r, n) for n in names]))
     legend = ", ".join("%s %s" % (k, v) for k, v in b["letters"].items())
     return "Tiers (fixed): %s.\n\n%s\n" % (legend, "\n".join(lines))
 
@@ -1282,6 +1459,16 @@ def summary(elo_doc, ov):
                        for c in cs["measured"]["tier_changes"]],
                       cs["interval_upper"]["shift"],
                       cs["interval_upper"]["claude_models_changing_tier"]))
+    for name, cj in sorted((ov.get("cross_judges") or {}).items()):
+        out.append("Second judge %s (%s): %d sessions, %d models; model-mean r %s; "
+                   "scale offset %s; raw letter kept by %d; after the offset %d keep "
+                   "their letter, tier depends on judge for %d: %s"
+                   % (name, cj.get("source"), cj["sessions"], cj["models_with_a_figure"],
+                      cj.get("pearson_model_means"),
+                      (cj.get("scale_offset") or {}).get("value"),
+                      cj.get("raw_same_letter", 0), cj.get("same_letter_after_offset", 0),
+                      len(cj.get("tier_depends_on_judge") or []),
+                      cj.get("tier_depends_on_judge")))
     bc = ov["checks"]["blank_sessions_dropped"]["tier_changes"]
     out.append("Dropping the %d flagged sessions changes tier for: %s"
                % (len(ov["checks"]["blank_sessions_dropped"]["dropped_sessions"]),
@@ -1313,7 +1500,10 @@ def main(argv=None):
     ap.add_argument("--markdown", default=None, help="also write the rendered table here")
     ap.add_argument("--cross-judge", action="append", default=[], metavar="NAME=PATH",
                     help="a second judge's scores: a blind-package pass directory or "
-                         "a JSONL of {session_id, overall, transcript_hash}")
+                         "a JSONL of {session_id, overall, transcript_hash}. Default: "
+                         "chatgpt=<results>/%s when that directory exists" % DEFAULT_CROSS)
+    ap.add_argument("--no-cross-judge", action="store_true",
+                    help="no second-judge column, not even the default one")
     a = ap.parse_args(argv)
     cross = []
     for spec in a.cross_judge:
@@ -1321,6 +1511,10 @@ def main(argv=None):
         if not re.fullmatch(r"[a-z0-9_]+", name) or not path:
             ap.error("--cross-judge wants NAME=PATH, got %r" % spec)
         cross.append((name, path))
+    if a.no_cross_judge and cross:
+        ap.error("--no-cross-judge with --cross-judge")
+    if not a.no_cross_judge and not cross and (Path(a.results) / DEFAULT_CROSS).is_dir():
+        cross = [("chatgpt", str(Path(a.results) / DEFAULT_CROSS))]
     try:
         elo_doc, ov = build(a.results, a.boot, a.rng_seed, cross)
     except InputError as e:
