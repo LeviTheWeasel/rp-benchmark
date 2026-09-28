@@ -940,10 +940,16 @@ def export_round4_overview():
     _copy_public(src, "analysis", "round4_overview.json")
     _copy_public(PROJECT_ROOT / "results" / "round4_judge_elo.json",
                  "analysis", "round4_judge_elo.json")
+    # The second judge family (ChatGPT via Codex) behind the overview's
+    # chatgpt_* columns: agreement, offset, tier moves and vendor premiums.
+    # Aggregates only; the keymap stays out (publication_guards).
+    _copy_public(PROJECT_ROOT / "results" / "round4_second_judge.json",
+                 "analysis", "round4_second_judge.json")
     out = _write_parquet_rows(rows, "round4_overview", "train.parquet")
     n = {k: sum(1 for r in rows if r["listed_as"] == k)
          for k in ("tiered", "untiered", "absent")}
     print("Exported: analysis/round4_overview.json, analysis/round4_judge_elo.json, "
+          "analysis/round4_second_judge.json, "
           "%s (%d tiered, %d untiered, %d absent)"
           % (out, n["tiered"], n["untiered"], n["absent"]))
 
