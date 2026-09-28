@@ -67,3 +67,7 @@ results/**/.*.tmp
 # Local agent config (points at the product database; never commit)
 .codex/
 .mcp.json
+
+# Blind-judge keymaps stay local until the judge run is back and imported,
+# so a browsing judge cannot de-blind itself from the public repo.
+results/judge_full_chatgpt/_manifest.json
