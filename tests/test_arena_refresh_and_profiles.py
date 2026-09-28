@@ -1,10 +1,15 @@
 """The 2026-09-27 cleanups: newest-wins Sonnet-4 profiles, and the round-2
-multi-turn arena rebuilt from the site's public CSV without voter ids.
+multi-turn arena rebuilt from the site's public CSV without voter ids. And
+the 2026-09-28 move off the old arena domain: the single-message votes come
+from the site's public round-1 CSV (fetch_arena_votes.py), the scripts that
+need voter ids refuse on it, and nothing links to or fetches from the old
+domain.
 
 Run by path from the repo root, offline (no network, no real secret):
     python -m unittest tests/test_arena_refresh_and_profiles.py
 """
 import contextlib
+import csv
 import hashlib
 import hmac
 import io
@@ -21,8 +26,11 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+import analyze_community_arena as C  # noqa: E402
 import analyze_model_profiles as P  # noqa: E402
 import analyze_multiturn_arena as A  # noqa: E402
+import analyze_voter_quality as VQ  # noqa: E402
+import fetch_arena_votes as F  # noqa: E402
 import refresh_multiturn_arena_votes as R  # noqa: E402
 
 ENV = "PLOTPOINTS_VOTER_HMAC_SECRET"
@@ -191,6 +199,213 @@ class ArenaRefresh(unittest.TestCase):
                                    Path("data/multiturn_arena_votes.jsonl")):
                 ids = [r["id"] for r in A.load_rows()]
         self.assertEqual(ids, ["v0", "v1"])
+
+    def test_the_provenance_note_is_the_tracked_readmes(self):
+        # The tracked README is the template's output: the note on the legacy
+        # rows reads the same in both, with no link to the old domain.
+        tracked = (ROOT / "data" / "multiturn_arena_votes.README.md").read_text()
+        start = tracked.index("`: ballots cast on ")
+        note = tracked[start:tracked.index("keeps them unscored.", start)]
+        with _in_tmp():
+            self._refresh(CSV_HEAD + _csv_row(0) + _csv_row(1), self.PREVIOUS, {})
+            readme = Path("data/multiturn_arena_votes.README.md").read_text()
+        self.assertIn(note, readme)
+        self.assertIn("no longer controls", note)
+        self.assertNotIn("://", note)
+
+
+# ---------------------------------------------------------------------------
+# The single-message arena: the site's public round-1 CSV
+# ---------------------------------------------------------------------------
+
+SITE_URL = "https://plotlightstudios.com/api/plotpoints/raw?round=1&mode=arena"
+SITE_COLUMNS = CSV_HEAD.strip().split(",")
+RAW_VOTER = "4b573b59-fb63-452a-91e2-00000000000c"
+
+
+def _arena_csv(rows, extra=()):
+    """The site's round-1 arena export: one CSV row per dict of cells, over
+    defaults. `extra` adds columns the public export does not have."""
+    base = {"round": "1", "mode": "arena",
+            "scenario_id": "completion_x_1_m1_vs_m2",
+            "context": 'A scene, with "quotes",\nand a second line.',
+            "model_a": "m1", "model_b": "m2", "winner": "A", "model": "",
+            "scores": "", "notes": "", "is_catch": "false", "catch_correct": "",
+            "source": "arena_round_01", "signed_in": "0",
+            "client_timestamp": "2026-04-14T19:16:56.291+00:00",
+            "created_at": "2026-04-14T19:16:56.758+00:00"}
+    buf = io.StringIO()
+    w = csv.DictWriter(buf, fieldnames=SITE_COLUMNS + list(extra),
+                       lineterminator="\r\n")
+    w.writeheader()
+    for i, r in enumerate(rows):
+        w.writerow({**base, "id": "v%d" % i, **r})
+    return buf.getvalue().encode()
+
+
+class _Site:
+    """A stand-in for urllib.request.urlopen: serves one body, records URLs."""
+
+    def __init__(self, body):
+        self.body, self.asked = body, []
+
+    def __call__(self, req, *a, **kw):
+        self.asked.append((getattr(req, "full_url", req),
+                           dict(getattr(req, "headers", {}))))
+        return contextlib.closing(io.BytesIO(self.body))
+
+
+def _no_network(*a, **kw):
+    raise AssertionError("tried the network")
+
+
+class ArenaVotesCsv(unittest.TestCase):
+    STAMPS = (("2026-04-14T19:16:56.291+00:00", "2026-04-14T19:16:56.291Z"),
+              ("2026-04-14T19:16:56.29+00:00", "2026-04-14T19:16:56.290Z"),
+              ("2026-04-14T19:16:56+00:00", "2026-04-14T19:16:56.000Z"),
+              ("2026-04-14T21:16:56.5+02:00", "2026-04-14T19:16:56.500Z"),
+              ("2026-06-13T15:24:01.61933+00:00", "2026-06-13T15:24:01.619330Z"),
+              ("", ""))
+
+    def test_the_urls_are_the_sites_public_round1_export(self):
+        self.assertEqual(F.ARENA_CSV_URL, SITE_URL)
+        self.assertEqual(C.DEFAULT_URL, SITE_URL)
+
+    def test_timestamps_become_the_arena_logs_utc_z_form(self):
+        for raw, want in self.STAMPS:
+            with self.subTest(raw=raw):
+                self.assertEqual(F.iso_utc(raw), want)
+        with self.assertRaises(ValueError):
+            F.iso_utc("2026-04-14T19:16:56")        # no offset: not guessed
+
+    def test_rows_map_to_the_arena_log_shape(self):
+        rows = [{"client_timestamp": raw} for raw, _ in self.STAMPS]
+        rows[1].update(winner="B", is_catch="true", catch_correct="false")
+        rows[2].update(winner="tie", is_catch="true", catch_correct="true")
+        votes = F.votes_from_csv(_arena_csv(rows))
+        self.assertEqual([v["id"] for v in votes], ["v%d" % i for i in range(6)])
+        self.assertEqual([v["timestamp"] for v in votes],
+                         [want for _, want in self.STAMPS])
+        self.assertEqual([v["winner"] for v in votes][:3], ["A", "B", "tie"])
+        self.assertEqual([v["is_catch"] for v in votes][:3], [False, True, True])
+        self.assertEqual([v["catch_correct"] for v in votes][:3],
+                         [None, False, True])
+        v = votes[0]
+        self.assertEqual((v["mode"], v["round"], v["model_a"], v["model_b"]),
+                         ("arena", 1, "m1", "m2"))
+        self.assertEqual(v["server_timestamp"], "2026-04-14T19:16:56.758Z")
+        self.assertEqual(v["context"], 'A scene, with "quotes",\nand a second line.')
+        self.assertIs(v["signed_in"], False)
+        self.assertFalse([v for v in votes if "voter_id" in v])
+        self.assertFalse(F.carries_voter_ids(votes))
+
+    def test_a_voter_id_column_is_passed_through(self):
+        votes = F.votes_from_csv(_arena_csv(
+            [{"voter_id": RAW_VOTER}, {"voter_id": ""}], extra=("voter_id",)))
+        self.assertEqual(votes[0]["voter_id"], RAW_VOTER)
+        self.assertNotIn("voter_id", votes[1])
+        self.assertTrue(F.carries_voter_ids(votes))
+
+    def test_refuses_what_is_not_the_export(self):
+        bad = {"the old JSON api": b'{"votes": [{"id": "v0", "mode": "arena"}]}',
+               "another round": _arena_csv([{}, {"round": "2"}]),
+               "another mode": _arena_csv([{}, {"mode": "multiturn_arena"}]),
+               "a winner outside A/B/tie": _arena_csv([{"winner": "C"}]),
+               "a duplicate id": _arena_csv([{}, {"id": "v0"}]),
+               "a flag that is not a boolean": _arena_csv([{"is_catch": "maybe"}])}
+        for what, body in bad.items():
+            with self.subTest(what=what):
+                with self.assertRaises(SystemExit):
+                    F.votes_from_csv(body)
+
+    def test_main_reads_a_saved_copy_without_the_network(self):
+        with _in_tmp(), mock.patch("urllib.request.urlopen", _no_network), \
+                contextlib.redirect_stdout(io.StringIO()):
+            Path("site.csv").write_bytes(_arena_csv([{}, {"winner": "B"}]))
+            with mock.patch.object(sys, "argv", ["x", "--csv", "site.csv"]):
+                F.main()
+            rows = [json.loads(l) for l in
+                    Path("web/data/votes.jsonl").read_text().splitlines()]
+        self.assertEqual([r["winner"] for r in rows], ["A", "B"])
+        self.assertFalse([r for r in rows if "voter_id" in r])
+
+    def test_main_fetches_the_site_export_only(self):
+        site = _Site(_arena_csv([{}]))
+        with _in_tmp(), mock.patch("urllib.request.urlopen", site), \
+                mock.patch.object(sys, "argv", ["x", "--out", "v.jsonl"]), \
+                contextlib.redirect_stdout(io.StringIO()):
+            F.main()
+            self.assertEqual(len(Path("v.jsonl").read_text().splitlines()), 1)
+        self.assertEqual([u for u, _ in site.asked], [SITE_URL])
+        self.assertIn("User-agent", site.asked[0][1])
+
+
+class ArenaScriptsNeedVoterIds(unittest.TestCase):
+    """The public CSV has no voter ids; the per-voter scripts stop on it."""
+
+    def test_community_arena_refuses_the_public_export_and_writes_nothing(self):
+        site = _Site(_arena_csv([{}, {"is_catch": "true", "catch_correct": "true"}]))
+        with _in_tmp(), mock.patch("urllib.request.urlopen", site), \
+                mock.patch.object(sys, "argv", ["x", "--out", "out.json"]), \
+                contextlib.redirect_stdout(io.StringIO()):
+            with self.assertRaises(SystemExit) as cm:
+                C.main()
+            self.assertFalse(Path("out.json").exists())
+        self.assertIn("voter id", str(cm.exception.code))
+        self.assertEqual([u for u, _ in site.asked], [SITE_URL])
+
+    def test_community_arena_still_runs_on_a_log_with_voter_ids(self):
+        rows = [{"voter_id": "p%d" % (i % 2), "winner": "AB"[i % 2]}
+                for i in range(4)]
+        rows.append({"voter_id": "p0", "is_catch": "true",
+                     "catch_correct": "true", "scenario_id": "catch_x"})
+        with _in_tmp(), mock.patch("urllib.request.urlopen", _no_network), \
+                contextlib.redirect_stdout(io.StringIO()):
+            Path("ids.csv").write_bytes(_arena_csv(rows, extra=("voter_id",)))
+            with mock.patch.object(sys, "argv", ["x", "--file", "ids.csv",
+                                                 "--out", "out.json"]):
+                C.main()
+            out = json.loads(Path("out.json").read_text())
+        self.assertEqual((out["total_arena_votes"], out["unique_voters"],
+                          out["catch_votes"]), (5, 2, 1))
+
+    def test_voter_quality_refuses_a_log_with_no_voter_ids(self):
+        with _in_tmp(), contextlib.redirect_stdout(io.StringIO()):
+            with open("votes.jsonl", "w") as f:
+                for v in F.votes_from_csv(_arena_csv([{}, {"is_catch": "true"}])):
+                    f.write(json.dumps(v) + "\n")
+            with mock.patch.object(sys, "argv", ["x", "votes.jsonl"]):
+                with self.assertRaises(SystemExit) as cm:
+                    VQ.main()
+        self.assertIn("voter id", str(cm.exception.code))
+
+
+class OldArenaDomain(unittest.TestCase):
+    """The old arena domain (HOST) is no longer the project's: it serves a
+    third party's certificate. No file links to it or fetches from it, as a
+    URL or a percent-encoded badge URL; a bare, unlinked mention in a
+    provenance note and the data labels that carry its name are fine."""
+
+    HOST = "arena.l3vi4th4n.ai"
+    SUFFIXES = {".py", ".md", ".toml", ".cfg", ".ini", ".txt", ".json",
+                ".jsonl", ".csv", ".yml", ".yaml", ".html", ".js", ".mjs",
+                ".ts", ".tsx"}
+    SKIP_DIRS = {".git", "__pycache__", "node_modules", "results", ".next"}
+
+    def test_nothing_links_to_or_fetches_from_it(self):
+        needles = ("://" + self.HOST, "%2F%2F" + self.HOST, "%2f%2f" + self.HOST)
+        hits = []
+        for dirpath, dirnames, filenames in os.walk(ROOT):
+            dirnames[:] = [d for d in dirnames if d not in self.SKIP_DIRS
+                           and (not d.startswith(".") or d == ".github")]
+            for name in filenames:
+                p = Path(dirpath) / name
+                if p.suffix not in self.SUFFIXES:
+                    continue
+                text = p.read_text(errors="replace")
+                hits += ["%s: %s" % (p.relative_to(ROOT), n)
+                         for n in needles if n in text]
+        self.assertEqual(hits, [])
 
 
 if __name__ == "__main__":

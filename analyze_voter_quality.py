@@ -68,6 +68,13 @@ def main():
     if not total:
         print("No arena votes.")
         return
+    if set(total) <= {"anonymous", "", None}:
+        # The site's public export (fetch_arena_votes.py) has no voter ids by
+        # design; one "anonymous" voter is not a per-voter report.
+        sys.exit(f"No arena vote in {path} carries a voter id, so there is no "
+                 "per-voter pass rate to report. The site's public export "
+                 "(fetch_arena_votes.py) publishes none; this needs a vote log "
+                 "with voter ids (raw, or HMAC pseudonyms).")
 
     print(f"Arena voters: {len(total)}, total votes: {sum(total.values())}")
     print()

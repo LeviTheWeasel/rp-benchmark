@@ -8,6 +8,7 @@ tests need pyarrow and are skipped without it; run them under an interpreter
 that has it, e.g. /home/levi/ml/.venv/bin/python tests/test_voter_pseudonyms.py
 """
 import ast
+import csv
 import hashlib
 import hmac
 import io
@@ -130,6 +131,29 @@ class _FakeResponse(io.BytesIO):
         return False
 
 
+def _id_bearing_csv(votes):
+    """The site's raw export format with a voter_id column added: the HMAC
+    path is for such an id-bearing source. The public export has no voter_id
+    column, and the HMAC mode refuses it (tests/test_hf_round4_export.py)."""
+    cols = ("id", "round", "mode", "scenario_id", "context", "model_a",
+            "model_b", "winner", "model", "scores", "notes", "is_catch",
+            "catch_correct", "source", "signed_in", "client_timestamp",
+            "created_at", "voter_id")
+    buf = io.StringIO()
+    w = csv.DictWriter(buf, fieldnames=cols, lineterminator="\r\n")
+    w.writeheader()
+    for v in votes:
+        w.writerow({"id": v["id"], "round": 1, "mode": v["mode"],
+                    "scenario_id": v.get("scenario_id", ""), "context": "",
+                    "model_a": v.get("model_a", ""), "model_b": v.get("model_b", ""),
+                    "winner": v["winner"], "is_catch": "false", "source": "test",
+                    "signed_in": "0",
+                    "client_timestamp": "2026-01-01T00:00:00+00:00",
+                    "created_at": "2026-01-01T00:00:01+00:00",
+                    "voter_id": v.get("voter_id", "")})
+    return buf.getvalue().encode()
+
+
 class Export(unittest.TestCase):
     """The real export functions, offline: the network is a fake."""
 
@@ -154,7 +178,7 @@ class Export(unittest.TestCase):
         self.tmp.cleanup()
 
     def _urlopen(self, *a, **kw):
-        return _FakeResponse(json.dumps({"votes": self.votes}).encode())
+        return _FakeResponse(_id_bearing_csv(self.votes))
 
     def test_table_carries_pseudonyms_only(self):
         rows = self.hf.community_votes_table(self.votes, b"k3y").to_pylist()

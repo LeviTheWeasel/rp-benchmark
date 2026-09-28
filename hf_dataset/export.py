@@ -8,15 +8,24 @@ Exports:
 - round 4 (willingness): leaderboard JSON + parquet, J and quadrant charts,
   profile_cards_v2.md, rater-agreement summaries, Track A per-row labels,
   Track A / Track B seed files. See export_round4() for what is left out.
+- round 4 overview (judge tier, J, watch-out; nothing summed) and continuity
+  with rounds 1-3 (returning models, old judge as a band): the analyzers' JSON
+  as is, round4_judge_elo.json as is, and one flat parquet each.
 
-Does NOT export raw chat data or scenario content, and never any round-4
-Track B transcript or reply text (docs/ROUND4_DESIGN.md sec 9).
+Does NOT export raw chat data or scenario content, never any round-4 Track B
+transcript or reply text (docs/ROUND4_DESIGN.md sec 9), never a raw voter id,
+and never a blind-judge keymap (results/judge_full_chatgpt/_manifest.json).
 
 Usage:
   python hf_dataset/export.py                    # everything, into hf_dataset/
   python hf_dataset/export.py --out DIR          # everything, into a staging dir
   python hf_dataset/export.py --only round4      # round-4 artifacts only
   python hf_dataset/export.py --offline          # skip the live arena-votes fetch
+  python hf_dataset/export.py --drop-voter-ids   # community_votes/ with no
+                                                 # voter_id column (no secret)
+  python hf_dataset/export.py --drop-voter-ids --votes-from PARQUET
+                                                 # the same, rebuilt from a local
+                                                 # community_votes parquet
 """
 import argparse
 import json
@@ -35,8 +44,10 @@ if str(PROJECT_ROOT) not in sys.path:
 from publication_guards import (  # noqa: E402
     EVIDENCE_CAP, TEXT_FIELDS, TRACK_B, TRACK_B_SEED_PREFIXES,
     VOTER_HMAC_ENV, PublicationGuardError, VoterSecretError, _carries_text,
-    _guard_path, _guard_record, _is_track_b, _read_public_json, voter_pseudonym,
-    voter_secret)
+    _guard_keymap, _guard_path, _guard_record, _guard_voter_ids, _is_track_b,
+    _read_public_json, voter_pseudonym, voter_secret)
+from fetch_arena_votes import (  # noqa: E402
+    ARENA_CSV_URL, FETCH_TIMEOUT, carries_voter_ids, votes_from_csv)
 HF_DIR = Path(__file__).parent
 # Where exports are written. Sources are always read from HF_DIR/_source and
 # PROJECT_ROOT/results; only the destination moves with --out.
@@ -338,7 +349,35 @@ def export_flaw_hunter_results():
     print("Exported: %s (%d models)" % (out, len(lb)))
 
 
-def export_community_arena(offline: bool = False):
+# The site's public raw export of the round-1 single-message arena (CSV, no
+# voter ids). The original arena's JSON endpoint is gone: its domain is no
+# longer the project's, and nothing here fetches from it.
+VOTES_URL = ARENA_CSV_URL
+# The published vote fields, in column order. voter_id is not one of them: it
+# is added (as a pseudonym) by community_votes_table only.
+VOTE_FIELDS = ("vote_id", "timestamp", "scenario_id", "model_a", "model_b",
+               "winner", "is_catch", "catch_correct")
+
+
+def read_votes_parquet(path: Path) -> list[dict]:
+    """Arena votes from an earlier community_votes export, for --votes-from.
+
+    Only VOTE_FIELDS are read: a voter_id column, raw or pseudonymous, is never
+    loaded. Every row of a community_votes export is an arena vote."""
+    path = Path(path)
+    _guard_path(path)
+    names = pq.read_schema(path).names
+    missing = [c for c in VOTE_FIELDS if c not in names]
+    if missing:
+        raise SystemExit("%s is not a community_votes export: no %s"
+                         % (path, ", ".join(missing)))
+    rows = pq.read_table(path, columns=list(VOTE_FIELDS)).to_pylist()
+    return [{"id": r["vote_id"], "mode": "arena",
+             **{k: r[k] for k in VOTE_FIELDS if k != "vote_id"}} for r in rows]
+
+
+def export_community_arena(offline: bool = False, drop_voter_ids: bool = False,
+                           votes_from: Path | None = None):
     """Export community-voted leaderboard + raw votes to Parquet.
 
     Two outputs:
@@ -349,7 +388,59 @@ def export_community_arena(offline: bool = False):
                                           voter cookie. The secret comes from
                                           PLOTPOINTS_VOTER_HMAC_SECRET; unset,
                                           the votes export refuses.
+    The live source is the site's public CSV (VOTES_URL), which carries no
+    voter ids: the HMAC mode refuses on it, since it would have nothing to
+    pseudonymize, and stays for an id-bearing source.
+    With drop_voter_ids the votes table has no voter_id column at all and no
+    secret is needed; a failed fetch then stops the export instead of skipping
+    the table, since the point of the mode is to replace a published file.
+    votes_from (drop mode only) rebuilds from a local community_votes parquet
+    instead of the live endpoint. The votes source is settled before anything
+    is written, so a refusal or a failed fetch writes nothing.
     """
+    arena = None
+    if offline:
+        print("Offline: skipping the live community_votes fetch")
+    else:
+        # Before any network: no secret, no votes (VoterSecretError). Drop
+        # mode publishes no voter column, so it needs none.
+        secret = None if drop_voter_ids else voter_secret()
+        if votes_from is not None:
+            if not drop_voter_ids:
+                raise ValueError("votes_from needs drop_voter_ids")
+            arena = read_votes_parquet(votes_from)
+            print("Votes: %d arena votes from %s (voter_id not read)"
+                  % (len(arena), votes_from))
+        else:
+            import urllib.request
+            raw = None
+            try:
+                req = urllib.request.Request(
+                    VOTES_URL, headers={"User-Agent": "rp-benchmark hf export"})
+                with urllib.request.urlopen(req, timeout=FETCH_TIMEOUT) as resp:
+                    raw = resp.read()
+            except Exception as e:
+                if drop_voter_ids:
+                    raise SystemExit(
+                        "Could not fetch live votes from %s (%s). community_votes/ "
+                        "was NOT rebuilt, so this export cannot replace a "
+                        "published votes file. Re-run with --votes-from PARQUET "
+                        "(a local community_votes export) or with --offline."
+                        % (VOTES_URL, e))
+                print("Could not fetch live votes (%s) — skipping community_votes "
+                      "export" % e)
+            if raw is not None:
+                # A CSV that is not the expected export stops here
+                # (SystemExit), in either mode: it is never skipped quietly.
+                arena = votes_from_csv(raw)
+                if not drop_voter_ids and not carries_voter_ids(arena):
+                    raise SystemExit(
+                        "%s carries no voter ids, so there is nothing to "
+                        "pseudonymize and community_votes/ was NOT rebuilt. "
+                        "Re-run with --drop-voter-ids to publish the votes with "
+                        "no voter column, or with --offline to leave "
+                        "community_votes/ as it is." % VOTES_URL)
+
     snapshot = PROJECT_ROOT / "results" / "community_arena_1000.json"
     if not snapshot.exists():
         candidates = sorted(
@@ -380,38 +471,29 @@ def export_community_arena(offline: bool = False):
         pq.write_table(table, _out("community_arena", "train.parquet"))
         print("Exported: community_arena/train.parquet (%d models)" % len(lb))
 
-    # Raw votes — pulled live so the dataset tracks the current arena state.
-    # Skipped if the production endpoint is unreachable, or with --offline
-    # (the existing community_votes/ parquet is then left as it is).
-    if offline:
-        print("Offline: skipping the live community_votes fetch")
+    # Raw votes, pulled live from the site's public export. Skipped with
+    # --offline, or (HMAC mode only) if the export is unreachable: the
+    # existing community_votes/ parquet is then left as it is.
+    if arena is None:
         return
-    # Before any network: no secret, no votes (VoterSecretError).
-    secret = voter_secret()
-    import urllib.request
-    try:
-        with urllib.request.urlopen("https://arena.l3vi4th4n.ai/api/votes", timeout=30) as resp:
-            votes = json.load(resp).get("votes", [])
-    except Exception as e:
-        print("Could not fetch live votes (%s) — skipping community_votes export" % e)
-        return
-
-    arena = [v for v in votes if v.get("mode") == "arena"]
     if not arena:
         print("No arena votes to export")
         return
-
-    table = community_votes_table(arena, secret)
+    if drop_voter_ids:
+        table = community_votes_table_without_voters(arena)
+        how = "no voter_id column (--drop-voter-ids)"
+    else:
+        table = community_votes_table(arena, secret)
+        how = "voter ids as HMAC-SHA256 pseudonyms"
     pq.write_table(table, _out("community_votes", "train.parquet"))
-    print("Exported: community_votes/train.parquet (%d votes, voter ids as "
-          "HMAC-SHA256 pseudonyms)" % len(arena))
+    print("Exported: community_votes/train.parquet (%d votes, %s)"
+          % (len(arena), how))
 
 
-def community_votes_table(arena: list[dict], secret: bytes):
-    """One row per arena vote; voter_id is the keyed pseudonym, never raw."""
-    return pa.table({
+def _vote_columns(arena: list[dict]) -> dict:
+    """The published vote fields (VOTE_FIELDS), in order; no voter column."""
+    cols = {
         "vote_id": [v.get("id", "") for v in arena],
-        "voter_id": [voter_pseudonym(secret, v.get("voter_id")) for v in arena],
         "timestamp": [v.get("timestamp", "") for v in arena],
         "scenario_id": [v.get("scenario_id", "") for v in arena],
         "model_a": [v.get("model_a", "") for v in arena],
@@ -419,7 +501,25 @@ def community_votes_table(arena: list[dict], secret: bytes):
         "winner": [v.get("winner", "") for v in arena],
         "is_catch": [bool(v.get("is_catch")) for v in arena],
         "catch_correct": [v.get("catch_correct") for v in arena],
+    }
+    return cols
+
+
+def community_votes_table(arena: list[dict], secret: bytes):
+    """One row per arena vote; voter_id is the keyed pseudonym, never raw."""
+    cols = _vote_columns(arena)
+    return pa.table({
+        "vote_id": cols.pop("vote_id"),
+        "voter_id": [voter_pseudonym(secret, v.get("voter_id")) for v in arena],
+        **cols,
     })
+
+
+def community_votes_table_without_voters(arena: list[dict]):
+    """One row per arena vote and no voter column: for an export made without
+    PLOTPOINTS_VOTER_HMAC_SECRET (--drop-voter-ids). Nothing reads a vote's
+    voter_id here, so none can be written."""
+    return pa.table(_vote_columns(arena))
 
 
 def export_analysis_artifacts():
@@ -507,10 +607,17 @@ SILENT_EMPTY_RATE = 0.20
 SILENT_RUNG_SLOPE = 0.25
 
 
+def _guard_content(obj, where: str):
+    """Every content guard: Track B text, a blind-judge keymap, a raw voter id."""
+    _guard_record(obj, where)
+    _guard_keymap(obj, where)
+    _guard_voter_ids(obj, where)
+
+
 def _write_json(obj, *parts):
     out = _out(*parts)
     _guard_path(out)
-    _guard_record(obj, "/".join(parts))
+    _guard_content(obj, "/".join(parts))
     with open(out, "w") as f:
         json.dump(obj, f, indent=1, ensure_ascii=False)
         f.write("\n")
@@ -520,7 +627,7 @@ def _write_json(obj, *parts):
 def _write_parquet_rows(rows: list[dict], *parts):
     out = _out(*parts)
     _guard_path(out)
-    _guard_record(rows, "/".join(parts))
+    _guard_content(rows, "/".join(parts))
     pq.write_table(pa.Table.from_pylist(rows), out)
     return out
 
@@ -531,7 +638,7 @@ def _copy_public(src: Path, *parts):
     out = _out(*parts)
     _guard_path(out)
     if src.suffix == ".json":
-        _guard_record(_read_public_json(src), "/".join(parts))
+        _guard_content(_read_public_json(src), "/".join(parts))
     shutil.copy2(src, out)
     return out
 
@@ -702,11 +809,229 @@ def export_round4_seeds():
         print("Exported: %s (%d seeds)" % (out, len(rows)))
 
 
+# -----------------------------------------------------------------------------
+# Round 4 overview and continuity
+#
+# analyze_round4_overview.py: judge tier, J and watch-out side by side, nothing
+# summed, no position (rows inside a tier are alphabetical). Its judge ELO is a
+# re-expression of the same scores and lives in round4_judge_elo.json only:
+# that file is copied as is, and no ELO or rank enters the overview table.
+#
+# analyze_round4_continuity.py: the returning models with their earlier-round
+# figures beside the round-4 ones, nothing converted. The old judge (the
+# round-2/3 judge re-run on round-4 transcripts) leaves as a band, mean and
+# half width, never a rank and never its interval ends as separate numbers
+# (as export_plotpoints_round4.old_judge_band publishes it).
+# -----------------------------------------------------------------------------
+
+OVERVIEW_JUDGE = "subagent-sonnet-5"
+CONTINUITY_OLD_JUDGE = "anthropic/claude-sonnet-4"
+# Parquet column -> round4_overview.json judge_means key. Values as the JSON
+# publishes them: the model + seed fit the tier is set on, and the plain mean.
+OVERVIEW_JUDGE_MEANS = (("judge_overall", "overall"),
+                        ("judge_agency", "S.5_agency_respect_session"),
+                        ("judge_consistency", "S.1_consistency_over_time"),
+                        ("judge_momentum", "S.3_narrative_momentum"))
+OVERVIEW_WATCH_COUNTS = ("scenes", "turns", "answered_turns",
+                         "empty_turns_outside_blank_scenes", "stub_turns",
+                         "writes_your_character", "leaks", "loops")
+# A row that carries any of these is refused: the judge ELO and its rank range
+# belong to round4_judge_elo.json, never to the overview table.
+OVERVIEW_ROW_BANNED = {"elo", "elo_lo", "elo_hi", "rank", "rank_lo", "rank_hi"}
+
+
+def _tier_order(tier):
+    return tier if tier else "Z"
+
+
+def _scene_cell(s):
+    """A blank scene is its seed id; a partial one {"seed", "answered",
+    "turns"} reads "seed (answered of turns)"."""
+    if isinstance(s, dict):
+        return "%s (%s of %s)" % (s["seed"], s.get("answered"), s.get("turns"))
+    return str(s)
+
+
+def _overview_row(r, listed_as, jm, reason=None):
+    j = r.get("J") or {}
+    tier = r.get("judge_tier") or {}
+    w = (r.get("watch_out") or {})
+    c = w.get("counts") or {}
+    m = jm.get(r["model"]) or {}
+    row = {
+        "model": r["model"],
+        "listed_as": listed_as,
+        "reason": reason,
+        "n_seeds": r.get("n_seeds"),
+        "judge_tier": tier.get("tier"),
+        "judge_tier_band": tier.get("band"),
+        "judge_n_sessions": m.get("n_sessions"),
+        "judge_basis": m.get("basis"),
+        "judge_note": m.get("note"),
+    }
+    for col, key in OVERVIEW_JUDGE_MEANS:
+        row[col] = m.get(key)
+        row[col + "_plain"] = m.get(key + "_plain")
+    row.update({
+        "J": j.get("value"),
+        "J_display": j.get("display"),
+        "J_status": j.get("status"),
+        "J_quadrant": j.get("quadrant"),
+        "J_unranked_reason": j.get("unranked_reason"),
+    })
+    for k in OVERVIEW_WATCH_COUNTS:
+        row["watch_" + k] = c.get(k)
+    row["watch_blank_scenes"] = len(c.get("blank_scenes") or [])
+    row["watch_blank_scene_seeds"] = ",".join(
+        _scene_cell(s) for s in c.get("blank_scenes") or [])
+    row["watch_partial_scenes"] = len(c.get("partial_scenes") or [])
+    row["watch_partial_scene_seeds"] = ",".join(
+        _scene_cell(s) for s in c.get("partial_scenes") or [])
+    row["watch_defects_source"] = c.get("defects_source")
+    shown = w.get("shown") or []
+    row["watch_out"] = ",".join(s["key"] for s in shown)
+    row["watch_out_text"] = "; ".join(s["text"] for s in shown)
+    return row
+
+
+def round4_overview_rows(ov: dict) -> list[dict]:
+    """One row per model in the overview: tiered, untiered, or absent.
+
+    Tier, then name, as the overview orders them; untiered and absent models
+    last. Refuses an overview that is not the Sonnet 5 judge's, whose tier and
+    judge_means disagree, or whose rows carry an ELO or a rank."""
+    jm_doc = ov.get("judge_means") or {}
+    if jm_doc.get("judge") != OVERVIEW_JUDGE or not jm_doc.get("models"):
+        raise SystemExit("round4_overview.json: judge_means missing or not from "
+                         "%s; rerun analyze_round4_overview.py" % OVERVIEW_JUDGE)
+    jm = jm_doc["models"]
+    src = ([(r, "tiered", None) for r in ov["rows"]]
+           + [(r, "untiered", r.get("reason")) for r in ov.get("unranked") or []]
+           + [(r, "absent", r.get("reason")) for r in ov.get("absent") or []])
+    for r, _, _ in src:
+        hits = OVERVIEW_ROW_BANNED & set(r)
+        if hits:
+            raise SystemExit("round4_overview.json: row %s carries %s; the judge "
+                             "ELO stays in round4_judge_elo.json"
+                             % (r["model"], sorted(hits)))
+        tier = (r.get("judge_tier") or {}).get("tier")
+        if tier != (jm.get(r["model"]) or {}).get("tier"):
+            raise SystemExit("round4_overview.json: %s tier %r differs from "
+                             "judge_means" % (r["model"], tier))
+    rows = [_overview_row(r, how, jm, reason) for r, how, reason in src]
+    if len({r["model"] for r in rows}) != len(rows):
+        raise SystemExit("round4_overview.json: a model is listed twice")
+    rank_of = {"tiered": 0, "untiered": 1, "absent": 2}
+    rows.sort(key=lambda r: (rank_of[r["listed_as"]],
+                             _tier_order(r["judge_tier"]), r["model"]))
+    return rows
+
+
+def export_round4_overview():
+    """Overview JSON and judge-ELO JSON as is, plus a flat overview parquet."""
+    src = PROJECT_ROOT / "results" / "round4_overview.json"
+    ov = _read_public_json(src)
+    rows = round4_overview_rows(ov)
+    _copy_public(src, "analysis", "round4_overview.json")
+    _copy_public(PROJECT_ROOT / "results" / "round4_judge_elo.json",
+                 "analysis", "round4_judge_elo.json")
+    out = _write_parquet_rows(rows, "round4_overview", "train.parquet")
+    n = {k: sum(1 for r in rows if r["listed_as"] == k)
+         for k in ("tiered", "untiered", "absent")}
+    print("Exported: analysis/round4_overview.json, analysis/round4_judge_elo.json, "
+          "%s (%d tiered, %d untiered, %d absent)"
+          % (out, n["tiered"], n["untiered"], n["absent"]))
+
+
+def _r4_tier_cell(row):
+    """The README's "R4 tier" cell: the letter, "untiered" for a model with
+    round-4 craft sessions but too few seeds, or None with no craft run."""
+    t = (row.get("v2_tier") or {}).get("tier")
+    if t:
+        return t
+    return "untiered" if (row.get("same_transcripts") or {}).get("r4_sessions") else None
+
+
+def round4_continuity_rows(cont: dict) -> list[dict]:
+    """One row per returning model, the README table's fields, in its order
+    (round-4 tier, then name; never by the old judge)."""
+    oj = cont.get("old_judge") or {}
+    if oj.get("judge") != CONTINUITY_OLD_JUDGE or not cont.get("rows"):
+        raise SystemExit("round4_continuity.json: old_judge is not %s or no "
+                         "rows; rerun analyze_round4_continuity.py"
+                         % CONTINUITY_OLD_JUDGE)
+    rows = []
+    for r in cont["rows"]:
+        h = r.get("r2_human") or {}
+        r3 = r.get("r3_nsfw") or {}
+        b = r.get("old_judge_r4")
+        j = r.get("J") or {}
+        tx = r.get("same_transcripts") or {}
+        rows.append({
+            "model": r["model"],
+            "rounds": ",".join(r.get("rounds") or []),
+            "finetune": bool(r.get("finetune")),
+            "round4_runs": r.get("round4"),
+            "r2_human_elo": h.get("elo"),
+            "r2_human_ci95_low": (h.get("ci95") or [None, None])[0],
+            "r2_human_ci95_high": (h.get("ci95") or [None, None])[1],
+            "r2_human_n_votes": h.get("n_votes"),
+            "r2_human_rank": h.get("rank"),
+            "r2_human_of": h.get("of"),
+            "r2_voted_transcripts": h.get("voted_transcripts"),
+            "r3_nsfw_rank": r3.get("rank"),
+            "r3_nsfw_tie": r3.get("tie"),
+            "r3_nsfw_of": r3.get("of"),
+            "r3_nsfw_craft": r3.get("craft"),
+            "r3_nsfw_n": r3.get("n"),
+            "r3_refusal_pct": r3.get("refusal_pct"),
+            # A band: mean +/- half the 95% seed-bootstrap interval, two
+            # decimals. Not a rank, not on the round-4 judge's scale.
+            "old_judge_is_band": True if b else None,
+            "old_judge_band_mean": round(float(b["mean"]), 2) if b else None,
+            "old_judge_band_half_width": round(float(b["half_width"]), 2) if b else None,
+            "old_judge_band_n_sessions": int(b["n_sessions"]) if b else None,
+            "old_judge_missing": r.get("old_judge_r4_missing"),
+            "r4_tier": _r4_tier_cell(r),
+            "r4_tier_band": (r.get("v2_tier") or {}).get("band"),
+            "J": j.get("value"),
+            "J_display": j.get("display"),
+            "J_rank": j.get("rank"),
+            "J_ranked": j.get("ranked"),
+            "J_of": j.get("of"),
+            "J_unranked_reason": j.get("unranked_reason"),
+            "r4_transcripts": tx.get("flag"),
+            "r4_transcripts_generated": tx.get("generated"),
+            "r4_transcripts_compared_with": tx.get("compared_with"),
+            "r4_sessions": tx.get("r4_sessions"),
+            "r4_sessions_identical": tx.get("identical"),
+        })
+    # analyze_round4_continuity.render_markdown's order: letter, then name;
+    # "untiered" and no-craft rows after every letter.
+    rows.sort(key=lambda r: (_tier_order(r["r4_tier"] if r["r4_tier"] != "untiered"
+                                         else None), r["model"]))
+    return rows
+
+
+def export_round4_continuity():
+    """Continuity JSON as is, plus one parquet row per returning model."""
+    src = PROJECT_ROOT / "results" / "round4_continuity.json"
+    cont = _read_public_json(src)
+    rows = round4_continuity_rows(cont)
+    _copy_public(src, "analysis", "round4_continuity.json")
+    out = _write_parquet_rows(rows, "round4_continuity", "train.parquet")
+    print("Exported: analysis/round4_continuity.json, %s (%d returning models, "
+          "%d with an old-judge band)"
+          % (out, len(rows), sum(1 for r in rows if r["old_judge_is_band"])))
+
+
 def export_round4():
     export_round4_leaderboard()
     export_round4_figures()
     export_round4_agreement()
     export_round4_seeds()
+    export_round4_overview()
+    export_round4_continuity()
 
 
 def audit_output():
@@ -718,12 +1043,12 @@ def audit_output():
             continue
         _guard_path(rel)
         if p.suffix == ".json":
-            _guard_record(_read_public_json(p), str(rel))
+            _guard_content(_read_public_json(p), str(rel))
         elif p.suffix == ".parquet":
-            _guard_record(pq.read_table(p).to_pylist(), str(rel))
+            _guard_content(pq.read_table(p).to_pylist(), str(rel))
         n += 1
-    print("Audit: %d files under %s: no private file, no Track B text"
-          % (n, OUT_DIR))
+    print("Audit: %d files under %s: no private file, no Track B text, no "
+          "blind-judge keymap, no raw voter id" % (n, OUT_DIR))
 
 
 def stage_card():
@@ -745,19 +1070,40 @@ def main():
                     help="export only this part")
     ap.add_argument("--offline", action="store_true",
                     help="skip the live community-votes fetch")
+    ap.add_argument("--drop-voter-ids", action="store_true",
+                    help="rebuild community_votes/ with no voter_id column; "
+                         "needs no %s. A failed fetch stops the export"
+                         % VOTER_HMAC_ENV)
+    ap.add_argument("--votes-from", type=Path, metavar="PARQUET",
+                    help="with --drop-voter-ids: rebuild community_votes/ from "
+                         "this local community_votes parquet instead of the live "
+                         "fetch (its voter_id column is never read)")
     args = ap.parse_args()
-    if args.only != "round4" and not args.offline:
+    if args.drop_voter_ids and (args.offline or args.only == "round4"):
+        ap.error("--drop-voter-ids rebuilds community_votes/, which --offline "
+                 "and --only round4 skip")
+    if args.votes_from is not None and not args.drop_voter_ids:
+        ap.error("--votes-from is only for --drop-voter-ids")
+    if args.votes_from is not None and not args.votes_from.is_file():
+        ap.error("--votes-from %s: no such file" % args.votes_from)
+    if args.only != "round4" and not args.offline and not args.drop_voter_ids:
         # Refuse before anything is written, not halfway through.
         try:
             voter_secret()
         except VoterSecretError as e:
-            ap.error("%s. Set %s, or pass --offline to leave community_votes/ "
-                     "as it is" % (e, VOTER_HMAC_ENV))
+            ap.error("%s. Set %s, pass --drop-voter-ids to publish the votes "
+                     "with no voter column, or pass --offline to leave "
+                     "community_votes/ as it is" % (e, VOTER_HMAC_ENV))
     OUT_DIR = args.out.resolve()
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
     print("Exporting RP-Bench data to HuggingFace format into %s\n" % OUT_DIR)
     if args.only != "round4":
+        # First: its votes source (secret, fetch) is settled before it writes,
+        # so a refusal or a failed fetch leaves OUT_DIR empty.
+        export_community_arena(offline=args.offline,
+                               drop_voter_ids=args.drop_voter_ids,
+                               votes_from=args.votes_from)
         export_seeds()
         export_adversarial_seeds()
         export_rubric()
@@ -765,7 +1111,6 @@ def main():
         export_leaderboard()
         export_elo()
         export_flaw_hunter_results()
-        export_community_arena(offline=args.offline)
         export_analysis_artifacts()
     export_round4()
     stage_card()

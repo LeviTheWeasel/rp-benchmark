@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Community arena analysis — rankings, splits, H2H, and ELO from live votes.
 
-Reads the arena vote log (either a local votes.jsonl or a live API URL),
-filters out suspect voters (catch pass rate < 50% on >= 2 non-ambiguous
-catches), and produces:
+Reads the arena vote log (a local votes.jsonl, JSON or CSV file, or the
+site's public export URL), filters out suspect voters (catch pass rate < 50%
+on >= 2 non-ambiguous catches), and produces:
 
   - Community ELO with 100-shuffle stability band
   - SFW / NSFW split win rates per model
@@ -16,35 +16,58 @@ badges / blog post to consume.
 Usage:
     python3 analyze_community_arena.py [--url URL | --file PATH] [--out PATH]
 
-Defaults to pulling https://arena.l3vi4th4n.ai/api/votes and writing
-results/community_arena.json.
+Defaults to the site's public export of the round-1 single-message arena,
+https://plotlightstudios.com/api/plotpoints/raw?round=1&mode=arena (parsed by
+fetch_arena_votes.votes_from_csv), writing results/community_arena.json.
+That export carries no voter ids, and the suspect-voter filter and the voter
+counts need them, so on it this script stops with a message instead of
+ranking unfiltered votes. Pass --file with a vote log that carries voter ids
+(raw, or HMAC pseudonyms). The published run is
+results/community_arena_2000.json.
 """
 import argparse
 import json
 import random
 import sys
-import urllib.request
 from collections import Counter, defaultdict
 from pathlib import Path
+
+from fetch_arena_votes import (ARENA_CSV_URL, carries_voter_ids, fetch_csv,
+                               votes_from_csv)
 
 # Catches marked ambiguous (community legitimately disagrees on the
 # "right" answer). Excluded from voter-quality scoring but tracked as a
 # standalone preference-split datapoint.
 AMBIGUOUS_CATCHES = {"catch_user_hijack_cafe"}
 
-DEFAULT_URL = "https://arena.l3vi4th4n.ai/api/votes"
+DEFAULT_URL = ARENA_CSV_URL
 DEFAULT_OUT = Path("results/community_arena.json")
 
 
 def load_votes(url: str | None, file: str | None) -> list[dict]:
     if file:
+        if file.endswith(".csv"):
+            return votes_from_csv(Path(file).read_bytes())
         with open(file) as f:
             if file.endswith(".jsonl"):
                 return [json.loads(l) for l in f if l.strip()]
             return json.load(f).get("votes", [])
     assert url, "must pass --url or --file"
-    with urllib.request.urlopen(url, timeout=30) as resp:
-        return json.load(resp).get("votes", [])
+    return votes_from_csv(fetch_csv(url))
+
+
+def require_voter_ids(arena: list[dict], source: str):
+    """Stop unless some vote carries a voter id: without them there is no
+    suspect-voter filter and no voter count, and an unfiltered ranking would
+    not be this analysis."""
+    if not carries_voter_ids(arena):
+        raise SystemExit(
+            "No arena vote in %s carries a voter id. The suspect-voter filter "
+            "(catch pass rate per voter) and the voter counts need them, and "
+            "the site's public export has none by design, so this analysis "
+            "cannot run on it. Pass --file with a vote log that carries voter "
+            "ids (raw, or HMAC pseudonyms). The published run is "
+            "results/community_arena_2000.json." % source)
 
 
 def is_nsfw(sid: str) -> bool:
@@ -110,6 +133,7 @@ def main():
 
     votes = load_votes(args.url if not args.file else None, args.file)
     arena = [v for v in votes if v.get("mode") == "arena"]
+    require_voter_ids(arena, args.file or args.url)
     catches = [v for v in arena if v.get("is_catch")]
     real = [v for v in arena if not v.get("is_catch")]
 

@@ -49,6 +49,14 @@ configs:
   data_files:
   - split: train
     path: round4_leaderboard/train.parquet
+- config_name: round4_overview
+  data_files:
+  - split: train
+    path: round4_overview/train.parquet
+- config_name: round4_continuity
+  data_files:
+  - split: train
+    path: round4_continuity/train.parquet
 - config_name: round4_rater_agreement
   data_files:
   - split: train
@@ -76,13 +84,13 @@ default: true
 
 A multi-dimensional evaluation framework for measuring how well LLMs perform in roleplay scenarios — not just writing quality, but character consistency, user agency respect, lorebook integration, temporal reasoning, and genre-specific craft.
 
-[![Community votes](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Farena.l3vi4th4n.ai%2Fapi%2Fstats&query=%24.arena&label=Community%20arena%20votes&color=blue&cacheSeconds=300)](https://arena.l3vi4th4n.ai/arena) [![Voters](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Farena.l3vi4th4n.ai%2Fapi%2Fstats&query=%24.voters&label=Voters&color=purple&cacheSeconds=300)](https://arena.l3vi4th4n.ai/results) [![Pairs covered](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Farena.l3vi4th4n.ai%2Fapi%2Fstats&query=%24.pairs_covered&label=Pairs%20covered&color=green&cacheSeconds=300)](https://arena.l3vi4th4n.ai/results)
+[![Community votes](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fplotlightstudios.com%2Fapi%2Fplotpoints%2Fstats&query=%24.arena&label=Community%20arena%20votes&color=blue&cacheSeconds=300)](https://plotlightstudios.com/plotpoints) [![Voters](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fplotlightstudios.com%2Fapi%2Fplotpoints%2Fstats&query=%24.voters&label=Voters&color=purple&cacheSeconds=300)](https://plotlightstudios.com/plotpoints/leaderboard) [![Pairs covered](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fplotlightstudios.com%2Fapi%2Fplotpoints%2Fstats&query=%24.pairs_covered&label=Pairs%20covered&color=green&cacheSeconds=300)](https://plotlightstudios.com/plotpoints/leaderboard)
 
-The LLM-as-judge signals in this benchmark disagree with real users about half the time. We're calibrating against human preferences via a public blind-arena. Help out at **[arena.l3vi4th4n.ai](https://arena.l3vi4th4n.ai/arena)** — each vote takes ~30 seconds.
+The LLM-as-judge signals in this benchmark disagree with real users about half the time. We're calibrating against human preferences via a public blind-arena. Help out at **[plotlightstudios.com/plotpoints](https://plotlightstudios.com/plotpoints)** — each vote takes ~30 seconds.
 
 ## Community Leaderboard (human-voted ELO) 🎯
 
-**The headline signal.** Based on 1,857 pairwise votes from 338 community voters in our public calibration arena at [arena.l3vi4th4n.ai](https://arena.l3vi4th4n.ai/arena). Suspect voters filtered via catch-pair calibration (pass rate 75%). Covers 271 matchups at median 7 votes per pair.
+**The headline signal.** Based on 1,857 pairwise votes from 338 community voters in our public calibration arena, now at [plotlightstudios.com/plotpoints](https://plotlightstudios.com/plotpoints) (the round-1/2 arena originally ran at `arena.l3vi4th4n.ai`, a domain the project no longer controls). Suspect voters filtered via catch-pair calibration (pass rate 75%). Covers 271 matchups at median 7 votes per pair.
 
 | Rank | Model | ELO | ± | SFW | NSFW |
 |------|-------|-----|---|-----|------|
@@ -102,7 +110,55 @@ Top-3 tier (Gemma, Mistral, Gemini) is statistically separated from the rest and
 
 **Key finding — community and LLM judges disagree systematically:** Gemma 4 26B (not in the LLM-judge pool at all) tops community voting. Mistral Small Creative jumps from LLM-rank #7 to community-rank #2. GPT-4.1 drops from LLM-rank #4 to community dead last. The divergence is reproducible and stable — LLM-as-judge measures what judges aesthetically prefer, not what users prefer.
 
-Raw data: `results/community_arena_2000.json` in the source repo.
+Raw data: `results/community_arena_2000.json` in the source repo. One row per vote is in the `community_votes` config (2,013 rows: catch-pair votes included, before the suspect-voter filter). **`community_votes` has no voter id column.** A voter id was a long-lived browser cookie, so it is not published, raw or hashed; the voter counts above come from the analysis, not from that table.
+
+## Round 4 and earlier rounds
+
+Round 4 changes the instruments more than the models. Each returning model's row sets its earlier-round figures beside the round-4 ones without converting any of them: the old judge is the round-2/3 judge re-run on round-4 transcripts and is a band, never a rank; the round-4 judge is a letter; J is new. Nothing is summed.
+
+**What changed, and how each change is bridged.**
+
+| Instrument | Rounds 2 and 3 | Round 4 | Comparable? |
+|---|---|---|---|
+| Craft judge | Claude Sonnet 4 over the API (prompt `1ff004ccf5aa`, temperature 0.1) | Claude Sonnet 5 as subagents (session judge v2), same rubric text | Through the old judge, re-run on every round-4 transcript. The raw numbers are not: the new judge scores 0.52 lower on average and spreads the top 26 models over 0.59 points instead of 0.21. |
+| Flaw hunter | Sonnet 4 with a primer, 100 minus quoted deductions | subagent raters with standing instructions | No: the rater and its instructions changed (per-model Spearman 0.57 on 38 models, a +9.5-point level shift). The old flaw hunter was not re-run. |
+| Headline | Round 3: craft on the NSFW track. Round 2: the May composite | J, the new axis, beside the craft tier | No: J has no predecessor. The craft line continues through the old judge and the round-4 tier. |
+| Willingness | one refusal flag per session, inside the judge's JSON | a per-rung classifier with a Jev confidence gate; over-refusal counts soft deflection | No: the seeds, the instrument, the construct and about three months of provider drift all changed. Round 3's refusal % is shown as round 3's own instrument. |
+| Track and simulator | Round 3's table: NSFW seeds, DeepSeek V3.2 simulator. Standard track: adversarial seeds, Gemini 2.5 Flash simulator | craft on the standard adversarial seeds with Gemini 2.5 Flash, 12 turns; the J ladders on DeepSeek V3.2 | Through the round-3 standard track, which is round 4's craft setup: 13 models were re-run on it in September under the same judge. Against round 3's NSFW table only the broad order carries over. |
+| Roster | Round 2: 21 multi-turn models. Round 3: 40 | 71: 70 with craft, 58 with a J row | Through the 41 returning models: 40 with craft, plus `rocinante_12b` (Track A only, no J). 30 are new. `owl_alpha` (LongCat-2.0) was not run in round 4. |
+| Composite | the May composite, 21 models | none | No: two of its five inputs (human arena, 27-dimension rubric) do not exist for round-4 models. |
+
+**The bridges.** The old judge re-scored every round-4 transcript it had not already scored (549 sessions), after a drift check on 40 sessions it had scored before (mean change 0.000, Pearson 0.991). Of the 7 non-finetune models re-run in September on the round-3 standard setup under the same judge, 6 came back within 0.04 of June and `gpt_5_5` rose 0.12 (SE 0.07); among the finetunes `unslopnemo_12b` rose 0.52 (SE 0.17), and `deepseek_v3_0324` rose 0.43 (SE 0.20) when re-run with a higher token cap. The human multi-turn arena read round-4 text: 324 of its 336 sessions (19 of its 20 models) are round-4 transcripts.
+
+**The 41 returning models** (`round4_continuity` config, one row each, in the source README's order: round-4 tier, then name, never by the old judge). 20 have a round-2 human ELO and 39 a round-3 NSFW position. By round-4 tier: 17 A, 14 B, 3 C, 5 D; `mistral_small_2603` is untiered (4 of 20 seeds) and `rocinante_12b` has no round-4 craft. 26 have a ranked J, 13 were not in the J runs, `mistral_small_2603` has an unranked J and `rocinante_12b` none. 20 play the exact round-2 texts in round 4 (hash-checked), 20 were regenerated on the same seeds.
+
+- **Old judge on R4** is a band: the mean over the 12 core seeds (09-20, the seeds every fully run model played) plus or minus half its 95% seed-bootstrap interval, as `old_judge_band_mean` and `old_judge_band_half_width` with `old_judge_is_band` set. It is not a rank: all 68 neighbouring pairs of bands overlap, and the median 95% rank interval spans 16 places. It is not on the round-4 judge's scale, and nothing converts one into the other. The 20 "same as R2" rows were scored in April and may sit about 0.06 low against the rows scored in September (post hoc, SE 0.03).
+- **R2 human ELO** is the final round-2 multi-turn arena (1,943 votes), with its 95% interval and votes. For `kimi_k2_6` voters read different text: its round-4 transcripts were regenerated after the vote (`r2_voted_transcripts`).
+- **R3 NSFW** is the position in the published round-3 table, with its score and tie range; round 3 itself called its top 33 tied. **R3 refusal %** is round 3's own instrument, not comparable with J or with round-4 over-refusal.
+
+**Correlations** (Spearman, 95% model-bootstrap interval, 12 core seeds): old vs new judge on identical transcripts 0.88 [0.79, 0.94], n=69; round-3 NSFW table vs new judge 0.87 [0.71, 0.95], n=37 (without finetunes 0.78 [0.55, 0.90], n=31); round-2 humans vs old judge 0.60 [0.09, 0.89], n=19, vs new judge 0.52 [-0.01, 0.82], n=19; humans vs J undetermined (n=8).
+
+**How to read it.** The models moved little; the ruler moved a lot. The two judges order models closely overall, but only 0.71 among the 43 models the old judge places at 4.3 or higher, a stretch it barely separates. Some of the new judge's wider split favours Claude: on 110 sessions that ChatGPT and Gemini reference judges also scored, the new judge gives Claude-model sessions a larger premium over the reference than the old judge did. Only the ChatGPT difference is firm (+0.43 against +0.12, difference +0.30 [0.14, 0.47]); the Gemini one (+0.23 against +0.10, difference +0.13 [-0.03, 0.28]) is within the noise. So part of the Claude models' lead under the new judge may be the judge's own family. The human arena does not settle it: humans agree with the old judge slightly more than with the new one (0.60 against 0.52, difference -0.09 [-0.24, 0.03], inside the noise). Round 3's refusal % and round 4's J are not one series (Spearman 0.30, n=27).
+
+**Not published**, here or in the source repo: a per-model translation of the new judge onto the old scale, a composite, a cross-round refusal column, a rank on the old judge.
+
+**The human arena file.** `analysis/multiturn_arena_bayesian.json` is the round-2 multi-turn arena refreshed on 2026-09-27 to the site's final 1,943 votes (190 pairs, 20 models, closed 2026-06-13). The public export it comes from carries no voter ids, so the voter count (482, the site's archive figure) cannot be recomputed from it and the voter-clustered bootstrap cannot be re-run: `analysis/multiturn_arena_bootstrap.json` still describes the 1,262-vote pull of 2026-06-04.
+
+Raw: `analysis/round4_continuity.json`, which also carries the old-judge band for all 69 banded models, the judge bridge by subset, the re-run check per model and the cross-family table. Methods: [`docs/METHODOLOGY.md` §21](https://github.com/LeviTheWeasel/rp-benchmark/blob/main/docs/METHODOLOGY.md); anchor protocol for later rounds: [`docs/ROUND4_DESIGN.md` §23](https://github.com/LeviTheWeasel/rp-benchmark/blob/main/docs/ROUND4_DESIGN.md).
+
+## Round 4 overview: judge tier, J, watch-out
+
+Three columns per model, side by side. **Nothing is summed and there is no position**: rows inside a tier are alphabetical.
+
+- **Judge tier.** A fixed letter on one judge's 1-5 `overall` mean (Claude Sonnet 5, session judge v2, on the 20 adversarial craft seeds): A 3.8 and above, B 3.2-3.8, C 2.6-3.2, D 2.0-2.6, E below 2.0. The letters are frozen and never re-lettered. 69 models are tiered: 37 A, 22 B, 3 C, 7 D, none E. A model that played 12 to 19 seeds has its means set on all 20 by a model + seed fit; `mistral_small_2603` played 4 and is listed without a tier. `fugu_max` (every craft session errored) and `rocinante_12b` (no craft run) are absent.
+- **J** exactly as published in the next section, to two decimals; treat models within ~0.3 as tied. 13 older models were not in round 4's J runs and read "not in round 4".
+- **Watch out.** Counts, never a score, each with its denominator: whole blank scenes, partial scenes, empty or stub replies (under 50 characters), replies that write the user's character, leaks (a harness prompt, a chat-template token or a reasoning tag inside the reply), loops, silent refusal (the flag in the J section), and "plays itself" (`gemini_2_5_flash` is also the user simulator for the craft corpus). Scene-level items always show, turn-level ones at 2% of turns or more; every count is in the table. 17 models show at least one.
+
+**Caveats on the tier.** It is one judge. Sonnet and Gemini agree per model (r +0.97); ChatGPT scores 0.77 lower on average and reorders the top. The interval behind a letter covers which seeds were drawn, not judge disagreement. On the 203 sessions all three judge families scored, Sonnet rates Claude-model sessions above non-Claude ones by +0.20 relative to ChatGPT (95% interval -0.01 to 0.41) and +0.11 relative to Gemini (0.00 to 0.19); subtracting either measured figure from every Claude model moves none of them to another tier, and nothing in the overview is adjusted by it. Blank and partial sessions stay scored and flagged: dropping all four (three blank, one partial) changes no tier. The tier is not the "craft band" on the profile cards, which is the flaw hunter.
+
+**The judge ELO is not a rank.** `analysis/round4_judge_elo.json` fits Bradley-Terry to within-seed pairs of the same Sonnet 5 scores. It is a re-expression of those scores, not new information (Spearman 0.996 with the mean), pool-relative and not comparable to arena ELO, so it is kept in that file and is not in the `round4_overview` table.
+
+`round4_overview` config: one row per model (72: 69 tiered, 1 untiered, 2 absent, with `listed_as` and the `reason`), with the tier and its band, the four judge means (`judge_overall`, `judge_agency`, `judge_consistency`, `judge_momentum`) as `analysis/round4_overview.json` gives them (the model + seed fit the tier is set on, with the plain means as `*_plain`), J with its display and status, and the watch-out counts with the items shown (`watch_out`, `watch_out_text`). The site shows the means rounded down to one decimal, so that a shown value never sits in the tier above its own; the table keeps the JSON's values.
 
 ## Round 4 — Willingness and Judgment
 
@@ -144,7 +200,7 @@ All 55 ranked models are in the `round4_leaderboard` config and on the [Space](h
 
 **Scope.** The held-line half covers **non-consent and frame-break only** (4 seeds, 2 probe types). Child safety and real-person likeness are deliberately out of scope and are not published; a good J is not coverage of them. It is one product's line, not a universal one. Writing quality does not enter J.
 
-**What is here, and what is not.** The leaderboard (`round4_leaderboard`, and `analysis/round4_willingness_leaderboard.json` with the definitions and notes), both charts (`analysis/r4_j_leaderboard.svg`, `analysis/round4_quadrants.svg`), the v2 model cards (`analysis/profile_cards_v2.md`), rater agreement (`analysis/round4_jev_vs_sonnet.json`, per-wave summaries; `round4_rater_agreement`, per-exchange Track A labels; `analysis/round4_kappa.json`, an older GPT-5.5 cross-check on a 20% sample, not the published figure), and the seeds (`round4_track_a_seeds`, `round4_track_b_probes`). **No Track B transcripts or replies are published**, here or in the source repo: for those scenes only labels, evidence quotes of at most 160 characters and scores are kept. Track A transcripts are not in this dataset either, as with round 3; they are in `results/r4_full_*.json` in the source repo.
+**What is here, and what is not.** The leaderboard (`round4_leaderboard`, and `analysis/round4_willingness_leaderboard.json` with the definitions and notes), both charts (`analysis/r4_j_leaderboard.svg`, `analysis/round4_quadrants.svg`), the v2 model cards (`analysis/profile_cards_v2.md`), rater agreement (`analysis/round4_jev_vs_sonnet.json`, per-wave summaries; `round4_rater_agreement`, per-exchange Track A labels; `analysis/round4_kappa.json`, an older GPT-5.5 cross-check on a 20% sample, not the published figure), the seeds (`round4_track_a_seeds`, `round4_track_b_probes`), and the overview and continuity tables described above (`round4_overview`, `round4_continuity`, with `analysis/round4_overview.json`, `analysis/round4_continuity.json` and `analysis/round4_judge_elo.json`). **No Track B transcripts or replies are published**, here or in the source repo: for those scenes only labels, evidence quotes of at most 160 characters and scores are kept. Track A transcripts are not in this dataset either, as with round 3; they are in `results/r4_full_*.json` in the source repo.
 
 Full method: [`docs/METHODOLOGY.md` §20](https://github.com/LeviTheWeasel/rp-benchmark/blob/main/docs/METHODOLOGY.md). Plain-language walkthrough: [`docs/ROUND4_FOR_READERS.md`](https://github.com/LeviTheWeasel/rp-benchmark/blob/main/docs/ROUND4_FOR_READERS.md). Design log: [`docs/ROUND4_DESIGN.md`](https://github.com/LeviTheWeasel/rp-benchmark/blob/main/docs/ROUND4_DESIGN.md).
 
@@ -404,6 +460,11 @@ Python evaluation harness source code. Uses OpenRouter API for model-agnostic be
 - `round4_leaderboard`: one row per model (58; 55 ranked). `J`, `held_line_rate` (first ask) with `held_first_n`, `held_under_pressure` with its n and folds, `over_refusal_hard_rungs` (gated) beside the ungated figure, `policy_compliance_rate` (B-policy, not in J), `overshoot_rate`, `quadrant`, `rank`/`ranked`/`unranked_reason`, and `flags` (`silent_refusal`, `reduced_data`). Definitions: `j_definition` and `ranking_rule` in `analysis/round4_willingness_leaderboard.json`.
 - `round4_rater_agreement`: 4,411 Track A exchanges with the Sonnet label, Jev's label, confidence and class probabilities. Labels only, no reply text. Track B rows are not published.
 - `round4_track_a_seeds`, `round4_track_b_probes`: the 16 escalation ladders and the 7 probes. Probe text is a plain, non-graphic request. Source JSON in `_source/`.
+- `round4_overview`: one row per model (72). `listed_as` (`tiered`, `untiered`, `absent`) and `reason`; `judge_tier` and `judge_tier_band`; the Sonnet 5 judge means `judge_overall`, `judge_agency`, `judge_consistency`, `judge_momentum` as the JSON gives them, with `*_plain`, `judge_n_sessions` and `judge_basis`; `J`, `J_display`, `J_status`, `J_quadrant`, `J_unranked_reason`; the watch-out counts (`watch_*`, each denominator beside it) and the items shown (`watch_out`, `watch_out_text`). No ELO, no rank, no sum of columns. Full definitions and checks: `analysis/round4_overview.json`; the judge ELO, a re-expression and not a rank: `analysis/round4_judge_elo.json`.
+- `round4_continuity`: one row per returning model (41), the source README table's fields: round-2 human ELO with its interval, votes and rank of 20 (`r2_human_*`, `r2_voted_transcripts`); round-3 NSFW position, tie range, craft score and refusal % (`r3_*`, round 3's own instrument); the old judge as a band (`old_judge_band_mean`, `old_judge_band_half_width`, `old_judge_band_n_sessions`, `old_judge_is_band`, or `old_judge_missing`); `r4_tier`; J with its rank of 55; and whether round 4 reused the round-2 texts (`r4_transcripts`, `r4_sessions_identical`). Full block: `analysis/round4_continuity.json`.
+
+### Community votes (`community_votes/`)
+One row per single-message arena vote: `vote_id`, `timestamp`, `scenario_id`, `model_a`, `model_b`, `winner`, `is_catch`, `catch_correct`. There is no `voter_id` column: a voter id was a long-lived browser cookie and is not published, raw or hashed. Source: the site's public export, `https://plotlightstudios.com/api/plotpoints/raw?round=1&mode=arena` (`timestamp` is its `client_timestamp`, in UTC).
 
 ## How to Use
 
@@ -422,6 +483,8 @@ python run.py leaderboard --view full
 from datasets import load_dataset
 ds = load_dataset("lazyweasel/roleplay-bench")
 r4 = load_dataset("lazyweasel/roleplay-bench", "round4_leaderboard")
+overview = load_dataset("lazyweasel/roleplay-bench", "round4_overview")
+continuity = load_dataset("lazyweasel/roleplay-bench", "round4_continuity")
 ```
 
 ## Methodology

@@ -188,9 +188,10 @@ scored by `analyze_multiturn_arena.py`.
 - CSV: {nbytes:,} bytes, sha256 `{sha}`, {nsite:,} rows, created_at
   {first} to {last}.
 - Plus {nleg} older rows kept from the previous file, source
-  `{legacy}`: ballots cast on arena.l3vi4th4n.ai after its 507 round-2 votes
-  were imported into the site on 2026-04-30. They never reached the site's
-  round-2 tally, so `analyze_multiturn_arena.py` keeps them unscored.
+  `{legacy}`: ballots cast on `arena.l3vi4th4n.ai` (the round-1/2 arena's
+  original domain, which the project no longer controls) after its 507
+  round-2 votes were imported into the site on 2026-04-30. They never reached
+  the site's round-2 tally, so `analyze_multiturn_arena.py` keeps them unscored.
 
 Rows by source: {sources}. Total {ntot:,} rows, sorted by server timestamp.
 

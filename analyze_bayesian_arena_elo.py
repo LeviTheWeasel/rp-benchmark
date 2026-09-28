@@ -56,6 +56,13 @@ def load_votes() -> list[tuple[str, str, str]]:
                 votes.append((v["model_a"], v["model_b"], v["winner"]))
         return votes
 
+    if "voter_id" not in df.columns:
+        raise SystemExit(
+            f"{parquet} has no voter_id column: the votes are published "
+            "without voter ids. The suspect-voter filter behind "
+            "results/community_arena_bayesian.json needs them, so that file "
+            "cannot be re-run from the public votes and stays the published run.")
+
     catches = df[df["is_catch"] == True]
     per_voter = defaultdict(lambda: [0, 0])
     for _, row in catches.iterrows():

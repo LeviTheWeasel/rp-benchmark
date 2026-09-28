@@ -208,7 +208,7 @@ major_per_session(model)  = sum(n_major_flaws) / n_sessions  # rate of -8 deduct
 
 ### 4.1 Architecture
 
-A blind A/B voting UI at `arena.l3vi4th4n.ai`. Backend is a single Next.js server with append-only JSONL vote logs in a Railway-mounted persistent volume.
+A blind A/B voting UI, now at https://plotlightstudios.com/plotpoints. The round-1/2 arena originally ran at `arena.l3vi4th4n.ai`, a domain the project no longer controls; its backend was a single Next.js server with append-only JSONL vote logs in a Railway-mounted persistent volume.
 
 Critical anti-bias features (each is a real defense against documented failure modes in earlier rounds):
 
@@ -322,7 +322,7 @@ The arena randomizes A/B side per voter, so a non-zero `position_bias` is the re
 
 Same blind A/B vote infrastructure as §4, but the rendered scenario is the entire 12-turn (24-message) dialogue between two models on the same adversarial seed. Voters scroll through both conversations before deciding A / B / tie. Same anti-bias features (§4.1), same catch-pair voter quality filter (§4.2), same rate limits.
 
-Storage: votes are tagged `mode: "multiturn_arena"` in `data/votes.jsonl`; pulled to `data/multiturn_arena_votes.jsonl` by `fetch_arena_votes.py`.
+Storage: votes are tagged `mode: "multiturn_arena"` in `data/votes.jsonl`; `data/multiturn_arena_votes.jsonl` is rebuilt from the site's public round-2 export by `refresh_multiturn_arena_votes.py`.
 
 ### 5.2 Bayesian ELO
 
@@ -650,7 +650,7 @@ rp-bench run --judge-mode flaw_hunter
 rp-bench multiturn --turns 12 --adversarial
 
 # Community arena (live, hosted)
-# Visit arena.l3vi4th4n.ai/arena
+# Visit https://plotlightstudios.com/plotpoints
 
 # Analyses
 python3 analyze_community_arena.py

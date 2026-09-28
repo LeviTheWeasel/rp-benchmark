@@ -173,7 +173,7 @@ def main():
         "   This will populate the Speed and Cost columns for the new model.\n"
         "\n"
         "3. (Optional, for the headline rho) Open the multi-turn arena at\n"
-        "      arena.l3vi4th4n.ai/multiturn-arena\n"
+        "      https://plotlightstudios.com/plotpoints\n"
         "   so the public can vote on the new model's sessions vs. existing ones.\n"
         "   Until human votes accumulate, the new model's mt_arena_elo component\n"
         "   imputes to z=0 and the row is flagged with `*` in the composite.\n"

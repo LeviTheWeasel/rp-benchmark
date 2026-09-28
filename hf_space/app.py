@@ -458,7 +458,7 @@ Three core findings drive everything else:
 **Round 4** adds the axis craft cannot see: whether a model holds a hard line (non-consent, frame-break) without refusing scenes between consenting adults. See the *Round 4: Willingness* tab.
 
 Data: [`lazyweasel/roleplay-bench`](https://huggingface.co/datasets/lazyweasel/roleplay-bench).  Code: [github.com/LeviTheWeasel/rp-benchmark](https://github.com/LeviTheWeasel/rp-benchmark).
-Live community arena: [arena.l3vi4th4n.ai](https://arena.l3vi4th4n.ai/arena).
+Live community arena: [plotlightstudios.com/plotpoints](https://plotlightstudios.com/plotpoints).
 """
 
 NOTES = {

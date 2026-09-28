@@ -133,7 +133,9 @@ def featurize(text: str) -> np.ndarray:
 def load_arena_votes():
     """Load suspect-filtered single-message arena votes with response text."""
     if not VOTES_PATH.exists():
-        print(f"ERROR: {VOTES_PATH} not found. Run fetch_arena_votes.py first.")
+        print(f"ERROR: {VOTES_PATH} not found. This needs the original arena "
+              "server's vote log, which kept each vote's response text; the "
+              "site's public export (fetch_arena_votes.py) carries none.")
         sys.exit(1)
 
     votes = []
@@ -153,6 +155,11 @@ def load_arena_votes():
             if not (v.get("response_a") and v.get("response_b") and v.get("winner") in ("A", "B", "tie")):
                 continue
             votes.append(v)
+    if not votes:
+        print(f"ERROR: no arena vote in {VOTES_PATH} carries response_a and "
+              "response_b. The site's public export (fetch_arena_votes.py) "
+              "has no response text, so this regressor cannot train on it.")
+        sys.exit(1)
     return votes
 
 

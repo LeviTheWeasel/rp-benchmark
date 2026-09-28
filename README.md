@@ -2,9 +2,9 @@
 
 Roleplay quality benchmark for LLMs. Measures what existing benchmarks don't — character consistency, user agency respect, lorebook integration, prose craft, and genre-specific skills across 27 dimensions. Round 4 adds the axis craft cannot see: whether a model can tell what it should refuse from what it should not.
 
-**Live calibration arena:** [![Community votes](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Farena.l3vi4th4n.ai%2Fapi%2Fstats&query=%24.arena&label=Community%20arena%20votes&color=blue&cacheSeconds=300)](https://arena.l3vi4th4n.ai/arena) [![Voters](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Farena.l3vi4th4n.ai%2Fapi%2Fstats&query=%24.voters&label=Voters&color=purple&cacheSeconds=300)](https://arena.l3vi4th4n.ai/results) [![Pairs covered](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Farena.l3vi4th4n.ai%2Fapi%2Fstats&query=%24.pairs_covered&label=Pairs%20covered&color=green&cacheSeconds=300)](https://arena.l3vi4th4n.ai/results)
+**Live calibration arena:** [![Community votes](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fplotlightstudios.com%2Fapi%2Fplotpoints%2Fstats&query=%24.arena&label=Community%20arena%20votes&color=blue&cacheSeconds=300)](https://plotlightstudios.com/plotpoints) [![Voters](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fplotlightstudios.com%2Fapi%2Fplotpoints%2Fstats&query=%24.voters&label=Voters&color=purple&cacheSeconds=300)](https://plotlightstudios.com/plotpoints/leaderboard) [![Pairs covered](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fplotlightstudios.com%2Fapi%2Fplotpoints%2Fstats&query=%24.pairs_covered&label=Pairs%20covered&color=green&cacheSeconds=300)](https://plotlightstudios.com/plotpoints/leaderboard)
 
-The LLM-as-judge signals in this benchmark disagree with real users about half the time. We're calibrating against human preferences via a public blind-arena. Help us out at **[arena.l3vi4th4n.ai](https://arena.l3vi4th4n.ai/arena)** — each vote takes ~30 seconds.
+The LLM-as-judge signals in this benchmark disagree with real users about half the time. We're calibrating against human preferences via a public blind-arena. Help us out at **[plotlightstudios.com/plotpoints](https://plotlightstudios.com/plotpoints)** — each vote takes ~30 seconds.
 
 **Dataset & Leaderboard:** [lazyweasel/roleplay-bench on HuggingFace](https://huggingface.co/datasets/lazyweasel/roleplay-bench)
 
@@ -114,7 +114,7 @@ Raw data: [`results/composite_leaderboard.json`](results/composite_leaderboard.j
 
 ## Community Leaderboard (human-voted ELO)
 
-Based on **1,857 pairwise votes** from **338 community voters** collected via the blind arena at [arena.l3vi4th4n.ai](https://arena.l3vi4th4n.ai/arena). Suspect voters filtered out by calibration catches (pass rate 75%). 271 pairs covered, median 7 votes per pair.
+Based on **1,857 pairwise votes** from **338 community voters** collected via the blind arena, now at [plotlightstudios.com/plotpoints](https://plotlightstudios.com/plotpoints) (the round-1/2 arena originally ran at `arena.l3vi4th4n.ai`, a domain the project no longer controls). Suspect voters filtered out by calibration catches (pass rate 75%). 271 pairs covered, median 7 votes per pair.
 
 | Rank | Model | ELO | ± | Overall | SFW | NSFW |
 |------|-------|-----|---|---------|-----|------|
@@ -137,7 +137,7 @@ Based on **1,857 pairwise votes** from **338 community voters** collected via th
 - NSFW-averse: DeepSeek (-21), Llama (-13), MiniMax (-9), Qwen (-6)
 - Balanced across: Gemma, Sonnet, GPT-4.1
 
-Raw data: [`results/community_arena_2000.json`](results/community_arena_2000.json). Reproduce with `python3 analyze_community_arena.py`.
+Raw data: [`results/community_arena_2000.json`](results/community_arena_2000.json). The votes themselves are the site's public export, `https://plotlightstudios.com/api/plotpoints/raw?round=1&mode=arena` (2,013 rows, catch pairs included; `python3 fetch_arena_votes.py`). It carries no voter ids, so the suspect-voter filter cannot be re-run from it: `python3 analyze_community_arena.py` stops with a message on it rather than rank unfiltered votes.
 
 ## Multi-Turn Arena (humans, full dialogues)
 
@@ -183,7 +183,7 @@ Same blind-vote infrastructure, **but voters read the entire 12-turn adversarial
 
 Caveats: 95% CIs are still wide (median ±85 ELO, down from about ±115 at 1,262 votes and ±200 at 434), so only the broad top-versus-bottom split is firm. Slight position bias (B wins 52.5% of decided votes vs 50% null). Voter concentration was last measured on the 1,262-vote pull (heaviest voter 99 votes, 7.8%) and cannot be re-measured without voter ids. The finding (frontier models lead the multi-turn arena, contradicting the single-message ranking) holds, with Mistral SC the single-message leader that does not collapse here (#6).
 
-Raw data: [`results/multiturn_arena_bayesian.json`](results/multiturn_arena_bayesian.json). Reproduce with `python3 refresh_multiturn_arena_votes.py && python3 analyze_multiturn_arena.py`. The votes file also keeps 30 ballots cast on arena.l3vi4th4n.ai after its votes moved to the site on 2026-04-30; they never reached the round-2 tally, so the analyzer leaves them unscored.
+Raw data: [`results/multiturn_arena_bayesian.json`](results/multiturn_arena_bayesian.json). Reproduce with `python3 refresh_multiturn_arena_votes.py && python3 analyze_multiturn_arena.py`. The votes file also keeps 30 ballots cast on the original arena domain after its votes moved to the site on 2026-04-30; they never reached the round-2 tally, so the analyzer leaves them unscored.
 
 ## Round 3 — NSFW Multi-Turn (judge-scored)
 

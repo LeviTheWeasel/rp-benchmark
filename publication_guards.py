@@ -19,6 +19,12 @@ publishes one. voter_pseudonym() gives HMAC-SHA256(secret, voter_id) with the
 secret from PLOTPOINTS_VOTER_HMAC_SECRET; with the variable unset,
 voter_secret() refuses. There is no default secret, on purpose: a default in
 a public repo would make every pseudonym reversible by anyone holding the ids.
+_guard_voter_ids() refuses any record whose voter_id is not such a pseudonym.
+
+Blind-judge keymaps: results/judge_full_chatgpt/_manifest.json maps the
+package's opaque session ids back to real sessions and models. It stays local
+(.gitignore) so a browsing judge cannot de-blind itself; _guard_path refuses it
+by path and _guard_keymap refuses its content under any other name.
 """
 import hashlib
 import hmac
@@ -72,6 +78,14 @@ def voter_pseudonym(secret: bytes, voter_id) -> str:
                     hashlib.sha256).hexdigest()
 
 
+# Blind-judge packages whose _manifest.json (the id keymap) is local-only
+# (.gitignore). The other manifests under results/judge_*/ are tracked: their
+# runs are back and imported.
+BLIND_KEYMAP_DIRS = ("judge_full_chatgpt",)
+KEYMAP_NAME = "_manifest.json"
+_HEX = frozenset("0123456789abcdef")
+
+
 def _guard_path(path: Path):
     """Refuse private inputs and outputs by name, before any byte is read."""
     p = Path(path)
@@ -81,6 +95,46 @@ def _guard_path(path: Path):
         raise PublicationGuardError(
             "refusing %s: private round-4 file (ROUND4_DESIGN sec 9, .gitignore)"
             % p)
+    if name == KEYMAP_NAME and set(p.parts) & set(BLIND_KEYMAP_DIRS):
+        raise PublicationGuardError(
+            "refusing %s: blind-judge keymap, local-only until the judge run is "
+            "imported (.gitignore)" % p)
+
+
+def _guard_keymap(obj, where: str, path: str = "$"):
+    """Raise if anything carries a blind-judge keymap (a "keymap" key): the
+    content of a _manifest.json copied under another name."""
+    if isinstance(obj, dict):
+        if "keymap" in obj:
+            raise PublicationGuardError(
+                "refusing to write %s: %s.keymap is a blind-judge id keymap"
+                % (where, path))
+        for k, v in obj.items():
+            _guard_keymap(v, where, "%s.%s" % (path, k))
+    elif isinstance(obj, list):
+        for i, v in enumerate(obj):
+            _guard_keymap(v, where, "%s[%d]" % (path, i))
+
+
+def _guard_voter_ids(obj, where: str, path: str = "$"):
+    """Raise if a voter_id anywhere is neither "" nor a 64-hex HMAC pseudonym.
+
+    A raw id (the voter's cookie, a UUID) never matches. The shape cannot tell
+    a pseudonym from a bare sha256 of the id; voter_pseudonym() is the only
+    writer of the column, and this is the backstop for everything else."""
+    if isinstance(obj, dict):
+        v = obj.get("voter_id")
+        if v not in (None, "") and not (isinstance(v, str) and len(v) == 64
+                                        and set(v) <= _HEX):
+            raise PublicationGuardError(
+                "refusing to write %s: %s.voter_id is not an HMAC pseudonym "
+                "(a raw voter id is a bearer cookie)" % (where, path))
+        for k, val in obj.items():
+            if k != "voter_id":
+                _guard_voter_ids(val, where, "%s.%s" % (path, k))
+    elif isinstance(obj, list):
+        for i, val in enumerate(obj):
+            _guard_voter_ids(val, where, "%s[%d]" % (path, i))
 
 
 def _is_track_b(rec: dict) -> bool:
