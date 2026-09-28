@@ -133,7 +133,7 @@ def _csv_row(i, a="m1", b="m2", rnd="2", mode="multiturn_arena",
 
 
 class ArenaRefresh(unittest.TestCase):
-    def _refresh(self, csv_text, previous, env):
+    def _refresh(self, csv_text, previous, env, extra_argv=()):
         Path("data").mkdir(exist_ok=True)
         Path("site.csv").write_text(csv_text)
         if previous is not None:
@@ -145,7 +145,8 @@ class ArenaRefresh(unittest.TestCase):
                 mock.patch.object(R, "ARCHIVE_VOTES", 2), \
                 mock.patch.object(R, "ARCHIVE_PAIRS", 1), \
                 mock.patch.object(sys, "argv", ["x", "--csv", "site.csv",
-                                                "--fetched-at", "T"]), \
+                                                "--fetched-at", "T",
+                                                *extra_argv]), \
                 contextlib.redirect_stdout(io.StringIO()):
             R.main()
         return [json.loads(l) for l in
@@ -161,20 +162,34 @@ class ArenaRefresh(unittest.TestCase):
          "server_timestamp": "2026-04-30T11:32:14.995Z"},
     ]
 
-    def test_no_voter_id_is_written_without_the_secret(self):
+    def test_known_raw_ids_are_kept_by_default(self):
         with _in_tmp():
             rows = self._refresh(CSV_HEAD + _csv_row(0) + _csv_row(1),
                                  self.PREVIOUS, {})
             readme = Path("data/multiturn_arena_votes.README.md").read_text()
+        by_id = {r["id"]: r for r in rows}
         self.assertEqual([r["id"] for r in rows], ["old", "v0", "v1"])
-        self.assertFalse(any("voter_id" in r for r in rows))
+        self.assertEqual(by_id["v0"]["voter_id"], self.PREVIOUS[0]["voter_id"])
+        self.assertEqual(by_id["old"]["voter_id"], self.PREVIOUS[1]["voter_id"])
+        self.assertNotIn("voter_id", by_id["v1"])     # no id known: none invented
         self.assertIn("sha256", readme)
         self.assertIn(R.URL, readme)
+        self.assertIn("raw on 2 of 3 rows", readme)
 
-    def test_known_raw_ids_become_hmac_pseudonyms_with_the_secret(self):
+    def test_ids_from_an_earlier_copy_fill_the_matching_votes(self):
+        with _in_tmp():
+            Path("old.jsonl").write_text(json.dumps(
+                {"id": "v1", "voter_id": "4b573b59-fb63-452a-91e2-000000000009"}) + "\n")
+            rows = self._refresh(CSV_HEAD + _csv_row(0) + _csv_row(1),
+                                 self.PREVIOUS, {}, ("--ids-from", "old.jsonl"))
+        by_id = {r["id"]: r for r in rows}
+        self.assertEqual(by_id["v1"]["voter_id"],
+                         "4b573b59-fb63-452a-91e2-000000000009")
+
+    def test_known_raw_ids_become_hmac_pseudonyms_with_hmac(self):
         with _in_tmp():
             rows = self._refresh(CSV_HEAD + _csv_row(0) + _csv_row(1),
-                                 self.PREVIOUS, {ENV: "k3y"})
+                                 self.PREVIOUS, {ENV: "k3y"}, ("--hmac",))
         by_id = {r["id"]: r for r in rows}
         want = hmac.new(b"k3y", self.PREVIOUS[0]["voter_id"].encode(),
                         hashlib.sha256).hexdigest()

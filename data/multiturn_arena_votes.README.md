@@ -24,12 +24,14 @@ Rows by source: arena_l3vi4th4n_only 30, arena_l3vi4th4n_round_02 507, native 14
 
 `timestamp` is the client timestamp and `server_timestamp` the site's
 `created_at`, both as the CSV gives them. `signed_in` is the CSV's boolean;
-the export leaves out voter cookie ids, IP hashes, user agents and user ids.
+the export leaves out IP hashes, user agents and user ids.
 
-Voter ids: omitted on every row (PLOTPOINTS_VOTER_HMAC_SECRET was not set, and the public CSV carries none). A raw voter id is a long-lived bearer cookie and is never
-stored here, so the voter count (the archive's 482) cannot be recomputed from
-this file, and the voter-clustered bootstrap
-(`analyze_multiturn_arena_bootstrap.py`) cannot run on it.
+Voter ids: raw on 1262 of 1973 rows; the rest carry no voter_id yet and get one when the site's CSV serves its voter_id column (re-run this script). They are random per-voter UUIDs published so vote-stuffing
+checks can be reproduced; ids come from the CSV's voter_id column when it has
+one, else from an earlier copy of this file matched on the vote id. While any
+row lacks an id, the voter count (the archive's 482) and the voter-clustered
+bootstrap (`analyze_multiturn_arena_bootstrap.py`) cover only the rows that
+have one.
 
 Before this refresh the file held a 1,262-vote pull from 2026-06-04 (1,232 of
 those votes are in the CSV unchanged, plus the 30 kept above).

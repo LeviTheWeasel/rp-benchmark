@@ -13,19 +13,23 @@ Exports:
   as is, round4_judge_elo.json as is, and one flat parquet each.
 
 Does NOT export raw chat data or scenario content, never any round-4 Track B
-transcript or reply text (docs/ROUND4_DESIGN.md sec 9), never a raw voter id,
-and never a blind-judge keymap (results/judge_full_chatgpt/_manifest.json).
+transcript or reply text (docs/ROUND4_DESIGN.md sec 9), and never a
+blind-judge keymap (results/judge_full_chatgpt/_manifest.json). Voter ids are
+published raw by default: they are random per-voter UUIDs that exist to catch
+vote stuffing, so the anti-stuffing analysis can be reproduced from the data.
 
 Usage:
   python hf_dataset/export.py                    # everything, into hf_dataset/
   python hf_dataset/export.py --out DIR          # everything, into a staging dir
   python hf_dataset/export.py --only round4      # round-4 artifacts only
   python hf_dataset/export.py --offline          # skip the live arena-votes fetch
-  python hf_dataset/export.py --drop-voter-ids   # community_votes/ with no
-                                                 # voter_id column (no secret)
-  python hf_dataset/export.py --drop-voter-ids --votes-from PARQUET
-                                                 # the same, rebuilt from a local
-                                                 # community_votes parquet
+  python hf_dataset/export.py --votes-from PARQUET
+                                                 # community_votes/ rebuilt from a
+                                                 # local community_votes parquet
+  python hf_dataset/export.py --voter-ids hmac   # voter ids as HMAC pseudonyms
+                                                 # (PLOTPOINTS_VOTER_HMAC_SECRET)
+  python hf_dataset/export.py --voter-ids drop   # no voter_id column
+                                                 # (--drop-voter-ids is an alias)
 """
 import argparse
 import json
@@ -44,7 +48,7 @@ if str(PROJECT_ROOT) not in sys.path:
 from publication_guards import (  # noqa: E402
     EVIDENCE_CAP, TEXT_FIELDS, TRACK_B, TRACK_B_SEED_PREFIXES,
     VOTER_HMAC_ENV, PublicationGuardError, VoterSecretError, _carries_text,
-    _guard_keymap, _guard_path, _guard_record, _guard_voter_ids, _is_track_b,
+    _guard_keymap, _guard_path, _guard_record, _is_track_b,
     _read_public_json, voter_pseudonym, voter_secret)
 from fetch_arena_votes import (  # noqa: E402
     ARENA_CSV_URL, FETCH_TIMEOUT, carries_voter_ids, votes_from_csv)
@@ -349,12 +353,15 @@ def export_flaw_hunter_results():
     print("Exported: %s (%d models)" % (out, len(lb)))
 
 
-# The site's public raw export of the round-1 single-message arena (CSV, no
-# voter ids). The original arena's JSON endpoint is gone: its domain is no
-# longer the project's, and nothing here fetches from it.
+# The site's public raw export of the round-1 single-message arena (CSV; it
+# carries voter_id once the voter_id column ships on the site). The original
+# arena's JSON endpoint is gone: its domain is no longer the project's, and
+# nothing here fetches from it.
 VOTES_URL = ARENA_CSV_URL
-# The published vote fields, in column order. voter_id is not one of them: it
-# is added (as a pseudonym) by community_votes_table only.
+# How community_votes publishes voter ids: raw (default), hmac or drop.
+VOTER_ID_MODES = ("raw", "hmac", "drop")
+# The published vote fields, in column order. voter_id is added after vote_id
+# by community_votes_table, as the mode says.
 VOTE_FIELDS = ("vote_id", "timestamp", "scenario_id", "model_a", "model_b",
                "winner", "is_catch", "catch_correct")
 
@@ -362,8 +369,8 @@ VOTE_FIELDS = ("vote_id", "timestamp", "scenario_id", "model_a", "model_b",
 def read_votes_parquet(path: Path) -> list[dict]:
     """Arena votes from an earlier community_votes export, for --votes-from.
 
-    Only VOTE_FIELDS are read: a voter_id column, raw or pseudonymous, is never
-    loaded. Every row of a community_votes export is an arena vote."""
+    VOTE_FIELDS plus voter_id when the file has that column. Every row of a
+    community_votes export is an arena vote."""
     path = Path(path)
     _guard_path(path)
     names = pq.read_schema(path).names
@@ -371,46 +378,44 @@ def read_votes_parquet(path: Path) -> list[dict]:
     if missing:
         raise SystemExit("%s is not a community_votes export: no %s"
                          % (path, ", ".join(missing)))
-    rows = pq.read_table(path, columns=list(VOTE_FIELDS)).to_pylist()
+    cols = list(VOTE_FIELDS) + (["voter_id"] if "voter_id" in names else [])
+    rows = pq.read_table(path, columns=cols).to_pylist()
     return [{"id": r["vote_id"], "mode": "arena",
-             **{k: r[k] for k in VOTE_FIELDS if k != "vote_id"}} for r in rows]
+             **{k: r[k] for k in cols if k != "vote_id"}} for r in rows]
 
 
-def export_community_arena(offline: bool = False, drop_voter_ids: bool = False,
+def export_community_arena(offline: bool = False, voter_ids: str = "raw",
                            votes_from: Path | None = None):
     """Export community-voted leaderboard + raw votes to Parquet.
 
     Two outputs:
       - community_arena/train.parquet   — per-model aggregate (leaderboard)
-      - community_votes/train.parquet   — one row per arena vote. voter_id
-                                          is HMAC-SHA256(secret, raw id), never
-                                          the raw id: that id is a long-lived
-                                          voter cookie. The secret comes from
-                                          PLOTPOINTS_VOTER_HMAC_SECRET; unset,
-                                          the votes export refuses.
-    The live source is the site's public CSV (VOTES_URL), which carries no
-    voter ids: the HMAC mode refuses on it, since it would have nothing to
-    pseudonymize, and stays for an id-bearing source.
-    With drop_voter_ids the votes table has no voter_id column at all and no
-    secret is needed; a failed fetch then stops the export instead of skipping
-    the table, since the point of the mode is to replace a published file.
-    votes_from (drop mode only) rebuilds from a local community_votes parquet
-    instead of the live endpoint. The votes source is settled before anything
-    is written, so a refusal or a failed fetch writes nothing.
+      - community_votes/train.parquet   — one row per arena vote, with
+                                          voter_id as voter_ids says: "raw"
+                                          (default; random per-voter UUIDs,
+                                          published so vote-stuffing checks can
+                                          be reproduced), "hmac" (keyed
+                                          pseudonyms, PLOTPOINTS_VOTER_HMAC_SECRET)
+                                          or "drop" (no voter column).
+    The votes come from the site's public CSV (VOTES_URL) or, with votes_from,
+    from a local community_votes parquet. In raw and hmac modes a source with
+    no voter ids stops the export instead of writing an empty column over a
+    published one. The votes source is settled before anything is written, so
+    a refusal or a failed fetch writes nothing.
     """
+    if voter_ids not in VOTER_ID_MODES:
+        raise ValueError("voter_ids must be one of %s" % (VOTER_ID_MODES,))
     arena = None
+    secret = None
     if offline:
         print("Offline: skipping the live community_votes fetch")
     else:
-        # Before any network: no secret, no votes (VoterSecretError). Drop
-        # mode publishes no voter column, so it needs none.
-        secret = None if drop_voter_ids else voter_secret()
+        # Before any network: hmac mode needs its secret (VoterSecretError).
+        if voter_ids == "hmac":
+            secret = voter_secret()
         if votes_from is not None:
-            if not drop_voter_ids:
-                raise ValueError("votes_from needs drop_voter_ids")
             arena = read_votes_parquet(votes_from)
-            print("Votes: %d arena votes from %s (voter_id not read)"
-                  % (len(arena), votes_from))
+            print("Votes: %d arena votes from %s" % (len(arena), votes_from))
         else:
             import urllib.request
             raw = None
@@ -420,26 +425,21 @@ def export_community_arena(offline: bool = False, drop_voter_ids: bool = False,
                 with urllib.request.urlopen(req, timeout=FETCH_TIMEOUT) as resp:
                     raw = resp.read()
             except Exception as e:
-                if drop_voter_ids:
-                    raise SystemExit(
-                        "Could not fetch live votes from %s (%s). community_votes/ "
-                        "was NOT rebuilt, so this export cannot replace a "
-                        "published votes file. Re-run with --votes-from PARQUET "
-                        "(a local community_votes export) or with --offline."
-                        % (VOTES_URL, e))
-                print("Could not fetch live votes (%s) — skipping community_votes "
-                      "export" % e)
-            if raw is not None:
-                # A CSV that is not the expected export stops here
-                # (SystemExit), in either mode: it is never skipped quietly.
-                arena = votes_from_csv(raw)
-                if not drop_voter_ids and not carries_voter_ids(arena):
-                    raise SystemExit(
-                        "%s carries no voter ids, so there is nothing to "
-                        "pseudonymize and community_votes/ was NOT rebuilt. "
-                        "Re-run with --drop-voter-ids to publish the votes with "
-                        "no voter column, or with --offline to leave "
-                        "community_votes/ as it is." % VOTES_URL)
+                raise SystemExit(
+                    "Could not fetch live votes from %s (%s). community_votes/ "
+                    "was NOT rebuilt. Re-run with --votes-from PARQUET (a local "
+                    "community_votes export) or with --offline to leave it as "
+                    "it is." % (VOTES_URL, e))
+            # A CSV that is not the expected export stops here (SystemExit).
+            arena = votes_from_csv(raw)
+        if voter_ids != "drop" and not carries_voter_ids(arena):
+            raise SystemExit(
+                "the votes source carries no voter ids, so community_votes/ was "
+                "NOT rebuilt (it would replace a published voter_id column with "
+                "an empty one). Use a source with ids (the site CSV once its "
+                "voter_id column is deployed, or --votes-from an id-bearing "
+                "parquet), --voter-ids drop to publish without the column, or "
+                "--offline to leave community_votes/ as it is.")
 
     snapshot = PROJECT_ROOT / "results" / "community_arena_1000.json"
     if not snapshot.exists():
@@ -471,20 +471,16 @@ def export_community_arena(offline: bool = False, drop_voter_ids: bool = False,
         pq.write_table(table, _out("community_arena", "train.parquet"))
         print("Exported: community_arena/train.parquet (%d models)" % len(lb))
 
-    # Raw votes, pulled live from the site's public export. Skipped with
-    # --offline, or (HMAC mode only) if the export is unreachable: the
-    # existing community_votes/ parquet is then left as it is.
+    # Raw votes. Skipped with --offline: the existing community_votes/
+    # parquet is then left as it is.
     if arena is None:
         return
     if not arena:
         print("No arena votes to export")
         return
-    if drop_voter_ids:
-        table = community_votes_table_without_voters(arena)
-        how = "no voter_id column (--drop-voter-ids)"
-    else:
-        table = community_votes_table(arena, secret)
-        how = "voter ids as HMAC-SHA256 pseudonyms"
+    table = community_votes_table(arena, voter_ids, secret)
+    how = {"raw": "raw voter ids", "hmac": "voter ids as HMAC-SHA256 pseudonyms",
+           "drop": "no voter_id column"}[voter_ids]
     pq.write_table(table, _out("community_votes", "train.parquet"))
     print("Exported: community_votes/train.parquet (%d votes, %s)"
           % (len(arena), how))
@@ -505,21 +501,20 @@ def _vote_columns(arena: list[dict]) -> dict:
     return cols
 
 
-def community_votes_table(arena: list[dict], secret: bytes):
-    """One row per arena vote; voter_id is the keyed pseudonym, never raw."""
+def community_votes_table(arena: list[dict], voter_ids: str = "raw",
+                          secret: bytes | None = None):
+    """One row per arena vote. voter_id follows vote_id: the raw id ("raw"),
+    its keyed pseudonym ("hmac"), or no column at all ("drop")."""
     cols = _vote_columns(arena)
-    return pa.table({
-        "vote_id": cols.pop("vote_id"),
-        "voter_id": [voter_pseudonym(secret, v.get("voter_id")) for v in arena],
-        **cols,
-    })
-
-
-def community_votes_table_without_voters(arena: list[dict]):
-    """One row per arena vote and no voter column: for an export made without
-    PLOTPOINTS_VOTER_HMAC_SECRET (--drop-voter-ids). Nothing reads a vote's
-    voter_id here, so none can be written."""
-    return pa.table(_vote_columns(arena))
+    if voter_ids == "drop":
+        return pa.table(cols)
+    if voter_ids == "hmac":
+        ids = [voter_pseudonym(secret, v.get("voter_id")) for v in arena]
+    elif voter_ids == "raw":
+        ids = [v.get("voter_id") or "" for v in arena]
+    else:
+        raise ValueError("voter_ids must be one of %s" % (VOTER_ID_MODES,))
+    return pa.table({"vote_id": cols.pop("vote_id"), "voter_id": ids, **cols})
 
 
 def export_analysis_artifacts():
@@ -608,10 +603,9 @@ SILENT_RUNG_SLOPE = 0.25
 
 
 def _guard_content(obj, where: str):
-    """Every content guard: Track B text, a blind-judge keymap, a raw voter id."""
+    """Every content guard: Track B text and a blind-judge keymap."""
     _guard_record(obj, where)
     _guard_keymap(obj, where)
-    _guard_voter_ids(obj, where)
 
 
 def _write_json(obj, *parts):
@@ -1070,30 +1064,30 @@ def main():
                     help="export only this part")
     ap.add_argument("--offline", action="store_true",
                     help="skip the live community-votes fetch")
+    ap.add_argument("--voter-ids", choices=VOTER_ID_MODES, default="raw",
+                    help="how community_votes/ publishes voter ids: raw (default), "
+                         "hmac (needs %s) or drop (no column)" % VOTER_HMAC_ENV)
     ap.add_argument("--drop-voter-ids", action="store_true",
-                    help="rebuild community_votes/ with no voter_id column; "
-                         "needs no %s. A failed fetch stops the export"
-                         % VOTER_HMAC_ENV)
+                    help="alias for --voter-ids drop")
     ap.add_argument("--votes-from", type=Path, metavar="PARQUET",
-                    help="with --drop-voter-ids: rebuild community_votes/ from "
-                         "this local community_votes parquet instead of the live "
-                         "fetch (its voter_id column is never read)")
+                    help="rebuild community_votes/ from this local community_votes "
+                         "parquet instead of the live fetch")
     args = ap.parse_args()
-    if args.drop_voter_ids and (args.offline or args.only == "round4"):
-        ap.error("--drop-voter-ids rebuilds community_votes/, which --offline "
-                 "and --only round4 skip")
-    if args.votes_from is not None and not args.drop_voter_ids:
-        ap.error("--votes-from is only for --drop-voter-ids")
+    if args.drop_voter_ids:
+        args.voter_ids = "drop"
+    rebuilds_votes = args.voter_ids != "raw" or args.votes_from is not None
+    if rebuilds_votes and (args.offline or args.only == "round4"):
+        ap.error("--voter-ids/--drop-voter-ids/--votes-from rebuild "
+                 "community_votes/, which --offline and --only round4 skip")
     if args.votes_from is not None and not args.votes_from.is_file():
         ap.error("--votes-from %s: no such file" % args.votes_from)
-    if args.only != "round4" and not args.offline and not args.drop_voter_ids:
+    if args.voter_ids == "hmac":
         # Refuse before anything is written, not halfway through.
         try:
             voter_secret()
         except VoterSecretError as e:
-            ap.error("%s. Set %s, pass --drop-voter-ids to publish the votes "
-                     "with no voter column, or pass --offline to leave "
-                     "community_votes/ as it is" % (e, VOTER_HMAC_ENV))
+            ap.error("%s. Set %s, or choose --voter-ids raw or drop"
+                     % (e, VOTER_HMAC_ENV))
     OUT_DIR = args.out.resolve()
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -1102,7 +1096,7 @@ def main():
         # First: its votes source (secret, fetch) is settled before it writes,
         # so a refusal or a failed fetch leaves OUT_DIR empty.
         export_community_arena(offline=args.offline,
-                               drop_voter_ids=args.drop_voter_ids,
+                               voter_ids=args.voter_ids,
                                votes_from=args.votes_from)
         export_seeds()
         export_adversarial_seeds()

@@ -13,12 +13,13 @@ cast on arena.l3vi4th4n.ai after its 507 round-2 votes were imported into the
 site (source "arena_l3vi4th4n_only"). analyze_multiturn_arena.py keeps those
 30 unscored, so its ranking is the round's published one.
 
-Voter ids. The public CSV has none, by design. A raw voter id is a long-lived
-bearer cookie, so this file never stores one: with PLOTPOINTS_VOTER_HMAC_SECRET
-set, a vote whose raw id is known (from the previous file) gets
-HMAC-SHA256(secret, id) via publication_guards.voter_pseudonym; otherwise the
-voter_id field is omitted. analyze_multiturn_arena.py then reports the voter
-count as unknown rather than counting a partial column.
+Voter ids. They are random per-voter UUIDs that exist to catch vote stuffing,
+so they are published raw. Each vote's id comes from the CSV's voter_id column
+(present once the site ships it), else from an earlier copy of this file
+(--ids-from, or the previous file), matched on the vote id exactly; a vote with
+no known id has no voter_id field. --hmac writes HMAC-SHA256(secret, id) via
+publication_guards.voter_pseudonym instead. analyze_multiturn_arena.py reports
+the voter count as unknown while any scored row lacks an id.
 
 Provenance (URL, fetch time, CSV sha256, counts) goes to
 data/multiturn_arena_votes.README.md, rewritten on every run.
@@ -33,7 +34,6 @@ import csv
 import hashlib
 import io
 import json
-import os
 import re
 from collections import Counter
 from datetime import datetime, timezone
@@ -95,14 +95,27 @@ def site_rows(raw: bytes):
                 r["catch_correct"]),
             "source": r["source"],
             "signed_in": r["signed_in"] == "1",
+            **({"voter_id": r["voter_id"]} if r.get("voter_id") else {}),
         })
     return out
 
 
-def previous_rows():
-    if not OUT.exists():
+def previous_rows(path=OUT):
+    path = Path(path)
+    if not path.exists():
         return []
-    return [json.loads(l) for l in open(OUT) if l.strip()]
+    return [json.loads(l) for l in open(path) if l.strip()]
+
+
+def known_voter_ids(*row_sets):
+    """vote id -> raw voter id, from rows that carry a UUID voter_id."""
+    known = {}
+    for rows in row_sets:
+        for r in rows:
+            v = r.get("voter_id")
+            if isinstance(v, str) and _UUID.match(v):
+                known.setdefault(r["id"], v)
+    return known
 
 
 def _when(row):
@@ -118,6 +131,13 @@ def main():
                                          "fetched (ISO 8601, UTC)")
     ap.add_argument("--timeout", type=int, default=600,
                     help="seconds; the endpoint takes about two minutes")
+    ap.add_argument("--ids-from", action="append", default=[], metavar="JSONL",
+                    help="an earlier copy of this file whose voter ids fill in "
+                         "votes the CSV has none for (matched on vote id); "
+                         "repeatable")
+    ap.add_argument("--hmac", action="store_true",
+                    help="write HMAC-SHA256(%s, id) instead of raw ids"
+                         % VOTER_HMAC_ENV)
     args = ap.parse_args()
 
     if args.csv:
@@ -135,9 +155,8 @@ def main():
     site_ids = {r["id"] for r in site}
 
     prev = previous_rows()
-    known_raw = {r["id"]: r["voter_id"] for r in prev
-                 if isinstance(r.get("voter_id"), str)
-                 and _UUID.match(r["voter_id"])}
+    known_raw = known_voter_ids(site, prev,
+                                *(previous_rows(p) for p in args.ids_from))
     legacy = []
     for r in prev:
         if r["id"] in site_ids:
@@ -149,15 +168,15 @@ def main():
                 % (r["id"], r.get("source"), LEGACY_SOURCE))
         legacy.append({k: v for k, v in r.items() if k != "voter_id"})
 
-    secret = voter_secret() if os.environ.get(VOTER_HMAC_ENV, "").strip() \
-        else None
+    secret = voter_secret() if args.hmac else None
     rows = sorted(site + legacy, key=lambda r: (_when(r), r["id"]))
-    n_pseudo = 0
+    n_ids = 0
     for r in rows:
         raw_id = known_raw.get(r["id"])
-        if secret and raw_id:
-            r["voter_id"] = voter_pseudonym(secret, raw_id)
-            n_pseudo += 1
+        r.pop("voter_id", None)
+        if raw_id:
+            r["voter_id"] = voter_pseudonym(secret, raw_id) if secret else raw_id
+            n_ids += 1
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     with open(OUT, "w") as f:
@@ -167,11 +186,13 @@ def main():
     by_source = Counter(r["source"] for r in rows)
     first, last = site[0]["server_timestamp"], site[-1]["server_timestamp"]
     voter_line = (
-        "HMAC-SHA256(%s, raw id) for the %d votes whose raw id the previous "
-        "file held; omitted on the rest." % (VOTER_HMAC_ENV, n_pseudo)
-        if secret else
-        "omitted on every row (%s was not set, and the public CSV carries "
-        "none)." % VOTER_HMAC_ENV)
+        "%s on %d of %d rows; the rest carry no voter_id yet and get one when "
+        "the site's CSV serves its voter_id column (re-run this script)."
+        % ("HMAC-SHA256(%s, raw id)" % VOTER_HMAC_ENV if secret else "raw",
+           n_ids, len(rows))
+        if n_ids < len(rows) else
+        "%s on every row." % ("HMAC-SHA256(%s, raw id)" % VOTER_HMAC_ENV
+                              if secret else "raw"))
     README.write_text("""\
 # data/multiturn_arena_votes.jsonl
 
@@ -199,12 +220,14 @@ Rows by source: {sources}. Total {ntot:,} rows, sorted by server timestamp.
 
 `timestamp` is the client timestamp and `server_timestamp` the site's
 `created_at`, both as the CSV gives them. `signed_in` is the CSV's boolean;
-the export leaves out voter cookie ids, IP hashes, user agents and user ids.
+the export leaves out IP hashes, user agents and user ids.
 
-Voter ids: {voters} A raw voter id is a long-lived bearer cookie and is never
-stored here, so the voter count (the archive's {avo}) cannot be recomputed from
-this file, and the voter-clustered bootstrap
-(`analyze_multiturn_arena_bootstrap.py`) cannot run on it.
+Voter ids: {voters} They are random per-voter UUIDs published so vote-stuffing
+checks can be reproduced; ids come from the CSV's voter_id column when it has
+one, else from an earlier copy of this file matched on the vote id. While any
+row lacks an id, the voter count (the archive's {avo}) and the voter-clustered
+bootstrap (`analyze_multiturn_arena_bootstrap.py`) cover only the rows that
+have one.
 
 Before this refresh the file held a 1,262-vote pull from 2026-06-04 (1,232 of
 those votes are in the CSV unchanged, plus the {nleg} kept above).
@@ -218,8 +241,8 @@ those votes are in the CSV unchanged, plus the {nleg} kept above).
 
     print("site rows:   %d (sha256 %s)" % (len(site), sha[:16]))
     print("legacy rows: %d (%s)" % (len(legacy), LEGACY_SOURCE))
-    print("voter ids:   %s" % ("%d pseudonymized" % n_pseudo if secret
-                              else "none written"))
+    print("voter ids:   %d of %d rows (%s)"
+          % (n_ids, len(rows), "HMAC" if secret else "raw"))
     print("wrote %s (%d rows) and %s" % (OUT, len(rows), README))
 
 

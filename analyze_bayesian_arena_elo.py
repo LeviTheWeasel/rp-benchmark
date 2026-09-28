@@ -58,10 +58,9 @@ def load_votes() -> list[tuple[str, str, str]]:
 
     if "voter_id" not in df.columns:
         raise SystemExit(
-            f"{parquet} has no voter_id column: the votes are published "
-            "without voter ids. The suspect-voter filter behind "
-            "results/community_arena_bayesian.json needs them, so that file "
-            "cannot be re-run from the public votes and stays the published run.")
+            f"{parquet} has no voter_id column. The suspect-voter filter "
+            "behind results/community_arena_bayesian.json needs voter ids; "
+            "hf_dataset/community_votes/train.parquet carries them.")
 
     catches = df[df["is_catch"] == True]
     per_voter = defaultdict(lambda: [0, 0])

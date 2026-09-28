@@ -1,5 +1,5 @@
 """hf_dataset/export.py: the round-4 overview and continuity tables, the
-multi-turn arena path, the blind-judge keymap refusal, --drop-voter-ids, and
+multi-turn arena path, the blind-judge keymap refusal, the voter-id modes, and
 the live votes source (the site's public round-1 CSV, which has no voter ids).
 
 Run by path from the repo root, offline (no network, no real secret):
@@ -100,24 +100,12 @@ class KeymapGuard(unittest.TestCase):
         self.assertIn("results/judge_full_chatgpt/_manifest.json", lines)
 
 
-class VoterIdGuard(unittest.TestCase):
-    def test_raw_ids_are_refused_pseudonyms_and_blanks_pass(self):
-        ok = PG.voter_pseudonym(KEY, RAW_IDS[0])
-        PG._guard_voter_ids([{"voter_id": ok}, {"voter_id": ""},
-                             {"voter_id": None}, {"vote_id": RAW_IDS[0]}], "v")
-        for bad in (RAW_IDS[0], ok.upper(), ok[:-1], 12345,
-                    {"nested": [{"voter_id": RAW_IDS[1]}]}):
-            with self.subTest(bad=bad):
-                obj = bad if isinstance(bad, dict) else [{"voter_id": bad}]
-                with self.assertRaisesRegex(PG.PublicationGuardError, "voter_id"):
-                    PG._guard_voter_ids(obj, "community_votes/train.parquet")
-
-    def test_published_round4_json_carries_no_voter_id_or_keymap(self):
+class PublishedJson(unittest.TestCase):
+    def test_published_round4_json_carries_no_keymap_or_track_b(self):
         for name in ("round4_overview.json", "round4_continuity.json",
                      "round4_judge_elo.json", "multiturn_arena_bayesian.json"):
             with self.subTest(name=name):
                 doc = _load(name)
-                PG._guard_voter_ids(doc, name)
                 PG._guard_keymap(doc, name)
                 PG._guard_record(doc, name)
 
@@ -135,10 +123,10 @@ class ExportSource(unittest.TestCase):
         return {n.value for n in ast.walk(self.funcs[name])
                 if isinstance(n, ast.Constant) and isinstance(n.value, str)}
 
-    def test_the_drop_path_never_names_voter_id(self):
-        for name in ("_vote_columns", "community_votes_table_without_voters"):
-            with self.subTest(name=name):
-                self.assertNotIn("voter_id", self._constants(name))
+    def test_the_shared_vote_columns_never_name_voter_id(self):
+        # voter_id is added by community_votes_table, per mode; drop mode
+        # returns _vote_columns as is.
+        self.assertNotIn("voter_id", self._constants("_vote_columns"))
 
     def test_round4_exports_are_wired_in(self):
         body = ast.dump(self.funcs["export_round4"])
@@ -173,8 +161,12 @@ class Card(unittest.TestCase):
         for heading in ("## Round 4 and earlier rounds",
                         "## Round 4 overview: judge tier, J, watch-out"):
             self.assertIn(heading, self.card)
-        self.assertIn("`community_votes` has no voter id column", self.card)
-        self.assertIn("There is no `voter_id` column", self.card)
+        # community_votes publishes the random per-voter ids (owner decision
+        # 2026-09-28), so the suspect-voter filter can be re-run from it.
+        self.assertIn("Each row carries its `voter_id`", self.card)
+        self.assertIn("`vote_id`, `voter_id`, `timestamp`", self.card)
+        self.assertNotIn("has no voter id column", self.card)
+        self.assertNotIn("There is no `voter_id` column", self.card)
         # The old judge is a band and the judge ELO is not a rank.
         self.assertIn("It is not a rank", self.card)
         self.assertIn("The judge ELO is not a rank", self.card)
@@ -468,11 +460,18 @@ class MultiturnArena(_OutDir):
         with mock.patch("sys.stdout", io.StringIO()):
             self.hf.audit_output()
 
-    def test_the_vote_file_carries_no_voter_ids(self):
+    def test_the_vote_file_carries_only_real_voter_ids(self):
+        # Ids come from the site CSV or an earlier copy matched on the vote id;
+        # none is invented. 1,262 of the round-2 votes had one before the
+        # refresh; the rest get theirs once the site CSV serves voter_id.
+        uuid = re.compile(r"^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-"
+                          r"[0-9a-f]{12}$", re.I)
         with open(ROOT / "data" / "multiturn_arena_votes.jsonl") as f:
             rows = [json.loads(line) for line in f if line.strip()]
         self.assertTrue(rows)
-        self.assertFalse([r for r in rows if "voter_id" in r])
+        with_id = [r for r in rows if "voter_id" in r]
+        self.assertGreaterEqual(len(with_id), 1262)
+        self.assertTrue(all(uuid.match(r["voter_id"]) for r in with_id))
 
 
 class KeymapInExport(_OutDir):
@@ -496,7 +495,7 @@ class KeymapInExport(_OutDir):
 
 
 # ---------------------------------------------------------------------------
-# --drop-voter-ids
+# community_votes and its voter ids: raw (default), hmac, drop
 # ---------------------------------------------------------------------------
 
 def _no_network(*a, **kw):
@@ -520,9 +519,10 @@ SITE_COLUMNS = ("id", "round", "mode", "scenario_id", "context", "model_a",
 
 
 def _site_csv(votes, extra=()):
-    """The site's raw export (round 1, arena) of these votes: its public
-    columns, plus `extra` ones an id-bearing export would add (voter_id,
-    ip_hash). The public export has none of them."""
+    """The site's raw export (round 1, arena) of these votes: its columns,
+    plus `extra` ones (the deployed export adds voter_id; ip_hash and
+    user_agent are never served, and appear here only to prove they are not
+    copied)."""
     buf = io.StringIO()
     w = csv.writer(buf, lineterminator="\r\n")
     w.writerow(SITE_COLUMNS + tuple(extra))
@@ -538,7 +538,7 @@ def _site_csv(votes, extra=()):
     return buf.getvalue().encode()
 
 
-class DropVoterIds(_OutDir):
+class VoterIdModes(_OutDir):
     # (the CSV's client_timestamp, the published timestamp)
     STAMPS = (("2026-04-14T19:16:56.291+00:00", "2026-04-14T19:16:56.291Z"),
               ("2026-04-14T19:34:23.37+00:00", "2026-04-14T19:34:23.370Z"),
@@ -553,10 +553,11 @@ class DropVoterIds(_OutDir):
                        "model_a": "a", "model_b": "b", "winner": "AB"[i % 2],
                        "is_catch": i == 3, "catch_correct": True if i == 3 else None,
                        "ip_hash": "iphash", "user_agent": "ua"} for i in range(4)]
-        # What the site serves, and an id-bearing export of the same votes
-        # (the worst case: drop mode must still write no id).
-        self.public = _site_csv(self.votes)
-        self.with_ids = _site_csv(self.votes, ("voter_id", "ip_hash", "user_agent"))
+        # The deployed export (voter_id column), an older one without it,
+        # and a hypothetical one that also leaks ip_hash / user_agent.
+        self.with_ids = _site_csv(self.votes, ("voter_id",))
+        self.without_ids = _site_csv(self.votes)
+        self.leaky = _site_csv(self.votes, ("voter_id", "ip_hash", "user_agent"))
         self.body = self.with_ids
         self.asked = []
 
@@ -564,213 +565,159 @@ class DropVoterIds(_OutDir):
         self.asked.append(getattr(req, "full_url", req))
         return _FakeResponse(self.body)
 
-    def _no_network(self, *a, **kw):
-        raise AssertionError("fetched votes")
-
-    def _assert_clean(self, p):
-        t = self.pq.read_table(p)
-        self.assertEqual(tuple(t.schema.names), self.hf.VOTE_FIELDS)
-        self.assertNotIn("voter_id", t.schema.names)
-        blob = p.read_bytes()
-        for raw in RAW_IDS:
-            self.assertNotIn(raw.encode(), blob)
-        self.assertNotIn(b"iphash", blob)
-        return t.to_pylist()
-
-    def test_table_has_the_vote_fields_and_no_voter_column(self):
-        t = self.hf.community_votes_table_without_voters(self.votes[:4])
-        self.assertEqual(tuple(t.schema.names), self.hf.VOTE_FIELDS)
-        with_ids = self.hf.community_votes_table(self.votes[:4], KEY)
-        self.assertEqual(with_ids.drop(["voter_id"]).to_pylist(), t.to_pylist())
+    def _export(self, **kw):
+        with _without_secret(), mock.patch("urllib.request.urlopen", self._urlopen), \
+                mock.patch("sys.stdout", io.StringIO()):
+            self.hf.export_community_arena(**kw)
+        return self.out / "community_votes" / "train.parquet"
 
     def test_the_live_source_is_the_sites_public_csv(self):
         self.assertEqual(self.hf.VOTES_URL, SITE_URL)
 
-    def test_live_fetch_without_a_secret(self):
-        with _without_secret(), mock.patch("urllib.request.urlopen", self._urlopen), \
-                mock.patch("sys.stdout", io.StringIO()):
-            self.hf.export_community_arena(drop_voter_ids=True)
+    def test_raw_is_the_default_and_keeps_the_ids(self):
+        p = self._export()
         self.assertEqual(self.asked, [SITE_URL])
-        rows = self._assert_clean(self.out / "community_votes" / "train.parquet")
-        self.assertEqual([r["vote_id"] for r in rows], ["v0", "v1", "v2", "v3"])
+        t = self.pq.read_table(p)
+        self.assertEqual(tuple(t.schema.names),
+                         ("vote_id", "voter_id") + self.hf.VOTE_FIELDS[1:])
+        rows = t.to_pylist()
+        self.assertEqual([r["voter_id"] for r in rows],
+                         [RAW_IDS[i % 2] for i in range(4)])
         self.assertEqual([r["timestamp"] for r in rows],
                          [want for _, want in self.STAMPS])
         self.assertEqual([r["winner"] for r in rows], ["A", "B", "A", "B"])
         self.assertEqual(rows[3]["catch_correct"], True)
-        self.assertEqual([r["catch_correct"] for r in rows[:3]], [None] * 3)
-        # The same rows as the dicts the table is built from.
-        self.assertEqual(
-            rows, self.hf.community_votes_table_without_voters(self.votes).to_pylist())
         self.assertTrue((self.out / "community_arena" / "train.parquet").exists())
 
-    def test_the_public_export_gives_the_same_table(self):
-        self.body = self.public
+    def test_ip_hash_and_user_agent_are_never_copied(self):
+        self.body = self.leaky
+        blob = self._export().read_bytes()
+        self.assertNotIn(b"iphash", blob)
+        self.assertNotIn(b"\x02ua", blob)
+        self.assertNotIn("ip_hash", self.pq.read_table(
+            self.out / "community_votes" / "train.parquet").schema.names)
+
+    def test_drop_mode_has_no_voter_column(self):
+        t = self.pq.read_table(self._export(voter_ids="drop"))
+        self.assertEqual(tuple(t.schema.names), self.hf.VOTE_FIELDS)
+        for raw in RAW_IDS:
+            self.assertNotIn(raw.encode(), (self.out / "community_votes" /
+                                            "train.parquet").read_bytes())
+
+    def test_raw_mode_refuses_a_source_without_ids_and_writes_nothing(self):
+        # Writing an empty voter_id column over a published one would lose
+        # the ids; stop and say how to proceed.
+        self.body = self.without_ids
         with _without_secret(), mock.patch("urllib.request.urlopen", self._urlopen), \
-                mock.patch("sys.stdout", io.StringIO()):
-            self.hf.export_community_arena(drop_voter_ids=True)
-        rows = self._assert_clean(self.out / "community_votes" / "train.parquet")
-        self.assertEqual(
-            rows, self.hf.community_votes_table_without_voters(self.votes).to_pylist())
-
-    def test_a_secret_does_not_bring_the_column_back(self):
-        with mock.patch.dict(os.environ, {ENV: "k3y"}), \
-                mock.patch("urllib.request.urlopen", self._urlopen), \
-                mock.patch("sys.stdout", io.StringIO()):
-            self.hf.export_community_arena(drop_voter_ids=True)
-        self._assert_clean(self.out / "community_votes" / "train.parquet")
-
-    def test_hmac_mode_refuses_the_public_export_and_writes_nothing(self):
-        # Nothing to pseudonymize: stop, and say how to publish without ids.
-        self.body = self.public
-        with mock.patch.dict(os.environ, {ENV: "k3y"}), \
-                mock.patch("urllib.request.urlopen", self._urlopen), \
                 mock.patch("sys.stdout", io.StringIO()):
             with self.assertRaises(SystemExit) as cm:
                 self.hf.export_community_arena()
-        self.assertIn("--drop-voter-ids", str(cm.exception.code))
         self.assertIn("NOT rebuilt", str(cm.exception.code))
+        self.assertIn("--voter-ids drop", str(cm.exception.code))
         self.assertEqual(list(self.out.iterdir()), [])
+        # drop mode accepts it.
+        self.body = self.without_ids
+        t = self.pq.read_table(self._export(voter_ids="drop"))
+        self.assertEqual(t.num_rows, 4)
 
-    def test_a_body_that_is_not_the_export_stops_in_either_mode(self):
+    def test_a_body_that_is_not_the_export_stops_in_every_mode(self):
         bodies = {
             "the old arena's JSON": json.dumps({"votes": self.votes}).encode(),
             "a row of another mode": _site_csv(
                 self.votes + [{**self.votes[0], "id": "mt1",
-                               "mode": "multiturn_arena"}]),
-            "a winner outside A/B/tie": _site_csv([{**self.votes[0], "winner": "C"}]),
+                               "mode": "multiturn_arena"}], ("voter_id",)),
+            "a winner outside A/B/tie": _site_csv(
+                [{**self.votes[0], "winner": "C"}], ("voter_id",)),
         }
         for what, body in bodies.items():
-            for env in ({}, {ENV: "k3y"}):
-                with self.subTest(what=what, hmac=bool(env)):
+            for mode in ("raw", "drop"):
+                with self.subTest(what=what, mode=mode):
                     self.body = body
-                    clean = {k: v for k, v in os.environ.items() if k != ENV}
-                    with mock.patch.dict(os.environ, {**clean, **env}, clear=True), \
+                    with _without_secret(), \
                             mock.patch("urllib.request.urlopen", self._urlopen), \
                             mock.patch("sys.stdout", io.StringIO()):
                         with self.assertRaises(SystemExit):
-                            self.hf.export_community_arena(drop_voter_ids=not env)
+                            self.hf.export_community_arena(voter_ids=mode)
                     self.assertEqual(list(self.out.iterdir()), [])
 
     def test_failed_fetch_stops_and_writes_nothing(self):
         def down(*a, **kw):
             raise OSError("certificate verify failed")
-        with _without_secret(), mock.patch("urllib.request.urlopen", down), \
-                mock.patch("sys.stdout", io.StringIO()):
-            with self.assertRaises(SystemExit) as cm:
-                self.hf.export_community_arena(drop_voter_ids=True)
-        self.assertIn("NOT rebuilt", str(cm.exception.code))
-        self.assertEqual(list(self.out.iterdir()), [])
-
-    def test_hmac_mode_still_skips_on_a_failed_fetch(self):
-        def down(*a, **kw):
-            raise OSError("down")
-        with mock.patch.dict(os.environ, {ENV: "k3y"}), \
-                mock.patch("urllib.request.urlopen", down), \
-                mock.patch("sys.stdout", io.StringIO()):
-            self.hf.export_community_arena()
-        self.assertFalse((self.out / "community_votes").exists())
+        for mode in ("raw", "drop"):
+            with self.subTest(mode=mode), _without_secret(), \
+                    mock.patch("urllib.request.urlopen", down), \
+                    mock.patch("sys.stdout", io.StringIO()):
+                with self.assertRaises(SystemExit) as cm:
+                    self.hf.export_community_arena(voter_ids=mode)
+                self.assertIn("NOT rebuilt", str(cm.exception.code))
+                self.assertEqual(list(self.out.iterdir()), [])
 
     def _source_parquet(self):
-        """A community_votes file shaped like the one published before the
-        rebuild: raw voter ids in a voter_id column."""
+        """A community_votes file with raw voter ids, as published."""
         src = self.out / "src" / "train.parquet"
         src.parent.mkdir()
-        arena = [v for v in self.votes if v["mode"] == "arena"]
-        cols = self.hf._vote_columns(arena)
+        cols = self.hf._vote_columns(self.votes)
         table = self.pa.table({"vote_id": cols.pop("vote_id"),
-                               "voter_id": [v["voter_id"] for v in arena], **cols})
+                               "voter_id": [v["voter_id"] for v in self.votes], **cols})
         self.pq.write_table(table, src)
         return src, table
 
-    def test_votes_from_a_local_parquet_never_reads_voter_id(self):
+    def test_votes_from_a_local_parquet_keeps_its_ids(self):
         src, table = self._source_parquet()
-        real = self.pq.read_table
-        asked = []
-
-        def spy(path, *a, columns=None, **kw):
-            asked.append(columns)
-            return real(path, *a, columns=columns, **kw)
-        with _without_secret(), mock.patch("urllib.request.urlopen", self._no_network), \
-                mock.patch.object(self.hf.pq, "read_table", spy), \
+        with _without_secret(), mock.patch("urllib.request.urlopen", _no_network), \
                 mock.patch("sys.stdout", io.StringIO()):
-            self.hf.export_community_arena(drop_voter_ids=True, votes_from=src)
-        self.assertTrue(asked)
-        self.assertTrue(all(c is not None and "voter_id" not in c for c in asked))
-        rows = self._assert_clean(self.out / "community_votes" / "train.parquet")
-        self.assertEqual(rows, table.drop(["voter_id"]).to_pylist())
+            self.hf.export_community_arena(votes_from=src)
+        out = self.pq.read_table(self.out / "community_votes" / "train.parquet")
+        self.assertTrue(out.equals(table))
 
-    def test_votes_from_needs_drop_mode_and_a_votes_file(self):
-        src, _ = self._source_parquet()
-        with mock.patch.dict(os.environ, {ENV: "k3y"}):
-            with self.assertRaises(ValueError):
-                self.hf.export_community_arena(votes_from=src)
-        other = self.out / "src" / "other.parquet"
+    def test_votes_from_in_drop_mode_drops_the_column(self):
+        src, table = self._source_parquet()
+        with _without_secret(), mock.patch("urllib.request.urlopen", _no_network), \
+                mock.patch("sys.stdout", io.StringIO()):
+            self.hf.export_community_arena(voter_ids="drop", votes_from=src)
+        out = self.pq.read_table(self.out / "community_votes" / "train.parquet")
+        self.assertEqual(out.to_pylist(), table.drop(["voter_id"]).to_pylist())
+
+    def test_read_votes_parquet_refuses_a_file_that_is_not_a_votes_export(self):
+        other = self.out / "other.parquet"
         self.pq.write_table(self.pa.table({"model": ["m"]}), other)
         with self.assertRaises(SystemExit):
             self.hf.read_votes_parquet(other)
 
-    def test_audit_refuses_a_raw_id_table_and_passes_the_rebuilt_one(self):
-        src, _ = self._source_parquet()
-        dest = self.out / "community_votes" / "train.parquet"
-        dest.parent.mkdir()
-        dest.write_bytes(src.read_bytes())
-        src.unlink()
-        with self.assertRaisesRegex(PG.PublicationGuardError, "voter_id"):
-            self.hf.audit_output()
-        with _without_secret(), mock.patch("sys.stdout", io.StringIO()):
-            self.hf.export_community_arena(drop_voter_ids=True, votes_from=dest)
-            self.hf.audit_output()
+    def test_an_unknown_mode_is_refused(self):
+        with self.assertRaises(ValueError):
+            self.hf.export_community_arena(offline=True, voter_ids="plain")
 
 
 class PublishedVotes(_OutDir):
-    """The tracked hf_dataset/community_votes/train.parquet, rebuilt with no
-    voter column from the site's public CSV: the same 2,013 votes."""
+    """The tracked hf_dataset/community_votes/train.parquet: 2,013 round-1
+    arena votes with their raw voter ids (random per-voter UUIDs)."""
 
     PATH = ROOT / "hf_dataset" / "community_votes" / "train.parquet"
-    UUID = re.compile(r"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-"
-                      r"[0-9a-f]{12}", re.I)
+    UUID = re.compile(r"^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-"
+                      r"[0-9a-f]{12}$", re.I)
 
-    def test_no_voter_column_and_only_vote_ids_look_like_uuids(self):
+    def test_votes_carry_their_voter_ids(self):
         t = self.pq.read_table(self.PATH)
-        self.assertEqual(tuple(t.schema.names), self.hf.VOTE_FIELDS)
         self.assertEqual(t.num_rows, 2013)
-        ids = t.column("vote_id").to_pylist()
-        self.assertEqual(len(set(ids)), 2013)
-        for name in t.schema.names:
-            if name != "vote_id":
-                with self.subTest(column=name):
-                    self.assertFalse([v for v in t.column(name).to_pylist()
-                                      if isinstance(v, str) and self.UUID.search(v)])
+        self.assertIn("voter_id", t.schema.names)
+        ids = t.column("voter_id").to_pylist()
+        self.assertTrue(all(isinstance(v, str) and self.UUID.match(v) for v in ids))
+        self.assertEqual(len(set(ids)), 335)
+        self.assertEqual(len(set(t.column("vote_id").to_pylist())), 2013)
         self.assertEqual(set(t.column("winner").to_pylist()), {"A", "B", "tie"})
         self.assertEqual(sum(t.column("is_catch").to_pylist()), 80)
-        PG._guard_voter_ids(t.to_pylist(), "community_votes/train.parquet")
 
     def test_a_votes_from_rebuild_reproduces_it(self):
         with _without_secret(), mock.patch("sys.stdout", io.StringIO()), \
                 mock.patch("urllib.request.urlopen", _no_network):
-            self.hf.export_community_arena(drop_voter_ids=True, votes_from=self.PATH)
+            self.hf.export_community_arena(votes_from=self.PATH)
         rebuilt = self.pq.read_table(self.out / "community_votes" / "train.parquet")
-        self.assertTrue(rebuilt.equals(self.pq.read_table(self.PATH)))
-
-    def test_the_bayesian_arena_script_refuses_it(self):
-        try:
-            import numpy  # noqa: F401
-            import pandas  # noqa: F401
-        except ImportError:
-            self.skipTest("numpy and pandas are not installed here")
-        import analyze_bayesian_arena_elo as B
-        old = os.getcwd()
-        os.chdir(ROOT)
-        try:
-            with self.assertRaises(SystemExit) as cm:
-                B.load_votes()
-        finally:
-            os.chdir(old)
-        self.assertIn("no voter_id column", str(cm.exception.code))
+        self.assertEqual(rebuilt.to_pylist(), self.pq.read_table(self.PATH).to_pylist())
 
 
 class Main(_OutDir):
-    """The command line: which combinations refuse, and what drop mode runs."""
+    """The command line: which combinations refuse, and the default mode."""
 
     def _main(self, *argv):
         with mock.patch.object(sys, "argv", ["export.py", *argv]), \
@@ -784,24 +731,17 @@ class Main(_OutDir):
 
     def test_conflicting_flags_refuse_before_writing(self):
         dest = self.out / "staging"
-        src = self.out / "votes.parquet"
-        self.pq.write_table(self.pa.table({"vote_id": ["v"]}), src)
         with _without_secret():
             for argv in (["--drop-voter-ids", "--offline"],
-                         ["--drop-voter-ids", "--only", "round4"],
-                         ["--votes-from", str(src)],
-                         ["--drop-voter-ids", "--votes-from", str(self.out / "nope")]):
+                         ["--voter-ids", "drop", "--only", "round4"],
+                         ["--votes-from", str(self.out / "nope")],
+                         ["--voter-ids", "hmac"]):
                 with self.subTest(argv=argv):
                     code, err = self._main("--out", str(dest), *argv)
                     self.assertEqual(code, 2)
                     self.assertFalse(dest.exists())
-            # No secret and no mode: refused, and the message names the way out.
-            code, err = self._main("--out", str(dest))
-            self.assertEqual(code, 2)
-            self.assertIn("--drop-voter-ids", err)
-            self.assertFalse(dest.exists())
 
-    def test_drop_mode_needs_no_secret_and_runs_the_votes_first(self):
+    def _calls(self, *argv):
         dest = self.out / "staging"
         calls = []
         names = ("export_seeds", "export_adversarial_seeds", "export_rubric",
@@ -815,16 +755,24 @@ class Main(_OutDir):
             for p in patches:
                 p.start()
             try:
-                code, err = self._main("--out", str(dest), "--drop-voter-ids")
+                code, err = self._main("--out", str(dest), *argv)
             finally:
                 for p in patches:
                     p.stop()
         self.assertEqual(code, 0, err)
+        return calls
+
+    def test_the_default_needs_no_secret_and_runs_the_votes_first(self):
+        calls = self._calls()
         self.assertEqual(calls[0], ("export_community_arena",
-                                    {"offline": False, "drop_voter_ids": True,
+                                    {"offline": False, "voter_ids": "raw",
                                      "votes_from": None}))
         self.assertEqual([c[0] for c in calls][-3:],
                          ["export_round4", "stage_card", "audit_output"])
+
+    def test_drop_voter_ids_is_an_alias(self):
+        calls = self._calls("--drop-voter-ids")
+        self.assertEqual(calls[0][1]["voter_ids"], "drop")
 
 
 if __name__ == "__main__":

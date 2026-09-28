@@ -14,12 +14,13 @@ that drifts. This module must stay dependency-free: standard library only.
 Never import harness/r4_private.py from here or from anything that uses it;
 its load_r4 rejoins the private Track B text.
 
-Voter ids: an arena voter id is a long-lived bearer cookie, so no export
-publishes one. voter_pseudonym() gives HMAC-SHA256(secret, voter_id) with the
-secret from PLOTPOINTS_VOTER_HMAC_SECRET; with the variable unset,
-voter_secret() refuses. There is no default secret, on purpose: a default in
-a public repo would make every pseudonym reversible by anyone holding the ids.
-_guard_voter_ids() refuses any record whose voter_id is not such a pseudonym.
+Voter ids: an arena voter id is a random per-browser UUID with no account,
+IP or device data behind it. It exists to catch vote stuffing, so exports
+publish it raw by default and the anti-stuffing analysis can be reproduced
+from public data (Levi's decision, 2026-09-28; the same value is the site's
+pp_voter_id cookie, which was accepted). voter_pseudonym() stays available
+for an export that wants HMAC-SHA256(secret, voter_id) instead, with the
+secret from PLOTPOINTS_VOTER_HMAC_SECRET and no default.
 
 Blind-judge keymaps: results/judge_full_chatgpt/_manifest.json maps the
 package's opaque session ids back to real sessions and models. It stays local
@@ -114,27 +115,6 @@ def _guard_keymap(obj, where: str, path: str = "$"):
     elif isinstance(obj, list):
         for i, v in enumerate(obj):
             _guard_keymap(v, where, "%s[%d]" % (path, i))
-
-
-def _guard_voter_ids(obj, where: str, path: str = "$"):
-    """Raise if a voter_id anywhere is neither "" nor a 64-hex HMAC pseudonym.
-
-    A raw id (the voter's cookie, a UUID) never matches. The shape cannot tell
-    a pseudonym from a bare sha256 of the id; voter_pseudonym() is the only
-    writer of the column, and this is the backstop for everything else."""
-    if isinstance(obj, dict):
-        v = obj.get("voter_id")
-        if v not in (None, "") and not (isinstance(v, str) and len(v) == 64
-                                        and set(v) <= _HEX):
-            raise PublicationGuardError(
-                "refusing to write %s: %s.voter_id is not an HMAC pseudonym "
-                "(a raw voter id is a bearer cookie)" % (where, path))
-        for k, val in obj.items():
-            if k != "voter_id":
-                _guard_voter_ids(val, where, "%s.%s" % (path, k))
-    elif isinstance(obj, list):
-        for i, val in enumerate(obj):
-            _guard_voter_ids(val, where, "%s[%d]" % (path, i))
 
 
 def _is_track_b(rec: dict) -> bool:

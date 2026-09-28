@@ -110,7 +110,7 @@ Top-3 tier (Gemma, Mistral, Gemini) is statistically separated from the rest and
 
 **Key finding — community and LLM judges disagree systematically:** Gemma 4 26B (not in the LLM-judge pool at all) tops community voting. Mistral Small Creative jumps from LLM-rank #7 to community-rank #2. GPT-4.1 drops from LLM-rank #4 to community dead last. The divergence is reproducible and stable — LLM-as-judge measures what judges aesthetically prefer, not what users prefer.
 
-Raw data: `results/community_arena_2000.json` in the source repo. One row per vote is in the `community_votes` config (2,013 rows: catch-pair votes included, before the suspect-voter filter). **`community_votes` has no voter id column.** A voter id was a long-lived browser cookie, so it is not published, raw or hashed; the voter counts above come from the analysis, not from that table.
+Raw data: `results/community_arena_2000.json` in the source repo. One row per vote is in the `community_votes` config (2,013 rows: catch-pair votes included, before the suspect-voter filter). Each row carries its `voter_id`, a random per-voter UUID the arena minted to catch vote stuffing (no account, IP or device data), so the voter counts and the suspect-voter filter above can be re-run from that table.
 
 ## Round 4 and earlier rounds
 
@@ -142,7 +142,7 @@ Round 4 changes the instruments more than the models. Each returning model's row
 
 **Not published**, here or in the source repo: a per-model translation of the new judge onto the old scale, a composite, a cross-round refusal column, a rank on the old judge.
 
-**The human arena file.** `analysis/multiturn_arena_bayesian.json` is the round-2 multi-turn arena refreshed on 2026-09-27 to the site's final 1,943 votes (190 pairs, 20 models, closed 2026-06-13). The public export it comes from carries no voter ids, so the voter count (482, the site's archive figure) cannot be recomputed from it and the voter-clustered bootstrap cannot be re-run: `analysis/multiturn_arena_bootstrap.json` still describes the 1,262-vote pull of 2026-06-04.
+**The human arena file.** `analysis/multiturn_arena_bayesian.json` is the round-2 multi-turn arena refreshed on 2026-09-27 to the site's final 1,943 votes (190 pairs, 20 models, closed 2026-06-13). The voter count (482) is the site's archive figure: the export it was refreshed from predates the site's `voter_id` column, so the voter-clustered bootstrap has not been re-run and `analysis/multiturn_arena_bootstrap.json` still describes the 1,262-vote pull of 2026-06-04.
 
 Raw: `analysis/round4_continuity.json`, which also carries the old-judge band for all 69 banded models, the judge bridge by subset, the re-run check per model and the cross-family table. Methods: [`docs/METHODOLOGY.md` §21](https://github.com/LeviTheWeasel/rp-benchmark/blob/main/docs/METHODOLOGY.md); anchor protocol for later rounds: [`docs/ROUND4_DESIGN.md` §23](https://github.com/LeviTheWeasel/rp-benchmark/blob/main/docs/ROUND4_DESIGN.md).
 
@@ -464,7 +464,7 @@ Python evaluation harness source code. Uses OpenRouter API for model-agnostic be
 - `round4_continuity`: one row per returning model (41), the source README table's fields: round-2 human ELO with its interval, votes and rank of 20 (`r2_human_*`, `r2_voted_transcripts`); round-3 NSFW position, tie range, craft score and refusal % (`r3_*`, round 3's own instrument); the old judge as a band (`old_judge_band_mean`, `old_judge_band_half_width`, `old_judge_band_n_sessions`, `old_judge_is_band`, or `old_judge_missing`); `r4_tier`; J with its rank of 55; and whether round 4 reused the round-2 texts (`r4_transcripts`, `r4_sessions_identical`). Full block: `analysis/round4_continuity.json`.
 
 ### Community votes (`community_votes/`)
-One row per single-message arena vote: `vote_id`, `timestamp`, `scenario_id`, `model_a`, `model_b`, `winner`, `is_catch`, `catch_correct`. There is no `voter_id` column: a voter id was a long-lived browser cookie and is not published, raw or hashed. Source: the site's public export, `https://plotlightstudios.com/api/plotpoints/raw?round=1&mode=arena` (`timestamp` is its `client_timestamp`, in UTC).
+One row per single-message arena vote: `vote_id`, `voter_id`, `timestamp`, `scenario_id`, `model_a`, `model_b`, `winner`, `is_catch`, `catch_correct`. `voter_id` is a random per-voter UUID minted to detect vote stuffing (one person voting an implausible number of times); it carries no account, IP or device data and is published so the suspect-voter and voter-quality analysis can be reproduced. Source: the site's public export, `https://plotlightstudios.com/api/plotpoints/raw?round=1&mode=arena` (`timestamp` is its `client_timestamp`, in UTC).
 
 ## How to Use
 

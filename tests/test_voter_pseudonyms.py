@@ -1,4 +1,8 @@
-"""Voter ids leave the benchmark only as HMAC-SHA256 pseudonyms.
+"""Voter ids: published raw by default; HMAC pseudonyms and no column are options.
+
+Voter ids are random per-voter UUIDs that exist to catch vote stuffing, so the
+exports publish them raw unless asked for HMAC-SHA256 pseudonyms
+(--voter-ids hmac, PLOTPOINTS_VOTER_HMAC_SECRET) or no column (--voter-ids drop).
 
 Run by path from the repo root, offline (no network, no real secret):
     python -m unittest tests/test_voter_pseudonyms.py
@@ -78,22 +82,14 @@ class ExportSource(unittest.TestCase):
         return next(n for n in self.tree.body
                     if isinstance(n, ast.FunctionDef) and n.name == name)
 
-    def test_no_raw_voter_id_is_written(self):
-        # Every read of v.get("voter_id") sits inside voter_pseudonym(...).
-        wrapped = set()
-        for node in ast.walk(self.tree):
-            if (isinstance(node, ast.Call) and isinstance(node.func, ast.Name)
-                    and node.func.id == "voter_pseudonym"):
-                wrapped |= {id(n) for n in ast.walk(node)}
-        reads = [n for n in ast.walk(self.tree)
-                 if isinstance(n, ast.Call) and isinstance(n.func, ast.Attribute)
-                 and n.func.attr == "get" and n.args
-                 and isinstance(n.args[0], ast.Constant)
-                 and n.args[0].value == "voter_id"]
-        self.assertTrue(reads)
-        self.assertTrue(all(id(n) in wrapped for n in reads))
+    def test_every_pseudonymized_read_goes_through_voter_pseudonym(self):
+        # In the hmac branch the raw id is only ever read inside voter_pseudonym.
+        f = self._func("community_votes_table")
+        calls = [n for n in ast.walk(f) if isinstance(n, ast.Call)
+                 and isinstance(n.func, ast.Name) and n.func.id == "voter_pseudonym"]
+        self.assertEqual(len(calls), 1)
 
-    def test_the_secret_is_checked_before_the_network(self):
+    def test_the_hmac_secret_is_checked_before_the_network(self):
         f = self._func("export_community_arena")
         calls = {}
         for node in ast.walk(f):
@@ -132,9 +128,7 @@ class _FakeResponse(io.BytesIO):
 
 
 def _id_bearing_csv(votes):
-    """The site's raw export format with a voter_id column added: the HMAC
-    path is for such an id-bearing source. The public export has no voter_id
-    column, and the HMAC mode refuses it (tests/test_hf_round4_export.py)."""
+    """The site's raw export format, with its voter_id column."""
     cols = ("id", "round", "mode", "scenario_id", "context", "model_a",
             "model_b", "winner", "model", "scores", "notes", "is_catch",
             "catch_correct", "source", "signed_in", "client_timestamp",
@@ -180,28 +174,45 @@ class Export(unittest.TestCase):
     def _urlopen(self, *a, **kw):
         return _FakeResponse(_id_bearing_csv(self.votes))
 
-    def test_table_carries_pseudonyms_only(self):
-        rows = self.hf.community_votes_table(self.votes, b"k3y").to_pylist()
+    def test_raw_is_the_default_and_keeps_the_ids(self):
+        rows = self.hf.community_votes_table(self.votes).to_pylist()
+        self.assertEqual([r["voter_id"] for r in rows],
+                         [RAW_IDS[i % 2] for i in range(4)] + [""])
+        self.assertEqual(list(rows[0])[:2], ["vote_id", "voter_id"])
+
+    def test_hmac_mode_carries_pseudonyms_only(self):
+        rows = self.hf.community_votes_table(self.votes, "hmac", b"k3y").to_pylist()
         self.assertEqual([r["voter_id"] for r in rows],
                          [PG.voter_pseudonym(b"k3y", RAW_IDS[i % 2]) for i in range(4)]
                          + [""])
         self.assertFalse(set(RAW_IDS) & set(json.dumps(rows).split('"')))
 
-    def test_unset_secret_refuses_before_any_fetch(self):
+    def test_drop_mode_has_no_voter_column(self):
+        table = self.hf.community_votes_table(self.votes, "drop")
+        self.assertNotIn("voter_id", table.column_names)
+
+    def test_default_export_writes_raw_ids_without_a_secret(self):
+        with _without_secret(), mock.patch("urllib.request.urlopen", self._urlopen):
+            self.hf.export_community_arena(offline=False)
+        p = self.out / "community_votes" / "train.parquet"
+        ids = self.pq.read_table(p).column("voter_id").to_pylist()
+        self.assertEqual(ids[:2], list(RAW_IDS))
+
+    def test_hmac_export_refuses_without_a_secret_before_any_fetch(self):
         def no_network(*a, **kw):
             raise AssertionError("fetched votes without a secret")
         with _without_secret(), mock.patch("urllib.request.urlopen", no_network):
             with self.assertRaises(PG.VoterSecretError):
-                self.hf.export_community_arena(offline=False)
+                self.hf.export_community_arena(offline=False, voter_ids="hmac")
         self.assertFalse((self.out / "community_votes").exists())
-        # --offline needs no secret and fetches nothing.
+        # --offline fetches nothing and needs no secret.
         with _without_secret(), mock.patch("urllib.request.urlopen", no_network):
-            self.hf.export_community_arena(offline=True)
+            self.hf.export_community_arena(offline=True, voter_ids="hmac")
 
-    def test_written_parquet_has_no_raw_ids(self):
+    def test_hmac_export_writes_no_raw_ids(self):
         with mock.patch.dict(os.environ, {ENV: "k3y"}), \
                 mock.patch("urllib.request.urlopen", self._urlopen):
-            self.hf.export_community_arena(offline=False)
+            self.hf.export_community_arena(offline=False, voter_ids="hmac")
         p = self.out / "community_votes" / "train.parquet"
         ids = self.pq.read_table(p).column("voter_id").to_pylist()
         self.assertEqual(ids[:2], [PG.voter_pseudonym(b"k3y", r) for r in RAW_IDS])
@@ -209,10 +220,10 @@ class Export(unittest.TestCase):
         for raw in RAW_IDS:
             self.assertNotIn(raw.encode(), blob)
 
-    def test_main_refuses_before_writing_anything(self):
+    def test_main_hmac_refuses_before_writing_anything(self):
         dest = self.out / "staging"
-        with _without_secret(), mock.patch.object(sys, "argv",
-                                                  ["export.py", "--out", str(dest)]), \
+        with _without_secret(), mock.patch.object(
+                sys, "argv", ["export.py", "--out", str(dest), "--voter-ids", "hmac"]), \
                 mock.patch("sys.stderr", io.StringIO()) as err:
             with self.assertRaises(SystemExit) as cm:
                 self.hf.main()

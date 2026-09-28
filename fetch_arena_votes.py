@@ -12,19 +12,18 @@ model_b, winner (A / B / tie), is_catch, catch_correct, source, signed_in.
 Timestamps are UTC ISO 8601 with a Z and three fraction digits, as the arena's
 log wrote them (six when a value has microseconds).
 
-What the export does not carry, by design: voter ids (a raw voter id is a
-long-lived bearer cookie) and response text. So this file cannot feed the
+Voter ids: the site's export gains a `voter_id` column (random per-voter
+UUIDs, published so vote-stuffing checks can be reproduced); it is passed
+through whenever the CSV has it. An older copy without it cannot feed the
 per-voter work (analyze_voter_quality.py, the suspect-voter filter in
-analyze_community_arena.py) or analyze_engagement_regressor.py; those refuse
-on it rather than run on a partial log. A CSV that does carry a `voter_id`
-column (an id-bearing export, not the public one) has it passed through, so
-hf_dataset/export.py can pseudonymize it with the HMAC secret.
+analyze_community_arena.py), which refuses rather than run on a partial log.
+The export never carries response text, so analyze_engagement_regressor.py
+cannot run on this file.
 
 The other modes are not fetched here. data/multiturn_arena_votes.jsonl is
 rebuilt from the round-2 export by refresh_multiturn_arena_votes.py, with its
 provenance README. data/rubric_votes.jsonl is not refetched (the public export
-drops the rated response text that file holds); its voter ids were removed on
-2026-09-28, like every other published vote file.
+drops the rated response text that file holds); it keeps its voter ids.
 
 This script used to pull a JSON endpoint on the original arena domain. That
 domain is no longer the project's, and nothing here fetches from it.

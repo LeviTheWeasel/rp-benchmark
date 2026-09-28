@@ -19,11 +19,12 @@ Usage:
 Defaults to the site's public export of the round-1 single-message arena,
 https://plotlightstudios.com/api/plotpoints/raw?round=1&mode=arena (parsed by
 fetch_arena_votes.votes_from_csv), writing results/community_arena.json.
-That export carries no voter ids, and the suspect-voter filter and the voter
-counts need them, so on it this script stops with a message instead of
-ranking unfiltered votes. Pass --file with a vote log that carries voter ids
-(raw, or HMAC pseudonyms). The published run is
-results/community_arena_2000.json.
+The suspect-voter filter and the voter counts need voter ids: the export
+carries them once the site's voter_id column is deployed, and on an older
+copy without them this script stops with a message instead of ranking
+unfiltered votes. --file takes any vote log with voter ids (raw, or HMAC
+pseudonyms), e.g. one built from hf_dataset/community_votes/train.parquet.
+The published run is results/community_arena_2000.json.
 """
 import argparse
 import json
