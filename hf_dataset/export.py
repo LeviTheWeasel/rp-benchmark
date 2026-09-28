@@ -1042,7 +1042,7 @@ def audit_output():
             _guard_content(pq.read_table(p).to_pylist(), str(rel))
         n += 1
     print("Audit: %d files under %s: no private file, no Track B text, no "
-          "blind-judge keymap, no raw voter id" % (n, OUT_DIR))
+          "blind-judge keymap" % (n, OUT_DIR))
 
 
 def stage_card():
