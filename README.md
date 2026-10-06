@@ -10,6 +10,8 @@ The LLM-as-judge signals in this benchmark disagree with real users about half t
 
 **Methodology:** [`docs/METHODOLOGY.md`](docs/METHODOLOGY.md) — every formula, sample size, and bias correction documented. **Experiment philosophy:** [`docs/EXPERIMENT_DESIGN.md`](docs/EXPERIMENT_DESIGN.md).
 
+**Support:** [![Ko-fi](https://img.shields.io/badge/Ko--fi-buy_me_a_bubble_tea-FF5E5B?logo=kofi&logoColor=white)](https://ko-fi.com/l3vi4than) RP-Bench is free and open, but every round runs on API credits. If it's useful to you, a bubble tea on [Ko-fi](https://ko-fi.com/l3vi4than) helps fund the next one. Want a private evaluation of your own model? See the [RP Model Report Card commission](https://ko-fi.com/l3vi4than/commissions). Paid reports never affect the public leaderboard.
+
 **New to this?** Start with [`docs/ROUND4_FOR_READERS.md`](docs/ROUND4_FOR_READERS.md) (what round 4 measures, no statistics background needed) and [`docs/HOW_TO_READ_A_CARD.md`](docs/HOW_TO_READ_A_CARD.md) (how to read a model card, with a worked example).
 
 ## Install
