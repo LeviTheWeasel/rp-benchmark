@@ -27,15 +27,27 @@ pip install -e .[analysis]
 pip install -e .[all]
 ```
 
+Then add your key — nothing that calls a model works without it:
+
+```sh
+cp .env.example .env   # put your OpenRouter key in it
+```
+
 After install, the `rp-bench` console script is available:
 
 ```sh
-rp-bench list-models
-rp-bench test                                            # 1 scenario / 1 model smoke test
-rp-bench run --types completion --judge-mode flaw_hunter  # full single-turn benchmark
+rp-bench list-models                                      # no key needed
 rp-bench multiturn --turns 12 --adversarial               # adversarial multi-turn run
 rp-bench leaderboard --view full                          # show latest aggregation
 ```
+
+**Start with `multiturn`.** It runs off the synthetic seeds committed to this
+repo, so it works from a fresh clone.
+
+`rp-bench run` and `rp-bench test` are the single-turn path, and they read
+`benchmark_v0.3.json` — built from private chat logs, gitignored, and therefore
+absent from your clone. They are here for reproducing published single-turn
+numbers, not for a first run.
 
 The legacy `python run.py ...` entrypoint still works.
 
@@ -1325,15 +1337,48 @@ python3 run.py list-models
 
 ## Adding Models
 
-Step 1 — register the model in `harness/config.py`:
+Step 1 — register the model in `harness/config.py`. The id prefix picks the
+route, so a model that is not on OpenRouter is still benchmarkable:
 
 ```python
 TEST_MODELS = {
-    "your_model": "provider/model-id",  # OpenRouter model ID
+    # 1. OpenRouter (default) — no prefix. Ids: openrouter.ai/models
+    "your_model":        "provider/model-id",
+
+    # 2. Local Ollama — `ollama/` prefix. Goes to $OLLAMA_HOST
+    #    (default http://localhost:11434), sends no auth header, and
+    #    bypasses the OpenRouter rate gate. No API key needed.
+    "your_local_model":  "ollama/your-model:latest",
+
+    # 3. Your own / rented endpoint — `remote/` prefix. Goes to
+    #    $REMOTE_BASE_URL with $REMOTE_API_KEY as a bearer token.
+    #    Any OpenAI-compatible endpoint works (vLLM, TGI, RunPod, ...).
+    "your_hosted_model": "remote/your-model-id",
 }
 ```
 
-Find model IDs at [openrouter.ai/models](https://openrouter.ai/models).
+Routes 2 and 3 are the ones to use for a model that is not published yet.
+The `remote/` route is deliberately separate from `ollama/`: the local route
+sends no `Authorization` header because it talks to loopback, so reusing it for
+an internet-reachable pod would quietly publish an open inference endpoint.
+Your OpenRouter key never leaves the harness — a rented pod sees generation
+traffic only, never the account key that pays for the judges.
+
+The judge and the user simulator take the same prefixes, so a run can be fully
+local — no OpenRouter key anywhere in the loop. Register a local judge in
+`JUDGE_MODELS` the same way, then:
+
+```sh
+rp-bench multiturn \
+  --models your_local_model \
+  --judges your_local_judge \
+  --user-sim ollama/your-model:latest \
+  --turns 12 --max-seeds 2
+```
+
+Scores from a small local judge are not comparable to the published leaderboard
+— that panel is cloud-judged. Use this to prove the pipeline end to end, then
+switch the judge to a cloud model for numbers you intend to compare.
 
 Step 2 — run all auto-runnable evaluations and refresh the composite:
 
