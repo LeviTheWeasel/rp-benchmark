@@ -35,6 +35,17 @@ def load_judge_prompt(judge_key: str, mode: str = "standard") -> str:
 
 
 def load_benchmark() -> dict:
+    if not BENCHMARK_FILE.exists():
+        raise FileNotFoundError(
+            "%s not found.\n\n"
+            "The single-turn benchmark is built from private chat logs, so this "
+            "file is gitignored and is not part of a clone. `run` and `test` "
+            "need it; the multi-turn path does not.\n\n"
+            "Run this instead -- it uses the synthetic seeds that ship with the "
+            "repo:\n"
+            "    rp-bench multiturn --turns 12 --max-seeds 2\n"
+            % BENCHMARK_FILE.name
+        )
     with open(BENCHMARK_FILE) as f:
         return json.load(f)
 

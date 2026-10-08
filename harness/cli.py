@@ -29,7 +29,6 @@ from .aggregate import (
     aggregate_multiple_runs,
     print_leaderboard,
 )
-from .visualize import generate_all as generate_charts
 
 
 def cmd_run(args):
@@ -94,6 +93,7 @@ def cmd_run(args):
     print_leaderboard(agg, view=args.view or "overall")
 
     if args.charts:
+        from .visualize import generate_all as generate_charts
         generate_charts(agg)
 
 
@@ -138,6 +138,7 @@ def cmd_charts(args):
     else:
         agg = aggregate_latest()
     out_dir = Path(args.output) if args.output else None
+    from .visualize import generate_all as generate_charts
     generate_charts(agg, output_dir=out_dir)
 
 
@@ -148,7 +149,20 @@ def cmd_leaderboard(args):
             run_file = RESULTS_DIR / ("run_%s.json" % args.run)
         agg = aggregate_run(run_file)
     else:
-        agg = aggregate_latest()
+        try:
+            agg = aggregate_latest()
+        except FileNotFoundError:
+            print(
+                "No single-turn runs to aggregate -- results/ holds no "
+                "run_*.json.\n\n"
+                "`leaderboard` aggregates the single-turn path only, and that "
+                "path needs the private benchmark file, so a fresh clone has "
+                "nothing for it to read.\n\n"
+                "Multi-turn runs are not aggregated here: `rp-bench multiturn` "
+                "prints its own table when it finishes and writes "
+                "results/multiturn_*.json."
+            )
+            return
 
     agg_file = RESULTS_DIR / ("leaderboard_%s.json" % agg["run_id"])
     with open(agg_file, "w") as f:
@@ -294,7 +308,12 @@ def main(argv=None) -> int:
     if not args.command:
         parser.print_help()
         return 1
-    args.func(args)
+    try:
+        args.func(args)
+    except FileNotFoundError as exc:
+        # Missing-input errors carry their own remedy; a traceback only buries it.
+        print(exc, file=sys.stderr)
+        return 1
     return 0
 
 
