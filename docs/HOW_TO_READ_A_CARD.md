@@ -94,9 +94,10 @@ It is drawn as a **band, not a number, on purpose.** Two competent raters given
 the same session and the same rubric differ by a median of 15 points out of
 100. Printing "51.1" would imply a precision that does not exist.
 
-Bands that overlap are tied, and most of them do: **58 of 70 models sit close
-enough together that every one of their bands overlaps every other's.** Most of
-this roster is one undifferentiated cluster on this axis.
+Bands that overlap are tied, and many of them do: **41 of 70 models sit close
+enough together that every one of their bands overlaps every other's.** That is
+the largest group in which every pair overlaps; a looser reading of "near each
+other" gives a bigger number and is not the same claim.
 
 ---
 

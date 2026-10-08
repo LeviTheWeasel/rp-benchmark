@@ -559,7 +559,7 @@ acceptably, and still be unable to tell permitted from forbidden.
 Two blocks are drawn as **bands rather than numbers**, because the numbers would
 imply a precision that does not exist. Two competent raters given the same
 session and rubric differ by a median of 15 points out of 100 on craft, so
-**58 of 70 models' craft bands mutually overlap** — most of the roster is one
+**41 of 70 models' craft bands mutually overlap** — much of the roster is one
 undifferentiated cluster on that axis. The subjective band is wider still: three
 judge families scoring the same sessions span a full point on a five-point
 scale, and two thirds of that spread is the judges disagreeing about the *scale*

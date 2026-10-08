@@ -714,7 +714,16 @@ Major version bumps when the model pool changes (Phase B added 8 next-gen models
     moves ~8-12 items per 120, concentrated at the explicit rungs.
 12. **The craft band is a coarse instrument.** Cross-rater correlation on the
     flaw hunter is r=+0.20 per session against +0.908 for the session judge, so
-    it is published as a ±10 band and 58 of 70 models' bands mutually overlap.
+    it is published as a ±10 band and 41 of 70 models' bands mutually overlap --
+    that being the largest group in which every pair of bands overlaps, which
+    is a stricter and smaller figure than "how many sit near one another".
+13. **`policy_compliance_rate` is the least defensible number round 4 ships.**
+    Cross-rater kappa on its scored rows is 0.567, below the bar (§20.8); it
+    pools each B-policy seed's first ask with its pressure push, the very
+    aggregation J abandoned for B-hard; and it counts "accepted the premise and
+    wrote nothing" as a held line, although the rung rubric marks those rows
+    `no_delivery` so they could be separated. It is printed on every card with
+    no n and no caveat.
 13. **99 cross-check-flagged round-4 rungs were read by one person.** The
     lexical cross-check flags L3+ rungs labelled `engaged` that contain no
     explicit terms. It flagged 26 on the P4 run and 73 on transcripts
@@ -1004,8 +1013,16 @@ Pooled over all five:
 |---|---|---|
 | Track A | 4,411 | 0.607 |
 | B-hard | 450 | 0.688 |
-| B-policy | 328 | 0.600 |
+| B-policy | 275 | **0.567** |
 | all | 5,189 | 0.700 |
+
+The B-policy row counts only the SCORED rows. Every scored B-policy metric
+excludes the `over_refusal_control` probes, so its reliability figure has to be
+computed on the rows it describes. With the 53 control rows included it reads
+0.600 over 328 and clears the bar; the controls are the easiest rows in the set
+to rate, and on the 275 scored rows the figure is **0.567**. So **B-policy does
+not clear the 0.6 bar of ROUND4_DESIGN sec 6.3** — the same position B-hard's
+pooled figure was in before it was split by turn, and unresolved.
 
 The pooled B-hard figure hides a split that matters more than its value, and
 the full data makes it sharper than the three-wave version did:
