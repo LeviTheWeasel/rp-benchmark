@@ -243,3 +243,28 @@ RETRY_DELAY_SECONDS = 5.0
 # Cydonia's Track A sessions at concurrency 4 AND serially.
 MAX_TRANSIENT_RETRIES = 6
 TRANSIENT_MAX_WAIT_SECONDS = 45.0
+
+# Russian scenarios: the generated ones carry a "language" field, but the
+# prebuilt payloads only encode it in the scenario id, via the source story's
+# name. The set was duplicated in harness/runner.py and
+# pipeline/aggregate_flaw_hunter.py, so a new Russian seed was counted as
+# English in the per-language breakdown by whichever copy nobody updated.
+# One definition, and a helper that prefers a DECLARED language over the
+# name heuristic so new seeds only need the field.
+RU_PREBUILT_SOURCES = frozenset({
+    "lucian", "agora", "valdrian", "narlos", "rowena", "exiledking",
+})
+
+
+def scenario_language(scenario_id, declared=None):
+    """"ru" or "en" for a scenario.
+
+    `declared` is the scenario's own language field when the caller has it;
+    it wins. Falling back to the id means a prebuilt payload whose source
+    story is not in RU_PREBUILT_SOURCES reads as English -- which is why a
+    new Russian seed should carry the field rather than rely on its name.
+    """
+    if declared:
+        return str(declared)
+    sid = (scenario_id or "").lower()
+    return "ru" if any(src in sid for src in RU_PREBUILT_SOURCES) else "en"

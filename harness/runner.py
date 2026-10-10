@@ -16,6 +16,7 @@ from .config import (
     BENCHMARK_FILE,
     PROJECT_ROOT,
     REQUEST_DELAY_SECONDS,
+    scenario_language,
 )
 
 
@@ -363,12 +364,12 @@ def run_benchmark(
     if language:
         gen_scenarios = [s for s in gen_scenarios if s.get("language", "en") == language]
         # For prebuilt, filter by scenario ID patterns (ru scenarios have russian source names)
-        if language == "ru":
-            ru_sources = {"lucian", "agora", "valdrian", "narlos", "rowena", "exiledking"}
-            prebuilt_payloads = [p for p in prebuilt_payloads if any(src in p.get("scenario_id", "").lower() for src in ru_sources)]
-        elif language == "en":
-            ru_sources = {"lucian", "agora", "valdrian", "narlos", "rowena", "exiledking"}
-            prebuilt_payloads = [p for p in prebuilt_payloads if not any(src in p.get("scenario_id", "").lower() for src in ru_sources)]
+        # scenario_language() is the single definition (harness/config.py) and
+        # prefers a payload's own declared language over the id heuristic.
+        prebuilt_payloads = [
+            p for p in prebuilt_payloads
+            if scenario_language(p.get("scenario_id", ""),
+                                 p.get("language")) == language]
 
     if scenario_filter:
         gen_scenarios = [s for s in gen_scenarios if s["id"] in scenario_filter]

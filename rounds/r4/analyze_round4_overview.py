@@ -1210,8 +1210,15 @@ def build(results, boot=BOOT_DEFAULT, rng_seed=RNG_SEED, cross=()):
             mean_lo=round(float(m_lo[i]), 4), mean_hi=round(float(m_hi[i]), 4),
             mean_lo_without_shared_seed_shift=round(float(rel_lo[i]), 4),
             mean_hi_without_shared_seed_shift=round(float(rel_hi[i]), 4)))
+    # multiturn_arena_bayesian.json is read by human_check() and was NOT
+    # recorded here, so a change to the human arena moved the published
+    # human-check block while pipeline/check_freshness.py saw nothing.
+    # (The second-judge package files ARE recorded, merged in as cross_inputs
+    # further down; only this one was missing.)
+    arena_path = results / "multiturn_arena_bayesian.json"
     inputs = {p.name: sha(p) for p in
-              [sj_path, defects_path, j_path] + [Path(s) for s in session_sources(results)]
+              [sj_path, defects_path, j_path, arena_path]
+              + [Path(s) for s in session_sources(results)]
               + list(r4_used)
               if p.exists()}
     elo_doc = dict(

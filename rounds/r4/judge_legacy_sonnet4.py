@@ -545,17 +545,29 @@ def main(argv=None):
         with open(args.sessions_file) as fh:
             sessions = [l.strip() for l in fh if l.strip()]
     if args.redo_failed:
-        rows = read_rows(args.out)
-        pick = set(sessions) if sessions is not None else None
-        keep = [r for r in rows if r.get("raw_parse_ok")
-                or (pick is not None and r["session_id"] not in pick)]
-        if len(keep) != len(rows):
-            tmp = Path(args.out).with_suffix(".jsonl.tmp")
-            with open(tmp, "w") as fh:
-                for r in keep:
-                    fh.write(json.dumps(r, ensure_ascii=False) + "\n")
-            tmp.replace(args.out)
-            print("dropped %d parse-failure row(s)" % (len(rows) - len(keep)))
+        # --dry-run is honoured at line ~569, AFTER this block, so
+        # --redo-failed --dry-run used to rewrite the output file and drop
+        # rows before announcing it would do nothing. A dry run must not be
+        # able to lose data: that is the one promise the flag makes.
+        if args.dry_run:
+            rows = read_rows(args.out)
+            pick = set(sessions) if sessions is not None else None
+            keep = [r for r in rows if r.get("raw_parse_ok")
+                    or (pick is not None and r["session_id"] not in pick)]
+            print("[dry-run] --redo-failed would drop %d parse-failure row(s) "
+                  "from %s" % (len(rows) - len(keep), args.out))
+        else:
+            rows = read_rows(args.out)
+            pick = set(sessions) if sessions is not None else None
+            keep = [r for r in rows if r.get("raw_parse_ok")
+                    or (pick is not None and r["session_id"] not in pick)]
+            if len(keep) != len(rows):
+                tmp = Path(args.out).with_suffix(".jsonl.tmp")
+                with open(tmp, "w") as fh:
+                    for r in keep:
+                        fh.write(json.dumps(r, ensure_ascii=False) + "\n")
+                tmp.replace(args.out)
+                print("dropped %d parse-failure row(s)" % (len(rows) - len(keep)))
     work, skipped_done, skipped_v1 = select_work(
         corpus, args.out, sessions, include_judged=args.include_judged)
     if args.limit:

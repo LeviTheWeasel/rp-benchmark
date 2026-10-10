@@ -4,6 +4,7 @@ import json
 import sys
 from collections import defaultdict, Counter
 from pathlib import Path
+from harness.config import scenario_language
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
@@ -37,8 +38,10 @@ def main():
         model = r.get("test_model")
         scenario = r.get("scenario_id", "")
 
-        # Detect language
-        lang = "ru" if any(x in scenario for x in ["lucian", "agora", "valdrian", "narlos", "rowena", "exiledking"]) else "en"
+        # One definition, in harness.config. The inline copy here meant a new
+        # Russian seed was silently counted as English in the per-language
+        # breakdown unless someone remembered this line too.
+        lang = scenario_language(scenario, r.get("language"))
 
         for judge, jdata in r.get("judges", {}).items():
             total_evals += 1
