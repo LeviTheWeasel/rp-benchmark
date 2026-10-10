@@ -1,4 +1,4 @@
-"""Tests for analyze_round4_overview.py on synthetic inputs (no repo data)."""
+"""Tests for rounds/r4/analyze_round4_overview.py on synthetic inputs (no repo data)."""
 import contextlib
 import io
 import json
@@ -12,8 +12,8 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-import analyze_round4_overview as O  # noqa: E402
-from transcript_hash import transcript_hash  # noqa: E402
+from rounds.r4 import analyze_round4_overview as O  # noqa: E402
+from lib.transcript_hash import transcript_hash  # noqa: E402
 
 SEEDS = ["adv_seed_%02d" % i for i in range(12)]
 PROSE = "The lantern gutters and the rain keeps on at the shutters, slow and patient."

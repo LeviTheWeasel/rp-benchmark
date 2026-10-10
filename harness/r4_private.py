@@ -48,10 +48,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 try:
-    from transcript_hash import transcript_hash
+    from lib.transcript_hash import transcript_hash
 except ImportError:  # imported from outside the repo root
     sys.path.insert(0, str(ROOT))
-    from transcript_hash import transcript_hash
+    from lib.transcript_hash import transcript_hash
 
 TRACK_B = ("B-hard", "B-policy")
 PRIVATE_PREFIX = "r4_trackb_transcripts__"

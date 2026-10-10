@@ -1,4 +1,4 @@
-"""Offline tests for judge_legacy_sonnet4.py: parsing, provenance, resume, cap.
+"""Offline tests for rounds/r4/judge_legacy_sonnet4.py: parsing, provenance, resume, cap.
 
 No network: the OpenRouter call and the credits check are stubbed. Run by path
 from the repo root:
@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-import judge_legacy_sonnet4 as J  # noqa: E402
+from rounds.r4 import judge_legacy_sonnet4 as J  # noqa: E402
 from harness import multiturn      # noqa: E402
 
 GOOD = {

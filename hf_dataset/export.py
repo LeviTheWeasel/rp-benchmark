@@ -45,12 +45,12 @@ PROJECT_ROOT = Path(__file__).parent.parent
 # guards live at the root. Appended, so nothing there shadows an import above.
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.append(str(PROJECT_ROOT))
-from publication_guards import (  # noqa: E402
+from lib.publication_guards import (  # noqa: E402
     EVIDENCE_CAP, TEXT_FIELDS, TRACK_B, TRACK_B_SEED_PREFIXES,
     VOTER_HMAC_ENV, PublicationGuardError, VoterSecretError, _carries_text,
     _guard_keymap, _guard_path, _guard_record, _is_track_b,
     _read_public_json, voter_pseudonym, voter_secret)
-from fetch_arena_votes import (  # noqa: E402
+from arena.fetch_arena_votes import (  # noqa: E402
     ARENA_CSV_URL, FETCH_TIMEOUT, carries_voter_ids, votes_from_csv)
 HF_DIR = Path(__file__).parent
 # Where exports are written. Sources are always read from HF_DIR/_source and
@@ -447,7 +447,7 @@ def export_community_arena(offline: bool = False, voter_ids: str = "raw",
             (PROJECT_ROOT / "results").glob("community_arena*.json"), reverse=True
         )
         if not candidates:
-            print("No community arena snapshot found (run analyze_community_arena.py)")
+            print("No community arena snapshot found (run arena/analyze_community_arena.py)")
             return
         snapshot = candidates[0]
 
@@ -594,10 +594,10 @@ def export_analysis_artifacts():
 
 # The guards themselves (TRACK_B, TEXT_FIELDS, EVIDENCE_CAP, _guard_path,
 # _is_track_b, _guard_record, _read_public_json) live in the dependency-free
-# publication_guards.py at the repo root, imported at the top of this file, so
-# export_plotpoints_round4.py runs the same checks without pyarrow.
-# The silent-refusal flag's thresholds, as in analyze_round4_willingness.py
-# and make_j_barchart.py.
+# lib/publication_guards.py at the repo root, imported at the top of this file, so
+# rounds/r4/export_plotpoints_round4.py runs the same checks without pyarrow.
+# The silent-refusal flag's thresholds, as in rounds/r4/analyze_round4_willingness.py
+# and rounds/r4/make_j_barchart.py.
 SILENT_EMPTY_RATE = 0.20
 SILENT_RUNG_SLOPE = 0.25
 
@@ -674,7 +674,7 @@ def export_round4_leaderboard():
         raise SystemExit(
             "round4_willingness_leaderboard.json predates the 2026-09-25 "
             "decisions (no ranked/rank/held_under_pressure on %d rows). Re-run "
-            "analyze_round4_willingness.py first." % len(missing))
+            "rounds/r4/analyze_round4_willingness.py first." % len(missing))
     _copy_public(src, "analysis", "round4_willingness_leaderboard.json")
 
     flat = []
@@ -806,12 +806,12 @@ def export_round4_seeds():
 # -----------------------------------------------------------------------------
 # Round 4 overview and continuity
 #
-# analyze_round4_overview.py: judge tier, J and watch-out side by side, nothing
+# rounds/r4/analyze_round4_overview.py: judge tier, J and watch-out side by side, nothing
 # summed, no position (rows inside a tier are alphabetical). Its judge ELO is a
 # re-expression of the same scores and lives in round4_judge_elo.json only:
 # that file is copied as is, and no ELO or rank enters the overview table.
 #
-# analyze_round4_continuity.py: the returning models with their earlier-round
+# rounds/r4/analyze_round4_continuity.py: the returning models with their earlier-round
 # figures beside the round-4 ones, nothing converted. The old judge (the
 # round-2/3 judge re-run on round-4 transcripts) leaves as a band, mean and
 # half width, never a rank and never its interval ends as separate numbers
@@ -908,7 +908,7 @@ def round4_overview_rows(ov: dict) -> list[dict]:
     jm_doc = ov.get("judge_means") or {}
     if jm_doc.get("judge") != OVERVIEW_JUDGE or not jm_doc.get("models"):
         raise SystemExit("round4_overview.json: judge_means missing or not from "
-                         "%s; rerun analyze_round4_overview.py" % OVERVIEW_JUDGE)
+                         "%s; rerun rounds/r4/analyze_round4_overview.py" % OVERVIEW_JUDGE)
     jm = jm_doc["models"]
     src = ([(r, "tiered", None) for r in ov["rows"]]
            + [(r, "untiered", r.get("reason")) for r in ov.get("unranked") or []]
@@ -969,7 +969,7 @@ def round4_continuity_rows(cont: dict) -> list[dict]:
     oj = cont.get("old_judge") or {}
     if oj.get("judge") != CONTINUITY_OLD_JUDGE or not cont.get("rows"):
         raise SystemExit("round4_continuity.json: old_judge is not %s or no "
-                         "rows; rerun analyze_round4_continuity.py"
+                         "rows; rerun rounds/r4/analyze_round4_continuity.py"
                          % CONTINUITY_OLD_JUDGE)
     rows = []
     for r in cont["rows"]:

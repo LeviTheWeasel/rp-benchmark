@@ -28,7 +28,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-import publication_guards as PG  # noqa: E402
+from lib import publication_guards as PG  # noqa: E402
 
 ENV = "PLOTPOINTS_VOTER_HMAC_SECRET"
 RAW_IDS = ("4b573b59-fb63-452a-91e2-000000000001",

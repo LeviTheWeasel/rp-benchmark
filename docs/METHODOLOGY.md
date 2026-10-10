@@ -187,7 +187,7 @@ Same rubric as §2.2, but the system prompt is augmented with a primer specific 
 
 > *"This scene was specifically designed to test for AGENCY VIOLATIONS — situations where the model writes the user character's actions, dialogue, or internal states. Be especially vigilant for fatal-flaw 'agency_violation' deductions and quote the exact phrase that crosses the line."*
 
-Eleven such primers (one per failure target). 270 of 336 sessions scored cleanly; 66 hit unrecoverable JSON parse errors (the judge occasionally emits invalid JSON like `"quote" (note),` despite explicit "strict JSON" instructions). Recovery patterns documented in `judge_session_flaw_hunter.py`.
+Eleven such primers (one per failure target). 270 of 336 sessions scored cleanly; 66 hit unrecoverable JSON parse errors (the judge occasionally emits invalid JSON like `"quote" (note),` despite explicit "strict JSON" instructions). Recovery patterns documented in `pipeline/judge_session_flaw_hunter.py`.
 
 ### 3.7 Per-target session aggregation
 
@@ -322,7 +322,7 @@ The arena randomizes A/B side per voter, so a non-zero `position_bias` is the re
 
 Same blind A/B vote infrastructure as §4, but the rendered scenario is the entire 12-turn (24-message) dialogue between two models on the same adversarial seed. Voters scroll through both conversations before deciding A / B / tie. Same anti-bias features (§4.1), same catch-pair voter quality filter (§4.2), same rate limits.
 
-Storage: votes are tagged `mode: "multiturn_arena"` in `data/votes.jsonl`; `data/multiturn_arena_votes.jsonl` is rebuilt from the site's public round-2 export by `refresh_multiturn_arena_votes.py`.
+Storage: votes are tagged `mode: "multiturn_arena"` in `data/votes.jsonl`; `data/multiturn_arena_votes.jsonl` is rebuilt from the site's public round-2 export by `arena/refresh_multiturn_arena_votes.py`.
 
 ### 5.2 Bayesian ELO
 
@@ -603,7 +603,7 @@ Used in §7 (cross-method correlation), §5.3 (multi-turn arena vs other methods
 r(X, Y) = Σ((x_i − x̄)(y_i − ȳ)) / √( Σ(x_i − x̄)² × Σ(y_i − ȳ)² )
 ```
 
-Used in `analyze_factor_and_clusters.py` for the per-dimension correlation matrix.
+Used in `rounds/r1_r2/analyze_factor_and_clusters.py` for the per-dimension correlation matrix.
 
 ### 14.5 Bonferroni correction
 
@@ -668,18 +668,18 @@ rp-bench multiturn --turns 12 --adversarial
 # Visit https://plotlightstudios.com/plotpoints
 
 # Analyses
-python3 analyze_community_arena.py
-python3 analyze_bayesian_arena_elo.py
-python3 analyze_behavioral_metrics.py
-python3 judge_per_turn_failures.py
-python3 judge_session_flaw_hunter.py
-python3 analyze_flaw_hunter_sessions.py
-python3 analyze_method_correlations.py
-python3 analyze_cost_efficiency.py
-python3 analyze_arena_timeseries.py
-python3 analyze_failure_target_validation.py
-python3 analyze_model_profiles.py
-python3 generate_profile_cards.py
+python3 arena/analyze_community_arena.py
+python3 arena/analyze_bayesian_arena_elo.py
+python3 pipeline/analyze_behavioral_metrics.py
+python3 pipeline/judge_per_turn_failures.py
+python3 pipeline/judge_session_flaw_hunter.py
+python3 pipeline/analyze_flaw_hunter_sessions.py
+python3 pipeline/analyze_method_correlations.py
+python3 pipeline/analyze_cost_efficiency.py
+python3 arena/analyze_arena_timeseries.py
+python3 rounds/r1_r2/analyze_failure_target_validation.py
+python3 pipeline/analyze_model_profiles.py
+python3 pipeline/generate_profile_cards.py
 ```
 
 Output files in `results/` are version-controlled snapshots; re-running with new data re-generates them. One exception: round 4's Track B transcripts are not published (§20.12). The round-4 leaderboard and its kappa figures reproduce from the public files; relabelling Track B needs the private text. The HuggingFace dataset `lazyweasel/roleplay-bench` mirrors `hf_dataset/` (parquets + analysis JSONs).
@@ -933,7 +933,7 @@ Two contributing faults:
    Globbing it alone moved 4 models from ungated to gated. A new Jev pass must
    now reach the gate by existing, not by being remembered in a list.
 2. The remaining 2,234 exchanges across 29 models were simply never labelled.
-   `jev_vs_sonnet_r4.py --all-files --missing-only` backfills them: it walks
+   `rounds/r4/jev_vs_sonnet_r4.py --all-files --missing-only` backfills them: it walks
    every run newest-first with the same dedup as every other consumer, and
    skips exchanges already carrying a label so the pass is resumable.
 
@@ -988,8 +988,8 @@ Models re-generated after the token-ceiling fix (§20.10) exist in several runs
 with the same `(model, seed)` and **different text**. Three rules follow:
 
 1. **Newest wins.** Every consumer sorts run files newest-first and keeps the
-   first `(model, seed)` it sees. `compute_coverage.py` had no dedup at all and
-   averaged a truncated run with its repair; `analyze_behavioral_metrics.py`
+   first `(model, seed)` it sees. `pipeline/compute_coverage.py` had no dedup at all and
+   averaged a truncated run with its repair; `pipeline/analyze_behavioral_metrics.py`
    deduped oldest-first and reported the truncated run.
 2. **Dedup before asking for labels.** The willingness analyzer checked
    `rung_labels` first, so an unlabelled re-run was skipped and the *older
@@ -1089,7 +1089,7 @@ turn 4.
 
 Labelling moved off the API onto the same batch route as the flaw and session
 judges. The rubrics, ladder text and exchange splitting are **imported from
-`classify_r4_refusals.py`** rather than restated, so the two routes cannot drift;
+`rounds/r4/classify_r4_refusals.py`** rather than restated, so the two routes cannot drift;
 `content_hits`, `is_control` and `disputed` stay mechanical and are recomputed at
 import. Only `label`, `evidence` and `confidence` come from the rater.
 
@@ -1193,7 +1193,7 @@ is missing, rather than reading an empty transcript.
 Round 4 replaced the craft judge (Sonnet 4 to Sonnet 5), the flaw hunter,
 the headline (craft to J) and the willingness instrument. This section is how
 the round is tied back to rounds 2 and 3, and where each tie stops.
-`analyze_round4_continuity.py` computes every figure here into
+`rounds/r4/analyze_round4_continuity.py` computes every figure here into
 `results/round4_continuity.json`; `--markdown` writes the README table from it.
 
 ### 21.1 Who is compared
@@ -1225,7 +1225,7 @@ transcript it had not already scored.
 - **Identity.** `harness.multiturn.judge_session(session,
   "anthropic/claude-sonnet-4", nsfw=False)`, prompt `SESSION_JUDGE_SYSTEM`
   (sha256 prefix `1ff004ccf5aa`, unchanged since 2026-04-13), temperature 0.1,
-  max_tokens 4096. `judge_legacy_sonnet4.py` calls that function rather than a
+  max_tokens 4096. `rounds/r4/judge_legacy_sonnet4.py` calls that function rather than a
   copy and refuses to start if the prompt hash, the config or the model id has
   drifted.
 - **Which score counts.** A stored score counts only where the text the judge
@@ -1408,7 +1408,7 @@ round-4 classifier over round-3 transcripts, about 9,400 turns; it was not run.
 The round-4 craft letter is one judge's: Claude Sonnet 5 (session judge v2),
 fixed ranges A 3.8 and above, B 3.2-3.8, C 2.6-3.2, D 2.0-2.6, E below 2.0 on
 its 1-5 `overall` mean. ChatGPT, blind to model names, scored the same 1,328
-sessions against the same rubric. `analyze_round4_second_judge.py` computes
+sessions against the same rubric. `rounds/r4/analyze_round4_second_judge.py` computes
 everything here into `results/round4_second_judge.json`; the overview carries
 the per-model column. The write-up with every table is
 [`ROUND4_DESIGN.md` §24](ROUND4_DESIGN.md).
@@ -1417,7 +1417,7 @@ the per-model column. The write-up with every table is
 
 - **Harness.** ChatGPT, run blind in Codex on a ChatGPT subscription: eleven
   chunks of about 100 sessions, opaque ids, a shuffled order, the rubric and a
-  validator inside each zip (`export_chatgpt_full_package.py`). Planned as one
+  validator inside each zip (`pipeline/export_chatgpt_full_package.py`). Planned as one
   conversation per chunk, it ran as one coordinating session (one seed for the
   whole run) that, as Levi asked, gave each whole chunk to its own
   clean-context agent, three at a time. The eleven judges' reports
@@ -1429,7 +1429,7 @@ the per-model column. The write-up with every table is
   not see and which was not imported; and a shared workspace (chunk 06) that
   every judge says it did not consult. Their independence rests on those
   reports (ROUND4_DESIGN §24).
-- **Import.** 1,149 rows came back and passed `import_chatgpt_full_judge.py`:
+- **Import.** 1,149 rows came back and passed `pipeline/import_chatgpt_full_judge.py`:
   every rubric field in range, the id in the package keymap, the transcript
   hash equal to the one on disk. These checks are on the rows, so how the run
   was organised does not touch them. The eleven raters calibrate a little

@@ -3,7 +3,7 @@
  "read_this_first": "A re-expression of the judge's `overall` scores, not new information and not a rank (Spearman 0.996 with the seed-adjusted mean). 100 points means Sonnet 5 scored the higher model higher on about 64% of the scenarios both played, ties counted half; no preference between two conversations was ever asked for. Pool-relative: adding a model moves every figure. Not comparable to arena ELO. On the profile cards 'craft band' is the flaw hunter; this file is not that.",
  "method": {
   "signal": "overall, session_judge_v2.jsonl, judge subagent-sonnet-5",
-  "transcripts": "newest source wins per session_id (transcript_hash.py rule); fails closed on a hash mismatch",
+  "transcripts": "newest source wins per session_id (lib/transcript_hash.py rule); fails closed on a hash mismatch",
   "blank_and_partial_sessions": "kept as scored (a blank scene is 1.0) and flagged; dropping them would reward silence (13a)",
   "pairs": "every pair of models that both played a seed; higher overall wins, an exact tie is 0.5 each way; no sub-score tiebreak",
   "fit": "Bradley-Terry MAP, N(0, 300^2) prior, 400/ln10 scale, mean anchored at 1500, Newton's method",

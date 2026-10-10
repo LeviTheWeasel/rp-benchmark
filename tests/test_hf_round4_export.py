@@ -29,7 +29,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-import publication_guards as PG  # noqa: E402
+from lib import publication_guards as PG  # noqa: E402
 
 ENV = "PLOTPOINTS_VOTER_HMAC_SECRET"
 RESULTS = ROOT / "results"
@@ -431,7 +431,7 @@ class Continuity(_OutDir):
                 self.assertIsNone(r["old_judge_band_mean"])
                 self.assertTrue(r["old_judge_missing"])
         # The same band the site's cards publish.
-        import export_plotpoints_round4 as E
+        from rounds.r4 import export_plotpoints_round4 as E
         for r in self.built:
             b = E.old_judge_band(self.cont, r["model"])
             if b is None:
@@ -445,7 +445,7 @@ class Continuity(_OutDir):
 
     def test_no_key_the_continuity_analyzer_forbids(self):
         try:
-            import analyze_round4_continuity as C
+            from rounds.r4 import analyze_round4_continuity as C
         except ImportError as e:
             self.skipTest("analyze_round4_continuity needs %s" % e.name)
         self.assertFalse(C.FORBIDDEN_KEYS & set(self.built[0]))

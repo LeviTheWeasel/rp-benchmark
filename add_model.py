@@ -9,7 +9,7 @@ Workflow:
     4. Run flaw-hunter on the new multi-turn sessions
     5. Re-aggregate model_profiles.json, flaw_hunter_session_summary.json,
        behavioral_metrics.json
-    6. Re-run analyze_composite_score.py and print the new model's row
+    6. Re-run pipeline/analyze_composite_score.py and print the new model's row
 
 Steps that require manual action are flagged at the end:
     a. Download a fresh OpenRouter activity CSV (operational axes — Speed, Cost)
@@ -126,7 +126,7 @@ def main():
         else:
             latest = candidates[0]
             run(
-                [sys.executable, "-u", "judge_session_flaw_hunter.py",
+                [sys.executable, "-u", "pipeline/judge_session_flaw_hunter.py",
                  "--source", str(latest)],
                 f"Flaw-hunter scoring of {latest.name}",
                 args.dry_run,
@@ -135,17 +135,17 @@ def main():
     # 4. Re-aggregate analysis JSONs
     if not args.skip_aggregation:
         run(
-            [sys.executable, "-u", "analyze_model_profiles.py"],
+            [sys.executable, "-u", "pipeline/analyze_model_profiles.py"],
             "Refresh results/model_profiles.json (Likert per model)",
             args.dry_run,
         )
         run(
-            [sys.executable, "-u", "analyze_flaw_hunter_sessions.py"],
+            [sys.executable, "-u", "pipeline/analyze_flaw_hunter_sessions.py"],
             "Refresh results/flaw_hunter_session_summary.json",
             args.dry_run,
         )
         run(
-            [sys.executable, "-u", "analyze_behavioral_metrics.py"],
+            [sys.executable, "-u", "pipeline/analyze_behavioral_metrics.py"],
             "Refresh results/behavioral_metrics.json (TTR / repetition / etc.)",
             args.dry_run,
         )
@@ -155,19 +155,19 @@ def main():
         # the script was stale -- only the file, because adding a model never
         # re-ran it.
         run(
-            [sys.executable, "-u", "analyze_method_correlations.py"],
+            [sys.executable, "-u", "pipeline/analyze_method_correlations.py"],
             "Refresh results/method_correlations.json (cross-method matrix)",
             args.dry_run,
         )
         run(
-            [sys.executable, "-u", "compute_coverage.py"],
+            [sys.executable, "-u", "pipeline/compute_coverage.py"],
             "Refresh results/model_coverage.json (answer rate per model)",
             args.dry_run,
         )
 
     # 5. Composite leaderboard
     run(
-        [sys.executable, "-u", "analyze_composite_score.py"],
+        [sys.executable, "-u", "pipeline/analyze_composite_score.py"],
         "Refresh composite_leaderboard.json with the new model's row",
         args.dry_run,
     )
@@ -182,9 +182,9 @@ def main():
         "      https://openrouter.ai/activity\n"
         "   (last 7 days, click Export -> CSV).\n"
         "2. Run:\n"
-        "      python3 analyze_latency.py ~/Downloads/openrouter_activity_*.csv\n"
-        "      python3 analyze_quality_speed.py\n"
-        "      python3 analyze_composite_score.py\n"
+        "      python3 pipeline/analyze_latency.py ~/Downloads/openrouter_activity_*.csv\n"
+        "      python3 pipeline/analyze_quality_speed.py\n"
+        "      python3 pipeline/analyze_composite_score.py\n"
         "   This will populate the Speed and Cost columns for the new model.\n"
         "\n"
         "3. (Optional, for the headline rho) Open the multi-turn arena at\n"

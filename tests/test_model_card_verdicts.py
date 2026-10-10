@@ -4,7 +4,7 @@ import re
 import tempfile
 import unittest
 
-from generate_profile_cards_v2 import format_verdict, load_verdicts
+from pipeline.generate_profile_cards_v2 import format_verdict, load_verdicts
 
 
 ROOT = Path(__file__).resolve().parents[1]

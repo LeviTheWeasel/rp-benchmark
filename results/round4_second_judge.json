@@ -1,6 +1,6 @@
 {
  "title": "Round 4: a second judge family over the whole corpus",
- "generated_by": "analyze_round4_second_judge.py",
+ "generated_by": "rounds/r4/analyze_round4_second_judge.py",
  "read_this_first": "Two judge families scored every craft session: Claude Sonnet 5 (the published tier) and ChatGPT via Codex (subscription, blind). The letter stays Sonnet's. This file says how far the two agree, how much of their gap is one scale offset, which models' letters depend on the judge, and what vendor-linked differences remain. It does not say which judge is right.",
  "judges": {
   "first": {
@@ -4405,7 +4405,7 @@
   }
  },
  "method": {
-  "session_set": "sessions both judges scored on the current text (hash-checked); for agreement, sessions both judges put at the 1.0 floor are left out (no model text to judge, compare_external_judge.py's rule); for the vendor terms, blank scenes are left out (the continuity check's rule)",
+  "session_set": "sessions both judges scored on the current text (hash-checked); for agreement, sessions both judges put at the 1.0 floor are left out (no model text to judge, pipeline/compare_external_judge.py's rule); for the vendor terms, blank scenes are left out (the continuity check's rule)",
   "model_means": "the overview's model + seed fit over the tiered pool, each judge with its own seed effects (analyze_round4_overview.seed_adjusted_means); untiered models get plain means",
   "spearman": "average ranks for ties",
   "model_resampling": "4000 draws, numpy default_rng(20260928): models drawn with replacement, every session of a drawn model comes along; the same draws for every figure computed on one session set",

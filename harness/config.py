@@ -51,7 +51,7 @@ USER_SIM_MODELS = {
     # cloud (rounds 1-3)
     "gemini_2_5_flash": "google/gemini-2.5-flash",   # default, SFW rounds
     "deepseek_v3_2": "deepseek/deepseek-v3.2",       # round 3 NSFW default
-    # local (round 4 candidates — QC-gated by dryrun_r4_sim_qc.py)
+    # local (round 4 candidates — QC-gated by oneoff/dryrun_r4_sim_qc.py)
     "magmell_v9": "ollama/magmell-usersim-v9:latest",
     "magmell_v10": "ollama/magmell-usersim-v10:latest",
     "magmell_v11": "ollama/magmell-usersim-v11:latest",

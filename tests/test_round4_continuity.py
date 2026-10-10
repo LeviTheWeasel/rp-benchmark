@@ -1,4 +1,4 @@
-"""analyze_round4_continuity.py on a synthetic results/ directory, plus a
+"""rounds/r4/analyze_round4_continuity.py on a synthetic results/ directory, plus a
 read-only check of the real results/round4_continuity.json when present.
 
 Run by path from the repo root, offline:
@@ -16,10 +16,10 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-import analyze_round4_continuity as C  # noqa: E402
-import analyze_round4_overview as OV  # noqa: E402
-import judge_legacy_sonnet4 as L  # noqa: E402
-from transcript_hash import transcript_hash  # noqa: E402
+from rounds.r4 import analyze_round4_continuity as C  # noqa: E402
+from rounds.r4 import analyze_round4_overview as OV  # noqa: E402
+from rounds.r4 import judge_legacy_sonnet4 as L  # noqa: E402
+from lib.transcript_hash import transcript_hash  # noqa: E402
 
 SEEDS = ["adv_case_%02d" % i for i in range(1, 21)]
 CORE = SEEDS[8:]                       # 09-20
@@ -458,7 +458,7 @@ class RealFile(unittest.TestCase):
             with self.subTest(name):
                 self.assertEqual(OV.sha(ROOT / "results" / name), h,
                                  "%s changed since round4_continuity.json was built; "
-                                 "rerun analyze_round4_continuity.py" % name)
+                                 "rerun rounds/r4/analyze_round4_continuity.py" % name)
 
     def test_cross_family_uses_every_session_for_chatgpt(self):
         cf = self.doc["cross_family"]["references"]

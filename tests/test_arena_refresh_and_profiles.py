@@ -1,7 +1,7 @@
 """The 2026-09-27 cleanups: newest-wins Sonnet-4 profiles, and the round-2
 multi-turn arena rebuilt from the site's public CSV without voter ids. And
 the 2026-09-28 move off the old arena domain: the single-message votes come
-from the site's public round-1 CSV (fetch_arena_votes.py), the scripts that
+from the site's public round-1 CSV (arena/fetch_arena_votes.py), the scripts that
 need voter ids refuse on it, and nothing links to or fetches from the old
 domain.
 
@@ -26,12 +26,12 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-import analyze_community_arena as C  # noqa: E402
-import analyze_model_profiles as P  # noqa: E402
-import analyze_multiturn_arena as A  # noqa: E402
-import analyze_voter_quality as VQ  # noqa: E402
-import fetch_arena_votes as F  # noqa: E402
-import refresh_multiturn_arena_votes as R  # noqa: E402
+from arena import analyze_community_arena as C  # noqa: E402
+from pipeline import analyze_model_profiles as P  # noqa: E402
+from arena import analyze_multiturn_arena as A  # noqa: E402
+from arena import analyze_voter_quality as VQ  # noqa: E402
+from arena import fetch_arena_votes as F  # noqa: E402
+from arena import refresh_multiturn_arena_votes as R  # noqa: E402
 
 ENV = "PLOTPOINTS_VOTER_HMAC_SECRET"
 
@@ -70,7 +70,7 @@ class ProfilesNewestWins(unittest.TestCase):
                 json.dumps({"sessions": sessions}))
         Path("results/community_arena_2000.json").write_text(
             json.dumps({"leaderboard": []}))
-        with mock.patch.object(sys, "argv", ["analyze_model_profiles.py"]), \
+        with mock.patch.object(sys, "argv", ["pipeline/analyze_model_profiles.py"]), \
                 contextlib.redirect_stdout(io.StringIO()):
             P.main()
         return json.loads(Path("results/model_profiles.json").read_text())

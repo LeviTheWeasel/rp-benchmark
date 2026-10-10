@@ -341,7 +341,7 @@ def correlation_df() -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-# Round 4 reading flags, same thresholds as analyze_round4_willingness.py and
+# Round 4 reading flags, same thresholds as rounds/r4/analyze_round4_willingness.py and
 # hf_dataset/export.py. A flag changes how to read a row, never a number.
 R4_SILENT_EMPTY_RATE = 0.20
 R4_SILENT_RUNG_SLOPE = 0.25

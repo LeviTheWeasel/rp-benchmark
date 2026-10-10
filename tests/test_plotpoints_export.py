@@ -1,4 +1,4 @@
-"""export_plotpoints_round4.py and the generate_profile_cards_v2 split.
+"""rounds/r4/export_plotpoints_round4.py and the generate_profile_cards_v2 split.
 
 Run by path from the repo root:
     python -m unittest tests/test_plotpoints_export.py
@@ -33,10 +33,10 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-import export_plotpoints_round4 as E  # noqa: E402
-import generate_profile_cards_v2 as G  # noqa: E402
-import publication_guards as PG  # noqa: E402
-from publication_guards import PublicationGuardError  # noqa: E402
+from rounds.r4 import export_plotpoints_round4 as E  # noqa: E402
+from pipeline import generate_profile_cards_v2 as G  # noqa: E402
+from lib import publication_guards as PG  # noqa: E402
+from lib.publication_guards import PublicationGuardError  # noqa: E402
 
 # Throwaway keys for these tests only. Never export with either.
 KEY = b"unit-test-throwaway-pair-key-0001-not-for-export"
@@ -931,7 +931,7 @@ class PairIdKey(unittest.TestCase):
         self.assertNotIn(short, str(cm.exception))
 
     def test_only_pair_id_secret_reads_the_environment(self):
-        tree = ast.parse((ROOT / "export_plotpoints_round4.py").read_text())
+        tree = ast.parse((ROOT / "rounds/r4/export_plotpoints_round4.py").read_text())
 
         def env_reads(node):
             return [n for n in ast.walk(node) if isinstance(n, ast.Attribute)
@@ -959,7 +959,7 @@ class PairIdKey(unittest.TestCase):
         readers = sorted(f for f in listed.split("\n") if f
                          and (ROOT / f).is_file()
                          and ENV in (ROOT / f).read_text(errors="replace"))
-        self.assertEqual(readers, ["export_plotpoints_round4.py",
+        self.assertEqual(readers, ["rounds/r4/export_plotpoints_round4.py",
                                    "tests/test_plotpoints_export.py"])
 
     def test_sessions_refuse_before_reading_anything(self):
@@ -1031,7 +1031,7 @@ class GuardModule(unittest.TestCase):
             self.assertIs(getattr(hf_export, n), getattr(PG, n), n)
 
     def test_guard_module_is_dependency_free(self):
-        tree = ast.parse((ROOT / "publication_guards.py").read_text())
+        tree = ast.parse((ROOT / "lib/publication_guards.py").read_text())
         mods = set()
         for node in ast.walk(tree):
             if isinstance(node, ast.Import):
@@ -1043,9 +1043,9 @@ class GuardModule(unittest.TestCase):
 
     def test_no_exporter_imports_the_private_loader(self):
         # harness/r4_private.py's load_r4 rejoins the private Track B text.
-        for f in ("export_plotpoints_round4.py", "publication_guards.py",
-                  "generate_profile_cards_v2.py", "make_j_barchart.py",
-                  "transcript_hash.py", "generate_profile_cards.py"):
+        for f in ("rounds/r4/export_plotpoints_round4.py", "lib/publication_guards.py",
+                  "pipeline/generate_profile_cards_v2.py", "rounds/r4/make_j_barchart.py",
+                  "lib/transcript_hash.py", "pipeline/generate_profile_cards.py"):
             mods = set()
             for node in ast.walk(ast.parse((ROOT / f).read_text())):
                 if isinstance(node, ast.Import):
@@ -1097,7 +1097,7 @@ class Cards(unittest.TestCase):
         cls.cards = [G.build_card(m, cls.ctx) for m in G.ordered_models(cls.ctx)]
         if not (cls.results / E.CONTINUITY_NAME).exists():
             cls.tmp.cleanup()
-            raise unittest.SkipTest("no %s; run analyze_round4_continuity.py"
+            raise unittest.SkipTest("no %s; run rounds/r4/analyze_round4_continuity.py"
                                     % E.CONTINUITY_NAME)
         cls.cont = E.read_continuity(cls.results)
         cls.doc, _ = E.build_cards(cls.lb, cls.results, commit="test")

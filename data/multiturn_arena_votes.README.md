@@ -1,8 +1,8 @@
 # data/multiturn_arena_votes.jsonl
 
 Human votes from the round-2 multi-turn arena (full 12-turn dialogues, 20
-models, 20 adversarial seeds). Written by `refresh_multiturn_arena_votes.py`;
-scored by `analyze_multiturn_arena.py`.
+models, 20 adversarial seeds). Written by `arena/refresh_multiturn_arena_votes.py`;
+scored by `arena/analyze_multiturn_arena.py`.
 
 ## Source
 
@@ -16,7 +16,7 @@ scored by `analyze_multiturn_arena.py`.
   `arena_l3vi4th4n_only`: ballots cast on `arena.l3vi4th4n.ai` (the round-1/2 arena's
   original domain, which the project no longer controls) after its 507
   round-2 votes were imported into the site on 2026-04-30. They never reached
-  the site's round-2 tally, so `analyze_multiturn_arena.py` keeps them unscored.
+  the site's round-2 tally, so `arena/analyze_multiturn_arena.py` keeps them unscored.
 
 Rows by source: arena_l3vi4th4n_only 30, arena_l3vi4th4n_round_02 507, native 1436. Total 1,973 rows, sorted by server timestamp.
 
@@ -30,7 +30,7 @@ Voter ids: raw on 1262 of 1973 rows; the rest carry no voter_id yet and get one 
 checks can be reproduced; ids come from the CSV's voter_id column when it has
 one, else from an earlier copy of this file matched on the vote id. While any
 row lacks an id, the voter count (the archive's 482) and the voter-clustered
-bootstrap (`analyze_multiturn_arena_bootstrap.py`) cover only the rows that
+bootstrap (`arena/analyze_multiturn_arena_bootstrap.py`) cover only the rows that
 have one.
 
 Before this refresh the file held a 1,262-vote pull from 2026-06-04 (1,232 of

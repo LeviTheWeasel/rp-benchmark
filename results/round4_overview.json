@@ -28,7 +28,7 @@
   "writes_your_character": "production_defects.json selfplay rule: the reply writes a turn under the user character's speaker label; denominator is answered turns",
   "leaks": "production_defects.json leak rule: harness prompt, chat-template token or reasoning tag inside the reply",
   "loops": "production_defects.json loop rule: at least 35% of a turn's 8-grams repeat an earlier 8-gram in the same turn",
-  "defects_source": "leak, writes-your-character and loop counts are recounted here with analyze_production_defects.py's own functions; for a model in production_defects.json the recount must equal the file, and a model the file skips (under 50 answered turns) is counted here",
+  "defects_source": "leak, writes-your-character and loop counts are recounted here with pipeline/analyze_production_defects.py's own functions; for a model in production_defects.json the recount must equal the file, and a model the file skips (under 50 answered turns) is counted here",
   "silent_refusal": "round 4 Track A: at least 20% of replies empty and the empty rate at least 25 points higher on the most explicit rung than the mildest (analyze_round4_willingness.py rule); J cannot see it. The counts are recounted from the round 4 runs and must reproduce the published rate and slope",
   "plays_itself": "the model is also the user simulator for this corpus (config user_sim_model), so on its own row it talks to itself"
  },
@@ -3397,7 +3397,7 @@
      "writes_your_character": 5,
      "leaks": 0,
      "loops": 0,
-     "defects_source": "counted here with analyze_production_defects.py's rules: the file skips models under 50 answered turns"
+     "defects_source": "counted here with pipeline/analyze_production_defects.py's rules: the file skips models under 50 answered turns"
     },
     "shown": [
      {

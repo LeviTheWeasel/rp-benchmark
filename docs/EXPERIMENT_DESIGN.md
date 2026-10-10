@@ -283,7 +283,7 @@ aggregate:
 
 **Limitation:** No per-model breakdown. This gives scenario-level difficulty profiles and population-level response quality distributions. Use for understanding what's hard vs. what to expect from the model population.
 
-**Current status:** Script `analyze_swipe_quality.py` runs on existing data. Output saved to `results/swipe_quality_analysis.json`.
+**Current status:** Script `rounds/r1_r2/analyze_swipe_quality.py` runs on existing data. Output saved to `results/swipe_quality_analysis.json`.
 
 ### Component B: Probe-Based Failure Rate (Active/Controlled)
 
@@ -513,7 +513,7 @@ Agency violation rate: 4.2% ± 2.1% (95% CI, n=48 probes)
 ### Right Now (Script Already Built)
 
 ```bash
-python analyze_swipe_quality.py
+python rounds/r1_r2/analyze_swipe_quality.py
 ```
 
 This extracts prose quality distributions and response diversity metrics from all 25 swipe files. Results in `results/swipe_quality_analysis.json`.
@@ -557,7 +557,7 @@ Future enhancement: log per-turn failure-mode signals (not just overall judge sc
 
 | File | Purpose |
 |------|---------|
-| `analyze_swipe_quality.py` | Extract behavioral metrics from swipe data |
+| `rounds/r1_r2/analyze_swipe_quality.py` | Extract behavioral metrics from swipe data |
 | `scenarios/*_consistency.json` | Consistency probe library |
 | `scenarios/*_ooc.json` | OOC directive library |
 | `scenarios/sukuna_ooc_corrections.json` | Player correction library |

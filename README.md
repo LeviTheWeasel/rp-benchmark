@@ -124,7 +124,7 @@ A single sortable headline score per model, plus three independent dimensions (E
 
 All 21 models have full coverage on the four quality components (multi-turn arena, LLM judge, 27-dim rubric, flaw hunter) as of the May 2026 snapshot. Engagement column mixes human single-message arena ELO percentiles (11 Phase A models, no asterisk) with regressor-predicted percentiles for the 10 Phase B + R1 0528 models that lack arena coverage (asterisks). The two are not directly comparable in confidence but are placed on the same percentile scale for sortability.
 
-Raw data: [`results/composite_leaderboard.json`](results/composite_leaderboard.json). Reproduce with `python3 analyze_composite_score.py`.
+Raw data: [`results/composite_leaderboard.json`](results/composite_leaderboard.json). Reproduce with `python3 pipeline/analyze_composite_score.py`.
 
 ## Community Leaderboard (human-voted ELO)
 
@@ -151,7 +151,7 @@ Based on **1,857 pairwise votes** from **338 community voters** collected via th
 - NSFW-averse: DeepSeek (-21), Llama (-13), MiniMax (-9), Qwen (-6)
 - Balanced across: Gemma, Sonnet, GPT-4.1
 
-Raw data: [`results/community_arena_2000.json`](results/community_arena_2000.json). The votes themselves are the site's public export, `https://plotlightstudios.com/api/plotpoints/raw?round=1&mode=arena` (2,013 rows, catch pairs included; `python3 fetch_arena_votes.py`). Voter ids are random per-voter UUIDs, published so the vote-stuffing checks can be reproduced: [`hf_dataset/community_votes/train.parquet`](hf_dataset/community_votes/train.parquet) carries them for all 2,013 votes (335 voters), and the site's export gains a `voter_id` column once the current PlotPoints release deploys. `python3 analyze_bayesian_arena_elo.py` on that parquet reproduces [`results/community_arena_bayesian.json`](results/community_arena_bayesian.json) (2 suspect voters excluded, 1,857 clean votes).
+Raw data: [`results/community_arena_2000.json`](results/community_arena_2000.json). The votes themselves are the site's public export, `https://plotlightstudios.com/api/plotpoints/raw?round=1&mode=arena` (2,013 rows, catch pairs included; `python3 arena/fetch_arena_votes.py`). Voter ids are random per-voter UUIDs, published so the vote-stuffing checks can be reproduced: [`hf_dataset/community_votes/train.parquet`](hf_dataset/community_votes/train.parquet) carries them for all 2,013 votes (335 voters), and the site's export gains a `voter_id` column once the current PlotPoints release deploys. `python3 arena/analyze_bayesian_arena_elo.py` on that parquet reproduces [`results/community_arena_bayesian.json`](results/community_arena_bayesian.json) (2 suspect voters excluded, 1,857 clean votes).
 
 ## Multi-Turn Arena (humans, full dialogues)
 
@@ -197,7 +197,7 @@ Same blind-vote infrastructure, **but voters read the entire 12-turn adversarial
 
 Caveats: 95% CIs are still wide (median ±85 ELO, down from about ±115 at 1,262 votes and ±200 at 434), so only the broad top-versus-bottom split is firm. Slight position bias (B wins 52.5% of decided votes vs 50% null). Voter concentration was last measured on the 1,262-vote pull (heaviest voter 99 votes, 7.8%); it can be re-measured on all 1,943 votes once the site's export carries voter ids. The finding (frontier models lead the multi-turn arena, contradicting the single-message ranking) holds, with Mistral SC the single-message leader that does not collapse here (#6).
 
-Raw data: [`results/multiturn_arena_bayesian.json`](results/multiturn_arena_bayesian.json). Reproduce with `python3 refresh_multiturn_arena_votes.py && python3 analyze_multiturn_arena.py`. The votes file also keeps 30 ballots cast on the original arena domain after its votes moved to the site on 2026-04-30; they never reached the round-2 tally, so the analyzer leaves them unscored.
+Raw data: [`results/multiturn_arena_bayesian.json`](results/multiturn_arena_bayesian.json). Reproduce with `python3 arena/refresh_multiturn_arena_votes.py && python3 arena/analyze_multiturn_arena.py`. The votes file also keeps 30 ballots cast on the original arena domain after its votes moved to the site on 2026-04-30; they never reached the round-2 tally, so the analyzer leaves them unscored.
 
 ## Round 3 — NSFW Multi-Turn (judge-scored)
 
@@ -237,7 +237,7 @@ Two axes are reported separately: **craft** (the quality score) and **willingnes
 
 Caveats: judge-only (no human votes); DeepSeek R1 barely discriminates (ceiling ~5.0), so the averaged-judge view is dominated by Sonnet; scores are compressed across the top ~33 (all ~tied) — the robust signal is the finetune collapse at the bottom. †Euryale completed 15/20 (its provider threw retry-exhaustions), so its exact rank is soft. `venice_dolphin_24b` is excluded — its OpenRouter `:free` endpoint is too rate-limited to complete any session (40 usable models, not 41). ‡Owl Alpha (`openrouter/owl-alpha`) was a stealth release of LongCat-2.0 (`meituan/longcat-2.0`); it was not run in round 4 under either name.
 
-Full table + raw aggregates: [`results/round3_nsfw_leaderboard.json`](results/round3_nsfw_leaderboard.json). Reproduce with `python3 analyze_round3_nsfw.py`.
+Full table + raw aggregates: [`results/round3_nsfw_leaderboard.json`](results/round3_nsfw_leaderboard.json). Reproduce with `python3 rounds/r3/analyze_round3_nsfw.py`.
 
 ## Round 4
 
@@ -359,7 +359,7 @@ series (Spearman 0.30, n=27).
 Raw: [`results/round4_continuity.json`](results/round4_continuity.json), which
 also carries the old-judge band for all 69 models, the judge bridge by subset,
 the re-run check per model and the cross-family table. Reproduce with
-`python3 analyze_round4_continuity.py --markdown /tmp/continuity.md`, which
+`python3 rounds/r4/analyze_round4_continuity.py --markdown /tmp/continuity.md`, which
 writes this table and the correlation line. Methods and limits:
 [`docs/METHODOLOGY.md` §21](docs/METHODOLOGY.md); measurements and the anchor
 protocol for later rounds: [`docs/ROUND4_DESIGN.md` §23](docs/ROUND4_DESIGN.md).
@@ -415,7 +415,7 @@ Per-model figures: [`results/round4_overview.json`](results/round4_overview.json
 (`cross_judges.chatgpt`). Every interval and the sensitivity checks (without
 the reused rows, without the bridge sessions):
 [`results/round4_second_judge.json`](results/round4_second_judge.json), from
-`python3 analyze_round4_second_judge.py`. Write-up:
+`python3 rounds/r4/analyze_round4_second_judge.py`. Write-up:
 [`docs/ROUND4_DESIGN.md` §24](docs/ROUND4_DESIGN.md) and
 [`docs/METHODOLOGY.md` §22](docs/METHODOLOGY.md).
 
@@ -543,7 +543,7 @@ Plain-language walkthrough: [`docs/ROUND4_FOR_READERS.md`](docs/ROUND4_FOR_READE
 Full method: [`docs/METHODOLOGY.md` §20](docs/METHODOLOGY.md). Design log, including
 what we got wrong and retracted: [`docs/ROUND4_DESIGN.md`](docs/ROUND4_DESIGN.md).
 Raw: [`results/round4_willingness_leaderboard.json`](results/round4_willingness_leaderboard.json).
-Reproduce with `python3 analyze_round4_willingness.py`; it runs on the public files.
+Reproduce with `python3 rounds/r4/analyze_round4_willingness.py`; it runs on the public files.
 Track B transcripts are not in this repo: for those scenes the results files
 carry each label, an evidence quote of at most 160 characters and the scores,
 which is everything the leaderboard is computed from.
@@ -602,9 +602,9 @@ Based on 240 multi-turn sessions (12 models × 20 adversarial seeds × 12 turns)
 #12 Llama 4 Maverick      avg 11.4  last or near-last on every mode, multiple floors
 ```
 
-Raw per-model profiles: [`results/model_profiles.json`](results/model_profiles.json). Reproduce with `python3 analyze_model_profiles.py`.
+Raw per-model profiles: [`results/model_profiles.json`](results/model_profiles.json). Reproduce with `python3 pipeline/analyze_model_profiles.py`.
 
-**Per-model profile cards** (matching the experiment-design mockup format with failure rates + Wilson 95% CIs, behavioral metrics vs population avg, target-aware flaw hunter scores, subjective dimensions, and Bayesian ELO + credible intervals): [`results/profile_cards.md`](results/profile_cards.md). Reproduce with `python3 generate_profile_cards.py`.
+**Per-model profile cards** (matching the experiment-design mockup format with failure rates + Wilson 95% CIs, behavioral metrics vs population avg, target-aware flaw hunter scores, subjective dimensions, and Bayesian ELO + credible intervals): [`results/profile_cards.md`](results/profile_cards.md). Reproduce with `python3 pipeline/generate_profile_cards.py`.
 
 ## Cross-Method Correlation Matrix
 
@@ -696,7 +696,7 @@ Speed metrics from OpenRouter activity logs across 7,698 RP-Bench calls. Three v
 
 Caveat: gemini_2_5_flash in the data is mostly user-simulator traffic (used 2,566 times across all multi-turn runs), not test-model output. Its numbers reflect short-format simulator turns, not full RP responses.
 
-Raw data: [`results/latency_leaderboard.json`](results/latency_leaderboard.json). Reproduce with `python3 analyze_latency.py`.
+Raw data: [`results/latency_leaderboard.json`](results/latency_leaderboard.json). Reproduce with `python3 pipeline/analyze_latency.py`.
 
 ## Quality / Speed Leaderboard
 
@@ -731,7 +731,7 @@ Combining quality (multi-turn judge Likert mean) with median wall-clock generati
 - **Reasoning models pay a hidden cost.** GLM 4.7, GLM 5.1, MiniMax, Grok 4.1, both DeepSeek V4 variants, and Qwen 3.5 Flash all generate internal "reasoning" tokens you're billed for but never see. Qwen burns 3,303 reasoning tokens per call (the highest); Kimi K2.6 burns 2,746. This explains why our prior `cost_efficiency.json` estimates undercounted some models by 2-3×.
 - **Frontier-quality, frontier-speed-cost.** Opus 4.7 is the highest-quality model (4.54 Likert) but at $0.038/call and 10s gen time, its Likert/$ is 120 — vs Mistral SC at 14,257 (the dollar-efficiency king).
 
-Raw data: [`results/quality_speed_leaderboard.json`](results/quality_speed_leaderboard.json). Reproduce with `python3 analyze_quality_speed.py`.
+Raw data: [`results/quality_speed_leaderboard.json`](results/quality_speed_leaderboard.json). Reproduce with `python3 pipeline/analyze_quality_speed.py`.
 
 ## Community Arena Rank Evolution
 
@@ -806,7 +806,7 @@ Raw data: [`results/failure_target_validation.json`](results/failure_target_vali
 
 Notable: many bottom-ranked models (Grok, GPT-4.1, Mistral, V4 Pro) have *high medians* but very negative outliers (one Grok session scored −108, one V4 Pro session scored −177). Their mean is dragged down by occasional catastrophic failures. The median tells a more stable story.
 
-Raw data: [`results/session_flaw_hunter.jsonl`](results/session_flaw_hunter.jsonl), summary: [`results/flaw_hunter_session_summary.json`](results/flaw_hunter_session_summary.json). Reproduce: `python3 judge_session_flaw_hunter.py && python3 analyze_flaw_hunter_sessions.py`.
+Raw data: [`results/session_flaw_hunter.jsonl`](results/session_flaw_hunter.jsonl), summary: [`results/flaw_hunter_session_summary.json`](results/flaw_hunter_session_summary.json). Reproduce: `python3 pipeline/judge_session_flaw_hunter.py && python3 pipeline/analyze_flaw_hunter_sessions.py`.
 
 **Per-turn binary failure rates** for F1 (agency) and F2 (POV/tense), based on 1,439 individual turn checks via Sonnet 4 binary classifier. Headline finding: **Mistral Small Creative has 15.9% F1 agency violation rate** (highest of any model), while Sonnet 4.5, Gemini, GPT-4.1, Grok, and many others sit at 0%. F2 POV/tense violations are 0% across all 20 models — either modern LLMs genuinely don't slip on POV under our seed conditions, or our detector is too strict. Worth flagging.
 
@@ -845,7 +845,7 @@ Population avg: 259 words, 0.657 unique-word ratio, 0.049 bigram repetition.
 
 **Headline finding**: Mistral's bigram repetition (9.5%) is **6× higher than Grok's** (1.5%). Both models are community-popular but for different reasons — Grok wins on prose freshness, Mistral on length and NSFW handling.
 
-Raw data: [`results/behavioral_metrics.json`](results/behavioral_metrics.json). Reproduce with `python3 analyze_behavioral_metrics.py`.
+Raw data: [`results/behavioral_metrics.json`](results/behavioral_metrics.json). Reproduce with `python3 pipeline/analyze_behavioral_metrics.py`.
 
 ## Next-Gen Models — Phases A + B
 
@@ -1149,11 +1149,11 @@ python3 run.py multiturn --turns 20 --max-seeds 4
 python3 run.py multiturn --adversarial --turns 12
 
 # ELO leaderboard from existing run
-python3 analyze_elo.py results/run_XXXXXXXX.json
+python3 rounds/r1_r2/analyze_elo.py results/run_XXXXXXXX.json
 
 # Combined score (flaw hunter + objective + slop)
-python3 analyze_combined.py
-python3 analyze_relative.py
+python3 rounds/r1_r2/analyze_combined.py
+python3 pipeline/analyze_relative.py
 ```
 
 ## Rubric: 27 Dimensions, 3 Tiers
@@ -1264,7 +1264,7 @@ Models have internalized "don't write the user's actions," but holding time and 
 - `adv_passive_user_03` was the hardest seed overall (mean 4.17, max 4.3) — nobody handled the passive-user failure mode well
 - `adv_time_pressure_05` — even #1 Sonnet 4.5 was the worst performer (4.3)
 
-Regenerate with `python3 analyze_adversarial.py`. Data: [`results/adversarial_analysis.json`](results/adversarial_analysis.json).
+Regenerate with `python3 rounds/r1_r2/analyze_adversarial.py`. Data: [`results/adversarial_analysis.json`](results/adversarial_analysis.json).
 
 ### Adversarial ELO (recovering spread)
 
@@ -1284,7 +1284,7 @@ Three tiers emerge: Sonnet/DeepSeek/GPT-4.1 at the top (within 50 ELO of each ot
 
 Note the rank-order swap vs mean-overall: **Mistral ranks ahead of Gemini and Qwen in ELO** despite having the lowest mean score. Its dimension-level signal is stronger per matchup — mean is dragged down by one 3.8 outlier on `character_break_bait`.
 
-Regenerate with `python3 analyze_adversarial_elo.py`. Data: [`results/adversarial_elo.json`](results/adversarial_elo.json).
+Regenerate with `python3 rounds/r1_r2/analyze_adversarial_elo.py`. Data: [`results/adversarial_elo.json`](results/adversarial_elo.json).
 
 ### LLM-Judged ELO (with position-bias correction)
 
@@ -1308,7 +1308,7 @@ After neutralizing position bias by counting each canonical pair as the sum of b
 
 **Methodological takeaway:** any single-pass LLM-judged pairwise benchmark is approximately 2/3 noise. Published results that don't do bidirectional evaluation should be treated with significant skepticism.
 
-Regenerate with `python3 judge_adversarial_pairwise.py` then `python3 judge_adversarial_swap.py` then `python3 analyze_pairwise_elo.py`. Data: [`results/adversarial_pairwise_elo.json`](results/adversarial_pairwise_elo.json), raw comparisons in [`results/adversarial_pairwise_raw.jsonl`](results/adversarial_pairwise_raw.jsonl) and [`results/adversarial_pairwise_raw_swapped.jsonl`](results/adversarial_pairwise_raw_swapped.jsonl).
+Regenerate with `python3 rounds/r1_r2/judge_adversarial_pairwise.py` then `python3 rounds/r1_r2/judge_adversarial_swap.py` then `python3 rounds/r1_r2/analyze_pairwise_elo.py`. Data: [`results/adversarial_pairwise_elo.json`](results/adversarial_pairwise_elo.json), raw comparisons in [`results/adversarial_pairwise_raw.jsonl`](results/adversarial_pairwise_raw.jsonl) and [`results/adversarial_pairwise_raw_swapped.jsonl`](results/adversarial_pairwise_raw_swapped.jsonl).
 
 ## CLI Reference
 
@@ -1333,10 +1333,10 @@ python3 run.py multiturn [options]
   --adversarial                # Use adversarial seeds
 
 # Analysis
-python3 analyze_elo.py [run.json]          # ELO leaderboard
-python3 analyze_combined.py [run.json]     # Combined flaw+objective+slop
-python3 analyze_relative.py [run.json]     # Percentile ranking
-python3 aggregate_flaw_hunter.py [run.json] # Flaw hunter aggregation
+python3 rounds/r1_r2/analyze_elo.py [run.json]          # ELO leaderboard
+python3 rounds/r1_r2/analyze_combined.py [run.json]     # Combined flaw+objective+slop
+python3 pipeline/analyze_relative.py [run.json]     # Percentile ranking
+python3 pipeline/aggregate_flaw_hunter.py [run.json] # Flaw hunter aggregation
 
 # Results
 python3 run.py leaderboard --view full
@@ -1400,9 +1400,9 @@ This wrapper script chains together: multi-turn adversarial sessions + LLM-judge
 Step 3 — populate operational axes (Speed, Cost) by downloading a fresh OpenRouter activity CSV:
 
 ```sh
-python3 analyze_latency.py ~/Downloads/openrouter_activity_*.csv
-python3 analyze_quality_speed.py
-python3 analyze_composite_score.py
+python3 pipeline/analyze_latency.py ~/Downloads/openrouter_activity_*.csv
+python3 pipeline/analyze_quality_speed.py
+python3 pipeline/analyze_composite_score.py
 ```
 
 The new model is ranked on the composite immediately, flagged with `*` until it accumulates multi-turn arena human votes (which need to be solicited via the live arena).
@@ -1496,7 +1496,7 @@ We trained classifiers on 1,621 swipe pairs (24 features × symmetric +/- exampl
 
 Non-linear models beat the linear baseline by ~6 points, confirming that **feature interactions matter** — no single metric is predictive, but the joint shape of "paragraph rhythm × sensory density × dialogue mix" weakly tracks preference. Top RF feature importance: `avg_paragraph_length` (0.154) — ~3× anything else.
 
-Per-source variance is large: `mha_rpg_b125` hits 70% agreement, `rhoda_b3_loom` only 46%. Some genres are learnable from these features; literary slowburn isn't. See [`learn_rubric_classifier.py`](learn_rubric_classifier.py) and [`results/learned_rubric.json`](results/learned_rubric.json).
+Per-source variance is large: `mha_rpg_b125` hits 70% agreement, `rhoda_b3_loom` only 46%. Some genres are learnable from these features; literary slowburn isn't. See [`rounds/r1_r2/learn_rubric_classifier.py`](rounds/r1_r2/learn_rubric_classifier.py) and [`results/learned_rubric.json`](results/learned_rubric.json).
 
 > **ML runs in this repo** should set `n_jobs=1` in sklearn and launch with `OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1` — otherwise joblib/BLAS thread pools can balloon memory well past dataset size.
 
@@ -1539,10 +1539,10 @@ hf_dataset/                    # HuggingFace export + seeds
   seeds/adversarial_seeds.json # 8 adversarial seeds
 results/                       # Run results and charts
 web/                           # Human validation web UI
-analyze_elo.py                 # ELO ratings from matchups
-analyze_combined.py            # Combined multi-signal score
-analyze_relative.py            # Percentile ranking
-aggregate_flaw_hunter.py       # Flaw hunter leaderboard
+rounds/r1_r2/analyze_elo.py                 # ELO ratings from matchups
+rounds/r1_r2/analyze_combined.py            # Combined multi-signal score
+pipeline/analyze_relative.py            # Percentile ranking
+pipeline/aggregate_flaw_hunter.py       # Flaw hunter leaderboard
 ```
 
 ## License

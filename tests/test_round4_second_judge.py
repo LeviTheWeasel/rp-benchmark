@@ -1,4 +1,4 @@
-"""analyze_round4_second_judge.py on a synthetic results/ directory, plus a
+"""rounds/r4/analyze_round4_second_judge.py on a synthetic results/ directory, plus a
 read-only check of the real results/round4_second_judge.json when present.
 
 Run by path from the repo root, offline:
@@ -16,11 +16,11 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-import analyze_round4_overview as OV  # noqa: E402
-import analyze_round4_second_judge as SJ  # noqa: E402
-import publication_guards as PG  # noqa: E402
-from external_judge_schema import SESSION_KEYS, STANDARD_KEYS  # noqa: E402
-from transcript_hash import transcript_hash  # noqa: E402
+from rounds.r4 import analyze_round4_overview as OV  # noqa: E402
+from rounds.r4 import analyze_round4_second_judge as SJ  # noqa: E402
+from lib import publication_guards as PG  # noqa: E402
+from lib.external_judge_schema import SESSION_KEYS, STANDARD_KEYS  # noqa: E402
+from lib.transcript_hash import transcript_hash  # noqa: E402
 
 SEEDS = ["adv_case_%02d" % i for i in range(1, 21)]
 PROSE = ("The lantern gutters and the rain keeps on at the shutters, slow and "
@@ -371,7 +371,7 @@ class RealFile(unittest.TestCase):
             with self.subTest(name):
                 self.assertEqual(OV.sha(ROOT / "results" / name), h,
                                  "%s changed since round4_second_judge.json was built; "
-                                 "rerun analyze_round4_second_judge.py" % name)
+                                 "rerun rounds/r4/analyze_round4_second_judge.py" % name)
 
     def test_every_session_scored_by_both(self):
         cov = self.doc["coverage"]
