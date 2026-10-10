@@ -164,6 +164,30 @@ def main():
             "Refresh results/model_coverage.json (answer rate per model)",
             args.dry_run,
         )
+        # The round-4 artifacts record a hash of every input they read, and
+        # three of them read each other: continuity hashes round4_overview, so
+        # the overview has to be rebuilt first and continuity last. That order
+        # used to live nowhere -- getting it wrong surfaced only later, as a
+        # test naming one stale input at a time. pipeline/check_freshness.py
+        # derives it from the recorded hashes; this runs them in that order.
+        for cmd in ("rounds/r4/analyze_round4_second_judge.py",
+                    "rounds/r4/analyze_round4_overview.py",
+                    "rounds/r4/analyze_round4_continuity.py"):
+            run([sys.executable, "-u", cmd],
+                "Rebuild %s (ordered: continuity hashes the overview)"
+                % cmd.rsplit("/", 1)[-1],
+                args.dry_run)
+
+    # 4b. Nothing downstream may be stale once the refresh is done. This is a
+    # gate, not a report: a stale artifact means something above ran in the
+    # wrong order or was skipped, and publishing it would ship a number built
+    # from a file that has since changed.
+    if not args.skip_aggregation:
+        run(
+            [sys.executable, "-u", "pipeline/check_freshness.py"],
+            "Verify no derived artifact was built from a file that has changed",
+            args.dry_run,
+        )
 
     # 5. Composite leaderboard
     run(

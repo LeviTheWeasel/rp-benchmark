@@ -82,9 +82,29 @@ behavioral metrics, the correlation matrix, willingness, the craft proxy, the
 flaw summary, profiles, all 70 cards, and the overview/second-judge/continuity
 trio.
 
-## One ordering that is written down nowhere else
+## The rebuild order, and how it is enforced
 
-`rounds/r4/analyze_round4_continuity.py` hashes `round4_overview.json`, so the
-overview must be rebuilt first, and the continuity file last. Nothing in the
-code expresses that; it was discovered by a test failing twice and naming a
-different stale input each time.
+Four round-4 artifacts record a hash of every input they read, and three of
+them read each other: `round4_continuity.json` records `round4_overview.json`,
+so the overview is rebuilt first and continuity last.
+
+That order used to live nowhere. Getting it wrong surfaced only later, as
+`tests/test_round4_continuity.py` failing and naming one stale input at a time
+-- which is how it was found at all.
+
+It is now derived rather than declared:
+
+```bash
+PYTHONPATH=. .venv/bin/python pipeline/check_freshness.py          # gate
+PYTHONPATH=. .venv/bin/python pipeline/check_freshness.py --order  # just show it
+```
+
+The script reads the recorded hash maps, topologically sorts the artifacts by
+which one appears as another's input, compares each recorded hash to the file on
+disk, and exits 1 naming the scripts to re-run in order. Because the relation is
+read out of the artifacts, a change in what they read updates the order instead
+of leaving a constant to go stale.
+
+`add_model.py` runs the three in that order and then runs the check as a gate,
+so a wrong order or a skipped step fails the refresh rather than the next
+publish.
