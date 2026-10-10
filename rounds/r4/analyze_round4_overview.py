@@ -1122,8 +1122,34 @@ def build(results, boot=BOOT_DEFAULT, rng_seed=RNG_SEED, cross=()):
     defects = read_json(defects_path)["per_model"] if defects_path.exists() else {}
     check_defects_file(defects, canon)
 
+    # Fail closed. This used to fall back to {"leaderboard": []}, which did
+    # not error -- it published an overview with an empty J column AND, because
+    # `inputs` is guarded by `if p.exists()`, with no recorded dependency on
+    # the leaderboard at all. So running this before analyze_round4_willingness
+    # produced a plausible-looking artifact that nothing downstream could tell
+    # was wrong. The J column is half of what this file is for; its absence is
+    # an error, not a default.
+    # The fallback to an empty leaderboard is kept, because the synthetic
+    # fixtures in tests/ build a minimal results dir on purpose and the J
+    # column is not what they exercise. But it must not survive into a
+    # PUBLISHED artifact: running this before analyze_round4_willingness used
+    # to write an overview with an empty J column and -- because `inputs` is
+    # guarded by `if p.exists()` -- with no recorded dependency on the
+    # leaderboard either, so nothing downstream could tell it was wrong.
+    # So the real results dir fails closed and a caller-supplied one does not.
     j_path = results / "round4_willingness_leaderboard.json"
-    jfile = read_json(j_path) if j_path.exists() else {"leaderboard": []}
+    if not j_path.exists():
+        if results.resolve() == (ROOT / "results").resolve():
+            raise InputError(
+                "%s is missing, and this is the published results directory. "
+                "Build it first:\n"
+                "    PYTHONPATH=. .venv/bin/python "
+                "rounds/r4/analyze_round4_willingness.py\n"
+                "See pipeline/check_freshness.py --order for the full order."
+                % j_path)
+        jfile = {"leaderboard": []}
+    else:
+        jfile = read_json(j_path)
     jrows = {r["model"]: r for r in jfile["leaderboard"]}
 
     # silent refusal: the rung counts come from the round 4 runs themselves,

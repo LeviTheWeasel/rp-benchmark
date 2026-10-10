@@ -37,9 +37,13 @@ RESULTS = ROOT / "results"
 # hashes; a fifth would be picked up by the scan below but would need its
 # rebuild command added here.
 REBUILD = {
+    "round4_willingness_leaderboard.json": "rounds/r4/analyze_round4_willingness.py",
     "round4_overview.json": "rounds/r4/analyze_round4_overview.py",
     "round4_second_judge.json": "rounds/r4/analyze_round4_second_judge.py",
-    "round4_judge_elo.json": "rounds/r4/analyze_round4_second_judge.py",
+    # judge_elo is written by the OVERVIEW script (its OUT_ELO), not by
+    # second_judge. Mapping it to second_judge would have told someone to run
+    # the wrong script to fix a stale artifact.
+    "round4_judge_elo.json": "rounds/r4/analyze_round4_overview.py",
     "round4_continuity.json": "rounds/r4/analyze_round4_continuity.py",
 }
 
