@@ -1,9 +1,77 @@
 {
   "round": 4,
-  "source": "r4_full_20260806_095625.json",
-  "n_models": 31,
+  "source": [
+    "r4_full_20260925_125329.json",
+    "r4_full_20260924_231143.json",
+    "r4_full_20260924_224934.json",
+    "r4_full_20260924_150115.json",
+    "r4_full_20260924_123104.json",
+    "r4_full_20260921_180507.json",
+    "r4_full_20260806_095625.json"
+  ],
+  "n_models": 58,
   "note": "Rule-based objective metrics only. NOT the rounds 1/2 composite: no rubric, no flaw hunter, no pairwise ELO, no human engagement. Mechanical tells, not scene quality.",
   "leaderboard": [
+    {
+      "model": "gpt_6_sol",
+      "n_turns": 243,
+      "objective_score": 93.2,
+      "cliche_per_1k": 0.28,
+      "slop_per_1k": 0.22,
+      "vocab_mattr": 0.787,
+      "rhythm": 0.532,
+      "rhythm_n": 243,
+      "repeat_fraction": 0.0142,
+      "median_words": 73
+    },
+    {
+      "model": "gpt_6_sol_pro",
+      "n_turns": 243,
+      "objective_score": 92.4,
+      "cliche_per_1k": 0.23,
+      "slop_per_1k": 0.42,
+      "vocab_mattr": 0.785,
+      "rhythm": 0.562,
+      "rhythm_n": 243,
+      "repeat_fraction": 0.0182,
+      "median_words": 74
+    },
+    {
+      "model": "gpt_6_luna_pro",
+      "n_turns": 243,
+      "objective_score": 90.4,
+      "cliche_per_1k": 0.62,
+      "slop_per_1k": 0.46,
+      "vocab_mattr": 0.794,
+      "rhythm": 0.56,
+      "rhythm_n": 242,
+      "repeat_fraction": 0.0167,
+      "median_words": 81
+    },
+    {
+      "model": "grok_4_3",
+      "n_turns": 239,
+      "objective_score": 90.3,
+      "cliche_per_1k": 0.25,
+      "slop_per_1k": 0.2,
+      "vocab_mattr": 0.786,
+      "rhythm": 0.425,
+      "rhythm_n": 233,
+      "repeat_fraction": 0.0102,
+      "median_words": 137
+    },
+    {
+      "model": "gpt_6_luna",
+      "n_turns": 243,
+      "objective_score": 90.2,
+      "cliche_per_1k": 0.43,
+      "slop_per_1k": 0.27,
+      "vocab_mattr": 0.793,
+      "rhythm": 0.55,
+      "rhythm_n": 243,
+      "repeat_fraction": 0.0175,
+      "median_words": 79
+    },
     {
       "model": "gpt_6_astra",
       "n_turns": 243,
@@ -15,6 +83,18 @@
       "rhythm_n": 243,
       "repeat_fraction": 0.0142,
       "median_words": 157
+    },
+    {
+      "model": "mercury_2_5",
+      "n_turns": 80,
+      "objective_score": 88.9,
+      "cliche_per_1k": 0.05,
+      "slop_per_1k": 0.35,
+      "vocab_mattr": 0.741,
+      "rhythm": 0.546,
+      "rhythm_n": 80,
+      "repeat_fraction": 0.0257,
+      "median_words": 116
     },
     {
       "model": "muse_spark_1_3",
@@ -41,6 +121,30 @@
       "median_words": 193
     },
     {
+      "model": "gemini_3_7_flash",
+      "n_turns": 243,
+      "objective_score": 86.5,
+      "cliche_per_1k": 0.21,
+      "slop_per_1k": 0.14,
+      "vocab_mattr": 0.764,
+      "rhythm": 0.494,
+      "rhythm_n": 238,
+      "repeat_fraction": 0.0159,
+      "median_words": 203
+    },
+    {
+      "model": "deepseek_v3_0324",
+      "n_turns": 243,
+      "objective_score": 86.4,
+      "cliche_per_1k": 0.64,
+      "slop_per_1k": 0.25,
+      "vocab_mattr": 0.788,
+      "rhythm": 0.505,
+      "rhythm_n": 243,
+      "repeat_fraction": 0.0135,
+      "median_words": 130
+    },
+    {
       "model": "gemini_3_8_flash",
       "n_turns": 239,
       "objective_score": 86.3,
@@ -53,16 +157,28 @@
       "median_words": 248
     },
     {
-      "model": "gemini_3_7_flash",
-      "n_turns": 104,
-      "objective_score": 85.5,
-      "cliche_per_1k": 0.34,
-      "slop_per_1k": 0.24,
-      "vocab_mattr": 0.759,
-      "rhythm": 0.473,
-      "rhythm_n": 104,
-      "repeat_fraction": 0.0163,
-      "median_words": 194
+      "model": "grok_4_7",
+      "n_turns": 243,
+      "objective_score": 85.7,
+      "cliche_per_1k": 0.21,
+      "slop_per_1k": 0.34,
+      "vocab_mattr": 0.754,
+      "rhythm": 0.722,
+      "rhythm_n": 233,
+      "repeat_fraction": 0.0192,
+      "median_words": 179
+    },
+    {
+      "model": "command_a_plus",
+      "n_turns": 218,
+      "objective_score": 85.2,
+      "cliche_per_1k": 0.31,
+      "slop_per_1k": 0.21,
+      "vocab_mattr": 0.723,
+      "rhythm": 0.366,
+      "rhythm_n": 212,
+      "repeat_fraction": 0.0244,
+      "median_words": 158
     },
     {
       "model": "gemini_3_5_flash",
@@ -78,15 +194,15 @@
     },
     {
       "model": "kimi_k2_6",
-      "n_turns": 223,
-      "objective_score": 83.9,
-      "cliche_per_1k": 0.24,
-      "slop_per_1k": 0.29,
-      "vocab_mattr": 0.748,
-      "rhythm": 0.602,
-      "rhythm_n": 222,
-      "repeat_fraction": 0.0219,
-      "median_words": 216
+      "n_turns": 243,
+      "objective_score": 83.6,
+      "cliche_per_1k": 0.23,
+      "slop_per_1k": 0.26,
+      "vocab_mattr": 0.741,
+      "rhythm": 0.584,
+      "rhythm_n": 242,
+      "repeat_fraction": 0.0223,
+      "median_words": 244
     },
     {
       "model": "deepseek_v4_pro",
@@ -99,6 +215,18 @@
       "rhythm_n": 243,
       "repeat_fraction": 0.0246,
       "median_words": 200
+    },
+    {
+      "model": "claude_sonnet_5",
+      "n_turns": 243,
+      "objective_score": 83.0,
+      "cliche_per_1k": 0.16,
+      "slop_per_1k": 0.25,
+      "vocab_mattr": 0.762,
+      "rhythm": 0.747,
+      "rhythm_n": 242,
+      "repeat_fraction": 0.02,
+      "median_words": 247
     },
     {
       "model": "qwen3_7_max",
@@ -114,27 +242,27 @@
     },
     {
       "model": "glm_5_3_flash",
-      "n_turns": 155,
-      "objective_score": 82.5,
-      "cliche_per_1k": 0.19,
-      "slop_per_1k": 0.3,
-      "vocab_mattr": 0.754,
-      "rhythm": 0.782,
-      "rhythm_n": 153,
-      "repeat_fraction": 0.0188,
-      "median_words": 311
+      "n_turns": 240,
+      "objective_score": 81.9,
+      "cliche_per_1k": 0.06,
+      "slop_per_1k": 0.18,
+      "vocab_mattr": 0.748,
+      "rhythm": 0.801,
+      "rhythm_n": 240,
+      "repeat_fraction": 0.0224,
+      "median_words": 401
     },
     {
-      "model": "claude_sonnet_5",
-      "n_turns": 104,
-      "objective_score": 82.5,
-      "cliche_per_1k": 0.18,
-      "slop_per_1k": 0.19,
-      "vocab_mattr": 0.758,
-      "rhythm": 0.749,
-      "rhythm_n": 103,
-      "repeat_fraction": 0.022,
-      "median_words": 244
+      "model": "glm_5_3_flashx",
+      "n_turns": 243,
+      "objective_score": 81.9,
+      "cliche_per_1k": 0.06,
+      "slop_per_1k": 0.21,
+      "vocab_mattr": 0.751,
+      "rhythm": 0.808,
+      "rhythm_n": 243,
+      "repeat_fraction": 0.0182,
+      "median_words": 440
     },
     {
       "model": "gpt_5_5",
@@ -147,6 +275,30 @@
       "rhythm_n": 243,
       "repeat_fraction": 0.0312,
       "median_words": 344
+    },
+    {
+      "model": "gemma_4_31b",
+      "n_turns": 243,
+      "objective_score": 81.8,
+      "cliche_per_1k": 0.27,
+      "slop_per_1k": 0.31,
+      "vocab_mattr": 0.726,
+      "rhythm": 0.474,
+      "rhythm_n": 242,
+      "repeat_fraction": 0.026,
+      "median_words": 271
+    },
+    {
+      "model": "qwen3_8_omni_flash",
+      "n_turns": 159,
+      "objective_score": 81.6,
+      "cliche_per_1k": 0.13,
+      "slop_per_1k": 0.4,
+      "vocab_mattr": 0.753,
+      "rhythm": 0.706,
+      "rhythm_n": 157,
+      "repeat_fraction": 0.0315,
+      "median_words": 345
     },
     {
       "model": "claude_opus_4_8",
@@ -173,16 +325,16 @@
       "median_words": 242
     },
     {
-      "model": "qwen3_8_max",
-      "n_turns": 211,
-      "objective_score": 80.9,
-      "cliche_per_1k": 0.27,
-      "slop_per_1k": 0.39,
-      "vocab_mattr": 0.743,
-      "rhythm": 0.671,
-      "rhythm_n": 211,
-      "repeat_fraction": 0.0338,
-      "median_words": 267
+      "model": "hemmingway_1",
+      "n_turns": 243,
+      "objective_score": 81.2,
+      "cliche_per_1k": 0.12,
+      "slop_per_1k": 0.31,
+      "vocab_mattr": 0.727,
+      "rhythm": 0.749,
+      "rhythm_n": 243,
+      "repeat_fraction": 0.0368,
+      "median_words": 278
     },
     {
       "model": "mimo_2_5_pro",
@@ -197,6 +349,54 @@
       "median_words": 299
     },
     {
+      "model": "deepseek_v4_flash",
+      "n_turns": 238,
+      "objective_score": 80.7,
+      "cliche_per_1k": 0.55,
+      "slop_per_1k": 0.43,
+      "vocab_mattr": 0.746,
+      "rhythm": 0.61,
+      "rhythm_n": 238,
+      "repeat_fraction": 0.0268,
+      "median_words": 148
+    },
+    {
+      "model": "qwen3_6_27b",
+      "n_turns": 243,
+      "objective_score": 80.6,
+      "cliche_per_1k": 0.33,
+      "slop_per_1k": 0.29,
+      "vocab_mattr": 0.747,
+      "rhythm": 0.619,
+      "rhythm_n": 243,
+      "repeat_fraction": 0.025,
+      "median_words": 301
+    },
+    {
+      "model": "ember_1",
+      "n_turns": 242,
+      "objective_score": 80.5,
+      "cliche_per_1k": 0.09,
+      "slop_per_1k": 0.23,
+      "vocab_mattr": 0.735,
+      "rhythm": 0.823,
+      "rhythm_n": 242,
+      "repeat_fraction": 0.0263,
+      "median_words": 396
+    },
+    {
+      "model": "mistral_small_2603",
+      "n_turns": 46,
+      "objective_score": 80.5,
+      "cliche_per_1k": 0.52,
+      "slop_per_1k": 0.26,
+      "vocab_mattr": 0.751,
+      "rhythm": 0.593,
+      "rhythm_n": 45,
+      "repeat_fraction": 0.0251,
+      "median_words": 212
+    },
+    {
       "model": "claude_sonnet_4_6",
       "n_turns": 243,
       "objective_score": 80.1,
@@ -207,6 +407,18 @@
       "rhythm_n": 242,
       "repeat_fraction": 0.0392,
       "median_words": 254
+    },
+    {
+      "model": "qwen3_6_35b_a3b",
+      "n_turns": 241,
+      "objective_score": 80.0,
+      "cliche_per_1k": 0.31,
+      "slop_per_1k": 0.3,
+      "vocab_mattr": 0.735,
+      "rhythm": 0.609,
+      "rhythm_n": 241,
+      "repeat_fraction": 0.0318,
+      "median_words": 311
     },
     {
       "model": "glm_5_1",
@@ -221,28 +433,52 @@
       "median_words": 249
     },
     {
-      "model": "qwen3_8_flash",
-      "n_turns": 210,
+      "model": "aion_3_5",
+      "n_turns": 243,
       "objective_score": 79.9,
-      "cliche_per_1k": 0.22,
-      "slop_per_1k": 0.48,
-      "vocab_mattr": 0.721,
-      "rhythm": 0.69,
-      "rhythm_n": 207,
-      "repeat_fraction": 0.0477,
-      "median_words": 264
+      "cliche_per_1k": 0.11,
+      "slop_per_1k": 0.2,
+      "vocab_mattr": 0.74,
+      "rhythm": 0.846,
+      "rhythm_n": 243,
+      "repeat_fraction": 0.0252,
+      "median_words": 463
     },
     {
-      "model": "claude_opus_5",
-      "n_turns": 91,
-      "objective_score": 79.6,
-      "cliche_per_1k": 0.04,
-      "slop_per_1k": 0.24,
-      "vocab_mattr": 0.72,
-      "rhythm": 0.912,
-      "rhythm_n": 91,
-      "repeat_fraction": 0.0286,
-      "median_words": 413
+      "model": "glm_5_3_prime",
+      "n_turns": 235,
+      "objective_score": 79.8,
+      "cliche_per_1k": 0.06,
+      "slop_per_1k": 0.26,
+      "vocab_mattr": 0.743,
+      "rhythm": 0.812,
+      "rhythm_n": 235,
+      "repeat_fraction": 0.0211,
+      "median_words": 551
+    },
+    {
+      "model": "qwen3_8_max",
+      "n_turns": 241,
+      "objective_score": 79.7,
+      "cliche_per_1k": 0.26,
+      "slop_per_1k": 0.34,
+      "vocab_mattr": 0.742,
+      "rhythm": 0.678,
+      "rhythm_n": 239,
+      "repeat_fraction": 0.0355,
+      "median_words": 294
+    },
+    {
+      "model": "tencent_hy4",
+      "n_turns": 240,
+      "objective_score": 79.5,
+      "cliche_per_1k": 0.11,
+      "slop_per_1k": 0.33,
+      "vocab_mattr": 0.717,
+      "rhythm": 0.692,
+      "rhythm_n": 240,
+      "repeat_fraction": 0.0315,
+      "median_words": 397
     },
     {
       "model": "deepseek_v4_1_flash",
@@ -255,6 +491,54 @@
       "rhythm_n": 238,
       "repeat_fraction": 0.0338,
       "median_words": 364
+    },
+    {
+      "model": "claude_opus_5",
+      "n_turns": 243,
+      "objective_score": 79.4,
+      "cliche_per_1k": 0.06,
+      "slop_per_1k": 0.21,
+      "vocab_mattr": 0.719,
+      "rhythm": 0.877,
+      "rhythm_n": 243,
+      "repeat_fraction": 0.0293,
+      "median_words": 427
+    },
+    {
+      "model": "qwen3_8_max_prime",
+      "n_turns": 243,
+      "objective_score": 79.2,
+      "cliche_per_1k": 0.31,
+      "slop_per_1k": 0.39,
+      "vocab_mattr": 0.747,
+      "rhythm": 0.662,
+      "rhythm_n": 241,
+      "repeat_fraction": 0.0343,
+      "median_words": 318
+    },
+    {
+      "model": "qwen3_8_flash",
+      "n_turns": 242,
+      "objective_score": 78.9,
+      "cliche_per_1k": 0.2,
+      "slop_per_1k": 0.35,
+      "vocab_mattr": 0.722,
+      "rhythm": 0.701,
+      "rhythm_n": 240,
+      "repeat_fraction": 0.0512,
+      "median_words": 302
+    },
+    {
+      "model": "claude_opus_5_5",
+      "n_turns": 243,
+      "objective_score": 78.7,
+      "cliche_per_1k": 0.17,
+      "slop_per_1k": 0.34,
+      "vocab_mattr": 0.732,
+      "rhythm": 0.731,
+      "rhythm_n": 243,
+      "repeat_fraction": 0.0219,
+      "median_words": 487
     },
     {
       "model": "claude_opus_4_7",
@@ -293,6 +577,30 @@
       "median_words": 330
     },
     {
+      "model": "claude_opus_4_6",
+      "n_turns": 243,
+      "objective_score": 78.4,
+      "cliche_per_1k": 0.17,
+      "slop_per_1k": 0.53,
+      "vocab_mattr": 0.721,
+      "rhythm": 0.869,
+      "rhythm_n": 243,
+      "repeat_fraction": 0.0339,
+      "median_words": 386
+    },
+    {
+      "model": "mimo_2_6_flash",
+      "n_turns": 243,
+      "objective_score": 78.2,
+      "cliche_per_1k": 0.15,
+      "slop_per_1k": 0.35,
+      "vocab_mattr": 0.728,
+      "rhythm": 0.817,
+      "rhythm_n": 243,
+      "repeat_fraction": 0.0316,
+      "median_words": 423
+    },
+    {
       "model": "lunaris_8b",
       "n_turns": 243,
       "objective_score": 77.7,
@@ -303,6 +611,18 @@
       "rhythm_n": 243,
       "repeat_fraction": 0.0199,
       "median_words": 287
+    },
+    {
+      "model": "mimo_2_6_pro",
+      "n_turns": 243,
+      "objective_score": 77.6,
+      "cliche_per_1k": 0.16,
+      "slop_per_1k": 0.45,
+      "vocab_mattr": 0.702,
+      "rhythm": 0.867,
+      "rhythm_n": 243,
+      "repeat_fraction": 0.0427,
+      "median_words": 420
     },
     {
       "model": "claude_fable_5_1",
@@ -339,6 +659,18 @@
       "rhythm_n": 130,
       "repeat_fraction": 0.0368,
       "median_words": 414
+    },
+    {
+      "model": "venice_dolphin_24b",
+      "n_turns": 243,
+      "objective_score": 73.8,
+      "cliche_per_1k": 0.88,
+      "slop_per_1k": 0.34,
+      "vocab_mattr": 0.68,
+      "rhythm": 0.5,
+      "rhythm_n": 241,
+      "repeat_fraction": 0.0857,
+      "median_words": 175
     },
     {
       "model": "unslopnemo_12b",

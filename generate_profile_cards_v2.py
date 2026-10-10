@@ -401,7 +401,25 @@ def load_inputs(results_dir=R, r4_json=None, r4=None):
         n = sum(modes[mo][0] for mo in TRAP_MODES)
         k = sum(modes[mo][1] for mo in TRAP_MODES)
         pooled[m] = (k, n)
-    pool_rank = sorted(pooled, key=lambda m: pooled[m][0] / pooled[m][1])
+    # TIE-AWARE. The old line sorted by rate and read a position out of it, but
+    # a 34-probe integer rate takes only ~21 distinct values, so most models sit
+    # in an exact tie and Python's stable sort resolved them by their order in
+    # the judged jsonl. Reshuffling identical rows moved 50 of 59 ranks, and two
+    # cards with byte-identical trap blocks printed as "rank 1" and "rank 8".
+    # The denominator joins the key so 0/32 and 0/34 are not silently equated.
+    _ordered = sorted(pooled, key=lambda m: (pooled[m][0] / pooled[m][1],
+                                             -pooled[m][1]))
+    pool_rank = {}
+    _i = 0
+    while _i < len(_ordered):
+        _key = pooled[_ordered[_i]][0] / pooled[_ordered[_i]][1]
+        _j = _i
+        while (_j < len(_ordered)
+               and pooled[_ordered[_j]][0] / pooled[_ordered[_j]][1] == _key):
+            _j += 1
+        for _m in _ordered[_i:_j]:
+            pool_rank[_m] = (_i + 1, _j, _j - _i)
+        _i = _j
 
     bay_by = {e["model"]: e for e in bay["leaderboard"]}
     pop = {k: v["mean"] for k, v in beh["population"].items()}
@@ -459,9 +477,10 @@ def build_card(m, ctx):
     if m in pooled:
         k, n = pooled[m]
         lo, hi = wilson_ci(k, n)
+        _lo_rk, _hi_rk, _tied = ctx["pool_rank"][m]
         card["trap_pooled"] = {"k": k, "n": n, "rate": k / n, "ci": [lo, hi],
-                               "rank": ctx["pool_rank"].index(m) + 1,
-                               "of": len(pooled)}
+                               "rank": _lo_rk, "rank_hi": _hi_rk,
+                               "n_tied": _tied, "of": len(pooled)}
     else:
         card["trap_pooled"] = None
 
@@ -632,7 +651,12 @@ def render_markdown(card):
         L.append("\nTRAP-MODE FAILURE RATE (pooled over 9 modes)")
         L.append("  %-26s %5.1f%%  [%4.1f–%4.1f]  %s  %d/%d"
                  % ("Pooled", 100 * k / n, 100 * lo, 100 * hi, bar(k / n), k, n))
-        L.append("  rank %d of %d models carrying all nine modes" % (tp["rank"], tp["of"]))
+        if tp.get("n_tied", 1) == 1:
+            L.append("  rank %d of %d models carrying all nine modes"
+                     % (tp["rank"], tp["of"]))
+        else:
+            L.append("  rank %d-%d of %d — %d models tied at exactly %d/%d"
+                     % (tp["rank"], tp["rank_hi"], tp["of"], tp["n_tied"], k, n))
 
     L.append("\n  per-mode detail — counts, not rates: 2-9 probes each, so a")
     L.append("  percentage here would not survive one probe changing")

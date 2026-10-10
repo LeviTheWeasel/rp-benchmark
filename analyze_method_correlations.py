@@ -21,34 +21,17 @@ import statistics as st
 from collections import defaultdict
 from pathlib import Path
 
-
-def spearman(xs, ys):
-    """Spearman rank correlation. Returns NaN if fewer than 3 valid pairs."""
-    pairs = [(x, y) for x, y in zip(xs, ys) if x is not None and y is not None]
-    if len(pairs) < 3:
-        return None
-    xs, ys = zip(*pairs)
-    rx = rank(xs)
-    ry = rank(ys)
-    n = len(xs)
-    d_sq = sum((rx[i] - ry[i]) ** 2 for i in range(n))
-    return 1 - 6 * d_sq / (n * (n * n - 1))
+from rank_stats import spearman, spearman_p
 
 
-def rank(values):
-    """Average-rank tied-handling rank vector."""
-    sorted_vals = sorted(enumerate(values), key=lambda x: x[1])
-    ranks = [0.0] * len(values)
-    i = 0
-    while i < len(sorted_vals):
-        j = i
-        while j + 1 < len(sorted_vals) and sorted_vals[j + 1][1] == sorted_vals[i][1]:
-            j += 1
-        avg_rank = (i + j) / 2 + 1
-        for k in range(i, j + 1):
-            ranks[sorted_vals[k][0]] = avg_rank
-        i = j + 1
-    return ranks
+# Spearman comes from rank_stats (root), the one tie-corrected implementation.
+# The two functions that used to live here built correct average ranks and then
+# pushed them through the no-ties d^2 shortcut, which is exact only when no
+# value repeats. 39 of this matrix's 45 cells carry ties -- the F1 binary rate
+# has barely any distinct values across 20 models -- so every cell was biased.
+# Median error 0.012 and max 0.081, small, but it flipped the sign of two
+# near-zero cells, and the sign of a near-zero correlation is exactly what a
+# reader over-reads. See METHODOLOGY sec 14.3.
 
 
 def main():

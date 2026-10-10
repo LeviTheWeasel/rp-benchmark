@@ -608,19 +608,28 @@ Raw per-model profiles: [`results/model_profiles.json`](results/model_profiles.j
 
 ## Cross-Method Correlation Matrix
 
-Computed Spearman rank correlation between every pair of scoring methods we have. **Headline: every LLM-judge method is uncorrelated or NEGATIVELY correlated with the community Bayesian ELO** (rho between −0.31 and −0.07). Likert methods all agree +0.6 to +0.9 with each other (they measure the same judge-aesthetic).
+Spearman rank correlation between every pair of scoring methods, over **42
+models** (tie-corrected — `docs/METHODOLOGY.md` §14.3). **Headline: every
+LLM-judge method is uncorrelated or NEGATIVELY correlated with the community
+Bayesian ELO** (rho -0.32 to -0.07). The Likert methods agree +0.75 to +0.90
+with each other, so they measure one judge-aesthetic.
+
+The previously published table was computed on 20 models and never re-run as
+the corpus grew. The headline survived that; nine of its cells had not, having
+moved across zero.
 
 ```
-                 Likert   F1     F2     F12    F13    Binary  Flaw    Bayes   Behav
-Likert overall   +1.00    +0.91  +0.61  +0.84  +0.85  -0.09   +0.27   -0.14   -0.20
-F1 Likert        +0.91    +1.00  +0.45  +0.72  +0.67  -0.09   +0.28   -0.15   -0.16
-F2 Likert        +0.61    +0.45  +1.00  +0.69  +0.59  -0.14   +0.06   -0.13   -0.23
-F12 Likert       +0.84    +0.72  +0.69  +1.00  +0.75  +0.05   +0.16   -0.02   -0.15
-F13 Likert       +0.85    +0.67  +0.59  +0.75  +1.00  +0.06   +0.49   -0.31   -0.03
-F1 binary rate   -0.09    -0.09  -0.14  +0.05  +0.06  +1.00   +0.09   -0.03   +0.45
-Flaw hunter      +0.27    +0.28  +0.06  +0.16  +0.49  +0.09   +1.00   -0.07   +0.14
-Bayesian ELO     -0.14    -0.15  -0.13  -0.02  -0.31  -0.03   -0.07   +1.00   -0.28
-Behav unique-wr  -0.20    -0.16  -0.23  -0.15  -0.03  +0.45   +0.14   -0.28   +1.00
+                 Likert F1     F2     F12    F13    Binary Flaw   Bayes  Behav  Repet  
+Likert overall   +1.00  +0.87  +0.89  +0.90  +0.86  -0.05  +0.55  -0.15  -0.04  +0.13  
+F1 Likert        +0.87  +1.00  +0.75  +0.84  +0.78  -0.12  +0.56  -0.17  -0.01  +0.17  
+F2 Likert        +0.89  +0.75  +1.00  +0.86  +0.81  -0.20  +0.42  -0.15  -0.17  +0.00  
+F12 Likert       +0.90  +0.84  +0.86  +1.00  +0.81  -0.07  +0.42  -0.07  -0.11  +0.07  
+F13 Likert       +0.86  +0.78  +0.81  +0.81  +1.00  -0.12  +0.59  -0.32  +0.01  +0.20  
+F1 binary rate   -0.05  -0.12  -0.20  -0.07  -0.12  +1.00  +0.09  -0.08  +0.40  +0.35  
+Flaw hunter      +0.55  +0.56  +0.42  +0.42  +0.59  +0.09  +1.00  -0.07  +0.11  +0.22  
+Bayesian ELO     -0.15  -0.17  -0.15  -0.07  -0.32  -0.08  -0.07  +1.00  -0.28  -0.23  
+Behav unique-wr  -0.04  -0.01  -0.17  -0.11  +0.01  +0.40  +0.11  -0.28  +1.00  +0.96  
+Behav repetition +0.13  +0.17  +0.00  +0.07  +0.20  +0.35  +0.22  -0.23  +0.96  +1.00  
 ```
 
 **Three groups of methods:**

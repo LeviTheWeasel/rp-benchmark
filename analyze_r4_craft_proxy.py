@@ -27,6 +27,7 @@ simulator's or the scripted rungs, and rungs are identical across models anyway.
 Usage: python3 analyze_r4_craft_proxy.py
 """
 import json
+import sys
 import statistics as st
 from collections import defaultdict
 from pathlib import Path
@@ -96,22 +97,48 @@ def mattr(text: str, window: int = 100) -> float:
     return sum(vals) / len(vals)
 from harness.slop_detectors import detect_all_slop
 from harness.config import RESULTS_DIR
+from rank_stats import spearman, spearman_p
 from harness.r4_private import load_r4
 
-SRC = RESULTS_DIR / "r4_full_20260806_095625.json"
+def r4_sources():
+    """Every round-4 run, newest first -- the rule every other consumer uses.
+
+    This was one hardcoded path, and the oldest file at that. The cost was not
+    only coverage: four models were scored on the pre-token-ceiling transcripts
+    their re-runs replaced, and the craft-vs-judgment correlation the script
+    prints was computed on whichever third of the roster happened to be in that
+    one file.
+    """
+    return sorted(RESULTS_DIR.glob("r4_full_*.json"), reverse=True)
 
 
 def main():
     # Track B replies are scored here too, and they are private text
     # (ROUND4_DESIGN sec 9). need_text: without the private companion the
     # proxy would silently become Track A only, so it refuses instead.
-    d = load_r4(SRC, need_text=True)
+    srcs = r4_sources()
+    if not srcs:
+        sys.exit("no results/r4_full_*.json on disk")
     acc = defaultdict(lambda: {"obj": [], "slop": [], "cliche": [], "ttr": [],
                                "rhythm": [], "rep": [], "words": [], "n": 0})
 
-    for s in d["sessions"]:
-        if "error" in s:
-            continue
+    # Newest wins. A model re-generated after the token-ceiling fix exists in
+    # the run it replaced and in its replacement, with different text.
+    sessions, seen, superseded = [], set(), 0
+    for src in srcs:
+        for s in load_r4(src, need_text=True)["sessions"]:
+            if "error" in s:
+                continue
+            key = (s.get("test_model"), s.get("seed_id"))
+            if key in seen:
+                superseded += 1
+                continue
+            seen.add(key)
+            sessions.append(s)
+    print("read %d run file(s): %d sessions, %d superseded copies skipped"
+          % (len(srcs), len(sessions), superseded))
+
+    for s in sessions:
         m = acc[s["test_model"]]
         for msg in s["dialogue"]:
             # test-model turns only: turn 0 is the seed opening, odd turns are
@@ -188,14 +215,17 @@ def main():
                  for r in rows
                  if r["model"] in lb and lb[r["model"]]["J"] is not None]
         if len(pairs) >= 8:
-            xs = [p[0] for p in pairs]; ys = [p[1] for p in pairs]
-            rx = {v: i for i, v in enumerate(sorted(set(xs)))}
-            ry = {v: i for i, v in enumerate(sorted(set(ys)))}
+            # Tie-corrected, per METHODOLOGY sec 14.3. The old code here ranked
+            # over sorted(set(...)), so ranks ran 0..k-1 over the DISTINCT
+            # values while the formula divided by n -- on this data that
+            # reported +0.135 where the correct figure is -0.123, a sign flip.
             n = len(pairs)
-            dsq = sum((rx[x] - ry[y]) ** 2 for x, y in pairs)
-            rho = 1 - 6 * dsq / (n * (n * n - 1))
+            rho = spearman([p[0] for p in pairs], [p[1] for p in pairs])
+            pval = spearman_p(rho, n)
             print("\n" + "=" * 96)
-            print(f"  CRAFT vs JUDGMENT: Spearman rho = {rho:+.3f} over {n} models")
+            print(f"  CRAFT vs JUDGMENT: Spearman rho = {rho:+.3f} over {n} "
+                  f"models (p = {pval:.3f})" if pval is not None else
+                  f"  CRAFT vs JUDGMENT: Spearman rho = {rho:+.3f} over {n} models")
             print("  Near zero means the two axes are independent -- a model cannot")
             print("  be chosen on either one alone, which is the whole argument for")
             print("  reporting them side by side rather than merging them.")
@@ -203,7 +233,8 @@ def main():
         pass
 
     out = RESULTS_DIR / "round4_craft_proxy.json"
-    json.dump({"round": 4, "source": SRC.name, "n_models": len(rows),
+    json.dump({"round": 4, "source": [p.name for p in srcs],
+               "n_models": len(rows),
                "note": "Rule-based objective metrics only. NOT the rounds 1/2 "
                        "composite: no rubric, no flaw hunter, no pairwise ELO, "
                        "no human engagement. Mechanical tells, not scene quality.",

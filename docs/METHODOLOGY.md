@@ -572,13 +572,28 @@ For non-parametric rank agreement (no ties — exact form):
    where d_i = rank_X(i) − rank_Y(i)
 ```
 
-With tied ranks (the general form, used in practice via `scipy.stats.spearmanr`):
+With tied ranks (the general form, and the only one this repo now uses --
+`rank_stats.spearman`, validated against the exact formula on untied data and
+against scipy's p-value):
 ```
 ρ = cov(R_X, R_Y) / (σ(R_X) × σ(R_Y))
    where R_X, R_Y are average-rank arrays (ties get the mean of the spanned ranks)
 ```
 
 P-values use the t-approximation `t = ρ × √((n − 2) / (1 − ρ²))` with `df = n − 2`.
+
+**The d² shortcut is exact only when no value repeats, and two call sites got
+this wrong in different ways** (both fixed 2026-10-10):
+
+| site | mistake | effect |
+|---|---|---|
+| round-4 craft proxy | ranked over `sorted(set(values))`, so ranks ran 0..k−1 over the DISTINCT values while the formula divided by n | published `rho = +0.246`; the correct figure is **−0.123** (p = 0.36) — a sign flip |
+| cross-method matrix | correct average ranks pushed through the no-ties formula | median error 0.003, max 0.071, no sign changed |
+
+The matrix's real defect was not its formula. Its published copy had been
+computed on 20 models while the corpus had grown past 40, and nothing re-ran
+it: that is what moved nine of its cells across zero. `add_model.py` now
+refreshes it, because a file nothing re-runs goes stale by default.
 
 Used in §7 (cross-method correlation), §5.3 (multi-turn arena vs other methods), and §8 (failure-target validation).
 

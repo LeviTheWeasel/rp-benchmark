@@ -149,6 +149,21 @@ def main():
             "Refresh results/behavioral_metrics.json (TTR / repetition / etc.)",
             args.dry_run,
         )
+        # Added 2026-10-10. Without this the matrix never refreshes: its
+        # published copy had been computed on 20 models while the corpus
+        # reached 47, which moved nine of its cells across zero. Nothing in
+        # the script was stale -- only the file, because adding a model never
+        # re-ran it.
+        run(
+            [sys.executable, "-u", "analyze_method_correlations.py"],
+            "Refresh results/method_correlations.json (cross-method matrix)",
+            args.dry_run,
+        )
+        run(
+            [sys.executable, "-u", "compute_coverage.py"],
+            "Refresh results/model_coverage.json (answer rate per model)",
+            args.dry_run,
+        )
 
     # 5. Composite leaderboard
     run(
